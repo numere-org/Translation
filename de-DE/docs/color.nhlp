@@ -1,0 +1,36 @@
+<article id="color">
+	<title string="Farbschemata und Linienfarben für Plots" />
+	Die Farbschemata, die NumeRe in 2D- und 3D-Plots verwendet, können - ebenso wie die Linienfarben in gewöhnlichen Plots und 3D-Trajektorien - angepasst werden. Dabei muss die Option <code>colorscheme=SCHEMA</code> bzw. <code>plotcolors=FARBEN</code> beim Plotten übergeben werden.
+	Für 2D- und 3D-Plots existieren folgende vordefinierte Schemata, von denen <code>viridis</code> voreingestellt ist:
+	<list>
+		<item node="coast">Karibik-Küste: von dunkelblau über cyan und gelb nach weiß</item>
+		<item node="cold">Ein kalter Farbverlauf von schwarz über dunkelblau und cyan nach weiß</item>
+		<item node="copper">"Kupfer": von schwarz über Kupfertöne nach weiß</item>
+		<item node="grey">Ein einfaches Grauskalen-Schema</item>
+		<item node="hot">Ein warmer Farbverlauf von schwarz über rot und gelb nach weiß</item>
+		<item node="map">Ein typischer Farbverlauf einer physischen Karte: von violett und dunklem Blau über grün/gelb und orange nach rot und schließlich grau</item>
+		<item node="moy">"Magenta-Orange-Yellow": von schwarz über magenta, orange und gelb nach weiß</item>
+		<item node="plasma">Ein Farbverlauf von dunklem blau über violett nach hellem gelb</item>
+		<item node="rainbow">Das bekannte Regenbogenschema von dunklem blau über grün/gelb nach tiefem rot</item>
+		<item node="viridis">Ähnlich wie <code>coast</code>, jedoch mehr grün und blau und eher uniforme Helligkeit (standard)</item>
+	</list>
+	Die Schemata <code>rainbow</code> und <code>map</code> sollten nicht verwendet werden, wenn der ausgegebene Plot unter Umständen in Grauskalen gedruckt werden sollte, da hier die Helligkeitsmaxima nicht am oberen Ende der Skala liegen.
+	Daneben können aber auch noch eigene Schemata bestimmt werden. Dazu müssen die Farben, die durch einzelne Buchstaben repräsentiert werden, in der gewünschten Reihenfolge aneinandergehängt werden und in zusätzlichen Anführungszeichen als SCHEMA übergeben werden:<codeblock>colorscheme="BbcyrR"   (Farbsatz des rainbow-Schemas)</codeblock>Die Farben werden dabei für die nötigen Farbverläufe automatisch interpoliert.
+	Die Farben sollten stets von der Farbe für den kleinsten bis zu der Farbe für den größten Funktionswert angegeben werden. Je nachdem, wie viele Details hervorgehoben werden, sollte die Anzahl an Farben (bis zu 32 sind möglich) gewählt werden. Für einfache Details genügen 2-3, für viele sollten es zwischen 5 und 7 sein.
+	Mit den zwei Symbolen <code>#</code> und <code>|</code> kann weiter Einfluss auf die Darstellung genommen werden: <code>#</code> zeichnet ein zusätzliches Gitter auf Oberflächen-, Dichte- und Gradientenplots. Wird dieses Zeichen im Farbschema für <code>surf3d</code> verwendet, wird die Ausgabe von <code>mesh3d</code> erzeugt. Das Zeichen <code>|</code> deaktiviert die Interpolation der Farben im aktuellen Farbschema.
+	Bei gewöhnlichen Plots bzw. 3D-Trajektorien wird die Farbe jeder Linie durch einen der unten genannten Buchstaben repräsentiert. Dabei steht der erste Buchstabe für die erste, der zweite für die zweite (usw.) Linie. Zu beachten ist, dass Datenpunktplots stets nach den Funktionenplots gezeichnet werden (sie werden intern umgeordnet).
+	Es können hier maximal 14 Farben angegeben werden; für die 15. Linie wird wieder die Farbe der ersten Linie verwendet. Es müssen jedoch nicht 14 Stile angegeben werden; sind es weniger, werden nur die entsprechende Anzahl an Linien angepasst:<codeblock>plotcolors="rrr"   (zeichnet die ersten drei Linien rot)</codeblock>Wird statt einer Farbe ein Leerzeichen angegeben, so wird die entsprechende voreingestellte Farbe nicht geändert. Wenn das Farbschema <code>grey</code> aktiv ist, wird außerdem automatisch auf Grauwerte in den Linienfarben umgestellt.
+	Die vorhandenen Farben werden durch die folgenden Buchstaben repräsentiert:
+	<list>
+		<item node="w">weiß              y   - gelb                   n   - pastellblau</item>
+		<item node="W">hellgrau          E   - dunkles gelbgrün       B   - dunkelblau</item>
+		<item node="h">grau              e   - helles gelbgrün        b   - blau</item>
+		<item node="H">dunkelgrau        G   - dunkelgrün             U   - dunkles lila</item>
+		<item node="k">schwarz           g   - grün                   u   - lila</item>
+		<item node="R">dunkelrot         L   - dunkles tanngrün       M   - dunkles magenta</item>
+		<item node="r">rot               l   - tanngrün               m   - magenta</item>
+		<item node="Q">dunkles orange    C   - dunkles cyan           P   - dunkles purpur</item>
+		<item node="q">orange            c   - cyan                   p   - purpur</item>
+		<item node="Y">dunkelgelb        N   - dunkles pastellblau</item>
+	</list>
+</article>

@@ -1,0 +1,5 @@
+<article id="rekurs_oprt">
+	<title string="Rekursive Operatoren" />
+	NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> und <code>^=</code>. Diese Operatoren sind Abkürzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog für die anderen Operatoren.
+	Dies kann speziell im Umgang mit dem Cache viel Tipparbeit ersparen. Die rekursiven Operatoren werden intern in ihre jeweilige ausführliche Variante umgewandelt, um Mehrdeutigkeiten zu vermeiden.
+</article>

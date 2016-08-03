@@ -1,0 +1,12 @@
+<article id="incr_decr">
+	<title string="Inkrement und Dekrement" />
+	Inkrement- (<code>++</code>) und Dekrementoperatoren (<code>--</code>) erhöhen (Inkrement) bzw. erniedrigen (Dekrement) den Wert der vorangestellten Variable um 1. Dies ist vor allem im Zusammenhang mit Schleifen und bedingten Verzweigungen von Bedeutung.
+	Inkrement- und Dekrementoperatoren sind zu den Ausdrücken <expr>x = x+1</expr> bzw. <expr>x = x-1</expr> äquivalent und werden intern auch so ausgewertet.
+	<example desc="Inkrement der Variablen i = 0 und Dekrement der Variablen j = 1:">
+		i++
+		ans = 1
+		j--
+		ans = 0
+	</example>
+	SIEHE AUCH: "help for", "help while" und "help if"
+</article>

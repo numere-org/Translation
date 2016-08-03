@@ -1,0 +1,12 @@
+<article id="find">
+	<title string="Keyword search" />
+	The command <code>find</code> grants the possibility, to search for a function or another command inside of this program, if the correspomding keywords are passed to this command. The command <code>search</code> is a synonyme to this command.
+	If a whole expression with whitespaces shall be used as <em>single</em> keyword, then it has to be passed surrounded by quotation marks.
+	NumeRe sorts the obtained results correspomding to their relevance to the passed keyword. This is calculated out of the number of keywords matching to the result and with an interal weighting, which determines, how well the single keywords match to the results.
+	<example desc="Search for the keywords 'cos hyp cosh':" type="verbatim">
+		|&lt;- find cos hyp cosh
+		[...]
+		|-&gt; [100%]   acosh(x) -- [...]
+		[...]
+	</example>
+</article>
