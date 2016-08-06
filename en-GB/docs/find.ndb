@@ -58,7 +58,7 @@ copy~Copies (depending on the actual expression) entries/columns/subtables betwe
 cos(x)~Cosine of x~cos() cosinus kosinus trigonometrische funktionen trigonometrie
 cosh(x)~Hyperbolic cosine of x~cosh() cosinus hyperbolicus kosinus trigonometrische funktionen hyperbolische trigonometrie
 cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonometrie
-credits~Legal information about NumeReinfo about versionsinformationen
+credits~Legal information about NumeRe~info about versionsinformationen
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt
 # D
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook

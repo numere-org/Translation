@@ -38,7 +38,7 @@ ERR_ERROR=Error
 # Debugger-Strings
 # ======================
 DBG_HEADLINE=NumeRe: Debugger  [Breakpoint]
-DBG_MODULE=Modul informations
+DBG_MODULE=Module information
 DBG_STACKTRACE=Stacktrace
 DBG_LOCALVARS=Local numerical variables
 DBG_LOCALSTRINGS=Local strings
@@ -65,7 +65,7 @@ ERR_MUP_UNEXPECTED_ARG_SEP=An unexpected argument separator was found at positio
 ERR_MUP_UNEXPECTED_PARENS=An unexpected parenthesis "$TOK$" was found at position $POS$. Forgotten operator or expression or wrong/invalid function name?$(See "list -func" and "list -define" for a list of all available functions. Probably one or more spaces are separating function name and function argument list.)
 ERR_MUP_UNEXPECTED_FUN=An unexpected function "$TOK$" was found at position $POS$.
 ERR_MUP_UNEXPECTED_VAL=An unexpected value "$TOK$" was found at position $POS$. Forgotten operator?
-ERR_MUP_UNEXPECTED_VAR=An unexprected variable "$TOK$" was found at position $POS$. Forgotten operator?
+ERR_MUP_UNEXPECTED_VAR=An unexpected variable "$TOK$" was found at position $POS$. Forgotten operator?
 ERR_MUP_UNEXPECTED_ARG=Function argument(s) used without function (Position: $POS$).
 ERR_MUP_MISSING_PARENS=Missing parenthesis.
 ERR_MUP_TOO_MANY_PARAMS=Too many arguments for the function "$TOK$()" in expression at position $POS$.$(Probably commas instead of dots were used as decimal separator. See also "list -func" or "list -define" for a list of available functions.)
