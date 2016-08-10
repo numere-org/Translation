@@ -226,6 +226,7 @@ BUILTIN_LISTFILES_SAVEPATH=Speicherordner
 BUILTIN_LISTFILES_SCRIPTPATH=Scriptordner
 BUILTIN_LISTFILES_PROCPATH=Prozedurenordner
 BUILTIN_LISTFILES_PLOTPATH=Plotspeicherordner
+BUILTIN_LISTFILES_WORKPATH=Arbeitsverzeichnis
 BUILTIN_LISTFILES_ROOTPATH=Stammordner
 BUILTIN_LISTFILES_CUSTOMPATH=Verzeichnis
 BUILTIN_LISTFILES_NOFILES=NumeRe konnte keine Dateien/Verzeichnisse finden
@@ -522,6 +523,7 @@ PARSERFUNCS_LISTCMD_CMD_VAR=			var                         - Lokalen Variablensa
 PARSERFUNCS_LISTCMD_CMD_VECT=			vect         EX [-set PAR]  - Erzeugung eines (2D-)Vektorfeldplots
 PARSERFUNCS_LISTCMD_CMD_VECT3D=			vect3d       EX [-set PAR]  - Erzeugung eines 3D-Vektorfeldplots
 PARSERFUNCS_LISTCMD_CMD_WHILE=			while        EX             - Startet die Definition einer While-Schleife
+PARSERFUNCS_LISTCMD_CMD_WORKPATH=		workpath     NM             - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung
 PARSERFUNCS_LISTCMD_CMD_WRITE=			write        STR -set PAR   - Schreiben in eine Datei
 PARSERFUNCS_LISTCMD_CMD_ZEROES=			zeroes       EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Nullstellen eines Ausdrucks oder eines Datensatzes auf.
 # Ende der Kommandotabelle

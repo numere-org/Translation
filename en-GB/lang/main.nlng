@@ -226,6 +226,7 @@ BUILTIN_LISTFILES_SAVEPATH=Save path
 BUILTIN_LISTFILES_SCRIPTPATH=Script path
 BUILTIN_LISTFILES_PROCPATH=Procedure path
 BUILTIN_LISTFILES_PLOTPATH=Plot path
+BUILTIN_LISTFILES_WORKPATH=Work path
 BUILTIN_LISTFILES_ROOTPATH=Root path
 BUILTIN_LISTFILES_CUSTOMPATH=Directory
 BUILTIN_LISTFILES_NOFILES=NumeRe could not find any files/directories
@@ -522,6 +523,7 @@ PARSERFUNCS_LISTCMD_CMD_VAR=			var                         - Defines the local n
 PARSERFUNCS_LISTCMD_CMD_VECT=			vect         EX [-set PAR]  - Generates a vector plot
 PARSERFUNCS_LISTCMD_CMD_VECT3D=			vect3d       EX [-set PAR]  - Generates a 3D vector plot
 PARSERFUNCS_LISTCMD_CMD_WHILE=			while        EX             - Starts the definition of a WHILE loop
+PARSERFUNCS_LISTCMD_CMD_WORKPATH=		workpath     NM             - Changes the current working directory for this session
 PARSERFUNCS_LISTCMD_CMD_WRITE=			write        STR -set PAR   - Writes the passed strings to a file
 PARSERFUNCS_LISTCMD_CMD_ZEROES=			zeroes       EX -set PAR    - Calls the function for numerical calculation of the intersection with of functions and data sets.
 # Ende der Kommandotabelle
