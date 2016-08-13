@@ -6,6 +6,7 @@
 	The NumeRe default folders are represented using the following path placeholders:
 	<list>
 		<item node="&lt;&gt;">NumeRe root directory (the numere.exe is located at this directory - In the NumeRe console, <code>&lt;this&gt;</code> will be interpreted as a synonyme of this placeholder)</item>
+		<item node="&lt;wp&gt;">The work path is a placeholder, which points at start-up to <code>&lt;&gt;</code>, too, but this can easily be changed with <code>workpath PATH</code>.</item>
 		<item node="&lt;savepath&gt;">Default saving directory (NumeRe will save files at this location, if nothing else is specified)</item>
 		<item node="&lt;loadpath&gt;">Default importing directory (NumeRe will load files from this location, if nothing else is specified)</item>
 		<item node="&lt;scriptpath&gt;">Default script directory (NumeRe expects all scripts in this directory, if nothing else is specified)</item>
