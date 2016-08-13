@@ -30,6 +30,7 @@
 		<item node="-useescinscripts=WERT">Verwendung der <code>ESC</code>-Taste in Scripts (de-)aktivieren</item>
 		<item node="-viewer=PFAD">Pfad zum Imageviewer einstellen</item>
 		<item node="-windowsize <x=X> <y=Y>">Fenstergröße (x und y-Werte) einstellen. Die Reihenfolge der Werte ist nicht von Belang und es kann auch nur ein Wert gesetzt werden</item>
+		<item node="-workpath=PFAD">Das aktuelle Arbeitsverzeichnis einstellen. Schneller geht das mit dem Kommando <code>workpath PFAD</code></item>
 	</list>
 	<example desc="Einstellen des Importordners auf den Ordner 'data/import' im NumeRe-Verzeichnis:">
 		set -loadpath=data/import

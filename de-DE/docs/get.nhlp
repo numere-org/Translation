@@ -30,6 +30,7 @@
 		<item node="-varlist">Alle deklarierten numerischen und Zeichenkettenvariablen in einer gemeinsamen Liste abrufen</item>
 		<item node="-viewer">Aktuellen Imageviewer abfragen</item>
 		<item node="-windowsize">Einstellung der Fenstergröße abfragen</item>
+		<item node="-workpath">Das aktuelle Arbeitsverzeichnis abfragen</item>
 	</list>
 	<example desc="Lesen des Standard-Scriptpfades:">
 		get -scriptpath
