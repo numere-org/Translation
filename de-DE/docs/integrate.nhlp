@@ -8,7 +8,7 @@
 		<item node="y=WERT1:WERT2"><expr>y</expr>-Intervall auf [WERT1, WERT2] setzen</item>
 		<item node="precision=AUFLÖSUNG">Numerische Auflösung auf den Wert von AUFL setzen. Wird diese Option nicht angegeben, so wird der Standardwert von 1e-3 verwendet. <code>eps=AUFLÖSUNG</code> ist ein Alias zu dieser Option</item>
 		<item node="method=METHODE">Numerisches Verfahren der Integration wählen. Zur Wahl stehen <code>trapezoidal</code> (Standard) für sehr glatte oder konstante und <code>simpson</code> für stark veränderliche Funktionen. <code>simpson</code> ist aufgrund der Tatsache, dass es sich um ein quadratisches Verfahren handelt, deutlich langsamer. Außerdem liefert es im Falle konstanter Funktionen eher schlechtere Ergebnisse als <code>trapezoidal</code></item>
-		<item node="steps">Gibt statt der Präzision die Zahl der Unterteilungen des Integrationsintervalls an.</item>
+		<item node="steps=STEPS">Gibt statt der Präzision die Zahl der Unterteilungen des Integrationsintervalls an.</item>
 		<item node="points">Gibt die numerische Stammfunktion der ersten zu integrierenden Funktion als Datensatz zurück</item>
 		<item node="xvals">Bestimmt die entsprechenden <expr>x</expr>-Werte der Stammfunktion (wird nur ausgeführt, wenn <code>points</code> nicht übergeben wird)</item>
 	</list>
