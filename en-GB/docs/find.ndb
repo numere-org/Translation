@@ -254,7 +254,7 @@ vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion
 # W/X
 while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while()
-workpath~Changes the current working directory for this session~workpath working directory cd change
+workpath~Changes the current working directory for this session~workpath working directory cd change wp
 write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings # \"
 # Y
 Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()
