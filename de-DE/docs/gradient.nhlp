@@ -1,7 +1,7 @@
 <article id="gradient">
 	<title string="Gradientenplot" />
 	Mit dem Kommando <code>grad</code> kann von einer Funktion der Form <expr>z = f(x,y)</expr>, also eine Funktion, die der <expr>z</expr>-Koordinate einen Wert in Abhängigkeit von <expr>x</expr> und <expr>y</expr> zuweist, ein Gradientenplot erzeugt werden. Dabei detektiert NumeRe einige Pfade (lange nicht alle), entlang denen die Funktion <expr>f(x,y)</expr> sich besonders stark ändert.
-	Dabei werden rote Linien gezeichnet, wenn <expr>f(x,y)</expr> sich positiv ändert, bei einer negativen Änderung hingegen blaue Linien. Extrema werden hell hervorgehoben.
+	Es wird das Standard-Farbschema verwendet. Wenn <expr>f(x,y)</expr> sich positiv ändert, wird das als ein großer Wert interpretiert, bei einer negativen Änderung hingegen als ein kleiner Wert. Extrema werden gesondert hell hervorgehoben.
 	Für <code>grad</code> können dieselben Optionen wie für <code>mesh</code> verwendet werden.
 	SIEHE AUCH: "help plot" und "help mesh"
 </article>

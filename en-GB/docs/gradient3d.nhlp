@@ -1,0 +1,7 @@
+<article id="gradient3d">
+	<title string="3D gradient plot" />
+	Using the command <code>grad3d</code> you may calculate a three dimensional gradient plot out of a function of the form <expr>phi = f(x,y,z)</expr>, which is a function that where every coordinate tuple <expr>x,y,z</expr> has exactly one value. NumeRe detects some (of course not all) paths, along the function <expr>f(x,y,z)</expr> derivates very strong.
+	The standard color scheme will be used. If the function <expr>f(x,y,z)</expr> derivates positively, this will be interpreted as large value, if it derivates negatively, it's a small value. Extrema will be highlighted separately.
+	You may use the same options for <code>grad3d</code> as for <code>grad</code>.
+	SEE ALSO: "help plot" and "help grad"
+</article>
