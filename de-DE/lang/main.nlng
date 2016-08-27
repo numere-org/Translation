@@ -329,6 +329,7 @@ PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENTHESIS_[STRING]=	getmatchingparens(STR
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen POS und der tatsächlichen Position des Werts werden ignoriert.
 PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside-(Theta)-Funktion. 0 für x < 0, 1 sonst. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)           VAL    - numerischer Wert der Hermite-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)     VAL    - Imaginärteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(STRING)        LOG    - gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[NUM_LOGIC]=				is_nan(x)              LOG    - gibt true zurück, wenn x den Wert nan hat, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)        LOG    - gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false

@@ -329,6 +329,7 @@ PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENTHESIS_[STRING]=	getmatchingparens(STR
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Returns the value of a parameter in the string STRING, with the first character of the value at position POS (e.g. after "=") as a string. Note that all whitespaces between POS and the actualposition of the value will be ignored.
 PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside (or Theta) function. 0 for x < 0, 1 otherwise. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)           VAL    - Numerical value of the Hermite polynomial with the order n >= 0 at the position x. Defined everywhere in R
+PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)     VAL    - Imaginary part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(STRING)        LOG    - Returns true, if STRING is a data object, false otherwise
 PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[NUM_LOGIC]=				is_nan(x)              LOG    - Returns true, if x has the value nan, false otherwise
 PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)        LOG    - Returns true, if EXPR contains strings, false otherwise
