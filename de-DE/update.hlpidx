@@ -767,4 +767,13 @@
 			<keyword>shorttime</keyword>
 		</keywords>
 	</article>
+	<article id="language">
+		<file path="<>/docs/language.nhlp" />
+		<title string="Sprachen hinzufügen" idxkey="language" />
+		<keywords>
+			<keyword>lang</keyword>
+			<keyword>sprach</keyword>
+			<keyword>transl</keyword>
+		</keywords>
+	</article>	
 </helpindex>
