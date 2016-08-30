@@ -6,4 +6,5 @@
 	You may add own identifier and own placeholders, but you only may use them for the placeholders, which will be replaced during loading time. In addition, we would like to beg you that you use the prefix <code>USER_*</code> for your identifier so that they don't interfere with standard ones.
 	The files in <code>.../docs/*.nhlp</code> are the articles of the NumeRe documentation and are written in a derivation of the XML format. See "help documentation" for further information about this file format.
 	To add the language, all copied files have to be translated. Note that NumeRe is not capable of interpreting unicode yet. Therefore you should not use special characters.
+	The documentation index has to be translated, too. You may copy the file <code>&lt;&gt;/numere.hlpidx</code> to the folder <code>&lt;&gt;/user</code>. In this XML file you have to translate the title for each article. In addition you have to change the file path (from <code>&lt;&gt;/docs/...</code> to <code>&lt;&gt;/user/docs/...</code>).
 </article>

@@ -6,4 +6,5 @@
 	Es können eigene Identifizierer und eigene Platzhalter hinzugefügt werden, jedoch können diese nur für den Typ der Platzhalter verwendet werden, die während des Starts ersetzt wird. Hier wird aber darum gebeten, dass eigene Identifizierer die Präfix <code>USER_*</code> bekommen, damit sie nicht mit den Standardidentifizierern interferieren.
 	Die Dateien in <code>.../docs/*.nhlp</code> sind die Artikel der NumeRe-Hilfe und sind in einer Abwandlung des XML-Formats geschrieben. Details zu diesem Format finden sich in "help documentation".
 	Um die Sprache zu ergänzen, müssen alle kopierten Dateien übersetzt werden. Bei der Übersetzung ist darauf zu achten, dass keine Sonderzeichen verwendet werden, da NumeRe im Moment noch kein Unicode interpretieren kann.
+	Zusätzlich muss der Dokumentenindex übersetzt werden. Hierzu kann die Datei <code>&lt;&gt;/numere.hlpidx</code> in den Ordner <code>&lt;&gt;/user</code> kopiert werden. In dieser XML-Datei muss für jeden Artikel der Titel übersetzt werden. Außerdem muss der Dateipfad angepasst werden (von <code>&lt;&gt;/docs/...</code> zu <code>&lt;&gt;/user/docs/...</code>).
 </article>
