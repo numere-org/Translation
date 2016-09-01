@@ -1,0 +1,7 @@
+<article id="calc">
+	<title string="Rechner-Modus" />
+	Der Rechner-Modus von NumeRe ist eine numerische Rechenumgebung, die auf "input-output"-Operationen ausgelegt ist.
+	Der Rechner-Modus ist damit in sehr eingeschränkten Masse mit den Möglichkeiten von Octave zu vergleichen (obgleich NumeRe stetig erweitert wird)
+	Der Rechner-Modus kann mit dem Befehl "mode" sowohl gestartet als auch beendet werden (abhängig von seinem vorherigen Zustand)
+	SIEHE AUCH: "help expr"
+</article>

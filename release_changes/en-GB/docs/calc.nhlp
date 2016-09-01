@@ -1,0 +1,7 @@
+<article id="calc">
+	<title string="Calculator mode" />
+	NumeRe's calculator mode is a numerical calculation framework, designed for "input-output" operations.
+	In a very restricted way, the calculator mode can be compared to Octave (although NumeRe will be constantly extended).
+	The calculator mode can be started and ended with the command <code>mode</code> (depending on its current state).
+	SEE ALSO: "help expr"
+</article>

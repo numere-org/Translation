@@ -1,0 +1,12 @@
+<article id="external_programs">
+	<title string="Viewer und Editor" />
+	NumeRe kann zur Darstellung der erzeugten Plots oder zum Editieren von Scripten, Datenfiles und Prozeduren mit einem Bildbetrachter ("Imageviewer") und einem Texteditor verknüpft werden. Dieser wird dann bei einem erzeugten Plot bzw. bei Verwendung des Kommandos <code>edit</code> automatisch gestartet.
+	Der Bildbetrachter kann dabei mittels des Kommandos <code>set -viewer=PFAD</code> (Standard: keiner) und der Texteditor mittels <code>set -editor=PFAD</code> (Standard: notepad.exe) eingestellt werden. In beiden Fällen ist der vollständige Pfad zur ausführbaren Datei des Programms nötig, falls das Programm keinen Eintrag in der Systemvariable "PATH" besitzt. Außerdem muss darauf geachtet werden, dass der englische Programmpfad verwendet wird (dieser ist im Windowsexplorer nach Klicken auf die Addressleiste ersichtlich) und dass Programmpfade mit Leerzeichen von Anführungszeichen umschlossen sind.
+	Es kann ein beliebiger Texteditor verwendet werden, empfohlen wird jedoch Notepad++ (www.notepad-plus-plus.org), da in selbigem die Syntaxhighlighting für NumeRe geladen werden kann (siehe beide *.xml-Dateien im NumeRe-Stammverzeichnis). Als Imageviewer kann auch jedes Programm verwendet werden, das mit *.png-, *.eps-, *.gif- und *.svg-Dateien umgehen kann, empfohlen wird jedoch IrfanView (www.irfanview.com).
+	<example desc="Einstellen von IrfanView als Bildbetrachter:">
+		set -viewer="C:/Program Files/IrfanView/i_view32.exe"
+		Imageviewer erfolgreich deklariert.
+	</example>
+	HINWEIS: Nutzer von 64bit-Systemen müssen "Program Files" durch "Program Files (x86)" ersetzen.
+	SIEHE AUCH: "help new" und "help edit"
+</article>

@@ -1,0 +1,14 @@
+<article id="read_write">
+	<title string="Reading from and writing to files" />
+	NumeRe may (apart from data files) access the contents of files <em>directly</em> and modify them. This may for example be used, to write some sort of a log file or to save settigns for procedures or plugins in an external file.
+	The contents of files may be read with the command <code>read FILE</code>. This command will be read the whole file at once line by line and will return these lines as single strings. Empty lines will be ignored. The read strings may be directly assigned the the <code>string()</code> object:<codeblock>string() = read FILE</codeblock>
+	If the file contain comments, which shall be ignored and which are escaped with a distinct sequence of caracters, then this sequence may passed with the option <code>comments=CHARACTERSEQUENCE</code> to the command.
+	If contents shall be written to a file, the command <code>write</code> may be used:<codeblock>write CONTENT -set file=FILE</codeblock>If CONTENT consists of multiple strings, these will be written linewise in the file FILE. The file types, which are owned by NumeRe, can't be used as target files for this operation.
+	If the optional parameter <code>-noquotes</code> (or <code>-nq</code>, respectively) is used, then the surrounding quotation marks in the target file will be suppressed. In addition, the access mode of this command may be altered with the option <code>-mode=MODE</code>. It will be determine, how the CONTENT will be written to the target file:
+	<list>
+		<item node="app">Appends the CONTENT to already present contents</item>
+		<item node="overwrite">Overwrites the file characterwise</item>
+		<item node="trunc">Removes all contents of the file first</item>
+	</list>
+	The default activated mode is <code>trunc</code>.
+</article>
