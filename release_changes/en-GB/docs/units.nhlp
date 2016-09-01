@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="units">
 	<title string="Conversion of units" />
 	NumeRe is capable of interpreting many (non-SI) units, which have to be entered using the syntax <code>VALUE'UNIT</code>. In this case <code>UNIT</code> has to be replaced by the unit symbol (or a matching pendant, respectively).

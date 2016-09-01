@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="multiresult">
 	<title string="Parallel and multi expression evaluations" />
 	NumeRe may calculate <em>multiple values at once</em>, if their originating expressions are entered separated with commas. This may be enough in many cases, but it may be quite challenging, to enter a nearly identical expression multiple times correctly, if the expressions are only differ at single distinct locations.

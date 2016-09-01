@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="datamodification">
 	<title string="Modification of data sets" />
 	NumeRe may modify the data from one or more data sets to simplify the analysis if you use one of the commands <code>smooth</code>, <code>resample</code> and <code>retoque</code>. The command <code>smooth</code> smoothes the data, to suppress noise peaks, <code>resample</code> increases or decreases the number of data points by the usage of a Lanczos filter, and <code>retoque</code> removes invalid values from data sets using linear interpolation. These commands can only be applied to data sets in a cache.

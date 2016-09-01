@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="while_loop">
 	<title string="WHILE loops" />
 	A WHILE loop executes repeatedly similar to FOR loops the same <expr>N</expr> expressions. The central difference is that a WHILE loop doesn't need a loop index and therefore there's no predefined number of loop repetitions. The abortion of a WHILE loops is either determined by the mandatory condition in then declaration or by an additional <code>break</code> in a part of the loop.

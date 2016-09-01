@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="external_programs">
 	<title string="Viewer and editor" />
 	NumeRe may be linked to external image viewers and text editors to display plots and edit scripts, datafiles and procedures. The image viewer will be started automatically after plotting. If you invoke the command <code>edit</code>, NumeRe will start the corresponding external program as well.

@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="variables">
 	<title string="Variables" />
 	Variables are one of the core functionalities of NumeRe. They may store values, which may be easily used at a later point. Their names may be composed out of an arbitrary combination of numbers, letters and underscores, as long as they do not start with a number. They may even carry the same name as a function, because functions are identified by their parentheses:<codeblock>Variable "func"  vs.  function "func()"</codeblock>

@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="zeroes">
 	<title string="Numerische Nullstellenbestimmung" />
 	Das Kommando <code>zeroes</code> bestimmt alle Nullstellen (also alle Stellen <expr>x0</expr>, für die <expr>f(x0) = 0</expr>) eines gegebenen Ausdrucks in einem vorgegebenen Intervall. Der Ausdruck darf in dem Intervall dabei nicht zu stark oszillieren. Liegt ein solcher Ausdruck vor, so sollte das Intervall deutlich kleiner gewählt werden.

@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="load_save">
 	<title string="Loading and saving" />
 	Data may be load to NumeRe or save out of NumeRe into a file. The two commands <code>load</code> and <code>save</code> exist to grant this possibility:<codeblock>load FILE</codeblock>or<codeblock>save DATA(I1:I2,J1:J2) -file=FILE</codeblock>respectively. During loading NumeRe expects a textual file with the extension "*.dat" as default. This file extension may be modified to one of "*.dat", "*.txt", "*.ndat", "*.labx", "*.jdx", "*.dx", "*.jcm", "*.ibw", "*.ods", "*.xls", "*.xlsx" and "*.csv", if you exlicit append the extension to the file name. During saving of data, NumeRe will prefer its own "NumeRe-Datafile" format (*.ndat), which is faster in loading and saving and preserves the precision.

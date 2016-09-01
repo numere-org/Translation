@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="tickformatting">
 	<title string="Formatieren der Skalenbeschriftung" />
 	Die Skalenbeschriftung der Achsen können in NumeRe beeinflusst werden, indem die zusätzlichen Plotoptionen <code>xticks</code>, <code>yticks</code>, <code>zticks</code> und <code>cticks</code> verwendet werden. Die ersteren drei beeinflussen die Beschriftung der <expr>x-, y</expr>- oder <expr>z</expr>-Achse; die letztere die Beschriftung der Farbskala, die bei vielen Plotstilen (wie <code>mesh</code> oder <code>surf3d</code>) rechts neben dem Plot angezeigt wird.

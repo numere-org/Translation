@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="2dplots">
 	<title string="Meshgrid, contour, density or surface plots" />
 	The commands <code>mesh</code>, <code>cont</code>, <code>dens</code> or <code>surf</code>, respectively, allow the visualization of functions of the type <expr>z = f(x,y)</expr>, which are functions, whose <expr>z</expr> coordinate is obtained from a function of the coordinates <expr>x</expr> and <expr>y</expr>. <code>mesh</code> generates a meshgrid, <code>cont</code> a contour (equipotential), <code>dens</code> a density (colors correspond to <expr>z</expr> values) and <code>surf</code> a surface plot.

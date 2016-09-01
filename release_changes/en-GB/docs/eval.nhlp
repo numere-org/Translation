@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="eval">
 	<title string="Calculation of samples" />
 	NumeRe may calculate a desired number of linear distributed samples of a expression using the command <code>eval</code> and save them directly to a cache. The expression, which shall be evaluated, the variable for caclulating the samples, its left and right interval border and--if necessary--the numbers of samples have to be passed to the command in the following manner:<codeblock>eval EXPRESSION -set VAR=POS1:POS2 samples=SAMPLES</codeblock>If [POS1:POS2] is passed instead of VAR=POS1:POS2, then NumeRe will use <expr>x</expr> automatically as variable.

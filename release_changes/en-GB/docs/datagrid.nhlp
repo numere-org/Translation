@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="datagrid">
 	<title string="Data grids for 2D plots" />
 	If you want to display data in 2D plots (just like <code>surf</code> or <code>mesh</code>), they have to be in a special form; they must not be passed as <expr>x-y-z</expr> values. 2D plots expect data in the form of a <em>data grid</em>: <expr>x</expr> and <expr>y</expr> values in the first two columns and their corresponding <expr>z</expr> values as a matrix with the dimensions of the first two columns:

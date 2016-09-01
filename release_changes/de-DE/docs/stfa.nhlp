@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="stfa">
 	<title string="Kurzzeit-Fourieranalyse" />
 	NumeRe kann eine Kurzzeit-Fourieranalyse (short-time fourier analysis, STFA) auf Datensätze anwenden, um ein sogenanntes Spektrogramm zu erzeugen. Dabei muss der Datensatz an das Kommando <code>stfa</code> übergeben werden:<codeblock>stfa DATEN(I1:I2,J1:J2)</codeblock>Es werden zwei Spalten erwartet: <expr>x</expr>- und <expr>y</expr>-Werte.

@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="load_save">
 	<title string="Laden und Speichern" />
 	Daten können in NumeRe geladen oder von NumeRe heraus in eine Datei gespeichert werden. Dazu existieren die Kommandos <code>load</code> und <code>save</code>:<codeblock>load DATEI</codeblock>bzw.<codeblock>save DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Beim Laden geht NumeRe standardmäßig von einer Textdatei mit der Endung "*.dat" aus (Die Endung kann jedoch zwischen "*.dat", "*.txt", "*.ndat", "*.labx", "*.jdx", "*.dx", "*.jcm", "*.ibw", "*.ods", "*.xls", "*.xlsx" und "*.csv" angepasst werden), während Datensätze vorzugsweise in das NumeRe-eigene "NumeRe-Datenfile"-Format (*.ndat) gespeichert werden.

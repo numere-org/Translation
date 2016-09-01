@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="fitting">
 	<title string="Datenanpassung" />
 	NumeRe ist mit einem einfachen Algorithmus zur Datenanpassung ausgestattet, der gegebene, eindimensionale Funktionen mit Hilfe von Parametern an Datenreihen mit <expr>x-y</expr>- bzw. <expr>y</expr>-Datenpunkten anpasst. Dabei wird eine Funktion <expr>y = FUNC(x,PARAMS)</expr> erwartet. Außerdem kann NumeRe auch zweidimensionale Funktionen an <expr>z(x,y)</expr>-Datenpunkte anpassen. Hierfür wird eine Funktion <expr>z = FUNC(x,y,PARAMS)</expr> erwartet. Sobald die Variable <expr>y</expr> in <expr>FUNC()</expr> gefunden wird, wird automatisch ein 2D-Fit gestartet.

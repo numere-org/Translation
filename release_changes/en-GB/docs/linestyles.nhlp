@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="linestyles">
 	<title string="Line and point styles" />
 	The lines and points, which are used in the drawing modes <code>draw</code> and <code>draw3d</code> as well as in the plot modes <code>plot</code> and <code>plot3d</code>, may be modified with the STL argument of the drawing functions or the options <code>linestyles=STYLE</code> and <code>pointstyles=STYLE</code>, respectively. The colors are represented with the symbols out of "help colors"; the line endings and styles are as follows.

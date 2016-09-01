@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="fitting">
 	<title string="Fitting functions to data sets" />
 	NumeRe has an advanced algorithm for fitting functions, which fits passed, one dimensional functions to data sets containing <expr>x-y</expr> or <expr>y</expr> data points by varying the parameters of the corresponding function. NumeRe expects a function of the form <expr>y = FUNC(x,PARAMS)</expr>. In addition, NumeRe may fit two dimensional functions to datapoints of the form <expr>z(x,y)</expr>. In this case NumeRe expects a function with the form <expr>z = FUNC(x,y,PARAMS)</expr>. If the variable <expr>y</expr> is found in <expr>FUNC()</expr>, the algorithm will switch automatically to two dimensional fitting. 

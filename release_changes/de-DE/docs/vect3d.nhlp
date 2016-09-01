@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="vect3d">
 	<title string="3D-Vektorfeldplots" />
 	Das Kommando <code>vect3d</code> erlaubt die Darstellung eines dreidimensionalen Vektorfeldes <expr>A(x,y,z) := Ax(x,y,z)ex + Ay(x,y,z)ey + Az(x,y,z)ez</expr> in allen drei Raumrichtungen. Wie bei der zweidimensionalen Variante <code>vect</code> kann dabei nur ein Vektorfeld je Plot angezeigt werden.

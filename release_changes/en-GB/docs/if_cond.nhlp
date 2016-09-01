@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="if_cond">
 	<title string="Conditions" />
 	Using the command <code>if (COND)</code> the evaluation will be forked according to the condition in multiple cases (<code>if...elseif...else...endif</code>). <code>COND</code> represents a logical expression, which will be evaluated before NumeRe enters the corresponding fork. A fork contains at least one <code>if</code> and one <code>endif</code>. In between, you may use as many <code>elseif</code> as needed and at most one <code>else</code> (in this order).

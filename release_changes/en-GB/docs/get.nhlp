@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="get">
 	<title string="Reading of configuration values" />
 	The NumeRe command <code>get</code> may be used to read a current configuration setting of NumeRe. This needs one of the parameters, which are listed below. In addition, you may pass the options <code>asstr</code> and <code>asval</code>. The option <code>asstr</code> returns the value of the configuration setting as a string, <code>asval</code> as a numerical value, if applicable (means: only if the configuration setting contains a numerical value).

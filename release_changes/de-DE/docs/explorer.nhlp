@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="explorer">
 	<title string="Dateiexplorer" />
 	Mit dem Befehl <code>list -files</code> wird der in NumeRe integrierte Dateiexplorer gestartet, der, wenn er ohne weitere Parameter aufgerufen wird, die Dateien und Verzeichnisse in den NumeRe-Standardverzeichnissen auflistet (siehe <code>list -settings</code> für eine Liste selbiger).
