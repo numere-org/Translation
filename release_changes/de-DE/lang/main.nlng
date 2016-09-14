@@ -312,6 +312,10 @@ PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                 VAL 
 PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYP)         VAL    - Formatiert TIME gemäß TYP: TYP = 0 gibt YYYYMMDDhhmmss, TYP = 1...6 geben YYYY ... ss, TYP = -1 gibt YYYYMMDD und TYP = -2 gibt hhmmss zurück
 PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)            VAL    - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
 PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)              VAL    - Gradwert von x [rad]. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)       VAL    - Wert des elliptischen Integrals D(x,n,k) mit 0 <= k < 1. Definiert in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)         VAL    - Wert des elliptischen Integrals E(x,k) mit 0 <= k < 1. Definiert in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)         VAL    - Wert des elliptischen Integrals F(x,k) mit 0 <= k < 1. Definiert in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)      VAL    - Wert des elliptischen Integrals Pi(x,n,k) mit 0 <= k < 1. Definiert in [0, PI/2]
 PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                 VAL    - Wert der gauß'schen Fehlerfunktion an der Stelle x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                VAL    - Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                 VAL    - Exponentialfunktion von x. Definiert auf ganz R

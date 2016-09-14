@@ -80,6 +80,10 @@ draw3d~3D drawing mode~zeichnen drawings anmerkungen annotations zeichnungen
 # E
 edit~Opens a file or a directory for editing its contents~bearbeiten oeffnen öffnen open view betrachten dateien programm
 Easteregg~It would be really nice, if they could be found this easy, wouldn't it? Go and look for them ...~easteregg osterei lustig
+ellipticD(x,n,k~Value of the elliptic integral D(x,n,k)~elliptisches integral
+ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral
+ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral
+ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral
 eigenvals(MAT)~Calculates the eigenvalues of the quadratic matrix MAT~eigenvals() eigenvalues matrix
 eigenvects(MAT)~Calculates the eigenvectors of the quadratic matrix MAT~eigenvects() eigenvectors matrix
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunktion erf()

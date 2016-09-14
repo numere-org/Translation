@@ -312,6 +312,10 @@ PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                 VAL 
 PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYPE)        VAL    - Formats TIME corresponding to TYPE: TYPE = 0 returns YYYYMMDDhhmmss, TYPE = 1...6 returns YYYY ... ss, TYPE = -1 returns YYYYMMDD and TYPE = -2 returns only hhmmss
 PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)            VAL    - Double faculty of the integral number n [n!! = n*(n-2)*(n-4)*...]. Defined for integral numbers >= 0
 PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)              VAL    - Degree value of x [rad]. Defined everywhere in R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)       VAL    - Value of the elliptic integral D(x,n,k) with 0 <= k < 1. Defined in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)         VAL    - Value of the elliptic integral E(x,k) with 0 <= k < 1. Defined in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)         VAL    - Value of the elliptic integral F(x,k) with 0 <= k < 1. Defined in [0, PI/2]
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)      VAL    - Value of the elliptic integral Pi(x,n,k) with 0 <= k < 1. Defined in [0, PI/2]
 PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                 VAL    - Value of the gaussian error function at the position x. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                VAL    - Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                 VAL    - Exponential function of x. Defined everywhere in R
