@@ -23,13 +23,13 @@
 	You may pass the PATH as an absolute or a relative path (out of the default directories). It doesn't make any difference, if the directories in PATH are separated with <code>/</code> or <Code>\</code>. If the PATH shall contain whitespaces, then the whole PATH has to be surrounded by quotation marks.
 	The NumeRe default folders are represented using the following path placeholders:
 	<list>
-		<item node="&lt;&gt;">NumeRe root directory (the numere.exe is located at this directory - In the NumeRe console, <code>&lt;this&gt;</code> will be interpreted as a synonyme of this placeholder)</item>
-		<item node="&lt;wp&gt;">The work path is a placeholder, which points at start-up to <code>&lt;&gt;</code>, too, but this can easily be changed with <code>workpath PATH</code>.</item>
+		<item node="&lt;&gt;">NumeRe root directory (the numere.exe is located at this directory--In the NumeRe console, <code>&lt;this&gt;</code> will be interpreted as a synonym of this placeholder)</item>
+		<item node="&lt;wp&gt;">The work path is a placeholder, which points at start-up to <code>&lt;&gt;</code>, too, but this can be easily changed for the current session with <code>workpath PATH</code>.</item>
 		<item node="&lt;savepath&gt;">Default saving directory (NumeRe will save files at this location, if nothing else is specified)</item>
 		<item node="&lt;loadpath&gt;">Default importing directory (NumeRe will load files from this location, if nothing else is specified)</item>
 		<item node="&lt;scriptpath&gt;">Default script directory (NumeRe expects all scripts in this directory, if nothing else is specified)</item>
 		<item node="&lt;procpath&gt;">Default procedure directory (NumeRe expects all procedures in this directory, if nothing else is specified)</item>
-		<item node="&lt;plotpath&gt;">Default plotting directory (NumeRe will save all generated plots in this location, if nothing else is specified)</item>
+		<item node="&lt;plotpath&gt;">Default plotting directory (NumeRe will save all created plots in this location, if nothing else is specified)</item>
 	</list>
 	The file explorer is capable to filter files/directories according to a passed pattern. This can be achieved by using the corresponding option <code>pattern=PATTERN</code> (or <code>p=PATTERN</code>, respectively). The wildcards <code>*</code> and <code>?</code> may be used in this pattern. Note: <code>*</code> represents an arbitrary number of arbitrary characters, <code>?</code> represents exactly one arbitrary character. If the PATTERN shall contain whitespaces, then it has to be passed surrounded with quotation marks.
 	<example desc="Listing of all files in the default directories, which end with '.dat', and listing of all all directories in the NumeRe root directory:">

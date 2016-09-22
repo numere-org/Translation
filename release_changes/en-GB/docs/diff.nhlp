@@ -18,8 +18,8 @@
 
 <article id="diff">
 	<title string="Numerical differentiation" />
-	NumeRe may differentiate one or multiple expression numerical to the first order. In this case the local slope of the expression with respect to a specified variable will be calculated at a given position. NumeRe will only calculate the numerical value and no analytical expression.
-	The keyword <code>diff</code> followed by the function(s), which shall be differentiated, starts the numerical differentiation. The follwing options have to be appended to the command after an additional <code>-set</code>:
+	NumeRe may numerically differentiate one or multiple expressions to the first order. In this case the local slope of the expression with respect to a specified variable will be calculated at a given position. NumeRe will only calculate the numerical value and no analytical expression.
+	The keyword <code>diff</code> followed by the function(s), which shall be differentiated, starts the numerical differentiation. The following options have to be appended to the command after an additional <code>-set</code>:
 	<list>
 		<item node="VAR=POS">The position POS, at which the expression shall be differentiated. If POS is passed as an interval, then NumeRe will calculate the differentiation in this interval for the given number of samples.</item>
 		<item node="eps=PRECISION">The precision, to which the expression shall be differentiated. This option is <em>optional</em></item>

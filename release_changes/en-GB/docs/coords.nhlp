@@ -19,13 +19,12 @@
 <article id="coords">
 	<title string="Coordinate sets for plots" />
 	NumeRe is capable of using three main coordinate sets: cartesian <expr>(x,y,z)</expr>, polar/cylindrical <expr>(rho,phi[,z])</expr> and spherical <expr>(r,phi,theta)</expr>. These coordinate sets can be chosen while plotting with the option <code>coords=COORDINATES</code>, where <code>cartesian</code>, <code>polar</code> and <code>spherical</code> are the corresponding values for this option.
-	The coordination transformations of the plotting styles with "3d" in their names (e.g. <code>plot3d</code>, <code>surf3d</code>, ...) are different from those without (e.g. <code>mesh</code>, <code>surf</code>, ...). This was implemented, because the plotting styles without "3d" in their names show only surfaces, whereas the others can visualize a whole volume. Vector plots use always the assignment of "3d plots".
-	
+	The coordinate transformations of the plotting styles with "3d" in their names (e.g. <code>plot3d</code>, <code>surf3d</code>, ...) are different from those without (e.g. <code>mesh</code>, <code>surf</code>, ...). This was implemented, because the plotting styles without "3d" in their names show only surfaces, whereas the others can visualize a whole volume. Vector plots use always the assignment of "3d plots".
 	<list>
 		<item node="polar/cylindrical">3D: <expr>x = rho, y = phi, z = z</expr><br>Others: <expr>x = phi, y = z, z = rho</expr></item>
 		<item node="spherical">3D: <expr>x = r, y = phi, z = theta</expr><br>Others: <expr>x = phi, y = theta, z = r</expr></item>
 	</list>
-	NumeRe chooses the plotting intervals [<expr>0,2PI</expr>] for <expr>phi</expr> and [<expr>0,PI</expr>] for <expr>theta</expr> automatically, if nothing else was specified. The visualization of the corresponding axes will be normalized to <expr>PI</expr> to obtain nice values.
+	NumeRe automatically chooses the plotting intervals [<expr>0,2PI</expr>] for <expr>phi</expr> and [<expr>0,PI</expr>] for <expr>theta</expr>, if nothing else was specified. The visualization of the corresponding axes will be normalized to <expr>PI</expr> to obtain nice values.
 	<example desc="Visualizing of the spherical harmonic <expr>Y(3,2,theta,phi)</expr> in spherical coordinates:">
 		surf Y(3, 2, y, x) -set coords=spherical
 	</example>

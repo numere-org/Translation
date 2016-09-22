@@ -18,28 +18,28 @@
 
 <article id="odesolve">
 	<title string="Solving ordinary differential equations" />
-	Using the command <code>odesolve</code> NumeRe may solve ordinary differential equation of <em>first</em> order numerically. The differential equation will <expr>ODE(x,y1,y2,...)</expr> (or the system of differential equations) will be integrated over a predefined <expr>x</expr> interval and the corresponding <expr>y</expr> values will be calculated:
+	Using the command <code>odesolve</code> NumeRe may numerically solve ordinary differential equation of <em>first</em> order. The differential equation <expr>ODE(x,y1,y2,...)</expr> (or the system of differential equations) will be integrated over a predefined <expr>x</expr> interval and the corresponding <expr>y</expr> values will be calculated:
 	<codeblock>
 		odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONS
 	</codeblock>
-	The system of differential equations may consist of one or more subequations. These equations have to fulfill the following scheme:<exprblock>dy1/dx = f1(x,y1,y2,...)\ndy2/dx = f2(x,y1,y2,...)\n...,</exprblock>where <em>only</em> the functions <expr>f1()</expr> to <expr>fn()</expr> have to be passed (in this order) separated through commata. <expr>x</expr> is the integration variable and <expr>y1</expr> to <expr>yn</expr> are predefined function variables, in which NumeRe will store the result of the last integration step. All other variables are regardes as constant parameters.
-	<em>Important:</em> NumeRe will provide the number of function variables corresponding to the number of equations: for one equationv only <code>y1</code> is available, for two equations <code>y1</code> and <code>y2</code> are available, etc. If you need more variables (e.g. to solve a vectorial problem), you may add "0" equations. However, the function variable will be more or less a constant in this case.
-	Differential equations of the order <expr>n</expr> (<expr>ODE(x,y,y',y'',...,y^n)</expr>) may always transformed in a system of <expr>n</expr> differential equations of the order 1 by introducing <expr>(n-1)</expr> additional functions:<expr>y' = dy1/dx = y2, y'' = dy2/dx = y3, ...</expr> Such a system follows the scheme:
+	The system of differential equations may consist of one or more subequations. These equations have to fulfill the following scheme:<exprblock>dy1/dx = f1(x,y1,y2,...)\ndy2/dx = f2(x,y1,y2,...)\n...,</exprblock>where <em>only</em> the functions <expr>f1()</expr> to <expr>fn()</expr> have to be passed (in this order) separated by commata. <expr>x</expr> is the integration variable and <expr>y1</expr> to <expr>yn</expr> are predefined function variables, in which NumeRe will store the result of the last integration step. All other variables are regarded as constant parameters.
+	<em>Important:</em> NumeRe will provide the number of function variables corresponding to the number of equations: for one equation only <code>y1</code> is available, for two equations <code>y1</code> and <code>y2</code> are available, etc. If you need more variables (e.g. to solve a vectorial problem), you may add "0" equations. However, the function variable will be more or less a constant in this case.
+	Differential equations of the order <expr>n</expr> (<expr>ODE(x,y,y',y'',...,y^n)</expr>) may always be transformed in a system of <expr>n</expr> differential equations of the order 1 by introducing <expr>(n-1)</expr> additional functions:<expr>y' = dy1/dx = y2, y'' = dy2/dx = y3, ...</expr> Such a system follows the scheme:
 	<exprblock>
 		dy1/dx = y2
 		dy2/dx = y3
 		...
 		dyn/dx = ODE(x,y1,y2,...,y(n-1))
 	</exprblock>
-	The results of the integration will per default be written into the cache <code>ode()</code> as a table. The first column contains the <expr>x</expr> values and the following columns the corresponding integrated function values.
+	The results of the integration willt be written by defaul into the cache <code>ode()</code> as a table. The first column contains the <expr>x</expr> values and the following columns the corresponding integrated function values.
 	You may take further influence of the evaluations of the ODE solver with these options:
 	<list>
 		<item node="method=METHOD">This determines the integration algorithm, which NumeRe shall use for this ODE. You may choose out of<br>  rk2     - Runge-Kutta (2,3)<br>  rk4     - Runge-Kutta 4. order (default)<br>  rkck    - Runge-Kutta Cash-Carp (4,5)<br>  rkf45   - Runge-Kutta-Fehlberg (4,5)<br>  rk8pd   - Runge-Kutta Prince-Dormand (8,9)</item>
-		<item node="tol=TOLERANCES">Defines the tolerances for the algorithm. You may pass relative and absolute tolerances separately [REL,ABS] or as single value.</item>
+		<item node="tol=TOLERANCES">Defines the tolerances for the algorithm. You may pass relative and absolute tolerances separately [REL,ABS] or as a single value.</item>
 		<item node="samples=SAMPLES">Determines the number of samples, which shall be integrated. The default value is 100</item>
-		<item node="target=CACHE()">Changes the target cache from <code>ode()</code> to <code>CACHE()</code>. If necessary the cache <code>CACHE()</code> will be created automatically</item>
+		<item node="target=CACHE()">Changes the target cache from <code>ode()</code> to <code>CACHE()</code>. If necessary, the cache <code>CACHE()</code> will be created automatically</item>
 		<item node="fx0=STARTVALUES">This defines the starting values of the single function variables <code>[Y01,Y02,...,Y0n]</code>. If none or too few starting values are passed, NumeRe will use 0 for the missing ones</item>
-		<item node="lyapunov">Additionally calculates the shorttime Lyapunov exponent in two additional data rows. thos parameter defines, if the calculuated solution is chaotic: it is chaotic, if the exponent is positive, it is regular, if the exponent is negative</item>
+		<item node="lyapunov">Additionally calculates the shorttime Lyapunov exponent in two additional data rows. This parameter defines, if the calculuated solution is chaotic: it is chaotic, if the exponent is positive, it is regular, if the exponent is negative</item>
 	</list>
 	The evaluation may be canceled with the <code>ESC</code> key, if it takes too much time.
 	<example desc="Numerical solution of the physical pendulum:">

@@ -55,5 +55,5 @@
 		SCRIPTPATH: "&SCRIPTPATH&"
 	</example>
 	SIEHE AUCH: "help set", "help editor" oder "help viewer"
-	TIPP: Verwende <code>list -settings</code> um alle Einstellungen in einer übersichtlichen Liste anzeigen zu lassen.
+	<em>Tipp:</em> Verwende <code>list -settings</code> um alle Einstellungen in einer übersichtlichen Liste anzeigen zu lassen.
 </article>

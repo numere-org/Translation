@@ -18,10 +18,10 @@
 
 <article id="list">
 	<title string="Listing objects" />
-	The command <code>list</code> displays all objects, which were specified with the mandatory parameter, in a clear list.
+	The command <code>list</code> displays all objects in a clear list, which were specified with the mandatory parameter.
 	The parameter are as follows:
 	<list>
-		<item node="-cmd">lists all NumeRe-Kommandos and a short description</item>
+		<item node="-cmd">lists all NumeRe commands and a short description</item>
 		<item node="-const">lists all implemented constants, their values and their SI units, if applicable</item>
 		<item node="-define">lists all custom defined functions</item>
 		<item node="-exprvar">lists all variables, which were used in the last expression, including their values and their needed memory size</item>

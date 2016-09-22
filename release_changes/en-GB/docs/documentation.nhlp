@@ -24,19 +24,19 @@
 	<list>
 		<item node="&lt;article ...&gt;">The unique key, which will link the documentation index with the corresponding entry of the documentation index (<code>id=</code>)</item>
 		<item node="&lt;title .../&gt;">The title (<code>string=</code>) and the index keys (<code>idxkey=</code>) for the documentation index, meaning the keywords, which will be listed for the article by invoking "help idx"</item>
-		<item node="&lt;keyword&gt;">A keyword used for displaying the article. Simple rule: the more keywords the better. A keyword doesn't have to be a full word. <em>Important</em>:the passed keywords will be overwrite the keywords of the default documentation articles.</item>
+		<item node="&lt;keyword&gt;">A keyword used for displaying the article. Simple rule: the more keywords the better. A keyword doesn't have to be a full word. <em>Important</em>:the passed keywords will overwrite the keywords of the default documentation articles.</item>
 		<item node="&lt;list&gt;">List environment for a list just like this one. Contains further <code>&lt;item&gt;</code> environments, which are the actual items of the list</item>
-		<item node="&lt;br&gt;">Entery a line break at its place. (Paragraphes are represented by line breaks in the help file)</item>
+		<item node="&lt;br&gt;">Enters a line break at its place. (Paragraphs are represented by line breaks in the help file)</item>
 		<item node="&lt;em&gt;">Contains sections, which shall be emphasised. Will be displayed using <em>capital</em> (or bold and italic in HTML format) letters</item>
-		<item node="&lt;code&gt;">Contains strings, which shall not be interpreted, just like NumeRe-Code (doesn't ignore angle brackets: <code>&lt;&gt;</code>)</item>
-		<item node="&lt;expr&gt;">For (simple) mathematical expressions, Will only be interpreted in HTML format.</item>
+		<item node="&lt;code&gt;">Contains strings, which shall not be interpreted, just like NumeRe-Code (but it doesn't ignore angle brackets: <code>&lt;&gt;</code>)</item>
+		<item node="&lt;expr&gt;">For (simple) mathematical expressions; will only be interpreted in HTML format.</item>
 		<item node="&lt;codeblock&gt;">Separate block for NumeRe-Code</item>
 		<item node="&lt;exprblock&gt;">Separate block for (simple) mathematical expressions</item>
 		<item node="&lt;item ...&gt;">List item with a corresponding identifier (<code>node=</code>)</item>
 		<item node="&lt;example ...&gt;">Environment containing an example with a description (<code>desc=</code>) and custom formatting (<code>type='verbatim'</code>), if applicable</item>
 	</list>
 	Documentation articles may be exported to a HTML file. This can be achieved by passing the parameter <code>-html</code> to the documentation call:<codeblock>help TOPIC -html</codeblock>
-	Simple text can entered directly. The string to the next line break will be interpreted as a paragraph and displayed in corresponding way.
+	Simple text can be entered directly. The string to the next line break will be interpreted as a paragraph and displayed in the corresponding way.
 	The following example shows the (shortened) documentation file for this article.
 	<example desc="Exemplary declaration of a documentation article: <code>help documentation</code>" type="verbatim">
 	|   &lt;helpindex&gt;

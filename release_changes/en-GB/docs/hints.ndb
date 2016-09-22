@@ -45,7 +45,7 @@ Have you seen the NumeRe documentation as PDF? You'll find it in the subdirector
 You can add your custom commands to NumeRe or overwrite (nearly all) predefined commands with your custom behavior. "help plugins" contains the information, to write the necessary plugin.
 The command "eval" can fill automatically a column/line with function values. See "help eval" for further information.
 Data rows can be Fourier transformed with the command "fft". "help fft" contains the necessary information, to use this command.
-Using "datagrid" you can generate data grids (2D data sets) out of other data sets or calculated from function values. See "help datagrid" for further information.
+Using "datagrid" you can create data grids (2D data sets) out of other data sets or calculate them from function values. See "help datagrid" for further information.
 You can install plugins and procedures with the command "install" out of scripts. "help install" gives further hints. Some corresponding scripts should be located in the subdirectory "scripts".
 You can prompt for an input during the execution of a script or a procedure, if you use the expression "??". See "help ??" for further information.
 "data -paste" starts the pasting mode. After invoking this command, you can enter tabular data form the clipboard. Further information can be found in "help data".
@@ -55,16 +55,16 @@ The command "matop" allows matrix operations (see "help matop" for further infor
 Data sets can be used as an index set for other data sets, if they are passed for the corresponding dimension (line or column).
 "taylor" calculates a numerical Taylor expansion of a function and defines it in the function "Taylor(x)". See "help taylor" for further information.
 First order ordinary differential equations can be solved with "odesolve". See "help odesolve" for further information.
-Errors or troubles during writing of procedures? The NumeRe debugger ("set -mode=debug") shows addition information to help you searching for your error.
-The "compose" mode gives the possibility, to gather mulitple subplots in one file and to arrange them to a imaginary grid. See "help subplot" or "help compose" for additional information.
+Errors or troubles during writing of procedures? The NumeRe debugger ("set -mode=debug") shows additional information to help you searching for your error.
+The "compose" mode gives the possibility, to gather mulitple subplots in one file and to arrange them to a virtual grid. See "help subplot" or "help compose" for additional information.
 # Tweaks
-Plotting intervals with inverted borders (e.g. "[10:-10]") will be plotted inverted.
-The parameter "-set" can nearly everytime be replaced with "--"; if both syntax elements appear in one command expression, the variant "-set" has priority. 
-In the NumeRe root path you'll find two syntax highlightings for Notepad++. If you use these with scripts and procedures in Notepad++, then functions and commands will be emphasised with colors and different font shapes.
+Plot intervals with inverted borders (e.g. "[10:-10]") will be plotted inverted.
+The parameter "-set" can be replaced nearly everytime with "--"; if both syntax elements appear in one command expression, the variant "-set" has priority. 
+In the NumeRe root path you'll find two syntax highlightings for Notepad++. If you use them for writing scripts and procedures in Notepad++, then functions and commands will be emphasised with colors and different font shapes.
 The interval of the color scale can additional be modified with the fourth plotting interval: [x1:x2,y1:y2,z1:z2,c1:c2]
 With one of the commands "edit", "view" or "open" you can open the desired folder in Windows Explorer.
 Lengthy evaluations can be canceled using the "ESC" key. This is valid for scripts, procedures and plugins, too.
-The size of the NumeRe window can be configured with "set -windowsize x=WIDTH y=HEIGHT" to your personal desires.
+The size of the NumeRe window can be configured with "set -windowsize x=WIDTH y=HEIGHT" according your personal desires.
 # Call to Action
 Have you found an error? Or do think that an important feature is missing? Then assign this directly to the developer: <numere.developer@gmail.com>
-If you find NumeRe helpful, then you can support the development by publishing a review at SourceForge.
+If you find NumeRe helpful, then you may support the development by publishing a review at SourceForge.

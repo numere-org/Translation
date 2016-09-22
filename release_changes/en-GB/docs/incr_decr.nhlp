@@ -18,8 +18,8 @@
 
 <article id="incr_decr">
 	<title string="Increment and decrement" />
-	Increment (<code>++</code>) and decrement operators (<code>--</code>) rise (Increment) or lower (Decrement), respectively the value of the prefixed variable with 1. This is of central interest in the context of loops and forks.
-	Increment and decrement operators are equivalent to the expressions <expr>x = x+1</expr> or <expr>x = x-1</expr>, respectively and will be evaluated internally using this equivalence.
+	Increment (<code>++</code>) and decrement operators (<code>--</code>) rise (Increment) or lower (Decrement), respectively, the value of the prefixed variable with 1. This is of central interest in the context of loops and forks.
+	Increment and decrement operators are equivalent to the expressions <expr>x = x+1</expr> or <expr>x = x-1</expr>, respectively, and will be evaluated internally using this equivalence.
 	<example desc="Increment of the variable i = 0 and decrement of the variable j = 1:">
 		i++
 		ans = 1

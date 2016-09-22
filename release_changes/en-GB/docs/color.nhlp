@@ -18,7 +18,7 @@
 
 <article id="color">
 	<title string="Coloring schemes and line coloring for plots" />
-	The coloring schemes, which NumeRe uses in its 2D and 3D plots, can--as well as the line colors in usual plots and 3D trajectories--be customized. While plotting, simply pass the option <code>colorscheme=SCHEME</code> or <code>plotcolors=COLORS</code>, repectively.
+	The coloring schemes, which NumeRe uses in its 2D and 3D plots, can be customized--as well as the line colors in usual plots and 3D trajectories. While plotting, simply pass the option <code>colorscheme=SCHEME</code> or <code>plotcolors=COLORS</code>, repectively.
 	There exists some predefined schemes for 2D and 3D plots. The default coloring scheme is called <code>viridis</code>:
 	<list>
 		<item node="coast">Caribbean coast: going from dark blue through cyan and yellow to white</item>
@@ -33,11 +33,11 @@
 		<item node="viridis">Similar to <code>coast</code>, but slightly more green and blue and a more uniform brightness. Default coloring scheme</item>
 	</list>
 	The schemes <code>rainbow</code> and <code>map</code> should not be used, if the resulting plot probably may be printed in greyscales, because the brightest point is not at the upper end of the scale.
-	Apart from this, custom coloring schemes can be defined. The colors, which shall be used and represented by single characters, have to appended in the corresponding order and passed in additional quotation marks as SCHEME to the <code>colorscheme</code> option:<codeblock>colorscheme="BbcyrR"    (color set of the rainbow coloring scheme)</codeblock>The colors will be interpolated linearly for the final gradient.
+	Apart from this, custom coloring schemes can be defined. The colors, which shall be used and which are represented by single characters, have to appended in the corresponding order and passed in additional quotation marks as SCHEME to the <code>colorscheme</code> option:<codeblock>colorscheme="BbcyrR"    (color set of the rainbow coloring scheme)</codeblock>The colors will be interpolated linearly for the final gradient.
 	The colors should be passed going from the color for the lowest to the color for the highest function value. The number of colors (maximal 32 colors are possible) should be chosen depending on the desired level of detail. In most cases 2-3 colors are sufficient; choose about 5-7 colors for many details.
 	Using the two symbols <code>#</code> and <code>|</code> you can take further influence on the resulting scheme: <code>#</code> draws an additional mesh ontop of surface, density and gradient plots. If this characters is used in the coloring scheme for <code>surf3d</code>, the plot will generate the same figure as <code>mesh3d</code>. The character <code>|</code> deactivates the color interpolation in the current coloring scheme.
-	The color of each line in usual plot or 3D trajectories, respectively, is represented by one single letter. The first letter corresponds to the first line, the second to the second line, and so on. Note that data plots will always be drawn after the function plots (internally, they are reordered).
-	Maximal 14 colors can be entered; the 15. line will carry the color of the first line. You don't have to pass all 14 letters; if you pass fewer, then only their number of styles will be overwritten:<codeblock>plotcolors="rrr"   (draws the first three lines in red)</codeblock>If a whitespace is entered instead of a color, then the corresponding line color won't be overwritten. If the coloring scheme <code>grey</code> is active, then all line styles will be switched to grey values automatically.
+	The color of each line in usual plot or 3D trajectories, respectively, is represented by one single letter. The first letter corresponds to the first line, the second to the second line, and so on.
+	Maximal 14 colors can be entered; the 15. line will carry the color of the first line. You don't have to pass all 14 letters; if you pass fewer, then only their number of styles will be overwritten:<codeblock>plotcolors="rrr"   (draws the first three lines in red)</codeblock>If a whitespace is entered instead of a color, then the corresponding line color won't be overwritten. If the coloring scheme <code>grey</code> is active, then all line styles will be automatically switched to grey values.
 	The available colors are represented by the following letters:
 	<list>
 		<item node="w">white             y   - yellow                 n   - pastel blue</item>

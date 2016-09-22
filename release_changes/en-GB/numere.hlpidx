@@ -199,7 +199,7 @@
 	</article>
 	<article id="fft">
 		<file path="<>/user/docs/fft.nhlp" />
-		<title string="Fourier transform of data sets" idxkey="fft" />
+		<title string="Fourier transformation of data sets" idxkey="fft" />
 		<keywords>
 			<keyword>fft</keyword>
 			<keyword>fourier</keyword>
