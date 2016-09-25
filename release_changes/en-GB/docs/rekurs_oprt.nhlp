@@ -19,5 +19,5 @@
 <article id="rekurs_oprt">
 	<title string="Recursive operators" />
 	NumeRe may use the following recursive operators: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> and <code>^=</code>. These operators are abbreviatons for:<codeblock>VAR += EXPRESSION &lt;=&gt; VAR = VAR + (EXPRESSION)</codeblock>and similar for the other operators.
-	This may prevent you from having to type very much. The recursive operators will be transformed to their long variants internally, to prevent ambigousity.
+	This may prevent you from having to type very much. The recursive operators will be internally transformed to their long variants, to prevent ambigousity.
 </article>
