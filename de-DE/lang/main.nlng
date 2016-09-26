@@ -239,6 +239,8 @@ BUILTIN_NEW_FILECREATED=Die Datei "%%1%%" wurde erfolgreich erzeugt.
 BUILTIN_NEW_ENTERYOURCODE=Füge hier deine Kommandos und Ausdrücke ein.
 BUILTIN_NEW_PROCCREATED=Die Prozedur "%%1%%" wurde erfolgreich erzeugt.
 BUILTIN_NEW_PLUGINCREATED=Ein Template für das Plugin "%%1%%" wurde in "%%2%%" erzeugt.
+BUILTIN_NEW_CACHES=%%1%% wurde(n) erfolgreich als Cache(s) erzeugt.
+BUILTIN_NEW_FREE_CACHES=%%1%% wurde(n) erfolgreich als freie(r) Cache(s) erzeugt.
 # PARSER:
 #=====================================
 PARSER_FIRSTSTART_INTRO=Das war erst einmal das Wichtigste. Nun ist es an dir, dich hier einfach mal in aller Ruhe umzusehen. Versuch einfach mal, einen Ausdruck oder ein Kommando einzugeben!$Und falls mal was schief geht: Hilfe findest du unter "help THEMA" oder "find BEGRIFFE". Und wenn ich gar nicht verstehe, was du willst, werde ich auch selbst versuchen, den passenden Artikel in der Hilfe zu finden ...$(Mit "quit" beendest du mich)
@@ -269,8 +271,8 @@ PARSERFUNCS_INTEGRATE_PRECISIONGREATERZERO=FEHLER: Präzision darf nicht 0 sein.
 PARSERFUNCS_INTEGRATE_PRECISIONGREATERINTERVAL=FEHLER: Die Präzision kann nicht größer als das Integrationsintervall sein.
 PARSERFUNCS_INTEGRATE_ANALYTICAL=Analytische Lösung
 PARSERFUNCS_INTEGRATE_CONSTANT=Konstante Funktion. Berechne Integral
-PARSERFUNCS_INTEGRATE2_BOUNDARYDEPENDENCE="FEHLER: %%1%%-Grenzen können nicht von %%1%% oder %%2%% abhängen.
-PARSERFUNCS_INTEGRATE2_BOUNDARYSELFDEPENDENCE="FEHLER: %%1%%-Grenzen können nicht von %%1%% selbst abhängen.
+PARSERFUNCS_INTEGRATE2_BOUNDARYDEPENDENCE=FEHLER: %%1%%-Grenzen können nicht von %%1%% oder %%2%% abhängen.
+PARSERFUNCS_INTEGRATE2_BOUNDARYSELFDEPENDENCE=FEHLER: %%1%%-Grenzen können nicht von %%1%% selbst abhängen.
 PARSERFUNCS_INTEGRATE2_SWAPVARS=Tausche %%1%%- und %%2%%-Integration aus Gründen der Performance
 PARSERFUNCS_LISTFUNC_HEADLINE=Vordefinierte Funktionen
 PARSERFUNCS_LISTFUNC_NUM=numerisch
@@ -312,6 +314,10 @@ PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                 VAL 
 PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYP)         VAL    - Formatiert TIME gemäß TYP: TYP = 0 gibt YYYYMMDDhhmmss, TYP = 1...6 geben YYYY ... ss, TYP = -1 gibt YYYYMMDD und TYP = -2 gibt hhmmss zurück
 PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)            VAL    - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
 PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)              VAL    - Gradwert von x [rad]. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)       VAL    - Wert des elliptischen Integrals D(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)         VAL    - Wert des elliptischen Integrals E(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)         VAL    - Wert des elliptischen Integrals F(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)      VAL    - Wert des elliptischen Integrals Pi(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                 VAL    - Wert der gauß'schen Fehlerfunktion an der Stelle x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                VAL    - Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                 VAL    - Exponentialfunktion von x. Definiert auf ganz R
@@ -513,14 +519,14 @@ PARSERFUNCS_LISTCMD_CMD_SMOOTH=			smooth       OB -PAR        - Verringert das R
 PARSERFUNCS_LISTCMD_CMD_SORT=			sort         -OB PAR        - Sortiert einen Datensatz
 PARSERFUNCS_LISTCMD_CMD_STATS=			stats        OB [-PAR]      - Berechnung der Statistiken eines Datensatzes
 PARSERFUNCS_LISTCMD_CMD_STFA=			stfa         OB [-PAR]      - Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes
-PARSERFUNCS_LISTCMD_CMD_STR=			str                         - Lokalen Zeichenkettenvariablensatz in Prozeduren definieren
+PARSERFUNCS_LISTCMD_CMD_STR=			str          EX             - Lokalen Zeichenkettenvariablensatz in Prozeduren definieren
 PARSERFUNCS_LISTCMD_CMD_SURF=			surf         EX [-set PAR]  - Erzeugung von Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SURF3D=			surf3d       EX [-set PAR]  - Erzeugung von 3D-Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SWAP=			swap         -OB            - Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus
 PARSERFUNCS_LISTCMD_CMD_TAYLOR=			taylor       EX -set PAR    - Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n.
 PARSERFUNCS_LISTCMD_CMD_THROW=			throw        [STR]          - Prozedurauswertung im Notfall abbrechen
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE=		undefine     EX             - Entfernen einer Funktionsdefinition
-PARSERFUNCS_LISTCMD_CMD_VAR=			var                         - Lokalen Variablensatz in Prozeduren definieren
+PARSERFUNCS_LISTCMD_CMD_VAR=			var          EX             - Lokalen Variablensatz in Prozeduren definieren
 PARSERFUNCS_LISTCMD_CMD_VECT=			vect         EX [-set PAR]  - Erzeugung eines (2D-)Vektorfeldplots
 PARSERFUNCS_LISTCMD_CMD_VECT3D=			vect3d       EX [-set PAR]  - Erzeugung eines 3D-Vektorfeldplots
 PARSERFUNCS_LISTCMD_CMD_WHILE=			while        EX             - Startet die Definition einer While-Schleife
@@ -695,7 +701,7 @@ DOC_FIRSTSTART_PAGE_3_LINE_4=TIPP: Weiterführende Infos findest du unter "help s
 DOC_FIRSTSTART_PAGE_4_HEAD=Datenfiles
 DOC_FIRSTSTART_PAGE_4_LINE_1=Ich hatte eben einige Features angedeutet, die ich dir in den folgenden Zeilen vorstellen werde. Beginnen wir dabei zunächst mit der Arbeit mit Datensätzen:
 DOC_FIRSTSTART_PAGE_4_LINE_2=Ich fasse jeden Datensatz als eine Tabelle auf. Tabellen als Textdatei als *.dat oder *.txt kannst du mittels des Kommandos "load DATEI", wobei DATEI der Dateiname des Datensatzes ist, in meinen Arbeitsspeicher laden. Kommentare müssen dabei durch ein "#" am Anfang der Zeile auskommentiert werden, Dezimaltrennzeichen kann der Punkt oder das Komma (oder beides) sein und die einzelnen Spalten müssen durch mindestens ein Leerzeichen oder einen Tabulator getrennt sein. (Beispiel: "load samples/data")
-DOC_FIRSTSTART_PAGE_4_LINE_3=Ich kann des Weiteren auch die Tabelle aus einer CASSY(R)-LABX-Datei extrahieren, sie auswerten und ggf. in eine *.dat-Datei exportieren. Außerdem verstehe ich Comma Separated Value-Datafiles (*.csv), JCAMP-DX-Files (*.dx), IGOR Binary Waves (*.ibw) und OpendDocument-Spreadsheets (*.ods). Das zusätzliche "NumeRe-Datafile"-Format (*.ndat) verwende ich standardmäßig zum Speichern, allerdings handelt es sich dabei um ein binäres Format, das nur von mir gelesen werden kann. Ich kann die Daten aber auch in eine Text- oder eine TeXdatei exportieren, wenn das gewünscht ist.
+DOC_FIRSTSTART_PAGE_4_LINE_3=Ich kann des Weiteren auch die Tabelle aus einer CASSY(R)-LABX-Datei extrahieren, sie auswerten und ggf. in eine *.dat-Datei exportieren. Außerdem verstehe ich Comma Separated Value-Datafiles (*.csv), JCAMP-DX-Files (*.dx), IGOR Binary Waves (*.ibw), OpenDocument-Spreadsheets (*.ods) und Excel(R)-Mappen (*.xls und *.xlsx). Das zusätzliche "NumeRe-Datafile"-Format (*.ndat) verwende ich standardmäßig zum Speichern, allerdings handelt es sich dabei um ein binäres Format, das nur von mir gelesen werden kann. Ich kann die Daten aber auch in eine Text-, eine TeXdatei oder eine Excel(R)-Mappe exportieren, wenn das gewünscht ist.
 DOC_FIRSTSTART_PAGE_4_LINE_4=Die geladenen Daten kann ich rasch analysieren. Wenn du "stats data()" eingibst, berechne ich dir die Statistiken der Datensätze, und bei "hist data()" berechne ich dir ein Histogramm der Daten. Tiefergehendere oder ausführlichere Auswertungen kann ich dir machen, wenn du die dazu nötigen Gleichungen direkt eingibst, wobei die Daten in meinem Arbeitsspeicher durch "data(ZEILE,SPALTE)" repräsentiert sind. (Beispiel: "7*exp(data(12,3)^2)")
 DOC_FIRSTSTART_PAGE_4_LINE_5=TIPP: Weiterführende Infos findest du unter "help data", "help load", "help stats" und "help hist"
 # ------------------------

@@ -81,6 +81,10 @@ draw3d~3D-Zeichenmodus, der die Darstellung primitiver Objekte im dreidimensiona
 # E
 edit~Bearbeiten und Öffnen von Dateien in einem externen Programm~bearbeiten oeffnen öffnen open view betrachten dateien programm
 Easteregg~Wie wenn die wirklich so einfach zu finden wären ... Such' nur weiter ...~easteregg osterei lustig
+ellipticD(x,n,k)~Wert des elliptischen Integrals D(x,n,k)~elliptisches integral
+ellipticE(x,k)~Wert des elliptischen Integrals E(x,k)~elliptisches integral
+ellipticF(x,k)~ Wert des elliptischen Integrals F(x,k)~elliptisches integral
+ellipticPi(x,n,k)~Wert des elliptischen Integrals Pi(x,n,k)~elliptisches integral
 eigenvals(MAT)~Berechnet die Eigenwerte der quadratischen Matrix MAT, siehe "help matop"~eigenvals() eigenvalues matrix
 eigenvects(MAT)~Berechnet die Eigenvektoren der quadratischen Matrix, siehe "help matop"~eigenvects() eigenvectors matrix
 erf(x)~Wert der gauß'schen Fehlerfunktion an der Stelle x~gausssche gaußsche fehlerfunktion errorfunktion erf()

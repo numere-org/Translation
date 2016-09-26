@@ -1,12 +1,30 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="plugins">
 	<title string="Plugins" />
-	The functionality of NumeRe will be extended constantly, however, there is the possibility, to add functionality through plugins by <em>yourself</em>. These plugins make use of NumeRe procedures, which may be linked to a command.
-	Plugin commands may overwrite predefined commands (except of some protected ones). However, this requires a very sophisticated programming, because there is the threat of programming an endless loop, if the new function makes use of the predefined command. If the new function shall use the predefined command, you should prefix the additional command <code>explicit</code> to the actual command:<codeblock>explicit COMMAND</codeblock>
+	The functionality of NumeRe will be extended constantly, however, there is the possibility, to add functionality through plugins by <em>yourself</em>. These plugins make use of NumeRe procedures, which can be linked to a command.
+	Plugin commands may overwrite predefined commands (except of some protected ones). However, this requires a very sophisticated programming, because there is the threat of programming an endless loop, if the new function makes use of the predefined command. If the new function shall use the predefined command, you have to prefix the additional command <code>explicit</code> to the actual command:<codeblock>explicit COMMAND</codeblock>
 	To overwrite e.g. <code>plot</code>, the procedure <em>has to</em> make use of <code>explicit plot [...]</code>, if the procedure shall use the actual plotting functionality of NumeRe. Otherwise NumeRe will try to resolve the call to <em>plot</em> in the procedure by the overwritten behavior again. Instead of prefixing <code>explicit</code> to the commands, you may use the global flag <code>explicit</code> in the procedures head.
 	Plugins will suppress all of NumeRe's system messages except of the error messages. Success and other messages have to be programmed by yourself.
-	Plugins may only be declared during the installation of NumeRe procedures. The corresponding <code>&lt;info&gt; ... &lt;endinfo&gt;</code> block has to get the following additional values:
+	Plugins may only be declared during the installation of NumeRe procedures. The corresponding <code>&lt;info&gt; ... &lt;endinfo&gt;</code> block must contain the following additional values:
 	<list>
-		<item node="-pluginmain=\$PROC(TAGS)">This defines the plugin's main procedure, which will be started after entering the plugin's command. The TAGS are one of <code>&lt;CMDSTRING&gt;</code>, <code>&lt;EXPRESSION&gt;</code> and <code>&lt;PARAMSTRING&gt;</code>. These tags will be passed by NumeRe to the procedure.</item>
+		<item node="-pluginmain=\$PROC(TAGS)">This defines the plugin's main procedure, which will be started after entering the plugin's command. The TAGS are one or mor of <code>&lt;CMDSTRING&gt;</code>, <code>&lt;EXPRESSION&gt;</code> and <code>&lt;PARAMSTRING&gt;</code>. These tags will be passed by NumeRe to the procedure.</item>
 		<item node="-plugincommand=CMD">Defines the actual plugin command. Has to be passed surrounded by quotation marks.</item>
 		<item node="-plugindesc=DESC">Give a description of the plugin. This is an <em>optional</em> value and has to be passed inside of quotation marks.</item>
 		<item node="-version=VERSION">Defines the version of the plugin. This value will be incremented automatically, if it is not defined. Has to be passed inside of quotation marks.</item>

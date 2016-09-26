@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="color">
 	<title string="Farbschemata und Linienfarben für Plots" />
 	Die Farbschemata, die NumeRe in 2D- und 3D-Plots verwendet, können - ebenso wie die Linienfarben in gewöhnlichen Plots und 3D-Trajektorien - angepasst werden. Dabei muss die Option <code>colorscheme=SCHEMA</code> bzw. <code>plotcolors=FARBEN</code> beim Plotten übergeben werden.
@@ -18,7 +36,7 @@
 	Daneben können aber auch noch eigene Schemata bestimmt werden. Dazu müssen die Farben, die durch einzelne Buchstaben repräsentiert werden, in der gewünschten Reihenfolge aneinandergehängt werden und in zusätzlichen Anführungszeichen als SCHEMA übergeben werden:<codeblock>colorscheme="BbcyrR"   (Farbsatz des rainbow-Schemas)</codeblock>Die Farben werden dabei für die nötigen Farbverläufe automatisch interpoliert.
 	Die Farben sollten stets von der Farbe für den kleinsten bis zu der Farbe für den größten Funktionswert angegeben werden. Je nachdem, wie viele Details hervorgehoben werden, sollte die Anzahl an Farben (bis zu 32 sind möglich) gewählt werden. Für einfache Details genügen 2-3, für viele sollten es zwischen 5 und 7 sein.
 	Mit den zwei Symbolen <code>#</code> und <code>|</code> kann weiter Einfluss auf die Darstellung genommen werden: <code>#</code> zeichnet ein zusätzliches Gitter auf Oberflächen-, Dichte- und Gradientenplots. Wird dieses Zeichen im Farbschema für <code>surf3d</code> verwendet, wird die Ausgabe von <code>mesh3d</code> erzeugt. Das Zeichen <code>|</code> deaktiviert die Interpolation der Farben im aktuellen Farbschema.
-	Bei gewöhnlichen Plots bzw. 3D-Trajektorien wird die Farbe jeder Linie durch einen der unten genannten Buchstaben repräsentiert. Dabei steht der erste Buchstabe für die erste, der zweite für die zweite (usw.) Linie. Zu beachten ist, dass Datenpunktplots stets nach den Funktionenplots gezeichnet werden (sie werden intern umgeordnet).
+	Bei gewöhnlichen Plots bzw. 3D-Trajektorien wird die Farbe jeder Linie durch einen der unten genannten Buchstaben repräsentiert. Dabei steht der erste Buchstabe für die erste, der zweite für die zweite (usw.) Linie.
 	Es können hier maximal 14 Farben angegeben werden; für die 15. Linie wird wieder die Farbe der ersten Linie verwendet. Es müssen jedoch nicht 14 Stile angegeben werden; sind es weniger, werden nur die entsprechende Anzahl an Linien angepasst:<codeblock>plotcolors="rrr"   (zeichnet die ersten drei Linien rot)</codeblock>Wird statt einer Farbe ein Leerzeichen angegeben, so wird die entsprechende voreingestellte Farbe nicht geändert. Wenn das Farbschema <code>grey</code> aktiv ist, wird außerdem automatisch auf Grauwerte in den Linienfarben umgestellt.
 	Die vorhandenen Farben werden durch die folgenden Buchstaben repräsentiert:
 	<list>

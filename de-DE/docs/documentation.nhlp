@@ -1,8 +1,26 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="documentation">
 	<title string="Dokumentation" />
 	Alle Hilfeartikel der NumeRe-Hilfe liegen in Form von NumeRe-Hilfedateien (*.nhlp) im Unterverzeichnis "./docs" vor. Da es sich hierbei im Prinzip um XML-Dateien handelt, können sie ohne Probleme mit einem beliebigen Texteditor bearbeitet werden. Allerdings ist zu beachten, dass die standardmäßigen Hilfedateien während eines Updates <em>überschrieben</em> werden.
 	Plugins können bei der Installation Hilfedateien zum bereits vorhandenen Satz und entsprechende Einträge zum Dokumentationsverzeichnis hinzufügen. Die Hilfedateien werden dabei in einem speziellen Unterverzeichnis "./docs/plugins" abgelegt, um ein etwaiges Überschreiben zu verhindern.
-	Um Hilfedateien während der Installation hinzuzufügen, müssen innerhalb des <code>&lt;install&gt;...&lt;endinstall&gt;</code>-Blocks zwei weitere Blöcke vorhanden sein: ein <code>&lt;helpindex&gt;...&lt;/helpindex&gt;</code>- und ein <code>&lt;helpfile&gt;...&lt;/helpfile&gt;</code>-Block. Im ersteren müssen die Indexinformationen des Hilfeartikels; im zweiten der eigentliche Hilfeartikel. Dabei können <code>&lt;example&gt;</code>-, <code>&lt;list&gt;</code>- oder andere Umgebungen verwendet werden.
+	Um Hilfedateien während der Installation hinzuzufügen, müssen innerhalb des <code>&lt;install&gt;...&lt;endinstall&gt;</code>-Blocks zwei weitere Blöcke vorhanden sein: ein <code>&lt;helpindex&gt;...&lt;/helpindex&gt;</code>- und ein <code>&lt;helpfile&gt;...&lt;/helpfile&gt;</code>-Block. Im ersteren müssen die Indexinformationen des Hilfeartikels; im zweiten der eigentliche Hilfeartikel. Um Kommentare in die Dateien einzubinden, kann die XML-Kommentarsyntax verwendet werden:<codeblock>&lt;!-- DIES IST DER KOMMENTAR --&gt;</codeblock>Des Weiteren können <code>&lt;example&gt;</code>-, <code>&lt;list&gt;</code>- oder andere Umgebungen verwendet werden.
 	<list>
 		<item node="&lt;article ...&gt;">Der eindeutige Schlüssel, der Hilfeartikel mit dem entsprechenden Eintrag im Dokumentationsverzeichnis verknüpft (<code>id=</code>)</item>
 		<item node="&lt;title .../&gt;">Der Titel (<code>string=</code>) und die Indexschlüssel (<code>idxkey=</code>) für das Dokumentationsverzeichnis, also die Schlüsselwörter, die für den Artikel während "help idx" angezeigt werden</item>

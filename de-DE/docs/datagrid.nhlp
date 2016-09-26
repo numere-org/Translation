@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="datagrid">
 	<title string="Datengitter für 2D-Plots" />
 	Wenn Daten in 2D-Plots (wie z.B. <code>surf</code> oder <code>mesh</code>) dargestellt werden sollen, müssen sie eine spezielle Form haben bzw. dürfen auch nicht als <expr>x-y-z</expr>-Werte vorliegen. 2D-Plots erwarten die Daten in Form eines <em>Datengitters</em>: <expr>x</expr>- und <expr>y</expr>-Werte als in den ersten zwei Spalten und die zugehörigen <expr>z</expr>-Werte als Matrix, die die Dimensionen der ersten beiden Spalten besitzt:

@@ -1,3 +1,21 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <article id="zeroes">
 	<title string="Numerical detemination of zeroes" />
 	The command <code>zeroes</code> determines all zeroes (i.e. roots, which are all positions <expr>x0</expr>, where <expr>f(x0) = 0</expr>) of a passed expression in a predefined interval. The expression mustn't oscillate too strongly in the corresponding interval. If such an expression is present, then you should choose the interval much smaller.
