@@ -28,7 +28,7 @@
 		<item node="mean=AVERAGE">[m=] The average of the distributions <code>gauss</code>, <code>poisson</code> and <code>uniform</code></item>
 		<item node="width=WIDTH">[w=] The width of the distribution <code>gauss</code> and <code>uniform</code></item>
 		<item node="freedoms=FREEDOOMS">[f=] The degree of freedoms of the <code>student</code> distribution</item>
-		<item node="shape=SHJAPE">[sh=] The shape of the <code>gamma</code> distribution</item>
+		<item node="shape=SHAPE">[sh=] The shape of the <code>gamma</code> distribution</item>
 		<item node="scale=SCALE">[sc=] The scale of the <code>gamma</code> distribution</item>
 		<item node="ubound=UPPERBOUND">[ub=] The upper boundary of the <code>binomial</code> distribution</item>
 		<item node="prob=PROBABILITY">[p=] The probability parameter of the <code>binomial</code> distribution</item>
@@ -46,5 +46,5 @@
 	<example desc="Creating of two columns with 256 gaussian distributed random numbers each, where the average of the random numbers is 0.5 and the width is 0.75:">
 		random -lines=256 cols=2 mean=0.5 width=0.75 distrib=gauss
 	</example>
-	TIP: The desired options may be passed with the abbreviations shown in brackets, e.g.:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>
+	<em>Tip:</em> The desired options may be passed with the abbreviations shown in brackets, e.g.:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>
 </article>

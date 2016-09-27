@@ -18,7 +18,7 @@
 
 <article id="set">
 	<title string="Configuring NumeRe" />
-	The NumeRe command <code>set</code> is used to modify a configuration setting in NumeRe. You have to pass a parameter to <code>set/<code>.
+	The NumeRe command <code>set</code> is used to modify a configuration setting in NumeRe. You have to pass a parameter to <code>set</code>.
 	You may append the new value of the desired configuration settings directly to the corresponding parameter after an equal sign. If the value is a textual string and if it shall contain whitespaces, then you have to pass it inside of quotation marks. Numbers may be passed directly.
 	Changed configuration settings will be saved at program's end and will be available again after a restart.
 	Parameters for the command <code>set</code> are as follows:
@@ -55,5 +55,5 @@
 		File path was updated successfully.
 	</example>
 	SEE ALSO: "help get", "help editor" or "help viewer"
-	TIP: Use <code>list -settings</code> to display all configuration settings in a clean list.
+	<em>Tip:</em> Use <code>list -settings</code> to display all configuration settings in a clean list.
 </article>

@@ -296,7 +296,7 @@
 	</article>
 	<article id="incr_decr">
 		<file path="<>/user/docs/incr_decr.nhlp" />
-		<title string="Increment and decrement" idxkey="dekrement, inkrement" />
+		<title string="Increment and decrement" idxkey="decrement, increment" />
 		<keywords>
 			<keyword>++</keyword>
 			<keyword>--</keyword>
@@ -375,7 +375,7 @@
 	</article>
 	<article id="rekurs_oprt">
 		<file path="<>/user/docs/rekurs_oprt.nhlp" />
-		<title string="Recursive operators" idxkey="rekursiv, operator" />
+		<title string="Recursive operators" idxkey="recursive, operator" />
 		<keywords>
 			<keyword>*=</keyword>
 			<keyword>+=</keyword>

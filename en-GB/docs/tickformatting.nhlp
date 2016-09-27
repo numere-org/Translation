@@ -36,7 +36,7 @@
 		|   %.2e --&gt; 3.93e+2
 	</example>
 	<example desc="Exemplary modification of the <expr>y</expr> axis:">
-		plot [...] -set yticks="y = : %#.2g"
+		plot [...] -set yticks="y = %#.2g"
 	</example>
 	SEE ALSO: "http://www.cplusplus.com/reference/cstdio/printf"
 </article>

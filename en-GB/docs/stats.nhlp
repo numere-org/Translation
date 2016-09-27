@@ -18,14 +18,14 @@
 
 <article id="stats">
 	<title string="Statistics" />
-	The command <code>stats</code> allows the statistical analysis of multiple data rows at once. The data rows, which were analysed, may be written to a file afterwards including their analysis results.
-	<code>stats</code> needs loaded data or data, which is available in a cache. The date may be passed in the following way:<codeblock>stats DATAOBJECT(I1:I2,J1:J2) -set OPTIONS</codeblock>
-	You may pass the target file name with the option <code>export=FILENAME</code>. If the file name shall contain whitespaces, then it has to be passed surrounded with quotations marks. (If the file extension is *.tex, then NumeRe will create a TeX file) If no file name is passed but the option <code>export</code>, then NumeRe will generate a fitting file name.
+	The command <code>stats</code> allows the statistical analysis of multiple data rows at once. The data rows, which were analysed, may be written including their analysis results to a file afterwards.
+	<code>stats</code> needs loaded data or data, which is available in a cache. The data may be passed in the following way:<codeblock>stats DATAOBJECT(I1:I2,J1:J2) -set OPTIONS</codeblock>
+	You may pass the target filename with the option <code>export=FILENAME</code>. If the filename shall contain whitespaces, then it has to be passed surrounded with quotations marks. (If the file extension is *.tex, then NumeRe will create a TeX file) If no filename is passed but the option <code>export</code>, then NumeRe will generate a fitting filename.
 	<code>stats</code> calculates the following statistical values:
 	<list>
 		<item node="Avg">Average of each data row (Functions pendant: <code>avg()</code>)</item>
-		<item node="+/-">Standarddeviation (Functions pendant: <code>std()</code>)</item>
-		<item node="CnfInt">Percentage of the data points, which are located in the 1-Sigma-Interval [Avg-(+/-),Avg+(+/-)]</item>
+		<item node="+/-">Standard deviation (Functions pendant: <code>std()</code>)</item>
+		<item node="CnfInt">Percentage of the data points, which are located in the 1-sigma interval [Avg-(+/-),Avg+(+/-)]</item>
 		<item node="StdErr">Standard error of the average</item>
 		<item node="Med">Median of each data row (Functions pendant: <code>med()</code>)</item>
 		<item node="Q1">lower quartile of each data row (Functions pendant: <code>pct()</code>)</item>
