@@ -568,6 +568,7 @@ PARSERFUNCS_LISTUNITS_FOOTNOTE=Die Dimensionen der Einheiten sind durch die Abkü
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installierte Plugins
 PARSERFUNCS_LISTPLUGINS_EMPTY=Keine Plugins installiert.
 PARSERFUNCS_LISTPLUGINS_TABLEHEAD=Befehl:            Beschreibung:
+PARSERFUNCS_LISTPLUGINS_PLUGININFO=- [%%1%%] (v %%2%%) -- von %%3%%
 PARSERFUNCS_TAYLOR_MISSINGPARAMS=FEHLER: Es wurden nicht die nötigen Parameter übergeben.$Siehe "help taylor" für weitere Details.
 PARSERFUNCS_TAYLOR_CONSTEXPR=FEHLER: Bezüglich der Variablen "%%1%%" ist der Ausdruck konstant und kann nicht in ein Taylorpolynom entwickelt werden.
 PARSERFUNCS_TAYLOR_DEFINESTRING=-set comment="Taylorentwicklung des Ausdrucks '%%1%%' an der Stelle %%2%%=%%3%% bis zur Ordnung %%4%%"

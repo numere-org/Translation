@@ -567,6 +567,7 @@ PARSERFUNCS_LISTUNITS_UNIT_YARD=(Yard)
 PARSERFUNCS_LISTUNITS_FOOTNOTE=The dimensions of the units are given with the abbreviations L, M, T, ... The symbol L corresponds to "length", M to "mass", T to "time", N to "quantity" and Theta to "temperature".
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installed Plugins
 PARSERFUNCS_LISTPLUGINS_EMPTY=No Plugins were installed.
+PARSERFUNCS_LISTPLUGINS_PLUGININFO=- [%%1%%] (v %%2%%) -- by %%3%%
 PARSERFUNCS_LISTPLUGINS_TABLEHEAD=Command:           Description:
 PARSERFUNCS_TAYLOR_MISSINGPARAMS=ERROR: Not all necessary parameters were passed.$See "help taylor" for further information.
 PARSERFUNCS_TAYLOR_CONSTEXPR=ERROR: The expression is constant in terms of the variable "%%1%%". It cannot be expanded into a Taylor polynomial.
