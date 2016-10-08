@@ -97,7 +97,7 @@ extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Sieh
 # F
 faculty(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty()
 fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex
-findfile(STRING)~Gibt true zurück, wenn die Datei STRING existiert, sonst false~dateien existieren files existing present valid gueltig gültig findfile()
+findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien existieren files existing present valid gueltig gültig findfile()
 findparam(PAR,STR,C)~Gibt die Position zurück, an der Parameter PAR in der Zeichenkette STR enthalten ist, und 0, falls er nicht gefunden werden kann. C ist ein optionales Argument, das das darauffolgende Zeichen bestimmt~parameter positionen findparam()
 fit~Passt eine Funktion mittels Parameter an eine Datenreihe an, siehe "help fit"~fitten anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
 Fitprotokoll~Das Fitprotokoll findest du unter "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult
