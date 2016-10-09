@@ -18,7 +18,7 @@
 
 <helpindex>
 	<article id="audio">
-		<file path="<>/user/docs/audio.nhlp" />
+		<file path="<>/docs/audio.nhlp" />
 		<title string="Creating audio files" idxkey="audio" />
 		<keywords>
 			<keyword>audio</keyword>
@@ -28,7 +28,7 @@
 		</keywords>
 	</article>
 	<article id="main">
-		<file path="<>/user/docs/main.nhlp" />
+		<file path="<>/docs/main.nhlp" />
 		<title string="Overview" idxkey="main" />
 		<keywords>
 			<keyword>brief</keyword>
@@ -37,7 +37,7 @@
 		</keywords>
 	</article>
 	<article id="cache">
-		<file path="<>/user/docs/cache.nhlp" />
+		<file path="<>/docs/cache.nhlp" />
 		<title string="Cache" idxkey="cache" />
 		<keywords>
 			<keyword>cache</keyword>
@@ -46,7 +46,7 @@
 		</keywords>
 	</article>
 	<article id="calc">
-		<file path="<>/user/docs/calc.nhlp" />
+		<file path="<>/docs/calc.nhlp" />
 		<title string="Calculator mode" idxkey="calc" />
 		<keywords>
 			<keyword>calc</keyword>
@@ -54,7 +54,7 @@
 		</keywords>
 	</article>
 	<article id="color">
-		<file path="<>/user/docs/color.nhlp" />
+		<file path="<>/docs/color.nhlp" />
 		<title string="Coloring schemes and line coloring for plots" idxkey="colors" />
 		<keywords>
 			<keyword>color</keyword>
@@ -63,7 +63,7 @@
 		</keywords>
 	</article>
 	<article id="compose">
-		<file path="<>/user/docs/compose.nhlp" />
+		<file path="<>/docs/compose.nhlp" />
 		<title string="Composition of custom plotting styles" idxkey="compose" />
 		<keywords>
 			<keyword>compose</keyword>
@@ -72,7 +72,7 @@
 		</keywords>
 	</article>
 	<article id="coords">
-		<file path="<>/user/docs/coords.nhlp" />
+		<file path="<>/docs/coords.nhlp" />
 		<title string="Coordinate sets for plots" idxkey="coords" />
 		<keywords>
 			<keyword>coord</keyword>
@@ -83,7 +83,7 @@
 		</keywords>
 	</article>
 	<article id="define">
-		<file path="<>/user/docs/define.nhlp" />
+		<file path="<>/docs/define.nhlp" />
 		<title string="Function definitions" idxkey="define" />
 		<keywords>
 			<keyword>def</keyword>
@@ -93,7 +93,7 @@
 		</keywords>
 	</article>
 	<article id="2dplots">
-		<file path="<>/user/docs/2dplots.nhlp" />
+		<file path="<>/docs/2dplots.nhlp" />
 		<title string="Meshgrid, contour, density or surface plots" idxkey="cont, dens, mesh, surf" />
 		<keywords>
 			<keyword>cont</keyword>
@@ -105,7 +105,7 @@
 		</keywords>
 	</article>
 	<article id="3dplots">
-		<file path="<>/user/docs/3dplots.nhlp" />
+		<file path="<>/docs/3dplots.nhlp" />
 		<title string="3D-Meshgrid, 3D-contour, 3D-density or 3D-surface plots" idxkey="cont3d, dens3d, mesh3d, surf3d" />
 		<keywords>
 			<keyword>cont3d</keyword>
@@ -119,7 +119,7 @@
 		</keywords>
 	</article>
 	<article id="data_and_fileops">
-		<file path="<>/user/docs/data_and_fileops.nhlp" />
+		<file path="<>/docs/data_and_fileops.nhlp" />
 		<title string="Copying and removing of data sets and files" idxkey="copy, move, remove, delete" />
 		<keywords>
 			<keyword>copy</keyword>
@@ -129,7 +129,7 @@
 		</keywords>
 	</article>
 	<article id="data">
-		<file path="<>/user/docs/data.nhlp" />
+		<file path="<>/docs/data.nhlp" />
 		<title string="Data files" idxkey="data" />
 		<keywords>
 			<keyword>data</keyword>
@@ -137,7 +137,7 @@
 		</keywords>
 	</article>
 	<article id="diff">
-		<file path="<>/user/docs/diff.nhlp" />
+		<file path="<>/docs/diff.nhlp" />
 		<title string="Numerical differentiation" idxkey="diff" />
 		<keywords>
 			<keyword>ableit</keyword>
@@ -145,7 +145,7 @@
 		</keywords>
 	</article>
 	<article id="edit">
-		<file path="<>/user/docs/edit.nhlp" />
+		<file path="<>/docs/edit.nhlp" />
 		<title string="Editing and opening of files and folders" idxkey="edit" />
 		<keywords>
 			<keyword>bearb</keyword>
@@ -154,7 +154,7 @@
 		</keywords>
 	</article>
 	<article id="eval">
-		<file path="<>/user/docs/eval.nhlp" />
+		<file path="<>/docs/eval.nhlp" />
 		<title string="Calculation of samples" idxkey="eval" />
 		<keywords>
 			<keyword>eval</keyword>
@@ -162,7 +162,7 @@
 		</keywords>
 	</article>
 	<article id="external_programs">
-		<file path="<>/user/docs/external_programs.nhlp" />
+		<file path="<>/docs/external_programs.nhlp" />
 		<title string="Viewer and editor" idxkey="editor, viewer" />
 		<keywords>
 			<keyword>editor</keyword>
@@ -170,7 +170,7 @@
 		</keywords>
 	</article>
 	<article id="explorer">
-		<file path="<>/user/docs/explorer.nhlp" />
+		<file path="<>/docs/explorer.nhlp" />
 		<title string="File explorer" idxkey="explorer" />
 		<keywords>
 			<keyword>datei</keyword>
@@ -181,7 +181,7 @@
 		</keywords>
 	</article>
 	<article id="expression">
-		<file path="<>/user/docs/expression.nhlp" />
+		<file path="<>/docs/expression.nhlp" />
 		<title string="Entering of expressions" idxkey="expression" />
 		<keywords>
 			<keyword>expr</keyword>
@@ -189,7 +189,7 @@
 		</keywords>
 	</article>
 	<article id="extrema">
-		<file path="<>/user/docs/extrema.nhlp" />
+		<file path="<>/docs/extrema.nhlp" />
 		<title string="Numerical localization of extrema" idxkey="extrema" />
 		<keywords>
 			<keyword>extrem</keyword>
@@ -198,7 +198,7 @@
 		</keywords>
 	</article>
 	<article id="fft">
-		<file path="<>/user/docs/fft.nhlp" />
+		<file path="<>/docs/fft.nhlp" />
 		<title string="Fourier transformation of data sets" idxkey="fft" />
 		<keywords>
 			<keyword>fft</keyword>
@@ -206,7 +206,7 @@
 		</keywords>
 	</article>
 	<article id="find">
-		<file path="<>/user/docs/find.nhlp" />
+		<file path="<>/docs/find.nhlp" />
 		<title string="Keyword search" idxkey="find" />
 		<keywords>
 			<keyword>find</keyword>
@@ -215,7 +215,7 @@
 		</keywords>
 	</article>
 	<article id="fitting">
-		<file path="<>/user/docs/fitting.nhlp" />
+		<file path="<>/docs/fitting.nhlp" />
 		<title string="Fitting functions to data sets" idxkey="fit" />
 		<keywords>
 			<keyword>anpass</keyword>
@@ -223,7 +223,7 @@
 		</keywords>
 	</article>
 	<article id="fitting_chimap">
-		<file path="<>/user/docs/fitting.nhlp" />
+		<file path="<>/docs/fitting.nhlp" />
 		<title string="chi^2 convergence data sets" idxkey="chimap" />
 		<keywords>
 			<keyword>chi</keyword>
@@ -231,7 +231,7 @@
 		</keywords>
 	</article>
 	<article id="fitting_restrictions">
-		<file path="<>/user/docs/fitting.nhlp" />
+		<file path="<>/docs/fitting.nhlp" />
 		<title string="Fit parameter restrictions" idxkey="restrict" />
 		<keywords>
 			<keyword>restrict</keyword>
@@ -240,7 +240,7 @@
 		</keywords>
 	</article>
 	<article id="for_loop">
-		<file path="<>/user/docs/for_loop.nhlp" />
+		<file path="<>/docs/for_loop.nhlp" />
 		<title string="FOR loops" idxkey="for" />
 		<keywords>
 			<keyword>endfor</keyword>
@@ -248,7 +248,7 @@
 		</keywords>
 	</article>
 	<article id="functions">
-		<file path="<>/user/docs/functions.nhlp" />
+		<file path="<>/docs/functions.nhlp" />
 		<title string="Predefined mathematical functions" idxkey="func" />
 		<keywords>
 			<keyword>func</keyword>
@@ -256,35 +256,35 @@
 		</keywords>
 	</article>
 	<article id="get">
-		<file path="<>/user/docs/get.nhlp" />
+		<file path="<>/docs/get.nhlp" />
 		<title string="Reading of configuration values" idxkey="get" />
 		<keywords>
 			<keyword>get</keyword>
 		</keywords>
 	</article>
 	<article id="gradient">
-		<file path="<>/user/docs/gradient.nhlp" />
+		<file path="<>/docs/gradient.nhlp" />
 		<title string="Gradient plot" idxkey="grad" />
 		<keywords>
 			<keyword>grad</keyword>
 		</keywords>
 	</article>
 	<article id="gradient3d">
-		<file path="<>/user/docs/gradient3d.nhlp" />
+		<file path="<>/docs/gradient3d.nhlp" />
 		<title string="3D gradient plot" idxkey="grad3d" />
 		<keywords>
 			<keyword>grad3d</keyword>
 		</keywords>
 	</article>
 	<article id="histogramm">
-		<file path="<>/user/docs/histogramm.nhlp" />
+		<file path="<>/docs/histogramm.nhlp" />
 		<title string="Histograms" idxkey="hist" />
 		<keywords>
 			<keyword>hist</keyword>
 		</keywords>
 	</article>
 	<article id="if_cond">
-		<file path="<>/user/docs/if_cond.nhlp" />
+		<file path="<>/docs/if_cond.nhlp" />
 		<title string="Conditions" idxkey="if" />
 		<keywords>
 			<keyword>beding</keyword>
@@ -295,7 +295,7 @@
 		</keywords>
 	</article>
 	<article id="incr_decr">
-		<file path="<>/user/docs/incr_decr.nhlp" />
+		<file path="<>/docs/incr_decr.nhlp" />
 		<title string="Increment and decrement" idxkey="decrement, increment" />
 		<keywords>
 			<keyword>++</keyword>
@@ -305,28 +305,28 @@
 		</keywords>
 	</article>
 	<article id="install">
-		<file path="<>/user/docs/install.nhlp" />
+		<file path="<>/docs/install.nhlp" />
 		<title string="Procedure installation" idxkey="install" />
 		<keywords>
 			<keyword>instal</keyword>
 		</keywords>
 	</article>
 	<article id="integrate">
-		<file path="<>/user/docs/integrate.nhlp" />
+		<file path="<>/docs/integrate.nhlp" />
 		<title string="Numerical integration" idxkey="integrate" />
 		<keywords>
 			<keyword>integ</keyword>
 		</keywords>
 	</article>
 	<article id="list">
-		<file path="<>/user/docs/list.nhlp" />
+		<file path="<>/docs/list.nhlp" />
 		<title string="Listing objects" idxkey="list" />
 		<keywords>
 			<keyword>list</keyword>
 		</keywords>
 	</article>
 	<article id="load_save">
-		<file path="<>/user/docs/load_save.nhlp" />
+		<file path="<>/docs/load_save.nhlp" />
 		<title string="Loading and saving" idxkey="load, save, append" />
 		<keywords>
 			<keyword>app</keyword>
@@ -346,7 +346,7 @@
 		</keywords>
 	</article>
 	<article id="datamodification">
-		<file path="<>/user/docs/datamodification.nhlp" />
+		<file path="<>/docs/datamodification.nhlp" />
 		<title string="Modification of data sets" idxkey="resample, smooth, retoque" />
 		<keywords>
 			<keyword>modifi</keyword>
@@ -356,7 +356,7 @@
 		</keywords>
 	</article>
 	<article id="multiresult">
-		<file path="<>/user/docs/multiresult.nhlp" />
+		<file path="<>/docs/multiresult.nhlp" />
 		<title string="Parallel and multi expression evaluations" idxkey="multiresult" />
 		<keywords>
 			<keyword>mehrf</keyword>
@@ -367,14 +367,14 @@
 		</keywords>
 	</article>
 	<article id="new">
-		<file path="<>/user/docs/new.nhlp" />
+		<file path="<>/docs/new.nhlp" />
 		<title string="Creation of new caches, files and directories" idxkey="new" />
 		<keywords>
 			<keyword>new</keyword>
 		</keywords>
 	</article>
 	<article id="rekurs_oprt">
-		<file path="<>/user/docs/rekurs_oprt.nhlp" />
+		<file path="<>/docs/rekurs_oprt.nhlp" />
 		<title string="Recursive operators" idxkey="recursive, operator" />
 		<keywords>
 			<keyword>*=</keyword>
@@ -386,7 +386,7 @@
 		</keywords>
 	</article>
 	<article id="plot">
-		<file path="<>/user/docs/plot.nhlp" />
+		<file path="<>/docs/plot.nhlp" />
 		<title string="Plotting of data and functions" idxkey="plot" />
 		<keywords>
 			<keyword>graph</keyword>
@@ -394,7 +394,7 @@
 		</keywords>
 	</article>
 	<article id="plot3d">
-		<file path="<>/user/docs/plot3d.nhlp" />
+		<file path="<>/docs/plot3d.nhlp" />
 		<title string="Plotting of 3D data sets and 3D trajectories" idxkey="plot3d" />
 		<keywords>
 			<keyword>plot3d</keyword>
@@ -402,7 +402,7 @@
 		</keywords>
 	</article>
 	<article id="plotoptions">
-		<file path="<>/user/docs/plotoptions.nhlp" />
+		<file path="<>/docs/plotoptions.nhlp" />
 		<title string="Options for plots" idxkey="plotoptions" />
 		<keywords>
 			<keyword>plotopt</keyword>
@@ -433,7 +433,7 @@
 		</keywords>
 	</article>
 	<article id="plugins">
-		<file path="<>/user/docs/plugins.nhlp" />
+		<file path="<>/docs/plugins.nhlp" />
 		<title string="Plugins" idxkey="plugin" />
 		<keywords>
 			<keyword>explic</keyword>
@@ -442,7 +442,7 @@
 		</keywords>
 	</article>
 	<article id="procedure">
-		<file path="<>/user/docs/procedure.nhlp" />
+		<file path="<>/docs/procedure.nhlp" />
 		<title string="NumeRe Procedures" idxkey="procedure" />
 		<keywords>
 			<keyword>$</keyword>
@@ -456,7 +456,7 @@
 		</keywords>
 	</article>
 	<article id="procedure_commands">
-		<file path="<>/user/docs/procedure.nhlp" />
+		<file path="<>/docs/procedure.nhlp" />
 		<title string="Procedure commands" idxkey="proccmd" />
 		<keywords>
 			<keyword>proccmd</keyword>
@@ -469,7 +469,7 @@
 		</keywords>
 	</article>
 	<article id="prompt">
-		<file path="<>/user/docs/prompt.nhlp" />
+		<file path="<>/docs/prompt.nhlp" />
 		<title string="Prompt for input" idxkey="prompt" />
 		<keywords>
 			<keyword>??</keyword>
@@ -477,7 +477,7 @@
 		</keywords>
 	</article>
 	<article id="quit">
-		<file path="<>/user/docs/quit.nhlp" />
+		<file path="<>/docs/quit.nhlp" />
 		<title string="Quitting NumeRe" idxkey="quit" />
 		<keywords>
 			<keyword>ende</keyword>
@@ -485,7 +485,7 @@
 		</keywords>
 	</article>
 	<article id="random">
-		<file path="<>/user/docs/random.nhlp" />
+		<file path="<>/docs/random.nhlp" />
 		<title string="Random number generator" idxkey="random" />
 		<keywords>
 			<keyword>random</keyword>
@@ -493,7 +493,7 @@
 		</keywords>
 	</article>
 	<article id="read_write">
-		<file path="<>/user/docs/read_write.nhlp" />
+		<file path="<>/docs/read_write.nhlp" />
 		<title string="Reading from and writing to files" idxkey="read, write" />
 		<keywords>
 			<keyword>lesen</keyword>
@@ -503,7 +503,7 @@
 		</keywords>
 	</article>
 	<article id="replaceline">
-		<file path="<>/user/docs/replaceline.nhlp" />
+		<file path="<>/docs/replaceline.nhlp" />
 		<title string="Input correction in loops and forks" idxkey="replaceline" />
 		<keywords>
 			<keyword>corr</keyword>
@@ -511,7 +511,7 @@
 		</keywords>
 	</article>
 	<article id="script">
-		<file path="<>/user/docs/script.nhlp" />
+		<file path="<>/docs/script.nhlp" />
 		<title string="NumeRe scripts" idxkey="script" />
 		<keywords>
 			<keyword>automat</keyword>
@@ -521,7 +521,7 @@
 		</keywords>
 	</article>
 	<article id="set">
-		<file path="<>/user/docs/set.nhlp" />
+		<file path="<>/docs/set.nhlp" />
 		<title string="Configuring NumeRe" idxkey="set" />
 		<keywords>
 			<keyword>autosave</keyword>
@@ -543,7 +543,7 @@
 		</keywords>
 	</article>
 	<article id="show">
-		<file path="<>/user/docs/show.nhlp" />
+		<file path="<>/docs/show.nhlp" />
 		<title string="Displaying data sets" idxkey="show" />
 		<keywords>
 			<keyword>show</keyword>
@@ -551,14 +551,14 @@
 		</keywords>
 	</article>
 	<article id="stats">
-		<file path="<>/user/docs/stats.nhlp" />
+		<file path="<>/docs/stats.nhlp" />
 		<title string="Statistics" idxkey="stats" />
 		<keywords>
 			<keyword>stat</keyword>
 		</keywords>
 	</article>
 	<article id="string">
-		<file path="<>/user/docs/string.nhlp" />
+		<file path="<>/docs/string.nhlp" />
 		<title string="Strings" idxkey="string" />
 		<keywords>
 			<keyword>#</keyword>
@@ -573,7 +573,7 @@
 		</keywords>
 	</article>
 	<article id="syntax">
-		<file path="<>/user/docs/syntax.nhlp" />
+		<file path="<>/docs/syntax.nhlp" />
 		<title string="Command syntax" idxkey="syntax" />
 		<keywords>
 			<keyword>command</keyword>
@@ -581,7 +581,7 @@
 		</keywords>
 	</article>
 	<article id="taylor">
-		<file path="<>/user/docs/taylor.nhlp" />
+		<file path="<>/docs/taylor.nhlp" />
 		<title string="Taylor polynomials" idxkey="taylor" />
 		<keywords>
 			<keyword>reihe</keyword>
@@ -590,7 +590,7 @@
 		</keywords>
 	</article>
 	<article id="units">
-		<file path="<>/user/docs/units.nhlp" />
+		<file path="<>/docs/units.nhlp" />
 		<title string="Conversion of units" idxkey="units" />
 		<keywords>
 			<keyword>einheit</keyword>
@@ -598,7 +598,7 @@
 		</keywords>
 	</article>
 	<article id="variables">
-		<file path="<>/user/docs/variables.nhlp" />
+		<file path="<>/docs/variables.nhlp" />
 		<title string="Variables" idxkey="var" />
 		<keywords>
 			<keyword>ans</keyword>
@@ -607,7 +607,7 @@
 		</keywords>
 	</article>
 	<article id="vect">
-		<file path="<>/user/docs/vect.nhlp" />
+		<file path="<>/docs/vect.nhlp" />
 		<title string="(2D) vector field plots" idxkey="vect" />
 		<keywords>
 			<keyword>quiv</keyword>
@@ -616,7 +616,7 @@
 		</keywords>
 	</article>
 	<article id="vect3d">
-		<file path="<>/user/docs/vect3d.nhlp" />
+		<file path="<>/docs/vect3d.nhlp" />
 		<title string="3D vector field plots" idxkey="vect3d" />
 		<keywords>
 			<keyword>quiver3d</keyword>
@@ -625,7 +625,7 @@
 		</keywords>
 	</article>
 	<article id="while_loop">
-		<file path="<>/user/docs/while_loop.nhlp" />
+		<file path="<>/docs/while_loop.nhlp" />
 		<title string="WHILE loops" idxkey="while" />
 		<keywords>
 			<keyword>endwhile</keyword>
@@ -633,7 +633,7 @@
 		</keywords>
 	</article>
 	<article id="zeroes">
-		<file path="<>/user/docs/zeroes.nhlp" />
+		<file path="<>/docs/zeroes.nhlp" />
 		<title string="Numerical determination of zeroes" idxkey="zeroes" />
 		<keywords>
 			<keyword>null</keyword>
@@ -642,7 +642,7 @@
 		</keywords>
 	</article>
 	<article id="documentation">
-		<file path="<>/user/docs/documentation.nhlp" />
+		<file path="<>/docs/documentation.nhlp" />
 		<title string="Documentation" idxkey="documentation" />
 		<keywords>
 			<keyword>docum</keyword>
@@ -651,7 +651,7 @@
 		</keywords>
 	</article>
 	<article id="drawing">
-		<file path="<>/user/docs/drawing.nhlp" />
+		<file path="<>/docs/drawing.nhlp" />
 		<title string="Drawings and annotations" idxkey="draw" />
 		<keywords>
 			<keyword>anmerk</keyword>
@@ -662,7 +662,7 @@
 		</keywords>
 	</article>
 	<article id="3ddrawing">
-		<file path="<>/user/docs/3ddrawing.nhlp" />
+		<file path="<>/docs/3ddrawing.nhlp" />
 		<title string="3D drawings and annotations" idxkey="draw3d" />
 		<keywords>
 			<keyword>3dzeichn</keyword>
@@ -670,7 +670,7 @@
 		</keywords>
 	</article>
 	<article id="linestyles">
-		<file path="<>/user/docs/linestyles.nhlp" />
+		<file path="<>/docs/linestyles.nhlp" />
 		<title string="Line and point styles" idxkey="linestyles, pointstyles" />
 		<keywords>
 			<keyword>arrow</keyword>
@@ -682,7 +682,7 @@
 		</keywords>
 	</article>
 	<article id="tickformatting">
-		<file path="<>/user/docs/tickformatting.nhlp" />
+		<file path="<>/docs/tickformatting.nhlp" />
 		<title string="Formatting of the labels of the axis ticks" idxkey="ticks" />
 		<keywords>
 			<keyword>achse</keyword>
@@ -693,7 +693,7 @@
 		</keywords>
 	</article>
 	<article id="datagrid">
-		<file path="<>/user/docs/datagrid.nhlp" />
+		<file path="<>/docs/datagrid.nhlp" />
 		<title string="Data grids for 2D plots" idxkey="datagrid" />
 		<keywords>
 			<keyword>datagr</keyword>
@@ -701,7 +701,7 @@
 		</keywords>
 	</article>
 	<article id="progress">
-		<file path="<>/user/docs/progress.nhlp" />
+		<file path="<>/docs/progress.nhlp" />
 		<title string="Progress display" idxkey="progress" />
 		<keywords>
 			<keyword>balken</keyword>
@@ -710,7 +710,7 @@
 		</keywords>
 	</article>
 	<article id="matop">
-		<file path="<>/user/docs/matop" />
+		<file path="<>/docs/matop" />
 		<title string="Matrix operations" idxkey="matop" />
 		<keywords>
 			<keyword>matop</keyword>
@@ -721,7 +721,7 @@
 		</keywords>
 	</article>
 	<article id="matop_functions">
-		<file path="<>/user/docs/matop" />
+		<file path="<>/docs/matop" />
 		<title string="Matrix functions" idxkey="matfunc" />
 		<keywords>
 			<keyword>determ</keyword>
@@ -735,7 +735,7 @@
 		</keywords>
 	</article>
 	<article id="odesolve">
-		<file path="<>/user/docs/odesolve" />
+		<file path="<>/docs/odesolve" />
 		<title string="Solving ordinary differential equations" idxkey="odesolve" />
 		<keywords>
 			<keyword>odesol</keyword>
@@ -744,7 +744,7 @@
 		</keywords>
 	</article>
 	<article id="regularize">
-		<file path="<>/user/docs/regularize" />
+		<file path="<>/docs/regularize" />
 		<title string="Regularize data points" idxkey="regularize" />
 		<keywords>
 			<keyword>regular</keyword>
@@ -752,7 +752,7 @@
 		</keywords>
 	</article>
 	<article id="debugger">
-		<file path="<>/user/docs/debugger.nhlp" />
+		<file path="<>/docs/debugger.nhlp" />
 		<title string="Debugger" idxkey="debugger" />
 		<keywords>
 			<keyword>debug</keyword>
@@ -762,7 +762,7 @@
 		</keywords>
 	</article>	
 	<article id="subplot">
-		<file path="<>/user/docs/subplot.nhlp" />
+		<file path="<>/docs/subplot.nhlp" />
 		<title string="Subplots" idxkey="subplot" />
 		<keywords>
 			<keyword>subpl</keyword>
@@ -770,14 +770,14 @@
 		</keywords>
 	</article>
 	<article id="pulse">
-		<file path="<>/user/docs/pulse.nhlp" />
+		<file path="<>/docs/pulse.nhlp" />
 		<title string="Pulse Analysis" idxkey="pulse" />
 		<keywords>
 			<keyword>puls</keyword>
 		</keywords>
 	</article>
 	<article id="stfa">
-		<file path="<>/user/docs/stfa.nhlp" />
+		<file path="<>/docs/stfa.nhlp" />
 		<title string="Short-time Fourier analysis" idxkey="stfa" />
 		<keywords>
 			<keyword>stfa</keyword>
@@ -786,7 +786,7 @@
 		</keywords>
 	</article>
 	<article id="language">
-		<file path="<>/user/docs/language.nhlp" />
+		<file path="<>/docs/language.nhlp" />
 		<title string="Adding languages" idxkey="language" />
 		<keywords>
 			<keyword>lang</keyword>
