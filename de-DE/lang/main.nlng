@@ -112,8 +112,8 @@ BUILTIN_CLEARCACHE_CONFIRM=Alle Caches und die automatische Speicherung werden g
 BUILTIN_CLEARCACHE_SUCCESS=Alle Caches wurden entfernt und der Speicher wurde erfolgreich freigegeben.
 BUILTIN_CLEARCACHE_EMPTY=Der Cache ist bereits leer.
 BUILTIN_CREDITS_BUILD=Build-Datum
-BUILTIN_CREDITS_VERSIONINFO=Hans BETHE (1906-2005) war ein deutsch-US-amerikanischer Physiker, der 1967 den Nobelpreis für Physik für seine Arbeit über die Energieumwandlung in Sternen. Viele seiner Arbeiten befassten sich vor allem mit der Kernphysik.
-#BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
+#BUILTIN_CREDITS_VERSIONINFO=Hans BETHE (1906-2005) war ein deutsch-US-amerikanischer Physiker, der 1967 den Nobelpreis für Physik für seine Arbeit über die Energieumwandlung in Sternen. Viele seiner Arbeiten befassten sich vor allem mit der Kernphysik.
+BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
 BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz, oder (nach Ihrer Option) jeder späteren Version.
 BUILTIN_CREDITS_LICENCE_2=Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
 BUILTIN_CREDITS_LICENCE_3=Sie sollten ein Exemplar der GNU GPL zusammen mit diesem Programm erhalten haben. Falls nicht, siehe <http://www.gnu.org/licenses/>.
@@ -276,6 +276,7 @@ PARSERFUNCS_INTEGRATE2_BOUNDARYSELFDEPENDENCE=FEHLER: %%1%%-Grenzen können nicht
 PARSERFUNCS_INTEGRATE2_SWAPVARS=Tausche %%1%%- und %%2%%-Integration aus Gründen der Performance
 PARSERFUNCS_LISTFUNC_HEADLINE=Vordefinierte Funktionen
 PARSERFUNCS_LISTFUNC_NUM=numerisch
+PARSERFUNCS_LISTFUNC_MAT=Matrix und Vektor
 PARSERFUNCS_LISTFUNC_STRING=Zeichenketten
 PARSERFUNCS_LISTFUNC_TRIGONOMETRIC=trigonometrisch
 PARSERFUNCS_LISTFUNC_HYPERBOLIC=hyperbolisch
@@ -311,9 +312,15 @@ PARSERFUNCS_LISTFUNC_FUNC_CNT_[NUM_STATS_STRING]=			cnt(x,y,z,...)         VAL  
 PARSERFUNCS_LISTFUNC_FUNC_COS_[NUM_TRIGONOMETRIC]=			cos(x)                 VAL    - Kosinus von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_COSH_[NUM_HYPERBOLIC]=			cosh(x)                VAL    - Kosinus Hyperbolicus von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                 VAL    - Kotangens von x. Definiert auf R \ {n*PI}. n ist eine ganze Zahl.
+PARSERFUNCS_LISTFUNC_FUNC_CROSS_[MAT]=						cross(MAT)             VEC    - Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden.
 PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYP)         VAL    - Formatiert TIME gemäß TYP: TYP = 0 gibt YYYYMMDDhhmmss, TYP = 1...6 geben YYYY ... ss, TYP = -1 gibt YYYYMMDD und TYP = -2 gibt hhmmss zurück
 PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)            VAL    - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
 PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)              VAL    - Gradwert von x [rad]. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_DET_[MAT]=						det(MAT)               VAL    - Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.
+PARSERFUNCS_LISTFUNC_FUNC_DIAG_[MAT]=						diag(x,y,z,...)        MAT    - Erzeugt eine Diagonalmatrix mit den Elementen x,y,z,... auf der Hauptdiagonalen.
+PARSERFUNCS_LISTFUNC_FUNC_DIAGONALIZE_[MAT]=				diagonalize(MAT)       MAT    - Diagonalisiert die quadratische Matrix MAT. Sollten die berechneten Diagonalelemente komplex sein, wird eine n x 2n-Matrix zurückgegeben, mit den Realteilen auf der unteren und den Imaginärteilen auf der oberen ersten Nebendiagonalen.
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVALS_[MAT]=					eigenvals(MAT)         MAT    - Berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurück. Sind die Eigenwerte komplex, werden sie als zweispaltige Matrix zurückgegeben, mit dem Realteil in der ersten und dem Imaginärteil in der zweiten Spalte.
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVECTS_[MAT]=					eigenvects(MAT)        MAT    - Berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurück. Sind die Eigenvektoren komplex, werden sie als n x 2n-Matrix zurückgegeben, mit den Realteilen in den ungeraden und den Imaginärteilen der Vektorkomponenten in den geraden Spalten.
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)       VAL    - Wert des elliptischen Integrals D(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)         VAL    - Wert des elliptischen Integrals E(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)         VAL    - Wert des elliptischen Integrals F(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
@@ -331,11 +338,13 @@ PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)               VAL    - Berech
 PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STRING,T)  STR    - Gibt eine Liste aller Dateien, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück. STRING kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name inkl. Endung und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
 PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)   STR    - Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name des Ordners und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
 PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)   VAL    - Gibt die Indices eines in Form einer Zeichenkette übergebenen Datenobjektzugriffs in Form I1,I2,J1,J2 zurück. T ist ein optionaler Parameter und bestimmt, ob eine Matrix (T=0), Spalten- (T=1) oder Zeilenweise (T=2) gelesen werden soll. Mit T=-1 werden unmodifizerte Indices zurückgegeben: 0 für nicht-existente und -1 für offene Intervallgrenzen. Bsp.: getindices("data(5:,3)",-1) = 5,-1,3,0
-PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENTHESIS_[STRING]=	getmatchingparens(STR) VAL    - Gibt die Position der passenden schließenden Klammer in STR zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
+PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(STR) VAL    - Gibt die Position der passenden schließenden Klammer in STR zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen POS und der tatsächlichen Position des Werts werden ignoriert.
 PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside-(Theta)-Funktion. 0 für x < 0, 1 sonst. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)           VAL    - numerischer Wert der Hermite-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_IDENTITY_[MAT]=					identity(n)            MAT    - Erzeugt eine n-dimensionale, quadratische Einheitsmatrix.
 PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)     VAL    - Imaginärteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_INVERT_[MAT]=						invert(MAT)            MAT    - Invertiert die Matrix MAT, falls eine Inverse der Matrix existiert. invert() prüft auch, ob die Dimensionen der übergebenen Matrix übereinstimmen.
 PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(STRING)        LOG    - gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[NUM_LOGIC]=				is_nan(x)              LOG    - gibt true zurück, wenn x den Wert nan hat, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)        LOG    - gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false
@@ -347,12 +356,17 @@ PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_A_[NUM_POLYNOMIAL]=		legendre_a(l,m,x)      V
 PARSERFUNCS_LISTFUNC_FUNC_LN_[NUM_LOGARITHMIC]=				ln(x)                  VAL    - natürlicher Logarithmus von x. Definiert im Bereich (0,inf)
 PARSERFUNCS_LISTFUNC_FUNC_LOG10_[NUM_LOGARITHMIC]=			log10(x)               VAL    - Logarithmus zur Basis 10 von x. Kann durch 'log(x)' abgekürzt werden. Definiert im Bereich (0,inf)
 PARSERFUNCS_LISTFUNC_FUNC_LOG2_[NUM_LOGARITHMIC]=			log2(x)                VAL    - Logarithmus zur Basis 2 von x. Definiert im Bereich (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_MATFC_[MAT]=						matfc(X,Y,Z,...)       MAT    - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFCF_[MAT]=						matfcf(X,Y,Z,...)      MAT    - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFL_[MAT]=						matfl(X,Y,Z,...)       MAT    - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFLF_[MAT]=						matflf(X,Y,Z,...)      MAT    - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
 PARSERFUNCS_LISTFUNC_FUNC_MAX_[NUM_STATS_STRING]=			max(x,y,z,...)         ARG    - Maximum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
 PARSERFUNCS_LISTFUNC_FUNC_MED_[NUM_STATS]=					med(x,y,z,...)         VAL    - Median aus x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_MIN_[NUM_STATS_STRING]=			min(x,y,z,...)         ARG    - Minimum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
 PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)           VAL    - Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n am Ort x. Definiert auf R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)        VAL    - Berechnet die Norm des Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_NUM_[NUM_STATS_STRING]=			num(x,y,z,...)         VAL    - Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden und zählt jede nicht-leere Zeichenkette
+PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)               MAT    - Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[NUM_STATS]=					pct(x,y,z,...,p)       VAL    - p-tes Perzentil aus x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[NUM_ANGULAR_COORDS]=			phi(x,y)               VAL    - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)         VAL    - Produkt der Argumente x,y,z,...
@@ -372,6 +386,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                 VAL 
 PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                VAL    - Sinus cardinalis von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                VAL    - Sinus Hyperbolicus von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)          VAL    - sphärische Neumannfunktion der Ordnung n. Definiert auf R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)             VEC    - Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.
 PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)     STR    - Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf
 PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                VAL    - Wurzel aus x. Definiert im Bereich [0, inf)
 PARSERFUNCS_LISTFUNC_FUNC_STD_[NUM_STATS]=					std(x,y,z,...)         VAL    - Standardabweichung von x,y,z,...
@@ -392,16 +407,19 @@ PARSERFUNCS_LISTFUNC_FUNC_TO_LOWERCASE_[STRING]=			to_lowercase(STRING)   STR   
 PARSERFUNCS_LISTFUNC_FUNC_TO_STRING_[STRING]=				to_string(EXPR)        STR    - Wandelt EXPR, wenn es sich um keine Zeichenkette handelt, in eine solche um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
 PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(STRING)   STR    - Wandelt die Kleinbuchstaben in STRING in Großbuchstaben um
 PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(STRING)       VAL    - Wertet die Zeichenkette STRING aus und wandelt das Ergebnis in einen Wert um
-PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)        VAL    - Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen
+PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)             VAL    - Berechnet die Spur der quadratischen Matrix MAT.
+PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)         MAT    - Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)
+PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)        STR    - Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen
 PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Gibt die Versionsnummer von NumeRe als natürliche Zahl zurück: v1.0.8 wird als 108 zurückgegeben
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 # Ende Funktionentabelle
-PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false) und ARG = Typ der Argumente angegeben.
+PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Weiterführende Informationen zu den vordefinierten mathematischen Funktionen können in der NumeRe-Hilfe mittels "help func" erhalten werden.
 PARSERFUNCS_LISTDEFINE_HEADLINE=Eigene definierte Funktionen
 PARSERFUNCS_LISTDEFINE_EMPTY=Keine Funktionen definiert.
 PARSERFUNCS_LISTDEFINE_DESCRIPTION=Beschreibung:    %%1%%
-PARSERFUNCS_LISTDEFINE_DEFINITION=Definition:       %%1%% := %%2%%
+PARSERFUNCS_LISTDEFINE_DEFINITION=Definition:      %%1%% := %%2%%
 PARSERFUNCS_LISTDEFINE_FUNCTIONS=Funktionen
 PARSERFUNCS_LISTLOGICAL_HEADLINE=Logik-Ausdrücke
 PARSERFUNCS_LISTLOGICAL_TABLEHEAD=Ausdruck:  Ausgabe:
@@ -443,6 +461,7 @@ PARSERFUNCS_LISTCMD_CMD_APPEND=			append       NM [-PAR]      - Dateien an Daten
 PARSERFUNCS_LISTCMD_CMD_AUDIO=			audio        OB [-PAR]      - Erzeugt eine WAVE-Datei aus einem Datensatz
 PARSERFUNCS_LISTCMD_CMD_BREAK=			break                       - Schleifendurchlauf abbrechen
 PARSERFUNCS_LISTCMD_CMD_CACHE=			cache        -PAR           - Optionen auf dem Cache
+PARSERFUNCS_LISTCMD_CMD_CLEAR=			clear        OB [-PAR]      - Entfernt alle Caches/alle Elemente im string()-Objekt unwiderbringlich von diesem Rechner
 PARSERFUNCS_LISTCMD_CMD_COMPOSE=		compose                     - Startet die Komposition mehrerer Plotstile
 PARSERFUNCS_LISTCMD_CMD_CONT=			cont         EX [-set PAR]  - Erzeugung eines Konturlinien-Plots
 PARSERFUNCS_LISTCMD_CMD_CONT3D=			cont3d       EX [-set PAR]  - Erzeugung eines 3D-Konturlinien-Plots
@@ -451,7 +470,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY=			copy         OB [-PAR]      - Kopiert (je nach A
 PARSERFUNCS_LISTCMD_CMD_DATA=			data         -PAR           - Optionen auf Datensätzen
 PARSERFUNCS_LISTCMD_CMD_DATAGRID=		datagrid     EX -PAR        - Datengitter erzeugen
 PARSERFUNCS_LISTCMD_CMD_DEFINE=			define       EX [-set PAR]  - Ermöglicht die Definition eigener Funktionen.
-PARSERFUNCS_LISTCMD_CMD_DELETE=			delete       OB [-PAR]      - Entfernt Einträge aus dem Cache
+PARSERFUNCS_LISTCMD_CMD_DELETE=			delete       OB [-PAR]      - Entfernt Einträge aus dem Cache/dem string()-Objekt
 PARSERFUNCS_LISTCMD_CMD_DENS=			dens         EX [-set PAR]  - Erzeugung eines Dichte-Plots
 PARSERFUNCS_LISTCMD_CMD_DENS3D=			dens3d       EX [-set PAR]  - Erzeugung eines 3D-Dichte-Plots
 PARSERFUNCS_LISTCMD_CMD_DIFF=			diff         EX -set PAR    - Ruft die Funktion zur numerischen Differentiation einer Funktion oder eines Datensatzes auf.
@@ -459,7 +478,7 @@ PARSERFUNCS_LISTCMD_CMD_DRAW=			draw         EX [-set PAR]  - Zeichenmodus.
 PARSERFUNCS_LISTCMD_CMD_DRAW3D=			draw3d       EX [-set PAR]  - 3D-Zeichenmodus.
 PARSERFUNCS_LISTCMD_CMD_EDIT=			edit         OB             - Öffnet eine Datei oder ein Verzeichnis zum Bearbeiten
 PARSERFUNCS_LISTCMD_CMD_ELSE=			else                        - Startet die Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
-PARSERFUNCS_LISTCMD_CMD_ELSEIF=			elseif       EX             - Startet eine bedingte Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
+PARSERFUNCS_LISTCMD_CMD_ELSEIF=			elseif       (EX)           - Startet eine bedingte Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
 PARSERFUNCS_LISTCMD_CMD_ENDCOMPOSE=		endcompose                  - Beendet die Definition einer zuvor begonnenen Plotkomposition
 PARSERFUNCS_LISTCMD_CMD_ENDFOR=			endfor       [-PAR]         - Beendet die Definition einer zuvor begonnenen Zählschleife
 PARSERFUNCS_LISTCMD_CMD_ENDIF=			endif                       - Beendet die Definition einer IF-Verzweigung
@@ -473,7 +492,7 @@ PARSERFUNCS_LISTCMD_CMD_FFT=			fft          OB [-PAR]      - Fourier-Transformat
 PARSERFUNCS_LISTCMD_CMD_FIND=			find         NM             - NumeRe-Stichwortsuche
 PARSERFUNCS_LISTCMD_CMD_FIT=			fit          OB -PAR        - Funktionen über Parameter an Datensätze anpassen
 PARSERFUNCS_LISTCMD_CMD_FITW=			fitw         OB -PAR        - Funktionen über Parameter an Datensätze mit Fehlerwerten anpassen
-PARSERFUNCS_LISTCMD_CMD_FOR=			for          EX             - Startet die Definition einer Zählschleife.
+PARSERFUNCS_LISTCMD_CMD_FOR=			for          (EX)           - Startet die Definition einer Zählschleife.
 PARSERFUNCS_LISTCMD_CMD_GET=			get          -PAR           - Programmeinstellungen abfragen
 PARSERFUNCS_LISTCMD_CMD_GLOBAL=			global       EX/CMD         - Eine Scriptzeile als global deklarieren
 PARSERFUNCS_LISTCMD_CMD_GRAD=			grad         EX [-set PAR]  - Erzeugung eines Gradienten-Plots
@@ -482,8 +501,9 @@ PARSERFUNCS_LISTCMD_CMD_HELP=			help         [NM]           - NumeRe-Hilfe
 PARSERFUNCS_LISTCMD_CMD_HIST=			hist         OB [-PAR]      - Erzeugen eines Histogrammes
 PARSERFUNCS_LISTCMD_CMD_HIST2D=			hist2d       OB [-PAR]      - Generiert ein 2D-Histogramm eines (x,y,z)-Datensatzes. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel
 PARSERFUNCS_LISTCMD_CMD_HLINE=			hline        [-PAR]         - Zeichnet eine horizontale Doppellinie. Mit "-single" wird eine Einfachlinie gezeichnet
-PARSERFUNCS_LISTCMD_CMD_IF=				if           EX             - Startet die Definition einer IF-Verzweigung.
+PARSERFUNCS_LISTCMD_CMD_IF=				if           (EX)           - Startet die Definition einer IF-Verzweigung.
 PARSERFUNCS_LISTCMD_CMD_IFNDEFINED=		ifndefined   EX [-set PAR]  - Prüft vor der Definition, ob die zu definierende Funktion nicht schon bereits definiert wurde.
+PARSERFUNCS_LISTCMD_CMD_INSTALL=		install      NM             - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE=		integrate    EX -set PAR    - Ruft die Funktion zur numerischen Integration einer Funktion f(x) oder f(x,y) auf.
 PARSERFUNCS_LISTCMD_CMD_LIST=			list         -PAR           - Objekte auflisten
 PARSERFUNCS_LISTCMD_CMD_LOAD=			load         NM [-PAR]      - Laden der Daten einer Datei
@@ -496,15 +516,17 @@ PARSERFUNCS_LISTCMD_CMD_NEW=			new          -PAR           - Erzeugen neuer Verz
 PARSERFUNCS_LISTCMD_CMD_ODESOLVE=		odesolve     EX -set PAR    - Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch
 PARSERFUNCS_LISTCMD_CMD_PLOT=			plot         EX [-set PAR]  - Ermöglicht das graphische Darstellen von Daten und Funktionen.
 PARSERFUNCS_LISTCMD_CMD_PLOT3D=			plot3d       EX [-set PAR]  - graphische Darstellung dreidimensionaler Datensätze und Trajektorien.
-PARSERFUNCS_LISTCMD_CMD_PROCEDURE=		procedure    NM             - Definiert eine NumeRe-Prozedur
+PARSERFUNCS_LISTCMD_CMD_PRINT=			print        STR            - Gibt den übergebenen String STR ohne die umgebenden Anführungszeichen als Bildschirmmeldung aus
+PARSERFUNCS_LISTCMD_CMD_PROCEDURE=		procedure    $NM(ARGS)      - Definiert eine NumeRe-Prozedur
 PARSERFUNCS_LISTCMD_CMD_PROGRESS=		progress     EX [-set PAR]  - Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet.
 PARSERFUNCS_LISTCMD_CMD_PULSE=			pulse        OB             - Bestimmt die Pulseigenschaften des übergebenen Datensatzes.
 PARSERFUNCS_LISTCMD_CMD_QUIT=			quit         [-PAR]         - NumeRe beenden
 PARSERFUNCS_LISTCMD_CMD_RANDOM=			random       -PAR           - Zufallszahlengenerator mit wählbaren Verteilungen
-PARSERFUNCS_LISTCMD_CMD_READ=			read         -PAR           - Lesen aus einer Datei
+PARSERFUNCS_LISTCMD_CMD_READ=			read         NM [-PAR]      - Lesen aus einer Datei
 PARSERFUNCS_LISTCMD_CMD_READLINE=		readline     [-PAR]         - Formatierte Wertabfrage
 PARSERFUNCS_LISTCMD_CMD_REDEFINE=		redefine     EX [-set PAR]  - Ermöglicht eine Neudefinition einer selbst definierten Funktion.
 PARSERFUNCS_LISTCMD_CMD_REGULARIZE=		regularize   OB [-PAR]      - Regularisiert Datenreihen mit unregelmäßig verteilten x-Werten.
+PARSERFUNCS_LISTCMD_CMD_RELOAD=			reload       -OB            - Aktualisiert die Daten im Speicher, wenn sie extern bearbeitet wurden
 PARSERFUNCS_LISTCMD_CMD_REMOVE=			remove       OB [-PAR]      - Entfernt Caches oder die angegebene Datei unwiderbringlich von diesem Computer.
 PARSERFUNCS_LISTCMD_CMD_RENAME=			rename       -OB            - Benennt einen vorhandenen Cache um.
 PARSERFUNCS_LISTCMD_CMD_REPLACELINE=	replaceline  STR [-PAR]     - Ermöglicht einfache Korrekturen einer Schleifen- oder Bedingungsdeklaration
@@ -517,19 +539,22 @@ PARSERFUNCS_LISTCMD_CMD_SET=			set          -PAR           - Programmeinstellung
 PARSERFUNCS_LISTCMD_CMD_SHOW=			show         OB             - Den Inhalt eines Datensatzes anzeigen
 PARSERFUNCS_LISTCMD_CMD_SMOOTH=			smooth       OB -PAR        - Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung.
 PARSERFUNCS_LISTCMD_CMD_SORT=			sort         -OB PAR        - Sortiert einen Datensatz
+PARSERFUNCS_LISTCMD_CMD_START=			start        NM             - Startet das bezeichnete Script
 PARSERFUNCS_LISTCMD_CMD_STATS=			stats        OB [-PAR]      - Berechnung der Statistiken eines Datensatzes
 PARSERFUNCS_LISTCMD_CMD_STFA=			stfa         OB [-PAR]      - Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes
 PARSERFUNCS_LISTCMD_CMD_STR=			str          EX             - Lokalen Zeichenkettenvariablensatz in Prozeduren definieren
+PARSERFUNCS_LISTCMD_CMD_SUBPLOT=		subplot      [EX -set PAR]  - Startet einen neuen Unterplot im multiplot-Modus von compose
 PARSERFUNCS_LISTCMD_CMD_SURF=			surf         EX [-set PAR]  - Erzeugung von Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SURF3D=			surf3d       EX [-set PAR]  - Erzeugung von 3D-Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SWAP=			swap         -OB            - Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus
 PARSERFUNCS_LISTCMD_CMD_TAYLOR=			taylor       EX -set PAR    - Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n.
 PARSERFUNCS_LISTCMD_CMD_THROW=			throw        [STR]          - Prozedurauswertung im Notfall abbrechen
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE=		undefine     EX             - Entfernen einer Funktionsdefinition
+PARSERFUNCS_LISTCMD_CMD_UNINSTALL=		uninstall    NM             - Entfernt das bezeichnete Plugin. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_VAR=			var          EX             - Lokalen Variablensatz in Prozeduren definieren
 PARSERFUNCS_LISTCMD_CMD_VECT=			vect         EX [-set PAR]  - Erzeugung eines (2D-)Vektorfeldplots
 PARSERFUNCS_LISTCMD_CMD_VECT3D=			vect3d       EX [-set PAR]  - Erzeugung eines 3D-Vektorfeldplots
-PARSERFUNCS_LISTCMD_CMD_WHILE=			while        EX             - Startet die Definition einer While-Schleife
+PARSERFUNCS_LISTCMD_CMD_WHILE=			while        (EX)           - Startet die Definition einer While-Schleife
 PARSERFUNCS_LISTCMD_CMD_WORKPATH=		workpath     NM             - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung
 PARSERFUNCS_LISTCMD_CMD_WRITE=			write        STR -set PAR   - Schreiben in eine Datei
 PARSERFUNCS_LISTCMD_CMD_ZEROES=			zeroes       EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Nullstellen eines Ausdrucks oder eines Datensatzes auf.
@@ -825,7 +850,536 @@ DATA_OPENFILE_ENTER_HEADINGS=Möchten Sie Tabellenköpfe eingeben? (%%COMMON_YES_N
 DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automatisch durch "_" ersetzt.
 DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
+# GUI STRINGS: All strings for the new GUI
+# ========================================
+GUI_DLG_OPTIONS=NumeRe: Optionen
+GUI_DLG_OPEN=NumeRe: Datei öffnen
+GUI_DLG_SAVEAS=NumeRe: Datei speichern unter
+GUI_DLG_FIND=NumeRe: Suchen
+GUI_DLG_REPLACE=NumeRe: Suchen und ersetzen
+GUI_DLG_DELETE=NumeRe: Löschen
+GUI_DLG_DELETE_QUESTION=Die Datei "%%1%%" wird gelöscht. Sicher?
+GUI_DLG_COPY=NumeRe: Kopieren
+GUI_DLG_COPY_ERROR=Datei konnte nicht kopiert werden, da bereits eine Datei mit dem gleichen Namen existiert.
+GUI_DLG_RENAME=NumeRe: Umbenennen
+GUI_DLG_RENAME_QUESTION=Bitte einen neuen Namen für die Datei eingeben:
+GUI_DLG_RENAME_ERROR=Datei konnte nicht umbenannt werden, da bereits eine Datei mit dem gleichen Namen existiert.
+GUI_DLG_NEWNSCR=NumeRe: Neues Script
+GUI_DLG_NEWNSCR_QUESTION=Bitte den Namen für das Script eingeben:
+GUI_DLG_NEWNSCR_DFLT=neues_script
+GUI_DLG_NEWNPRC=NumeRe: Neue Prozedur
+GUI_DLG_NEWNPRC_QUESTION=Bitte den Namen für die Prozedur eingeben:
+GUI_DLG_NEWNPRC_DFLT=neue_prozedur
+GUI_DLG_NEWPLUGIN=NumeRe: Neues Plugin
+GUI_DLG_NEWPLUGIN_QUESTION=Bitte das Plugin-Kommando eingeben:
+GUI_DLG_NEWPLUGIN_DFLT=newcommand
+# Search & replace dialogs
+GUI_SEARCH_END=Kein weiteres Auftreten von "%%1%%" in dieser Datei gefunden.
+GUI_SEARCH_END_HEAD=NumeRe: Suche abgeschlossen
+GUI_REPLACE_END=%%1%% Vorkommnisse von%%LINEBREAK%%"%%2%%" mit "%%3%%" ersetzt.
+GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
+# Options dialog
+GUI_OPTIONS_AUTOSAVE=Autosave-Intervall
+GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
+GUI_OPTIONS_COLORTHEME=Color-Theme
+GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo (im "load -file" Dialog)
+GUI_OPTIONS_ESCINSCRIPTS=ESC in Scripts
+GUI_OPTIONS_DEFCTRL=Funktionsdefinitionsverwaltung%%LINEBREAK%%(automatisches Laden und Speichern selbstdefinierter Funktionen)
+GUI_OPTIONS_COMPACTTABLES=Kompakte Tabellendarstellung
+GUI_OPTIONS_EMPTYCOLS=Laden leerer Spalten
+GUI_OPTIONS_LOGFILE=Protokollierung der Konsole
+GUI_OPTIONS_HINTS=Tipps und Tricks beim Start anzeigen
+GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)
+GUI_OPTIONS_CONFIG=Konfiguration
+GUI_OPTIONS_LOADPATH=Importordner | <loadpath> =
+GUI_OPTIONS_SAVEPATH=Speicherordner | <savepath> =
+GUI_OPTIONS_SCRIPTPATH=Scriptordner | <scriptpath> =
+GUI_OPTIONS_PROCPATH=Prozedurenordner | <procpath> =
+GUI_OPTIONS_PLOTPATH=Plotspeicherordner | <plotpath> =
+GUI_OPTIONS_PATHS=Verzeichnisse
+GUI_OPTIONS_PRINT=Text drucken in:
+GUI_OPTIONS_PRINT_BW=Schwarz/Weiß
+GUI_OPTIONS_PRINT_COLOR=Farbig
+GUI_OPTIONS_DEFAULTFONT=Standardschriftart für Plots:
+GUI_OPTIONS_PRINT_LINENUMBERS=Zeilennummern drucken
+GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
+GUI_OPTIONS_HISTORY_LINES=Puffergröße der NumeRe-Konsole
+GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
+GUI_OPTIONS_MISC=Verschiedenes
+GUI_OPTIONS_OK=Anwenden
+GUI_OPTIONS_CANCEL=Abbrechen
+# About dialog
+GUI_ABOUT_TITLE=Über NumeRe
+GUI_ABOUT_LICENCE_SHORT=Fitting | Data analysis | Plotting | Matrix operations | FFT%%LINEBREAK%%Extensible framework | Multiple file formats | Programmable%%LINEBREAK%%Open source | Free for everyone%%LINEBREAK%%%%LINEBREAK%%Copyright (c) 2013-2017, Erik A. Hänel et al.%%LINEBREAK%%%%LINEBREAK%%NumeRe ist lizensiert unter der GNU General Public License v3, %%LINEBREAK%%verfügbar unter http://www.gnu.org/licenses/gpl.html
+GUI_ABOUT_TEAM_INTRO=NumeRe wurde geschaffen von:
+GUI_ABOUT_TEAM=Projektleitung:%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Konzept/UI:%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Mathe-Parser:%%LINEBREAK%%   Ingo BERG%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Plotting:%%LINEBREAK%%   Alexey BALAKIN%%LINEBREAK%%numerische Algorithmen:%%LINEBREAK%%   GNU Scientific Library%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%   Alexey BALAKIN%%LINEBREAK%%Tokenizer:%%LINEBREAK%%   Boost-Library%%LINEBREAK%%Matrix-Algorithmen:%%LINEBREAK%%   Eigen Library%%LINEBREAK%%BasicExcel:%%LINEBREAK%%   YAP Chun Wei%%LINEBREAK%%TinyXML-2:%%LINEBREAK%%   Lee THOMASON%%LINEBREAK%%Die (geduldigen) Tester:%%LINEBREAK%%   D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER,%%LINEBREAK%%   K. KURZ, M. LÖCHNER, L. SAHINOVIC, D. SCHMID,%%LINEBREAK%%   V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER,%%LINEBREAK%%   J. ZINßER
+GUI_ABOUT_CREDITS=NumeRe wäre ohne die verwendeten Bibliotheken, die geduldige Mithilfe%%LINEBREAK%%der Tester und der vielen Tutorials im Netz nicht möglich gewesen.%%LINEBREAK%%%%LINEBREAK%%Außerdem sei all den Urhebern der öffentlich zugänglichen Sourcecodes%%LINEBREAK%%gedankt, die in manchen Fällen die nötige Inspiration für die eigenen%%LINEBREAK%%Lösungen lieferten.%%LINEBREAK%%%%LINEBREAK%%Warum ist NumeRe kostenlos?%%LINEBREAK%%%%LINEBREAK%%NumeRe: Framework für Numerische Rechnungen is totally free software%%LINEBREAK%%and out of any charges. There shall never be any fees for using this%%LINEBREAK%%software. It's intended for educational and scientific use and we want%%LINEBREAK%%you to keep your money in your pockets. We believe that there's no%%LINEBREAK%%need for paying to get knowledge or education. In our opinion,%%LINEBREAK%%knowledge has no monetary value, it's just invaluable. Education is%%LINEBREAK%%also one reason you're paying taxes to your government—so ask yourself:%%LINEBREAK%%%%LINEBREAK%%why paying twice?
+GUI_ABOUT_STATS=C++-Codezeilen:%%LINEBREAK%%  ~24 000 (GUI)%%LINEBREAK%%  ~70 000 (Kernel)%%LINEBREAK%%SVN commits:%%LINEBREAK%%  ~50%%LINEBREAK%%Zahl der Quelldateien:%%LINEBREAK%%  ~150 (GUI)%%LINEBREAK%%  ~100 (Kernel)%%LINEBREAK%%Sprachen:%%LINEBREAK%%  2 (Deutsch und Englisch)%%LINEBREAK%%Beginn des Projekts:%%LINEBREAK%%  Ende Oktober 2013%%LINEBREAK%%Ende des Projekts:%%LINEBREAK%%  Nicht in Sicht%%LINEBREAK%%Zahl der behobenen Bugs:%%LINEBREAK%%  ~40 (Dokumentiert)%%LINEBREAK%%  ~400 (Undokumentiert)%%LINEBREAK%%Zahl der (neuen) Bugs, die es in einen RC geschafft haben:%%LINEBREAK%%  ~30%%LINEBREAK%%Zahl der (öffentlichen) Releases:%%LINEBREAK%%  ~25%%LINEBREAK%%Zahl der Kommentare zu NumeRe:%%LINEBREAK%%  ~10 (Komplimente)%%LINEBREAK%%  ~20 (Probleme)%%LINEBREAK%%  ~80 (Bugs)%%LINEBREAK%%Zahl der durchgemachten Nächte:%%LINEBREAK%%  keine%%LINEBREAK%%Zahl der "Hopplas" während einer Vorführung:%%LINEBREAK%%  ~50%%LINEBREAK%%Menge des verzehrten Koffeins:%%LINEBREAK%%  unmessbar
+# tree ctrl strings
+GUI_TREE_WORKSPACE=Arbeitsplatz
+GUI_TREE_DATAFILES=Datenfiles
+GUI_TREE_SAVEDFILES=Gespeicherte Dateien
+GUI_TREE_SCRIPTS=Scripte
+GUI_TREE_PROCEDURES=Prozeduren
+GUI_TREE_PLOTS=Plots
+# tree pop-up menu
+GUI_TREE_PUP_LOAD=Datei laden
+GUI_TREE_PUP_START=Script starten
+GUI_TREE_PUP_RUN=Prozedur ausführen
+GUI_TREE_PUP_EDIT=Bearbeiten
+GUI_TREE_PUP_OPENIMAGE=Graphik anzeigen
+GUI_TREE_PUP_DELETEFILE=Löschen
+GUI_TREE_PUP_COPYFILE=Kopieren
+GUI_TREE_PUP_INSERTFILE=Kopierte Datei einfügen
+GUI_TREE_PUP_RENAMEFILE=Umbenennen
+# Filter strings for the file dialog
+GUI_FILTER_SCRIPTS=NumeRe-Scripte
+GUI_FILTER_PROCEDURES=NumeRe-Prozeduren
+GUI_FILTER_NUMEREFILES=NumeRe Dateien
+GUI_FILTER_ALLFILES=Alle Dateien
+GUI_FILTER_EXECUTABLES=Ausführbare Dateien
+GUI_FILTER_DATAFILES=Datensätze
+GUI_FILTER_IMAGEFILES=Bilddateien
 
-
-
-
+GUI_NEWFILE_UNTITLED=<Unbenannt>
+GUI_SAVE_QUESTION=NumeRe: Speichern?
+GUI_UNSAVEDFILE=Die Datei "%%1%%" wurde geändert und nicht gespeichert.
+GUI_UNSAVEDFILE_CLOSE=Sollen diese Änderungen vor dem Schließen gespeichert werden?
+GUI_UNSAVEDFILE_EXECUTE=Sollen diese Änderungen vor dem Ausführen gespeichert werden? (Ungesicherte Änderungen können nicht ausgeführt werden)
+# Statusbar
+GUI_STATUSBAR_NPRC=%%COMMON_FILETYPE_NPRC%%
+GUI_STATUSBAR_NSCR=%%COMMON_FILETYPE_NSCR%%
+GUI_STATUSBAR_DAT=%%COMMON_FILETYPE_DAT%%
+GUI_STATUSBAR_CSV=%%COMMON_FILETYPE_CSV%%
+GUI_STATUSBAR_TEX=%%COMMON_FILETYPE_TEX%%
+GUI_STATUSBAR_TXT=%%COMMON_FILETYPE_TXT%%
+GUI_STATUSBAR_JDX=%%COMMON_FILETYPE_JDX%%
+GUI_STATUSBAR_DX=%%COMMON_FILETYPE_JDX%%
+GUI_STATUSBAR_JCM=%%COMMON_FILETYPE_JDX%%
+GUI_STATUSBAR_LOG=%%COMMON_FILETYPE_LOG%%
+GUI_STATUSBAR_INI=%%COMMON_FILETYPE_INI%%
+GUI_STATUSBAR_NHLP=%%COMMON_FILETYPE_NHLP%%
+GUI_STATUSBAR_NDB=%%COMMON_FILETYPE_NDB%%
+GUI_STATUSBAR_UNSAVEDFILE=Ungesicherte Datei
+GUI_STATUSBAR_UNKNOWN=%%1%%-Datei
+GUI_STATUSBAR_LINECOL=Zeile: %d, Spalte: %d
+GUI_STATUSBAR_DEBUGGER=NumeRe-Debugger: aktiv
+# Menu strings:
+# please note, that the ampersands mark the hotkeys for keyboard navigation
+# and you may change the shortcuts (e.g Ctrl-N) in this file, but always use the
+# english key identifiers (e.g. "Ctrl" and not "Strg")
+# -----------
+# File menu
+GUI_MENU_NEWFILE=&Neu ...
+GUI_MENU_NEWFILE_TTP=Erzeuge eine neue Datei
+GUI_MENU_NEW_EMPTYFILE=leere &Datei%%TAB%%Ctrl-N
+GUI_MENU_NEW_EMPTYFILE_TTP=Erzeuge eine leere Datei
+GUI_MENU_NEW_NSCR=&Script%%TAB%%Ctrl-Shift-S
+GUI_MENU_NEW_NSCR_TTP=Erzeuge ein Template für ein neues Script (erfordert einen Namen)
+GUI_MENU_NEW_NPRC=&Prozedur%%TAB%%Ctrl-Shift-P
+GUI_MENU_NEW_NPRC_TTP=Erzeuge ein Template für eine neue Prozedur (erfordert einen Namen)
+GUI_MENU_NEW_PLUGIN=P&lugin%%TAB%%Ctrl-Shift-L
+GUI_MENU_NEW_PLUGIN_TTP=Erzeuge ein Template für ein neues Plugin (erfordert das Kommando)
+GUI_MENU_OPENFILE=&Öffnen ...
+GUI_MENU_OPENFILE_TTP=Öffne eine bestehende Datei
+GUI_MENU_CLOSEFILE=Datei s&chließen
+GUI_MENU_CLOSEFILE_TTP=Die aktive Datei schließen
+GUI_MENU_CLOSEALLFILES=Alle Dateien schließen
+GUI_MENU_SAVEFILE=&Speichern%%TAB%%Ctrl-S
+GUI_MENU_SAVEFILE_TTP=Die aktive Datei speichern
+GUI_MENU_SAVEFILEAS=Speichern &unter ...
+GUI_MENU_SAVEFILEAS_TTP=Die aktive Datei unter anderem Namen speichern
+GUI_MENU_PRINT=&Drucken%%TAB%%Ctrl-P
+GUI_MENU_PRINT_TTP=Die aktive Datei drucken
+GUI_MENU_PRINTPREVIEW=Druckvorschau
+GUI_MENU_PRINTSETUP=Druckereinstellung
+GUI_MENU_EXIT=&Beenden%%TAB%%Alt-F4
+GUI_MENU_EXIT_TTP=NumeRe beenden
+GUI_MENU_FILE=&Datei
+# Edit menu
+GUI_MENU_UNDO=&Rückgängig%%TAB%%Ctrl-Z
+GUI_MENU_REDO=&Wiederholen%%TAB%%Ctrl-Y
+GUI_MENU_CUT=&Ausschneiden%%TAB%%Ctrl-X
+GUI_MENU_COPY=&Kopieren%%TAB%%Ctrl-C
+GUI_MENU_PASTE=Ein&fügen%%TAB%%Ctrl-V
+GUI_MENU_FIND=&Suchen%%TAB%%Ctrl-F
+GUI_MENU_REPLACE=Suchen und &Ersetzen%%TAB%%Ctrl-H
+GUI_MENU_EDIT=&Bearbeiten
+# Tools menu
+GUI_MENU_OPTIONS=&Optionen
+GUI_MENU_DEBUGGER=NumeRe-&Debugger%%TAB%%Ctrl-Shift-D
+GUI_MENU_DEBUGGER_TTP=Aktiviert oder deaktiviert den Debugger
+GUI_MENU_AUTOINDENT=Einzüge ausrichten%%TAB%%Ctrl-Shift-I
+GUI_MENU_AUTOINDENT_TTP=Passt den Einzug der Zeilen dem aktuellen Block an
+GUI_MENU_LINEWRAP=Automatischer Zeilenumbruch%%TAB%%Ctrl-Alt-W
+GUI_MENU_LINEWRAP_TTP=Bricht lange Zeilen am Bildschirmrand in die nächste Zeile um
+GUI_MENU_DISPCTRLCHARS=Zeige Steuerzeichen
+GUI_MENU_DISPCTRLCHARS_TTP=Zeigt Steuerzeichen wie Tabulator und Leerzeichen an
+GUI_MENU_EXECUTE=%%GUI_TB_RUN%%%%TAB%%F5
+GUI_MENU_EXECUTE_TTP=%%GUI_TB_RUN_TTP%%
+GUI_MENU_TOGGLE_CONSOLE=Zeige/Verberge die Konsole%%TAB%%F2
+GUI_MENU_TOOLS=&Werkzeuge
+# Help menu
+GUI_MENU_SHOWHELP=&Hilfethemen%%TAB%%F1
+GUI_MENU_ABOUT=&Über NumeRe
+GUI_MENU_ABOUT_TTP=Zeige Informationen über NumeRe
+GUI_MENU_HELP=&Hilfe
+# Editor
+GUI_EDITOR_TAB_CLOSE=Reiter schließen
+# Tooltips
+GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
+GUI_EDITOR_CALLTIP_PROC2=Klicke rechts, um die Definition zu suchen
+GUI_EDITOR_CALLTIP_...=		...       - Ermöglicht eine beliebige Zahl an Argumenten
+GUI_EDITOR_CALLTIP_ANS=		ans       - Enthält das Ergebnis der letzten Berechnung
+GUI_EDITOR_CALLTIP_CACHE=	cache()   - Standard-Cache-Objekt. Der Inhalt kann modifiziert werden
+GUI_EDITOR_CALLTIP_DATA=	data()    - Daten-Objekt. Enthält alle geladenen Daten. Read-Only
+GUI_EDITOR_CALLTIP_FALSE=	false     - Konstante für 0
+GUI_EDITOR_CALLTIP_INF=		inf       - Konstante für den symbolischen Wert Unendlich
+GUI_EDITOR_CALLTIP_NAN=		nan       - Konstante für keinen (darstellbaren) Wert
+GUI_EDITOR_CALLTIP_STRING=	string()  - String-Objekt. Kann beliebig viele Zeichenketten enthalten
+GUI_EDITOR_CALLTIP_TRUE=	true      - Konstante für 1
+GUI_EDITOR_CALLTIP_VOID=	void      - Konstante für den leeren Wert. Wird teilweise auch als 'nan' interpretiert
+# Option tooltips
+GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Konversion
+GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plotoption
+GUI_EDITOR_CALLTIP_COMMON_FONTTYPE=Schriftart
+GUI_EDITOR_CALLTIP_COMMON_FILEWRITE=Dateischreibmodus
+GUI_EDITOR_CALLTIP_COMMON_FILEREAD=Dateilesemodus
+GUI_EDITOR_CALLTIP_COMMON_SETTING=Einstellung
+GUI_EDITOR_CALLTIP_COMMON_MAF=Multi-Argumentfunktion auf Datensätze
+GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR=Option für
+GUI_EDITOR_CALLTIP_COMMON_METHODFOR=Methode für
+GUI_EDITOR_CALLTIP_OPT_ADDXAXIS=addxaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ADDYAXIS=addyaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ADVENTOR=adventor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_ALL=all
+GUI_EDITOR_CALLTIP_OPT_ALLMEDIUM=hires=allmedium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ALPHA=alpha [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ALPHAMASK=alphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ANIMATE=animate[=FRAMES] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_APP=mode=app [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
+GUI_EDITOR_CALLTIP_OPT_ASVAL=asval[={VARSET}] [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
+GUI_EDITOR_CALLTIP_OPT_AUTOSAVE=autosave [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_AVG=avg [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_AXIS=axis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_AXISBIND=axisbind="rltb" [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BACKGROUND=background=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BAR=type=bar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_BARS=bars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BCANCEL=type=bcancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_BGCOLORSCHEME=bgcolorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BINLABEL=binlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_BINOMIAL=distrib=binomial [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_BINS=bins=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_BONUM=bonum [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_BOTTOMLEFT=legend=bottomleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BOTTOMRIGHT=legend=bottomright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BOX=box [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BOXPLOT=boxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CHIMAP=chimap=CHIMAP() [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_CHORUS=chorus [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_CLOG=clog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CLOUDPLOT=cloudplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CMD=cmd
+GUI_EDITOR_CALLTIP_OPT_CNT=cnt [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_COARSE=grid=coarse [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COAST=colorscheme=coast [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLD=colorscheme=cold [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORBAR=colorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORMASK=colormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORRANGE=colorrange=MIN:MAX [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORSCHEME=colorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORTHEME=colortheme [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLS=cols[=VAL]
+GUI_EDITOR_CALLTIP_OPT_COMMENT=comment=COMMENT
+GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTSIGN
+GUI_EDITOR_CALLTIP_OPT_COMPACT=compact [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_COMPLETE=complete [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_COMPLEX=complex [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
+GUI_EDITOR_CALLTIP_OPT_CONNECT=connect [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CONST=const
+GUI_EDITOR_CALLTIP_OPT_COPPER=colorscheme=copper [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COORDS=coords=COORDINATESET [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COUNTLABEL=countlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_CSCALE=cscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
+GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
+GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_DOWN=down [Zeroes mode]
+GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EPS=eps=PRECISION
+GUI_EDITOR_CALLTIP_OPT_ERRORBARS=errorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_EVERY=every=FIRST,INCREMENT
+GUI_EDITOR_CALLTIP_OPT_EXPRVAR=exprvar
+GUI_EDITOR_CALLTIP_OPT_EXTENDEDFILEINFO=extendedfileinfo [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_FASTSTART=faststart [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_FCONT=fcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FILE=file=FILENAME
+GUI_EDITOR_CALLTIP_OPT_FILES=files[=FILEPATH]
+GUI_EDITOR_CALLTIP_OPT_FINE=grid=fine [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FIRST=first=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_FLENGTH=flength [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FLOW=flow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FONT=font=FONTTYPE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FREE=free [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_FREEDMAN=method=freedman [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_FREEDOMS=freedoms=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_FUNC=func[=TYPE]
+GUI_EDITOR_CALLTIP_OPT_FX0=fx0=[STARTVALS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_GAMMA=distrib=gamma [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_GAUSS=distrib=gauss [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_GRID=grid[=TYPE]
+GUI_EDITOR_CALLTIP_OPT_GRIDSTYLE=gridstyle=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HBARS=hbars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HEAD=head=LINENUMBER
+GUI_EDITOR_CALLTIP_OPT_HEROS=heros [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_HEROSCN=heroscn [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_HINTS=hints [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_HIRES=hires[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HOT=colorscheme=hot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HTML=html
+GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
+GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
+GUI_EDITOR_CALLTIP_OPT_ITER=iter=VAL
+GUI_EDITOR_CALLTIP_OPT_KEEPDIM=keepdim [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_LAST=last=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_LBORDER=lborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LCONT=lcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEGEND=legend=POSITION [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEGENDSTYLE=legendstyle=LEGENDSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LIGHT=light[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LINES=lines[=VAL]
+GUI_EDITOR_CALLTIP_OPT_LINESIZES=linesizes=VALS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LINESTYLES=linestyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LNUMCTRL=lnumctrl[=VAL]
+GUI_EDITOR_CALLTIP_OPT_LOADEMPTYCOLS=loademptycols [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_LOADPATH=loadpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_LOGIC=logic
+GUI_EDITOR_CALLTIP_OPT_LOGSCALE=logscale
+GUI_EDITOR_CALLTIP_OPT_LYAPUNOV=lyapunov [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
+GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MASK=mask
+GUI_EDITOR_CALLTIP_OPT_MAX=max
+GUI_EDITOR_CALLTIP_OPT_MAXLINE=maxline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MEAN=mean=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_MED=med [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_MEDIUM=hires=medium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
+GUI_EDITOR_CALLTIP_OPT_MIN=min
+GUI_EDITOR_CALLTIP_OPT_MINLINE=minline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MODE=mode=MODE
+GUI_EDITOR_CALLTIP_OPT_MOY=colorscheme=moy [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MSG=msg=MESSAGE
+GUI_EDITOR_CALLTIP_OPT_MULTIPLOT=multiplot=LINES,COLS
+GUI_EDITOR_CALLTIP_OPT_NOALPHA=noalpha [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOALPHAMASK=noalphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOANIMATE=noanimate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOAREA=noarea [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOAXIS=noaxis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBACKGROUND=nobackground [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBARS=nobars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBOX=nobox [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBOXPLOT=noboxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCLOG=noclog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCLOUDPLOT=nocloudplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCOLORBAR=nocolorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCOLORMASK=nocolormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCONNECT=noconnect [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCUT=nocut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOERRORBARS=noerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFCONT=nofcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFLENGTH=noflength [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFLOW=noflow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOGRID=nogrid [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOHBARS=nohbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOHIRES=nohires [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOINTERPOLATE=nointerpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLCONT=nolcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLIGHT=nolight [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLOGSCALE=nologscale [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOMARKS=nomarks [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOOPEN=noopen [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOORTHOPROJECT=noorthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPCONT=nopcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPIPE=nopipe [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPOINTS=nopoints [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOQUOTES=noquotes [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOREGION=noregion [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NORM=norm [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_NORMAL=distrib=normal [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_NOSCHEMATIC=noschematic [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOSTEPS=nosteps [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOSILENT=nosilent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOXLOG=noxlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOYERRORBARS=noyerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOZLOG=nozlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NQ=nq
+GUI_EDITOR_CALLTIP_OPT_NUM=num [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ONLYCOLORS=legendstyle=onlycolors [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ONLYSTYLES=legendstyle=onlystyles [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OPEN=open [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OPNG=opng=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ORDER=order=VAL
+GUI_EDITOR_CALLTIP_OPT_ORIGIN=origin=TYPE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ORTHOPROJECT=orthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OSVG=osvg=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OTEX=otex=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
+GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN
+GUI_EDITOR_CALLTIP_OPT_PCONT=pcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PEEK=peek
+GUI_EDITOR_CALLTIP_OPT_PERSPECTIVE=perspective=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PIPE=pipe [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLASMA=colorscheme=plasma [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTCOLORS=plotcolors=COLORS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTFONT=plotfont=FONTTYPE [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTPARAMS=plotparams
+GUI_EDITOR_CALLTIP_OPT_PLOTPATH=plotpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLUGIN=plugin=PLUGINCOMMAND [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_PLUGINS=plugins
+GUI_EDITOR_CALLTIP_OPT_POINTS=points[=VAL]
+GUI_EDITOR_CALLTIP_OPT_POINTSTYLES=pointstyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POISSON=distrib=poisson [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_POLAR=coords=polar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PRD=prd [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_PRECISION=precision=VAL
+GUI_EDITOR_CALLTIP_OPT_PROB=prob=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_PROC=proc=PROCNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_PROCPATH=procpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RBORDER=rborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_REAL=bgcolorscheme=real [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RECURSIVE=recursive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% define]
+GUI_EDITOR_CALLTIP_OPT_REGION=region [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RESET=reset [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RESTRICT=restrict=[RESTRICTIONS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_RK2=method=rk2 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RK4=method=rk4 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RK8PD=method=rk8pd [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RKCK=method=rkck [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RKF45=method=rkf45 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_ROTATE=rotate=THETA,PHI [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SAMPLES=samples=VAL
+GUI_EDITOR_CALLTIP_OPT_SAVEPATH=savepath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_SAVERR=saverr [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_SCALE=scale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_SCHEMATIC=schematic [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SCHOLA=schola [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_SCOTT=method=scott [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_SCRIPTPATH=scriptpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_SETTINGS=settings
+GUI_EDITOR_CALLTIP_OPT_SHAPE=shape=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_SILENT=silent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SIMPSON=method=simpson [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
+GUI_EDITOR_CALLTIP_OPT_SINGLE=single
+GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
+GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_STD=std
+GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
+GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SUM=sum [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_SV=sv
+GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
+GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
+GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
+GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TOCACHE=tocache[=CACHE()]
+GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
+GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TOPRIGHT=legend=topright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TRANSPOSE=transpose
+GUI_EDITOR_CALLTIP_OPT_TRAPEZOIDAL=method=trapezoidal [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
+GUI_EDITOR_CALLTIP_OPT_TRUNC=mode=trunc [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_TYPE=type=TYPE
+GUI_EDITOR_CALLTIP_OPT_UBOUND=ubound=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_UNIFORM=distrib=uniform [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_UNIQUE=unique
+GUI_EDITOR_CALLTIP_OPT_UNITS=units
+GUI_EDITOR_CALLTIP_OPT_UP=up [Zeroes mode]
+GUI_EDITOR_CALLTIP_OPT_USECUSTOMLANG=usecustomlang [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_USEESCINSCRIPTS=useescinscripts [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_VAR=var
+GUI_EDITOR_CALLTIP_OPT_VIRIDIS=colorscheme=viridis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_VIEWER=viewer[=PATH/TO/VIEWER] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_VLINE=vline=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_WINDOWSIZE=windowsize [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_WITH=with=FUNCTION(x,PARAMS) [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_XERRORBARS=xerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XLABEL=xlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XLOG=xlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XSCALE=xscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XTICKLABELS=xticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XTICKS=xticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XVALS=xvals
+GUI_EDITOR_CALLTIP_OPT_XY=slices=xy [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_XZ=slices=xz [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_YERRORBARS=yerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YLABEL=ylabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YLOG=ylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YSCALE=yscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YTICKLABELS=yticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YTICKS=yticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZLABEL=zlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZLOG=zlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZSCALE=zscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZTICKLABELS=zticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZTICKS=zticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+# Editor pop-up menu
+GUI_MENU_EDITOR_CUT=Ausschneiden
+GUI_MENU_EDITOR_COPY=Kopieren
+GUI_MENU_EDITOR_PASTE=Einfügen
+GUI_MENU_EDITOR_ADDBP=Breakpoint hinzufügen
+GUI_MENU_EDITOR_REMOVEBP=Breakpoint entfernen
+GUI_MENU_EDITOR_CLEARBP=Alle Breakpoints entfernen
+GUI_MENU_EDITOR_HIGHLIGHT=Hebe '%%1%%' permanent hervor
+GUI_MENU_EDITOR_FINDPROC=Finde die Definition von: '%%1%%'
+# Toolbar strings
+GUI_TB_NEW=Neu
+GUI_TB_NEW_TTP=Neue Datei
+GUI_TB_OPEN=Öffnen
+GUI_TB_OPEN_TTP=Eine Datei öffnen
+GUI_TB_SAVE=Speichern
+GUI_TB_SAVE_TTP=Die aktuelle Datei speichern
+GUI_TB_RUN=Ausführen
+GUI_TB_RUN_TTP=Die aktuelle Datei ausführen
+GUI_TB_STOP=Abbrechen
+GUI_TB_STOP_TTP=Ausführung abbrechen
+GUI_TB_ADD=Hinzufügen
+GUI_TB_ADD_TTP=Breakpoint hier hinzufügen
+GUI_TB_REMOVE=Entfernen
+GUI_TB_REMOVE_TTP=Breakpoint hier entfernen
+GUI_TB_CLEAR=Alle entfernen
+GUI_TB_CLEAR_TTP=Alle breakpoints entfernen
+# Printing dialogs
+GUI_PRINT_ERROR=Beim Drucken wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
+GUI_PRINT_ERROR_HEAD=NumeRe: Drucken fehlgeschlagen
+GUI_PREVIEW_ERROR=Beim Erstellen der Vorschau wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
+GUI_PREVIEW_ERROR_HEAD=NumeRe: Druckvorschau fehlgeschlagen
+GUI_PREVIEW_HEAD=NumeRe: Druckvorschau

@@ -26,7 +26,7 @@
 		<item node="-define">lists all custom defined functions</item>
 		<item node="-exprvar">lists all variables, which were used in the last expression, including their values and their needed memory size</item>
 		<item node="-files">lists files and directories at the desired location or in the default directories, respectively. See "help explorer" for further information</item>
-		<item node="-func[=TYPE]">lists implemented functions and their arguments. This parameter may be restricted with TYPE to list only corresponding functions. TYPE may have the following values: <code>numerical</code>, <code>string</code>, <code>logical</code>, <code>trigonometric</code>, <code>hyperbolic</code>, <code>random</code>, <code>polynomial</code>, <code>statistical</code>, <code>time</code>, <code>angular</code>, <code>distrib</code>, <code>coords</code>, <code>logarithmic</code> & <code>physical</code></item>
+		<item node="-func[=TYPE]">lists implemented functions and their arguments. This parameter may be restricted with TYPE to list only corresponding functions. TYPE may have the following values: <code>numerical</code>, <code>matrix</code>, <code>string</code>, <code>logical</code>, <code>trigonometric</code>, <code>hyperbolic</code>, <code>random</code>, <code>polynomial</code>, <code>statistical</code>, <code>time</code>, <code>angular</code>, <code>distrib</code>, <code>coords</code>, <code>logarithmic</code> & <code>physical</code></item>
 		<item node="-logic">lists all logical expressions, which may be needed in NumeRe</item>
 		<item node="-plugins">lists all installed plugins</item>
 		<item node="-settings">lists the values of the current configuration</item>
