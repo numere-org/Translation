@@ -28,6 +28,7 @@
 		<item node="-draftmode">Get the draft mode setting</item>
 		<item node="-editor">Get the current text editor</item>
 		<item node="-extendedfileinfo">Read, if extended file information shall be displayed</item>
+		<item node="-externaldocwindow">Read, if the documentation shall be displayed in an external window</item>
 		<item node="-faststart">Program start-up without internal checks</item>
 		<item node="-greeting">Read, if NumeRe shall greet at start-up</item>
 		<item node="-hints">Read, if the "Did-you-knows" shall be displayed</item>

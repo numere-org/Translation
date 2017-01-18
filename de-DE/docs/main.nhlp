@@ -41,7 +41,7 @@
 		<item node="data">Ruft Methoden zu Datenfiles auf</item>
 		<item node="cache">Ruft Methoden zu den Caches auf</item>
 	</list>
-	Zu allen hier gelisteten Kommandos existiert ein Artikel in der NumeRe-Hilfe. Um diesen aufzurufen, einfach "help KOMMANDO" eintippen. Diese Artikel enthalten auch die Informationen zu Parametern und Optionen, die auf das KOMMANDO angewendet werden können.
-	WICHTIG: Wenn Parametern und Optionen Werte durch ein <code>=</code> übergeben werden, sollten hier keine zusätzlichen Leerzeichen verwendet werden, da Leerzeichen die einzelnen Parameter/Optionen trennen.
-	TIPP: Eine komplette Liste aller Kommandos wird durch <code>list -cmd</code> angezeigt (allerdings werden keine Pluginkommandos gelistet). Um eine Liste aller Hilfethemen anzuzeigen, "help index" eingeben.
+	Zu allen hier gelisteten Kommandos existiert ein Artikel in der NumeRe-Hilfe. Um diesen aufzurufen, einfach <code>help KOMMANDO</code> eintippen. Diese Artikel enthalten auch die Informationen zu Parametern und Optionen, die auf das KOMMANDO angewendet werden können.
+	<em>Wichtig:</em> Wenn Parametern und Optionen Werte durch ein <code>=</code> übergeben werden, sollten hier keine zusätzlichen Leerzeichen verwendet werden, da Leerzeichen die einzelnen Parameter/Optionen trennen.
+	<em>Tipp:</em> Eine komplette Liste aller Kommandos wird durch <code>list -cmd</code> angezeigt (allerdings werden keine Pluginkommandos gelistet). Um eine Liste aller Hilfethemen anzuzeigen, <code>help index</code> eingeben.
 </article>

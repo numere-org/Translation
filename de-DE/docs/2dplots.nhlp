@@ -17,7 +17,7 @@
 -->
 
 <article id="2dplots">
-	<title string="Gitter- Kontur-, Dichte- oder Flächenplots" />
+	<title string="Gitter-, Kontur-, Dichte- oder Flächenplots" />
 	Die Kommandos <code>mesh</code>, <code>cont</code>, <code>dens</code> bzw. <code>surf</code> ermöglichen Darstellungen von Funktionen der Form <expr>z = f(x,y)</expr>, also Funktionen, deren <expr>z</expr>-Koordinate durch eine Funktion von <expr>x</expr> und <expr>y</expr> gegeben ist. <code>mesh</code> erzeugt dabei einen Gitter-, <code>cont</code> ein Konturlinien- (Niveaulinien-), <code>dens</code> einen Dichte- (Farben entsprechen <expr>z</expr>-Werten) und <code>surf</code> einen Oberflächenplot.
 	Plotvariablen sind <expr>x</expr> und <expr>y</expr>. Alle anderen Variablen werden als Parameter betrachtet.
 	Um Datensätze mit diesen Kommandos darzustellen, müssen diese in Form eines Datengitters vorliegen. Ein solches kann mit <code>datagrid</code> aus einem Datensatz erzeugt werden. Siehe "help datagrid" für die entsprechenden Erläuterungen zu dieser Funktion.

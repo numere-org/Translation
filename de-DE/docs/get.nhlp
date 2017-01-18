@@ -28,6 +28,7 @@
 		<item node="-draftmode">Einstellung zum Entwurfsmodus abfragen</item>
 		<item node="-editor">Aktuellen Texteditor abfragen</item>
 		<item node="-extendedfileinfo">Einstellung zu den erweiterten Dateiinformationen abfragen</item>
+		<item node="-externaldocwindow">Einstellung zum Anzeigen der NumeRe-Hilfe in einem externen Fenster abfragen</item>
 		<item node="-faststart">Programmstart ohne Prüfung</item>
 		<item node="-greeting">Einstellung zur Begrüßung abfragen</item>
 		<item node="-hints">Einstellung zum Tip-des-Tages abfragen</item>

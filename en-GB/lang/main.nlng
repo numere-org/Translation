@@ -158,6 +158,7 @@ BUILTIN_CHECKKEYWORD_GREETING=Greeting
 BUILTIN_CHECKKEYWORD_HINTS=Tips and Tricks
 BUILTIN_CHECKKEYWORD_ESC_IN_SCRIPTS=ESC key in scripts
 BUILTIN_CHECKKEYWORD_CUSTOM_LANG=Custom language
+BUILTIN_CHECKKEYWORD_DOC_VIEWER=Documentation in external window
 BUILTIN_CHECKKEYWORD_DEFCONTROL=Automatic define control
 BUILTIN_CHECKKEYWORD_AUTOSAVE=Interval for automatic backup
 BUILTIN_CHECKKEYWORD_BUFFERSIZE=Buffersize
@@ -216,6 +217,7 @@ BUILTIN_LISTOPT_24=Fast start:                %%1%%
 BUILTIN_LISTOPT_25=Default plot font:         "%%1%%"
 BUILTIN_LISTOPT_26=Tips and tricks:           %%1%%
 BUILTIN_LISTOPT_27=Custom language:           %%1%%
+BUILTIN_LISTOPT_28=Documentation external:    %%1%%
 BUILTIN_LISTOPT_FOOTNOTE=All settings can be changed with the use of "set -OPTION". You may find further information at "help set".
 BUILTIN_LISTOPT_NOVIEWER=No viewer declared
 # ===================================
@@ -298,7 +300,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)               VAL  
 PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                  VAL    - Airy function Ai(x). Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                VAL    - Inverse sine of x. Defined in the range [-1,1] (Synonym: "arcsin(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)               VAL    - Inverse hyperbolic sine of x. Defined everywhere in R (Synonym: "arsinh(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)          VAL    - Returns the ASCII values of the characters in STRING
+PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)         {VAL}   - Returns the ASCII values of the characters in STRING
 PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                VAL    - Inverse tangent of x. Defined everywhere in R (Synonym: "arctan(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)               VAL    - Inverse hyperbolic tangent of x. Defined in the range (-1,1) (Synonym: "artanh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_AVG_[NUM_STATS]=					avg(x,y,z,...)         VAL    - Returns the average of x,y,z,...
@@ -335,9 +337,9 @@ PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)               VAL    - Roun
 PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)               VAL    - Value of the gamma function at the position x. Defined in R \ {-n, 0}, where n is an integral number > 0.
 PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,x1)           VAL    - Creates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1
 PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)               VAL    - Calculates the greatest common divisor of the integral numbers n and k
-PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STRING,T)  STR    - Returns a list of strings containing all files matching to the naming scheme STRING. STRING may contain additional placeholders or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the filenames and the extensions of the files without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
-PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)   STR    - Returns a list of strings containing all directories matching to the naming scheme STR. STR may contain additional placeholders or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the directory names without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
-PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)   VAL    - Returns the indices of the data object access, which was passed as a string, in the format I1,I2,J1,J2. T is an optional parameter and determines, how the access shall be interpreted: matrix-like (T=0), column- (T=1) or linewise (T=2). Passing T=-1 returns uninterpreted indices: 0 for non-existing and -1 for open interval boundaries. E.g.: getindices("data(5:,3)",-1) = 5,-1,3,0
+PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STR,T)    {STR}   - Returns a list of strings containing all files matching to the naming scheme STR. STR may contain additional placeholders or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the filenames and the extensions of the files without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
+PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)  {STR}   - Returns a list of strings containing all directories matching to the naming scheme STR. STR may contain additional placeholders or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the directory names without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
+PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)  {VAL}   - Returns the indices of the data object access, which was passed as a string, in the format I1,I2,J1,J2. T is an optional parameter and determines, how the access shall be interpreted: matrix-like (T=0), column- (T=1) or linewise (T=2). Passing T=-1 returns uninterpreted indices: 0 for non-existing and -1 for open interval boundaries. E.g.: getindices("data(5:,3)",-1) = 5,-1,3,0
 PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(STR) VAL    - Returns the position of the closing parenthesis matching to the first open parenthesis in the string STR. Note that this applies to brackets and braces as well.
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Returns the value of a parameter in the string STRING with the value's first character at position POS (e.g. after "=") as a string. Note that all whitespaces between POS and the actual position of the value will be ignored.
 PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside (or Theta) function. 0 for x < 0, 1 otherwise. Defined everywhere in R
@@ -387,7 +389,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                VAL
 PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                VAL    - Hyperbolic sine of x. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)          VAL    - Spherical Neumann function of the order n. Defined in R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)             VEC    - Solves the linear system of equations, which is described by the matrix MAT, with the Gaussian algorithm.
-PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)     STR    - Splits the string STRING at the characters CHAR in separate strings
+PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)    {STR}   - Splits the string STRING at the characters CHAR in separate strings
 PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                VAL    - Square root of x. Defined in the range [0, inf)
 PARSERFUNCS_LISTFUNC_FUNC_STD_[NUM_STATS]=					std(x,y,z,...)         VAL    - Returns the standard deviation of x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(STR1,STR2,P)    VAL    - Returns the position of the first occurrence of STR1 in STR2, with the search starting from the position P. P is an optional value with the default value 1. The function returns false, if STR1 is not found.
@@ -414,7 +416,7 @@ PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Re
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Creates a n x m matrix, which is filled with zeroes. If only one argument was passend, then a square matrix will be created.
 # Ende Funktionentabelle
-PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s).
+PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Further information concerning the predefined mathematical functions can be found in the NumeRe-Help at "help function".
 PARSERFUNCS_LISTDEFINE_HEADLINE=Custom defined functions
 PARSERFUNCS_LISTDEFINE_EMPTY=No custom defined functions.
@@ -873,6 +875,19 @@ GUI_DLG_NEWNPRC_DFLT=new_procedure
 GUI_DLG_NEWPLUGIN=NumeRe: New plugin
 GUI_DLG_NEWPLUGIN_QUESTION=Please enter the desired plugin command:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
+GUI_DLG_GOTO=NumeRe: Goto line
+GUI_DLG_GOTO_QUESTION=Insert a line number: 1-%%1%%
+GUI_DLG_GOTO_ERROR=This line doesn't exist.
+GUI_DLG_SESSION_ERROR=NumeRe: Session recovery
+GUI_DLG_SESSION_RECREATIONERROR=NumeRe could not recreate the file(s):%%LINEBREAK%%%%1%%It/they was/were probably deleted.
+GUI_DLG_FILEMODIFIED=NumeRe: Reload
+GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%This file was modified externally or through a script or a procedure. Shall NumeRe reload this file?%%LINEBREAK%%%%LINEBREAK%%(Your changes will get lost.)
+# Tips & Tricks dialog
+GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
+GUI_TIPOTD_DYK=Did you know ...?
+GUI_TIPOTD_NEXT=&Next tip
+GUI_TIPOTD_STAS=&Show tips at start up
+GUI_TIPOTD_CLOSE=&Close
 # Search & replace dialogs
 GUI_SEARCH_END=No further occurence of "%%1%%" was found in this file.
 GUI_SEARCH_END_HEAD=NumeRe: Searching finished
@@ -882,14 +897,15 @@ GUI_REPLACE_END_HEAD=NumeRe: Replacing finished
 GUI_OPTIONS_AUTOSAVE=Autosave interval
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
-GUI_OPTIONS_EXTENDEDINFO=Extended file information (in the"load -file" dialog)
+GUI_OPTIONS_EXTENDEDINFO=Extended file information (in the "list -files" dialog)
 GUI_OPTIONS_ESCINSCRIPTS=ESC in scripts
 GUI_OPTIONS_DEFCTRL=Definition control%%LINEBREAK%%(automatic loading and saving of custom defined functions)
 GUI_OPTIONS_COMPACTTABLES=Compact table view
 GUI_OPTIONS_EMPTYCOLS=Loading of empty cols
 GUI_OPTIONS_LOGFILE=Logging of console input
-GUI_OPTIONS_HINTS=Show the Tip of the day at start-up
-GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)
+GUI_OPTIONS_HINTS=Show the "Tip of the day" at start-up
+GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)%%LINEBREAK%%See also "help language"
+GUI_OPTIONS_EXTERNALDOCVIEWER=Show documentation articles in an external window
 GUI_OPTIONS_CONFIG=Configuration
 GUI_OPTIONS_LOADPATH=Loading path | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Saving path | <savepath> =
@@ -902,6 +918,7 @@ GUI_OPTIONS_PRINT_BW=Black/White
 GUI_OPTIONS_PRINT_COLOR=Colour
 GUI_OPTIONS_DEFAULTFONT=Default font for plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Print linenumbers
+GUI_OPTIONS_SAVE_SESSION=Session recovery%%LINEBREAK%%(Only saved changes are recoverable)
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Show text on the toolbar
 GUI_OPTIONS_HISTORY_LINES=Buffersize of the NumeRe console
 GUI_OPTIONS_PRECISION=Precision (Decimals int the console)
@@ -1005,19 +1022,33 @@ GUI_MENU_PASTE=&Insert%%TAB%%Ctrl-V
 GUI_MENU_FIND=&Find%%TAB%%Ctrl-F
 GUI_MENU_REPLACE=Find and &replace%%TAB%%Ctrl-H
 GUI_MENU_EDIT=&Edit
+# View menu
+GUI_MENU_LINEWRAP=Automatic line &wrap%%TAB%%Ctrl-Alt-W
+GUI_MENU_LINEWRAP_TTP=Wraps long lines at the screen border
+GUI_MENU_DISPCTRLCHARS=&Show control characters
+GUI_MENU_DISPCTRLCHARS_TTP=Shows control characters such as tabulator and whitespaces
+GUI_MENU_TOGGLE_CONSOLE=Show/hide the &console%%TAB%%F2
+GUI_MENU_GOTOLINE=&Goto ...%%TAB%%Ctrl-G
+GUI_MENU_GOTOLINE_TTP=Goto a line in the active file
+GUI_MENU_MULTIROW=&Multirow tabs
+GUI_MENU_MULTIROW_TTP=Activates or deactives tabs in multiple rows
+GUI_MENU_FOLDALL=&Fold all%%TAB%%Ctrl-Alt-F
+GUI_MENU_FOLDALL_TTP=Folds all lines
+GUI_MENU_UNFOLDALL=&Unfold all%%TAB%%Ctrl-Alt-U
+GUI_MENU_UNFOLDALL_TTP=Unfolds all lines
+GUI_MENU_VIEW=&View
 # Tools menu
 GUI_MENU_OPTIONS=&Options
 GUI_MENU_DEBUGGER=NumeRe &debugger%%TAB%%Ctrl-Shift-D
 GUI_MENU_DEBUGGER_TTP=Activates or deactivates the debugger
-GUI_MENU_AUTOINDENT=Adjust intendations%%TAB%%Ctrl-Shift-I
+GUI_MENU_AUTOINDENT=Adjust &intendations%%TAB%%Ctrl-Shift-I
 GUI_MENU_AUTOINDENT_TTP=Adjusts the indentation of the lines to the current block
-GUI_MENU_LINEWRAP=Automatic line wrap%%TAB%%Ctrl-Alt-W
-GUI_MENU_LINEWRAP_TTP=Wraps long lines at the screen border
-GUI_MENU_DISPCTRLCHARS=Show control characters
-GUI_MENU_DISPCTRLCHARS_TTP=Shows control characters such as tabulator and whitespaces
 GUI_MENU_EXECUTE=%%GUI_TB_RUN%%%%TAB%%F5
 GUI_MENU_EXECUTE_TTP=%%GUI_TB_RUN_TTP%%
-GUI_MENU_TOGGLE_CONSOLE=Show/hide the console%%TAB%%F2
+GUI_MENU_COMMENTLINE=(Un-)Comment &active Lines%%TAB%%Ctrl-Q
+GUI_MENU_COMMENTLINE_TTP=Comments or uncomments the active &line(s)
+GUI_MENU_COMMENTSELECTION=(Un-)Comment current s&election%%TAB%%Ctrl-Shift-Q
+GUI_MENU_COMMENTSELECTION_TTP=Comments or uncomments the current selection
 GUI_MENU_TOOLS=&Tools
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
@@ -1124,6 +1155,7 @@ GUI_EDITOR_CALLTIP_OPT_ERRORBARS=errorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_EVERY=every=FIRST,INCREMENT
 GUI_EDITOR_CALLTIP_OPT_EXPRVAR=exprvar
 GUI_EDITOR_CALLTIP_OPT_EXTENDEDFILEINFO=extendedfileinfo [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EXTERNALDOCWINDOW=externaldocwindow [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_FASTSTART=faststart [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_FCONT=fcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_FILE=file=FILENAME
@@ -1245,6 +1277,7 @@ GUI_EDITOR_CALLTIP_OPT_ORTHOPROJECT=orthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PL
 GUI_EDITOR_CALLTIP_OPT_OSVG=osvg=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OTEX=otex=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
 GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN
@@ -1351,6 +1384,36 @@ GUI_EDITOR_CALLTIP_OPT_ZLOG=zlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZSCALE=zscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZTICKLABELS=zticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZTICKS=zticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+# Constants tooltips
+GUI_EDITOR_CALLTIP_CONST_G=_g = 9.80665 [m/s^2]
+GUI_EDITOR_CALLTIP_CONST_C=_c = 299792458 [m/s]
+GUI_EDITOR_CALLTIP_CONST_ELEK_FELDKONST=_elek_feldkonst = 8.8541878e-12 [A s/(V m)]
+GUI_EDITOR_CALLTIP_CONST_N_AVOGADRO=_n_avogadro = 6.02214129e23 [1/mol]
+GUI_EDITOR_CALLTIP_CONST_K_BOLTZ=_k_boltz = 1.3806488e-23 [J/K]
+GUI_EDITOR_CALLTIP_CONST_ELEM_LADUNG=_elem_ladung = 1.602176565e-19 [A s]
+GUI_EDITOR_CALLTIP_CONST_H=_h = 6.62606957e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_HBAR=_hbar = 1.05457173e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_M_ELEKTRON=_m_elektron = 9.10938291e-31 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_PROTON=_m_proton = 1.67262178e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_NEUTRON=_m_neutron = 1.67492735e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_MUON=_m_muon = 1.88353148e-28 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_TAU=_m_tau = 3.16747e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_MAGN_FELDKONST=_magn_feldkonst = 1.25663706e-6 [V s/(A m)]
+GUI_EDITOR_CALLTIP_CONST_M_ERDE=_m_erde = 5.9726e24 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_SONNE=_m_sonne = 1.9885e30 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_ERDE=_r_erde = 6.378137e6 [m]
+GUI_EDITOR_CALLTIP_CONST_R_SONNE=_r_sonne = 6.9551e8 [m]
+GUI_EDITOR_CALLTIP_CONST_THETA_WEINBERG=_theta_weinberg = 0.490976214
+GUI_EDITOR_CALLTIP_CONST_2PI=_2pi = 6.28318531
+GUI_EDITOR_CALLTIP_CONST_PI=_pi = 3.14159265
+GUI_EDITOR_CALLTIP_CONST_R=_R = 8.3144622 [J/(mol K)]
+GUI_EDITOR_CALLTIP_CONST_ALPHA_FS=_alpha_fs = 7.29735257e-3
+GUI_EDITOR_CALLTIP_CONST_MU_BOHR=_mu_bohr = 9.27400968e-24 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_KERN=_mu_kern = 5.05078353e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_M_AMU=_m_amu = 1.66053892e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_BOHR=_r_bohr = 5.29177211e-11 [m]
+GUI_EDITOR_CALLTIP_CONST_GRAV=_G = 6.67384e-11 [m^3/(kg s^2)]
+GUI_EDITOR_CALLTIP_CONST_COUL_NORM=_coul_norm = 8.98755179e9 [V m/(A s)]
 # Editor pop-up menu
 GUI_MENU_EDITOR_CUT=Cut
 GUI_MENU_EDITOR_COPY=Copy

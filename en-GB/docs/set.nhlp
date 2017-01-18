@@ -31,6 +31,7 @@
 		<item node="-draftmode=VALUE">(De-)activates the draft mode for plots</item>
 		<item node="-editor=PATH">Set the path to the text editor</item>
 		<item node="-extendedfileinfo=VALUE">(De-)activates the display of extended file information</item>
+		<item node="-externaldocwindow=VALUE">(De-)activates the display of the NumeRe documentation in an external window</item>
 		<item node="-faststart=VALUE">(De-)activates a fast startup of NumeRe</item>
 		<item node="-greeting=VALUE">(De-)activates the greeting</item>
 		<item node="-hints=VALUE">(De-)activates the "Did-you-knows"</item>

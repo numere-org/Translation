@@ -158,6 +158,7 @@ BUILTIN_CHECKKEYWORD_GREETING=Begrüßung
 BUILTIN_CHECKKEYWORD_HINTS=Tipps und Tricks
 BUILTIN_CHECKKEYWORD_ESC_IN_SCRIPTS=ESC-Taste in Scripts
 BUILTIN_CHECKKEYWORD_CUSTOM_LANG=Benutzerdefinierte Sprache
+BUILTIN_CHECKKEYWORD_DOC_VIEWER=Dokumentation in externem Fenster
 BUILTIN_CHECKKEYWORD_DEFCONTROL=Automatische Definitionsverwaltung
 BUILTIN_CHECKKEYWORD_AUTOSAVE=Intervall für automatische Sicherung
 BUILTIN_CHECKKEYWORD_BUFFERSIZE=Puffergröße
@@ -216,6 +217,7 @@ BUILTIN_LISTOPT_24=Schneller Start:           %%1%%
 BUILTIN_LISTOPT_25=Standardschriftart:        "%%1%%"
 BUILTIN_LISTOPT_26=Tipps und Tricks:          %%1%%
 BUILTIN_LISTOPT_27=Zusätzliche Sprache:       %%1%%
+BUILTIN_LISTOPT_28=Dokumentation extern:      %%1%%
 BUILTIN_LISTOPT_FOOTNOTE=Alle Einstellungen können mit "set -OPTION" geändert werden. Weitere Informationen hierzu findest du unter "help set".
 BUILTIN_LISTOPT_NOVIEWER=Kein Viewer festgelegt
 # ===================================
@@ -298,7 +300,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)               VAL  
 PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                  VAL    - Airyfunktion Ai(x). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                VAL    - Arkussinus von x. Definiert im Bereich [-1,1] (Synonym: "arcsin(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)               VAL    - Areasinus Hyperbolicus von x. Definiert auf ganz R (Synonym: "arsinh(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)          VAL    - Gibt die ASCII-Zeichenwerte der Zeichen in STRING zurück
+PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)         {VAL}   - Gibt die ASCII-Zeichenwerte der Zeichen in STRING zurück
 PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                VAL    - Arkustangens von x. Definiert auf ganz R (Synonym: "arctan(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)               VAL    - Areatangens Hyperbolicus von x. Definiert im Bereich (-1,1) (Synonym: "artanh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_AVG_[NUM_STATS]=					avg(x,y,z,...)         VAL    - Mittelwert aus x,y,z,...
@@ -335,9 +337,9 @@ PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)               VAL    - Rund
 PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)               VAL    - Wert der Gamma-Funktion an der Stelle x. Definiert auf R \ {-n, 0}, wobei n eine natürliche Zahl ist
 PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,x1)           VAL    - Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind
 PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)               VAL    - Berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k
-PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STRING,T)  STR    - Gibt eine Liste aller Dateien, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück. STRING kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name inkl. Endung und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
-PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)   STR    - Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name des Ordners und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
-PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)   VAL    - Gibt die Indices eines in Form einer Zeichenkette übergebenen Datenobjektzugriffs in Form I1,I2,J1,J2 zurück. T ist ein optionaler Parameter und bestimmt, ob eine Matrix (T=0), Spalten- (T=1) oder Zeilenweise (T=2) gelesen werden soll. Mit T=-1 werden unmodifizerte Indices zurückgegeben: 0 für nicht-existente und -1 für offene Intervallgrenzen. Bsp.: getindices("data(5:,3)",-1) = 5,-1,3,0
+PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STR,T)    {STR}   - Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name inkl. Endung und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
+PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)  {STR}   - Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name des Ordners und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
+PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)  {VAL}   - Gibt die Indices eines in Form einer Zeichenkette übergebenen Datenobjektzugriffs in Form I1,I2,J1,J2 zurück. T ist ein optionaler Parameter und bestimmt, ob eine Matrix (T=0), Spalten- (T=1) oder Zeilenweise (T=2) gelesen werden soll. Mit T=-1 werden unmodifizerte Indices zurückgegeben: 0 für nicht-existente und -1 für offene Intervallgrenzen. Bsp.: getindices("data(5:,3)",-1) = 5,-1,3,0
 PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(STR) VAL    - Gibt die Position der passenden schließenden Klammer in STR zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen POS und der tatsächlichen Position des Werts werden ignoriert.
 PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside-(Theta)-Funktion. 0 für x < 0, 1 sonst. Definiert auf ganz R
@@ -387,7 +389,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                VAL
 PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                VAL    - Sinus Hyperbolicus von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)          VAL    - sphärische Neumannfunktion der Ordnung n. Definiert auf R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)             VEC    - Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.
-PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)     STR    - Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf
+PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)    {STR}    - Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf
 PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                VAL    - Wurzel aus x. Definiert im Bereich [0, inf)
 PARSERFUNCS_LISTFUNC_FUNC_STD_[NUM_STATS]=					std(x,y,z,...)         VAL    - Standardabweichung von x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(STR1,STR2,P)    VAL    - Gibt die Position des ersten Auftretens von STR1 in STR2 ab dem Zeichen P zurück. P ist ein optionaler Startwert für die erste Position und standardmäßig ist P = 1. Falls nichts gefunden wird, wird false zurückgegeben
@@ -414,7 +416,7 @@ PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Gi
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 # Ende Funktionentabelle
-PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben.
+PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Weiterführende Informationen zu den vordefinierten mathematischen Funktionen können in der NumeRe-Hilfe mittels "help func" erhalten werden.
 PARSERFUNCS_LISTDEFINE_HEADLINE=Eigene definierte Funktionen
 PARSERFUNCS_LISTDEFINE_EMPTY=Keine Funktionen definiert.
@@ -873,6 +875,19 @@ GUI_DLG_NEWNPRC_DFLT=neue_prozedur
 GUI_DLG_NEWPLUGIN=NumeRe: Neues Plugin
 GUI_DLG_NEWPLUGIN_QUESTION=Bitte das Plugin-Kommando eingeben:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
+GUI_DLG_GOTO=NumeRe: Gehe zu Zeile
+GUI_DLG_GOTO_QUESTION=Eine Zeilennummer eingeben: 1-%%1%%
+GUI_DLG_GOTO_ERROR=Diese Zeile existiert nicht.
+GUI_DLG_SESSION_ERROR=NumeRe: Sitzungswiederherstellung
+GUI_DLG_SESSION_RECREATIONERROR=NumeRe konnte die Datei(en)%%LINEBREAK%%%%1%%nicht wiederherstellen. Möglicherweise wurde(n) sie gelöscht.
+GUI_DLG_FILEMODIFIED=NumeRe: Aktualisieren
+GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%Diese Datei wurde außerhalb von NumeRe oder durch ein Script/eine Prozedur geändert. Soll sie neu geladen werden?%%LINEBREAK%%%%LINEBREAK%%(Deine Änderungen gehen dadurch verloren.)
+# Tips & Tricks dialog
+GUI_TIPOTD_HEAD=NumeRe: Tipps und Tricks
+GUI_TIPOTD_DYK=Schon gewusst ...?
+GUI_TIPOTD_NEXT=&Nächster Tipp
+GUI_TIPOTD_STAS=&Zeige Tipps beim Start
+GUI_TIPOTD_CLOSE=&Schließen
 # Search & replace dialogs
 GUI_SEARCH_END=Kein weiteres Auftreten von "%%1%%" in dieser Datei gefunden.
 GUI_SEARCH_END_HEAD=NumeRe: Suche abgeschlossen
@@ -882,14 +897,15 @@ GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
 GUI_OPTIONS_AUTOSAVE=Autosave-Intervall
 GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
-GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo (im "load -file" Dialog)
+GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo (im "list -files" Dialog)
 GUI_OPTIONS_ESCINSCRIPTS=ESC in Scripts
 GUI_OPTIONS_DEFCTRL=Funktionsdefinitionsverwaltung%%LINEBREAK%%(automatisches Laden und Speichern selbstdefinierter Funktionen)
 GUI_OPTIONS_COMPACTTABLES=Kompakte Tabellendarstellung
 GUI_OPTIONS_EMPTYCOLS=Laden leerer Spalten
 GUI_OPTIONS_LOGFILE=Protokollierung der Konsole
 GUI_OPTIONS_HINTS=Tipps und Tricks beim Start anzeigen
-GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)
+GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)%%LINEBREAK%%Siehe auch "help language"
+GUI_OPTIONS_EXTERNALDOCVIEWER=Hilfeartikel in einem externen Fenster anzeigen
 GUI_OPTIONS_CONFIG=Konfiguration
 GUI_OPTIONS_LOADPATH=Importordner | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Speicherordner | <savepath> =
@@ -902,6 +918,7 @@ GUI_OPTIONS_PRINT_BW=Schwarz/Weiß
 GUI_OPTIONS_PRINT_COLOR=Farbig
 GUI_OPTIONS_DEFAULTFONT=Standardschriftart für Plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Zeilennummern drucken
+GUI_OPTIONS_SAVE_SESSION=Sitzungswiederherstellung%%LINEBREAK%%(Nur gesicherte Änderungen können wiederhergestellt werden)
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
 GUI_OPTIONS_HISTORY_LINES=Puffergröße der NumeRe-Konsole
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
@@ -1005,19 +1022,33 @@ GUI_MENU_PASTE=Ein&fügen%%TAB%%Ctrl-V
 GUI_MENU_FIND=&Suchen%%TAB%%Ctrl-F
 GUI_MENU_REPLACE=Suchen und &Ersetzen%%TAB%%Ctrl-H
 GUI_MENU_EDIT=&Bearbeiten
+# View menu
+GUI_MENU_LINEWRAP=Automatischer &Zeilenumbruch%%TAB%%Ctrl-Alt-W
+GUI_MENU_LINEWRAP_TTP=Bricht lange Zeilen am Bildschirmrand in die nächste Zeile um
+GUI_MENU_DISPCTRLCHARS=Zeige &Steuerzeichen
+GUI_MENU_DISPCTRLCHARS_TTP=Zeigt Steuerzeichen wie Tabulator und Leerzeichen an
+GUI_MENU_TOGGLE_CONSOLE=Zeige/Verberge die &Konsole%%TAB%%F2
+GUI_MENU_GOTOLINE=&Gehe zu...%%TAB%%Ctrl-G
+GUI_MENU_GOTOLINE_TTP=Gehe zu einer Zeile in der aktiven Datei
+GUI_MENU_MULTIROW=&Mehrzeilige Dateireiter
+GUI_MENU_MULTIROW_TTP=Aktiviert oder deaktiviert mehrzeilige Dateireiter
+GUI_MENU_FOLDALL=Alles ein&falten%%TAB%%Ctrl-Alt-F
+GUI_MENU_FOLDALL_TTP=Falltet alle Zeilen ein
+GUI_MENU_UNFOLDALL=Alles a&usfalten%%TAB%%Ctrl-Alt-U
+GUI_MENU_UNFOLDALL_TTP=Entfaltet alle Zeilen
+GUI_MENU_VIEW=&Ansicht
 # Tools menu
 GUI_MENU_OPTIONS=&Optionen
 GUI_MENU_DEBUGGER=NumeRe-&Debugger%%TAB%%Ctrl-Shift-D
 GUI_MENU_DEBUGGER_TTP=Aktiviert oder deaktiviert den Debugger
-GUI_MENU_AUTOINDENT=Einzüge ausrichten%%TAB%%Ctrl-Shift-I
+GUI_MENU_AUTOINDENT=&Einzüge ausrichten%%TAB%%Ctrl-Shift-I
 GUI_MENU_AUTOINDENT_TTP=Passt den Einzug der Zeilen dem aktuellen Block an
-GUI_MENU_LINEWRAP=Automatischer Zeilenumbruch%%TAB%%Ctrl-Alt-W
-GUI_MENU_LINEWRAP_TTP=Bricht lange Zeilen am Bildschirmrand in die nächste Zeile um
-GUI_MENU_DISPCTRLCHARS=Zeige Steuerzeichen
-GUI_MENU_DISPCTRLCHARS_TTP=Zeigt Steuerzeichen wie Tabulator und Leerzeichen an
 GUI_MENU_EXECUTE=%%GUI_TB_RUN%%%%TAB%%F5
 GUI_MENU_EXECUTE_TTP=%%GUI_TB_RUN_TTP%%
-GUI_MENU_TOGGLE_CONSOLE=Zeige/Verberge die Konsole%%TAB%%F2
+GUI_MENU_COMMENTLINE=(De-)&Kommentiere aktive Zeilen%%TAB%%Ctrl-Q
+GUI_MENU_COMMENTLINE_TTP=Kommentiert oder dekommentiert die aktive(n) Zeile(n)
+GUI_MENU_COMMENTSELECTION=(De-)Kommentiere die aktuelle &Auswahl%%TAB%%Ctrl-Shift-Q
+GUI_MENU_COMMENTSELECTION_TTP=Kommentiert oder dekommentiert die aktive Auswahl
 GUI_MENU_TOOLS=&Werkzeuge
 # Help menu
 GUI_MENU_SHOWHELP=&Hilfethemen%%TAB%%F1
@@ -1124,6 +1155,7 @@ GUI_EDITOR_CALLTIP_OPT_ERRORBARS=errorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_EVERY=every=FIRST,INCREMENT
 GUI_EDITOR_CALLTIP_OPT_EXPRVAR=exprvar
 GUI_EDITOR_CALLTIP_OPT_EXTENDEDFILEINFO=extendedfileinfo [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EXTERNALDOCWINDOW=externaldocwindow [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_FASTSTART=faststart [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_FCONT=fcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_FILE=file=FILENAME
@@ -1245,6 +1277,7 @@ GUI_EDITOR_CALLTIP_OPT_ORTHOPROJECT=orthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PL
 GUI_EDITOR_CALLTIP_OPT_OSVG=osvg=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OTEX=otex=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
 GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN
@@ -1351,6 +1384,36 @@ GUI_EDITOR_CALLTIP_OPT_ZLOG=zlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZSCALE=zscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZTICKLABELS=zticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZTICKS=zticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+# Constants tooltips
+GUI_EDITOR_CALLTIP_CONST_G=_g = 9.80665 [m/s^2]
+GUI_EDITOR_CALLTIP_CONST_C=_c = 299792458 [m/s]
+GUI_EDITOR_CALLTIP_CONST_ELEK_FELDKONST=_elek_feldkonst = 8.8541878e-12 [A s/(V m)]
+GUI_EDITOR_CALLTIP_CONST_N_AVOGADRO=_n_avogadro = 6.02214129e23 [1/mol]
+GUI_EDITOR_CALLTIP_CONST_K_BOLTZ=_k_boltz = 1.3806488e-23 [J/K]
+GUI_EDITOR_CALLTIP_CONST_ELEM_LADUNG=_elem_ladung = 1.602176565e-19 [A s]
+GUI_EDITOR_CALLTIP_CONST_H=_h = 6.62606957e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_HBAR=_hbar = 1.05457173e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_M_ELEKTRON=_m_elektron = 9.10938291e-31 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_PROTON=_m_proton = 1.67262178e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_NEUTRON=_m_neutron = 1.67492735e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_MUON=_m_muon = 1.88353148e-28 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_TAU=_m_tau = 3.16747e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_MAGN_FELDKONST=_magn_feldkonst = 1.25663706e-6 [V s/(A m)]
+GUI_EDITOR_CALLTIP_CONST_M_ERDE=_m_erde = 5.9726e24 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_SONNE=_m_sonne = 1.9885e30 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_ERDE=_r_erde = 6.378137e6 [m]
+GUI_EDITOR_CALLTIP_CONST_R_SONNE=_r_sonne = 6.9551e8 [m]
+GUI_EDITOR_CALLTIP_CONST_THETA_WEINBERG=_theta_weinberg = 0.490976214
+GUI_EDITOR_CALLTIP_CONST_2PI=_2pi = 6.28318531
+GUI_EDITOR_CALLTIP_CONST_PI=_pi = 3.14159265
+GUI_EDITOR_CALLTIP_CONST_R=_R = 8.3144622 [J/(mol K)]
+GUI_EDITOR_CALLTIP_CONST_ALPHA_FS=_alpha_fs = 7.29735257e-3
+GUI_EDITOR_CALLTIP_CONST_MU_BOHR=_mu_bohr = 9.27400968e-24 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_KERN=_mu_kern = 5.05078353e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_M_AMU=_m_amu = 1.66053892e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_BOHR=_r_bohr = 5.29177211e-11 [m]
+GUI_EDITOR_CALLTIP_CONST_GRAV=_G = 6.67384e-11 [m^3/(kg s^2)]
+GUI_EDITOR_CALLTIP_CONST_COUL_NORM=_coul_norm = 8.98755179e9 [V m/(A s)]
 # Editor pop-up menu
 GUI_MENU_EDITOR_CUT=Ausschneiden
 GUI_MENU_EDITOR_COPY=Kopieren
