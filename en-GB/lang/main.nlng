@@ -217,7 +217,7 @@ BUILTIN_LISTOPT_24=Fast start:                %%1%%
 BUILTIN_LISTOPT_25=Default plot font:         "%%1%%"
 BUILTIN_LISTOPT_26=Tips and tricks:           %%1%%
 BUILTIN_LISTOPT_27=Custom language:           %%1%%
-BUILTIN_LISTOPT_28=Documentation external:    %%1%%
+BUILTIN_LISTOPT_28=External windows:          %%1%%
 BUILTIN_LISTOPT_FOOTNOTE=All settings can be changed with the use of "set -OPTION". You may find further information at "help set".
 BUILTIN_LISTOPT_NOVIEWER=No viewer declared
 # ===================================
@@ -857,8 +857,20 @@ DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the 
 GUI_DLG_OPTIONS=NumeRe: Options
 GUI_DLG_OPEN=NumeRe: Open file
 GUI_DLG_SAVEAS=NumeRe: Save file as
-GUI_DLG_FIND=NumeRe: Find
-GUI_DLG_REPLACE=NumeRe: Find and replace
+GUI_DLG_FIND=Find
+GUI_DLG_REPLACE=Find and replace
+GUI_DLG_FNDRPLC_SEARCHFOR=Search for:
+GUI_DLG_FNDRPLC_REPLACEWITH=Replace with:
+GUI_DLG_FNDRPLC_MATCHCASE=Match case
+GUI_DLG_FNDRPLC_WHOLEWORD=Whole word
+GUI_DLG_FNDRPLC_WRAPAROUND=Wrap around search
+GUI_DLG_FNDRPLC_DIRECTION=Search direction
+GUI_DLG_FNDRPLC_DIR_UP=Up
+GUI_DLG_FNDRPLC_DIR_DOWN=Down
+GUI_DLG_FNDRPLC_BTN_FIND=&Find
+GUI_DLG_FNDRPLC_BTN_REPLACE=&Replace
+GUI_DLG_FNDRPLC_BTN_REPLACEALL=Replace &all
+GUI_DLG_FNDRPLC_BTN_CANCEL=&Cancel
 GUI_DLG_DELETE=NumeRe: Remove
 GUI_DLG_DELETE_QUESTION=The file "%%1%%" will be removed. Are you sure?
 GUI_DLG_COPY=NumeRe: Copy
@@ -905,13 +917,15 @@ GUI_OPTIONS_EMPTYCOLS=Loading of empty cols
 GUI_OPTIONS_LOGFILE=Logging of console input
 GUI_OPTIONS_HINTS=Show the "Tip of the day" at start-up
 GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)%%LINEBREAK%%See also "help language"
-GUI_OPTIONS_EXTERNALDOCVIEWER=Show documentation articles in an external window
+GUI_OPTIONS_EXTERNALVIEWER=Use external windows for "show" and "help"
 GUI_OPTIONS_CONFIG=Configuration
 GUI_OPTIONS_LOADPATH=Loading path | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Saving path | <savepath> =
 GUI_OPTIONS_SCRIPTPATH=Script path | <scriptpath> =
 GUI_OPTIONS_PROCPATH=Procedure path | <procpath> =
 GUI_OPTIONS_PLOTPATH=Plot output path | <plotpath> =
+GUI_OPTIONS_CHOOSE=Choose
+GUI_OPTIONS_CHOOSEPATH=NumeRe: Choose a path
 GUI_OPTIONS_PATHS=Directories
 GUI_OPTIONS_PRINT=Print text in:
 GUI_OPTIONS_PRINT_BW=Black/White
@@ -955,8 +969,11 @@ GUI_FILTER_PROCEDURES=NumeRe procedures
 GUI_FILTER_NUMEREFILES=NumeRe files
 GUI_FILTER_ALLFILES=All files
 GUI_FILTER_EXECUTABLES=Executable foles
-GUI_FILTER_DATAFILES=Data sets
+#GUI_FILTER_DATAFILES=Data sets
+GUI_FILTER_DATAFILES=%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv|%%COMMON_FILETYPE_JDX%% (*.jdx, *.dx, *.jcm)|*.jdx;*.dx;*.jcm
 GUI_FILTER_IMAGEFILES=Image files
+GUI_FILTER_TEXSOURCE=TeX-Source
+GUI_FILTER_NONSOURCE=%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_LOG%% (*.log)|*.log|%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv
 
 GUI_NEWFILE_UNTITLED=<Unnamed>
 GUI_SAVE_QUESTION=NumeRe: Save?
@@ -1021,6 +1038,10 @@ GUI_MENU_COPY=&Copy%%TAB%%Ctrl-C
 GUI_MENU_PASTE=&Insert%%TAB%%Ctrl-V
 GUI_MENU_FIND=&Find%%TAB%%Ctrl-F
 GUI_MENU_REPLACE=Find and &replace%%TAB%%Ctrl-H
+GUI_MENU_SELECT_UP=Move line(s) up%%TAB%%Alt-Up
+GUI_MENU_SELECT_UP_TTP=Moves the selected line(s) one line upwards
+GUI_MENU_SELECT_DOWN=Move line(s) down%%TAB%%Alt-Down
+GUI_MENU_SELECT_DOWN_TTP=Moves the selected line(s) one line downwards
 GUI_MENU_EDIT=&Edit
 # View menu
 GUI_MENU_LINEWRAP=Automatic line &wrap%%TAB%%Ctrl-Alt-W
@@ -1028,6 +1049,7 @@ GUI_MENU_LINEWRAP_TTP=Wraps long lines at the screen border
 GUI_MENU_DISPCTRLCHARS=&Show control characters
 GUI_MENU_DISPCTRLCHARS_TTP=Shows control characters such as tabulator and whitespaces
 GUI_MENU_TOGGLE_CONSOLE=Show/hide the &console%%TAB%%F2
+GUI_MENU_TOGGLE_FILETREE=Show/hide the file &browser%%TAB%%F3
 GUI_MENU_GOTOLINE=&Goto ...%%TAB%%Ctrl-G
 GUI_MENU_GOTOLINE_TTP=Goto a line in the active file
 GUI_MENU_MULTIROW=&Multirow tabs
@@ -1036,6 +1058,8 @@ GUI_MENU_FOLDALL=&Fold all%%TAB%%Ctrl-Alt-F
 GUI_MENU_FOLDALL_TTP=Folds all lines
 GUI_MENU_UNFOLDALL=&Unfold all%%TAB%%Ctrl-Alt-U
 GUI_MENU_UNFOLDALL_TTP=Unfolds all lines
+GUI_MENU_USETXTADV=Markup text using "#", "*", "-" and "_"
+GUI_MENU_USETXTADV_TTP=Use markup highlighting for text-only files using "#", "*", "-" and "_"
 GUI_MENU_VIEW=&View
 # Tools menu
 GUI_MENU_OPTIONS=&Options
@@ -1049,6 +1073,17 @@ GUI_MENU_COMMENTLINE=(Un-)Comment &active Lines%%TAB%%Ctrl-Q
 GUI_MENU_COMMENTLINE_TTP=Comments or uncomments the active &line(s)
 GUI_MENU_COMMENTSELECTION=(Un-)Comment current s&election%%TAB%%Ctrl-Shift-Q
 GUI_MENU_COMMENTSELECTION_TTP=Comments or uncomments the current selection
+GUI_MENU_STRIP=Remove whitespace characters ...
+GUI_MENU_STRIP_BOTH=Leading and trailing
+GUI_MENU_STRIP_BOTH_TTP=Removes leading and trailing whitespaces/tabulators in the current line(s)
+GUI_MENU_STRIP_FRONT=Only leading
+GUI_MENU_STRIP_FRONT_TTP=Removes only leading whitespaces/tabulators in the current line(s)
+GUI_MENU_STRIP_BACK=Only trailing
+GUI_MENU_STRIP_BACK_TTP=Removes only trailing whitespaces/tabulators in the current line(s)
+GUI_MENU_SORT_ASC=Sort lines ascending
+GUI_MENU_SORT_ASC_TTP=Sorts the current lines in ascending order
+GUI_MENU_SORT_DESC=Sort lines descending
+GUI_MENU_SORT_DESC_TTP=Sorts the current lines in descending order
 GUI_MENU_TOOLS=&Tools
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
@@ -1423,6 +1458,8 @@ GUI_MENU_EDITOR_REMOVEBP=Remove breakpoint
 GUI_MENU_EDITOR_CLEARBP=Remove all breakpoints
 GUI_MENU_EDITOR_HIGHLIGHT=Highlight '%%1%%' permanently
 GUI_MENU_EDITOR_FINDPROC=Find the definition of: '%%1%%'
+GUI_MENU_EDITOR_UPPERCASE=Convert to UPPERCASE
+GUI_MENU_EDITOR_LOWERCASE=Convert to lowercase
 # Toolbar strings
 GUI_TB_NEW=New
 GUI_TB_NEW_TTP=New file
