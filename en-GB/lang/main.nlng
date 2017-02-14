@@ -243,6 +243,7 @@ BUILTIN_NEW_PROCCREATED=The procedure "%%1%%" was created successfully.
 BUILTIN_NEW_PLUGINCREATED=A template for the plugin "%%1%%" was successfully created in "%%2%%".
 BUILTIN_NEW_CACHES=%%1%% was/were successfully created as cache(s).
 BUILTIN_NEW_FREE_CACHES=%%1%% was/were successfully created as free cache(s).
+BUILTIN_WAITINGFOREDIT=Waiting for edit
 # PARSER:
 #=====================================
 PARSER_FIRSTSTART_INTRO=This is enough information, which you'll need for the first time. Now it's your turn, to get a look into everything. Don't hesitate and try a commando or an expression for yourself!$If there's something going wrong: you'll find help at "help TOPIC" or "find TERMS". And if I don't understand at all, what you want me to do, then I will try to find the matching article in the documentation by myself ...$(Type "quit" to close me)
@@ -900,6 +901,8 @@ GUI_TIPOTD_DYK=Did you know ...?
 GUI_TIPOTD_NEXT=&Next tip
 GUI_TIPOTD_STAS=&Show tips at start up
 GUI_TIPOTD_CLOSE=&Close
+# Tableeditor
+GUI_TABLEEDITOR=NumeRe-TableEditor:
 # Search & replace dialogs
 GUI_SEARCH_END=No further occurence of "%%1%%" was found in this file.
 GUI_SEARCH_END_HEAD=NumeRe: Searching finished
@@ -1483,3 +1486,12 @@ GUI_PRINT_ERROR_HEAD=NumeRe: Printing failed
 GUI_PREVIEW_ERROR=A problem was detected during creation of the preview.%%LINEBREAK%%Please check the printer settings and try again.
 GUI_PREVIEW_ERROR_HEAD=NumeRe: Preview failed
 GUI_PREVIEW_HEAD=NumeRe: Printing preview
+# Table viewer pop-up menu
+GUI_INSERT_TABLE_ROW=Insert row
+GUI_INSERT_TABLE_COL=Insert col
+GUI_INSERT_TABLE_CELL=Insert cell
+GUI_REMOVE_TABLE_ROW=Remove row
+GUI_REMOVE_TABLE_COL=Remove col
+GUI_REMOVE_TABLE_CELL=Remove cell
+GUI_COPY_TABLE_CONTENTS=Copy
+GUI_PASTE_TABLE_CONTENTS=Paste
