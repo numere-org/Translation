@@ -18,7 +18,7 @@
 
 <article id="edit">
 	<title string="Bearbeiten und Öffnen von Dateien und Ordnern" />
-	NumeRe kann mittels des Kommandos <code>edit</code> die meisten Dateien und Ordner, die von NumeRe selbst verwendet werden, in einem externen Programm öffnen. Dazu kann NumeRe mit einem Bildbetrachter ("Imageviewer") und einem Texteditor (hier ist standardmäßig "notepad.exe" vorgegeben) verknüpft werden, die hierfür verwendet werden. Ordner werden im Windows Explorer geöffnet.
+	NumeRe kann mittels des Kommandos <code>edit</code> die meisten Dateien und Ordner, die von NumeRe selbst verwendet werden, entweder im Editor, im Viewer oder in einem externen Programm öffnen. Dazu kann NumeRe mit einem Bildbetrachter ("Imageviewer") verknüpft werden, der hierfür verwendet werden kann, wenn der Dateityp nicht von NumeRe selbst unterstützt wird. Ordner werden im Windows Explorer geöffnet.
 	Hiervon ausgenommen sind NumeRes Systemdateien (Konfiguration, Funktionendefinition, EXE-Datei, DLLs, NumeRe-Cache) und die Dateien im NumeRe-Datenfile- oder IGOR Binärwellenformat, da letztere binäre Formate sind, die nur von NumeRe (bzw. IGOR Pro) gelesen werden können.
 	<code>edit</code> kann auch verwendet werden, um den Inhalte eines Caches zu bearbeiten. Dazu muss<codeblock>edit CACHE()</codeblock>in die Konsole eingeben werden. NumeRe wird auf die Bearbeitung des Benutzers warten. Es ist nicht möglich, weitere Berechnungen durchzuführen, während eine Tabelle im Tabelleneditor bearbeitet wird.
 	Die Kommandos <code>view</code> und <code>open</code> sind Synonyme zu diesem Kommando.

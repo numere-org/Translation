@@ -18,7 +18,7 @@
 
 <article id="edit">
 	<title string="Editing and opening of files and folders" />
-	Using the command <code>edit</code> NumeRe may open most of the files and folders, which are used by NumeRe itself in an external program. To achieve this, NumeRe may be linked to an image viewer and to a text editor (the default is "notepad.exe"), which will be used for opening. Folders will be opened using the Windows Explorer.
+	Using the command <code>edit</code> NumeRe may open most of the files and folders, which are used by NumeRe itself in the editor, the viewer or an external program. To achieve this, NumeRe may be linked to an image viewer, which will be used for opening. Folders will be opened using the Windows Explorer.
 	Exceptions are the system files of NumeRe (configuration, function definitions, EXE file, DLLs, NumeRe cache) and the files in the NumeRe data file or IGOR binary waves format, because the latter are binary formats which can only be read by NumeRe (or IGOR Pro, respectively).
 	<code>edit</code> may be used to edit the contents of a cache. To calll the corresponding editor, enter<codeblock>edit CACHE()</codeblock>into the console. NumeRe will wait for the edit of the user. It is not possible to carry out further calculations while the user is editing a cache in the table editor.
 	The commands <code>view</code> and <code>open</code> are synonyms to this command.

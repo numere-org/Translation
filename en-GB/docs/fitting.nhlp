@@ -48,13 +48,13 @@
 
 <article id="fitting_chimap">
 	<title string="chi^2 convergence data sets" />
-	A function, which supports model examinations quite well, is the so-called "<expr>chi^2</expr> convergence data set" or "<expr>chi^2</code> map". This data sets protocoles the <expr>chi^2</expr> values, which were obtained, if one or two parameters were predefined varied and the remaining ones were fitted to the original data set. Depending on the form of one or more obtained minima, you may evaluate the convergence of the actual model for this data set. To create this data set, you've to pass the option <code>chimap=DATAGRID()</code>, where the predefined variation of the parameters must be passed by the <code>DATAGRID()</code>: 
+	A function, which supports model examinations quite well, is the so-called "<expr>chi^2</expr> convergence data set" or "<expr>chi^2</expr> map". This data sets protocoles the <expr>chi^2</expr> values, which were obtained, if one or two parameters were predefined varied and the remaining ones were fitted to the original data set. Depending on the form of one or more obtained minima, you may evaluate the convergence of the actual model for this data set. To create this data set, you've to pass the option <code>chimap=DATAGRID()</code>, where the predefined variation of the parameters must be passed by the <code>DATAGRID()</code>: 
 	<list>
 		<item node="Column header">The header of the first column(s) have to match to the parameter names, which shall be varied. If only the first column matches, then only this parameter will be varied and a 1D data set will be created. If both matches, NumeRe will create a 2D data set going on from column 3, which is a data grid. Please note that the columns may not be called "x" or "y".</item>
 		<item node="Variation values">The variation values must be located in the first columns, which are matching to the parameter names. Depending on the length of these columns the creation of the <expr>chi^2</expr> map may take <em>a lot of</em> time.</item>
 	</list>
 	<em>Note:</em> The fitted parameters will be resetted at each point as well as at the end of the calculation to their starting value. 
-	<em>Important:</em> Out of <expr>n</expr> parameters only <expr>n-1</expr> parameters may be varied. Therefore this data set cannot be obtained by a single parameter model. For a two parameter model only a 1D <ecpr>chi^2</expr> map can be determined as well.
+	<em>Important:</em> Out of <expr>n</expr> parameters only <expr>n-1</expr> parameters may be varied. Therefore this data set cannot be obtained by a single parameter model. For a two parameter model only a 1D <expr>chi^2</expr> map can be determined as well.
 </article>
 
 <article id="fitting_restrictions">
