@@ -415,6 +415,7 @@ PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)         MAT    - T
 PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)        STR    - Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen
 PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Gibt die Versionsnummer von NumeRe als natürliche Zahl zurück: v1.0.8 wird als 108 zurückgegeben
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)         VAL    - Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho >= 0 unter dem Winkel phi im Intervall [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt.

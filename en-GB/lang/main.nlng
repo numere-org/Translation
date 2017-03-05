@@ -415,6 +415,7 @@ PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)         MAT    - T
 PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)        VAL    - Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters
 PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Returns the version number of NumeRe as an integral number: v1.0.8 will be returned as 108
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)         VAL    - Value of the Zernike polynomials of the order n >= 0 with m = [-n,n] at the position rho >= 0 at the angle phi in the interval [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Creates a n x m matrix, which is filled with zeroes. If only one argument was passend, then a square matrix will be created.
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values.
