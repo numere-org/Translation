@@ -899,6 +899,8 @@ GUI_DLG_SESSION_ERROR=NumeRe: Session recovery
 GUI_DLG_SESSION_RECREATIONERROR=NumeRe could not recreate the file(s):%%LINEBREAK%%%%1%%It/they was/were probably deleted.
 GUI_DLG_FILEMODIFIED=NumeRe: Reload
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%This file was modified externally or through a script or a procedure. Shall NumeRe reload this file?%%LINEBREAK%%%%LINEBREAK%%(Your changes will get lost.)
+GUI_DLG_PROC_NEXISTS_CREATE=It seems that the procedure %%1%%() doesn't exist. Shall it be created?
+GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Procedure doesn't exist
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
 GUI_TIPOTD_DYK=Did you know ...?

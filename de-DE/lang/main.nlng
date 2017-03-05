@@ -899,6 +899,8 @@ GUI_DLG_SESSION_ERROR=NumeRe: Sitzungswiederherstellung
 GUI_DLG_SESSION_RECREATIONERROR=NumeRe konnte die Datei(en)%%LINEBREAK%%%%1%%nicht wiederherstellen. Möglicherweise wurde(n) sie gelöscht.
 GUI_DLG_FILEMODIFIED=NumeRe: Aktualisieren
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%Diese Datei wurde außerhalb von NumeRe oder durch ein Script/eine Prozedur geändert. Soll sie neu geladen werden?%%LINEBREAK%%%%LINEBREAK%%(Deine Änderungen gehen dadurch verloren.)
+GUI_DLG_PROC_NEXISTS_CREATE=Die Prozedur %%1%%() scheint nicht zu existieren. Soll sie neu erzeugt werden?
+GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Prozedur existiert nicht
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tipps und Tricks
 GUI_TIPOTD_DYK=Schon gewusst ...?
