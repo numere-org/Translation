@@ -915,7 +915,7 @@ GUI_SEARCH_END_HEAD=NumeRe: Searching finished
 GUI_REPLACE_END=%%1%% occurences of%%LINEBREAK%%"%%2%%" were replaced with "%%3%%".
 GUI_REPLACE_END_HEAD=NumeRe: Replacing finished
 # Options dialog
-GUI_OPTIONS_AUTOSAVE=Autosave interval
+GUI_OPTIONS_AUTOSAVE=Autosave interval [sec]
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Extended file information (in the "list -files" dialog)
