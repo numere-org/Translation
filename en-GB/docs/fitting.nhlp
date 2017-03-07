@@ -35,6 +35,7 @@
 		<item node="-restrict=[RESTRICT]">Declares restrictions RESTRICT for the parameter PAR. These have to be passed as one or more logical expressions for the parameters. Further details can be found at "help restrict"</item>
 		<item node="-saverr">Saves the calculated deviations to new variables</item>
 		<item node="-mask">Suppresses the display of the fit results and the truncating of the log file. However, the results of the fit procedures will be saved to the log file</item>
+		<item node="-export=[FILENAME]">This enables the export of the returned table into a TeX file. The filename may be specified via FILENAME, otherwise the export is directed to <code>&lt;savepath&gt;/fit.tex</code>. This export is not influenced by <code>mask</code></item>
 		<item node="-x=XMIN:XMAX">Restricts the <expr>x</expr> interval to [XMIN,XMAX]</item>
 		<item node="-y=YMIN:YMAX">Restricts the <expr>y</expr> interval for the 2D fit algorithm to [YMIN,YMAX]</item>
 		<item node="-tol=TOLERANCE">Determines the (relative and absolute) tolerance, which defines the border, from where the current parameter set will be interpreted as converging. The default value is 1e-4</item>

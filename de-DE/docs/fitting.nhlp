@@ -35,6 +35,7 @@
 		<item node="-restrict=[RESTRICT]">Deklariert Einschränkungen RESTRICT für die Parameter PAR. Diese müssen in Form eines oder mehrer logischer Ausdrücke für die Parameter angegeben werden. Details finden sich unter "help restrict"</item>
 		<item node="-saverr">Speichert die berechneten Fehlerwerte in neuen Variablen ab</item>
 		<item node="-mask">Unterdrückt die Ausgabe der Ergebniswerte und das Kürzen der Protokolldatei. Die Ergebnisse werden dennoch darin hinterlegt</item>
+		<item node="-export=[FILENAME]">Erlaubt den Export der zurückgegebenen Tabelle in eine TeX-Datei. Der Dateiname kann mittels FILENAME angegeben werden, anderenfalls wird der Export in <code>&lt;savepath&gt;/fit.tex</code> angelegt. Diese Ausgabe wird nicht von <code>mask</code> beeinflusst</item>
 		<item node="-x=XMIN:XMAX">Schränkt das <expr>x</expr>-Intervall für den Fitalgorithmus auf [XMIN,XMAX] ein</item>
 		<item node="-y=YMIN:YMAX">Schränkt das <expr>y</expr>-Intervall für den 2D-Fitalgorithmus auf [YMIN,YMAX] ein</item>
 		<item node="-tol=TOLERANCE">Bestimmt die (relative und absolute) Toleranz, ab der ein Parametersatz als konvergent betrachtet wird. Standardmäßig ist dies 1e-4</item>
