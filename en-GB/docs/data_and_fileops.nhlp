@@ -42,5 +42,5 @@
 		move &lt;&gt;/samples/data.dat -target=&lt;loadpath&gt;/
 		The file "&EXEPATH&/samples/data.dat" was moved successfully.
 	</example>
-	SEE ALSO: "help data", "help cache", "help new", "help string" and "help explorer"
+	<em>See also:</em> "help data", "help cache", "help new", "help string" and "help explorer"
 </article>

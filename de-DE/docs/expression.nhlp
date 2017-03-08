@@ -32,5 +32,5 @@
 		Satz = "Hallo Welt"
 		"Hallo Welt"
 	</example>
-	SIEHE AUCH: "help cache", "help string", "help list", "help var" und "help func"
+	<em>Siehe auch:</em> "help cache", "help string", "help list", "help var" und "help func"
 </article>

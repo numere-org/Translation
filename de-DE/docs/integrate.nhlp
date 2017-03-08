@@ -41,5 +41,5 @@
 		|INTEGRATE&gt; Werte aus ... 100 %: Erfolg!
 		|-&gt; ans = 3.141593
 	</example>
-	<em>Tipp</em>: In den meisten Fällen genügt eine numerische Auflösung von 1e-3 für ein brauchbares Ergebnis oder eine erste Abschätzung. Eine höhere Auflösung sollte nur gewählt werden, wenn das Integral wider Erwarten verschwindet oder die zusätzlichen Nachkommastellen wirklich von Belang sind.
+	<em>Tipp:</em> In den meisten Fällen genügt eine numerische Auflösung von 1e-3 für ein brauchbares Ergebnis oder eine erste Abschätzung. Eine höhere Auflösung sollte nur gewählt werden, wenn das Integral wider Erwarten verschwindet oder die zusätzlichen Nachkommastellen wirklich von Belang sind.
 </article>

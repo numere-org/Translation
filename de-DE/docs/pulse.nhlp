@@ -32,5 +32,5 @@
 	<example desc="Bestimmung der Puls-Eigenschaften der Daten im Cache und Zuweisen der Ergebnisse an eine temporäre Spalte:">
 		{maxAmpl, x0, fwhm, width, energy} = pulse cache(:,1:2)
 	</example>
-	TIPP: Die Puls-Analyse kann auch für die Analyse von statistischen Verteilungen verwendet werden.
+	<em>Tipp:</em> Die Puls-Analyse kann auch für die Analyse von statistischen Verteilungen verwendet werden.
 </article>

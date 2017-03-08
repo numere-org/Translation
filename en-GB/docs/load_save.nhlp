@@ -36,5 +36,5 @@
 		export cache(:,1:2) -file=cache.tex
 		A table with 2088 elements was successfully written to the file "&SAVEPATH&/cache.tex".
 	</example>
-	SEE ALSO: "help data", "help cache" and "help explorer"
+	<em>See also:</em> "help data", "help cache" and "help explorer"
 </article>

@@ -22,7 +22,7 @@
 	Wird keine Variable angegeben, wird der Ausdruck als Konstant angenommen und entsprechend der Zahl der Samples wiederholt zurückgegeben.
 	Wenn die Zahl der Stützstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable VAR als Ausdruck.
 	Um eine logarithmische Verteilung der Stützstellen zu bekommen, kann der Parameter <code>-logscale</code> verwendet werden.
-	<example desc="Berechnen von 200 Stützstellen eines <expr>sin(x)</expr> von 0 bis 2PI und speichern dieser Stützstellen in den Cache:">
+	<example desc="Berechnen von 200 Stützstellen eines <expr>sin(x)</expr> von 0 bis <expr>2PI</expr> und Speichern dieser Stützstellen in den Cache:">
 		cache(:,1) = eval sin(x) -set x=0:_2pi samples=200
 	</example>
 </article>

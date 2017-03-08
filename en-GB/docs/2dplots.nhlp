@@ -53,5 +53,5 @@
 		|-&gt; Saving ... Success.
 		|   Saved at "&PLOTPATH&/gauss.png"
 	</example>
-	SEE ALSO: "help plot", "help grad" and "help datagrid"
+	<em>See also:</em> "help plot", "help grad" and "help datagrid"
 </article>

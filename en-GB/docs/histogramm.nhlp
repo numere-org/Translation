@@ -43,5 +43,5 @@
 	<example desc="Histogram of the columns 1-3 of a data file using 128 bins each and exporting the results to 'hist.dat':">
 		hist data(:,1:3) -set bins=128 export=hist
 	</example>
-	SEE ALSO: "help plotoptions"
+	<em>See also:</em> "help plotoptions"
 </article>

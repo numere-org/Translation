@@ -40,5 +40,5 @@
 		|FOR&gt; i
 		|FOR&gt; endfor -sv
 	</example>
-	SEE ALSO: "help if", "help while", "help data", "help cache" and "help string"
+	<em>See also:</em> "help if", "help while", "help data", "help cache" and "help string"
 </article>

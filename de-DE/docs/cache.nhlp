@@ -43,5 +43,5 @@
 		[...]
 		cache -sort cols=1[3:6]
 	</example>
-	SIEHE AUCH: "help new", "help remove", "help datagrid", "help save", "help string" und "help delete"
+	<em>Siehe auch:</em> "help new", "help remove", "help datagrid", "help save", "help string" und "help delete"
 </article>

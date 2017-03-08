@@ -47,5 +47,5 @@
 		The data of "samples/data.dat" was successfully loaded to memory: the data set contains 25 line(s) and 4 column(s).
 		data(:,2)
 	</example>
-	SEE ALSO: "help load", "help save", "help string", "help datagrid" and "help explorer"
+	<em>See also:</em> "help load", "help save", "help string", "help datagrid" and "help explorer"
 </article>

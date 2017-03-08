@@ -35,5 +35,5 @@
 		|WHL&gt; data -load=??
 		|WHL&gt; endwhile
 	</example>
-	SEE ALSO: "help if", "help for", "help data", "help cache" and "list -logic"
+	<em>See also:</em> "help if", "help for", "help data", "help cache" and "list -logic"
 </article>

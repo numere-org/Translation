@@ -25,6 +25,6 @@
 		set -viewer="C:/Program Files/IrfanView/i_view32.exe"
 		Image viewer was set successfully.
 	</example>
-	NOTE: User of 64 bit systems have to replace "Program Files" with "Program Files (x86)".
-	SEE ALSO: "help new" and "help edit"
+	<em>Note:</em> User of 64 bit systems have to replace "Program Files" with "Program Files (x86)".
+	<em>See also:</em> "help new" and "help edit"
 </article>

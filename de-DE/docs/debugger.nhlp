@@ -26,5 +26,5 @@
 		<item node="lokale Variablen">Dieser Abschnitt liefert die aktuellen lokalen Variablen (numerische und Zeichenketten) zusammen mit ihren Werten, die zum Zeitpunkt des Fehlers definiert waren.</item>
 	</list>
 	Zusätzlich zum Abbruch aufgrund eines Fehlers können auch sogenannte "Breakpoints" gesetzt werden, die die Auswertung unter- aber nicht abbrechen. Ein solcher Breakpoint wird entweder temporär durch die entsprechende Funktion im Editor oder dauerhaft durch die Zeichen <code>|&gt;</code> am Anfang einer Zeile gesetzt. NumeRe wird die Auswertung unterbrechen, <em>bevor</em> die aktuelle Zeile ausgewertet wird und die Werte der lokalen Variablen zeigen. Durch ein Betätigen der <code>ENTER</code>-Taste wird die Auswertung anschließend fortgesetzt.
-	<em>Wichtig</em>: NumeRe wird die Zeichen <code>|&gt;</code> am Anfang der Zeile selbstverständlich ignorieren, wenn der NumeRe-Debugger nicht aktiviert wurde.
+	<em>Wichtig:</em> NumeRe wird die Zeichen <code>|&gt;</code> am Anfang der Zeile selbstverständlich ignorieren, wenn der NumeRe-Debugger nicht aktiviert wurde.
 </article>

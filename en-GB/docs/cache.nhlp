@@ -38,10 +38,10 @@
 	A special command is <code>delete CACHE(i1:i2,j1:j2)</code>. This will unrecoverably delete all elements in the ranges lines <expr>i1</expr> to <expr>i2</expr> and columns <expr>j1</expr> to <expr>j2</expr>. Of course only a single element can be chosen as well.
 	Custom created caches can be removed with the command <code>remove</code>:<codeblock>remove CACHE1(), CACHE2(), ...</codeblock>
 	You may append <code>-ignore</code> to the commands <code>clear</code> or <code>delete</code> to suppress the required confirmation.
-	<example desc="Show the data storen in cache and sorting the columns 3-6 according column 1 afterwards:">
+	<example desc="Show the data stored in cache and sorting the columns 3-6 according column 1 afterwards:">
 		cache -show
 		[...]
 		cache -sort cols=1[3:6]
 	</example>
-	SEE ALSO: "help new", "help remove", "help datagrid", "help save", "help string" and "help delete"
+	<em>See also</em> "help new", "help remove", "help datagrid", "help save", "help string" and "help delete"
 </article>

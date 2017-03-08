@@ -34,7 +34,7 @@
 	Das Ende der Verzweigung wird stets mit dem Befehl <code>endif</code> deklariert. Wie auch bei FOR-/WHILE-Schleifen kann hierbei der Parameter <code>-sv</code> angehängt werden, welcher alle Zwischenergebnisse zeigt. Wird stattdessen der optionale Parameter <code>-mask</code> angegeben, so wird auch die Benachrichtigung, dass NumeRe am Auswerten ist, unterdrückt.
 	Eine IF-Bedingung kann eine beliebige Zahl an FOR-Schleifen, WHILE-Schleifen oder anderen IF-Verzweigungen enthalten.
 	Die Deklaration kann mit dem Kommando <code>abort</code> abgebrochen werden, ohne dass die bisher eingegebenen Befehle ausgeführt werden. Dies steht im Gegensatz zu dem Kommando <code>break</code>, dass erst während der Laufzeit ausgewertet wird.
-	Mit <code>if (data())</code> bzw. <code>if (CACHE())</code> kann geprüft werden, ob ein Datenfile geladen bzw. Daten im Cache <code>CACHE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die möglicherweise einen leeren Cache benötigen. <em>Vorsicht</em>: wenn <code>CACHE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
+	Mit <code>if (data())</code> bzw. <code>if (CACHE())</code> kann geprüft werden, ob ein Datenfile geladen bzw. Daten im Cache <code>CACHE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die möglicherweise einen leeren Cache benötigen. <em>Vorsicht:</em> wenn <code>CACHE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
 	IF-Bedingungen innerhalb von Schleifen können durch die Kommandos <code>break</code> und <code>continue</code> Einfluss auf ihre aufrufende Schleife nehmen (Siehe "help for" und "help while" für Infos zu diesen Kommandos). Diese Kommandos haben innerhalb einer IF-Bedingung dieselbe Wirkung wie <code>endif</code> (brechen also die Auswertung der aktuellen Bedingung an dieser Stelle ab) und werden so lange nach Außen weitergereicht, bis sie entweder eine FOR-Schleife erreichen, oder die äußerste IF-Bedingung erreicht wird, welche ebenfalls abgebrochen wird.
 	Für einfache Korrekturen steht der Befehl <code>replaceline</code> zur Verfügung. Siehe hierzu: "help replaceline"
 	<example desc="Eine einfache Verzweigung, welche die max()-Funktion simuliert:" type="verbatim">
@@ -44,5 +44,5 @@
 		|ELSE&gt; ans = b
 		|ELSE&gt; endif
 	</example>
-	SIEHE AUCH: "help list", "help for", "help while", "help cache", "help data" und "list -logic"
+	<em>Siehe auch:</em> "help list", "help for", "help while", "help cache", "help data" und "list -logic"
 </article>

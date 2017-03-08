@@ -42,5 +42,5 @@
 	<example desc="Zeichnen eines einfachen roten Kreisels:">
 		draw3d cone(-2,2,4,0,0,0,1.5,"r"), cone(-2,2,4,-3,3,6,4,4,"r@"), cone(-3,3,6,-5,5,10,0.5,0.2,"r@") -set light
 	</example>
-	SIEHE AUCH: "help plot", "help draw", "help colors", "help linestyles" und "help compose"
+	<em>Siehe auch:</em> "help plot", "help draw", "help colors", "help linestyles" und "help compose"
 </article>

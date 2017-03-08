@@ -35,5 +35,5 @@
 	<example desc="Listing of all declared variables">
 		list -var
 	</example>
-	SEE ALSO: "help find", "help define", "help plugins", "help units" and "help explorer"
+	<em>See also:</em> "help find", "help define", "help plugins", "help units" and "help explorer"
 </article>

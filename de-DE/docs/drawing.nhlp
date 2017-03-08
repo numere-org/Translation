@@ -51,5 +51,5 @@
 	<example desc="Zeichnen eines blauen Quadrates und eines darauf deutenden Pfeils, der mit einer Bemerkung versehen ist:">
 		draw face(0,0,2,0,"b"), trace(-3.3,-3.3,-0.2,-0.2,"kA"), text(-3,-3,0,0,"Quadrat","k:L")
 	</example>
-	SIEHE AUCH: "help plot", "help draw3d", "help colors", "help linestyles" und "help compose"
+	<em>Siehe auch:</em> "help plot", "help draw3d", "help colors", "help linestyles" und "help compose"
 </article>

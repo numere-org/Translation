@@ -48,5 +48,5 @@
 	|       plot sin(x), cos(x)
 	|   endcompose
 	</example>
-	SIEHE AUCH: "help compose" und "help plot"
+	<em>Siehe auch:</em> "help compose" und "help plot"
 </article>

@@ -40,5 +40,5 @@
 		The script "&SCRIPTPATH&/script.nscr" was loaded successfully.
 		script -start
 	</example>
-	SEE ALSO: "help install", "help explorer" and "help procedure"
+	<em>See also:</em> "help install", "help explorer" and "help procedure"
 </article>

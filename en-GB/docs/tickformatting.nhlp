@@ -26,7 +26,7 @@
 		<item node="PRC">This object references either the count of numbers or the count of decimals, depending on the chosen type TYP.</item>
 		<item node="TYP">This determines the type of display of the number. Mostly the types <code>g</code> or <code>G</code>, which will switch between decimal and exponential representation automatically, are recommended, but all other variants are supported as well. For instance these are among others <code>E</code>, <code>e</code> and <code>f</code>.</item>
 	</list>
-	<example desc="Display of the valueD '392.65' in different types and with different flags:" type="verbatim">
+	<example desc="Display of the value '392.65' in different types and with different flags:" type="verbatim">
 		|   %f   --&gt; 392.65
 		|   %g   --&gt; 392.65
 		|   %e   --&gt; 3.9265e+2
@@ -38,5 +38,5 @@
 	<example desc="Exemplary modification of the <expr>y</expr> axis:">
 		plot [...] -set yticks="y = %#.2g"
 	</example>
-	SEE ALSO: "http://www.cplusplus.com/reference/cstdio/printf"
+	<em>See also:</em> "http://www.cplusplus.com/reference/cstdio/printf"
 </article>

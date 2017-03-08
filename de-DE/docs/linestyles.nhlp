@@ -62,5 +62,5 @@
 	<example desc="Setzen der Punktstile eines Plots (zwei mal Punkte und zwei mal gefüllte Rhomben):">
 		plot [...] -set pointstyles="..#d#d"
 	</example>
-	SIEHE AUCH: "help plotoptions" und "help colors"
+	<em>Siehe auch:</em> "help plotoptions" und "help colors"
 </article>

@@ -26,8 +26,8 @@
 		<item node="n=Ordnung">Die Ordnung der Entwicklung angeben. Wenn diese Option nicht angegeben wird, wird automatisch bis zur sechsten Ordnung entwickelt</item>
 		<item node="unique">Einen "eindeutigen" Funktionsnamen für das erzeugte Taylorpolynom generieren. Dieser enthält die Ordnung und die entwickelte Funktion. (Bietet sich an, wenn mehrere Entwicklungen zugleich verwendet werden sollen)</item>
 	</list>
-	Das entwickelte Polynom wird automatisch als eine Funktion im Funktionenspeicher definiert. Im Allgemeinen wird als Funktionsname <code>Taylor(x)</code> gewählt, wenn allerdings die Option <code>unique</code> übergeben wurde, ist der Funktionsname deutlich komplexer.<br><em>Achtung</em>: Funktionen, die mit demselben Namen im Funktionsspeicher vorhanden sind, werden dabei überschrieben!
-	<example desc="Taylorentwicklung der Funktion <expr>f(x) = cos(x)*exp(-x/2)</expr> an der Stelle x = 1 bis zur Ordnung 4:" type="verbatim">
+	Das entwickelte Polynom wird automatisch als eine Funktion im Funktionenspeicher definiert. Im Allgemeinen wird als Funktionsname <code>Taylor(x)</code> gewählt, wenn allerdings die Option <code>unique</code> übergeben wurde, ist der Funktionsname deutlich komplexer.<br><em>Achtung:</em> Funktionen, die mit demselben Namen im Funktionsspeicher vorhanden sind, werden dabei überschrieben!
+	<example desc="Taylorentwicklung der Funktion <expr>f(x) = cos(x)*exp(-x/2)</expr> an der Stelle <expr>x = 1</expr> bis zur Ordnung 4:" type="verbatim">
 		|&lt;- taylor cos(x)*exp(-x/2) -set x=1 n=4
 		|-&gt; Taylor(x) := 0.3277099 - 0.6742329*(x-1) + 0.1315407*(x-1)^2 +
 		|       0.09649409*(x-1)^3 - 0.03757564*(x-1)^4

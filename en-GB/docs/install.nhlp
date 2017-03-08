@@ -33,5 +33,5 @@
 	</list>
 	The flags for the installation have different meanings: <code>ENABLE_FULL_LOGGING</code> activates the protocoling of each evaluated line instead of only the procedure name, <code>DISABLE_SCREEN_OUTPUT</code> deactivates the protocol on the NumeRe console and <code>ENABLE_DEFAULTS</code> reverts the previous flags.
 	During the installation of packages you may add entries to the NumeRe documentation. The needed information may added to the <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block as well. Further information may be found at "help documentation".
-	SEE ALSO: "help plugin", "help procedure", "help script" and "help documentation"
+	<em>See also:</em> "help plugin", "help procedure", "help script" and "help documentation"
 </article>

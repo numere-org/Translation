@@ -26,5 +26,5 @@
 		j--
 		ans = 0
 	</example>
-	SEE ALSO: "help for", "help while" and "help if"
+	<em>See also:</em> "help for", "help while" and "help if"
 </article>

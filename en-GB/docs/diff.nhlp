@@ -27,11 +27,11 @@
 	</list>
 	In addition, NumeRe may differentiate data sets numerically. In this case, the desired data set has to be passed to <code>diff</code>:<codeblock>diff DATASET(I1:I2,J1:J2)</codeblock>
 	The data set should contain <expr>x</expr> and <expr>y</expr> values in the columns to obtain correct differentiations, otherwise the differentiation will be calculated assuming an sample distance of 1. Note that the returned data set is one point less than the passed data set. As default, NumeRe calculates the <expr>y</expr> values of the differentiation. To obtain the corresponding <expr>x</expr> values, one has to pass the option <code>xvals</code> to <code>diff</code>.
-	<example desc="Numericial differentiation of the function <expr>f(x) = x^2</expr> at the position x=1 with the precision 1e-6 and numerical differentiation of a data set:">
+	<example desc="Numericial differentiation of the function <expr>f(x) = x^2</expr> at the position <expr>x=1</expr> with the precision 1e-6 and numerical differentiation of a data set:">
 		diff x^2 -set x=1 eps=1e-6
 		ans = 2
 		diff data(:,1:2)
 		ans = {0.99830036,  0.98812332,  0.96787298, ...}
 	</example>
-	SEE ALSO: "help taylor"
+	<em>See also:</em> "help taylor"
 </article>

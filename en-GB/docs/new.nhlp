@@ -35,5 +35,5 @@
 		new -script=&lt;scriptpath&gt;/Current/Simulation
 		The script "&SCRIPTPATH&/Current/Simulation.nscr" was created successfully.
 	</example>
-	SEE ALSO: "help cache", "help procedure" and "help script"
+	<em>See also:</em> "help cache", "help procedure" and "help script"
 </article>

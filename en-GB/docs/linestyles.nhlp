@@ -62,5 +62,5 @@
 	<example desc="Modifying the point styles of a plot (two times dots and two times filled rhombs):">
 		plot [...] -set pointstyles="..#d#d"
 	</example>
-	SEE ALSO: "help plotoptions" and "help colors"
+	<em>See also:</em> "help plotoptions" and "help colors"
 </article>

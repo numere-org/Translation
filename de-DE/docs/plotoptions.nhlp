@@ -83,8 +83,8 @@
 	</list>
 	("*" steht für <expr>x, y &amp; z</expr>)
 	STYLE ist eine Zeichenkette, die je nach Option nur Farben, nur Liniendicke, nur Linien-/Punkttypen oder alle drei Informationen enthalten kann. Die Styleinformationen sind jeweils einzelne Zeichen, die in "help colors" und "help linestyles" erläutert werden. Die Liniendicke ist eine Ziffer von 0 bis 9.
-	<em>Wichtig</em>: Auf Leerzeichen sollte weitestgehend verzichtet werden, da sie zum Separieren der Optionen verwendet werden. Sollten sie bei <code>title=</code>, <code>*label=</code> oder dem Dateinamen nötig sein, muss das gesamte Argument in Anführungszeichen gesetzt werden.
+	<em>Wichtig:</em> Auf Leerzeichen sollte weitestgehend verzichtet werden, da sie zum Separieren der Optionen verwendet werden. Sollten sie bei <code>title=</code>, <code>*label=</code> oder dem Dateinamen nötig sein, muss das gesamte Argument in Anführungszeichen gesetzt werden.
 	Optionen, die einmal gesetzt wurden, werden für die weitere Verwendung gespeichert und (so lange sie nicht widerrufen werden) bei allen weiteren Plots automatisch verwendet. Ausnahmen sind hierbei hohe Auflösung, Dateinamen, Titel, Plotintervalle, Linienfarben und Achsenbeschriftungen.
-	TIPP: Optionen, die von Plot zu Plot gespeichert werden, können auch durch die Syntax <code>plot -set OPTIONEN</code> (ohne eine zu plottende Funktion) außerhalb eines Plots gesetzt werden.
-	SIEHE AUCH: "help plot", "help colors" und "help linestyles"
+	<em>Tipp:</em> Optionen, die von Plot zu Plot gespeichert werden, können auch durch die Syntax <code>plot -set OPTIONEN</code> (ohne eine zu plottende Funktion) außerhalb eines Plots gesetzt werden.
+	<em>Siehe auch:</em> "help plot", "help colors" und "help linestyles"
 </article>

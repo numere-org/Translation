@@ -46,5 +46,5 @@
 		|FOR&gt; cache(#,i) = "Spalte_" + #~i		(wird ggf. eine 0 ergänzen)
 		|FOR&gt; [...]
 	</example>
-	SIEHE AUCH: "help procedure" und "help explorer"
+	<em>Siehe auch:</em> "help procedure" und "help explorer"
 </article>

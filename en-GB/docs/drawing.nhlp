@@ -51,5 +51,5 @@
 	<example desc="Drawing of a blue square and a pointing arrow, which carries an annotation:">
 		draw face(0,0,2,0,"b"), trace(-3.3,-3.3,-0.2,-0.2,"kA"), text(-3,-3,0,0,"Square","k:L")
 	</example>
-	SEE ALSO: "help plot", "help draw3d", "help colors", "help linestyles" and "help compose"
+	<em>See also:</em> "help plot", "help draw3d", "help colors", "help linestyles" and "help compose"
 </article>

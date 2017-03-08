@@ -30,9 +30,9 @@
 	<em>Note:</em> If no <expr>x</expr> values were passed, it is possible that indices will be returned twice. This is <em>not</em> an error, but occures, if the index is located in between of two zeroes and if it is as well the nearest point to both zeroes.
 	<example desc="Zeroes of the function <expr>f(x) = x^3-x</expr> in the interval -5 to 5 and zeroes of a data set:">
 		zeroes x^3-x -set x=-5:5
-		ans = [    -1,     0,     1]
+		ans = {    -1,     0,     1}
 		zeroes data(:,2) -set x=data(:,1)
-		ans = [ 3.445, 8.314, 9.862,  (...)]
+		ans = { 3.445, 8.314, 9.862,  (...)}
 	</example>
 	<em>Tip:</em> This function may determine the intersections of two functions in an interval [<expr>x0,x1</expr>]:<codeblock>zeroes f(x)-g(x) -set x=x0:x1</codeblock>
 </article>

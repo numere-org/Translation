@@ -30,9 +30,9 @@
 	<em>Hinweis:</em> Wenn keine <expr>x</expr>-Werte übergeben werden, kann es vorkommen, dass Indices doppelt zurückgegeben werden. Das ist <em>kein</em> Fehler, sondern tritt auf, wenn ein Index direkt zwischen zwei Nullstellen liegt und zusätzlich noch gleichzeitig der nächste Punkt zu diesen beiden Nullstellen ist.
 	<example desc="Nullstellen der Funktion <expr>f(x) = x^3-x</expr> im Intervall -5 bis 5 und Nullstellen eines Datensatzes:">
 		zeroes x^3-x -set x=-5:5
-		ans = [    -1,     0,     1]
+		ans = {    -1,     0,     1}
 		zeroes data(:,2) -set x=data(:,1)
-		ans = [ 3.445, 8.314, 9.862,  (...)]
+		ans = { 3.445, 8.314, 9.862,  (...)}
 	</example>
-	TIPP: Diese Funktion kann auch die Schnittpunkte zweier Funktionen in einem Intervall [<expr>x0,x1</expr>] finden:<codeblock>zeroes f(x)-g(x) -set x=x0:x1</codeblock>
+	<em>Tipp:</em> Diese Funktion kann auch die Schnittpunkte zweier Funktionen in einem Intervall [<expr>x0,x1</expr>] finden:<codeblock>zeroes f(x)-g(x) -set x=x0:x1</codeblock>
 </article>

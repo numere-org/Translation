@@ -86,5 +86,5 @@
 	<em>Important:</em> you should omit whitespace wherever possible, because they are used to separate the options. If they are necessary for <code>title=</code>, <code>*label=</code> or the file name, then the whole argument has to be passed surrounded by quotation marks.
 	Options, which were set once, are stored for the further usage and (as long as they aren't revised) will be used for all further plots automatically. Exceptions are high resolution, filename, title, plotting intervals and axis labels.
 	<em>Tip:</em> Options, which are saved from plot to plot, may be set outside of an actual plot using the the syntax <code>plot -set OPTIONS</code> (without an actual function).
-	SEE ALSO: "help plot", "help colors" and "help linestyles"
+	<em>See also:</em> "help plot", "help colors" and "help linestyles"
 </article>

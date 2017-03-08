@@ -36,7 +36,7 @@
 	Procedures may be called with a <code>$</code> followed by the procedure's name and the variable list. This may be done directly from the NumeRe console, as well as out of loop or a script. NumeRe will interrupt the current programm flow and execute the desired procedure. If the procedure contains a return value (signalized with the command <code>return</code>), then it may be assigned to a variable or entered in a calculation.
 	NumeRe contains namespaces similar as C++, which may be used to avoid naming conflicts with other procedures or to structurize whole projects. The syntax, to call a procedure out of an explicit namespace, is <codeblock>$NAMESPACE~PROCEDURE(ARGUMENTS)</codeblock>These namespaces are represented by subdirectories in the default procedure path, which are named according the current namespace (and not through <code>procedure $NAMESPACE~PROCEDURE(ARGUMENTS) ...</code>). The namespace <code>main</code> is the global namespace (equal to the default procedure path); the namespace <code>this</code> is the namespace of the current procedure. An exception is the namespace <code>thisfile</code>: this namespace is restricted to the current file. All procedures in this file,  which don't carry the name of the file, automatically are <code>private</code>.
 	Using the command <code>namespace NSP</code> the namespace NSP may be activated for the following procedures to avoid entering the namespace for each procedure. However, procedures of other namespaces may be called by explicitely naming the namespace. This command will only be evaluated inside of a procedure.
-	If a procedure shall be created within a script or directly through the console, and if it shall be located in another namespace than <code>main</code>, this namespace has to be named in the procedure's head through <codeblock>procedure %NAMESPACE~PROCEDURE(ARGUMENTS)\n\t...\nendprocedure</codeblock>(This is only used for identifying the namespace and won't be written to the procedure file.)
+	If a procedure shall be created within a script or directly through the console, and if it shall be located in another namespace than <code>main</code>, this namespace has to be named in the procedure's head through <codeblock>procedure $NAMESPACE~PROCEDURE(ARGUMENTS)\n\t...\nendprocedure</codeblock>(This is only used for identifying the namespace and won't be written to the procedure file.)
 	You may load part of scripts to procedures by the usage of the syntax <code>@SCRIPT</code>. This is equal to the similar expression inside of a script. The parameters <code>@SCRIPT: globals</code> and <code>@SCRIPT: defines</code> are available as well.
 	In addition to the usual path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> may be used, which points to the directory of the current executed procedure.
 	<em>Important:</em> Beside of the usual commands and expressions, the body of a procedure may contain special commands with procedure specific meaning. They are listed at "help proccmd".
@@ -54,7 +54,7 @@
         |       return true;
         |   endprocedure	
 	</example>
-	SEE ALSO: "help script", "help install", "help plugin", "help if", "help for" and "help while"
+	<em>See also:</em> "help script", "help install", "help plugin", "help if", "help for" and "help while"
 </article>
 
 <article id="procedure_commands">

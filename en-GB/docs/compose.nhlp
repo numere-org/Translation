@@ -32,5 +32,5 @@
 		|COMP&gt; dens3d 1/norm(x,y,z) -set alpha
 		|COMP&gt; endcompose
 	</example>
-	SEE ALSO: "help plot", "help plotoptions", "help multiresult", "help subplot", "help for", "help while" and "help if"
+	<em>See also:</em> "help plot", "help plotoptions", "help multiresult", "help subplot", "help for", "help while" and "help if"
 </article>

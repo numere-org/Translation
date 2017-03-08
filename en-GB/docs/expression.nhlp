@@ -32,5 +32,5 @@
 		Sentence = "Hello World"
 		"Hello World"
 	</example>
-	SEE ALSO: "help cache", "help string", "help list", "help var" and "help func"
+	<em>See also:</em> "help cache", "help string", "help list", "help var" and "help func"
 </article>

@@ -44,5 +44,5 @@
 		|ELSE&gt; ans = b
 		|ELSE&gt; endif
 	</example>
-	SEE ALSO: "help list", "help for", "help while", "help cache", "help data" and "list -logic"
+	<em>See also:</em> "help list", "help for", "help while", "help cache", "help data" and "list -logic"
 </article>

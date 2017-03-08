@@ -54,8 +54,8 @@
 		<item node="Spaltentitel">Die Titel der ersten Spalte(n) müssen mit den zu variierenden Parametern übereinstimmen. Stimmt nur die erste Spalte überein, wird nur dieser Parameter variiert und es wird ein 1D-Datensatz in der zweiten Spalte angelegt. Stimmen beide überein, wird ein 2D-Datensatz ab der dritten Spalte angelegt, der einem Datengitter entspricht. Die Spaltentitel dürfen jedoch nicht "x" oder "y" lauten.</item>
 		<item node="Variationswerte">Die Variationswerte müssen in den ersten beiden Spalten zu finden sein, zu denen die Spaltentitel mit einem Parameter übereinstimmen. Je nach Länge dieser Spalten kann die Erzeugung des Datensatzes <em>sehr viel</em> Zeit benötigen.</item>
 	</list>
-	<em>Hinweis</em>: Die angepassten Parameter werden für jeden Punkt auf ihren vorgegeben Startwert zurückgesetzt. Dies geschieht ebenso nach Abschluss der Datensatzberechnung.
-	<em>Wichtig</em>: Es können bei <expr>n</expr> Parametern nur <expr>n-1</expr> Parameter variiert werden. Damit kann dieser Datensatz nicht für ein einparametriges Modell erhalten werden. Für ein zweiparametriges Modell kann auch nur ein 1D-<expr>chi^2</expr>-Konvergenz-Datensatz bestimmt werden.
+	<em>Hinweis:</em> Die angepassten Parameter werden für jeden Punkt auf ihren vorgegeben Startwert zurückgesetzt. Dies geschieht ebenso nach Abschluss der Datensatzberechnung.
+	<em>Wichtig:</em> Es können bei <expr>n</expr> Parametern nur <expr>n-1</expr> Parameter variiert werden. Damit kann dieser Datensatz nicht für ein einparametriges Modell erhalten werden. Für ein zweiparametriges Modell kann auch nur ein 1D-<expr>chi^2</expr>-Konvergenz-Datensatz bestimmt werden.
 </article>
 
 <article id="fitting_restrictions">

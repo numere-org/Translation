@@ -36,5 +36,5 @@
 		datagrid data(:,3) -set x=data(:,1) y=data(:,2)
 		The data grid was successfully created in "grid()".
 	</example>
-	SEE ALSO: "help surf", "help mesh", "help plot", "help data" and "help cache"
+	<em>See also:</em> "help surf", "help mesh", "help plot", "help data" and "help cache"
 </article>

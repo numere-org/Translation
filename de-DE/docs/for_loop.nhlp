@@ -25,7 +25,7 @@
 		\tAusdrücke
 		endfor
 	</codeblock>
-	FOR-Schleifen werden durch den Befehl <code>endfor</code> geschlossen. Dieser Befehl ist für jede zuvor geöffnete Schleife nötig. Mit dem Schließen der äußersten Schleife wird die Auswertung automatisch gestartet. Wird der optionale Parameter <code>-sv</code> beim Schließen einer (egal, welcher) Schleife übergeben, so werden ALLE Schritte der Auswertung angezeigt. Wird stattdessen der optionale Parameter <code>-mask</code> angegeben, so wird auch die Fortschrittsanzeige unterdrückt. Der Parameter <code>-lnumctrl</code> bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden.
+	FOR-Schleifen werden durch den Befehl <code>endfor</code> geschlossen. Dieser Befehl ist für jede zuvor geöffnete Schleife nötig. Mit dem Schließen der äußersten Schleife wird die Auswertung automatisch gestartet. Wird der optionale Parameter <code>-sv</code> beim Schließen einer (egal, welcher) Schleife übergeben, so werden <em>alle</em> Schritte der Auswertung angezeigt. Wird stattdessen der optionale Parameter <code>-mask</code> angegeben, so wird auch die Fortschrittsanzeige unterdrückt. Der Parameter <code>-lnumctrl</code> bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden.
 	Eine FOR-Schleife kann eine beliebige Zahl an anderen FOR-Schleifen, WHILE-Schleifen oder IF-Verzweigungen enthalten.
 	Die Deklaration kann mit dem Kommando <code>abort</code> abgebrochen werden, ohne dass die bisher eingegebenen Befehle ausgeführt werden. Dies steht im Gegensatz zu dem Kommando <code>break</code>, das erst während der Laufzeit ausgewertet wird.
 	Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer IF-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
@@ -40,5 +40,5 @@
 		|FOR&gt; i
 		|FOR&gt; endfor -sv
 	</example>
-	SIEHE AUCH: "help if", "help while", "help data", "help cache" und "help string"
+	<em>Siehe auch:</em> "help if", "help while", "help data", "help cache" und "help string"
 </article>

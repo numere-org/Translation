@@ -28,5 +28,5 @@
 	<example desc="Editing of the file '&EXEPATH&/samples/data.dat':">
 		edit &lt;&gt;/samples/data.dat
 	</example>
-	SEE ALSO: "help explorer", "help editor" or "help viewer"
+	<em>See also:</em> "help explorer", "help editor" or "help viewer"
 </article>
