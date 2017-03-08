@@ -26,6 +26,7 @@
 		<item node="&lt;title .../&gt;">Der Titel (<code>string=</code>) und die Indexschlüssel (<code>idxkey=</code>) für das Dokumentationsverzeichnis, also die Schlüsselwörter, die für den Artikel während "help idx" angezeigt werden</item>
 		<item node="&lt;keyword&gt;">Schlüsselwort unter welchem der Artikel gefunden werden kann. Je mehr, desto besser. Es muss sich hierbei nicht um ein ganzes Wort handeln. <em>Wichtig</em>: Die hier angegebenen Schlüsselwörter können die Schlüsselwörter der standardmäßigen Hilfeartikel überschreiben!</item>
 		<item node="&lt;list&gt;">Listen-Umgebung für eine Auflistung wie diese hier. Fasst weitere <code>&lt;item&gt;</code>-Umgebungen, die die jeweiligen Listenpunkte bezeichnen</item>
+		<item node="&lt;table&gt;">Tabellen-Umgebung für eine Tabelle. Fasst weitere <code>&lt;tr&gt;</code>- und <code>&lt;td&gt;</code>-Umgebungen, die die jeweiligen Zeilen bzw. Zellen bezeichnen</item>
 		<item node="&lt;br&gt;">Fügt einen Zeilenumbruch ein (Absatzumbrüche werden durch Zeilenumbrüche in der Hilfedatei repräsentiert)</item>
 		<item node="&lt;em&gt;">Fasst zu betonende Abschnitte. Wird durch <em>Großbuchstaben</em> (bzw. kursiv und fett im HTML-Format) umgesetzt</item>
 		<item node="&lt;code&gt;">Fasst nicht zu interpretierende Zeichenketten, wie z.B. NumeRe-Code (außer spitze Klammern)</item>
