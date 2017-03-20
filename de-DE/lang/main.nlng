@@ -278,147 +278,169 @@ PARSERFUNCS_INTEGRATE2_BOUNDARYDEPENDENCE=FEHLER: %%1%%-Grenzen können nicht von
 PARSERFUNCS_INTEGRATE2_BOUNDARYSELFDEPENDENCE=FEHLER: %%1%%-Grenzen können nicht von %%1%% selbst abhängen.
 PARSERFUNCS_INTEGRATE2_SWAPVARS=Tausche %%1%%- und %%2%%-Integration aus Gründen der Performance
 PARSERFUNCS_LISTFUNC_HEADLINE=Vordefinierte Funktionen
-PARSERFUNCS_LISTFUNC_NUM=numerisch
-PARSERFUNCS_LISTFUNC_MAT=Matrix und Vektor
-PARSERFUNCS_LISTFUNC_STRING=Zeichenketten
-PARSERFUNCS_LISTFUNC_TRIGONOMETRIC=trigonometrisch
-PARSERFUNCS_LISTFUNC_HYPERBOLIC=hyperbolisch
-PARSERFUNCS_LISTFUNC_TIME=Zeit
-PARSERFUNCS_LISTFUNC_STATS=statistisch
-PARSERFUNCS_LISTFUNC_RANDOM=Zufall
-PARSERFUNCS_LISTFUNC_PHYSICS=physikalisch
-PARSERFUNCS_LISTFUNC_ANGULAR=Winkel
-PARSERFUNCS_LISTFUNC_DISTRIB=Distribution
-PARSERFUNCS_LISTFUNC_LOGARITHMIC=logarithmisch
-PARSERFUNCS_LISTFUNC_LOGIC=logisch
-PARSERFUNCS_LISTFUNC_COORDS=Koordinaten
-PARSERFUNCS_LISTFUNC_POLYNOMIAL=polynomiell
+PARSERFUNCS_LISTFUNC_TYPE_NUM=Numerik
+PARSERFUNCS_LISTFUNC_TYPE_MAT=Matrix und Vektor
+PARSERFUNCS_LISTFUNC_TYPE_STRING=Zeichenketten
+PARSERFUNCS_LISTFUNC_TYPE_TRIGONOMETRIC=Trigonometrie
+PARSERFUNCS_LISTFUNC_TYPE_HYPERBOLIC=Hyperbelfunktionen
+PARSERFUNCS_LISTFUNC_TYPE_TIME=Zeit
+PARSERFUNCS_LISTFUNC_TYPE_STATS=Statistik
+PARSERFUNCS_LISTFUNC_TYPE_RANDOM=Zufall
+PARSERFUNCS_LISTFUNC_TYPE_PHYSICS=Physik
+PARSERFUNCS_LISTFUNC_TYPE_ANGULAR=Winkel
+PARSERFUNCS_LISTFUNC_TYPE_DISTRIB=Distributionen
+PARSERFUNCS_LISTFUNC_TYPE_LOGARITHMIC=Logarithmen
+PARSERFUNCS_LISTFUNC_TYPE_LOGIC=Logik
+PARSERFUNCS_LISTFUNC_TYPE_COORDS=Koordinaten
+PARSERFUNCS_LISTFUNC_TYPE_POLYNOMIAL=Polynome
+PARSERFUNCS_LISTFUNC_TYPE_DRAW=Zeichnungen
 # Funktionentabelle
-PARSERFUNCS_LISTFUNC_TABLEHEAD=								Funktion:              Typ:   Ausgabe:
-PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                 VAL    - Betrag von x
-PARSERFUNCS_LISTFUNC_FUNC_ACOS_[NUM_TRIGONOMETRIC]=			acos(x)                VAL    - Arkuskosinus von x. Definiert im Bereich [-1,1] (Synonym: "arccos(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)               VAL    - Areakosinus Hyperbolicus von x. Definiert im Bereich [1,inf) (Synonym: "arcosh(x)")
-PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                  VAL    - Airyfunktion Ai(x). Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                VAL    - Arkussinus von x. Definiert im Bereich [-1,1] (Synonym: "arcsin(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)               VAL    - Areasinus Hyperbolicus von x. Definiert auf ganz R (Synonym: "arsinh(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)         {VAL}   - Gibt die ASCII-Zeichenwerte der Zeichen in STRING zurück
-PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                VAL    - Arkustangens von x. Definiert auf ganz R (Synonym: "arctan(x)")
-PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)               VAL    - Areatangens Hyperbolicus von x. Definiert im Bereich (-1,1) (Synonym: "artanh(x)")
-PARSERFUNCS_LISTFUNC_FUNC_AVG_[NUM_STATS]=					avg(x,y,z,...)         VAL    - Mittelwert aus x,y,z,...
-PARSERFUNCS_LISTFUNC_FUNC_BESSEL_[NUM_PHYSICS]=				bessel(n,x)            VAL    - Besselfunktion erster Gattung der Ordnung n am Ort x. Definiert für ganz R
-PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)  VAL    - Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel. Definiert für N, Z > 0
-PARSERFUNCS_LISTFUNC_FUNC_BI_[NUM_PHYSICS]=					Bi(x)                  VAL    - Airyfunktion Bi(x). Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_BINOM_[NUM]=						binom(n,k)             VAL    - Binomialkoeffizient von n und k. Definiert für natürliche Zahlen >= 0
-PARSERFUNCS_LISTFUNC_FUNC_CHAR_[STRING]=					char(STRING,POS)       STR    - Gibt das Zeichen aus der Zeichenkette STRING an der Stelle POS zurück
-PARSERFUNCS_LISTFUNC_FUNC_CMP_[NUM_STATS]=					cmp(x,y,z,...,CMP,T)   VAL    - Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-2,-1,0,1,2} zurück: T = 0 gibt den Index des Elements zurück, das gleich CMP ist. T = -1 gibt den des größten Elements, das kleiner oder gleich CMP ist, und T = 1 den des kleinsten Elements, das größer oder gleich CMP ist, zurück. Für T = -2 bzw. T = 2 werden die entsprechenden Werte der Elemente zurückgegeben. Wird kein passendes Element gefunden, gibt die Funktion "nan" zurück. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_CNT_[NUM_STATS_STRING]=			cnt(x,y,z,...)         VAL    - Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden; gibt in diesem Fall aber mindestens 1 zurück.
-PARSERFUNCS_LISTFUNC_FUNC_COS_[NUM_TRIGONOMETRIC]=			cos(x)                 VAL    - Kosinus von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_COSH_[NUM_HYPERBOLIC]=			cosh(x)                VAL    - Kosinus Hyperbolicus von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                 VAL    - Kotangens von x. Definiert auf R \ {n*PI}. n ist eine ganze Zahl.
-PARSERFUNCS_LISTFUNC_FUNC_CROSS_[MAT]=						cross(MAT)             VEC    - Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden.
-PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYP)         VAL    - Formatiert TIME gemäß TYP: TYP = 0 gibt YYYYMMDDhhmmss, TYP = 1...6 geben YYYY ... ss, TYP = -1 gibt YYYYMMDD und TYP = -2 gibt hhmmss zurück
-PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)            VAL    - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
-PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)              VAL    - Gradwert von x [rad]. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_DET_[MAT]=						det(MAT)               VAL    - Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.
-PARSERFUNCS_LISTFUNC_FUNC_DIAG_[MAT]=						diag(x,y,z,...)        MAT    - Erzeugt eine Diagonalmatrix mit den Elementen x,y,z,... auf der Hauptdiagonalen.
-PARSERFUNCS_LISTFUNC_FUNC_DIAGONALIZE_[MAT]=				diagonalize(MAT)       MAT    - Diagonalisiert die quadratische Matrix MAT. Sollten die berechneten Diagonalelemente komplex sein, wird eine n x 2n-Matrix zurückgegeben, mit den Realteilen auf der unteren und den Imaginärteilen auf der oberen ersten Nebendiagonalen.
-PARSERFUNCS_LISTFUNC_FUNC_EIGENVALS_[MAT]=					eigenvals(MAT)         MAT    - Berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurück. Sind die Eigenwerte komplex, werden sie als zweispaltige Matrix zurückgegeben, mit dem Realteil in der ersten und dem Imaginärteil in der zweiten Spalte.
-PARSERFUNCS_LISTFUNC_FUNC_EIGENVECTS_[MAT]=					eigenvects(MAT)        MAT    - Berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurück. Sind die Eigenvektoren komplex, werden sie als n x 2n-Matrix zurückgegeben, mit den Realteilen in den ungeraden und den Imaginärteilen der Vektorkomponenten in den geraden Spalten.
-PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)       VAL    - Wert des elliptischen Integrals D(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)         VAL    - Wert des elliptischen Integrals E(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)         VAL    - Wert des elliptischen Integrals F(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)      VAL    - Wert des elliptischen Integrals Pi(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                 VAL    - Wert der gauß'schen Fehlerfunktion an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                VAL    - Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                 VAL    - Exponentialfunktion von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_FACULTY_[NUM]=					faculty(n)             VAL    - Fakultät der natürlichen Zahl n [n! = n*(n-1)*(n-2)*...*1]. Definiert für natürliche Zahlen >= 0
-PARSERFUNCS_LISTFUNC_FUNC_FINDFILE_[STRING_LOGIC]=			findfile(STR1,STR2)    LOG    - Gibt true zurück, wenn die Datei STR1 existiert, sonst false. Die Datei muss in Form einer Zeichenkette angegeben werden. STR2 ist ein optionaler Standardsuchpfad, der standardmäßig auf den NumeRe-Stammordner weist
-PARSERFUNCS_LISTFUNC_FUNC_FINDPARAM_[STRING]=				findparam(PAR,STR,C)   VAL    - Gibt die Position zurück, an der Parameter PAR in der Zeichenkette STR enthalten ist, und 0, falls er nicht gefunden werden kann. Falls PAR von einem speziellen Zeichen gefolgt werden soll (z.B. '='), kann dies für C angegeben werden, anderenfalls kann C weggelassen werden. Wenn C angegeben wird, wird die Position um die Anzahl an Leerzeichen zwischen PAR und C nach rechts verschoben zurückgegeben.
-PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)               VAL    - Rundet x stets auf die nächsttiefere Ganzzahl ab
-PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)               VAL    - Wert der Gamma-Funktion an der Stelle x. Definiert auf R \ {-n, 0}, wobei n eine natürliche Zahl ist
-PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,x1)           VAL    - Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind
-PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)               VAL    - Berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k
-PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STR,T)    {STR}   - Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name inkl. Endung und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
-PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)  {STR}   - Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name des Ordners und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
-PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)  {VAL}   - Gibt die Indices eines in Form einer Zeichenkette übergebenen Datenobjektzugriffs in Form I1,I2,J1,J2 zurück. T ist ein optionaler Parameter und bestimmt, ob eine Matrix (T=0), Spalten- (T=1) oder Zeilenweise (T=2) gelesen werden soll. Mit T=-1 werden unmodifizerte Indices zurückgegeben: 0 für nicht-existente und -1 für offene Intervallgrenzen. Bsp.: getindices("data(5:,3)",-1) = 5,-1,3,0
-PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(STR) VAL    - Gibt die Position der passenden schließenden Klammer in STR zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
-PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)     STR    - Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen POS und der tatsächlichen Position des Werts werden ignoriert.
-PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)           VAL    - Heaviside-(Theta)-Funktion. 0 für x < 0, 1 sonst. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)           VAL    - numerischer Wert der Hermite-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_IDENTITY_[MAT]=					identity(n)            MAT    - Erzeugt eine n-dimensionale, quadratische Einheitsmatrix.
-PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)     VAL    - Imaginärteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
-PARSERFUNCS_LISTFUNC_FUNC_INVERT_[MAT]=						invert(MAT)            MAT    - Invertiert die Matrix MAT, falls eine Inverse der Matrix existiert. invert() prüft auch, ob die Dimensionen der übergebenen Matrix übereinstimmen.
-PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(STRING)        LOG    - gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false
-PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[NUM_LOGIC]=				is_nan(x)              LOG    - gibt true zurück, wenn x den Wert nan hat, sonst false
-PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)        LOG    - gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false
-PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_[NUM_POLYNOMIAL]=		laguerre(n,x)          VAL    - numerischer Wert der Laguerre-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_A_[NUM_POLYNOMIAL]=		laguerre_a(n,k,x)      VAL    - numerischer Wert der assoziierten Laguerre-Polynome der Ordnung n >= 0 mit k = [0,n] an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_LCM_[NUM]=						lcm(n,k)               VAL    - berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k
-PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_[NUM_POLYNOMIAL]=		legendre(n,x)          VAL    - numerischer Wert der Legendre-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_A_[NUM_POLYNOMIAL]=		legendre_a(l,m,x)      VAL    - numerischer Wert der assoziierten Legendre-Polynome der Ordnung l >= 0 mit m = [-l,l] an der Stelle x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_LN_[NUM_LOGARITHMIC]=				ln(x)                  VAL    - natürlicher Logarithmus von x. Definiert im Bereich (0,inf)
-PARSERFUNCS_LISTFUNC_FUNC_LOG10_[NUM_LOGARITHMIC]=			log10(x)               VAL    - Logarithmus zur Basis 10 von x. Kann durch 'log(x)' abgekürzt werden. Definiert im Bereich (0,inf)
-PARSERFUNCS_LISTFUNC_FUNC_LOG2_[NUM_LOGARITHMIC]=			log2(x)                VAL    - Logarithmus zur Basis 2 von x. Definiert im Bereich (0,inf)
-PARSERFUNCS_LISTFUNC_FUNC_MATFC_[MAT]=						matfc(X,Y,Z,...)       MAT    - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
-PARSERFUNCS_LISTFUNC_FUNC_MATFCF_[MAT]=						matfcf(X,Y,Z,...)      MAT    - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
-PARSERFUNCS_LISTFUNC_FUNC_MATFL_[MAT]=						matfl(X,Y,Z,...)       MAT    - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
-PARSERFUNCS_LISTFUNC_FUNC_MATFLF_[MAT]=						matflf(X,Y,Z,...)      MAT    - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
-PARSERFUNCS_LISTFUNC_FUNC_MAX_[NUM_STATS_STRING]=			max(x,y,z,...)         ARG    - Maximum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
-PARSERFUNCS_LISTFUNC_FUNC_MED_[NUM_STATS]=					med(x,y,z,...)         VAL    - Median aus x,y,z,...
-PARSERFUNCS_LISTFUNC_FUNC_MIN_[NUM_STATS_STRING]=			min(x,y,z,...)         ARG    - Minimum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
-PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)           VAL    - Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n am Ort x. Definiert auf R \ {0}
-PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)        VAL    - Berechnet die Norm des Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_NUM_[NUM_STATS_STRING]=			num(x,y,z,...)         VAL    - Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden und zählt jede nicht-leere Zeichenkette
-PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)               MAT    - Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
-PARSERFUNCS_LISTFUNC_FUNC_PCT_[NUM_STATS]=					pct(x,y,z,...,p)       VAL    - p-tes Perzentil aus x,y,z,...
-PARSERFUNCS_LISTFUNC_FUNC_PHI_[NUM_ANGULAR_COORDS]=			phi(x,y)               VAL    - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)         VAL    - Produkt der Argumente x,y,z,...
-PARSERFUNCS_LISTFUNC_FUNC_RADIAN_[NUM_ANGULAR]=				radian(alpha)          VAL    - Bogenmaßwert von Winkel alpha [Grad]. Definiert für ganz R
-PARSERFUNCS_LISTFUNC_FUNC_RAND_[NUM_RANDOM_DISTRIB]=		rand(x0,x1)            VAL    - Generiert eine (reelle und gleichverteilte) Zufallszahl im Intervall [x0,x1)
-PARSERFUNCS_LISTFUNC_FUNC_RANGE_[NUM]=						range(VAR,LFT,RGHT)    VAL    - Schränkt VAR auf das Intervall [LFT,RGHT] ein
-PARSERFUNCS_LISTFUNC_FUNC_RECT_[NUM_DISTRIB]=				rect(x,x0,x1)          VAL    - Rechteckfunktion: 1 für x in [x0,x1]; 0 sonst
-PARSERFUNCS_LISTFUNC_FUNC_REPEAT_[STRING]=					repeat(STRING,n)       STR    - Gibt n Kopien von STRING zurück
-PARSERFUNCS_LISTFUNC_FUNC_REPLACE_[STRING]=					replace(S,P,L,T)       STR    - Ersetzt L Zeichen ab der Stelle P in der Zeichenkette S mit der Zeichenkette T
-PARSERFUNCS_LISTFUNC_FUNC_REPLACEALL_[STRING]=				replaceall(S,T,U,P,Q)  STR    - Ersetzt alle Vorkommnisse der zweiten Zeichenkette T in der ersten Zeichenkette S mit der dritten Zeichenkette U. Die Variablen P und Q sind optional und geben Anfangs- und Endpunkt der Ersetzung vor
-PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                VAL    - x auf eine Ganzzahl runden
-PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                VAL    - rundet x auf die nächsthöhere Ganzzahl auf
-PARSERFUNCS_LISTFUNC_FUNC_ROUND_[NUM]=						round(x,n)             VAL    - rundet x auf n Nachkommastellen
-PARSERFUNCS_LISTFUNC_FUNC_SBESSEL_[NUM_POLYNOMIAL_PHYSICS]=	sbessel(n,x)           VAL    - sphärische Besselfunktion der Ordnung n. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_SIGN_[NUM]=						sign(x)                VAL    - Vorzeichen von x
-PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                 VAL    - Sinus von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                VAL    - Sinus cardinalis von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                VAL    - Sinus Hyperbolicus von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)          VAL    - sphärische Neumannfunktion der Ordnung n. Definiert auf R \ {0}
-PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)             VEC    - Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.
-PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)    {STR}    - Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf
-PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                VAL    - Wurzel aus x. Definiert im Bereich [0, inf)
-PARSERFUNCS_LISTFUNC_FUNC_STD_[NUM_STATS]=					std(x,y,z,...)         VAL    - Standardabweichung von x,y,z,...
-PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(STR1,STR2,P)    VAL    - Gibt die Position des ersten Auftretens von STR1 in STR2 ab dem Zeichen P zurück. P ist ein optionaler Startwert für die erste Position und standardmäßig ist P = 1. Falls nichts gefunden wird, wird false zurückgegeben
-PARSERFUNCS_LISTFUNC_FUNC_STRING_CAST_[STRING]=				string_cast(EXPR)      STR    - Wandelt EXPR ungeachtet möglicher Rechenoperationen oder Zeichenkettenausdrücke in eine Zeichenkette um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
-PARSERFUNCS_LISTFUNC_FUNC_STRLEN_[STRING]=					strlen(STRING)         VAL    - Gibt die Anzahl an Zeichen in der Zeichenkette STRING zurück
-PARSERFUNCS_LISTFUNC_FUNC_STRRFND_[STRING]=					strrfnd(STR1,STR2,P)   VAL    - Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück. P ist ein optionaler Startwert für letzte Position und standardmäßig ist P = strlen(STR2). Falls nichts gefunden wird, wird false zurückgegeben
-PARSERFUNCS_LISTFUNC_FUNC_STUDENT_T_[NUM_DISTRIB_STATS]=	student_t(n,c)         VAL    - Berechnet den zweiseitigen Student-Faktor t für n Messungen mit dem Konfidenzintervall 0 < c < 1
-PARSERFUNCS_LISTFUNC_FUNC_SUBSTR_[STRING]=					substr(STRING,n,l)     STR    - Gibt l Zeichen ab dem n-ten Zeichen aus STRING als neue Zeichenkette zurück
-PARSERFUNCS_LISTFUNC_FUNC_SUM_[NUM_STATS_STRING]=			sum(x,y,z,...)         ARG    - Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden (verkettet diese)
-PARSERFUNCS_LISTFUNC_FUNC_TAN_[NUM_TRIGONOMETRIC]=			tan(x)                 VAL    - Tangens von x. Definiert auf R \ {-n*PI/2, n*PI/2}. n ist eine natürliche Zahl > 0.
-PARSERFUNCS_LISTFUNC_FUNC_TANH_[NUM_HYPERBOLIC]=			tanh(x)                VAL    - Tangens Hyperbolicus von x. Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_THETA_[NUM_ANGULAR_COORDS]=		theta(x,y,z)           VAL    - Berechnet den Winkel zwischen z-Achse und dem Vektor (x,y,z). Definiert auf ganz R
-PARSERFUNCS_LISTFUNC_FUNC_TIME_[TIME]=						time()                 VAL    - Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück
-PARSERFUNCS_LISTFUNC_FUNC_TO_CHAR_[STRING]=					to_char(x,y,z,...)     STR    - Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück
-PARSERFUNCS_LISTFUNC_FUNC_TO_CMD_[STRING]=					to_cmd(STRING)         CMD    - Wandelt die enthaltene Zeichenkette STRING in einen Kommandoausdruck um
-PARSERFUNCS_LISTFUNC_FUNC_TO_LOWERCASE_[STRING]=			to_lowercase(STRING)   STR    - Wandelt die Großbuchstaben in STRING in Kleinbuchstaben um
-PARSERFUNCS_LISTFUNC_FUNC_TO_STRING_[STRING]=				to_string(EXPR)        STR    - Wandelt EXPR, wenn es sich um keine Zeichenkette handelt, in eine solche um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
-PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(STRING)   STR    - Wandelt die Kleinbuchstaben in STRING in Großbuchstaben um
-PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(STRING)       VAL    - Wertet die Zeichenkette STRING aus und wandelt das Ergebnis in einen Wert um
-PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)             VAL    - Berechnet die Spur der quadratischen Matrix MAT.
-PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)         MAT    - Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)
-PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)        STR    - Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen
-PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()              VAL    - Gibt die Versionsnummer von NumeRe als natürliche Zahl zurück: v1.0.8 wird als 108 zurückgegeben
-PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)       VAL    - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
-PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)         VAL    - Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho >= 0 unter dem Winkel phi im Intervall [0,2*PI)
-PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)              MAT    - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
+PARSERFUNCS_LISTFUNC_TABLEHEAD=								Funktion:                 Typ:     Ausgabe:
+PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                    VAL      - Betrag von x
+PARSERFUNCS_LISTFUNC_FUNC_ACOS_[NUM_TRIGONOMETRIC]=			acos(x)                   VAL      - Arkuskosinus von x. Definiert im Bereich [-1,1] (Synonym: "arccos(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)                  VAL      - Areakosinus Hyperbolicus von x. Definiert im Bereich [1,inf) (Synonym: "arcosh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                     VAL      - Airyfunktion Ai(x). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                   VAL      - Arkussinus von x. Definiert im Bereich [-1,1] (Synonym: "arcsin(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)                  VAL      - Areasinus Hyperbolicus von x. Definiert auf ganz R (Synonym: "arsinh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)            {VAL}     - Gibt die ASCII-Zeichenwerte der Zeichen in STRING zurück
+PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                   VAL      - Arkustangens von x. Definiert auf ganz R (Synonym: "arctan(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)                  VAL      - Areatangens Hyperbolicus von x. Definiert im Bereich (-1,1) (Synonym: "artanh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_AVG_[NUM_STATS]=					avg(x,y,z,...)            VAL      - Mittelwert aus x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_BESSEL_[NUM_PHYSICS]=				bessel(n,x)               VAL      - Besselfunktion erster Gattung der Ordnung n am Ort x. Definiert für ganz R
+PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)     VAL      - Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel. Definiert für N, Z > 0
+PARSERFUNCS_LISTFUNC_FUNC_BI_[NUM_PHYSICS]=					Bi(x)                     VAL      - Airyfunktion Bi(x). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_BINOM_[NUM]=						binom(n,k)                VAL      - Binomialkoeffizient von n und k. Definiert für natürliche Zahlen >= 0
+PARSERFUNCS_LISTFUNC_FUNC_CHAR_[STRING]=					char(STRING,POS)          STR      - Gibt das Zeichen aus der Zeichenkette STRING an der Stelle POS zurück
+PARSERFUNCS_LISTFUNC_FUNC_CMP_[NUM_STATS]=					cmp(x,y,z,...,CMP,T)      VAL      - Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-2,-1,0,1,2} zurück: T = 0 gibt den Index des Elements zurück, das gleich CMP ist. T = -1 gibt den des größten Elements, das kleiner oder gleich CMP ist, und T = 1 den des kleinsten Elements, das größer oder gleich CMP ist, zurück. Für T = -2 bzw. T = 2 werden die entsprechenden Werte der Elemente zurückgegeben. Wird kein passendes Element gefunden, gibt die Funktion "nan" zurück. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_CNT_[NUM_STATS_STRING]=			cnt(x,y,z,...)            VAL      - Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden; gibt in diesem Fall aber mindestens 1 zurück.
+PARSERFUNCS_LISTFUNC_FUNC_COS_[NUM_TRIGONOMETRIC]=			cos(x)                    VAL      - Kosinus von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_COSH_[NUM_HYPERBOLIC]=			cosh(x)                   VAL      - Kosinus Hyperbolicus von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                    VAL      - Kotangens von x. Definiert auf R \ {n*PI}. n ist eine ganze Zahl.
+PARSERFUNCS_LISTFUNC_FUNC_CROSS_[MAT]=						cross(MAT)                VEC      - Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden.
+PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(TIME,TYP)            VAL      - Formatiert TIME gemäß TYP: TYP = 0 gibt YYYYMMDDhhmmss, TYP = 1...6 geben YYYY ... ss, TYP = -1 gibt YYYYMMDD und TYP = -2 gibt hhmmss zurück
+PARSERFUNCS_LISTFUNC_FUNC_DBLFACUL_[NUM]=					dblfacul(n)               VAL      - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
+PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[NUM_ANGULAR]=				degree(x)                 VAL      - Gradwert von x [rad]. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_DET_[MAT]=						det(MAT)                  VAL      - Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.
+PARSERFUNCS_LISTFUNC_FUNC_DIAG_[MAT]=						diag(x,y,z,...)           MAT      - Erzeugt eine Diagonalmatrix mit den Elementen x,y,z,... auf der Hauptdiagonalen.
+PARSERFUNCS_LISTFUNC_FUNC_DIAGONALIZE_[MAT]=				diagonalize(MAT)          MAT      - Diagonalisiert die quadratische Matrix MAT. Sollten die berechneten Diagonalelemente komplex sein, wird eine n x 2n-Matrix zurückgegeben, mit den Realteilen auf der unteren und den Imaginärteilen auf der oberen ersten Nebendiagonalen.
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVALS_[MAT]=					eigenvals(MAT)            MAT      - Berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurück. Sind die Eigenwerte komplex, werden sie als zweispaltige Matrix zurückgegeben, mit dem Realteil in der ersten und dem Imaginärteil in der zweiten Spalte.
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVECTS_[MAT]=					eigenvects(MAT)           MAT      - Berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurück. Sind die Eigenvektoren komplex, werden sie als n x 2n-Matrix zurückgegeben, mit den Realteilen in den ungeraden und den Imaginärteilen der Vektorkomponenten in den geraden Spalten.
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)          VAL      - Wert des elliptischen Integrals D(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)            VAL      - Wert des elliptischen Integrals E(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)            VAL      - Wert des elliptischen Integrals F(x,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)         VAL      - Wert des elliptischen Integrals Pi(x,n,k) an der Stelle x mit 0 <= k < 1. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                    VAL      - Wert der gauß'schen Fehlerfunktion an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                   VAL      - Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                    VAL      - Exponentialfunktion von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_FACULTY_[NUM]=					faculty(n)                VAL      - Fakultät der natürlichen Zahl n [n! = n*(n-1)*(n-2)*...*1]. Definiert für natürliche Zahlen >= 0
+PARSERFUNCS_LISTFUNC_FUNC_FINDFILE_[STRING_LOGIC]=			findfile(STR1,STR2)       LOG      - Gibt true zurück, wenn die Datei STR1 existiert, sonst false. Die Datei muss in Form einer Zeichenkette angegeben werden. STR2 ist ein optionaler Standardsuchpfad, der standardmäßig auf den NumeRe-Stammordner weist
+PARSERFUNCS_LISTFUNC_FUNC_FINDPARAM_[STRING]=				findparam(PAR,STR,C)      VAL      - Gibt die Position zurück, an der Parameter PAR in der Zeichenkette STR enthalten ist, und 0, falls er nicht gefunden werden kann. Falls PAR von einem speziellen Zeichen gefolgt werden soll (z.B. '='), kann dies für C angegeben werden, anderenfalls kann C weggelassen werden. Wenn C angegeben wird, wird die Position um die Anzahl an Leerzeichen zwischen PAR und C nach rechts verschoben zurückgegeben.
+PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)                  VAL      - Rundet x stets auf die nächsttiefere Ganzzahl ab
+PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)                  VAL      - Wert der Gamma-Funktion an der Stelle x. Definiert auf R \ {-n, 0}, wobei n eine natürliche Zahl ist
+PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,x1)              VAL      - Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind
+PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)                  VAL      - Berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k
+PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(STR,T)       {STR}     - Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name inkl. Endung und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
+PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(STR,T)     {STR}     - Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück. STR kann zusätzliche Platzhalter oder mit "|" verknüpfte Auswahlbausteine ("<EIN|BAUSTEIN>") enthalten. Es wird nur der Name des Ordners und nicht der gesamte Pfad zurückgegeben. T ist ein optionaler Parameter und gibt mit T = 1 die entsprechenden Pfade mit zurück
+PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(STRING,T)     {VAL}     - Gibt die Indices eines in Form einer Zeichenkette übergebenen Datenobjektzugriffs in Form I1,I2,J1,J2 zurück. T ist ein optionaler Parameter und bestimmt, ob eine Matrix (T=0), Spalten- (T=1) oder Zeilenweise (T=2) gelesen werden soll. Mit T=-1 werden unmodifizerte Indices zurückgegeben: 0 für nicht-existente und -1 für offene Intervallgrenzen. Bsp.: getindices("data(5:,3)",-1) = 5,-1,3,0
+PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(STR)    VAL      - Gibt die Position der passenden schließenden Klammer in STR zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
+PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(STRING,POS)        STR      - Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen POS und der tatsächlichen Position des Werts werden ignoriert.
+PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)              VAL      - Heaviside-(Theta)-Funktion. 0 für x < 0, 1 sonst. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)              VAL      - numerischer Wert der Hermite-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_IDENTITY_[MAT]=					identity(n)               MAT      - Erzeugt eine n-dimensionale, quadratische Einheitsmatrix.
+PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)        VAL      - Imaginärteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_INVERT_[MAT]=						invert(MAT)               MAT      - Invertiert die Matrix MAT, falls eine Inverse der Matrix existiert. invert() prüft auch, ob die Dimensionen der übergebenen Matrix übereinstimmen.
+PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(STRING)           LOG      - gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false
+PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[NUM_LOGIC]=				is_nan(x)                 LOG      - gibt true zurück, wenn x den Wert nan hat, sonst false
+PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)           LOG      - gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false
+PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_[NUM_POLYNOMIAL]=		laguerre(n,x)             VAL      - numerischer Wert der Laguerre-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_A_[NUM_POLYNOMIAL]=		laguerre_a(n,k,x)         VAL      - numerischer Wert der assoziierten Laguerre-Polynome der Ordnung n >= 0 mit k = [0,n] an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_LCM_[NUM]=						lcm(n,k)                  VAL      - berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k
+PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_[NUM_POLYNOMIAL]=		legendre(n,x)             VAL      - numerischer Wert der Legendre-Polynome der Ordnung n >= 0 an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_A_[NUM_POLYNOMIAL]=		legendre_a(l,m,x)         VAL      - numerischer Wert der assoziierten Legendre-Polynome der Ordnung l >= 0 mit m = [-l,l] an der Stelle x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_LN_[NUM_LOGARITHMIC]=				ln(x)                     VAL      - natürlicher Logarithmus von x. Definiert im Bereich (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOG10_[NUM_LOGARITHMIC]=			log10(x)                  VAL      - Logarithmus zur Basis 10 von x. Kann durch 'log(x)' abgekürzt werden. Definiert im Bereich (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOG2_[NUM_LOGARITHMIC]=			log2(x)                   VAL      - Logarithmus zur Basis 2 von x. Definiert im Bereich (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_MATFC_[MAT]=						matfc(X,Y,Z,...)          MAT      - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFCF_[MAT]=						matfcf(X,Y,Z,...)         MAT      - Erzeugt eine Matrix aus den Spalten X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFL_[MAT]=						matfl(X,Y,Z,...)          MAT      - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MATFLF_[MAT]=						matflf(X,Y,Z,...)         MAT      - Erzeugt eine Matrix aus den Zeilen X,Y,Z,... Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen logisch ergänzt.
+PARSERFUNCS_LISTFUNC_FUNC_MAX_[NUM_STATS_STRING]=			max(x,y,z,...)            ARG      - Maximum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
+PARSERFUNCS_LISTFUNC_FUNC_MED_[NUM_STATS]=					med(x,y,z,...)            VAL      - Median aus x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_MIN_[NUM_STATS_STRING]=			min(x,y,z,...)            ARG      - Minimum aus x,y,z,... Kann auch auf Zeichenketten angewendet werden (verwendet Zeichenkettenlogik)
+PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)              VAL      - Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n am Ort x. Definiert auf R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)           VAL      - Berechnet die Norm des Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_NUM_[NUM_STATS_STRING]=			num(x,y,z,...)            VAL      - Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden und zählt jede nicht-leere Zeichenkette
+PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                  MAT      - Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
+PARSERFUNCS_LISTFUNC_FUNC_PCT_[NUM_STATS]=					pct(x,y,z,...,p)          VAL      - p-tes Perzentil aus x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_PHI_[NUM_ANGULAR_COORDS]=			phi(x,y)                  VAL      - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)            VAL      - Produkt der Argumente x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_RADIAN_[NUM_ANGULAR]=				radian(alpha)             VAL      - Bogenmaßwert von Winkel alpha [Grad]. Definiert für ganz R
+PARSERFUNCS_LISTFUNC_FUNC_RAND_[NUM_RANDOM_DISTRIB]=		rand(x0,x1)               VAL      - Generiert eine (reelle und gleichverteilte) Zufallszahl im Intervall [x0,x1)
+PARSERFUNCS_LISTFUNC_FUNC_RANGE_[NUM]=						range(VAR,LFT,RGHT)       VAL      - Schränkt VAR auf das Intervall [LFT,RGHT] ein
+PARSERFUNCS_LISTFUNC_FUNC_RECT_[NUM_DISTRIB]=				rect(x,x0,x1)             VAL      - Rechteckfunktion: 1 für x in [x0,x1]; 0 sonst
+PARSERFUNCS_LISTFUNC_FUNC_REPEAT_[STRING]=					repeat(STRING,n)          STR      - Gibt n Kopien von STRING zurück
+PARSERFUNCS_LISTFUNC_FUNC_REPLACE_[STRING]=					replace(S,P,L,T)          STR      - Ersetzt L Zeichen ab der Stelle P in der Zeichenkette S mit der Zeichenkette T
+PARSERFUNCS_LISTFUNC_FUNC_REPLACEALL_[STRING]=				replaceall(S,T,U,P,Q)     STR      - Ersetzt alle Vorkommnisse der zweiten Zeichenkette T in der ersten Zeichenkette S mit der dritten Zeichenkette U. Die Variablen P und Q sind optional und geben Anfangs- und Endpunkt der Ersetzung vor
+PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                   VAL      - x auf eine Ganzzahl runden
+PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                   VAL      - rundet x auf die nächsthöhere Ganzzahl auf
+PARSERFUNCS_LISTFUNC_FUNC_ROUND_[NUM]=						round(x,n)                VAL      - rundet x auf n Nachkommastellen
+PARSERFUNCS_LISTFUNC_FUNC_SBESSEL_[NUM_POLYNOMIAL_PHYSICS]=	sbessel(n,x)              VAL      - sphärische Besselfunktion der Ordnung n. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_SIGN_[NUM]=						sign(x)                   VAL      - Vorzeichen von x
+PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                    VAL      - Sinus von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                   VAL      - Sinus cardinalis von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                   VAL      - Sinus Hyperbolicus von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)             VAL      - sphärische Neumannfunktion der Ordnung n. Definiert auf R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)                VEC      - Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.
+PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(STRING,CHAR)       {STR}     - Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf
+PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                   VAL      - Wurzel aus x. Definiert im Bereich [0, inf)
+PARSERFUNCS_LISTFUNC_FUNC_STD_[NUM_STATS]=					std(x,y,z,...)            VAL      - Standardabweichung von x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(STR1,STR2,P)       VAL      - Gibt die Position des ersten Auftretens von STR1 in STR2 ab dem Zeichen P zurück. P ist ein optionaler Startwert für die erste Position und standardmäßig ist P = 1. Falls nichts gefunden wird, wird false zurückgegeben
+PARSERFUNCS_LISTFUNC_FUNC_STRING_CAST_[STRING]=				string_cast(EXPR)         STR      - Wandelt EXPR ungeachtet möglicher Rechenoperationen oder Zeichenkettenausdrücke in eine Zeichenkette um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
+PARSERFUNCS_LISTFUNC_FUNC_STRLEN_[STRING]=					strlen(STRING)            VAL      - Gibt die Anzahl an Zeichen in der Zeichenkette STRING zurück
+PARSERFUNCS_LISTFUNC_FUNC_STRRFND_[STRING]=					strrfnd(STR1,STR2,P)      VAL      - Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück. P ist ein optionaler Startwert für letzte Position und standardmäßig ist P = strlen(STR2). Falls nichts gefunden wird, wird false zurückgegeben
+PARSERFUNCS_LISTFUNC_FUNC_STUDENT_T_[NUM_DISTRIB_STATS]=	student_t(n,c)            VAL      - Berechnet den zweiseitigen Student-Faktor t für n Messungen mit dem Konfidenzintervall 0 < c < 1
+PARSERFUNCS_LISTFUNC_FUNC_SUBSTR_[STRING]=					substr(STRING,n,l)        STR      - Gibt l Zeichen ab dem n-ten Zeichen aus STRING als neue Zeichenkette zurück
+PARSERFUNCS_LISTFUNC_FUNC_SUM_[NUM_STATS_STRING]=			sum(x,y,z,...)            ARG      - Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden (verkettet diese)
+PARSERFUNCS_LISTFUNC_FUNC_TAN_[NUM_TRIGONOMETRIC]=			tan(x)                    VAL      - Tangens von x. Definiert auf R \ {-n*PI/2, n*PI/2}. n ist eine natürliche Zahl > 0.
+PARSERFUNCS_LISTFUNC_FUNC_TANH_[NUM_HYPERBOLIC]=			tanh(x)                   VAL      - Tangens Hyperbolicus von x. Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_THETA_[NUM_ANGULAR_COORDS]=		theta(x,y,z)              VAL      - Berechnet den Winkel zwischen z-Achse und dem Vektor (x,y,z). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_TIME_[TIME]=						time()                    VAL      - Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück
+PARSERFUNCS_LISTFUNC_FUNC_TO_CHAR_[STRING]=					to_char(x,y,z,...)        STR      - Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück
+PARSERFUNCS_LISTFUNC_FUNC_TO_CMD_[STRING]=					to_cmd(STRING)            CMD      - Wandelt die enthaltene Zeichenkette STRING in einen Kommandoausdruck um
+PARSERFUNCS_LISTFUNC_FUNC_TO_LOWERCASE_[STRING]=			to_lowercase(STRING)      STR      - Wandelt die Großbuchstaben in STRING in Kleinbuchstaben um
+PARSERFUNCS_LISTFUNC_FUNC_TO_STRING_[STRING]=				to_string(EXPR)           STR      - Wandelt EXPR, wenn es sich um keine Zeichenkette handelt, in eine solche um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
+PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(STRING)      STR      - Wandelt die Kleinbuchstaben in STRING in Großbuchstaben um
+PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(STRING)          VAL      - Wertet die Zeichenkette STRING aus und wandelt das Ergebnis in einen Wert um
+PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)                VAL      - Berechnet die Spur der quadratischen Matrix MAT.
+PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)            MAT      - Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)
+PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)           STR      - Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen
+PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()                 VAL      - Gibt die Versionsnummer von NumeRe als natürliche Zahl zurück: v1.0.8 wird als 108 zurückgegeben
+PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)          VAL      - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)            VAL      - Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho >= 0 unter dem Winkel phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)                 MAT      - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
+PARSERFUNCS_LISTFUNC_FUNC_ARCV_[DRAW]=						arcv(P,[D,]D,a,STYLE)     {}       - Zeichnet einen Kreisbogen des Winkels a um den Punkt P vom Punkt P+D an. Die optionale Richtung D gibt den Normalvektor des Kreisbogens an, Standard ist die z-Achse. Der Umlaufsinn ist entgegen des Uhrzeigers. Der Stil der Kreisbogenlinie kann mittels STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_ARC_[DRAW]=						arc(P,[D,]P,a,STYLE)      {}       - Zeichnet einen Kreisbogen des Winkels a um den Punkt P vom Punkt P an. Die optionale Richtung D gibt den Normalvektor des Kreisbogens an, Standard ist die z-Achse. Der Umlaufsinn ist entgegen des Uhrzeigers. Der Stil der Kreisbogenlinie kann mittels STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_CIRCLE_[DRAW]=					circle(P,r,STYLE)         {}       - Zeichnet einen Kreis um den Punkt P mit dem Radius r. Die Füllung und der Stil des Kreises kann mittels STYLE geändert werden. polygon() mit n >= 30 erzielt ähnliche Ergebnisse und erlaubt ein Kippen des "Kreises".
+PARSERFUNCS_LISTFUNC_FUNC_CONEV_[DRAW]=						conev(P,D,r,r,STYLE)      {}       - Zeichnet einen Kegelmantel von P nach P+D mit Radius r. Mit dem zweiten Radius r wird ein Kegelstumpf dargestellt. Mittels STYLE kann durch @ die Darstellung der Deckelflächen erzwungen werden. Durch 4, 6 oder 8 wird eine 4-, 6- oder 8-Seite Pyramide(nstumpf) anstatt des Kegels gezeichnet.
+PARSERFUNCS_LISTFUNC_FUNC_CONE_[DRAW]=						cone(P,P,r,r,STYLE)       {}       - Zeichnet einen Kegelmantel von P nach P mit Radius r. Mit dem zweiten Radius r wird ein Kegelstumpf dargestellt. Mittels STYLE kann durch @ die Darstellung der Deckelflächen erzwungen werden. Durch 4, 6 oder 8 wird eine 4-, 6- oder 8-Seite Pyramide(nstumpf) anstatt des Kegels gezeichnet.
+PARSERFUNCS_LISTFUNC_FUNC_CUBOID_[DRAW]=					cuboid(P,D,D,D,STYLE)     {}       - Funktion zum Darstellen eines Spats: zeichnet einen Würfel mit der linken unteren Ecke bei P, von wo aus gleichzeitig ein Koordinatensystem ausgeht. Die Richtung D beschreibt die x-Richtung des Spats. Die y-Richtung wird orthogonal dazu gewählt, wobei die z-Koordinate identisch ist. Die z-Richtung wird aus den ersteren beiden Berechnet. Wenn eine zweite Richtung gegeben ist, so beschreibt diese die y-Richtung des Spats; die z-Richtung wird orthogonal zu den ersteren gewählt. Die dritte Richtung beschreibt schließlich auch die z-Richtung des Spats.
+PARSERFUNCS_LISTFUNC_FUNC_CURVE_[DRAW]=						curve(P,D,P,D,STYLE)      {}       - Zeichnet eine "Bezier"-Linie von P nach P. Die Richtungsvektoren D geben die jeweilige Krümmung der Kurve an. Zu beachten ist, dass das Koordinatensystem beim zweiten Punkt um PI gedreht ist (Ggf. sind zusätzliche Vorzeichen beim zweiten Richtungsvektor nötig). Farbe, Form und Linienenden können mittels STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_DROP_[DRAW]=						drop(P,D,s,a,STYLE)       {}       - Zeichnet einen dreidimensionalen Tropfen am Punkt P, der in die Richtung D geneigt ist. Die optionalen Parameter s und a können verwendet werden, um die Form des Tropfens zu verändern. Die Farbe kann mittels STYLE geändert werden und die Plotoption light macht den 3D-Effekt sichtbar.
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPSEV_[DRAW]=					ellipsev(P,D,r,STYLE)     {}       - Generiert eine Ellipse mit den Brennpunkten P und P+D und dem Ellipsenradius r. Die Füllung und der Stil kann durch STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPSE_[DRAW]=					ellipse(P,P,r,STYLE)      {}       - Generiert eine Ellipse mit den Brennpunkten P und P und dem Ellipsenradius r. Die Füllung und der Stil kann durch STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,STYLE)      {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die ersten beiden Richtungsvektoren sind die untere und linke Kante und der letzte die Diagonale. Die Füllung des Vierecks kann mit STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_FACE_[DRAW]=						face(P,P,P,P,STYLE)       {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die Ecken sind dabei von unten links an entgegen des Uhrzeigersinns numeriert. Die Füllung des Vierecks kann mit STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_POINT_[DRAW]=						point(P,STYLE)            {}       - Zeichnet einen Punkt an die Stelle P. Die Form des Punktes und seine Farbe kann mittels STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_POLYGONV_[DRAW]=					polygonv(P,D,n,STYLE)     {}       - Zeichnet ein regelmäßiges n-Eck um den Punkt P vom Punkt P+D an. Die Füllung und der Stil des n-Ecks kann mittels STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_POLYGON_[DRAW]=					polygon(P,P,n,STYLE)      {}       - Zeichnet ein regelmäßiges n-Eck um den Punkt P vom Punkt P an. Die Füllung und der Stil des n-Ecks kann mittels STYLE geändert werden.
+PARSERFUNCS_LISTFUNC_FUNC_SPHERE_[DRAW]=					sphere(P,r,STYLE)         {}       - Zeichnet eine Kugel mit Radius r an den Koordinaten P. Die Farbe kann mittels STYLE beeinflusst werden. Die Plotoption light macht den 3D-Effekt sichtbar.
+PARSERFUNCS_LISTFUNC_FUNC_TEXT_[DRAW]=						text(P,P,TEXT,STYLE)      {}       - Druckt den Text TEXT an der Stelle P. Die Ausrichtung und Farbe kann mittels STYLE beeinflusst werden, wobei die Ausrichtung und die Gestalt durch : von der Farbe getrennt werden muss. Die Textfarben werden wie alle anderen Farben entsprechend "help colors" bestimmt; die Ausrichtung durch LRC (Left-Right-Centered) und die Gestalt durch rib (roman-italic-bold). Das optionale zweite Koordinatenpaar kann verwendet werden, wenn der Text nicht horizontal gedruckt werden soll.
+PARSERFUNCS_LISTFUNC_FUNC_TRACEV_[DRAW]=					tracev(P,D,STYLE)         {}       - Zeichnet eine gerade Linie von P nach P+D. Falls nur ein Punkt angegeben wird, wird der fehlende Punkt in den Ursprung gelegt. Die Farbe, Form und die Enden der Linie können mittels STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_TRACE_[DRAW]=						trace(P,P,STYLE)          {}       - Zeichnet eine gerade Linie von P nach P. Falls nur ein Punkt angegeben wird, wird der fehlende Punkt in den Ursprung gelegt. Die Farbe, Form und die Enden der Linie können mittels STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_TRIANGLEV_[DRAW]=					trianglev(P,D,D,STYLE)    {}       - Zeichnet ein Dreieck. Dabei können zwei oder drei Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein gleichseitiges Dreieck; bei drei ein allgemeines Dreieck. Die Ecken sind dabei von unten links an entgegen des Uhrzeigersinns numeriert. Die Füllung des Dreiecks kann mit STYLE beeinflusst werden.
+PARSERFUNCS_LISTFUNC_FUNC_TRIANGLE_[DRAW]=					triangle(P,P,P,STYLE)     {}       - Zeichnet ein Dreieck. Dabei können zwei oder drei Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein gleichseitiges Dreieck; bei drei ein allgemeines Dreieck. Die Ecken sind dabei von unten links an entgegen des Uhrzeigersinns numeriert. Die Füllung des Dreiecks kann mit STYLE beeinflusst werden.
 # Ende Funktionentabelle
-PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt.
+PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt; leere Klammern indizieren, dass die Funktion keinen Wert zurückgibt.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Weiterführende Informationen zu den vordefinierten mathematischen Funktionen können in der NumeRe-Hilfe mittels "help func" erhalten werden.
 PARSERFUNCS_LISTDEFINE_HEADLINE=Eigene definierte Funktionen
 PARSERFUNCS_LISTDEFINE_EMPTY=Keine Funktionen definiert.
@@ -458,110 +480,121 @@ PARSERFUNCS_LISTEXPRVAR_NOVARS=Ausdruck enthält keine Variablen.
 PARSERFUNCS_LISTEXPRVAR_FOOTNOTE=%%1%% Variable(n)
 PARSERFUNCS_LISTCMD_HEADLINE=Kommandosatz
 # Kommandotabelle
-PARSERFUNCS_LISTCMD_TABLEHEAD=			Befehl:      Syntax:        Funktion:
-PARSERFUNCS_LISTCMD_CMD_ABORT=			abort                       - Abbrechen einer Schleifendeklaration oder einer Plotkomposition
-PARSERFUNCS_LISTCMD_CMD_ABOUT=			about                       - rechtliche Informationen zu NumeRe
-PARSERFUNCS_LISTCMD_CMD_APPEND=			append       NM [-PAR]      - Dateien an Daten im Speicher anhängen
-PARSERFUNCS_LISTCMD_CMD_AUDIO=			audio        OB [-PAR]      - Erzeugt eine WAVE-Datei aus einem Datensatz
-PARSERFUNCS_LISTCMD_CMD_BREAK=			break                       - Schleifendurchlauf abbrechen
-PARSERFUNCS_LISTCMD_CMD_CACHE=			cache        -PAR           - Optionen auf dem Cache
-PARSERFUNCS_LISTCMD_CMD_CLEAR=			clear        OB [-PAR]      - Entfernt alle Caches/alle Elemente im string()-Objekt unwiderbringlich von diesem Rechner
-PARSERFUNCS_LISTCMD_CMD_COMPOSE=		compose                     - Startet die Komposition mehrerer Plotstile
-PARSERFUNCS_LISTCMD_CMD_CONT=			cont         EX [-set PAR]  - Erzeugung eines Konturlinien-Plots
-PARSERFUNCS_LISTCMD_CMD_CONT3D=			cont3d       EX [-set PAR]  - Erzeugung eines 3D-Konturlinien-Plots
-PARSERFUNCS_LISTCMD_CMD_CONTINUE=		continue                    - Restlichen Schleifendurchlauf überspringen
-PARSERFUNCS_LISTCMD_CMD_COPY=			copy         OB [-PAR]      - Kopiert (je nach Ausdruck) Einträge/Spalten/Untertabellen zwischen Datenobjekten oder Dateien.
-PARSERFUNCS_LISTCMD_CMD_DATA=			data         -PAR           - Optionen auf Datensätzen
-PARSERFUNCS_LISTCMD_CMD_DATAGRID=		datagrid     EX -PAR        - Datengitter erzeugen
-PARSERFUNCS_LISTCMD_CMD_DEFINE=			define       EX [-set PAR]  - Ermöglicht die Definition eigener Funktionen.
-PARSERFUNCS_LISTCMD_CMD_DELETE=			delete       OB [-PAR]      - Entfernt Einträge aus dem Cache/dem string()-Objekt
-PARSERFUNCS_LISTCMD_CMD_DENS=			dens         EX [-set PAR]  - Erzeugung eines Dichte-Plots
-PARSERFUNCS_LISTCMD_CMD_DENS3D=			dens3d       EX [-set PAR]  - Erzeugung eines 3D-Dichte-Plots
-PARSERFUNCS_LISTCMD_CMD_DIFF=			diff         EX -set PAR    - Ruft die Funktion zur numerischen Differentiation einer Funktion oder eines Datensatzes auf.
-PARSERFUNCS_LISTCMD_CMD_DRAW=			draw         EX [-set PAR]  - Zeichenmodus.
-PARSERFUNCS_LISTCMD_CMD_DRAW3D=			draw3d       EX [-set PAR]  - 3D-Zeichenmodus.
-PARSERFUNCS_LISTCMD_CMD_EDIT=			edit         OB             - Öffnet einen Cache, eine Datei oder ein Verzeichnis zum Bearbeiten
-PARSERFUNCS_LISTCMD_CMD_ELSE=			else                        - Startet die Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
-PARSERFUNCS_LISTCMD_CMD_ELSEIF=			elseif       (EX)           - Startet eine bedingte Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
-PARSERFUNCS_LISTCMD_CMD_ENDCOMPOSE=		endcompose                  - Beendet die Definition einer zuvor begonnenen Plotkomposition
-PARSERFUNCS_LISTCMD_CMD_ENDFOR=			endfor       [-PAR]         - Beendet die Definition einer zuvor begonnenen Zählschleife
-PARSERFUNCS_LISTCMD_CMD_ENDIF=			endif                       - Beendet die Definition einer IF-Verzweigung
-PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE=	endprocedure                - Beendet die Definition einer zuvor begonnenen NumeRe-Prozedur
-PARSERFUNCS_LISTCMD_CMD_ENDWHILE=		endwhile     [-PAR]         - Beendet die Definition einer zuvor begonnenen While-Schleife
-PARSERFUNCS_LISTCMD_CMD_EVAL=			eval         EX -set PAR    - Berechnet Funktionswerte des Ausdrucks
-PARSERFUNCS_LISTCMD_CMD_EXPLICIT=		explicit     CMD            - Deaktiviert alle Plugins für das direkt darauffolgende Kommando
-PARSERFUNCS_LISTCMD_CMD_EXPORT=			export       OB [-PAR]      - Textexport eines Datensatzes
-PARSERFUNCS_LISTCMD_CMD_EXTREMA=		extrema      EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Extremstellen eines Ausdrucks oder eines Datensatzes auf.
-PARSERFUNCS_LISTCMD_CMD_FFT=			fft          OB [-PAR]      - Fourier-Transformation eines Datensatzes
-PARSERFUNCS_LISTCMD_CMD_FIND=			find         NM             - NumeRe-Stichwortsuche
-PARSERFUNCS_LISTCMD_CMD_FIT=			fit          OB -PAR        - Funktionen über Parameter an Datensätze anpassen
-PARSERFUNCS_LISTCMD_CMD_FITW=			fitw         OB -PAR        - Funktionen über Parameter an Datensätze mit Fehlerwerten anpassen
-PARSERFUNCS_LISTCMD_CMD_FOR=			for          (EX)           - Startet die Definition einer Zählschleife.
-PARSERFUNCS_LISTCMD_CMD_GET=			get          -PAR           - Programmeinstellungen abfragen
-PARSERFUNCS_LISTCMD_CMD_GLOBAL=			global       EX/CMD         - Eine Scriptzeile als global deklarieren
-PARSERFUNCS_LISTCMD_CMD_GRAD=			grad         EX [-set PAR]  - Erzeugung eines Gradienten-Plots
-PARSERFUNCS_LISTCMD_CMD_GRAD3D=			grad3d       EX [-set PAR]  - Erzeugung eines 3D-Gradienten-Plots
-PARSERFUNCS_LISTCMD_CMD_HELP=			help         [NM]           - NumeRe-Hilfe
-PARSERFUNCS_LISTCMD_CMD_HIST=			hist         OB [-PAR]      - Erzeugen eines Histogrammes
-PARSERFUNCS_LISTCMD_CMD_HIST2D=			hist2d       OB [-PAR]      - Generiert ein 2D-Histogramm eines (x,y,z)-Datensatzes. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel
-PARSERFUNCS_LISTCMD_CMD_HLINE=			hline        [-PAR]         - Zeichnet eine horizontale Doppellinie. Mit "-single" wird eine Einfachlinie gezeichnet
-PARSERFUNCS_LISTCMD_CMD_IF=				if           (EX)           - Startet die Definition einer IF-Verzweigung.
-PARSERFUNCS_LISTCMD_CMD_IFNDEFINED=		ifndefined   EX [-set PAR]  - Prüft vor der Definition, ob die zu definierende Funktion nicht schon bereits definiert wurde.
-PARSERFUNCS_LISTCMD_CMD_INSTALL=		install      NM             - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
-PARSERFUNCS_LISTCMD_CMD_INTEGRATE=		integrate    EX -set PAR    - Ruft die Funktion zur numerischen Integration einer Funktion f(x) oder f(x,y) auf.
-PARSERFUNCS_LISTCMD_CMD_LIST=			list         -PAR           - Objekte auflisten
-PARSERFUNCS_LISTCMD_CMD_LOAD=			load         NM [-PAR]      - Laden der Daten einer Datei
-PARSERFUNCS_LISTCMD_CMD_MATOP=			matop        EX             - Matrixevaluation des Ausdrucks EX. ("mtrxop" ist ein Synonym)
-PARSERFUNCS_LISTCMD_CMD_MESH=			mesh         EX [-set PAR]  - Erzeugung von Gitterplots
-PARSERFUNCS_LISTCMD_CMD_MESH3D=			mesh3d       EX [-set PAR]  - Erzeugung von 3D-Gitterplots
-PARSERFUNCS_LISTCMD_CMD_MOVE=			move         OB -PAR        - Verschiebt (je nach Ausdruck) Einträge/ Spalten/ Untertabellen in Caches oder Dateien.
-PARSERFUNCS_LISTCMD_CMD_NAMESPACE=		namespace    [NM]           - Wechselt den Namensraum in Prozeduren
-PARSERFUNCS_LISTCMD_CMD_NEW=			new          -PAR           - Erzeugen neuer Verzeichnisse, Scripte, Prozeduren, Dateien und Caches
-PARSERFUNCS_LISTCMD_CMD_ODESOLVE=		odesolve     EX -set PAR    - Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch
-PARSERFUNCS_LISTCMD_CMD_PLOT=			plot         EX [-set PAR]  - Ermöglicht das graphische Darstellen von Daten und Funktionen.
-PARSERFUNCS_LISTCMD_CMD_PLOT3D=			plot3d       EX [-set PAR]  - graphische Darstellung dreidimensionaler Datensätze und Trajektorien.
-PARSERFUNCS_LISTCMD_CMD_PRINT=			print        STR            - Gibt den übergebenen String STR ohne die umgebenden Anführungszeichen als Bildschirmmeldung aus
-PARSERFUNCS_LISTCMD_CMD_PROCEDURE=		procedure    $NM(ARGS)      - Definiert eine NumeRe-Prozedur
-PARSERFUNCS_LISTCMD_CMD_PROGRESS=		progress     EX [-set PAR]  - Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet.
-PARSERFUNCS_LISTCMD_CMD_PULSE=			pulse        OB             - Bestimmt die Pulseigenschaften des übergebenen Datensatzes.
-PARSERFUNCS_LISTCMD_CMD_QUIT=			quit         [-PAR]         - NumeRe beenden
-PARSERFUNCS_LISTCMD_CMD_RANDOM=			random       -PAR           - Zufallszahlengenerator mit wählbaren Verteilungen
-PARSERFUNCS_LISTCMD_CMD_READ=			read         NM [-PAR]      - Lesen aus einer Datei
-PARSERFUNCS_LISTCMD_CMD_READLINE=		readline     [-PAR]         - Formatierte Wertabfrage
-PARSERFUNCS_LISTCMD_CMD_REDEFINE=		redefine     EX [-set PAR]  - Ermöglicht eine Neudefinition einer selbst definierten Funktion.
-PARSERFUNCS_LISTCMD_CMD_REGULARIZE=		regularize   OB [-PAR]      - Regularisiert Datenreihen mit unregelmäßig verteilten x-Werten.
-PARSERFUNCS_LISTCMD_CMD_RELOAD=			reload       -OB            - Aktualisiert die Daten im Speicher, wenn sie extern bearbeitet wurden
-PARSERFUNCS_LISTCMD_CMD_REMOVE=			remove       OB [-PAR]      - Entfernt Caches oder die angegebene Datei unwiderbringlich von diesem Computer.
-PARSERFUNCS_LISTCMD_CMD_RENAME=			rename       -OB            - Benennt einen vorhandenen Cache um.
-PARSERFUNCS_LISTCMD_CMD_REPLACELINE=	replaceline  STR [-PAR]     - Ermöglicht einfache Korrekturen einer Schleifen- oder Bedingungsdeklaration
-PARSERFUNCS_LISTCMD_CMD_RESAMPLE=		resample     OB -PAR        - Ermöglicht die Änderung der Samplefrequenz von Datenreihen
-PARSERFUNCS_LISTCMD_CMD_RETOQUE=		retoque      OB [-PAR]      - Entfernt ungültige Werte aus Datensätzen
-PARSERFUNCS_LISTCMD_CMD_RETURN=			return       [EX]           - Deklariert den Rückgabewert in einer Prozedur
-PARSERFUNCS_LISTCMD_CMD_SAVE=			save         -OB            - Speichern eines Objekts
-PARSERFUNCS_LISTCMD_CMD_SCRIPT=			script       -PAR           - Scripte laden und starten
-PARSERFUNCS_LISTCMD_CMD_SET=			set          -PAR           - Programmeinstellung tätigen
-PARSERFUNCS_LISTCMD_CMD_SHOW=			show         OB             - Den Inhalt eines Datensatzes anzeigen
-PARSERFUNCS_LISTCMD_CMD_SMOOTH=			smooth       OB -PAR        - Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung.
-PARSERFUNCS_LISTCMD_CMD_SORT=			sort         -OB PAR        - Sortiert einen Datensatz
-PARSERFUNCS_LISTCMD_CMD_START=			start        NM             - Startet das bezeichnete Script
-PARSERFUNCS_LISTCMD_CMD_STATS=			stats        OB [-PAR]      - Berechnung der Statistiken eines Datensatzes
-PARSERFUNCS_LISTCMD_CMD_STFA=			stfa         OB [-PAR]      - Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes
-PARSERFUNCS_LISTCMD_CMD_STR=			str          EX             - Lokalen Zeichenkettenvariablensatz in Prozeduren definieren
-PARSERFUNCS_LISTCMD_CMD_SUBPLOT=		subplot      [EX -set PAR]  - Startet einen neuen Unterplot im multiplot-Modus von compose
-PARSERFUNCS_LISTCMD_CMD_SURF=			surf         EX [-set PAR]  - Erzeugung von Oberflächen-Plots
-PARSERFUNCS_LISTCMD_CMD_SURF3D=			surf3d       EX [-set PAR]  - Erzeugung von 3D-Oberflächen-Plots
-PARSERFUNCS_LISTCMD_CMD_SWAP=			swap         -OB            - Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus
-PARSERFUNCS_LISTCMD_CMD_TAYLOR=			taylor       EX -set PAR    - Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n.
-PARSERFUNCS_LISTCMD_CMD_THROW=			throw        [STR]          - Prozedurauswertung im Notfall abbrechen
-PARSERFUNCS_LISTCMD_CMD_UNDEFINE=		undefine     EX             - Entfernen einer Funktionsdefinition
-PARSERFUNCS_LISTCMD_CMD_UNINSTALL=		uninstall    NM             - Entfernt das bezeichnete Plugin. Kann nur von der Konsole aus verwendet werden
-PARSERFUNCS_LISTCMD_CMD_VAR=			var          EX             - Lokalen Variablensatz in Prozeduren definieren
-PARSERFUNCS_LISTCMD_CMD_VECT=			vect         EX [-set PAR]  - Erzeugung eines (2D-)Vektorfeldplots
-PARSERFUNCS_LISTCMD_CMD_VECT3D=			vect3d       EX [-set PAR]  - Erzeugung eines 3D-Vektorfeldplots
-PARSERFUNCS_LISTCMD_CMD_WHILE=			while        (EX)           - Startet die Definition einer While-Schleife
-PARSERFUNCS_LISTCMD_CMD_WORKPATH=		workpath     NM             - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung
-PARSERFUNCS_LISTCMD_CMD_WRITE=			write        STR -set PAR   - Schreiben in eine Datei
-PARSERFUNCS_LISTCMD_CMD_ZEROES=			zeroes       EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Nullstellen eines Ausdrucks oder eines Datensatzes auf.
+PARSERFUNCS_LISTCMD_TYPE_FLOWCTRL=Programmfluss
+PARSERFUNCS_LISTCMD_TYPE_DATACTRL=Datenkontrolle
+PARSERFUNCS_LISTCMD_TYPE_DATACREATION=Datenerzeugung
+PARSERFUNCS_LISTCMD_TYPE_LOADSAVE=Laden und Speichern
+PARSERFUNCS_LISTCMD_TYPE_EVAL=Auswerten
+PARSERFUNCS_LISTCMD_TYPE_PLOTTING=Plotten
+PARSERFUNCS_LISTCMD_TYPE_PROC=Prozeduren
+PARSERFUNCS_LISTCMD_TYPE_DEF=Definitionen
+PARSERFUNCS_LISTCMD_TYPE_MAINCTRL=Steuerung
+PARSERFUNCS_LISTCMD_TYPE_MISC=Verschiedenes
+PARSERFUNCS_LISTCMD_TYPE_PLUGINS=Plugins
+PARSERFUNCS_LISTCMD_TABLEHEAD=							Befehl:      Syntax:        Funktion:
+PARSERFUNCS_LISTCMD_CMD_ABORT_[FLOWCTRL]=				abort                       - Abbrechen einer Schleifendeklaration oder einer Plotkomposition
+PARSERFUNCS_LISTCMD_CMD_ABOUT_[MAINCTRL]=				about                       - rechtliche Informationen zu NumeRe
+PARSERFUNCS_LISTCMD_CMD_APPEND_[lOADSAVE]=				append       NM [-PAR]      - Dateien an Daten im Speicher anhängen
+PARSERFUNCS_LISTCMD_CMD_AUDIO_[LOADSAVE]=				audio        OB [-PAR]      - Erzeugt eine WAVE-Datei aus einem Datensatz
+PARSERFUNCS_LISTCMD_CMD_BREAK_[FLOWCTRL]=				break                       - Schleifendurchlauf abbrechen
+PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR           - Optionen auf dem Cache
+PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]      - Entfernt alle Caches/alle Elemente im string()-Objekt unwiderbringlich von diesem Rechner
+PARSERFUNCS_LISTCMD_CMD_COMPOSE_[PLOTTING]=				compose                     - Startet die Komposition mehrerer Plotstile
+PARSERFUNCS_LISTCMD_CMD_CONT_[PLOTTING]=				cont         EX [-set PAR]  - Erzeugung eines Konturlinien-Plots
+PARSERFUNCS_LISTCMD_CMD_CONT3D_[PLOTTING]=				cont3d       EX [-set PAR]  - Erzeugung eines 3D-Konturlinien-Plots
+PARSERFUNCS_LISTCMD_CMD_CONTINUE_[FLOWCTRL]=			continue                    - Restlichen Schleifendurchlauf überspringen
+PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]      - Kopiert (je nach Ausdruck) Einträge/Spalten/Untertabellen zwischen Datenobjekten oder Dateien.
+PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR           - Optionen auf Datensätzen
+PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR        - Datengitter erzeugen
+PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]  - Ermöglicht die Definition eigener Funktionen.
+PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]      - Entfernt Einträge aus dem Cache/dem string()-Objekt
+PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]  - Erzeugung eines Dichte-Plots
+PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]  - Erzeugung eines 3D-Dichte-Plots
+PARSERFUNCS_LISTCMD_CMD_DIFF_[EVAL]=					diff         EX -set PAR    - Ruft die Funktion zur numerischen Differentiation einer Funktion oder eines Datensatzes auf.
+PARSERFUNCS_LISTCMD_CMD_DRAW_[PLOTTING]=				draw         EX [-set PAR]  - Zeichenmodus.
+PARSERFUNCS_LISTCMD_CMD_DRAW3D_[PLOTTING]=				draw3d       EX [-set PAR]  - 3D-Zeichenmodus.
+PARSERFUNCS_LISTCMD_CMD_EDIT_[MAINCTRL]=				edit         OB             - Öffnet einen Cache, eine Datei oder ein Verzeichnis zum Bearbeiten
+PARSERFUNCS_LISTCMD_CMD_ELSE_[FLOWCTRL]=				else                        - Startet die Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
+PARSERFUNCS_LISTCMD_CMD_ELSEIF_[FLOWCTRL]=				elseif       (EX)           - Startet eine bedingte Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll.
+PARSERFUNCS_LISTCMD_CMD_ENDCOMPOSE_[PLOTTING]=			endcompose                  - Beendet die Definition einer zuvor begonnenen Plotkomposition
+PARSERFUNCS_LISTCMD_CMD_ENDFOR_[FLOWCTRL]=				endfor       [-PAR]         - Beendet die Definition einer zuvor begonnenen Zählschleife
+PARSERFUNCS_LISTCMD_CMD_ENDIF_[FLOWCTRL]=				endif                       - Beendet die Definition einer IF-Verzweigung
+PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE_[FLOWCTRL_PROC]=	endprocedure                - Beendet die Definition einer zuvor begonnenen NumeRe-Prozedur
+PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]         - Beendet die Definition einer zuvor begonnenen While-Schleife
+PARSERFUNCS_LISTCMD_CMD_EVAL_[DATACREATION]=			eval         EX -set PAR    - Berechnet Funktionswerte des Ausdrucks
+PARSERFUNCS_LISTCMD_CMD_EXPLICIT_[MAINCTRL]=			explicit     CMD            - Deaktiviert alle Plugins für das direkt darauffolgende Kommando
+PARSERFUNCS_LISTCMD_CMD_EXPORT_[LOADSAVE]=				export       OB [-PAR]      - Textexport eines Datensatzes
+PARSERFUNCS_LISTCMD_CMD_EXTREMA_[EVAL]=					extrema      EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Extremstellen eines Ausdrucks oder eines Datensatzes auf.
+PARSERFUNCS_LISTCMD_CMD_FFT_[EVAL]=						fft          OB [-PAR]      - Fourier-Transformation eines Datensatzes
+PARSERFUNCS_LISTCMD_CMD_FIND_[MAINCTRL]=				find         NM             - NumeRe-Stichwortsuche
+PARSERFUNCS_LISTCMD_CMD_FIT_[EVAL]=						fit          OB -PAR        - Funktionen über Parameter an Datensätze anpassen
+PARSERFUNCS_LISTCMD_CMD_FITW_[EVAL]=					fitw         OB -PAR        - Funktionen über Parameter an Datensätze mit Fehlerwerten anpassen
+PARSERFUNCS_LISTCMD_CMD_FOR_[FLOWCTRL]=					for          (EX)           - Startet die Definition einer Zählschleife.
+PARSERFUNCS_LISTCMD_CMD_GET_[MAINCTRL]=					get          -PAR           - Programmeinstellungen abfragen
+PARSERFUNCS_LISTCMD_CMD_GLOBAL_[MISC]=					global       EX/CMD         - Eine Scriptzeile als global deklarieren
+PARSERFUNCS_LISTCMD_CMD_GRAD_[PLOTTING]=				grad         EX [-set PAR]  - Erzeugung eines Gradienten-Plots
+PARSERFUNCS_LISTCMD_CMD_GRAD3D_[PLOTTING]=				grad3d       EX [-set PAR]  - Erzeugung eines 3D-Gradienten-Plots
+PARSERFUNCS_LISTCMD_CMD_HELP_[MAINCTRL]=				help         [NM]           - NumeRe-Hilfe
+PARSERFUNCS_LISTCMD_CMD_HIST_[EVAL]=					hist         OB [-PAR]      - Erzeugen eines Histogrammes
+PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]      - Generiert ein 2D-Histogramm eines (x,y,z)-Datensatzes. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel
+PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]         - Zeichnet eine horizontale Doppellinie. Mit "-single" wird eine Einfachlinie gezeichnet
+PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)           - Startet die Definition einer IF-Verzweigung.
+PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]  - Prüft vor der Definition, ob die zu definierende Funktion nicht schon bereits definiert wurde.
+PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM             - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
+PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR    - Ruft die Funktion zur numerischen Integration einer Funktion f(x) oder f(x,y) auf.
+PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR           - Objekte auflisten
+PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]      - Laden der Daten einer Datei
+PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX             - Matrixevaluation des Ausdrucks EX. ("mtrxop" ist ein Synonym)
+PARSERFUNCS_LISTCMD_CMD_MESH_[PLOTTING]=				mesh         EX [-set PAR]  - Erzeugung von Gitterplots
+PARSERFUNCS_LISTCMD_CMD_MESH3D_[PLOTTING]=				mesh3d       EX [-set PAR]  - Erzeugung von 3D-Gitterplots
+PARSERFUNCS_LISTCMD_CMD_MOVE_[MAINCTRL]=				move         OB -PAR        - Verschiebt (je nach Ausdruck) Einträge/ Spalten/ Untertabellen in Caches oder Dateien.
+PARSERFUNCS_LISTCMD_CMD_NAMESPACE_[PROC]=				namespace    [NM]           - Wechselt den Namensraum in Prozeduren
+PARSERFUNCS_LISTCMD_CMD_NEW_[MAINCTRL]=					new          -PAR           - Erzeugen neuer Verzeichnisse, Scripte, Prozeduren, Dateien und Caches
+PARSERFUNCS_LISTCMD_CMD_ODESOLVE_[EVAL]=				odesolve     EX -set PAR    - Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch
+PARSERFUNCS_LISTCMD_CMD_PLOT_[PLOTTING]=				plot         EX [-set PAR]  - Ermöglicht das graphische Darstellen von Daten und Funktionen.
+PARSERFUNCS_LISTCMD_CMD_PLOT3D_[PLOTTING]=				plot3d       EX [-set PAR]  - graphische Darstellung dreidimensionaler Datensätze und Trajektorien.
+PARSERFUNCS_LISTCMD_CMD_PRINT_[MISC_MAINCTRL]=			print        STR            - Gibt den übergebenen String STR ohne die umgebenden Anführungszeichen als Bildschirmmeldung aus
+PARSERFUNCS_LISTCMD_CMD_PROCEDURE_[FLOWCTRL_PROC]=		procedure    $NM(ARGS)      - Definiert eine NumeRe-Prozedur
+PARSERFUNCS_LISTCMD_CMD_PROGRESS_[MISC_FLOWCTRL]=		progress     EX [-set PAR]  - Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet.
+PARSERFUNCS_LISTCMD_CMD_PULSE_[EVAL]=					pulse        OB             - Bestimmt die Pulseigenschaften des übergebenen Datensatzes.
+PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]         - NumeRe beenden
+PARSERFUNCS_LISTCMD_CMD_RANDOM_[DATACREATION]=			random       -PAR           - Zufallszahlengenerator mit wählbaren Verteilungen
+PARSERFUNCS_LISTCMD_CMD_READ_[LOADSAVE]=				read         NM [-PAR]      - Lesen aus einer Datei
+PARSERFUNCS_LISTCMD_CMD_READLINE_[PROC]=				readline     [-PAR]         - Formatierte Wertabfrage
+PARSERFUNCS_LISTCMD_CMD_REDEFINE_[DEF]=					redefine     EX [-set PAR]  - Ermöglicht eine Neudefinition einer selbst definierten Funktion.
+PARSERFUNCS_LISTCMD_CMD_REGULARIZE_[EVAL]=				regularize   OB [-PAR]      - Regularisiert Datenreihen mit unregelmäßig verteilten x-Werten.
+PARSERFUNCS_LISTCMD_CMD_RELOAD_[LOADSAVE]=				reload       -OB            - Aktualisiert die Daten im Speicher, wenn sie extern bearbeitet wurden
+PARSERFUNCS_LISTCMD_CMD_REMOVE_[MAINCTRL]=				remove       OB [-PAR]      - Entfernt Caches oder die angegebene Datei unwiderbringlich von diesem Computer.
+PARSERFUNCS_LISTCMD_CMD_RENAME_[DATACTRL]=				rename       -OB            - Benennt einen vorhandenen Cache um.
+PARSERFUNCS_LISTCMD_CMD_REPLACELINE_[FLOWCTRL]=			replaceline  STR [-PAR]     - Ermöglicht einfache Korrekturen einer Schleifen- oder Bedingungsdeklaration
+PARSERFUNCS_LISTCMD_CMD_RESAMPLE_[EVAL]=				resample     OB -PAR        - Ermöglicht die Änderung der Samplefrequenz von Datenreihen
+PARSERFUNCS_LISTCMD_CMD_RETOQUE_[EVAL]=					retoque      OB [-PAR]      - Entfernt ungültige Werte aus Datensätzen
+PARSERFUNCS_LISTCMD_CMD_RETURN_[FLOWCTRL_PROC]=			return       [EX]           - Deklariert den Rückgabewert in einer Prozedur
+PARSERFUNCS_LISTCMD_CMD_SAVE_[LOADSAVE]=				save         -OB            - Speichern eines Objekts
+PARSERFUNCS_LISTCMD_CMD_SCRIPT_[MISC_MAINCTRL]=			script       -PAR           - Scripte laden und starten
+PARSERFUNCS_LISTCMD_CMD_SET_[MAINCTRL]=					set          -PAR           - Programmeinstellung tätigen
+PARSERFUNCS_LISTCMD_CMD_SHOW_[DATACTRL]=				show         OB             - Den Inhalt eines Datensatzes anzeigen
+PARSERFUNCS_LISTCMD_CMD_SMOOTH_[EVAL]=					smooth       OB -PAR        - Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung.
+PARSERFUNCS_LISTCMD_CMD_SORT_[DATACTRL]=				sort         -OB PAR        - Sortiert einen Datensatz
+PARSERFUNCS_LISTCMD_CMD_START_[MISC]=					start        NM             - Startet das bezeichnete Script
+PARSERFUNCS_LISTCMD_CMD_STATS_[EVAL]=					stats        OB [-PAR]      - Berechnung der Statistiken eines Datensatzes
+PARSERFUNCS_LISTCMD_CMD_STFA_[EVAL]=					stfa         OB [-PAR]      - Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes
+PARSERFUNCS_LISTCMD_CMD_STR_[PROC]=						str          EX             - Lokalen Zeichenkettenvariablensatz in Prozeduren definieren
+PARSERFUNCS_LISTCMD_CMD_SUBPLOT_[PLOTTING]=				subplot      [EX -set PAR]  - Startet einen neuen Unterplot im multiplot-Modus von compose
+PARSERFUNCS_LISTCMD_CMD_SURF_[PLOTTING]=				surf         EX [-set PAR]  - Erzeugung von Oberflächen-Plots
+PARSERFUNCS_LISTCMD_CMD_SURF3D_[PLOTTING]=				surf3d       EX [-set PAR]  - Erzeugung von 3D-Oberflächen-Plots
+PARSERFUNCS_LISTCMD_CMD_SWAP_[DATACTRL]=				swap         -OB            - Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus
+PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR    - Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n.
+PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]          - Prozedurauswertung im Notfall abbrechen
+PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX             - Entfernen einer Funktionsdefinition
+PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM             - Entfernt das bezeichnete Plugin. Kann nur von der Konsole aus verwendet werden
+PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX             - Lokalen Variablensatz in Prozeduren definieren
+PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]  - Erzeugung eines (2D-)Vektorfeldplots
+PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]  - Erzeugung eines 3D-Vektorfeldplots
+PARSERFUNCS_LISTCMD_CMD_WHILE_[FLOWCTRL]=				while        (EX)           - Startet die Definition einer While-Schleife
+PARSERFUNCS_LISTCMD_CMD_WORKPATH_[MISC_MAINCTRL]=		workpath     NM             - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung
+PARSERFUNCS_LISTCMD_CMD_WRITE_[LOADSAVE]=				write        STR -set PAR   - Schreiben in eine Datei
+PARSERFUNCS_LISTCMD_CMD_ZEROES_[EVAL]=					zeroes       EX -set PAR    - Ruft die Funktion zur numerischen Bestimmung der Nullstellen eines Ausdrucks oder eines Datensatzes auf.
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=Die Syntax ist schematisch angegeben: EX = Ausdruck, PAR = Parameter, OB = (Daten-)Objekt, STR = Zeichenkette, CMD = Kommando und NM = Name. Syntaxelemente in eckigen Klammern sind optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SIEHE AUCH: Zu jedem der gelisteten Befehle existiert ein Hilfeeintrag, der durch "help BEFEHL" aufgerufen werden kann.
@@ -915,7 +948,7 @@ GUI_SEARCH_END_HEAD=NumeRe: Suche abgeschlossen
 GUI_REPLACE_END=%%1%% Vorkommnisse von%%LINEBREAK%%"%%2%%" mit "%%3%%" ersetzt.
 GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
 # Options dialog
-GUI_OPTIONS_AUTOSAVE=Autosave-Intervall [sec]
+GUI_OPTIONS_AUTOSAVE=[sec] Cache-Autosave-Intervall
 GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo (im "list -files" Dialog)
@@ -956,12 +989,18 @@ GUI_ABOUT_TEAM=Projektleitung:%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Konzept/UI:
 GUI_ABOUT_CREDITS=NumeRe wäre ohne die verwendeten Bibliotheken, die geduldige Mithilfe%%LINEBREAK%%der Tester und der vielen Tutorials im Netz nicht möglich gewesen.%%LINEBREAK%%%%LINEBREAK%%Außerdem sei all den Urhebern der öffentlich zugänglichen Sourcecodes%%LINEBREAK%%gedankt, die in manchen Fällen die nötige Inspiration für die eigenen%%LINEBREAK%%Lösungen lieferten.%%LINEBREAK%%%%LINEBREAK%%Warum ist NumeRe kostenlos?%%LINEBREAK%%%%LINEBREAK%%NumeRe: Framework für Numerische Rechnungen is totally free software%%LINEBREAK%%and out of any charges. There shall never be any fees for using this%%LINEBREAK%%software. It's intended for educational and scientific use and we want%%LINEBREAK%%you to keep your money in your pockets. We believe that there's no%%LINEBREAK%%need for paying to get knowledge or education. In our opinion,%%LINEBREAK%%knowledge has no monetary value, it's just invaluable. Education is%%LINEBREAK%%also one reason you're paying taxes to your government—so ask yourself:%%LINEBREAK%%%%LINEBREAK%%why paying twice?
 GUI_ABOUT_STATS=C++-Codezeilen:%%LINEBREAK%%  ~24 000 (GUI)%%LINEBREAK%%  ~70 000 (Kernel)%%LINEBREAK%%SVN commits:%%LINEBREAK%%  ~50%%LINEBREAK%%Zahl der Quelldateien:%%LINEBREAK%%  ~150 (GUI)%%LINEBREAK%%  ~100 (Kernel)%%LINEBREAK%%Sprachen:%%LINEBREAK%%  2 (Deutsch und Englisch)%%LINEBREAK%%Beginn des Projekts:%%LINEBREAK%%  Ende Oktober 2013%%LINEBREAK%%Ende des Projekts:%%LINEBREAK%%  Nicht in Sicht%%LINEBREAK%%Zahl der behobenen Bugs:%%LINEBREAK%%  ~40 (Dokumentiert)%%LINEBREAK%%  ~400 (Undokumentiert)%%LINEBREAK%%Zahl der (neuen) Bugs, die es in einen RC geschafft haben:%%LINEBREAK%%  ~30%%LINEBREAK%%Zahl der (öffentlichen) Releases:%%LINEBREAK%%  ~25%%LINEBREAK%%Zahl der Kommentare zu NumeRe:%%LINEBREAK%%  ~10 (Komplimente)%%LINEBREAK%%  ~20 (Probleme)%%LINEBREAK%%  ~80 (Bugs)%%LINEBREAK%%Zahl der durchgemachten Nächte:%%LINEBREAK%%  keine%%LINEBREAK%%Zahl der "Hopplas" während einer Vorführung:%%LINEBREAK%%  ~50%%LINEBREAK%%Menge des verzehrten Koffeins:%%LINEBREAK%%  unmessbar
 # tree ctrl strings
+GUI_FILETREE=Dateien
+GUI_FUNCTIONTREE=Symbole
 GUI_TREE_WORKSPACE=Arbeitsplatz
 GUI_TREE_DATAFILES=Datenfiles
 GUI_TREE_SAVEDFILES=Gespeicherte Dateien
 GUI_TREE_SCRIPTS=Scripte
 GUI_TREE_PROCEDURES=Prozeduren
 GUI_TREE_PLOTS=Plots
+GUI_TREE_COMMANDS=Kommandos
+GUI_TREE_FUNCTIONS=Funktionen
+GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw
+GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl misc plugins
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Datei laden
 GUI_TREE_PUP_START=Script starten
@@ -972,6 +1011,13 @@ GUI_TREE_PUP_DELETEFILE=Löschen
 GUI_TREE_PUP_COPYFILE=Kopieren
 GUI_TREE_PUP_INSERTFILE=Kopierte Datei einfügen
 GUI_TREE_PUP_RENAMEFILE=Umbenennen
+GUI_TREE_PUP_INSERT_EDITOR=In den Editor einfügen
+GUI_TREE_PUP_INSERT_CONSOLE=In die Konsole einfügen
+GUI_TREE_PUP_HELPONITEM=Hilfe zu '%%1%%'
+GUI_TREE_PUP_SHOW_DESCRIPTION=Zeige Beschreibung
+# The history widget
+GUI_HISTORY_DELETELINE=Lösche diese Zeile
+GUI_HISTORY_COPYLINE=Kopiere diese Zeile
 # Filter strings for the file dialog
 GUI_FILTER_SCRIPTS=NumeRe-Scripte
 GUI_FILTER_PROCEDURES=NumeRe-Prozeduren
@@ -1059,6 +1105,7 @@ GUI_MENU_DISPCTRLCHARS=Zeige &Steuerzeichen
 GUI_MENU_DISPCTRLCHARS_TTP=Zeigt Steuerzeichen wie Tabulator und Leerzeichen an
 GUI_MENU_TOGGLE_CONSOLE=Zeige/Verberge die &Konsole%%TAB%%F2
 GUI_MENU_TOGGLE_FILETREE=Zeige/Verberge den Datei&navigator%%TAB%%F3
+GUI_MENU_TOGGLE_HISTORY=Zeige/Verberge die &Chronik%%TAB%%F4
 GUI_MENU_GOTOLINE=&Gehe zu ...%%TAB%%Ctrl-G
 GUI_MENU_GOTOLINE_TTP=Gehe zu einer Zeile in der aktiven Datei
 GUI_MENU_MULTIROW=&Mehrzeilige Dateireiter

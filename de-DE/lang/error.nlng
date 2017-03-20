@@ -20,12 +20,12 @@
 #
 # Headlines
 # =====================
-ERR_MUP_HEAD_DBG=NumeRe: Debugger   [%%ERR_MUP_HEAD%%]
+ERR_MUP_HEAD_DBG=NumeRe: Debugger  [%%ERR_MUP_HEAD%%]
 ERR_MUP_HEAD=Fehler im Ausdruck
 ERR_STD_BA_HEAD=Ein kritischer Fehler ist aufgetreten
-ERR_STD_INTERNAL_HEAD_DBG=NumeRe: Debugger   [%%ERR_STD_INTERNAL_HEAD%%]
+ERR_STD_INTERNAL_HEAD_DBG=NumeRe: Debugger  [%%ERR_STD_INTERNAL_HEAD%%]
 ERR_STD_INTERNAL_HEAD=Interner Fehler
-ERR_NR_HEAD_DBG=NumeRe: Debugger   [Syntaxfehler]
+ERR_NR_HEAD_DBG=NumeRe: Debugger  [Syntaxfehler]
 ERR_NR_HEAD=Ein Fehler ist aufgetreten
 ERR_PROCESS_CANCELLED_HEAD=Prozess abgebrochen
 ERR_CATCHALL_HEAD=Ein unbekannter Fehler ist aufgetreten
@@ -40,11 +40,19 @@ ERR_ERROR=Fehler
 DBG_HEADLINE=NumeRe: Debugger  [Breakpoint]
 DBG_MODULE=Modulinformationen
 DBG_STACKTRACE=Stacktrace
+DBG_LOCALS=Lokale Variablen
 DBG_LOCALVARS=Lokale numerische Variablen
 DBG_LOCALSTRINGS=Lokale Zeichenketten
 DBG_PRESS_ENTER=Zum Fortfahren ENTER drücken
 DBG_MODULE_TEMPLATE=Fehlerhafter Ausdruck:   %%1%%$Fehlerhaftes Modul:      %%2%%$Zeilennummer:            %%3%%
 DBG_MODULE_TEMPLATE_BP=Aktueller Ausdruck:      %%1%%$Aktuelles Modul:         %%2%%$Zeilennummer:            %%3%%
+DBG_EXPR=Ausdruck:
+DBG_FILE=Modul:
+DBG_LINENO=Zeile:
+DBG_NAME=Name
+DBG_VALUE=Wert
+DBG_TYPE=Typ
+DBG_CONTINUE=Fortfahren
 DBG_STACK_EMPTY=Keine Prozeduren auf dem Stack.
 DBG_LOCALVARS_EMPTY=Keine lokalen Variablen in dieser Prozedur.
 DBG_LOCALSTRINGS_EMPTY=Keine lokalen Zeichenketten in dieser Prozedur.

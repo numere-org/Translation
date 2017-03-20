@@ -20,12 +20,12 @@
 #
 # Headlines
 # =====================
-ERR_MUP_HEAD_DBG=NumeRe: Debugger   [%%ERR_MUP_HEAD%%]
+ERR_MUP_HEAD_DBG=NumeRe: Debugger  [%%ERR_MUP_HEAD%%]
 ERR_MUP_HEAD=Error in expression
 ERR_STD_BA_HEAD=Critical access violation
-ERR_STD_INTERNAL_HEAD_DBG=NumeRe: Debugger   [%%ERR_STD_INTERNAL_HEAD%%]
+ERR_STD_INTERNAL_HEAD_DBG=NumeRe: Debugger  [%%ERR_STD_INTERNAL_HEAD%%]
 ERR_STD_INTERNAL_HEAD=Internal Error
-ERR_NR_HEAD_DBG=NumeRe: Debugger   [Syntax error]
+ERR_NR_HEAD_DBG=NumeRe: Debugger  [Syntax error]
 ERR_NR_HEAD=An error occured
 ERR_PROCESS_CANCELLED_HEAD=Process canceled
 ERR_CATCHALL_HEAD=An unknown error occured
@@ -40,12 +40,20 @@ ERR_ERROR=Error
 DBG_HEADLINE=NumeRe: Debugger  [Breakpoint]
 DBG_MODULE=Module information
 DBG_STACKTRACE=Stacktrace
+DBG_LOCALS=Local variables
 DBG_LOCALVARS=Local numerical variables
 DBG_LOCALSTRINGS=Local strings
 DBG_PRESS_ENTER=Press ENTER to resume
 DBG_MODULE_TEMPLATE=Failing expression:   %%1%%$Failing module:       %%2%%$Line number:          %%3%%
 DBG_MODULE_TEMPLATE_BP=Current expression:     %%1%%$Current module:         %%2%%$Line Number:            %%3%%
 DBG_STACK_EMPTY=No Procedures on stack.
+DBG_EXPR=Expression:
+DBG_FILE=Module:
+DBG_LINENO=Line:
+DBG_NAME=Name
+DBG_VALUE=Value
+DBG_TYPE=Type
+DBG_CONTINUE=Continue
 DBG_LOCALVARS_EMPTY=No local variables in this procedure.
 DBG_LOCALSTRINGS_EMPTY=No local strings in this procedure.
 # Parser-Errors
