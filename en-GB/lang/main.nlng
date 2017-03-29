@@ -294,6 +294,7 @@ PARSERFUNCS_LISTFUNC_TYPE_LOGIC=Logic
 PARSERFUNCS_LISTFUNC_TYPE_COORDS=Coordinates
 PARSERFUNCS_LISTFUNC_TYPE_POLYNOMIAL=Polynomials
 PARSERFUNCS_LISTFUNC_TYPE_DRAW=Drawings
+PARSERFUNCS_LISTFUNC_TYPE_DEFINE=Custom Definitions
 # Funktionentabelle
 PARSERFUNCS_LISTFUNC_TABLEHEAD=								Function:                 Type:    Result:
 PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                    VAL      - Absolute value of x
@@ -439,9 +440,25 @@ PARSERFUNCS_LISTFUNC_FUNC_TRACEV_[DRAW]=					tracev(P,D,STYLE)         {}       
 PARSERFUNCS_LISTFUNC_FUNC_TRACE_[DRAW]=						trace(P,P,STYLE)          {}       - Draws a straight line from P to P. If only one point is passed, then the second will be located at the origin. Color, shape and line endings may be modified using STYLE.
 PARSERFUNCS_LISTFUNC_FUNC_TRIANGLEV_[DRAW]=					trianglev(P,D,D,STYLE)    {}       - Draws a triangle. You may pass either two or three edges. If you pass two edges, NumeRe will draw an equal-sided triangle, if you pass all three, then it will be a custom one. The edges are numbered going from lower left in counter-clockwise order. The filling of the triangle may be modified with STYLE.
 PARSERFUNCS_LISTFUNC_FUNC_TRIANGLE_[DRAW]=					triangle(P,P,P,STYLE)     {}       - Draws a triangle. You may pass either two or three edges. If you pass two edges, NumeRe will draw an equal-sided triangle, if you pass all three, then it will be a custom one. The edges are numbered going from lower left in counter-clockwise order. The filling of the triangle may be modified with STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_STRMATCH_[STRING]=				strmatch(S1,S2,P)         VAL      - Searches for the first occurrence of a char of S1 in the string S2 going from position P. P is an optional value and defaults to P = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STRRMATCH_[STRING]=				strrmatch(S1,S2,P)        VAL      - Searches for the last occurrence of a char of S1 in the string S2 up to position P. P is an optional value and defaults to P = strlen(S2). If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_MATCH_[STRING]=			str_not_match(S1,S2,P)    VAL      - Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1. P is an optional value and defaults to P = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_RMATCH_[STRING]=			str_not_rmatch(S1,S2,P)   VAL      - Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1. P is an optional value and defaults to P = strlen(S2). If nothing was found, this function will return false
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values; empty braces indicate no return value.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Further information concerning the predefined mathematical functions can be found in the NumeRe-Help at "help function".
+# Methoden
+PARSERFUNCS_LISTFUNC_METHOD_LEN_[STRING]=					len                    VAL      - Length of the string
+PARSERFUNCS_LISTFUNC_METHOD_SUB_[STRING]=					sub(POS,LEN)           STR      - Returns LEN characters starting with the letter POS from the string as a new string
+PARSERFUNCS_LISTFUNC_METHOD_FND_[STRING]=					fnd(STR,POS)           VAL      - Returns the position of the first occurrence of STR in the string, with the search starting from the position POS. POS is an optional value with the default value 1. The function returns false, if STR is not found
+PARSERFUNCS_LISTFUNC_METHOD_RFND_[STRING]=					rfnd(STR,POS)          VAL      - Returns the position of the last occurrence of STR in the string, with the search starting from the position POS. P OSis an optional value with the default value POS = STRINGVAR.len. The function returns false, if STR is not found
+PARSERFUNCS_LISTFUNC_METHOD_AT_[STRING]=					at(POS)                STR      - Return the character at the position POS in the string
+PARSERFUNCS_LISTFUNC_METHOD_SPLT_[STRING]=					splt(CHAR)            {STR}     - Splits the string at the characters CHAR in separate strings
+PARSERFUNCS_LISTFUNC_METHOD_MTCH_[STRING]=					mtch(STR,POS)          VAL      - Searches for the first occurrence of a char of STR in the string going from position POS. POS is an optional value and defaults to POS = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_RMTCH_[STRING]=					rmtch(STR,POS)         VAL      - Searches for the last occurrence of a char of STR in the string up to position POS. POS is an optional value and defaults to POS = STRINGVAR.len. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_NMTCH_[STRING]=					nmtch(STR,POS)         VAL      - Searches for the first occurrence of a char in the string going from position POS, which doesn't appear in STR. POS is an optional value and defaults to POS = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_NRMTCH_[STRING]=				nrmtch(STR,POS)        VAL      - Searches for the last occurrence of a char in the string up to position POS, which doesn't appear in STR. POS is an optional value and defaults to POS = STRINGVAR.len. If nothing was found, this function will return false
+# Ende Methoden
 PARSERFUNCS_LISTDEFINE_HEADLINE=Custom defined functions
 PARSERFUNCS_LISTDEFINE_EMPTY=No custom defined functions.
 PARSERFUNCS_LISTDEFINE_DESCRIPTION=	Description:     %%1%%
@@ -554,7 +571,7 @@ PARSERFUNCS_LISTCMD_CMD_ODESOLVE_[EVAL]=				odesolve     EX -set PAR    - Numeri
 PARSERFUNCS_LISTCMD_CMD_PLOT_[PLOTTING]=				plot         EX [-set PAR]  - Graphical plotting of functions and data sets
 PARSERFUNCS_LISTCMD_CMD_PLOT3D_[PLOTTING]=				plot3d       EX [-set PAR]  - Graphical plotting of three dimensional data sets and trajectories.
 PARSERFUNCS_LISTCMD_CMD_PRINT_[MISC_MAINCTRL]=			print        STR            - Prints the passed string STR without the quotation marks as message on the screen
-PARSERFUNCS_LISTCMD_CMD_PROCEDURE_[FLOWCTRL_PROC]=		procedure    $NM(ARGS)      - Defines a NumeRe procedure
+PARSERFUNCS_LISTCMD_CMD_PROCEDURE_[FLOWCTRL_PROC]=		procedure    \$NM(ARGS)      - Defines a NumeRe procedure
 PARSERFUNCS_LISTCMD_CMD_PROGRESS_[MISC_FLOWCTRL]=		progress     EX [-set PAR]  - Shows a the status of a progress. Only suitable for scripts and procedures
 PARSERFUNCS_LISTCMD_CMD_PULSE_[EVAL]=					pulse        OB             - Determines the pulse properties of the passed data set.
 PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]         - Exits NumeRe
@@ -960,6 +977,8 @@ GUI_OPTIONS_LOGFILE=Logging of console input
 GUI_OPTIONS_HINTS=Show the "Tip of the day" at start-up
 GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)%%LINEBREAK%%See also "help language"
 GUI_OPTIONS_EXTERNALVIEWER=Use external windows for "show" and "help"
+GUI_OPTIONS_SYNTAXHIGHLIGHTING=Colours used for syntax highlighting:
+GUI_OPTIONS_RESETHIGHLIGHT=Reset
 GUI_OPTIONS_CONFIG=Configuration
 GUI_OPTIONS_LOADPATH=Loading path | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Saving path | <savepath> =
@@ -999,7 +1018,7 @@ GUI_TREE_PROCEDURES=Procedures
 GUI_TREE_PLOTS=Plots
 GUI_TREE_COMMANDS=Commands
 GUI_TREE_FUNCTIONS=Functions
-GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw
+GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl misc plugins
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
@@ -1052,7 +1071,9 @@ GUI_STATUSBAR_NDB=%%COMMON_FILETYPE_NDB%%
 GUI_STATUSBAR_UNSAVEDFILE=Unsaved file
 GUI_STATUSBAR_UNKNOWN=%%1%% file
 GUI_STATUSBAR_LINECOL=Line: %d, Column: %d
+GUI_STATUSBAR_DEBUGGER_ANALYZER=Debugger & Analyzer: active
 GUI_STATUSBAR_DEBUGGER=NumeRe debugger: active
+GUI_STATUSBAR_ANALYZER=Code analyzer: active
 # Menu strings:
 # please note, that the ampersands mark the hotkeys for keyboard navigation
 # and you may change the shortcuts (e.g Ctrl-N) in this file, but always use the
@@ -1140,6 +1161,8 @@ GUI_MENU_SORT_ASC=Sort lines ascending
 GUI_MENU_SORT_ASC_TTP=Sorts the current lines in ascending order
 GUI_MENU_SORT_DESC=Sort lines descending
 GUI_MENU_SORT_DESC_TTP=Sorts the current lines in descending order
+GUI_MENU_ANALYZER=Code analyzer%%TAB%%Ctrl-Shift-A
+GUI_MENU_ANALYZER_TTP=Analyses the code for possible improvements
 GUI_MENU_TOOLS=&Tools
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
@@ -1343,7 +1366,7 @@ GUI_EDITOR_CALLTIP_OPT_NOORTHOPROJECT=noorthoproject [%%GUI_EDITOR_CALLTIP_COMMO
 GUI_EDITOR_CALLTIP_OPT_NOPCONT=nopcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOPIPE=nopipe [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOPOINTS=nopoints [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_NOQUOTES=noquotes [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOQUOTES=noquotes
 GUI_EDITOR_CALLTIP_OPT_NOREGION=noregion [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NORM=norm [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_NORMAL=distrib=normal [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
@@ -1523,10 +1546,14 @@ GUI_TB_OPEN=Open
 GUI_TB_OPEN_TTP=Open a file
 GUI_TB_SAVE=Save
 GUI_TB_SAVE_TTP=Save the current file
+GUI_TB_UNDO=Undo
+GUI_TB_REDO=Redo
 GUI_TB_RUN=Execute
 GUI_TB_RUN_TTP=Execute the current file
 GUI_TB_STOP=Abort
 GUI_TB_STOP_TTP=Abort the execution
+GUI_TB_DEBUGGER=Debugger
+GUI_TB_DEBUGGER_TTP=%%GUI_MENU_DEBUGGER_TTP%%
 GUI_TB_ADD=Add
 GUI_TB_ADD_TTP=Add a breakpoint at the current line
 GUI_TB_REMOVE=Remove
@@ -1548,3 +1575,32 @@ GUI_REMOVE_TABLE_COL=Remove col
 GUI_REMOVE_TABLE_CELL=Remove cell
 GUI_COPY_TABLE_CONTENTS=Copy
 GUI_PASTE_TABLE_CONTENTS=Paste
+# Code Analyzer strings
+GUI_ANALYZER_TEMPLATE=%%1%% >> %%2%%: %%3%%
+GUI_ANALYZER_NOTE=Note
+GUI_ANALYZER_WARN=Warning
+GUI_ANALYZER_ERROR=Error
+GUI_ANALYZER_THROW_ADDMESSAGE=A message, which is appended to "throw" may provide additional information
+GUI_ANALYZER_NAMESPACE_ALWAYSMAIN=This statement changes always in the namespace "main~"
+GUI_ANALYZER_PROGRESS_RUNTIME=The progress display needs additional runtime
+GUI_ANALYZER_MISSINGPARENTHESIS=Missing parenthesis in argument
+GUI_ANALYZER_MISSINGARGUMENT=Missing argument
+GUI_ANALYZER_ASSIGNMENTINARGUMENT=The argument contains an assignment operator "=", which doesn't check equality ("==")
+GUI_ANALYZER_IF_ALWAYSTRUE=The argument is always true
+GUI_ANALYZER_IF_ALWAYSFALSE=The argument is always false
+GUI_ANALYZER_WHILE_ALWAYSTRUE=Ensure that this loop will terminate
+GUI_ANALYZER_WHILE_ALWAYSFALSE=This loop will never start
+GUI_ANALYZER_FOR_INTERVALERROR=The definition of the loop interval is wrong
+GUI_ANALYZER_MISSINGENDPROCEDURE=The end of the procedure could not be found
+GUI_ANALYZER_UNUSEDVARIABLE=The local variable "%%1%%" is probably unused
+GUI_ANALYZER_NOVARIABLES=No local variables were defined
+GUI_ANALYZER_RETURN_ADDSEMICOLON=Append a semicolon ";" to suppress the doubled display of the result
+GUI_ANALYZER_RETURN_ALWAYSTRUE=This statement will always return true
+GUI_ANALYZER_NOTALLOWED=This statement cannot be used at this place
+GUI_ANALYZER_ASSIGNTOVARIABLE=Pass the result to a variable to use it for further evaluations
+GUI_ANALYZER_APPENDIGNORE=Append the parameter "-ignore" to suppress needed confirmation
+GUI_ANALYZER_EMPTYEXPRESSION=An expression or a parameter is missing
+GUI_ANALYZER_USEINLINEIF=The inline if-construct (IF ? THEN : ELSE) may provide significant speed-ups
+GUI_ANALYZER_CONSTEXPR=This line is constant and consumes additional runtime
+GUI_ANALYZER_INLINING=The call of this procedure will have a greater negative effect on the performance than the advantage provided by the abstraction
+GUI_ANALYZER_PROCEDURENOTFOUND=This procedure was not found
