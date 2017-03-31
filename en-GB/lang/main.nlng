@@ -1604,3 +1604,6 @@ GUI_ANALYZER_USEINLINEIF=The inline if-construct (IF ? THEN : ELSE) may provide 
 GUI_ANALYZER_CONSTEXPR=This line is constant and consumes additional runtime
 GUI_ANALYZER_INLINING=The call of this procedure will have a greater negative effect on the performance than the advantage provided by the abstraction
 GUI_ANALYZER_PROCEDURENOTFOUND=This procedure was not found
+GUI_ANALYZER_VARNAMETOOSHORT=The variable's name is quite short
+GUI_ANALYZER_VARNOTTYPEORIENTED=The variable's name is not type oriented (e.g. "nVar" or "sVar")
+GUI_ANALYZER_INDICATEARGUMENT=Add an underscore as a prefix for procedure arguments to distringuish between them and local variables

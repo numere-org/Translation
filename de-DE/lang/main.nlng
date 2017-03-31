@@ -1604,4 +1604,7 @@ GUI_ANALYZER_USEINLINEIF=Die einzeilige if-Bedingung (WENN ? DANN : SONST) kann 
 GUI_ANALYZER_CONSTEXPR=Diese Zeile ist konstant und benötigt unnötig Laufzeit
 GUI_ANALYZER_INLINING=Der Aufruf dieser Prozedur geht im Vergleich zum Nutzen überproportional auf die Performance
 GUI_ANALYZER_PROCEDURENOTFOUND=Diese Prozedur konnte nicht gefunden werden
+GUI_ANALYZER_VARNAMETOOSHORT=Der Variablenname ist sehr kurz
+GUI_ANALYZER_VARNOTTYPEORIENTED=Der Variablenname ist nicht Typ-orientiert (z.B. "nVar" bzw. "sVar")
+GUI_ANALYZER_INDICATEARGUMENT=Beginne Prozedurenargumente mit einem Unterstrich, um sie von den lokalen Variablen unterscheiden zu können
 # GUI_ANALYZER_
