@@ -58,5 +58,5 @@
 		|FOR&gt; cache(#,i) = "Column_" + #~i		(will append a 0 if applicable)
 		|FOR&gt; [...]
 	</example>
-	<em>See also:</em> "help procedure" and "help explorer"
+	<em>See also:</em> <a href="nhlp://procedure?frame=self">help procedure</a> and <a href="nhlp://explorer?frame=self">help explorer</a>
 </article>

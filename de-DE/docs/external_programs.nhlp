@@ -26,5 +26,5 @@
 		Imageviewer erfolgreich deklariert.
 	</example>
 	<em>Hinweis:</em> Nutzer von 64bit-Systemen müssen "Program Files" durch "Program Files (x86)" ersetzen.
-	<em>Siehe auch:</em> "help new" und "help edit"
+	<em>Siehe auch:</em> <a href="nhlp://new?frame=self">help new</a> und <a href="nhlp://edit?frame=self">help edit</a>
 </article>

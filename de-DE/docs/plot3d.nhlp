@@ -37,5 +37,5 @@
 		|-&gt; Speichern ... Erfolg!
 		|   Gespeichert unter: "&PLOTPATH&/data.png"
 	</example>
-	<em>Siehe auch:</em> "help plot"
+	<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a>
 </article>

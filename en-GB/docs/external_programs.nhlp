@@ -26,5 +26,5 @@
 		Image viewer was set successfully.
 	</example>
 	<em>Note:</em> User of 64 bit systems have to replace "Program Files" with "Program Files (x86)".
-	<em>See also:</em> "help new" and "help edit"
+	<em>See also:</em> <a href="nhlp://new?frame=self">help new</a> and <a href="nhlp://edit?frame=self">help edit</a>
 </article>
