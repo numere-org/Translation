@@ -36,6 +36,49 @@
 			<keyword>numere</keyword>
 		</keywords>
 	</article>
+	<article id="console">
+		<file path="<>/docs/console.nhlp" />
+		<title string="NumeRe-Konsole" idxkey="console" />
+		<keywords>
+			<keyword>console</keyword>
+			<keyword>konsole</keyword>
+		</keywords>
+	</article>
+	<article id="filetree">
+		<file path="<>/docs/filetree.nhlp" />
+		<title string="Dateibaum" idxkey="filetree" />
+		<keywords>
+			<keyword>filetr</keyword>
+			<keyword>dateib</keyword>
+			<keyword>brows</keyword>
+		</keywords>
+	</article>
+	<article id="symboltree">
+		<file path="<>/docs/symboltree.nhlp" />
+		<title string="Symbolbaum" idxkey="symboltree" />
+		<keywords>
+			<keyword>symboltr</keyword>
+			<keyword>symbolb</keyword>
+		</keywords>
+	</article>
+	<article id="editor">
+		<file path="<>/docs/editor.nhlp" />
+		<title string="NumeRe-Editor" idxkey="editor" />
+		<keywords>
+			<keyword>editor</keyword>
+			<keyword>hervorheb</keyword>
+			<keyword>highlight</keyword>
+		</keywords>
+	</article>
+	<article id="history">
+		<file path="<>/docs/history.nhlp" />
+		<title string="Eingabehistorie" idxkey="history" />
+		<keywords>
+			<keyword>histor</keyword>
+			<keyword>eingabe</keyword>
+			<keyword>entry</keyword>
+		</keywords>
+	</article>
 	<article id="cache">
 		<file path="<>/docs/cache.nhlp" />
 		<title string="Cache" idxkey="cache" />
@@ -163,9 +206,8 @@
 	</article>
 	<article id="external_programs">
 		<file path="<>/docs/external_programs.nhlp" />
-		<title string="Viewer und Editor" idxkey="editor, viewer" />
+		<title string="Imageviewer" idxkey="viewer" />
 		<keywords>
-			<keyword>editor</keyword>
 			<keyword>viewer</keyword>
 		</keywords>
 	</article>
