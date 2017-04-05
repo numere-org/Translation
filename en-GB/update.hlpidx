@@ -79,6 +79,16 @@
 			<keyword>entry</keyword>
 		</keywords>
 	</article>
+	<article id="firststeps">
+		<file path="<>/docs/firststeps.nhlp" />
+		<title string="Erste Schritte" idxkey="firststeps" />
+		<keywords>
+			<keyword>first</keyword>
+			<keyword>erste</keyword>
+			<keyword>einf</keyword>
+			<keyword>introd</keyword>
+		</keywords>
+	</article>
 	<article id="cache">
 		<file path="<>/docs/cache.nhlp" />
 		<title string="Cache" idxkey="cache" />

@@ -18,6 +18,7 @@
 
 <article id="main">
 	<title string="Übersicht" />
+	<img src="<>/icons/folder.png" />
 	<em>NumeRe: Framework für Numerische Rechnungen ist ein unter der GNU GPL v3 veröffentlichtes, freies Programmframework für Microsoft Windows(R) zur numerischen Lösung und Visualisierung mathematischer und physikalischer Probleme.</em>
 	NumeRe ist als eine rein kommandobasierte Tabellenkalkulation angelegt, die aber speziell für die (Natur-)Wissenschaftliche Arbeit optimiert ist.
 	NumeRe legt vor allem auf eine möglichst intuitive Bedienung Wert, was eine einfache, sprechende Syntax, die möglichst fehlertolerant ist, voraussetzt. Die Feinheiten einer Syntax sollen hierbei ebenso wenig eine Rolle spielen wie die Zahl der Kommandos.
