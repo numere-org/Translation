@@ -22,6 +22,7 @@
 	<em>NumeRe: Framework für Numerische Rechnungen</em> (meaning: Framework for numerical calculations) <em>is a framework written for Microsoft Windows® and released under the GNU GPL v3 for solving mathematical and physical problems numerically.</em>
 	NumeRe is designed as a terminal-based table calculation software but optimized for the scientific work.
 	NumeRe is targeting a very intuitive usage. This requires a simple, talking-like syntax, which is very tolerant against errors. Therefore small details of a syntax as well as the number of commands don't play a that great role here.
+	<em>New at this place?</em> The you might want to look at the <a href="nhlp://firststeps?frame=new">first steps</a>.
 	The basic features are as follows:
 	<list>
 		<item node="Documentation">Fully integrated documentation and a <a href="nhlp://find?frame=new">keyword search</a>, giving fast help at questions or problems.</item>
