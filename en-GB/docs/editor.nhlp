@@ -26,12 +26,7 @@
 	The editor my wrap long lines automatically around and display the non- printable control characters. The corresponding functions are located in the "view menu". In addition, the editor may automatically indent the lines of scripts and procedures corresponding to their logic. This can be found in the "tools menu".
 	The editor may search for the definition of a NumeRe procedure and open it, if you right-click on a procedure's name. The namespaces will be considered while searching for the procedure.
 	If you hover the mouse for a moment over a syntax text block, the editor will display a short tooltip containing the necessary information to this syntax element if it is available.
-	The editor may perform a static code analysis. The code analyzer will be activated with the corresponding menu item or by pressing <code>[Ctrl-Shift-A]</code> and displays messages out of three levels:
-	<list>
-		<item node="Note (grey)">These are messages, which are targeting an improvement of the programming style. They have no relevant influence on the execution of the code.</item>
-		<item node="Warning (yellow)">Warnings are locations in the code, which probably are not intended by the user and therefore should be examined further, e.g. an endless loop or unused local variables.</item>
-		<item node="Error (red)">If such a message appears, then its source should be fixed, otherwise it will most probably come to an runtime error. For example, this may be a command, which is used without an expression, or a procedure, which cannot be found.</item>
-	</list>
+	The editor may perform a static code analysis. The <a href="nhlp://analyzer?frame=new">code analyzer</a> will examine the code regarding errors and programming style. Code metrics like the cyclomatic complexity will be applied as well.
 	The context menu of the editor supports the permanent highlighting of the currently clicked text block. Each occurrence of this block will be marked red. In contrast you may temporary mark a text block by double-clicking on it. In this case the block and all occurrences are highlighted green. If the selection is changed or something was typed, the highlighting will vanish.
 	Matching parentheses at the position of the cursor (an opening and the corresponding closing parenthesis) will be highlighted green and parentheses without their corresponding companion will be highlighted red.
 </article>

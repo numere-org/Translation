@@ -89,6 +89,21 @@
 			<keyword>introd</keyword>
 		</keywords>
 	</article>
+	<article id="codeanalyzer">
+		<file path="<>/docs/codeanalyzer.nhlp" />
+		<title string="Code-Analyzer" idxkey="analyzer" />
+		<keywords>
+			<keyword>codeana</keyword>
+			<keyword>analyzer</keyword>
+			<keyword>metrik</keyword>
+			<keyword>metric</keyword>
+			<keyword>LOC</keyword>
+			<keyword>cyclomat</keyword>
+			<keyword>complexit</keyword>
+			<keyword>zyklomat</keyword>
+			<keyword>komplexit</keyword>
+		</keywords>
+	</article>
 	<article id="cache">
 		<file path="<>/docs/cache.nhlp" />
 		<title string="Cache" idxkey="cache" />
