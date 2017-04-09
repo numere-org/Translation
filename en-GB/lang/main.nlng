@@ -1168,6 +1168,8 @@ GUI_MENU_SORT_DESC=Sort lines descending
 GUI_MENU_SORT_DESC_TTP=Sorts the current lines in descending order
 GUI_MENU_ANALYZER=Code analyzer%%TAB%%Ctrl-Shift-A
 GUI_MENU_ANALYZER_TTP=Analyses the code for possible improvements
+GUI_MENU_FIND_DUPLICATES=&Find Code duplicates
+GUI_MENU_FIND_DUPLICATES_TTP=Searches for copied code using a semantically analysis
 GUI_MENU_TOOLS=&Tools
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
@@ -1618,3 +1620,7 @@ GUI_ANALYZER_HIGHCOMPLEXITY=This module has a high cyclomatic complexity (%%1%%)
 GUI_ANALYZER_MANYLINES=This module contains many lines (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=Only very few comments were found in this module (Comment density %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=This module contains a high number of comments (Comment density %%1%% %).
+# Duplicate Code Analyzer strings
+GUI_DUPCODE_TITLE=Code duplicates
+GUI_DUPCODE_MATCH=Lines
+GUI_DUPCODE_PERCENTAGE=Match
