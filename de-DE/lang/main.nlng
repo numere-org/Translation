@@ -1574,6 +1574,8 @@ GUI_TB_REMOVE=Entfernen
 GUI_TB_REMOVE_TTP=Breakpoint hier entfernen
 GUI_TB_CLEAR=Alle entfernen
 GUI_TB_CLEAR_TTP=Alle breakpoints entfernen
+GUI_TB_NEXTIMAGE=Nächstes Bild
+GUI_TB_PREVIOUSIMAGE=Vorheriges Bild
 # Printing dialogs
 GUI_PRINT_ERROR=Beim Drucken wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
 GUI_PRINT_ERROR_HEAD=NumeRe: Drucken fehlgeschlagen
