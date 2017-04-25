@@ -1011,7 +1011,7 @@ GUI_ABOUT_LICENCE_SHORT=Fitting | Data analysis | Plotting | Matrix operations |
 GUI_ABOUT_TEAM_INTRO=NumeRe was created by:
 GUI_ABOUT_TEAM=Project lead:%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Concept/UI:%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Mathematical parser:%%LINEBREAK%%   Ingo BERG%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%Plotting:%%LINEBREAK%%   Alexey BALAKIN%%LINEBREAK%%numerical algorithms:%%LINEBREAK%%   GNU Scientific Library%%LINEBREAK%%   Erik HÄNEL%%LINEBREAK%%   Alexey BALAKIN%%LINEBREAK%%Tokenizer:%%LINEBREAK%%   Boost-Library%%LINEBREAK%%Matrix algorithms:%%LINEBREAK%%   Eigen Library%%LINEBREAK%%BasicExcel:%%LINEBREAK%%   YAP Chun Wei%%LINEBREAK%%TinyXML-2:%%LINEBREAK%%   Lee THOMASON%%LINEBREAK%%The (patient) testers:%%LINEBREAK%%   D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER,%%LINEBREAK%%   K. KURZ, M. LÖCHNER, L. SAHINOVIC, D. SCHMID,%%LINEBREAK%%   V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER,%%LINEBREAK%%   J. ZINßER
 GUI_ABOUT_CREDITS=NumeRe wouldn't be possible without the used libraries, the patient support%%LINEBREAK%%of the testers and all the tutorials in the internet.%%LINEBREAK%%%%LINEBREAK%%In addition we'd like to thank all the creators of the open source codes,%%LINEBREAK%%which in some cases gave us the needed inspirations for our own solutions.%%LINEBREAK%%%%LINEBREAK%%Why is NumeRe free for all?%%LINEBREAK%%%%LINEBREAK%%NumeRe: Framework für Numerische Rechnungen is totally free software%%LINEBREAK%%and out of any charges. There shall never be any fees for using this%%LINEBREAK%%software. It's intended for educational and scientific use and we want%%LINEBREAK%%you to keep your money in your pockets. We believe that there's no%%LINEBREAK%%need for paying to get knowledge or education. In our opinion,%%LINEBREAK%%knowledge has no monetary value, it's just invaluable. Education is%%LINEBREAK%%also one reason you're paying taxes to your government—so ask yourself:%%LINEBREAK%%%%LINEBREAK%%why paying twice?
-GUI_ABOUT_STATS=Lines of C++ code:%%LINEBREAK%%  ~24 000 (GUI)%%LINEBREAK%%  ~70 000 (Kernel)%%LINEBREAK%%SVN commits:%%LINEBREAK%%  ~50%%LINEBREAK%%Number of source files:%%LINEBREAK%%  ~150 (GUI)%%LINEBREAK%%  ~100 (Kernel)%%LINEBREAK%%Languages:%%LINEBREAK%%  2 (German and English)%%LINEBREAK%%Begin of the project:%%LINEBREAK%%  End of October 2013%%LINEBREAK%%End of the projects:%%LINEBREAK%%  Not in sight%%LINEBREAK%%Number of fixed bugs:%%LINEBREAK%%  ~40 (Documented)%%LINEBREAK%%  ~400 (Undocumented)%%LINEBREAK%%Number of (new) bugs, which made it in a RC:%%LINEBREAK%%  ~30%%LINEBREAK%%Number of the (public) releases:%%LINEBREAK%%  ~25%%LINEBREAK%%Number of the comments about NumeRe:%%LINEBREAK%%  ~10 (Compliments)%%LINEBREAK%%  ~20 (Problems)%%LINEBREAK%%  ~80 (Bugs)%%LINEBREAK%%Number of overnighters:%%LINEBREAK%%  None%%LINEBREAK%%Number of "Ops" during a presentation:%%LINEBREAK%%  ~50%%LINEBREAK%%Amount of consumend caffeine:%%LINEBREAK%%  unmeasurable
+GUI_ABOUT_STATS=Lines of C++ code:%%LINEBREAK%%  ~24 000 (GUI)%%LINEBREAK%%  ~70 000 (Kernel)%%LINEBREAK%%SVN commits:%%LINEBREAK%%  ~100%%LINEBREAK%%Number of source files:%%LINEBREAK%%  ~150 (GUI)%%LINEBREAK%%  ~100 (Kernel)%%LINEBREAK%%Languages:%%LINEBREAK%%  2 (German and English)%%LINEBREAK%%Begin of the project:%%LINEBREAK%%  End of October 2013%%LINEBREAK%%End of the projects:%%LINEBREAK%%  Not in sight%%LINEBREAK%%Number of fixed bugs:%%LINEBREAK%%  ~40 (Documented)%%LINEBREAK%%  ~400 (Undocumented)%%LINEBREAK%%Number of (new) bugs, which made it in a RC:%%LINEBREAK%%  ~30%%LINEBREAK%%Number of the (public) releases:%%LINEBREAK%%  ~25%%LINEBREAK%%Number of the comments about NumeRe:%%LINEBREAK%%  ~10 (Compliments)%%LINEBREAK%%  ~20 (Problems)%%LINEBREAK%%  ~80 (Bugs)%%LINEBREAK%%Number of overnighters:%%LINEBREAK%%  None%%LINEBREAK%%Number of "Ops" during a presentation:%%LINEBREAK%%  ~50%%LINEBREAK%%Amount of consumend caffeine:%%LINEBREAK%%  unmeasurable
 # tree ctrl strings
 GUI_FILETREE=Files
 GUI_FUNCTIONTREE=Symbols
@@ -1419,6 +1419,9 @@ GUI_EDITOR_CALLTIP_OPT_POINTS=points[=VAL]
 GUI_EDITOR_CALLTIP_OPT_POINTSTYLES=pointstyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_POISSON=distrib=poisson [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_POLAR=coords=polar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_PZ=coords=polar_pz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_RP=coords=polar_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_RZ=coords=polar_rz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_PRD=prd [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_PRECISION=precision=VAL
 GUI_EDITOR_CALLTIP_OPT_PROB=prob=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
@@ -1453,6 +1456,9 @@ GUI_EDITOR_CALLTIP_OPT_SINGLE=single
 GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
 GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
