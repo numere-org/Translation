@@ -25,5 +25,6 @@
 	<example desc="Vector field of a dipole aligned to the z axis using the NumeRe vector syntax:">
 		vect3d {x,y,z-2}/norm(x,y,z-2)^3 - {x,y,z+2}/norm(x,y,z+2)^3
 	</example>
+	<img src="<>/docs/vect3d.png" />
 	<em>See also:</em> <a href="nhlp://vect?frame=self">help vect</a>, <a href="nhlp://colorscheme?frame=self">help colorscheme</a>, <a href="nhlp://multiresult?frame=self">help multiresult</a> and <a href="nhlp://plot?frame=self">help plot</a>
 </article>

@@ -30,5 +30,6 @@
 		|-&gt; Speichern ... Erfolg!
 		|   Gespeichert unter "&PLOTPATH&/dipol.png"
 	</example>
+	<img src="<>/docs/dipol.png" />
 	<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://mesh?frame=self">help mesh</a>
 </article>

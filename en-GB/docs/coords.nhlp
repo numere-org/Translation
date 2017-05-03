@@ -24,7 +24,7 @@
 		<item node="cartesian">Cartesian <expr>(x,y,z)</expr> coordinates</item>
 		<item node="polar">Polar/cylindrical <expr>(rho,phi,z)</expr> coordinates. Will be interpreted as <code>polar_pz</code> or as <code>polar_rp</code>, if the plotting style has a "3d" in its name or is a vector plotting style</item>
 		<item node="polar_pz">Polar/cylindrical coordinates using <expr>x = phi, y = z, z = rho</expr></item>
-		<item node="polar_rp">Polar/cylindrical coordinates using<expr>x = rho, y = phi, z = z</expr></item>
+		<item node="polar_rp">Polar/cylindrical coordinates using <expr>x = rho, y = phi, z = z</expr></item>
 		<item node="polar_rz">Polar/cylindrical coordinates using <expr>x = rho, y = z, z = phi</expr></item>
 		<item node="spherical">Spherical <expr>(r,phi,theta)</expr> coordinates. Will be interpreted as <code>spherical_pt</code> or as <code>spherical_rp</code>, if the plotting style has a "3d" in its name or is a vector plotting style</item>
 		<item node="spherical_pt">Spherical coordinates using <expr>x = phi, y = theta, z = r</expr></item>

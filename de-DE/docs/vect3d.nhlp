@@ -25,5 +25,6 @@
 	<example desc="Vektorfeld eines Dipols entlang der z-Achse mithilfe der NumeRe-Spaltensyntax:">
 		vect3d {x,y,z-2}/norm(x,y,z-2)^3 - {x,y,z+2}/norm(x,y,z+2)^3
 	</example>
+	<img src="<>/docs/vect3d.png" />
 	<em>Siehe auch:</em> <a href="nhlp://vect?frame=self">help vect</a>, <a href="nhlp://colorscheme?frame=self">help colorscheme</a>, <a href="nhlp://multiresult?frame=self">help multiresult</a> und <a href="nhlp://plot?frame=self">help plot</a>
 </article>

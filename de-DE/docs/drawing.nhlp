@@ -51,5 +51,6 @@
 	<example desc="Zeichnen eines blauen Quadrates und eines darauf deutenden Pfeils, der mit einer Bemerkung versehen ist:">
 		draw face(0,0,2,0,"b"), trace(-3.3,-3.3,-0.2,-0.2,"kA"), text(-3,-3,0,0,"Quadrat","k:L")
 	</example>
+	<img src="<>/docs/draw.png" />
 	<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://draw3d?frame=self">help draw3d</a>, <a href="nhlp://colors?frame=self">help colors</a>, <a href="nhlp://linestyles?frame=self">help linestyles</a> und <a href="nhlp://compose?frame=self">help compose</a>
 </article>

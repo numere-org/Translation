@@ -42,5 +42,6 @@
 	<example desc="Drawing of a simple red rotary:">
 		draw3d cone(-2,2,4,0,0,0,1.5,"r"), cone(-2,2,4,-3,3,6,4,4,"r@"), cone(-3,3,6,-5,5,10,0.5,0.2,"r@") -set light
 	</example>
+	<img src="<>/docs/draw3d.png" />
 	<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://draw?frame=self">help draw</a>, <a href="nhlp://colors?frame=self">help colors</a>, <a href="nhlp://linestyles?frame=self">help linestyles</a> and <a href="nhlp://compose?frame=self">help compose</a>
 </article>

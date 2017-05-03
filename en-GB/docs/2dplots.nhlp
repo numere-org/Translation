@@ -27,7 +27,7 @@
 		<item node="clog/noclog">Switch the coloring scheme to logarithmic/linear</item>
 		<item node="colorbar/nocolorbar">Switch the colorbar on/off</item>
 		<item node="colorrange=C1:C2">Set the interval for the colorbar to [C1,C2]</item>
-		<item node="colorscheme=SCHEME">Choose the coloring scheme SCHEME. Some predefined schemes are <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> and <code>map</code>. See <a href="nhlp://colorscheme?frame=new">help colorscheme</a> for additional schemes</item>
+		<item node="colorscheme=SCHEME">Choose the coloring scheme SCHEME. Some predefined schemes are <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> and <code>map</code>. See <a href="nhlp://colors?frame=new">help colors</a> for additional schemes</item>
 		<item node="cscale=VALUE">Define the scaling factor VALUE of the colorbar</item>
 		<item node="cticklabels=LABELS">Pass custom ticks for the colorbar. The ticks will be distributed equidistantly. The LABELS have to be entered as a string, in which the single ticks are separated with "\\n"</item>
 		<item node="cticks=FORMAT">Set the formatting of the tick labels to FORMAT. See also <a href="nhlp://ticks?frame=new">help ticks</a></item>
@@ -53,5 +53,6 @@
 		|-&gt; Saving ... Success.
 		|   Saved at "&PLOTPATH&/gauss.png"
 	</example>
+	<img src="<>/docs/gauss.png" />
 	<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://grad?frame=self">help grad</a> and <a href="nhlp://datagrid?frame=self">help datagrid</a>
 </article>

@@ -51,5 +51,6 @@
 	<example desc="Drawing of a blue square and a pointing arrow, which carries an annotation:">
 		draw face(0,0,2,0,"b"), trace(-3.3,-3.3,-0.2,-0.2,"kA"), text(-3,-3,0,0,"Square","k:L")
 	</example>
+	<img src="<>/docs/draw.png" />
 	<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://draw3d?frame=self">help draw3d</a>, <a href="nhlp://colors?frame=self">help colors</a>, <a href="nhlp://linestyles?frame=self">help linestyles</a> und <a href="nhlp://compose?frame=self">help compose</a>
 </article>
