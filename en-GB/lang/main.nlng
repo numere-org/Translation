@@ -1582,6 +1582,8 @@ GUI_TB_CLEAR=Remove all
 GUI_TB_CLEAR_TTP=Remove all breakpoints
 GUI_TB_NEXTIMAGE=Next image
 GUI_TB_PREVIOUSIMAGE=Previous image
+GUI_TB_ANALYZER=Analyzer
+GUI_TB_ANALYZER_TTP=Activates or deactivates the static code analyzer
 # Printing dialogs
 GUI_PRINT_ERROR=A problem was detected during printing.%%LINEBREAK%%Please check the printer settings and try again.
 GUI_PRINT_ERROR_HEAD=NumeRe: Printing failed
