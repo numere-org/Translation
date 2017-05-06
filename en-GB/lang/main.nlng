@@ -1633,6 +1633,8 @@ GUI_ANALYZER_HIGHCOMPLEXITY=This module has a high cyclomatic complexity (%%1%%)
 GUI_ANALYZER_MANYLINES=This module contains many lines (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=Only very few comments were found in this module (Comment density %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=This module contains a high number of comments (Comment density %%1%% %).
+GUI_ANALYZER_NONAMINGPROCEDURE=This procedure file does not contain a naming procedure.
+GUI_ANALYZER_THISFILEPROCEDURE=This procedure is member of the "thisfile" namespace.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code duplicates
 GUI_DUPCODE_MATCH=Lines

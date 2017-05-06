@@ -1633,6 +1633,8 @@ GUI_ANALYZER_HIGHCOMPLEXITY=Dieses Modul hat eine hohe zyklomatische Komplexität
 GUI_ANALYZER_MANYLINES=Dieses Modul besteht aus sehr vielen Zeilen (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=In diesem Modul wurden nur sehr wenig Kommentare gefunden (Kommentardichte %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=In diesem Modul wurden sehr viele Kommentare gefunden (Kommentardichte %%1%% %).
+GUI_ANALYZER_NONAMINGPROCEDURE=Diese Prozedurdatei enthält keine namensgebende Prozedur.
+GUI_ANALYZER_THISFILEPROCEDURE=Diese Prozedur befindet sich im "thisfile" Namensraum.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code-Duplikate
 GUI_DUPCODE_MATCH=Zeilen
