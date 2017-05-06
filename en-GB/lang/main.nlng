@@ -1629,7 +1629,7 @@ GUI_ANALYZER_PROCEDURENOTFOUND=This procedure was not found
 GUI_ANALYZER_VARNAMETOOSHORT=The variable's name is quite short
 GUI_ANALYZER_VARNOTTYPEORIENTED=The variable's name is not type oriented (e.g. "nVar" or "sVar")
 GUI_ANALYZER_INDICATEARGUMENT=Add an underscore as a prefix for procedure arguments to distringuish between them and local variables
-GUI_ANALYZER_HIGHCOMPLEXITY=This module has a high cyclomatic complexity (%%1%%).
+GUI_ANALYZER_HIGHCOMPLEXITY=This module has a high cyclomatic complexity (v(G) = %%1%%).
 GUI_ANALYZER_MANYLINES=This module contains many lines (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=Only very few comments were found in this module (Comment density %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=This module contains a high number of comments (Comment density %%1%% %).
