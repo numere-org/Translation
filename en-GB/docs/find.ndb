@@ -277,6 +277,6 @@ write~Writes the passed strings to a file~dateien files schreiben zeichenketten 
 # Y
 Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()
 # Z
-Z(n,m,rho,phi)~Value of the Zernike polynomials of the order n >= 0 with m = [-n,n] at the position rho >= 0 at the angle phi in the interval [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
+Z(n,m,rho,phi)~Value of the Zernike polynomials of the order n >= 0 with m = [-n,n] at the position rho in the interval [0,1] at the angle phi in the interval [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix
 zeroes~Calls the function for numerical calculation of the intersection with of functions and data sets~schnittpunkt nullstellen

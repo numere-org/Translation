@@ -277,6 +277,6 @@ write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenkett
 # Y
 Y(l,m,theta,phi)~Realteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] der Winkel theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()
 # Z
-Z(n,m,rho,phi)~Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho >= 0 unter dem Winkel phi im Intervall [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
+Z(n,m,rho,phi)~Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho im Intervall [0,1] unter dem Winkel phi im Intervall [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen
