@@ -1623,6 +1623,7 @@ GUI_ANALYZER_RETURN_ALWAYSTRUE=Dies Anweisung wird immer true zurückgeben
 GUI_ANALYZER_NOTALLOWED=Diese Anweisung kann hier nicht verwendet werden
 GUI_ANALYZER_ASSIGNTOVARIABLE=Übergebe das Ergebnis an eine Variable, um damit weiterzurechnen
 GUI_ANALYZER_APPENDIGNORE=Füge den Parameter "-ignore" an, um die Bestätigung zu unterdrücken
+GUI_ANALYZER_CANNOTREMOVEPREDEFS="data()", "cache()" und "string()" können nicht entfernt werden.
 GUI_ANALYZER_EMPTYEXPRESSION=Ein Ausdruck oder Parameter fehlt
 GUI_ANALYZER_USEINLINEIF=Die einzeilige if-Bedingung (WENN ? DANN : SONST) kann signifikante Geschwindigkeitsvorteile bringen
 GUI_ANALYZER_CONSTEXPR=Diese Zeile ist konstant und benötigt unnötig Laufzeit
