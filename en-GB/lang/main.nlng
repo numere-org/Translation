@@ -301,6 +301,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                    VAL      - A
 PARSERFUNCS_LISTFUNC_FUNC_ACOS_[NUM_TRIGONOMETRIC]=			acos(x)                   VAL      - Inverse cosine of x. Defined in the range [-1,1] (Synonym: "arccos(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)                  VAL      - Inverse hyperbolic cosine of x. Defined in the range [1,inf) (Synonym: "arcosh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                     VAL      - Airy function Ai(x). Defined everywhere in R
+PARSERFUNCS_LISTFUNC_FUNC_AND_[NUM_LOGIC]=					and(x,y,z,...)            LOG      - Connects its arguments using the "&&" operator
 PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                   VAL      - Inverse sine of x. Defined in the range [-1,1] (Synonym: "arcsin(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)                  VAL      - Inverse hyperbolic sine of x. Defined everywhere in R (Synonym: "arsinh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)            {VAL}     - Returns the ASCII values of the characters in STRING
@@ -372,6 +373,7 @@ PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)              VAL
 PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)           VAL      - Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_NUM_[NUM_STATS]=					num(x,y,z,...)            VAL      - returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string
 PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                  MAT      - Creates a n x m matrix, which is filled with ones. If only one argument was passend, then a square matrix will be created.
+PARSERFUNCS_LISTFUNC_FUNC_OR_[NUM_LOGIC]=					or(x,y,z,...)             LOG      - Connects its arguments with the "||" operator
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[NUM_STATS]=					pct(x,y,z,...,p)          VAL      - p-th percentile of x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[NUM_ANGULAR_COORDS]=			phi(x,y)                  VAL      - Calculates the angle between the x axis and the vector (x,y). Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)            VAL      - Returns the product of the arguments x,y,z,...

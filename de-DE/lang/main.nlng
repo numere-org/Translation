@@ -301,6 +301,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                    VAL      - B
 PARSERFUNCS_LISTFUNC_FUNC_ACOS_[NUM_TRIGONOMETRIC]=			acos(x)                   VAL      - Arkuskosinus von x. Definiert im Bereich [-1,1] (Synonym: "arccos(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)                  VAL      - Areakosinus Hyperbolicus von x. Definiert im Bereich [1,inf) (Synonym: "arcosh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                     VAL      - Airyfunktion Ai(x). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_AND_[NUM_LOGIC]=					and(x,y,z,...)            LOG      - Verknüpft die Argumente mit dem "&&"-Operator
 PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                   VAL      - Arkussinus von x. Definiert im Bereich [-1,1] (Synonym: "arcsin(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)                  VAL      - Areasinus Hyperbolicus von x. Definiert auf ganz R (Synonym: "arsinh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(STRING)            {VAL}     - Gibt die ASCII-Zeichenwerte der Zeichen in STRING zurück
@@ -372,6 +373,7 @@ PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)              VAL
 PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)           VAL      - Berechnet die Norm des Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_NUM_[NUM_STATS_STRING]=			num(x,y,z,...)            VAL      - Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden und zählt jede nicht-leere Zeichenkette
 PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                  MAT      - Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
+PARSERFUNCS_LISTFUNC_FUNC_OR_[NUM_LOGIC]=					or(x,y,z,...)             LOG      - Verknüpft die Argumente mit einem "||"-Operator
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[NUM_STATS]=					pct(x,y,z,...,p)          VAL      - p-tes Perzentil aus x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[NUM_ANGULAR_COORDS]=			phi(x,y)                  VAL      - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)            VAL      - Produkt der Argumente x,y,z,...

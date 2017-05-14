@@ -29,6 +29,7 @@ abs(x)~Absolute value of x~absolutwert betrag abs()
 acos(x)~Inverse cosine of x. arccos(x) is a synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie
 acosh(x)~Inverse hyperbolic cosine of x. arcosh(x) is a synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie
 Ai(x)~Airy function Ai(x)~optik potentialtopf Ai() optics airyfunction
+and(x,y,z,...)~ Connects its arguments with "&&"~logik logic und
 ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result
 Answer~The answer to life, the universe and everything: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis
 append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values
@@ -168,6 +169,8 @@ NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipf
 # O
 odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary
 one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix
+or(x,y,z,...)~Connects its arguments with "||"~logik logic oder
+
 # P
 pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile
 phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()

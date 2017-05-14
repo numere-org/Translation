@@ -29,6 +29,7 @@ abs(x)~Betrag von x~absolutwert betrag abs()
 acos(x)~Arkuskosinus von x. arccos(x) ist ein Synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie
 acosh(x)~Areakosinus hyperbolicus von x. arcosh(x) ist ein Synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie
 Ai(x)~Airy-Funktion Ai(x)~optik potentialtopf Ai() optics airyfunction
+and(x,y,z,...)~Verknüpft die Argumente mit "&&"~logik logic und
 ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values
@@ -168,6 +169,7 @@ NumeRe v $$$~Deine NumeRe-Distribution befindet sich hier: $$$~numere programm d
 # O
 odesolve~Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch, siehe "help odesolve"~odesolver differenzialgleichungen differential equations ordinary
 one(n,m)~Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist, siehe "help matop"~one() matrix
+or(x,y,z,...)~Verknüpft die Argumente mit "||"~logik logic oder
 # P
 pct(x,y,z,...,p)~p-tes Perzentil der Werte x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile
 phi(x,y)~Berechnet den Azimuthwinkel phi~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()
