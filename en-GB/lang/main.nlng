@@ -1588,6 +1588,10 @@ GUI_TB_NEXTIMAGE=Next image
 GUI_TB_PREVIOUSIMAGE=Previous image
 GUI_TB_ANALYZER=Analyzer
 GUI_TB_ANALYZER_TTP=Activates or deactivates the static code analyzer
+GUI_TB_INDENTONTYPE=Indent
+GUI_TB_INDENTONTYPE_TTP=Indents the lines automatically during input
+GUI_TB_LINEWRAP=Line wrap
+GUI_TB_LINEWRAP_TTP=%%GUI_MENU_LINEWRAP_TTP%%
 # Printing dialogs
 GUI_PRINT_ERROR=A problem was detected during printing.%%LINEBREAK%%Please check the printer settings and try again.
 GUI_PRINT_ERROR_HEAD=NumeRe: Printing failed

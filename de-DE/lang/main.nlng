@@ -1588,6 +1588,10 @@ GUI_TB_NEXTIMAGE=Nächstes Bild
 GUI_TB_PREVIOUSIMAGE=Vorheriges Bild
 GUI_TB_ANALYZER=Analyzer
 GUI_TB_ANALYZER_TTP=Aktiviert oder deaktiviert den statischen Code-Analyzer
+GUI_TB_INDENTONTYPE=Ausrichten
+GUI_TB_INDENTONTYPE_TTP=Richtet die Zeilen automatisch während der Eingabe aus.
+GUI_TB_LINEWRAP=Zeilenumbruch
+GUI_TB_LINEWRAP_TTP=%%GUI_MENU_LINEWRAP%%
 # Printing dialogs
 GUI_PRINT_ERROR=Beim Drucken wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
 GUI_PRINT_ERROR_HEAD=NumeRe: Drucken fehlgeschlagen
