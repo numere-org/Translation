@@ -26,9 +26,9 @@
 	</list>
 	Additionally, code metrics like the cyclomatic complexity will be applied. 
 	<list>
-		<item node="Cyclomatic complexity">This metric measures the number of independent paths, which the control flow in a module may take, what is identical to the number of <code>if</code>, <code>elseif</code>, <code>for</code> and <code>while</code> statements + 1</item>
+		<item node="Cyclomatic complexity">This metric measures the number of independent paths, which the control flow in a module may take, what is identical to the number of <code>if</code>, <code>elseif</code>, <code>for</code> and <code>while</code> statements + 1. A Note is displayed for a complexity higher 15 and a warning, if the complexity is higher than 20</item>
 		<item node="Lines of code">This is the number of lines, which are non-empty and which are not only containing comments, what is equal to the lines containing the actual commands and expressions</item>
-		<item node="Comment density">The comment density results out of the divison of the number of lines, which contain comments (multiple comments in a line will be considered), through the lines of code (see above). Good commented code has a comment density between 80 - 150 %</item>
+		<item node="Comment density">The comment density results out of the divison of the number of lines, which contain comments (multiple comments in a line will be considered), through the lines of code (see above). Good commented code has a comment density between 60 - 150 %</item>
 	</list>
 	The results of the metrics will be compared with predefined borders and a warning or a note will be displayed:
 	<table>
@@ -36,13 +36,13 @@
 			<td><em>Metric</em></td><td><em>Lower border</em></td><td><em>Upper border</em></td><td><em>Proposed solution</em></td>
 		</tr>
 		<tr>
-			<td>Cycl. complexity</td><td>---</td><td>20</td><td>Separate the module by introducing procedures, because it may be difficult to understand or to test.</td>
+			<td>Cycl. complexity</td><td>---</td><td>15/20</td><td>Separate the module by introducing procedures, because it may be difficult to understand or to test.</td>
 		</tr>
 		<tr>
 			<td>Lines of code</td><td>---</td><td>100</td><td>Separate the module by introducing procedures, because it may be difficult to understand due to the high number of lines.</td>
 		</tr>
 		<tr>
-			<td>Comment density</td><td>80 %</td><td>150 %</td><td>Comment the module further or examine it for commented out code, which is a common source for a high comment density.</td>
+			<td>Comment density</td><td>60 %</td><td>150 %</td><td>Comment the module further or examine it for commented out code, which is a common source for a high comment density.</td>
 		</tr>
 	</table>
 
