@@ -46,7 +46,6 @@ DBG_LOCALSTRINGS=Local strings
 DBG_PRESS_ENTER=Press ENTER to resume
 DBG_MODULE_TEMPLATE=Failing expression:   %%1%%$Failing module:       %%2%%$Line number:          %%3%%
 DBG_MODULE_TEMPLATE_BP=Current expression:     %%1%%$Current module:         %%2%%$Line Number:            %%3%%
-DBG_STACK_EMPTY=No Procedures on stack.
 DBG_EXPR=Expression:
 DBG_FILE=Module:
 DBG_LINENO=Line:
@@ -54,6 +53,7 @@ DBG_NAME=Name
 DBG_VALUE=Value
 DBG_TYPE=Type
 DBG_CONTINUE=Continue
+DBG_STACK_EMPTY=No Procedures on stack.
 DBG_LOCALVARS_EMPTY=No local variables in this procedure.
 DBG_LOCALSTRINGS_EMPTY=No local strings in this procedure.
 # Parser-Errors

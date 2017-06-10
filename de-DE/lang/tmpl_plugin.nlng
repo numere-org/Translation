@@ -47,6 +47,7 @@
 		<article id="plgn_%%1%%">
 			<title string="%%1%%" />
 			BESCHREIBE DIE FUNKTIONEN DEINES PLUGINS
+			JEDE ZEILE IST EIN NEUER ABSCHNITT
 			<example desc="Ausführung von %%1%%">
 				%%1%%
 			</example>
