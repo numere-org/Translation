@@ -31,6 +31,7 @@
 	<title string="Matrix-Funktionen" />
 	Innerhalb des <code>matop</code>-Kommandos können noch folgende zusätzliche Funktionen verwendet werden:
 	<list>
+		<item node="and(MAT)">Wendet den Operator && auf die Elemente der Matrix MAT an</item>
 		<item node="cross(MAT)">Berechnet das <expr>n</expr>-dimensionale Kreuzprodukt der Vektoren, welche die <expr>n-1</expr> Spalten der Matrix MAT bilden.</item>
 		<item node="det(MAT)">Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.</item>
 		<item node="diag(x,y,z,...)">Erzeugt eine Diagonalmatrix mit den Elementen <code>x,y,z,...</code> auf der Hauptdiagonalen.</item>
@@ -44,6 +45,10 @@
 		<item node="matfl(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.</item>
 		<item node="matflf(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergänzt.</item>
 		<item node="one(n,m)">Erzeugt eine <expr>n x m</expr>-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
+		<item node="or(MAT)">Wendet den Operator || auf die Elemente der Matrix MAT an</item>
+		<item node="reshape(MAT,n,m)">Formt die Matrix MAT zu einer <expr>n x m</expr>-Matrix um. Die Zahl der Elemente in der alten und der neuen Matrix muss dabei identisch sein. Die Umformung geschieht zeilenweise</item>
+		<item node="resize(MAT,n,m)">Ändert die Größe der Matrix MAT auf <expr>n x m</expr>. Fehlende Zeilen und Spalten werden durch 0 ersetzt</item>
+		<item node="size(MAT)">Gibt die Zahl der Zeilen und Spalten der Matrix MAT als Vektor zurück</item>
 		<item node="solve(MAT)">Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.</item>
 		<item node="trace(MAT)">Berechnet die Spur der quadratischen Matrix MAT.</item>
 		<item node="transpose(MAT)">Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)</item>

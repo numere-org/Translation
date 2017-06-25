@@ -201,6 +201,8 @@ repeat(STRING,n)~Fügt n Kopien von STRING ein~zeichenketten # \" wiederholen kop
 replace(STR1,POS,LEN,STR2)~Ersetzt LEN Zeichen ab der Stelle POS in der Zeichenkette STR1 mit der Zeichenkette STR2~ersetzen replace() string # \"
 replaceall(STR1,STR2,STR3,POS1,POS2)~Ersetzt alle Vorkommnisse der Zeichenkette STR2 in STR1 mit STR3. Die Variablen POS1 und POS2 sind optional und geben Anfangs- und Endpunkt der Ersetzung vor~ersetzen replaceall() string # \"
 resample~Ermöglicht die Erhöhung oder Verringerung der Zahl der Datenpunkten, wobei ein Lanczos-Filter angewandt wird~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
+reshape(MAT,n,m)~Formt die Matrix MAT zu einer (n x m)-Matrix um~umformen umgestalten 
+resize(MAT,n,m)~Ändert die Größe der Matrix MAT zu (n x m)~vergrößern verkleinern larger smaller
 retoque~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()
 roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen
@@ -215,6 +217,7 @@ sign(x)~Vorzeichen von x~vorzeichen signum sign()
 sin(x)~Sinus von x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Sinus cardinalis von x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
 sinh(x)~Sinus hyperbolicus von x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie sinh()
+size(MAT)~Gibt die Zahl der Zeilen und Spalten der Matrix MAT zurück~lines columns rows
 smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung~noise reduction rauschen reduzieren verringern glaetten glätten smoothing
 sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus

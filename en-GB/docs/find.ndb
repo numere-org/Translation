@@ -202,6 +202,8 @@ repeat(STRING,n)~Returns n copies of STRING~zeichenketten # \" wiederholen kopie
 replace(STR1,POS,LEN,STR2)~Replaces LEN letters starting with the position POS in string STR1 with the string STR2~ersetzen replace() string # \"
 replaceall(STR1,STR2,STR3,POS1,POS2)~Replaces all occurrences of the second string STR2 in the first string STR1 with the third string STR3. The variables POS1 and POS2 are optional values limiting the action to start (POS1) and end position (POS2) in STR1~ersetzen replaceall() string # \"
 resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
+reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten 
+resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller
 retoque~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()
 roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen
@@ -216,6 +218,7 @@ sign(x)~Returns the sign of x~vorzeichen signum sign()
 sin(x)~Sine of x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
 sinh(x)~Hyperbolic sine of x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie sinh()
+size(MAT)~Returns the number of lines and columns of the matrix MAT~lines columns rows
 smooth~Smoothes the passed data set by linearizing depending on the requested order~noise reduction rauschen reduzieren verringern glaetten glätten smoothing
 sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
 Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver
