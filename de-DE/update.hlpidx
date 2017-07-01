@@ -288,6 +288,8 @@
 			<keyword>bearb</keyword>
 			<keyword>edit</keyword>
 			<keyword>view</keyword>
+			<keyword>refresh</keyword>
+			<keyword>norefresh</keyword>
 		</keywords>
 	</article>
 	<article id="eval">
