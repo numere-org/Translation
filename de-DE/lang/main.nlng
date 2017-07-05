@@ -606,6 +606,7 @@ PARSERFUNCS_LISTCMD_CMD_SUBPLOT_[PLOTTING]=				subplot      [EX -set PAR]  - Sta
 PARSERFUNCS_LISTCMD_CMD_SURF_[PLOTTING]=				surf         EX [-set PAR]  - Erzeugung von Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SURF3D_[PLOTTING]=				surf3d       EX [-set PAR]  - Erzeugung von 3D-Oberflächen-Plots
 PARSERFUNCS_LISTCMD_CMD_SWAP_[DATACTRL]=				swap         -OB            - Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus
+PARSERFUNCS_LISTCMD_CMD_TAB_[PROC]=						tab          EX             - Lokale Caches in Prozeduren definieren
 PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR    - Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n.
 PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]          - Prozedurauswertung im Notfall abbrechen
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX             - Entfernen einer Funktionsdefinition

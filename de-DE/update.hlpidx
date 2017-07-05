@@ -742,6 +742,7 @@
 			<keyword>throw</keyword>
 			<keyword>var</keyword>
 			<keyword>str</keyword>
+			<keyword>tab</keyword>
 			<keyword>this</keyword>
 			<keyword>msg</keyword>
 			<keyword>main</keyword>
