@@ -979,7 +979,7 @@ GUI_REPLACE_END_HEAD=NumeRe: Replacing finished
 GUI_OPTIONS_AUTOSAVE=[sec] Cache autosave interval
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
-GUI_OPTIONS_EXTENDEDINFO=Extended file information (in the "list -files" dialog)
+GUI_OPTIONS_EXTENDEDINFO=Extended file information
 GUI_OPTIONS_ESCINSCRIPTS=ESC in scripts
 GUI_OPTIONS_DEFCTRL=Definition control%%LINEBREAK%%(automatic loading and saving of custom defined functions)
 GUI_OPTIONS_COMPACTTABLES=Compact table view
@@ -1059,6 +1059,7 @@ GUI_FILTER_DATAFILES=%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_TXT
 GUI_FILTER_IMAGEFILES=Image files
 GUI_FILTER_TEXSOURCE=TeX-Source
 GUI_FILTER_NONSOURCE=%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_LOG%% (*.log)|*.log|%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv
+GUI_FILTER_ALLSUPPORTEDFILES=All supported Files|*.nscr;*.nprc;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex
 
 GUI_NEWFILE_UNTITLED=<Unnamed>
 GUI_SAVE_QUESTION=NumeRe: Save?
