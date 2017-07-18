@@ -962,6 +962,8 @@ GUI_DLG_FILEMODIFIED=NumeRe: Reload
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%This file was modified externally or through a script or a procedure. Shall NumeRe reload this file?%%LINEBREAK%%%%LINEBREAK%%(Your changes will get lost.)
 GUI_DLG_PROC_NEXISTS_CREATE=It seems that the procedure %%1%%() doesn't exist. Shall it be created?
 GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Procedure doesn't exist
+GUI_DLG_SCRIPT_NEXISTS_CREATE=It seems that the script %%1%% doesn't exist. Shall it be created?
+GUI_DLG_SCRIPT_NEXISTS_CREATE_HEADLINE=NumeRe: Script doesn't exist
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
 GUI_TIPOTD_DYK=Did you know ...?
@@ -1564,6 +1566,7 @@ GUI_MENU_EDITOR_REMOVEBP=Remove breakpoint
 GUI_MENU_EDITOR_CLEARBP=Remove all breakpoints
 GUI_MENU_EDITOR_HIGHLIGHT=Highlight '%%1%%' permanently
 GUI_MENU_EDITOR_FINDPROC=Find the definition of: '%%1%%'
+GUI_MENU_EDITOR_FINDINCLUDE=Find the script: '%%1%%'
 GUI_MENU_EDITOR_UPPERCASE=Convert to UPPERCASE
 GUI_MENU_EDITOR_LOWERCASE=Convert to lowercase
 # Toolbar strings
