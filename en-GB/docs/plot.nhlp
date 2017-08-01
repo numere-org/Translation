@@ -18,7 +18,7 @@
 
 <article id="plot">
 	<title string="Plotting of data and functions" />
-	The command <code>plot</code> initiates the plotting algorithm. The functions and/or data sets, which are separated with commata, have to be appended directly to this command. They will be displayed as a graphical plot, which will be saved to a file afterwards.
+	The command <code>plot</code> initiates the plotting algorithm. The functions and/or data sets, which are separated with commata, have to be appended directly to this command. They will be displayed as a graphical plot in the <a href="nhlp://graphviewer?frame=new">NumeRe graph viewer</a> or saved directly to a file.
 	The plotting variable for functions is <expr>x</expr>. All other variables will be regarded as constant parameters.
 	Singularities in graphs are recognized by NumeRe, as soon as the value interval is larger than three orders of magnitude. The value interval will be correspondingly adapted in this case.
 	The legend, which is shown in the plot, will be directly constructed out of the passed expressions. It may be modified, if the desired legend entry is directly passed after the function/data set as a string (surrounded by quotation marks or with the variable parser <code>#</code>), but before an eventual separating comma to the next expression. If an empty legend (<code>""</code>) was passed, then the legend entry for this expression will be suppressed.
@@ -33,6 +33,6 @@
 		|-&gt; Saving ... Success.
 		|   Saved at: "&PLOTPATH&/Parabola.png"
 	</example>
-		<img src="<>/docs/parabel.png" />
-	SEE ALSO: <a href="nhlp://mesh?frame=self">help mesh</a>, <a href="nhlp://plot3d?frame=self">help plot3d</a>, <a href="nhlp://get?frame=self">help get</a>, <a href="nhlp://grad?frame=self">help grad</a> and <a href="nhlp://plotoptions?frame=self">help plotoptions</a>
+	<img src="<>/docs/parabel.png" />
+	<em>See also:</em> <a href="nhlp://mesh?frame=self">help mesh</a>, <a href="nhlp://plot3d?frame=self">help plot3d</a>, <a href="nhlp://get?frame=self">help get</a>, <a href="nhlp://grad?frame=self">help grad</a> and <a href="nhlp://plotoptions?frame=self">help plotoptions</a>
 </article>

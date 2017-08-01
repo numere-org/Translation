@@ -964,6 +964,8 @@ GUI_DLG_PROC_NEXISTS_CREATE=It seems that the procedure %%1%%() doesn't exist. S
 GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Procedure doesn't exist
 GUI_DLG_SCRIPT_NEXISTS_CREATE=It seems that the script %%1%% doesn't exist. Shall it be created?
 GUI_DLG_SCRIPT_NEXISTS_CREATE_HEADLINE=NumeRe: Script doesn't exist
+GUI_DLG_DRAWTEXT=NumeRe: Add text
+GUI_DLG_DRAWTEXT_QUESTION=Text, which shall be added:
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
 GUI_TIPOTD_DYK=Did you know ...?
@@ -1666,3 +1668,17 @@ GUI_DUPCODE_VARSEMANTICS=Variables
 GUI_DUPCODE_STRINGSEMANTICS=String literals
 GUI_DUPCODE_NUMSEMANTICS=Numeric literals
 GUI_DUPCODE_START=Start
+# Graph viewer strings
+GUI_GRAPH_EXPORT=Export graph
+GUI_GRAPH_COPY=Copy graph
+GUI_GRAPH_ROTATE=Rotate graph
+GUI_GRAPH_ZOOM=Zoom graph
+GUI_GRAPH_RESET=Reset view
+GUI_GRAPH_LINE=Add line
+GUI_GRAPH_RECT=Add rectangle
+GUI_GRAPH_CIRCLE=Add circle
+GUI_GRAPH_TEXT=Add text
+GUI_GRAPH_PREVIOUS=Previous frame
+GUI_GRAPH_NEXT=Next frame
+GUI_GRAPH_RUN=Run animation
+GUI_GRAPH_STOP=Stop animation

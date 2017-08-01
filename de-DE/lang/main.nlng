@@ -964,6 +964,8 @@ GUI_DLG_PROC_NEXISTS_CREATE=Die Prozedur %%1%%() scheint nicht zu existieren. So
 GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Prozedur existiert nicht
 GUI_DLG_SCRIPT_NEXISTS_CREATE=Das Script %%1%% scheint nicht zu existieren. Soll es neu erzeugt werden?
 GUI_DLG_SCRIPT_NEXISTS_CREATE_HEADLINE=NumeRe: Script existiert nicht
+GUI_DLG_DRAWTEXT=NumeRe: Text hinzufügen
+GUI_DLG_DRAWTEXT_QUESTION=Text, der hinzugefügt werden soll:
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tipps und Tricks
 GUI_TIPOTD_DYK=Schon gewusst ...?
@@ -1666,3 +1668,17 @@ GUI_DUPCODE_VARSEMANTICS=Variablen
 GUI_DUPCODE_STRINGSEMANTICS=Zeichenkettenliterale
 GUI_DUPCODE_NUMSEMANTICS=Numerische Literale
 GUI_DUPCODE_START=Start
+# Graph viewer strings
+GUI_GRAPH_EXPORT=Graph exportieren
+GUI_GRAPH_COPY=Graph kopieren
+GUI_GRAPH_ROTATE=Graph rotieren
+GUI_GRAPH_ZOOM=Zoomen
+GUI_GRAPH_RESET=Ansicht zurücksetzen
+GUI_GRAPH_LINE=Linie hinzufügen
+GUI_GRAPH_RECT=Rechteck hinzufügen
+GUI_GRAPH_CIRCLE=Kreis hinzufügen
+GUI_GRAPH_TEXT=Text hinzufügen
+GUI_GRAPH_PREVIOUS=Vorheriger Frame
+GUI_GRAPH_NEXT=Nächster Frame
+GUI_GRAPH_RUN=Animation starten
+GUI_GRAPH_STOP=Animation stoppen

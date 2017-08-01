@@ -306,6 +306,14 @@
 		<keywords>
 			<keyword>viewer</keyword>
 		</keywords>
+	</article>	
+	<article id="graphviewer">
+		<file path="<>/docs/graphviewer.nhlp" />
+		<title string="NumeRe-GraphViewer" idxkey="graphviewer" />
+		<keywords>
+			<keyword>viewer</keyword>
+			<keyword>graphviewer</keyword>
+		</keywords>
 	</article>
 	<article id="explorer">
 		<file path="<>/docs/explorer.nhlp" />
@@ -852,7 +860,6 @@
 			<keyword>set</keyword>
 			<keyword>usecustomlang</keyword>
 			<keyword>useescinscripts</keyword>
-			<keyword>viewer</keyword>
 			<keyword>windowsize</keyword>
 		</keywords>
 	</article>

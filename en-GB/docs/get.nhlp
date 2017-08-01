@@ -26,7 +26,6 @@
 		<item node="-compact">Read, if tables shall be displayed more compact</item>
 		<item node="-defcontrol">Read, if custom defined functions shall be loaded and saved automatically</item>
 		<item node="-draftmode">Get the draft mode setting</item>
-		<item node="-editor">Get the current text editor</item>
 		<item node="-extendedfileinfo">Read, if extended file information shall be displayed</item>
 		<item node="-externaldocwindow">Read, if the documentation shall be displayed in an external window</item>
 		<item node="-faststart">Program start-up without internal checks</item>

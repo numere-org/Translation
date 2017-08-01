@@ -1,0 +1,27 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2017  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="graphviewer">
+	<title string="NumeRe-GraphViewer" />
+	Der GraphViewer wird automatisch gestartet, wenn ein Plot berechnet wird und dessen Anzeige nicht unterdrückt wird. Der GraphViewer visualisiert das im Speicher berechnete Bild und erlaubt einfache Modifikationen des erzeugten Bildes.
+	Das Bild, das der GraphViewer anzeigt, kann sowohl in eine Datei exportiert als auch in den Zwischenspeicher kopiert werden. Diese Funktionen sind im ersten Abschnitt der Toolbar zu finden.
+	Der Graph kann rotiert und Ausschnitte des Graphen können vergrößert werden. Eine Funktion zum Zurücksetzen stellt die ursprüngliche Ansicht des Graphen wieder her. Diese Funktionen sind im zweiten Abschnitt der Toolbar zu finden.
+	Bei Graphen, die eine Animation enthalten (also aus mehreren Frames bestehen), kann manuell durch die Frames geschaltet werden oder direkt die Animation gestartet werden. Diese Tools befinden sich im dritten Teil der Toolbar.
+	Außerdem können Linien, Rechtecke und Kreise, sowie Text zum Graph hinzugefügt werden. Der Stil von Objekten und Text kann ebenfalls durch die Stilinformation in <a href="nhlp://linestyles?frame=new">help linestyles</a> und durch die Farben in <a href="nhlp://colors?frame=new">help colors</a> modifiziert werden. Diese Funktionen sind im letzten Teil der Toolbar zu finden.
+	<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://plotoptions?frame=self">help plotoptions</a>
+</article>
