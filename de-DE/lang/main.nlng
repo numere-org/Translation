@@ -994,6 +994,7 @@ GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)%%LIN
 GUI_OPTIONS_EXTERNALVIEWER=Verwende externe Fenster für "show" und "help"
 GUI_OPTIONS_SYNTAXHIGHLIGHTING=Farben der Syntaxhervorhebung:
 GUI_OPTIONS_RESETHIGHLIGHT=Zurücksetzen
+GUI_OPTIONS_DEFAULTBACKGROUND=Standardhintergrund
 GUI_OPTIONS_CONFIG=Konfiguration
 GUI_OPTIONS_LOADPATH=Importordner | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Speicherordner | <savepath> =

@@ -994,6 +994,7 @@ GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)%%LINEBREAK%%
 GUI_OPTIONS_EXTERNALVIEWER=Use external windows for "show" and "help"
 GUI_OPTIONS_SYNTAXHIGHLIGHTING=Colours used for syntax highlighting:
 GUI_OPTIONS_RESETHIGHLIGHT=Reset
+GUI_OPTIONS_DEFAULTBACKGROUND=Default background
 GUI_OPTIONS_CONFIG=Configuration
 GUI_OPTIONS_LOADPATH=Loading path | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Saving path | <savepath> =
