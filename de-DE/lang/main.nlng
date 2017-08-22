@@ -1192,6 +1192,9 @@ GUI_MENU_ABOUT_TTP=Zeige Informationen über NumeRe
 GUI_MENU_HELP=&Hilfe
 # Editor
 GUI_EDITOR_TAB_CLOSE=Reiter schließen
+GUI_EDITOR_TAB_CLOSEALL=Alle Reiter schließen
+GUI_EDITOR_TAB_CLOSEOTHERS=Alle anderen schließen
+GUI_EDITOR_TAB_OPENFOLDER=Ordner öffnen
 # Tooltips
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Klicke rechts, um die Definition zu suchen
