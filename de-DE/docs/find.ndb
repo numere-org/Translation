@@ -49,6 +49,7 @@ break~Bricht eine FOR- oder WHILE-Schleife an der aktuellen Stelle ab~abbruch ab
 # C
 CACHE(i,j)~Cache-Objekt mit Zugriff auf Element "i,j", siehe "help cache"~zwischenspeicher save cache() sortieren swap rename
 char(STRING,POS)~Gibt das Zeichen aus der Zeichenkette STRING an der Stelle POS zurück~zeichen character string zeichenkette char()
+clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-2,-1,0,1,2} zurück~cmp() compare vergleich dataelement cacheelement
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings
 compose~Erlaubt die Komposition mehrerer Plotstile und mehrerer Plots in einer Ausgabe, siehe "help compose"~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot
