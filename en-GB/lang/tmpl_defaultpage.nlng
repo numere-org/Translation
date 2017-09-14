@@ -1,0 +1,30 @@
+#NumeRe: Framework für Numerische Rechnungen
+
+Welcome at *NumeRe: Framework für Numerische Rechnungen*! This page shall easy 
+your first steps in this application.
+
+
+##Start Now
+You may interact with NumeRe *interactively* or using *scripts*, but scripts are
+favorable, if something with a high complexity shall be evaluated.
+
+
+##Interactive Usage
+Enter a command or an expression into the console (lower middle) and press 
+[ENTER]. NumeRe will return the result in the next line.
+**Example:**
+	Enter "plot sin(x)" into the console
+
+
+##Scripts
+Create a new script (in the file menu or using the toolbar upper left) and enter
+your commands and expressions linewise to this file. After saving, you may 
+execute the file by clicking on "Execute" or pressing [F5].
+**Example:**
+	Enter "edit <>/samples/sample.nscr" into the console
+
+
+##Help and Further Support
+You'll find help and further support in the *NumeRe Documentation*. Press [F1]
+to open the overview, or click right onto a command to open the documentation 
+article concerning this command.

@@ -1093,6 +1093,8 @@ GUI_STATUSBAR_LINECOL=Zeile: %d, Spalte: %d
 GUI_STATUSBAR_DEBUGGER_ANALYZER=Debugger & Analyzer: aktiv
 GUI_STATUSBAR_DEBUGGER=NumeRe-Debugger: aktiv
 GUI_STATUSBAR_ANALYZER=Code-Analyzer: aktiv
+GUI_STATUSBAR_WELCOMEPAGE=Willkommen bei NumeRe: Framework für Numerische Rechnungen
+GUI_STATUSBAR_WELCOMEPAGE_FILETYPE=Willkommen
 # Menu strings:
 # please note, that the ampersands mark the hotkeys for keyboard navigation
 # and you may change the shortcuts (e.g Ctrl-N) in this file, but always use the
@@ -1200,6 +1202,7 @@ GUI_EDITOR_TAB_CLOSE=Reiter schließen
 GUI_EDITOR_TAB_CLOSEALL=Alle Reiter schließen
 GUI_EDITOR_TAB_CLOSEOTHERS=Alle anderen schließen
 GUI_EDITOR_TAB_OPENFOLDER=Ordner öffnen
+GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start
 # Tooltips
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Klicke rechts, um die Definition zu suchen
