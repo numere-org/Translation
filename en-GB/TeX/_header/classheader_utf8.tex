@@ -1,0 +1,161 @@
+%
+% A. DOKUMENTKLASSE
+% ---------------------------------------------------------------------------
+%
+
+%
+%  		Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
+%     Wir verwenden 'Latin1' (ISO-8859-1) für das Dokument,
+%     und die 'T1' codierung für die Schrift.
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%
+%  		Paket für die Lokalisierung ins Deutsche laden.
+%     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
+%
+\usepackage[ngerman]{babel}
+\usepackage{textcomp}
+%
+% 		Paket für Farben an verschieden Stellen. 
+%     Wir definieren zusätzliche benannte Farben an späterer Stelle.
+%
+\usepackage{color}
+%\usepackage{framed}
+\usepackage[sort&compress, numbers]{natbib}
+%\usepackage{cite}
+\usepackage[margin=1em, indention=1em]{subfig}
+
+%
+% 		Das Hyperref-Package verwenden. Spezielle Optionen werden gesondert erläutert.
+%
+\usepackage[
+	pdfauthor={cand. phys. Erik Hänel},%				     											Autor des PDF Dokuments.
+	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script},% 								Erzeuger/Kompiler des PDF Dokuments.
+	bookmarksopenlevel={sections},%															 								PDF-Lesezeichen bis zu Sections öffnen.
+	pdfpagemode={UseOutlines},%                                  								PDF-Lesezeichen beim Öffnen anzeigen.
+	pdfdisplaydoctitle={true},%                                  								Dokumenttitel statt Dateiname in der Titelzeile anzeigen.
+%	pdflanguage={german},%                                               								Sprache des Dokuments.
+	pdfstartview={FitH}%																			 								Größe an Fensterbreite anpassen
+]{hyperref}
+
+
+% 
+% B. EINSTELLUNGEN
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Definieren von eigenen benannten Farben.
+%     Für spätere Verwendung in dem Dokument, definieren wir einzelne
+%     benannte Farben. Sie finden bei den Links, den Überschriften und die spezielle
+%			'shadecolor' bei den farbigen Boxen (mit '\begin{shaded}\end{shaded}' gesetzt) Verwendung.
+%
+\definecolor{LinkColor}{rgb}{0,0,0.6}
+\definecolor{HeadColor}{rgb}{0,0,0.5}
+\definecolor{shadecolor}{rgb}{0.85,0.95,1}
+
+%
+%  2. KOMA-Script Option, Zeilenumbruch bei Bildbeschreibungen.
+%
+\setcapindent{1em}
+
+%
+%  3. Stil der Kopf- und Fusszeilen.
+%     Wir aktivieren mit 'headings' laufende Seiten- /Kolumnentitel.
+%
+\pagestyle{headings}
+
+%
+%  4. Definieren der Schriftarten/Schiftfamilien der einzelnen Bereiche.
+%
+\setkomafont{chapter}{\huge\scshape\color{HeadColor}}       				% Kapitel farbig, Groß und als Kapitälchen
+\setkomafont{section}{\Large\color{HeadColor}}											% Sections farbig und größer als normal
+\setkomafont{captionlabel}{\sffamily\bfseries\color{HeadColor}}     % Fette Beschriftungstitel, farbig und serifenlos 
+\setkomafont{caption}{\sffamily}																		% serifenlose Beschriftungen (tables/figures)
+\setkomafont{pagehead}{\sffamily\bfseries\color{HeadColor}}         % Kolumnentitel serifenlos, farbig und fett
+\setkomafont{descriptionlabel}{\sffamily\bfseries} 									% Fette und serifenlose Beschreibungstitel
+\setkomafont{pagenumber}{\sffamily\bfseries}												% Fette, serifenlose Seitenzahlen
+\setkomafont{part}{\Huge\scshape\color{HeadColor}}									% 'Part'-Titel Riesig, Kapitälchen und farbig
+
+%
+%  5. Farbeinstellungen für die Links im PDF Dokument.
+%
+\hypersetup{%
+	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
+	linkcolor=LinkColor,%    Farbe festlegen.
+	citecolor=LinkColor,%    Farbe festlegen.
+	filecolor=linkColor,%    Farbe festlegen.
+	menucolor=LinkColor,%    Farbe festlegen.
+	urlcolor=LinkColor,%     Farbe von URL's im Dokument.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
+}
+
+%
+% D. AKTIONEN
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Index erzeugen.
+%
+\makeindex
+%
+%
+% E. SILBENTRENNUNG
+% ---------------------------------------------------------------------------
+% Nicht verwendet. Hier kann man die Silben der dem babel-package unbekannten Wörter festlegen.
+
+\hyphenation{De-zi-mal-trenn-zeichen In-stal-la-ti-ons-as-sis-tent}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Die Besondere Formatierung der Kapitelüberschriften (Linien drüber und drunter)
+%
+ 
+% 1st get a new command
+\newcommand*{\ORIGchapterheadstartvskip}{}%
+% 2nd save the original definition to the new command
+\let\ORIGchapterheadstartvskip=\chapterheadstartvskip
+% 3rd redefine the command using the saved original command
+\renewcommand*{\chapterheadstartvskip}{%
+  \ORIGchapterheadstartvskip
+  {%
+    \setlength{\parskip}{0pt}%
+    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
+  }%
+}
+ 
+% see above
+\newcommand*{\ORIGchapterheadendvskip}{}%
+\let\ORIGchapterheadendvskip=\chapterheadendvskip
+\renewcommand*{\chapterheadendvskip}{%
+  {%
+    \setlength{\parskip}{0pt}%
+    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
+  }%
+  \ORIGchapterheadendvskip
+}
+%
+%  End of chapter head change
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+% ===========================================================================
+% EOF
+%

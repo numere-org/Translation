@@ -1,0 +1,23 @@
+#
+# This dataset was generated with
+# NumeRe: Framework für Numerische Rechnungen
+#=============================================
+# Version: 1.0.9 "Release Candidate 3", Build: 2016-08-13
+# Sourcecode and program: (c) 2016, Erik Hänel et al., licenced through GNU GPL v3.0
+#
+# This file was created on 2016-08-14, um 15:12:51
+#
+# (Commenting style and formatting are optimized for Gnuplot.)
+#
+# Generated with: HIS_OUT_PLGNINFO
+#
+#   Bins  Cnts:_Breite_Massband
+#==============================
+   5.905                      1
+  5.9368                      1
+  5.9686                      6
+  6.0004                     10
+  6.0322                      5
+   6.064                      2
+#
+# The bins name always the middle of their interval. The allover minimal value is 5.8891, the maximal is 6.0799. The width of each interval is 0.0318.

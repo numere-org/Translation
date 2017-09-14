@@ -1,0 +1,94 @@
+% package.tex
+% --------------------------------------------
+% Headerdatei, die alle nötigen Packages lädt.
+% ============================================
+%
+%
+%  		Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
+%     Wir verwenden 'uft8' für das Dokument, da wir seit TxC standardmäßig UTF8-Dokumente erzeugen. Als Legacy-Option kann auch 'Latin1' 
+%			(ISO-8859-1) für das Dokument gesetzt werden, wenn die Dateien in ANSI-Codierunge gespeichert werden.
+%     Außerdem 'T1' Codierung für die Schrift.
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%
+%  		Paket für die Lokalisierung ins Deutsche laden.
+%     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
+%
+\usepackage[ngerman]{babel}
+%
+% 		Paket für Farben an verschieden Stellen. 
+%     Wir definieren zusätzliche benannte Farben im 'style-header'.
+%
+\usepackage{color}
+%
+%			Paket für das Layout der Literaturangabe und 'Deutsche' Literaturangaben.
+%
+\usepackage[sort&compress, numbers]{natbib}
+%
+%			Paket für die \subfloat[]{}-Umgebung.
+%
+\usepackage[margin=1em, indention=1em]{subfig}
+%
+% 		Das Hyperref-Package verwenden. Spezielle Optionen werden gesondert erläutert.
+%
+\usepackage[
+	pdfauthor={cand. phys. Erik Hänel},%				     											Autor des PDF Dokuments.
+	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script},% 								Erzeuger/Kompiler des PDF Dokuments.
+	bookmarksopenlevel={sections},%															 								PDF-Lesezeichen bis zu Sections öffnen.
+	pdfpagemode={UseOutlines},%                                  								PDF-Lesezeichen beim Öffnen anzeigen.
+	pdfdisplaydoctitle={true},%                                  								Dokumenttitel statt Dateiname in der Titelzeile anzeigen.
+	pdfstartview={FitH}%																			 								Größe an Fensterbreite anpassen
+]{hyperref}
+%
+%			Das Caption-Paket erlaubt, die Bildunterschriften der \subfloat[]{}-Umgebung zu formatieren.
+%
+\usepackage{caption}
+\usepackage{array}		
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+\usepackage{epsfig}
+%
+%			AMS-MATH-Package mit der Option, die Grenzen bei Summen, Integralen und anderen Operatoren immer über und unter dem Symbol anzuzeigen.
+%
+\usepackage[sumlimits,intlimits,namelimits]{amsmath}
+%
+%			AMS-Packages für spezielle Symbole und Kommutative Diagramme
+%
+\usepackage{amssymb,amscd}
+%
+%			Symbole für Körper und Mengen (C,R,N,Q,etc.)
+%
+\usepackage{dsfont}
+%
+%			Schriftartensetup: Palatino für Textsatz und Pazomath für Mathesatz
+%
+\usepackage{mathpazo}
+%
+%			Schriftartensetup: Helvetica als serifenlose Schriftart und Courier für \texttt{}
+%
+\usepackage[scaled = 0.95]{helvet}
+\usepackage{courier}
+%
+%			Spezialpackage: Erlaubt es, sich eigene Mathe-Akzente zu definieren. Findet hier bei dem Befehl \vhat{} Anwendung, der ein Hütchen mit 
+%			einem Pfeil kombiniert.
+%
+\usepackage{accents}
+%
+%			Erweitert die Darstellung von Tabellen mit den Befehlen \toprule, \midrule & \bottomrule
+%
+\usepackage{booktabs}
+%
+%			Ermöglicht das direkte Tippen von Kommas ',' als Dezimaltrennzeichen. Erkennt dann aber keine Aufzählungen à la 1, 2, 3, ... mehr.
+%
+\usepackage{ziffer}
+%
+%			Dieses Package wird für den Befehl \mum verwendet, der 'µm' als Einheit definiert.
+%
+\usepackage{textcomp}
+\usepackage{epstopdf}
+%
+% ========================================================
+% EOF
+%

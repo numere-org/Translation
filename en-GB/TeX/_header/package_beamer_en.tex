@@ -1,0 +1,26 @@
+% package_beamer.tex
+% --------------------------------------------
+% Headerdatei, die alle nötigen Packages lädt.
+% ============================================
+%
+%
+%  		Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
+%     Wir verwenden 'uft8' für das Dokument, da wir seit TxC standardmäßig UTF8-Dokumente erzeugen. Als Legacy-Option kann auch 'Latin1' 
+%			(ISO-8859-1) für das Dokument gesetzt werden, wenn die Dateien in ANSI-Codierunge gespeichert werden.
+%     Außerdem 'T1' Codierung für die Schrift.
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%
+%  		Paket für die Lokalisierung ins Deutsche laden.
+%     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
+%
+\usepackage[ngerman, english]{babel}
+%
+%			Paket für das Layout der Literaturangabe und 'Deutsche' Literaturangaben.
+%
+\usepackage[sort&compress, square]{natbib}
+%
+%			Paket zum Einbinden von Graphiken
+%
+\usepackage{graphicx}

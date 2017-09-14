@@ -1,0 +1,90 @@
+% style_phys.tex
+% -------------------------------------------------------------------
+% Headerdatei, die das Aussehen und das Layout der Dokumente steuert.
+% ===================================================================
+
+%
+%  1. Definieren von eigenen benannten Farben.
+%     Für spätere Verwendung in dem Dokument, definieren wir einzelne
+%     benannte Farben. Sie finden bei den Links, den Überschriften und die spezielle
+%			'shadecolor' bei den farbigen Boxen (mit '\begin{shaded}\end{shaded}' gesetzt) Verwendung.
+%
+\definecolor{LinkColor}{rgb}{0,0,0.6}
+\definecolor{HeadColor}{rgb}{0,0,0.5}
+\definecolor{shadecolor}{rgb}{0.85,0.95,1}
+
+%
+%  2. KOMA-Script Option, Zeilenumbruch bei Bildbeschreibungen.
+%
+\setcapindent{1em}
+
+%
+%  3. Stil der Kopf- und Fusszeilen.
+%     Wir aktivieren mit 'headings' laufende Seiten- /Kolumnentitel.
+%
+\pagestyle{headings}
+
+%
+%  4. Definieren der Schriftarten/Schiftfamilien der einzelnen Bereiche.
+%
+\setkomafont{chapter}{\huge\scshape\color{HeadColor}}       				% Kapitel farbig, Groß und als Kapitälchen
+\setkomafont{section}{\Large\color{HeadColor}}											% Sections farbig und größer als normal
+\setkomafont{captionlabel}{\sffamily\bfseries\color{HeadColor}}     % Fette Beschriftungstitel, farbig und serifenlos 
+\setkomafont{caption}{\sffamily}																		% serifenlose Beschriftungen (tables/figures)
+\setkomafont{pagehead}{\sffamily\bfseries\color{HeadColor}}         % Kolumnentitel serifenlos, farbig und fett
+\setkomafont{descriptionlabel}{\sffamily\bfseries} 									% Fette und serifenlose Beschreibungstitel
+\setkomafont{pagenumber}{\sffamily\bfseries}												% Fette, serifenlose Seitenzahlen
+\setkomafont{part}{\Huge\scshape\color{HeadColor}}									% 'Part'-Titel Riesig, Kapitälchen und farbig
+
+% Layouteinstellungen für "Subfloats": \subfloat[Titel]{\includegraphics[width=0.5\textwidth]{Pfad/zur/bilddatei.endung}}
+\captionsetup[subfigure]{font={sf,footnotesize}, labelformat=simple, labelsep=colon}
+
+%
+%  5. Farbeinstellungen für die Links im PDF Dokument.
+%
+\hypersetup{%
+	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
+	linkcolor=LinkColor,%    Farbe festlegen.
+	citecolor=LinkColor,%    Farbe festlegen.
+	filecolor=linkColor,%    Farbe festlegen.
+	menucolor=LinkColor,%    Farbe festlegen.
+	urlcolor=LinkColor,%     Farbe von URL's im Dokument.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  6. Die Besondere Formatierung der Kapitelüberschriften (Linien drüber und drunter)
+%
+ 
+% 1st get a new command
+\newcommand*{\ORIGchapterheadstartvskip}{}%
+% 2nd save the original definition to the new command
+\let\ORIGchapterheadstartvskip=\chapterheadstartvskip
+% 3rd redefine the command using the saved original command
+\renewcommand*{\chapterheadstartvskip}{%
+  \ORIGchapterheadstartvskip
+  {%
+    \setlength{\parskip}{0pt}%
+    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
+  }%
+}
+ 
+% see above
+\newcommand*{\ORIGchapterheadendvskip}{}%
+\let\ORIGchapterheadendvskip=\chapterheadendvskip
+\renewcommand*{\chapterheadendvskip}{%
+  {%
+    \setlength{\parskip}{0pt}%
+    \noindent\rule[.3\baselineskip]{\linewidth}{1pt}\par
+  }%
+  \ORIGchapterheadendvskip
+}
+%
+%  End of chapter head change
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ===========================================================================
+% EOF
+%

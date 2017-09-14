@@ -1,0 +1,80 @@
+%
+% mathheader
+%	Packages speziell für den Mathesatz. 
+\usepackage{array}		%
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[sumlimits,intlimits,namelimits]{amsmath}	%	AMS-MATH-Package mit der Option, die Grenzen bei Summen, Integralen und 
+																											%	anderen Operatoren immer über und unter dem Symbol anzuzeigen.
+\usepackage{amssymb,amscd}														% AMS-Packages für spezielle Symbole und Kommutative Diagramme
+\usepackage{dsfont}																		% Symbole für Körper und Mengen (C,R,N,Q,etc.)
+\usepackage{mathpazo}																	% Schriftartensetup: Palatino für Textsatz und Pazomath für Mathesatz
+\usepackage[scaled = 0.95]{helvet}										% Schriftartensetup: Helvetica als serifenlose Schriftart
+\usepackage{courier}
+\usepackage{accents}																	% Spezialpackage: Erlaubt es, sich eigene Mathe-Akzente zu definieren. Findet 
+																											%	hier bei dem Befehl \vhat{} Anwendung, der ein Hütchen mit einem Pfeil 
+																											%	kombiniert.
+\usepackage{booktabs}																	% Erweitert die Darstellung von Tabellen
+\usepackage{ziffer}																		% Kommas als Dezimaltrennzeichen
+
+\newcommand{\bra}[1]{\left\langle #1 \right|}					% Vordefinerter, skalierender Bra-Vektor
+\newcommand{\tbra}[1]{\langle #1|}										% Nicht-Skalierender Bra-Vektor. Speziell für den Textsatz, damit die Zeilen 
+																											%	nicht so überstreckt werden.
+\newcommand{\ket}[1]{\left| #1\right\rangle}					% Selbiges für Ket
+\newcommand{\tket}[1]{| #1 \rangle}										% Selbiges für Ket
+\newcommand{\skal}[2]{\left\langle #1 | #2 \right\rangle}	%Physikalische Bra-Ket-Skalaproduktschreibweise
+\newcommand{\mskal}[2]{\left\langle #1 , #2 \right\rangle} %Mathematisches Skalarprodukt	
+\newcommand{\tskal}[2]{\langle #1|#2\rangle}					% Nicht-Skalierendes Skalarprodukt. Für den Textsatz.
+\newcommand{\EW}[1]{\left\langle #1 \right\rangle}		% Skalierende Eigenwertklammern
+\newcommand{\ew}[1]{\langle #1\rangle}								% Nicht-Skalierende Eigenwertklammern
+\newcommand{\dx}{\:\text{\normalfont{d}}}							% Befehl für das 'd' beim Integral. Befehl beinhält Abstand vor dem und ein 
+																											% Nicht-Kursives d.
+\newcommand{\e}[1]{\:\text{\normalfont{e}}^{#1}}			% Befehl für die exp-Funktion. Ebenfalls bereits aufrecht, und mit 
+																											% vorangehendem Abstand.
+\newcommand{\eps}{\varepsilon}												% Abkürzung für das \varepsilon
+%  Abkürzunge für Mathematische Körper und Mengen
+\newcommand{\N}{\mathds N}
+\newcommand{\Z}{\mathds Z}
+\newcommand{\R}{\mathds R}
+\newcommand{\Q}{\mathds Q}
+\newcommand{\C}{\mathds C}
+\newcommand{\K}{\mathds K}
+\newcommand{\V}{\mathds V}
+\newcommand{\I}{\Im}
+
+\newcommand{\prt}[2]{\frac{\partial #1}{\partial #2}}	% Differenzenquotient, Partielle Ableitung
+\newcommand{\diff}[2]{\frac{\text{d} #1}{\text{d} #2}} % Differenzenquotient, totale Ableitung: df/dx
+\newcommand{\Diff}[1]{\frac{\text{d}}{\text{d} #1}}		% Differenzenquotient, allerdings ohne Einbindung der abgel. Funktion: d/dx
+\newcommand{\svec}[1]{\begin{pmatrix} #1 \end{pmatrix}} % Abkürzung für Spaltenvektoren
+\newcommand{\detm}[1]{\begin{vmatrix} #1 \end{vmatrix}}
+\newcommand{\abs}[1]{\left|#1\right|}									%	Skalierende Betragsstriche
+\newcommand{\norm}[1]{\left\|#1\right\|}							%	Skalierende Norm-Striche: ||Vektor||
+\newcommand{\trot}{\text{rot}\:}											% Rotations-Operator: \trot\vec E = 0
+\newcommand{\chem}[2]{\shortstack[r]{\tiny{${#1}$}\\\scriptsize{$_{#2}$}}} %Für Isotopenschreibweise von Elementen
+\newcommand{\Angstrom}{\text{A}\hspace{-6.55pt}^\text{°}}	% Eigener Angstrom-Befehl
+\newcommand{\wh}[1]{\hat{#1}}													% Abkürzung für den \hat-Befehl
+\newcommand{\vhat}[1]{\accentset{\hspace{1.6pt}\text{\fontsize{4.5pt}{4pt}{$\boldsymbol\wedge$}}\hspace{-3.9pt}\text{\fontsize{5pt}{4pt}{$\boldsymbol{\rightarrow}$}}}{#1}\hspace{0.4pt}}	% Spezieller Accent, der Hütchen mit Vektorpfeil kombiniert
+\newcommand{\tx}[1]{_{\text{#1}}}							% Befehl für aufrecht gesetzten Index
+
+%  Der \vldt{} Befehl: Zeichet eine Linie, die das Argument als eine Marginalie auf dem Rand und über dem Strich darstellt.
+\newcommand{\vldt}[1]{\rule{0mm}{8mm}\textsf{\small{\textcolor{HeadColor}{$\blacktriangledown$ \textbf{Vorlesung vom #1}}}}
+\marginline{\fbox{\textsf{\textbf{\small{\textcolor{HeadColor}{#1}}}}}}\newline\rule[.75\baselineskip]{\linewidth}{0.5pt}}
+%  Abkürzung für den \displaybreak[1]. Mit diesem Befehl kann man 'align'-Umgebungen beim Seitenende gezielt umbrechen.
+\newcommand{\br}{\displaybreak[1]}
+%----------Textkommandos: Abkürzungen und Formatierungen für Begriffe und Formulierungen-----------------
+\newcommand{\DEF}[1]{\subsection[Definition: #1]{Definition (#1):}}
+\newcommand{\KOR}[1]{\subsection[Korollar: #1]{Korollar (#1):}}
+\newcommand{\LEMMA}[1]{\subsection[Lemma: #1]{Lemma (#1):}}
+\newcommand{\BEM}{\paragraph{Bemerkung:}}
+\newcommand{\BSP}{\paragraph{\textcolor{HeadColor}{Beispiel.}}}
+\newcommand{\SATZ}[1]{\subsection[Satz: #1]{\textsc{Satz (#1):}}}
+
+%----------Umgebung für eine alphabetisch nummerierte Liste------
+\newcounter{ale}
+\newcommand{\abc}{\item[\alph{ale})]\stepcounter{ale}}
+\newenvironment{liste}{\begin{itemize}}{\end{itemize}}
+\newcommand{\aliste}{\begin{liste} \setcounter{ale}{1}}
+\newcommand{\zliste}{\end{liste}}
+\newenvironment{abcliste}{\aliste}{\zliste}
+%	Setzen mit '\aliste\abc Text \zliste'
+%----------------------------------------
