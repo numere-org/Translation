@@ -18,7 +18,7 @@
 \BOOKMARK [1][-]{section.2.4}{2.4 Datenanalyse}{chapter.2}% 18
 \BOOKMARK [0][-]{chapter.3}{3 Erzeugen von Graphen}{part.1}% 19
 \BOOKMARK [1][-]{section.3.1}{3.1 Typen von Graphen}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{3.2 Ausgabeformate}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{3.2 Ausgabe}{chapter.3}% 21
 \BOOKMARK [1][-]{section.3.3}{3.3 Verwendung}{chapter.3}% 22
 \BOOKMARK [1][-]{section.3.4}{3.4 Koordinatensysteme}{chapter.3}% 23
 \BOOKMARK [0][-]{chapter.4}{4 Tabellen: der Cache}{part.1}% 24
@@ -29,7 +29,7 @@
 \BOOKMARK [1][-]{section.4.5}{4.5 Statistik-Funktionalit\344t}{chapter.4}% 29
 \BOOKMARK [0][-]{chapter.5}{5 NumeRe-Scripte}{part.1}% 30
 \BOOKMARK [1][-]{section.5.1}{5.1 Konzept}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.2}{5.2 Syntaxhighlighting}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{5.2 Syntaxhhervorhebung}{chapter.5}% 32
 \BOOKMARK [1][-]{section.5.3}{5.3 Ein einfaches Script}{chapter.5}% 33
 \BOOKMARK [-1][-]{part.2}{II Fortgeschrittene Bedienung}{}% 34
 \BOOKMARK [0][-]{chapter.6}{6 Eigene Funktionen}{part.2}% 35
@@ -71,6 +71,3 @@
 \BOOKMARK [1][-]{section.14.1}{14.1 Funktionsweise}{chapter.14}% 71
 \BOOKMARK [1][-]{section.14.2}{14.2 Installation}{chapter.14}% 72
 \BOOKMARK [1][-]{section.14.3}{14.3 Eigene Plugins}{chapter.14}% 73
-\BOOKMARK [1][-]{section.14.4}{14.4 Fitergebnis: 2017-03-07, um 09:50:48}{chapter.14}% 74
-\BOOKMARK [2][-]{subsection.14.4.1}{14.4.1 Korrelationsmatrix der angepassten Parameter}{section.14.4}% 75
-\BOOKMARK [2][-]{subsection.14.4.2}{14.4.2 Fitanalyse}{section.14.4}% 76

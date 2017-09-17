@@ -12,80 +12,77 @@
 \contentsline {chapter}{\numberline {1}Erste Schritte}{15}{chapter.1}
 \contentsline {paragraph}{\nonumberline Anmerkung}{15}{section*.11}
 \contentsline {section}{\numberline {1.1}Das User Interface}{15}{section.1.1}
-\contentsline {paragraph}{\nonumberline Anmerkung}{17}{section*.13}
-\contentsline {section}{\numberline {1.2}Einstellungen}{19}{section.1.2}
-\contentsline {section}{\numberline {1.3}Einfache Rechnungen}{20}{section.1.3}
-\contentsline {section}{\numberline {1.4}Wichtige Kommandos}{22}{section.1.4}
-\contentsline {paragraph}{\nonumberline Anmerkung}{22}{section*.18}
-\contentsline {chapter}{\numberline {2}Daten laden und verwenden}{25}{chapter.2}
-\contentsline {section}{\numberline {2.1}Dateitypen}{25}{section.2.1}
-\contentsline {section}{\numberline {2.2}Formatierung von Textdateien}{26}{section.2.2}
-\contentsline {section}{\numberline {2.3}Laden und Verwenden}{27}{section.2.3}
-\contentsline {paragraph}{\nonumberline Anmerkung}{28}{section*.19}
-\contentsline {section}{\numberline {2.4}Datenanalyse}{29}{section.2.4}
-\contentsline {paragraph}{\nonumberline Anmerkung}{31}{section*.22}
-\contentsline {chapter}{\numberline {3}Erzeugen von Graphen}{35}{chapter.3}
-\contentsline {section}{\numberline {3.1}Typen von Graphen}{35}{section.3.1}
-\contentsline {section}{\numberline {3.2}Ausgabeformate}{36}{section.3.2}
-\contentsline {section}{\numberline {3.3}Verwendung}{36}{section.3.3}
-\contentsline {section}{\numberline {3.4}Koordinatensysteme}{40}{section.3.4}
-\contentsline {chapter}{\numberline {4}Tabellen: der Cache}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Konzept}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Erzeugen und Entfernen von Caches}{43}{section.4.2}
-\contentsline {section}{\numberline {4.3}Verwendung}{44}{section.4.3}
-\contentsline {section}{\numberline {4.4}Sortieren, Gl\IeC {\"a}tten und Resamplen}{44}{section.4.4}
-\contentsline {section}{\numberline {4.5}Statistik-Funktionalit\IeC {\"a}t}{46}{section.4.5}
-\contentsline {chapter}{\numberline {5}NumeRe-Scripte}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Konzept}{47}{section.5.1}
-\contentsline {paragraph}{\nonumberline Anmerkung}{47}{section*.26}
-\contentsline {section}{\numberline {5.2}Syntaxhighlighting}{47}{section.5.2}
-\contentsline {section}{\numberline {5.3}Ein einfaches Script}{49}{section.5.3}
-\contentsline {part}{\numberline {II}Fortgeschrittene Bedienung}{51}{part.2}
-\contentsline {chapter}{\numberline {6}Eigene Funktionen}{53}{chapter.6}
-\contentsline {section}{\numberline {6.1}Definition}{53}{section.6.1}
-\contentsline {section}{\numberline {6.2}Bedingte Definition}{54}{section.6.2}
-\contentsline {section}{\numberline {6.3}Verwendung}{54}{section.6.3}
-\contentsline {chapter}{\numberline {7}Zeichenketten}{55}{chapter.7}
-\contentsline {section}{\numberline {7.1}Konzept}{55}{section.7.1}
-\contentsline {section}{\numberline {7.2}Variablentyp}{55}{section.7.2}
-\contentsline {section}{\numberline {7.3}Konvertierung}{56}{section.7.3}
-\contentsline {chapter}{\numberline {8}Schleifen und Verzweigungen}{59}{chapter.8}
-\contentsline {section}{\numberline {8.1}Verzweigungen}{59}{section.8.1}
-\contentsline {section}{\numberline {8.2}Bedingte Schleifen}{59}{section.8.2}
-\contentsline {section}{\numberline {8.3}Z\IeC {\"a}hlschleifen}{60}{section.8.3}
-\contentsline {section}{\numberline {8.4}Ablaufkontrollen}{60}{section.8.4}
-\contentsline {chapter}{\numberline {9}Matrix-Operationen}{61}{chapter.9}
-\contentsline {section}{\numberline {9.1}Ausf\IeC {\"u}hren einer Matrix-Operation}{61}{section.9.1}
-\contentsline {section}{\numberline {9.2}Spezielle Funktionen}{61}{section.9.2}
-\contentsline {chapter}{\numberline {10}Spezielle Kommandos}{65}{chapter.10}
-\contentsline {section}{\numberline {10.1}Nullstellen}{65}{section.10.1}
-\contentsline {section}{\numberline {10.2}Extrema}{65}{section.10.2}
-\contentsline {paragraph}{\nonumberline Anmerkung}{65}{section*.28}
-\contentsline {section}{\numberline {10.3}Integration}{66}{section.10.3}
-\contentsline {section}{\numberline {10.4}Ableitung}{66}{section.10.4}
-\contentsline {section}{\numberline {10.5}Taylorentwicklung}{67}{section.10.5}
-\contentsline {paragraph}{\nonumberline Anmerkung}{67}{section*.29}
-\contentsline {section}{\numberline {10.6}Funktionswerte in 1D und 2D}{67}{section.10.6}
-\contentsline {section}{\numberline {10.7}Fouriertransformation}{68}{section.10.7}
-\contentsline {section}{\numberline {10.8}Differentialgleichungen}{69}{section.10.8}
-\contentsline {paragraph}{\nonumberline Anmerkung}{70}{section*.30}
-\contentsline {chapter}{\numberline {11}NumeRe-Prozeduren}{71}{chapter.11}
-\contentsline {section}{\numberline {11.1}Konzept}{71}{section.11.1}
-\contentsline {section}{\numberline {11.2}Struktur}{71}{section.11.2}
-\contentsline {section}{\numberline {11.3}Lokale und globale Variablen}{72}{section.11.3}
-\contentsline {section}{\numberline {11.4}R\IeC {\"u}ckgabewerte}{73}{section.11.4}
-\contentsline {section}{\numberline {11.5}Namensr\IeC {\"a}ume}{73}{section.11.5}
-\contentsline {section}{\numberline {11.6}Fehlerbehandlung}{74}{section.11.6}
-\contentsline {section}{\numberline {11.7}Debugging}{74}{section.11.7}
-\contentsline {chapter}{\numberline {12}Animierte Graphen}{77}{chapter.12}
-\contentsline {paragraph}{\nonumberline Anmerkung}{77}{section*.31}
-\contentsline {paragraph}{\nonumberline Anmerkung}{77}{section*.32}
-\contentsline {chapter}{\numberline {13}Zusammengesetzte Graphen}{79}{chapter.13}
-\contentsline {chapter}{\numberline {14}Plugins}{81}{chapter.14}
-\contentsline {section}{\numberline {14.1}Funktionsweise}{81}{section.14.1}
-\contentsline {section}{\numberline {14.2}Installation}{81}{section.14.2}
-\contentsline {paragraph}{\nonumberline Anmerkung}{82}{section*.33}
-\contentsline {section}{\numberline {14.3}Eigene Plugins}{82}{section.14.3}
-\contentsline {section}{\numberline {14.4}Fitergebnis: 2017-03-07, um 09:50:48}{85}{section.14.4}
-\contentsline {subsection}{\numberline {14.4.1}Korrelationsmatrix der angepassten Parameter}{85}{subsection.14.4.1}
-\contentsline {subsection}{\numberline {14.4.2}Fitanalyse}{85}{subsection.14.4.2}
+\contentsline {paragraph}{\nonumberline Anmerkung}{15}{section*.14}
+\contentsline {section}{\numberline {1.2}Einstellungen}{18}{section.1.2}
+\contentsline {section}{\numberline {1.3}Einfache Rechnungen}{19}{section.1.3}
+\contentsline {section}{\numberline {1.4}Wichtige Kommandos}{20}{section.1.4}
+\contentsline {paragraph}{\nonumberline Anmerkung}{21}{section*.16}
+\contentsline {chapter}{\numberline {2}Daten laden und verwenden}{23}{chapter.2}
+\contentsline {section}{\numberline {2.1}Dateitypen}{23}{section.2.1}
+\contentsline {section}{\numberline {2.2}Formatierung von Textdateien}{24}{section.2.2}
+\contentsline {section}{\numberline {2.3}Laden und Verwenden}{25}{section.2.3}
+\contentsline {paragraph}{\nonumberline Anmerkung}{26}{section*.17}
+\contentsline {section}{\numberline {2.4}Datenanalyse}{27}{section.2.4}
+\contentsline {paragraph}{\nonumberline Anmerkung}{29}{section*.20}
+\contentsline {chapter}{\numberline {3}Erzeugen von Graphen}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Typen von Graphen}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Ausgabe}{34}{section.3.2}
+\contentsline {section}{\numberline {3.3}Verwendung}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}Koordinatensysteme}{38}{section.3.4}
+\contentsline {chapter}{\numberline {4}Tabellen: der Cache}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Konzept}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Erzeugen und Entfernen von Caches}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}Verwendung}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Sortieren, Gl\IeC {\"a}tten und Resamplen}{42}{section.4.4}
+\contentsline {section}{\numberline {4.5}Statistik-Funktionalit\IeC {\"a}t}{44}{section.4.5}
+\contentsline {chapter}{\numberline {5}NumeRe-Scripte}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Konzept}{45}{section.5.1}
+\contentsline {paragraph}{\nonumberline Anmerkung}{45}{section*.24}
+\contentsline {section}{\numberline {5.2}Syntaxhhervorhebung}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}Ein einfaches Script}{45}{section.5.3}
+\contentsline {part}{\numberline {II}Fortgeschrittene Bedienung}{49}{part.2}
+\contentsline {chapter}{\numberline {6}Eigene Funktionen}{51}{chapter.6}
+\contentsline {section}{\numberline {6.1}Definition}{51}{section.6.1}
+\contentsline {section}{\numberline {6.2}Bedingte Definition}{52}{section.6.2}
+\contentsline {section}{\numberline {6.3}Verwendung}{52}{section.6.3}
+\contentsline {chapter}{\numberline {7}Zeichenketten}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Konzept}{53}{section.7.1}
+\contentsline {section}{\numberline {7.2}Variablentyp}{53}{section.7.2}
+\contentsline {section}{\numberline {7.3}Konvertierung}{54}{section.7.3}
+\contentsline {chapter}{\numberline {8}Schleifen und Verzweigungen}{57}{chapter.8}
+\contentsline {section}{\numberline {8.1}Verzweigungen}{57}{section.8.1}
+\contentsline {section}{\numberline {8.2}Bedingte Schleifen}{57}{section.8.2}
+\contentsline {section}{\numberline {8.3}Z\IeC {\"a}hlschleifen}{58}{section.8.3}
+\contentsline {section}{\numberline {8.4}Ablaufkontrollen}{58}{section.8.4}
+\contentsline {chapter}{\numberline {9}Matrix-Operationen}{59}{chapter.9}
+\contentsline {section}{\numberline {9.1}Ausf\IeC {\"u}hren einer Matrix-Operation}{59}{section.9.1}
+\contentsline {section}{\numberline {9.2}Spezielle Funktionen}{59}{section.9.2}
+\contentsline {chapter}{\numberline {10}Spezielle Kommandos}{63}{chapter.10}
+\contentsline {section}{\numberline {10.1}Nullstellen}{63}{section.10.1}
+\contentsline {section}{\numberline {10.2}Extrema}{63}{section.10.2}
+\contentsline {paragraph}{\nonumberline Anmerkung}{63}{section*.25}
+\contentsline {section}{\numberline {10.3}Integration}{64}{section.10.3}
+\contentsline {section}{\numberline {10.4}Ableitung}{64}{section.10.4}
+\contentsline {section}{\numberline {10.5}Taylorentwicklung}{65}{section.10.5}
+\contentsline {paragraph}{\nonumberline Anmerkung}{65}{section*.26}
+\contentsline {section}{\numberline {10.6}Funktionswerte in 1D und 2D}{65}{section.10.6}
+\contentsline {section}{\numberline {10.7}Fouriertransformation}{66}{section.10.7}
+\contentsline {section}{\numberline {10.8}Differentialgleichungen}{67}{section.10.8}
+\contentsline {paragraph}{\nonumberline Anmerkung}{68}{section*.27}
+\contentsline {chapter}{\numberline {11}NumeRe-Prozeduren}{69}{chapter.11}
+\contentsline {section}{\numberline {11.1}Konzept}{69}{section.11.1}
+\contentsline {section}{\numberline {11.2}Struktur}{69}{section.11.2}
+\contentsline {section}{\numberline {11.3}Lokale und globale Variablen}{70}{section.11.3}
+\contentsline {section}{\numberline {11.4}R\IeC {\"u}ckgabewerte}{71}{section.11.4}
+\contentsline {section}{\numberline {11.5}Namensr\IeC {\"a}ume}{71}{section.11.5}
+\contentsline {section}{\numberline {11.6}Fehlerbehandlung}{72}{section.11.6}
+\contentsline {section}{\numberline {11.7}Debugging}{72}{section.11.7}
+\contentsline {chapter}{\numberline {12}Animierte Graphen}{75}{chapter.12}
+\contentsline {paragraph}{\nonumberline Anmerkung}{75}{section*.29}
+\contentsline {paragraph}{\nonumberline Anmerkung}{75}{section*.30}
+\contentsline {chapter}{\numberline {13}Zusammengesetzte Graphen}{77}{chapter.13}
+\contentsline {chapter}{\numberline {14}Plugins}{79}{chapter.14}
+\contentsline {section}{\numberline {14.1}Funktionsweise}{79}{section.14.1}
+\contentsline {section}{\numberline {14.2}Installation}{79}{section.14.2}
+\contentsline {paragraph}{\nonumberline Anmerkung}{80}{section*.31}
+\contentsline {section}{\numberline {14.3}Eigene Plugins}{80}{section.14.3}
