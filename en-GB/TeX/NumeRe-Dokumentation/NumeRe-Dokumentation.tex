@@ -1,155 +1,103 @@
 \documentclass[DIV=14,headsepline,footsepline]{scrbook}
-\input{../_header/header_phys}
+\input{../_header/header_phys_en}
 \usepackage{xcolor}
 
 \hypersetup{
-	pdftitle={NumeRe Dokumentation},
-	pdfsubject={NumeRe Dokumentation}
+	pdftitle={NumeRe Documentation},
+	pdfsubject={NumeRe Documentation}
 	}
 
 \usepackage{listings}
 
-\lstdefinelanguage{nscr}
-{
-	keywordsprefix=$,
-	alsoletter={~\#},
-	keywords=[2]{help,plot,mesh,copy,set,list,find,quit,load,show,stats,hist,fit,fitw,plot3d,dens,vect,vect3d,surf,new,remove,rename,delete,smooth,resample,edit,random,start,define,redefine,ifndefined,undefine,if,elseif,else,endif,while,endwhile,for,endfor,continue,break,matop,zeroes,extrema,integrate,diff,taylor,eval,datagrid,fft,odesolve,procedure,endprocedure,explicit,private,inline,var,str,return,namespace,throw,compose,endcompose,subplot,install,endinstall,uninstall,save},
-	keywords={sin,cos,sqrt,avg,cmp,cnt,max,med,min,norm,num,prd,std,sum,to_char,sinc,to_value,to_cmd,valtostr,to_string,string_cast,matfc,zero,exp},
-	sensitive=true
-	morecomment=[l]{\#\#},
-	morecomment=[s]{\#*}{*\#},
-	string=[b]"
-}
-\newcommand\realnumberstyle[1]{\tiny}
-\makeatletter
-\newcommand{\zebra}[3]{%
-    {\realnumberstyle{#3}}%
-    \begingroup
-    \lst@basicstyle
-    \ifodd\value{lstnumber}%
-        \color{#1}%
-    \else
-        \color{#2}%
-    \fi
-        \rlap{\hspace*{\lst@numbersep}%
-        \color@block{\linewidth}{\ht\strutbox}{\dp\strutbox}%
-        }%
-    \endgroup
-}
-\makeatother
 
-\definecolor{CommandStyle}{RGB}{0,128,255}
-\definecolor{StringStyle}{RGB}{128,128,255}
-\definecolor{BGColorTwo}{RGB}{245,245,245}
-\definecolor{BGColorOne}{RGB}{230,230,230}
-\definecolor{CommentStyle}{RGB}{0,128,0}
-\lstset{
-	language=nscr,
-	basicstyle={\small\ttfamily},
-	extendedchars=true,
-	tabsize=4,
-	columns=fixed,
-	keepspaces=false,
-	breaklines=true,
-	showstringspaces=false,
-	numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt,
-	commentstyle=\color{CommentStyle},
-	ndkeywordstyle={\color{CommandStyle}\bfseries\underbar},
-	keywordstyle={\color{blue}\bfseries},
-	stringstyle=\color{StringStyle},
-	backgroundcolor=\color{BGColorTwo},
-}
-
-
+\input{listingdefines}
 
 
 
 \newcommand{\NR}{\textsc{Nu\-me\-Re}}
 
 \begin{document}
-	\subject{Dokumentation}
+	\subject{Documentation}
 	\title{\textsc{\textcolor{HeadColor}{NumeRe: Framework für Numerische Rechnungen}}}
-	\subtitle{1.0.x-Serie\\Freie numerische Software unter der GNU GPL v3}
+	\subtitle{1.1.x-Series\\Free numerical software released under the GNU GPL v3}
 	\author{Erik Hänel et al.}
 	\publishers{\includegraphics[width=0.5\textwidth]{_graphics/folder.png}}
-	\dedication{\emph{Für die Freunde der Wissenschaft}}
+	\dedication{\emph{For the friends of science}}
 	\maketitle
 	\tableofcontents
 	
-	\addchap{Rechtliche Informationen}
+	\addchap{Legal Information}
 		\addsec{GNU Free Documentation Licence v1.2}
-			{\scriptsize--- Lizenz dieser Dokumentation ---}\smallskip\\
-			\textbf{Copyright \copyright\ 2016, Erik Hänel.}
+			{\scriptsize--- Licence of this document ---}\smallskip\\
+			\textbf{Copyright \copyright\ 2017, Erik Hänel.}
 			
-			Kopieren, Verbreiten und/oder Modifizieren ist unter den Bedingungen der GNU Free Documentation Licence, Version 1.2 oder einer späteren Version, veröffentlicht von der Free Software Foundation, erlaubt. Es gibt keine unveränderlichen Abschnitte, keinen vorderen Umschlagtext und keinen hinteren Umschlagtext. Eine Kopie des Lizenztextes ist unter \href{http://www.gnu.org/copyleft/fdl.html}{GNU Free Documentation Licence} zu finden.
+			Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license may be found at \href{http://www.gnu.org/copyleft/fdl.html}{GNU Free Documentation Licence}.
 		\addsec{GNU General Public Licence v3}
-			{\scriptsize--- Lizenz des Programms und der gezeigten Codefragmente ---}\smallskip\\
-			\textbf{Copyright \copyright\ 2016, Erik Hänel et al.}
+			{\scriptsize--- Licence of the application and the displayed code fragments ---}\smallskip\\
+			\textbf{Copyright \copyright\ 2017, Erik Hänel et al.}
 			
-			Das beschriebene Programm und die hier gezeigten Codefragmente sind freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz, oder (nach Ihrer Option) jeder späteren Version.
-			
-			Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
-			
-			Sie sollten ein Exemplar der GNU GPL zusammen mit diesem Programm erhalten haben. Falls nicht, siehe \href{http://www.gnu.org/licenses/}{www.gnu.org/licenses/}.
-		\addsec{Mitwirkende}
+			The described application and the listed code fragments are free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+			This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+			You should have received a copy of the GNU General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{www.gnu.org/licenses/}.
+		\addsec{Team}
 			\begin{itemize}
-				\item \textbf{Konzept/UI:} Erik \textsc{Hänel}
-				\item \textbf{Mathe-Parser:} Ingo \textsc{Berg}, Erik \textsc{Hänel} (muParser)
+				\item \textbf{Project lead:} Erik \textsc{Hänel}
+				\item \textbf{Concept/UI:} Erik \textsc{Hänel}, Chameleon Team
+				\item \textbf{Mathematical parser:} Ingo \textsc{Berg}, Erik \textsc{Hänel} (muParser)
 				\item \textbf{Plotting:} Alexey \textsc{Balakin} (MathGL)
-				\item \textbf{numerische Algorithmen:} GNU Scientific Library
+				\item \textbf{Numerical algorithms:} GNU Scientific Library, Erik \textsc{Hänel}, Alexey \textsc{Balakin}
 				\item \textbf{Tokenizer:} Boost-Library
-				\item \textbf{Matrix-Algorithmen:} Eigen-Library
-				\item \textbf{XML-Parser:} Lee \textsc{Thomason} (TinyXML-2)
-				\item \textbf{Excel-(97-2003)-Funktionalität:} \textsc{Yap Chun} Wei (BasicExcel)
-				\item \textbf{Testing:} D.~\textsc{Bammert}, J.~\textsc{Hänel}, R.~\textsc{Hutt}, K.~\textsc{Kilgus}, E.~\textsc{Kloster}, K.~\textsc{Kurz}, M.~\textsc{Löchner}, L.~\textsc{Sahinov\'c}, D.~\textsc{Schmid}, V.~\textsc{Sehra}, G.~\textsc{Stadelmann}, R.~\textsc{Wanner}, F.~\textsc{Wunder}, J.~\textsc{Zinßer}
+				\item \textbf{Matrix algorithms:} Eigen-Library
+				\item \textbf{XML parser:} Lee \textsc{Thomason} (TinyXML-2)
+				\item \textbf{Excel-(97-2003)-Functionality:} \textsc{Yap Chun} Wei (BasicExcel)
+				\item \textbf{Testing:} C.~\textsc{Alonso}, D.~\textsc{Bammert}, J.~\textsc{Hänel}, R.~\textsc{Hutt}, K.~\textsc{Kilgus}, E.~\textsc{Kloster}, K.~\textsc{Kurz}, M.~\textsc{Löchner}, L.~\textsc{Sahinov\'c}, D.~\textsc{Schmid}, V.~\textsc{Sehra}, G.~\textsc{Stadelmann}, R.~\textsc{Wanner}, A.~\textsc{Winkler}, F.~\textsc{Wunder}, J.~\textsc{Zinßer}
 			\end{itemize}
 	\addchap{Installation}
-		Seit Version v1.0.7 ">Bose"< wird \NR\ in Form eines Installers auf \href{https://sourceforge.net/projects/numere/files/latest/download}{SourceForge} veröffentlicht. Um \NR\ auf dem eigenen Rechner zu installieren, muss der Installer heruntergeladen und ausgeführt werden. Nachdem man den entsprechenden Schritten gefolgt ist, ist \NR\ auf dem eigenen Rechner installiert und kann ausgeführt werden.
+		Since the version v1.0.7 >>Bose<< \NR\ is released as an installer on \href{https://sourceforge.net/projects/numere/files/latest/download}{SourceForge}. To install \NR\ on your own computer, just download the installer and execute it. After following the corresponding steps, \NR\ will be installed on your machine and may be executed afterwards.
 		
-		Um eine neuere Version von \NR\ zu installieren, muss (und sollte) die vorherige Version \emph{nicht} deinstalliert werden. Die neuere Version kann direkt über die bereits existierende installiert werden.
-		\paragraph{Anmerkung}
-			Der Installer gibt als Standardpfad ">C:/Software/NumeRe"< vor. Dieser Pfad kann geändert werden, jedoch sollte auf ">C:/Programme/\ldots"< bzw. ">C:/Programme (x86)/\ldots"< verzichtet werden. An diesen Orten kann \NR\ unter Umständen nicht korrekt ausgeführt werden.
-		\addsec{Systemvoraussetzungen}
-			\NR\ kann auf allen Desktop-Windowsversionen von XP bis 10 ausgeführt werden. Für Windows 8.1 und 10 muss die zusätzliche Komponenten-Kompatibilität installiert werden, da es anderenfalls zu Abstürzen während des Plotvorgangs kommen kann.
+		To install a newer version of \NR\ just install the newer version of \NR\ ontop of the previous one. Do \emph{not} uninstall the previous version, otherwise all your settings will get lost.
+		\paragraph{Note}
+			The installer nominates >>C:/Software/NumeRe<< as default installing path. This path may be changed to your needs, however you should avoid using the standard >>C:/Program Files/\ldots<< or >>C:/Program Files (x86)/\ldots<<, respectively. \NR\ probably cannot be executed correctly at these locations.
+		\addsec{System Preconditions}
+			\NR\ may be executed on all desktop version of MS-Windows from Windows XP to Windows 10. For Windows 8.1 and 10 the additional component compatibility has to be installed. Otherwise there are possible crashes during the plotting process.
 			
-			Außerdem erfordert \NR\ eine Tastatur zur korrekten Ausführung. Die Bildschirmtastatur kann ggf. auch verwendet werden, ist aber weniger komfortabel.
-		\addsec{Portable und Stable Version}
-			Standardmäßig wird die Installation der Stable Version empfohlen, welche die Dateiverknüpfungen für \NR\ vornimmt. Dabei werden Administratorrechte vorausgesetzt. Die Portable Version kann auch ohne Administratorrechte ausgeführt werden, legt dabei aber keine Dateiverknüpfungen an. \NR-Portable kann aber (prinzipiell) von jedem Verzeichnis aus gestartet, beliebig verschoben und zum Deinstallieren einfach gelöscht werden.
-			\paragraph{Anmerkung}
-				Der ">Stable Version"<-Installer schreibt lediglich die Dateiverküpfungen und den Link zum Uninstaller in die Windows-Registry. Es werden keine Konfigurationen oder andere für die Programmausführung relevante Daten in die Registry geschrieben.
-	\part{Grundlegende Bedienung}
+			\NR\ also requires a keyboard for correct execution. The on-screen keyboard may be used as well, though resulting in quite uncomfortable interaction.
+		\addsec{Portable and Stable Version}
+			As default the installation of the stable version is recommended, which will create the file links for \NR. This requires admin permissions. The portable version may be executed without any admin permissions, however it won't create any file links. \NR-Portable may be started out of any directory, moved to an arbitrary location and simply can be deleted if it shall be uninstalled.
+			\paragraph{Note}
+				The >>Stable Version<< installer only writes the file links and the link to the uninstaller into the windows registry. No configuration values or other relevant data for execution are written to the registry.
+	\part{Basic Usage}
 		\chapter{Erste Schritte}
 			Aller Anfang ist schwer. Das ist uns sehr wohl bewusst, daher haben wir hier die wesentlichen ersten Dinge zusammengetragen, die den Einstieg in \NR\ leichter gestalten sollen. Allerdings erhebt diese Dokumentation natürlich keinen Anspruch auf Vollständigkeit. Die Feinheiten aller Optionswerte werden hier ebenfalls nicht beschrieben. Eine Beschreibung derselben findet man in der integrierten Dokumentation.
 			\paragraph{Anmerkung}
 				Diese Dokumentation ist mit Marginalien ausgestattet, die auf Aktionen in \NR\ verweisen sollen. Marginalien in rot sind Syntaxelemente, die in die \NR-Konsole eingegeben werden können. Gerahmte Marginalien in dunkelblau bezeichnen Artikel der integrierten \NR-Hilfe.
 			\section{Das User Interface}
-				\textbf{Hilfe!}
+				\begin{figure}[htb]%
+					\centering
+					\includegraphics[width=\textwidth]{_graphics/ui.png}
+					\caption{Die Startansicht von \NR\ mit den erwähnten Interface-Elementen. Ebenfalls zu sehen ist die Startseite von \NR, die ein paar Basics erklärt}
+					\label{fig:ui}
+				\end{figure}	
+				Das User Interface von \NR\ ist in fünf wesentliche Elemente unterteilt. Zentral sind hierbei die \emph{Konsole} (Mitte unten) und der \emph{Editor} (open rechts). Mit der Konsole kann man direkt mit \NR\ interagieren und der Editor kann genutzt werden, um Textdateien, \NR-Scripte und \NR-Prozeduren zu bearbeiten. Daneben gibt es noch die \emph{Eingabehistorie} (unten rechts), die alle Eingaben in die Konsole protokolliert, so dass man sie durch Drag'n'Drop oder per Doppelklick erneut ausführen kann. Zur Navigation in den Dateien existiert der \emph{Dateibaum} (linke Sidebar, erster Tab) und zur Übersicht über Funktionen und Kommandos noch der \emph{Symbolbaum} (linke Sidebar, zweiter Tab). Der Editor ist zusätzlich auch noch in Tabs organisiert, so dass mehrere Dateien auf zugleich geöffnet sein können.
 				
-				Das werden die meisten denken, sobald sie \NR\ zum ersten Mal starten werden, denn \NR\ besteht nahezu vollständig aus Textkommandos. Und die Benutzeroberfläche -- hier auch \emph{User Interface} genannt -- ist die standardmäßige Windowskonsole (\autoref{fig:ui_0}), die man auch mittels Start $\Rightarrow$ Ausführen $\Rightarrow$ ">cmd.exe"< erreichen kann. Hier ist nichts mit Klicken und Mausbedienung. Was jetzt erst mal wie ein Nachteil wirkt, wird sich im Laufe der Verwendung alsbald relativieren.
-				
-				Jetzt heißt es erst mal
-				\begin{quotation}
-					\noindent\emph{Tief durchatmen, den Schreck überwinden und das Programm genauer unter die Lupe nehmen.}
-				\end{quotation}
+				Beim ersten Start zeigt der \NR-Editor eine Startseite an, die den Einstieg in die Applikation vereinfachen soll. Nutzer, die bereits ähnliche Software, wie z.B. \textsc{Matlab}, kennen, werden sich mit diesen Informationen vermutlich schnell zurecht finden. Ein paar einleitende Worte werden wir dennoch anfügen.
 				\begin{figure}[p]%
 					\centering
-					\includegraphics[width=0.9\textwidth]{_graphics/ui_0.png}
-					\caption{\NR's erster Start zeigt eine Einführung. Die Schriftart lässt sich mittels Rechtsklick auf die Titelleiste des Fensters zu z.B. ">Consolas"< ändern}
-					\label{fig:ui_0}
+					\includegraphics[width=0.2\textwidth]{_graphics/filetree.png}\hspace{5em}
+					\includegraphics[width=0.2\textwidth]{_graphics/symboltree.png}
+					\caption{Datei- und Symbolbaum im \NR-Interface}
+					\label{fig:trees}
 				\end{figure}
-				
-				\NR\ zeigt beim ersten Start automatisch eine kurze Einführung in das Programm an, die im Wesentlichen eine Zusammenfassung dieser Dokumentation ist (\autoref{fig:ui_0}). Die Feinheiten und Fähigkeiten von \NR\ können hierin aber allerhöchstens kurz angeschnitten werden. Die Einführung richtet sich daher eher an diejenigen, die schon einmal mit einem zu \NR\ ähnlichen Programm zu tun hatten.
-				
-				Um die nächsten Seiten aufzurufen, bestätigt man wiederholt mit [ENTER]. Um die Einführung hingegen abzubrechen, gibt man \verb+0+ ein und bestätigt mit [ENTER]. Um die Einführung später aufzurufen, kann \verb+firststart+ in die Konsole eingegeben werden.
-				
-				Nach der Einführung kann \NR\ wie in dieser Dokumentation aufgeführt bedient werden. Dabei erscheint am Anfang der Zeile ein Pfeil \verb+<-+, der verdeutlichen soll, dass hier eine Eingabe erwartet wird (\autoref{fig:ui_1}). Ausgaben, die das Programm tätigt, werden alle durch den entgegen gerichteten Pfeil \verb+->+ begonnen. Es können \emph{nur dann} Eingaben getätigt werden, wenn ein solcher Pfeil (oder die explizite Aufforderung) erscheint.
+				Die Bedienung über die Konsole soll unser erstes Augenmerk sein. Am Anfang der Zeile erscheint in der Konsole ein Pfeil \verb+<-+, der verdeutlichen soll, dass hier eine Eingabe erwartet wird (\autoref{fig:ui}). Ausgaben, die das Programm tätigt, werden alle durch den entgegen gerichteten Pfeil \verb+->+ begonnen. Es können \emph{nur dann} Eingaben getätigt werden, wenn ein solcher Pfeil (oder die explizite Aufforderung) erscheint.
 				
 				\paragraph{Anmerkung}
 					In einem späteren Kapitel werden Verzweigungen und Schleifen beschrieben. In diesen Fällen ändert sich der Pfeil am Anfang der Zeile zu einem spezielleren Symbol. Dies soll an dieser Stelle aber nicht weiter von Bedeutung sein.
 				\bigskip\\
 				In die \NR-Konsole können an dieser Stelle sowohl mathematisch-numerische Ausdrücke als auch Kommandos eingegeben werden. Die Syntax der mathematisch-numerischen Ausdrücke ist recht intuitiv und wird im übernächsten Abschnitt nochmals erläutert. Die Syntax der Kommandos bedarf hingegen einer kurzen Erläuterung.
 				
-				Es wurde versucht, \NR\ so intuitiv wie irgend möglich zu gestalten. Diese Prämisse war auch für die Kommandosyntax vorgegeben, ist aber aufgrund der Tatsache, dass \NR\ ein ">gewachsenes"< Programm ist, an ein paar Stellen vielleicht nicht wirklich erfüllt. Dennoch halten sich die Kommandos alle an dasselbe Schema:
+				Es wurde versucht, \NR\ so intuitiv wie irgend möglich zu gestalten. Diese Prämisse war auch für die Kommandosyntax vorgegeben, ist aber aufgrund der Tatsache, dass \NR\ ein >>gewachsenes<< Programm ist, an ein paar Stellen vielleicht nicht wirklich erfüllt. Dennoch halten sich die Kommandos alle an dasselbe Schema:
 				\begin{verbatim}
 					KOMMANDO [AUSDRUCK] [-PARAMETER[=WERT] [OPTIONEN[=WERT]]]
 				\end{verbatim}
@@ -163,32 +111,22 @@ copy <>/samples/data* -target=<loadpath>/*
 				\end{lstlisting}
 				Hier ist zu sehen, dass (manche) Kommandos nicht zwangsläufig einen Ausdruck oder einen Parameter benötigen.
 				
-				Die erst einmal gewöhnungsbedürftige Kommandosyntax wird durch den ">Merksatz"< 
+				Diese Kommandosyntax wird durch den >>Merksatz<< 
 				\begin{quotation}
-					\noindent\emph{">Führe eine Aktion [auf etwas] aus und verwende dabei die folgenden Parameter."<}
+					\noindent\emph{>>Führe eine Aktion [auf etwas] aus und verwende dabei die folgenden Parameter.<<}
 				\end{quotation}
 				vermutlich etwas eingängiger. Auf die obigen Beispiele ausgeführt, könnte dies zum Beispiel
 				\begin{quotation}
-					\noindent\emph{">Öffne die Hilfe, die sich mit ">expression"< befasst."<}
+					\noindent\emph{>>Öffne die Hilfe, die sich mit >>expression<< befasst.<<}
 				\end{quotation}
 				oder
 				\begin{quotation}
-					\noindent\emph{">Generiere einen Gitterplot der Funktion ">sin(x)+cos(y)"< und verwende eine umfassende Box."<}
+					\noindent\emph{>>Generiere einen Gitterplot der Funktion >>sin(x)+cos(y)<< und verwende eine umfassende Box.<<}
 				\end{quotation}
 				lauten.
-				\begin{figure}[p]%
-					\centering
-					\includegraphics[width=0.9\textwidth]{_graphics/ui_1.png}
-					\caption{Nach den 7 Seiten der Einführung kann \NR\ wie in dieser Dokumentation beschrieben bedient werden. Durch den Pfeil am Anfang der Zeile wird angedeutet, dass eine Eingabe erwartet wird}
-					\label{fig:ui_1}
-				\end{figure}
 				
 				\helpidx{syntax}
-				\cmd{list}Verwendet man das Auflistungskommando mit dem Parameter \verb+cmd+
-				\begin{lstlisting}
-list -cmd
-				\end{lstlisting}
-				so wird eine Liste aller Kommandos zuzüglich einer schematischen Syntax angezeigt. Sollte auch dies nicht weiterhelfen, so kann der zum Kommando gehörende Artikel der \NR-Hilfe aufgerufen werden, z.B. durch\cmd{help}
+				Alle Kommandos sind im Symbolbaum aufgelistet und dort in verschiedene Kategorien eingeteilt, so dass das nötige Kommando rasch gefunden werden kann. Wenn man mit der Maus über einem Kommando verweilt, so wird eine kurze Erklärung angezeigt. Sollte auch dies nicht weiterhelfen, so kann der zum Kommando gehörende Artikel der \NR-Hilfe aufgerufen werden, z.B. durch\cmd{help}
 				\begin{lstlisting}
 help plot
 				\end{lstlisting}
@@ -199,7 +137,7 @@ help plot
 				
 				Ausdrucks- und Kommandofehler werden sämtliche Auswertungen abbrechen. Demzufolge werden auch \NR-Scripte und \NR-Prozeduren mit Ausgabe der entsprechenden Meldung abgebrochen.
 			\section{Einstellungen}
-				Alle Einstellungen in \NR\ werden mit dem Kommando \verb+set+ durchgeführt. Als Parameter muss dabei die Bezeichnung der Einstellung und der gewünschte Wert folgen:\cmd{set}
+				Alle Einstellungen in \NR\ werden im Optionendialog getättigt, der im Werkzeuge-Menü zu finden ist. Zusätzlich können viele Einstellungen auch mit dem Kommando \verb+set+ durchgeführt. Als Parameter muss dabei die Bezeichnung der Einstellung und der gewünschte Wert folgen:\cmd{set}
 				\begin{lstlisting}
 set -EINSTELLUNG=WERT
 				\end{lstlisting}
@@ -213,33 +151,15 @@ list -settings
 				\end{lstlisting}
 				Eigentlich sind alle Einstellungen, die \NR\ mitbringt, bereits sinnvoll.
 				
-				\helpidx{set}
-				Die erste Einstellung, die man tätigen sollte, ist die Verknüpfung von \NR\ mit einem externen Bildbetrachter (in diesem Kontext auch \emph{viewer} genannt). Hierbei bietet sich vor allem \href{http://www.irfanview.net}{IrfanView} an. Falls man diesen installiert hat, kann man ihn mit \NR\ verknüpfen:
-				\begin{lstlisting}
-set -viewer="C:/Program Files/IrfanView/i_view32.exe"
-				\end{lstlisting}
-				Hierbei sei angemerkt, dass auf 64-Bit-Systemen der Dateipfad zu ">C:/Program Files (x86)/\ldots"< geändert werden muss. Als Texteditor ist der Windows-Editor vorgegeben. Aber auch dieser kann zum Beispiel zu \href{https://notepad-plus-plus.org/}{Notepad++} geändert werden:
-				\begin{lstlisting}
-set -editor="C:/Program Files/Notepad++/notepad++.exe"
-				\end{lstlisting}
-				
-				Die Angabe eines eigenen Viewers und eines Editors kann die Arbeit mit \NR\ deutlich vereinfachen, da die erzeugten Graphen dann automatisch angezeigt werden und speziell für Notepad++ eine eigene Syntaxhervorhebung vorhanden ist.
-				
-				\helpidx{viewer}
 				Die geänderten Einstellungen werden zum Programmende hin gespeichert und sind bei einem Neustart wieder verfügbar.
 			\section{Einfache Rechnungen}
 				\NR\ kann als Framework für numerische Rechnungen natürlich numerisch rechnen. Die zu berechnenden Gleichungen können ähnlich wie in einen Taschenrechner eingegeben werden. Abstände zwischen Operatoren und Werten spielen natürlich keine Rolle, allerdings dürfen zwischen Funktionsnamen und ihren Argumentklammern (ebenso bei den späteren Tabellenobjekten) \emph{keine} Leerzeichen sein. Daneben wird zwischen Groß- und Kleinschreibung unterschieden und der Malpunkt \verb+*+ muss stets mit eingegeben werden:
 				\begin{lstlisting}
 5*cos(_2pi)
 				\end{lstlisting}
-				multipliziert $\cos2\pi$ mit 5 und gibt das Ergebnis direkt aus (\autoref{fig:first_calc_0}). Als Dezimaltrennzeichen wird der Punkt \verb+.+ verwendet: die Zahl \verb+5.2+ ist in deutscher Dezimalschreibweise folglich identisch zu 5,2. \verb+_2pi+ ist dabei eine vordefinierte Konstante für $2\pi$ und \verb+cos()+ ist natürlich die Kosinus-Funktion.
-				\begin{figure}[p]%
-					\centering
-					\includegraphics[width=0.9\textwidth]{_graphics/first_calc_0.png}
-					\caption{\NR\ nach Eingabe der ersten Rechnung}
-					\label{fig:first_calc_0}
-				\end{figure}
-				Die vordefinierten Konstanten und Funktionen können mittels 
+				multipliziert $\cos2\pi$ mit 5 und gibt das Ergebnis direkt aus. Als Dezimaltrennzeichen wird der Punkt \verb+.+ verwendet: die Zahl \verb+5.2+ ist in deutscher Dezimalschreibweise folglich identisch zu 5,2. \verb+_2pi+ ist dabei eine vordefinierte Konstante für $2\pi$ und \verb+cos()+ ist natürlich die Kosinus-Funktion.
+
+				Die vordefinierten Konstanten und Funktionen sind im Symbolbaum zu finden. Sie können aber auch mittels 
 				\begin{lstlisting}
 list -const
 list -func
@@ -263,38 +183,25 @@ neue_variable = 5, neue_variable*cos(_2pi), neue_variable = 1
 				setzt \verb+neue_variable+ auf 5, berechnet $5\cos2\pi$ und setzt \verb+neue_variable+ anschließend auf 1 (\autoref{fig:first_calc_1}). In Schleifen kann diese Schreibweise erhebliche Geschwindigkeitsvorteile bringen.
 				
 				\helpidx{expression}
-				\begin{figure}[p]%
+				\begin{figure}[htb]%
 					\centering
-					\includegraphics[width=0.9\textwidth]{_graphics/first_calc_1.png}
-					\caption{\NR\ nach Eingabe der letzten Rechnung}
+					\includegraphics[width=\textwidth]{_graphics/first_calc_1.png}
+					\caption{\NR\ nach Eingabe der letzten Rechnung. Zu beachten ist, dass die Eingaben auch in der Eingabehistorie protokolliert wurden}
 					\label{fig:first_calc_1}
 				\end{figure}
 			\section{Wichtige Kommandos}
-				\NR\ wird nur durch Kommandos bedient. Die wichtigsten Kommandos sind hierbei\cmd{help\\find\\list\\quit}
+				\NR\ wird vornehmlich durch Kommandos bedient. Die wichtigsten Kommandos sind hierbei\cmd{help\\find\\list\\quit}
 					\begin{lstlisting}
 help
 help THEMA
 find BEGRIFFE
 list -OBJEKT
-quit
 					\end{lstlisting}
-					Diese Kommandos rufen die integrierte Dokumentation (\verb+help+ bzw. \verb+help THEMA+ zum THEMA), die Stichwortsuche (\verb+find BEGRIFFE+) auf, listen OBJEKTE (\verb+list -OBJEKT+) und beenden \NR\ (\verb+quit+). Sie werden bei jedem Programmstart am Anfang nochmals angezeigt (\autoref{fig:ui}).
-					\begin{figure}[p]%
-						\centering
-						\includegraphics[width=0.9\textwidth]{_graphics/ui.png}
-						\caption{Die Startansicht von \NR\ mit der Auflistung der wichtigsten Kommandos}
-						\label{fig:ui}
-					\end{figure}
+					Diese Kommandos rufen die integrierte Dokumentation (\verb+help+ bzw. \verb+help THEMA+ zum THEMA), die Stichwortsuche (\verb+find BEGRIFFE+) auf und listen OBJEKTE (\verb+list -OBJEKT+).
 					
-					Eine komplette Liste aller Kommandos erhält man durch 
-					\begin{lstlisting}
-list -cmd
-					\end{lstlisting}
-					Diese Auflistung enthält auch eine knappe Beschreibung sowie eine symbolische Syntax der Kommandos.
-					
-					Alle Kommandos haben einen Eintrag in der \NR-Hilfe. Dieser Artikel kann durch die Eingabe von \verb+help KOMMANDO+ angezeigt werden und enthält alle Informationen zu einem Kommando und ggf. noch Referenzen auf weitere wichtige Dokumentationsartikel. Im Falle, dass eine Information einmal nicht direkt in der \NR-Hilfe gefunden werden kann, kann die Stichwortsuche (\verb+find+) große Dienste erweisen, da selbige auch direkt passende Artikel der \NR-Hilfe liefert.
+					Alle Kommandos haben einen Eintrag in der \NR-Hilfe. Dieser Artikel kann durch die Eingabe von \verb+help KOMMANDO+ oder die Verwendung des entsprechenden Eintrags im Kontextmenü angezeigt werden und enthält alle Informationen zu einem Kommando und ggf. noch Referenzen auf weitere wichtige Dokumentationsartikel. Im Falle, dass eine Information einmal nicht direkt in der \NR-Hilfe gefunden werden kann, kann die Stichwortsuche (\verb+find+) große Dienste erweisen, da selbige auch direkt passende Artikel der \NR-Hilfe liefert.
 					\paragraph{Anmerkung}
-						Mittels Semikola ">\verb+;+"< können auch mehrere Kommandos und mehrere Ausdrücke, die nacheinander auszuwerten sind, gemeinsam in einer Zeile angegeben werden:
+						Mittels Semikola >>\verb+;+<< können auch mehrere Kommandos und mehrere Ausdrücke, die nacheinander auszuwerten sind, gemeinsam in einer Zeile angegeben werden:
 						\begin{lstlisting}
 KOMMANDO1; KOMMANDO2; AUSDRUCK1; KOMMANDO3; AUSDRUCK2; ...
 						\end{lstlisting}
@@ -304,7 +211,7 @@ KOMMANDO1; KOMMANDO2; AUSDRUCK1; KOMMANDO3; AUSDRUCK2; ...
 				Neben reinen Textdateien im ANSI-Format (Dateiendungen *.txt und *.dat) kann \NR\ die folgenden Dateiformaten lesen:
 				\begin{itemize}
 					\item \textbf{CassyLab-Datei (*.labx).} Dieser Datentyp wird nur von CassyLab verwendet und enthält ein komplettes CassyLab-Experiment. \NR\ wird jedoch nur die tabellarischen Daten extrahieren.
-					\item \textbf{CSV-Datei (*.csv).} Comma-Separated-Values-Dateien sind ein Quasi-Standard zum Austauschen von Daten. Allerdings existiert kein ">CSV-Standard"<, so dass es trotz umfassenden Tests vorkommen kann, dass eine CSV-Datei nicht korrekt interpretiert werden kann. (Der Programmierer freut sich über eine entsprechende Bugmeldung inkl. der angehängten Datei.)
+					\item \textbf{CSV-Datei (*.csv).} Comma-Separated-Values-Dateien sind ein Quasi-Standard zum Austauschen von Daten. Allerdings existiert kein >>CSV-Standard<<, so dass es trotz umfassenden Tests vorkommen kann, dass eine CSV-Datei nicht korrekt interpretiert werden kann. (Der Programmierer freut sich über eine entsprechende Bugmeldung inkl. der angehängten Datei.)
 					\item \textbf{JCAMP-DX-Datei (*.dx, *.jdx und *.jcm).} JCAMP-DX-Dateien (von \emph{Joint Committee on Atomic and Molecular Physical data -- Data eXchange}) sind ein Dateistandard für den Austausch von Spek\-tro\-sko\-pie-Daten. \NR\ wird auch aus diesen Dateien nur die tabellarischen Daten extrahieren.
 					\item \textbf{OpenDocument-Spreadsheet (*.ods).} Tabellarische Daten, die z.B. von OpenOffice Calc erzeugt wurden. \NR\ wird hier nur die numerischen Werte und die Zeichenketten, jedoch nicht die Gleichungen lesen. Zu beachten ist, dass OpenOffice Calc geöffnete Dateien \emph{lockt}: Spreadsheets, die in OpenOffice Calc geöffnet sind, können \emph{nicht} von \NR\ gelesen werden.
 					\item \textbf{Excel-Workbooks (*.xls und *.xlsx).} Tabellarische Daten, die z.B. von Excel erzeugt wurden. \NR\ wird hier nur die numerischen Werte und die Zeichenketten, jedoch nicht die Gleichungen lesen. Eine Einschränkung des alten Excelformates ist zusätzlich, dass Ergebnisse, die durch Gleichungen berechnet wurden, ebenfalls nicht gelesen werden können. Zu beachten ist außerdem, dass Excel wie OpenOffice Calc geöffnete Dateien \emph{lockt}: Workbooks, die in Excel geöffnet sind, können \emph{nicht} von \NR\ gelesen werden.
@@ -340,17 +247,17 @@ KOMMANDO1; KOMMANDO2; AUSDRUCK1; KOMMANDO3; AUSDRUCK2; ...
 				
 				\helpidx{data}
 			\section{Laden und Verwenden}
-				Dateien in den oben genannten Dateiformaten können geladen werden durch\cmd{load}
+				Dateien in den oben genannten Dateiformaten können geladen werden durch Drag'n'Drop in die Konsole, den entsprechenden Eintrag im Kontextmenü des Dateibaums und durch\cmd{load}
 				\begin{lstlisting}
 load DATEIPFAD/DATEI.EXT
 				\end{lstlisting}
-				Dateipfade und -Namen mit Leerzeichen müssen von Anführungzeichen umgeben sein. Der hier gezeigte \verb+DATEIPFAD+ kann dabei auch weggelassen werden, wenn die Datei sich im Standardordner \verb+<loadpath>+ (Standardmäßig der Unterordner ">data"< im \NR-Stammverzeichnis) befindet. Wird die Dateierweiterung \verb+.EXT+ weggelassen, interpretiert \NR\ dies als eine Textdatei mit der Endung *.dat. In der \NR-Hilfe finden sich unter \verb+help load+ noch weitere Informationen.
+				Dateipfade und -Namen mit Leerzeichen müssen von Anführungzeichen umgeben sein. Der hier gezeigte \verb+DATEIPFAD+ kann dabei auch weggelassen werden, wenn die Datei sich im Standardordner \verb+<loadpath>+ (Standardmäßig der Unterordner >>data<< im \NR-Stammverzeichnis) befindet. Wird die Dateierweiterung \verb+.EXT+ weggelassen, interpretiert \NR\ dies als eine Textdatei mit der Endung *.dat. In der \NR-Hilfe finden sich unter \verb+help load+ noch weitere Informationen.
 				
-				In einer Standard-\NR-Installation befinden sich Beispieldateien im Unterordner ">samples"<. Diese können durch z.B.
+				In einer Standard-\NR-Installation befinden sich Beispieldateien im Unterordner >>samples<<. Diese können durch z.B.
 				\begin{lstlisting}
 load <>/samples/data
 				\end{lstlisting}
-				geladen werden. \verb+<>+ ist der Pfadplatzhalter, der auf das \NR-Stammverzeichnis weist. Diese Zeile lädt die Datei ">data.dat"< in \NR's Speicher. Die Daten dieser Datei sind nun in tabellarischer Form im Datenobjekt \verb+data()+ abgelegt und können nun verwendet werden (Es ist reiner Zufall, dass die Datei und das Datenobjekt denselben Namen haben. Geladene Daten befinden sich immer in \verb+data()+).
+				geladen werden. \verb+<>+ ist der Pfadplatzhalter, der auf das \NR-Stammverzeichnis weist. Diese Zeile lädt die Datei >>data.dat<< in \NR's Speicher. Die Daten dieser Datei sind nun in tabellarischer Form im Datenobjekt \verb+data()+ abgelegt und können nun verwendet werden (Es ist reiner Zufall, dass die Datei und das Datenobjekt denselben Namen haben. Geladene Daten befinden sich immer in \verb+data()+).
 				
 				Die tabellarische Darstellung der geladenen Daten kann man mittels des Kommandos \verb+show+\cmd{show} erhalten:
 				\begin{lstlisting}
@@ -375,7 +282,7 @@ data(3,3:)
 				\begin{lstlisting}
 avg(), cmp(), cnt(), max(), med(), min(), norm(), num(), prd(), std(), sum(), to_char()
 				\end{lstlisting}
-				Diese Funktionen berechnen Statistiken der Elemente (Mittelwert, Median, Standardabweichung, Minimum und Maximum), Summieren oder Multiplizieren alle Elemente, suchen Elemente, zählen Elemente oder wandeln die Werte in ASCII-Zeichencodes um (die Verwendung von Zeichenketten wird im Abschnitt ">Fortgeschrittene Bedienung"< erläutert und soll hier nicht weiter von Belang sein).
+				Diese Funktionen berechnen Statistiken der Elemente (Mittelwert, Median, Standardabweichung, Minimum und Maximum), Summieren oder Multiplizieren alle Elemente, suchen Elemente, zählen Elemente oder wandeln die Werte in ASCII-Zeichencodes um (die Verwendung von Zeichenketten wird im Abschnitt >>Fortgeschrittene Bedienung<< erläutert und soll hier nicht weiter von Belang sein).
 				
 				\paragraph{Anmerkung}
 					Nutzer, die von Matlab oder Octave kommen, werden die Unterscheidung zwischen \verb+OPERATOR+ und \verb+.OPERATOR+ kennen. Dies existiert in \NR\ nicht, da \NR\ vollständig als Tabellenkalkulation ausgelegt ist. Elemente aus verschiedenen Spalten/Zeilen werden also immer elementweise verarbeitet und nicht gemäß einer Matrix-/Vektoralgebra (eine Matrix-Matrix- oder Matrix-Vektor-Multiplikation wird in diesem Framework im Rahmen des \verb+matop+-Kommandos durch den Operator \verb+**+ dargestellt).\bigskip\\
@@ -507,10 +414,10 @@ vect3d
 					\item \verb+vect+: dieser Plotstil berechnet einen Vektorplot eines 2D-Vektorfeldes: $\vec A(x,y) = A_x(x,y)\,\hat e_x + A_y(x,y)\,\hat e_y$.
 					\item \verb+vect3d+: ähnlich wie \verb+vect+ berechnet dies einen Vektorplot, allerdings den eines dreidimensionalen Vektorfeldes: $\vec A(x,y,z) = A_x(x,y,z)\,\hat e_x + A_y(x,y,z)\,\hat e_y + A_z(x,y,z)\,\hat e_z$.
 				\end{itemize}
-			\section{Ausgabeformate}
-				Das standardmäßige Ausgabeformat für Plots ist eine Bilddatei im PNG-Format im Verzeichnis \verb+<plotpath>+ (Dies ist standardmäßig der Unterorder ">plots"< im \NR-Stammverzeichnis). Die Bilddatei wird dabei automatisch entsprechend des Plotkommandos benannt. Mit den Plotoptionen \verb+opng+, \verb+oeps+, \verb+ogif+, \verb+osvg+ und \verb+otex+ sind auch weitere Ausgabeformate und andere Dateinamen möglich.
+			\section{Ausgabe}
+				Das standardmäßige Ausgabe für Plots ist der \NR-GraphViewer, in dem Plots noch zusätzlich modifiziert werden können. Zusätzlich können Plots aber auch direkt in eine Bilddatei im PNG-Format im Verzeichnis \verb+<plotpath>+ (Dies ist standardmäßig der Unterorder >>plots<< im \NR-Stammverzeichnis) exportiert werden. Dies kann mit den Plotoptionen \verb+opng+, \verb+oeps+, \verb+ogif+, \verb+osvg+ und \verb+otex+ erreicht werden.
 				
-				Um einen einfachen Plot in z.B. ">graph\_der\_messung.png"< zu erzeugen, ist die Option
+				Um einen einfachen Plot in z.B. >>graph\_der\_messung.png<< zu erzeugen, ist die Option
 				\begin{lstlisting}
 opng=graph_der_messung
 				\end{lstlisting}
@@ -550,7 +457,7 @@ plot sin(x) -set box grid
 				\end{lstlisting}
 				Ab diesem Plot werden alle folgenden Plots ebenfalls mit Gitter und umfassender Box ausgestattet (\autoref{fig:sinusplots}b und c).
 				
-				Möchte man außerdem noch ">Sinusfunktion"< statt ">$\sin(x)$"< als Legende haben, gibt man folgendes an:
+				Möchte man außerdem noch >>Sinusfunktion<< statt >>$\sin(x)$<< als Legende haben, gibt man folgendes an:
 				\begin{lstlisting}
 plot sin(x) "Sinusfunktion" -set box grid
 				\end{lstlisting}
@@ -695,7 +602,7 @@ rename -amplitude=phase
 				
 				Um alle Caches auf einmal zu entfernen und den kompletten Speicher freizugeben, kann 
 				\begin{lstlisting}
-cache -clear
+clear cache()
 				\end{lstlisting}
 				verwendet werden. Hierbei wird auch der tatsächlich benötigte Speicher reduziert. Für eine einfache Löschung einzelner Elemente genügt auch \cmd{delete}
 				\begin{lstlisting}
@@ -771,37 +678,29 @@ CACHE -std
 		\chapter{NumeRe-Scripte}
 			\NR-Scripte bieten die Möglichkeit, komplexe Rechnungen und häufig wiederkehrende Analysen in eine Datei auszulagern, von der sie einfach und wiederholt ausgeführt werden können.
 			\section{Konzept}
-				Das Konzept hinter \NR-Scripten ist simpel: alle Eingaben in die \NR-Konsole werden zeilenweise in eine Textdatei geschrieben, die im Anschluss von \NR\ gelesen wird. \NR\ wird dann die Ausdrücke und Kommandos in der entsprechenden Reihenfolge abarbeiten und auswerten.
+				Das Konzept hinter \NR-Scripten ist simpel: alle Eingaben, die man in die \NR-Konsole eingeben möchte, werden stattdessen zeilenweise in eine Textdatei geschrieben, die im Anschluss von \NR\ gelesen wird. \NR\ wird dann die Ausdrücke und Kommandos in der entsprechenden Reihenfolge abarbeiten und auswerten.
 				
-				Der Vorteil liegt auf der Hand: die Befehlskette kann einfach wiederholt werden und Fehler können schnell und simpel korrigiert werden. Außerdem kann in Notepad++ die Syntaxhighlighting für \NR\ geladen werden.
+				Der Vorteil liegt auf der Hand: die Befehlskette kann einfach wiederholt werden und Fehler können schnell und simpel korrigiert werden.
 				\paragraph{Anmerkung}
 					In einem späteren Kapitel werden auch \NR-Prozeduren besprochen. Diese repräsentieren die Programmierbarkeit von \NR. Die meisten Problemstellungen, die keine allzu komplexen Abstraktionen erfordern, lassen sich aber problemlos mithilfe von \NR-Scripten lösen.
 				
 				\helpidx{script}
-			\section{Syntaxhighlighting}
-				Um die Syntaxhighlighting verwenden zu können, wird \href{https://notepad-plus-plus.org/}{Notepad++} benötigt. Dieser Editor muss gestartet werden, dann im Menü ">Sprachen"< der Punkt ">Eigene Sprache definieren \ldots"< gewählt werden. Im sich daraufhin öffnenden Fenster wählt man ">Importieren"< und navigiert zum \NR-Stammverzeichnis. Hier sollten die zwei Dateien ">numere\_nprc\_highlighting.xml"< und ">numere\_nscr\_highlighting.xml"< zu finden sein. Man wähle eine, klicke auf ">Öffnen"< und wiederhole den Schritt für die zweite Datei.
-				\begin{figure}[p]%
-					\centering
-					\includegraphics[width=\textwidth]{_graphics/highlighting.png}
-					\caption{Ein Beispiel der \NR-Syntaxhighlighting}
-					\label{fig:highlighting}
-				\end{figure}
+			\section{Syntaxhhervorhebung}
+				Die Syntax von \NR-Scripten wird automatisch hervorgehoben, wenn die Datei mit der Endung >>.nscr<< gespeichert wird. Dies ist ein fester Bestandteil des \NR-Editors. Sie umfasst neben der Hervorhebung von Syntaxelementen auch das Hervorheben von zusammengehörigen Klammern und Kontrollflussblöcken (z.B. \verb+if ... else ... endif+).
 				
-				Nun wird Notepad++, sobald eine *.nscr- oder *.nprc-Datei geöffnet wird, die entsprechende Syntaxhighlighting laden (\autoref{fig:highlighting}). Durch die farbliche Hervorhebung der verschiedenen Syntaxelemente sollten \NR-Scripte einfach und fehlerfrei zu schreiben sein. Außerdem bietet Notepad++ mit der Klammerhervorhebung eine direkte Möglichkeit, die verwendeten Klammern zu prüfen.
-				
-				Es steht jedem frei, die Farbgebung der Syntaxhighlighting zu bearbeiten und eine eigene zu wählen. Dies kann man ebenfalls unter ">Eigene Sprache definieren \ldots"< durchführen. Man wähle im Dropdown-Menü den Eintrag ">NumeRe-Script"< und verwende die ">Stil"<-Schaltflächen, die in den entsprechenden Tabs auftreten, um Farbgebung und Schrifterscheinungsbild zu beeinflussen. Um den ursprünglichen Zustand wiederherzustellen, kann die Datei erneut importiert werden.
+				Es steht jedem frei, die Farbgebung der Syntaxhervorhebung zu bearbeiten. Dies kann man im Optionen-Dialog, der im Werkzeuge-Menü gefunden werden kann, unter dem Tab >>Style<< durchführen. 
 			\section{Ein einfaches Script}
-				Da ein kompliziertes Script, wie es in \autoref{fig:highlighting} zu sehen ist, sicher zu komplex für den ersten Versuch ist, soll hier ein viel einfacheres Beispiel gezeigt werden.
+				Als Beispiel soll hier ein einfaches Script gezeigt werden.
 				
-				Um ein \NR-Script schnell und einfach zu erstellen, gebe man 
+				Um ein \NR-Script schnell und einfach zu erstellen, verwende man den Menüpunkt im Datei-Menü, klicke man auf die Schaltfläche in der Toolbar oder gebe man 
 				\begin{lstlisting}
 new -script=erstes
 				\end{lstlisting}
-				in die \NR-Konsole ein. Es wird ein \NR-Script ">erstes.nscr"< in \verb+<scriptpath>+ erzeugt. Die Zeile\cmd{edit}
+				in die \NR-Konsole ein. Es wird ein \NR-Script >>erstes.nscr<< in \verb+<scriptpath>+ erzeugt, dass in den ersten beiden Fällen automatisch im Editor geöffnet wird. Im letzteren Fall öffnet die Zeile\cmd{edit}
 				\begin{lstlisting}
 edit erstes.nscr
 				\end{lstlisting}
-				öffnet dieses \NR-Script im verknüpften Texteditor, so dass es bearbeitet werden kann. (Die Dateierweitung ist hier nötig, da \verb+edit+ sonst nicht im korrekten Verzeichnis nach dem Script sucht) Zwischen die beiden im Script erscheinenden Textblöcke (Alles zwischen \verb+#*...*#+ ist ein Kommentar und wird von \NR\ nicht interpretiert) füge man die folgenden Zeilen ein:
+				dieses \NR-Script im \NR-Editor, so dass es bearbeitet werden kann. (Die Dateierweitung ist hier nötig, da \verb+edit+ sonst nicht im korrekten Verzeichnis nach dem Script sucht) Zwischen die beiden im Script erscheinenden Textblöcke (Alles zwischen \verb+#*...*#+ ist ein Kommentar und wird von \NR\ nicht interpretiert) füge man die folgenden Zeilen ein:
 				\begin{lstlisting}
 #* Cacheinhalt komplett loeschen *#
 delete cache() -ignore
@@ -819,7 +718,7 @@ cache(:,3) = (cache(:,1)^2+cache(:,2)^2) <= 1 ? true : false;
 				
 				Die dritte Anweisung ist die tückischste. Hier wird an die dritte Spalte in \verb+cache()+ das Ergebnis einer Bedingung zugewiesen. Sinngemäß steht hier so was wie
 				\begin{quotation}
-					\noindent\emph{">Ist der Vektorbetrag kleiner-gleich als 1, dann schreibe ">wahr"<, sonst schreibe ">falsch"< in den Cache."<}
+					\noindent\emph{>>Ist der Vektorbetrag kleiner-gleich als 1, dann schreibe >>wahr<<, sonst schreibe >>falsch<< in den Cache.<<}
 				\end{quotation}
 				Der sogenannte \emph{Ternary}-Operator
 				\begin{lstlisting}
@@ -833,7 +732,7 @@ list -logic
 				
 				Das gesamte \NR-Script ist eine ganz simple \emph{Monte-Carlo}-Simulation. Es werden zufällig Punkte auf einem Quadrat mit der Kantenlänge 1 platziert und anschließend gezählt, wie viele der Punkte auf dem (Viertel-)Einheitskreis liegen, der Teil des Quadrates ist. Unter der Annahme, dass die Wahrscheinlichkeit für jeden Punkt im Quadrat gleich hoch ist, muss das Verhältnis von den im Kreis liegenden zur Gesamtzahl der Punkte $\pi/4$ sein.
 				
-				Führt man das \NR-Script mittels\cmd{start}
+				Führt man das \NR-Script durch Klicken auf >>Ausführen<< oder mittels\cmd{start}
 				\begin{lstlisting}
 start erstes
 				\end{lstlisting}
@@ -856,7 +755,7 @@ start erstes
 				\begin{lstlisting}
 define meine_funktion(ARGS) := AUSDRUCK(ARGS)
 				\end{lstlisting}
-				definiert. Diese Zeile erzeugt die Funktion \verb+meine_funktion()+, die den komplexeren Ausdruck der Argumente zusammenfasst. Die Bezeichnungen und die Zahl der Argumente können beliebig gewählt werden, so lange sie die Maximalzahl von 10 nicht überschreiten. Wenn das letzte Argument der Funktion ">\verb+...+"< lautet, so kann für dieses Argument von einem bis zu beliebig vielen Werten angegeben werden. Der definierte Ausdruck muss dann allerdings auch mit beliebig vielen Werten umgehen können, z.B.:
+				definiert. Diese Zeile erzeugt die Funktion \verb+meine_funktion()+, die den komplexeren Ausdruck der Argumente zusammenfasst. Die Bezeichnungen und die Zahl der Argumente können beliebig gewählt werden, so lange sie die Maximalzahl von 10 nicht überschreiten. Wenn das letzte Argument der Funktion >>\verb+...+<< lautet, so kann für dieses Argument von einem bis zu beliebig vielen Werten angegeben werden. Der definierte Ausdruck muss dann allerdings auch mit beliebig vielen Werten umgehen können, z.B.:\cmd{"\ldots"\:}
 				\begin{lstlisting}
 define meine_funktion(x,...) := x*sum(...)
 				\end{lstlisting}
@@ -923,7 +822,7 @@ define meine_funktion(x,y,z) := sin(x)+cos(y)+sinc(z)
 		\chapter{Zeichenketten}
 			Neben numerischen Werten kann \NR\ auch mit Zeichenketten umgehen. Zunächst eingeführt, um die Spaltentitel der Tabellen formatieren zu können, sind die Zeichenkettenfunktionen inzwischen aber zu einem festen und sicher verwendbaren Konstrukt in \NR's Architektur geworden.
 			\section{Konzept}
-				Zeichenketten sind zunächst aneinandergereihte Zeichen, die \NR\ nicht als Variablen oder numerische Werte interpretiert. Um dies zu erreichen, sind Zeichenketten durch umschließende Anführungszeichen einzugeben:\cmd{"\ldots"\:}
+				Zeichenketten sind zunächst aneinandergereihte Zeichen, die \NR\ nicht als Variablen oder numerische Werte interpretiert. Um dies zu erreichen, sind Zeichenketten durch umschließende Anführungszeichen einzugeben:
 				\begin{lstlisting}
 "Dies ist eine Zeichenkette."
 				\end{lstlisting}
@@ -1220,7 +1119,7 @@ odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
 				
 				\helpidx{procedure}
 			\section{Struktur}
-				\NR-Prozeduren gliedern sich in ihrer Struktur in drei Teile: Prozedurkopf, Prozedurrumpf und Prozedurfuß. Der Kopf enthält den Namen, die Argumentliste und zusätzliche ">Flags"<, der Prozedurrumpf enthält die kompletten Befehlsroutinen:\cmd{procedure\\\ldots\\endprocedure}
+				\NR-Prozeduren gliedern sich in ihrer Struktur in drei Teile: Prozedurkopf, Prozedurrumpf und Prozedurfuß. Der Kopf enthält den Namen, die Argumentliste und zusätzliche >>Flags<<, der Prozedurrumpf enthält die kompletten Befehlsroutinen:\cmd{procedure\\\ldots\\endprocedure}
 				\begin{lstlisting}
 procedure $PROZEDURNAME(ARGLIST) :: FLAGS   ## Prozedurkopf
 	PROZEDURRUMPF                           ## Befehle und Ausdruecke
@@ -1228,7 +1127,7 @@ endprocedure                                ## Prozedurfuss
 				\end{lstlisting}
 				Um eine \NR-Prozedur aufzurufen, gibt man \verb+$PROZEDURNAME(VARS)+ in \NR-Scrip\-ten, anderen \NR-Prozeduren oder der \NR-Konsole an. Die \verb+VARS+ sollten dabei mit der Zahl der Argumente in \verb+ARGLIST+ übereinstimmen. Falls in \verb+ARGLIST+ Defaultwerte für die Argumente angegeben wurden, können diese in \verb+VARS+ auch weggelassen werden. Es werden dann die Defaultwerte für die entsprechenden Argumente verwendet.
 				
-				Die hier erwähnten ">Flags"< haben auf die gesamte \NR-Prozedur Einfluss und unterbinden oder erlauben bestimmte Verhaltensweise von \NR\ in dieser Prozedur. Im Grunde setzen diese Flags jedoch das Wissen der folgenden Abschnitte und Kapitel voraus:\cmd{explicit\\private\\inline}
+				Die hier erwähnten >>Flags<< haben auf die gesamte \NR-Prozedur Einfluss und unterbinden oder erlauben bestimmte Verhaltensweise von \NR\ in dieser Prozedur. Im Grunde setzen diese Flags jedoch das Wissen der folgenden Abschnitte und Kapitel voraus:\cmd{explicit\\private\\inline}
 				\begin{lstlisting}
 explicit
 private
@@ -1238,7 +1137,7 @@ inline
 				
 				Flags können in jeder beliebigen Kombination/Reihenfolge angegeben werden, da sie sich nicht gegenseitig beeinflussen.
 				
-				Jede \NR-Prozedur muss sich in einer eigenen *.nprc-Datei befinden, die den Namen der Prozedur trägt. Was im ersten Moment jedoch aufwändig und fehleranfällig klingt, kann von voll und ganz von \NR\ erledigt werden. Durch
+				Jede \NR-Prozedur muss sich in einer eigenen *.nprc-Datei befinden, die den Namen der Prozedur trägt. Was im ersten Moment jedoch aufwändig und fehleranfällig klingt, kann von voll und ganz von \NR\ erledigt werden. Durch den entsprechenden Menüpunkt im Datei-Menü, durch Klicken auf die Schaltfläche der Toolbar oder durch
 				\begin{lstlisting}
 new -proc=$PROZEDURNAME
 				\end{lstlisting}
@@ -1252,12 +1151,13 @@ edit $PROZEDURNAME
 			\section{Lokale und globale Variablen}
 				\NR-Prozeduren unterscheiden zwischen lokalen und globalen Variablen. Globale Variablen sind Variablen, die von jeder Prozedur, jedem Script und der \NR-Konsole selbst aufgerufen und verwendet werden können. Demgegenüber sind lokale Variablen, die \emph{nur} in \emph{dieser} Prozedur und auch dann \emph{nur} in \emph{dieser} Rekursion der Prozedur verwendet werden können.
 				
-				Lokale Variablen werden mittels\cmd{var\\str}
+				Lokale Variablen werden mittels\cmd{var\\str\\tab}
 				\begin{lstlisting}
 var VARIABLEN
 str ZEICHENKETTENVARIABLEN
+tab CACHES
 				\end{lstlisting}
-				deklariert. Diese beiden Kommandos dürfen je Prozedur nur einmal auftreten und deklarieren jeweils einen Satz an lokalen numerischen Variablen oder Zeichenkettenvariablen. Diese Variablen werden am Ende der Prozedur automatisch wieder gelöscht. (Lokale Variablen können genauso wie globale heißen. In einer \NR-Prozedur haben die lokalen Variablen dann die höhere Priorität.)
+				deklariert. Diese Kommandos dürfen je Prozedur nur einmal auftreten und deklarieren jeweils einen Satz an lokalen numerischen Variablen, Zeichenkettenvariablen oder lokalen Caches. Diese Variablen werden am Ende der Prozedur automatisch wieder gelöscht. (Lokale Variablen können genauso wie globale heißen. In einer \NR-Prozedur haben die lokalen Variablen dann die höhere Priorität. Man spricht dann von \emph{schattieren}.)
 			\section{Rückgabewerte}
 				Standardmäßig geben \NR-Prozeduren den Wert \verb+true+ zurück, wenn die Auswertung die Zeile \verb+endprocedure+ erreicht. \NR-Prozeduren können aber auch andere Werte zurückgeben, wenn\cmd{return}
 				\begin{lstlisting}
@@ -1284,6 +1184,7 @@ $NAMENSRAUM~PROZEDURNAME(VARS)
 new -proc=$NAMENSRAUM~PROZEDURNAME
 edit $NAMENSRAUM~PROZEDURNAME
 				\end{lstlisting}
+				Gleiches gilt aber auch, wenn man die Funktionen der graphischen Oberfläche verwendet.
 				
 				Werden in einer Prozedur häufiger \NR-Prozeduren aus einem bestimmten Namensraum aufgerufen, kann dieser Namensraum auch als temporärer Standardnamensraum vorgegeben werden, indem\cmd{namespace}
 				\begin{lstlisting}
@@ -1304,36 +1205,18 @@ throw "Das ist die Fehlermeldung."
 				die in der \NR-Konsole schließlich angezeigt wird.
 			\section{Debugging}
 				In den wenigsten Fällen wird eine \NR-Prozedur beim ersten Versuch bereits lauffähig und fehlerfrei sein. Hierzu sind kleinere Tipp- oder Logikfehler viel zu wahrscheinlich. Beim Ausführen einer solchen fehlerhaften \NR-Prozedur wird \NR\ ggf. an einer Stelle abbrechen, wenn es sich um einen Syntaxfehler handelt, aber nicht unbedingt, wenn ein Rechenfehler aufgetreten ist.
+				\begin{figure}[htb]
+					\centering
+					\includegraphics[width=\textwidth]{_graphics/debugger.png}%
+					\caption{Der \NR-Debugger an einem Breakpoint. Mit rot werden die Änderungen zum letzten ausgewerteten Breakpoint hervorgehoben}%
+					\label{fig:debugger}%
+				\end{figure}
 				
-				\NR\ besitzt zum Aufspüren und Entfernen solcher Fehler einen sogenannten \emph{Debugger}. Dieser kann mittels \verb+set -mode=debug+ aktiviert werden und listet bei Syntaxfehlern automatisch den fehlerhaften Ausdruck, die ungefähre Zeile des Ausdrucks, das fehlerhafte Modul (Datei), eine Stacktrace und alle lokalen Variablen der aktuellen Prozedur inklusive ihrer Werte. Mittels der Stacktrace kann rekonstruiert werden, in welcher Prozedur der Fehler aufgetreten ist und welche Argumente an diese übergeben wurden.
+				\NR\ besitzt zum Aufspüren und Entfernen solcher Fehler einen sogenannten \NR-\emph{Debugger} (\autoref{fig:debugger}). Dieser kann durch den entsprechenden Menüpunkt im Werkzeuge-Menü oder durch Klicken auf die Schaltfläche der Toolbar aktiviert werden und listet bei Syntaxfehlern automatisch den fehlerhaften Ausdruck, die ungefähre Zeile des Ausdrucks, das fehlerhafte Modul (Datei), eine Stacktrace und alle lokalen Variablen der aktuellen Prozedur inklusive ihrer Werte. Mittels der Stacktrace kann rekonstruiert werden, in welcher Prozedur der Fehler aufgetreten ist und welche Argumente an diese übergeben wurden.
 				
-				Zusätzlich zum automatischen Listen bei Syntaxfehlern kann der \NR-Debugger vergleichbare Informationen an einem \emph{Breakpoint} liefern. Dieser Breakpoint wird mittels \verb+|>+ am Anfang einer Zeile gesetzt. \NR\ unterbricht, bevor die \emph{aktuelle Zeile} ausgewertet wird, und listet Stacktrace und Variablenwerte. Mittels der \verb+ENTER+-Taste kann die Auswertung fortgesetzt werden. (Außerhalb des Debug-Modus werden Breakpoints selbstverständlich ignoriert.)
-				\begin{verbatim}
-					=============================================================
-					NUMERE: DEBUGGER   [BREAKPOINT]
-					=============================================================
-					MODULINFORMATIONEN: -----------------------------------------
-					Aktueller Ausdruck:      to_string("Hallo Welt!") -print
-					Aktuelles Modul:         C:/CPP/NumeRe/procedures/test_2.nprc
-					Zeilennummer:            60
-					
-					STACKTRACE: -------------------------------------------------
-					-> $thisfile~print("Hallo Welt!")
-					   $thisfile~hello()
-					   $test_2()
-					
-					LOKALE NUMERISCHE VARIABLEN: --------------------------------
-					neue_var   =   -inf
-					v1         =   0
-					v2         =   5
-					
-					LOKALE ZEICHENKETTEN: ---------------------------------------
-					str1   =   ""
-					str2   =   "string"
-					
-					Zum Fortfahren ENTER drücken ...
-					==============================================================
-				\end{verbatim}
+				Zusätzlich zum automatischen Listen bei Syntaxfehlern kann der \NR-Debugger vergleichbare Informationen an einem \emph{Breakpoint} liefern. Ein temporärer Breakpoint kann durch die Funktionen der Toolbar oder durch Klicken auf die betreffende Zeile der Seitenleiste gesetzt werden. Man beachte, dass in Zeilen, die nur aus Kommentaren bestehen, oder Zeilen, die leer sind, \emph{keine} temporären Breakpoints gesetzt werden können. 
+				
+				Permanente Breakpoints werden mittels \verb+|>+ am Anfang einer Zeile gesetzt, sind aber selten nötig. \NR\ unterbricht, bevor die \emph{aktuelle Zeile} ausgewertet wird, und listet Stacktrace und Variablenwerte. Durch Klicken auf >>Fortsetzen<< kann die Auswertung fortgesetzt werden, durch >>Abbrechen<< wird die Auswertung komplett abgebrochen. (Außerhalb des Debug-Modus werden Breakpoints selbstverständlich ignoriert.)
 				
 				\helpidx{debugger}
 		\chapter{Animierte Graphen}
@@ -1343,12 +1226,12 @@ throw "Das ist die Fehlermeldung."
 			\begin{lstlisting}
 PLOTCMD AUSDRUCK(t,VARS) -set animate OPTIONEN
 			\end{lstlisting}
-			Dies wird eine Animation als *.gif-Datei erzeugen, die aus mehreren, inkludierten Einzelbildern besteht. \href{http://www.irfanview.net}{IrfanView} oder Firefox sind in der Lage, die Animation anzuzeigen.
+			Dies wird eine Animation erzeugen, die aus mehreren, inkludierten Einzelbildern besteht. Im \NR-GraphViewer kann diese Animation abgespielt oder die Frames einzeln betrachtet werden.
 			
 			\helpidx{plotoptions}
 			\paragraph{Anmerkung}
 				\NR\ kann nativ keine Animationen aus Datensätzen erzeugen. Dies ist u.A. der Tatsache geschuldet, dass der Zeitparameter auch nicht-ganzzahlig Werte annehmen kann, Tabellenobjekte allerdings nur ganzzahlige Indices akzeptieren. Um eine Animation aus Datensätzen zu generieren, muss folglich auf die Einzelbilderzeugung mittels einer Schleife zurückgegriffen werden.\bigskip\\
-			Standardmäßig erzeugt \NR\ 50 Frames je Animation mit einer jeweiligen Dauer von $1/25$~s und verwendet als Zeitparameter \verb+t+ das Intervall $[0;1]$. Dies kann natürlich geändert werden, allerdings kann es bei zu vielen Frames zu Speicherschwierigkeiten kommen:
+			Standardmäßig erzeugt \NR\ 50 Frames je Animation mit einer jeweiligen Dauer von $1/25$~s und verwendet als Zeitparameter \verb+t+ das Intervall $[0;1]$. Dies kann natürlich geändert werden, allerdings kann es bei zu vielen Frames zu Speicherschwierigkeiten kommen, da die Frames einzeln im Speicher abgelegt werden müssen:
 			\begin{lstlisting}
 PLOTCMD AUSDRUCK(t,VARS) -set t=0:2 animate=100 OPTIONEN
 			\end{lstlisting}
@@ -1395,7 +1278,7 @@ endcompose
 				\begin{lstlisting}
 install SCRIPTNAME
 				\end{lstlisting}
-				in die \NR-Konsole eingegeben werden (sollte das Script nicht in \verb+<scriptpath>+ vorliegen, muss der Pfad mit angegeben werden). \NR\ wird nun die Installationsroutine ausführen, die entsprechenden Prozeduren erzeugen und die ebenfalls nötigen Verknüpfungen generieren. 
+				in die \NR-Konsole eingegeben werden (sollte das Script nicht in \verb+<scriptpath>+ vorliegen, muss der Pfad mit angegeben werden). \NR\ wird nun die Installationsroutine ausführen, die entsprechenden Prozeduren erzeugen und die ebenfalls nötigen Verknüpfungen generieren. Es ist \emph{nicht} möglich, ein Plugin mit den Funktionen der graphischen Benutzeroberfläche zu installieren.
 				
 				\helpidx{install}
 				Nach Abschluss des Scripts ist das Plugin installiert. Es sollte nun unter
@@ -1416,7 +1299,7 @@ list -plugins
 				\paragraph{Anmerkung}
 					Es ist nicht nötig, ein Plugin zunächst zu deinstallieren, um eine neue Version desselben zu installieren. Die Installation kann direkt über die bestehende ausgeführt werden. \NR\ wird die entsprechenden Verknüpfungen selbstständig ändern.
 			\section{Eigene Plugins}
-				Die Entwicklung eines eigenen Plugins mag zunächst kompliziert klingen, aber tatsächlich ist es das eigentlich nicht. \NR\ gibt bereits eine Hilfstellung, indem das Template (Vorlage) verwendet wird. Mittels
+				Die Entwicklung eines eigenen Plugins mag zunächst kompliziert klingen, aber tatsächlich ist es das eigentlich nicht. \NR\ gibt bereits eine Hilfstellung, indem das Template (Vorlage) verwendet wird. Mittels der entsprechenden Funktionen der graphischen Benutzeroberfläche oder durch
 				\begin{lstlisting}
 new -plugin=PLUGINNAME
 				\end{lstlisting}

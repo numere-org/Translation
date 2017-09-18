@@ -1,61 +1,57 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.15)  7 MAR 2017 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  18 SEP 2017 17:17
 entering extended mode
 **./NumeRe-Dokumentation.tex
 (NumeRe-Dokumentation.tex
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrbook.cls"
-Document Class: scrbook 2016/06/14 v3.21 KOMA-Script document class (book)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
-Package: scrkbase 2016/06/14 v3.21 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbook.cls
+Document Class: scrbook 2017/04/13 v3.23 KOMA-Script document class (book)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.sty
+Package: scrkbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
-Package: scrbase 2016/06/14 v3.21 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
+Package: scrbase 2017/04/13 v3.23 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
-Package: scrlfile 2016/06/14 v3.21 KOMA-Script package (loading files)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.sty
+Package: scrlfile 2017/04/13 v3.23 KOMA-Script package (loading files)
 
-Package scrlfile, 2016/06/14 v3.21 KOMA-Script package (loading files)
+Package scrlfile, 2017/04/13 v3.23 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
-Package: tocbasic 2016/06/14 v3.21 KOMA-Script package (handling toc-files)
+))) (C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.sty
+Package: tocbasic 2017/04/13 v3.23 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 132.
+(tocbasic)             for `toc' on input line 133.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 133.
+(tocbasic)             for `lof' on input line 135.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 134.
-Package tocbasic Info: defining new hook before heading of `' on input line 1602.
+(tocbasic)             for `lot' on input line 136.
+Package tocbasic Info: defining new hook before heading of `' on input line 1608.
 Class scrbook Info: File `scrsize11pt.clo' used instead of
-(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2269.
+(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2275.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrsize11pt.clo"
-File: scrsize11pt.clo 2016/06/14 v3.21 KOMA-Script font size class option (11pt)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize11pt.clo
+File: scrsize11pt.clo 2017/04/13 v3.23 KOMA-Script font size class option (11pt)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
-Package: typearea 2016/06/14 v3.21 KOMA-Script package (type area)
-
-Package typearea, 2016/06/14 v3.21 KOMA-Script package (type area)
-                  Copyright (C) Frank Neukam, 1992-1994
-                  Copyright (C) Markus Kohm, 1994-
-
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.sty
+Package: typearea 2017/04/13 v3.23 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count79
 \ta@hblk=\skip43
 \ta@vblk=\skip44
 \ta@temp=\skip45
 \footheight=\skip46
+
 
 Package typearea Warning: Bad type area settings!
 (typearea)                The detected line width is about 20%
@@ -79,7 +75,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1529.
+(typearea)              on input line 1647.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -95,27 +91,27 @@ Package typearea Info: These are the values describing the layout:
 \scr@dte@subsubsection@maxnumwidth=\skip51
 \scr@dte@paragraph@maxnumwidth=\skip52
 \scr@dte@subparagraph@maxnumwidth=\skip53
-LaTeX Info: Redefining \textsubscript on input line 4782.
+LaTeX Info: Redefining \textsubscript on input line 4843.
 \abovecaptionskip=\skip54
 \belowcaptionskip=\skip55
 \c@pti@nb@sid@b@x=\box27
 \c@figure=\count87
 \c@table=\count88
-Class scrbook Info: Redefining `\numberline' on input line 5813.
+Class scrbook Info: Redefining `\numberline' on input line 6000.
 \bibindent=\dimen102
-) (../_header/header_phys.tex (../_header/package.tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+) (../_header/header_phys_en.tex (../_header/package_en.tex ("D:\Software\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+("D:\Software\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+ ("D:\Software\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -327,6 +323,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -347,11 +345,14 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+
+("D:\Software\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -390,9 +391,8 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+ ("D:\Software\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -415,70 +415,64 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
-Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
-File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
+("D:\Software\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+ ("D:\Software\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/04/23 3.9r The Babel package
+("D:\Software\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2017/05/19 3.10 The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
-Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
-Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/04/23 3.9r Babel common definitions
+("D:\Software\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
+ ("D:\Software\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
+ ("D:\Software\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 )
-\l@naustrian = a dialect from \language\l@ngerman 
-\l@nswissgerman = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 88.
-)))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package babel Info: Making " an active character on input line 125.
+)) ("D:\Software\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/01/24 v3.3q English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) ("D:\Software\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+ ("D:\Software\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+ ("D:\Software\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+) ("D:\Software\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
-))
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty"
+)) ("D:\Software\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip56
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count91
 )
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty"
+ ("D:\Software\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen104
@@ -506,13 +500,13 @@ Package caption Info: KOMA-Script document class.
 \sf@top=\skip61
 \sf@bottom=\skip62
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+("D:\Software\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("D:\Software\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+("D:\Software\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -522,7 +516,7 @@ Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -530,7 +524,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -550,57 +544,55 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("D:\Software\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+) ("D:\Software\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen112
 \Hy@linkcounter=\count100
 \Hy@pagecounter=\count101
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+ ("D:\Software\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count102
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+("D:\Software\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 4362.
-Package hyperref Info: Hyper figures OFF on input line 4486.
-Package hyperref Info: Link nesting OFF on input line 4491.
-Package hyperref Info: Hyper index ON on input line 4494.
-Package hyperref Info: Plain pages OFF on input line 4501.
-Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4735.
+Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count103
 
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5088.
+LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen113
 \Fld@menulength=\count104
 \Field@Width=\dimen114
 \Fld@charsize=\dimen115
-Package hyperref Info: Hyper figures OFF on input line 6342.
-Package hyperref Info: Link nesting OFF on input line 6347.
-Package hyperref Info: Hyper index ON on input line 6350.
-Package hyperref Info: backreferencing OFF on input line 6357.
-Package hyperref Info: Link coloring OFF on input line 6362.
-Package hyperref Info: Link coloring with OCG OFF on input line 6367.
-Package hyperref Info: PDF/A mode OFF on input line 6372.
-LaTeX Info: Redefining \ref on input line 6412.
-LaTeX Info: Redefining \pageref on input line 6416.
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
 \Hy@abspage=\count105
 \c@Item=\count106
 \c@Hfootnote=\count107
@@ -608,449 +600,154 @@ LaTeX Info: Redefining \pageref on input line 6416.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+("D:\Software\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
 \Fld@listcount=\count108
 \c@bookmark@seq@number=\count109
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+ ("D:\Software\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip63
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+) ("D:\Software\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen116
 \extrarowheight=\dimen117
 \NC@list=\toks17
 \extratabsurround=\skip64
 \backup@length=\skip65
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) ("D:\Software\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+ ("D:\Software\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("D:\Software\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen118
 \Gin@req@width=\dimen119
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks18
-\pgfutil@tempdima=\dimen120
-\pgfutil@tempdimb=\dimen121
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
-\pgfutil@abb=\box28
-
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty"
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
-))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks19
-\pgfkeys@temptoks=\toks20
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks21
-))
-\pgf@x=\dimen122
-\pgf@y=\dimen123
-\pgf@xa=\dimen124
-\pgf@ya=\dimen125
-\pgf@xb=\dimen126
-\pgf@yb=\dimen127
-\pgf@xc=\dimen128
-\pgf@yc=\dimen129
-\w@pgf@writea=\write3
-\r@pgf@reada=\read1
-\c@pgf@counta=\count110
-\c@pgf@countb=\count111
-\c@pgf@countc=\count112
-\c@pgf@countd=\count113
-\t@pgf@toka=\toks22
-\t@pgf@tokb=\toks23
-\t@pgf@tokc=\toks24
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
-File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def"
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex"
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count114
-\pgfsyssoftpath@bigbuffer@items=\count115
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex"
-File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen130
-\pgfmath@count=\count116
-\pgfmath@box=\box29
-\pgfmath@toks=\toks25
-\pgfmath@stack@operand=\toks26
-\pgfmath@stack@operation=\toks27
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex")))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count117
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex"
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen131
-\pgf@picmaxx=\dimen132
-\pgf@picminy=\dimen133
-\pgf@picmaxy=\dimen134
-\pgf@pathminx=\dimen135
-\pgf@pathmaxx=\dimen136
-\pgf@pathminy=\dimen137
-\pgf@pathmaxy=\dimen138
-\pgf@xx=\dimen139
-\pgf@xy=\dimen140
-\pgf@yx=\dimen141
-\pgf@yy=\dimen142
-\pgf@zx=\dimen143
-\pgf@zy=\dimen144
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex"
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen145
-\pgf@path@lasty=\dimen146
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex"
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen147
-\pgf@shorten@start@additional=\dimen148
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex"
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count118
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex"
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen149
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex"
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen150
-\pgf@pt@y=\dimen151
-\pgf@pt@temp=\dimen152
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
-File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex"
-File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex"
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex"
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen153
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen154
-\pgf@sys@shading@range@num=\count119
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex"
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex"
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box33
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex"
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex"
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex"
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box34
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty"
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen155
-\pgf@nodesepend=\dimen156
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty"
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen157
-\pgffor@skip=\dimen158
-\pgffor@stack=\toks28
-\pgffor@toks=\toks29
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex"
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count120
-\pgfplotmarksize=\dimen159
-)
-\tikz@lastx=\dimen160
-\tikz@lasty=\dimen161
-\tikz@lastxsaved=\dimen162
-\tikz@lastysaved=\dimen163
-\tikzleveldistance=\dimen164
-\tikzsiblingdistance=\dimen165
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count121
-\tikznumberofchildren=\count122
-\tikznumberofcurrentchild=\count123
-\tikz@fig@count=\count124
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count125
-\pgfmatrixcurrentcolumn=\count126
-\pgf@matrix@numberofcolumns=\count127
-)
-\tikz@expandcount=\count128
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarysnakes.code.tex"
-File: tikzlibrarysnakes.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.7)
-
-
-Package pgf Warning: Snakes have been superseded by decorations. Please use the decoration libraries instead of the snak
-es library on input line 14.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.cod
-e.tex" ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen166
-\pgfdecoratedremainingdistance=\dimen167
-\pgfdecoratedinputsegmentcompleteddistance=\dimen168
-\pgfdecoratedinputsegmentremainingdistance=\dimen169
-\pgf@decorate@distancetomove=\dimen170
-\pgf@decorate@repeatstate=\count129
-\pgfdecorationsegmentamplitude=\dimen171
-\pgfdecorationsegmentlength=\dimen172
-)
-\tikz@lib@dec@box=\box39
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex"))
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.co
-de.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex")
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.shapes.code.te
-x" ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.shapes.code.tex")))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+) ("D:\Software\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen173
-\epsfysize=\dimen174
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/06/28 v2.15d AMS math features
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
+) ("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip66
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+ ("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks30
-\ex@=\dimen175
+\@emptytoks=\toks18
+\ex@=\dimen122
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen176
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+\pmbraise@=\dimen123
+) ("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count130
-LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count131
-\leftroot@=\count132
-LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count133
-\DOTSCASE@=\count134
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box40
-\strutbox@=\box41
-\big@size=\dimen177
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count135
-\c@MaxMatrixCols=\count136
+\inf@bad=\count110
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count111
+\leftroot@=\count112
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count113
+\DOTSCASE@=\count114
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
 \dotsspace@=\muskip11
-\c@parentequation=\count137
-\dspbrk@lvl=\count138
-\tag@help=\toks31
-\row@=\count139
-\column@=\count140
-\maxfields@=\count141
-\andhelp@=\toks32
-\eqnshift@=\dimen178
-\alignsep@=\dimen179
-\tagshift@=\dimen180
-\tagwidth@=\dimen181
-\totwidth@=\dimen182
-\lineht@=\dimen183
-\@envbody=\toks33
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
+\tag@help=\toks19
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
+\andhelp@=\toks20
+\eqnshift@=\dimen125
+\alignsep@=\dimen126
+\tagshift@=\dimen127
+\tagwidth@=\dimen128
+\totwidth@=\dimen129
+\lineht@=\dimen130
+\@envbody=\toks21
 \multlinegap=\skip67
 \multlinetaggap=\skip68
-\mathdisplay@stack=\toks34
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+ ("D:\Software\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amscd.sty"
-Package: amscd 1999/11/29 v2.0 AMS Commutatitive Diagrams
-\athelp@=\toks35
-\minaw@=\dimen184
-\bigaw@=\dimen185
-\minCDarrowwidth=\dimen186
+("D:\Software\MiKTeX 2.9\tex\latex\amsmath\amscd.sty"
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks23
+\minaw@=\dimen131
+\bigaw@=\dimen132
+\minCDarrowwidth=\dimen133
 )
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\doublestroke\dsfont.sty"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\doublestroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\mathpazo.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\mathpazo.sty"
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup6
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
+) ("D:\Software\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
-)
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\bezos\accents.sty"
+) ("D:\Software\MiKTeX 2.9\tex\latex\bezos\accents.sty"
 Package: accents 2006/05/12 v1.3 Math Accent Tools
-\cc@skew=\dimen187
-\cc@wd=\dimen188
-\cc@code=\count142
-\cc@group=\count143
-\cc@skewchar=\count144
+\cc@skew=\dimen134
+\cc@wd=\dimen135
+\cc@code=\count122
+\cc@group=\count123
+\cc@skewchar=\count124
 )
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen189
-\lightrulewidth=\dimen190
-\cmidrulewidth=\dimen191
-\belowrulesep=\dimen192
-\belowbottomsep=\dimen193
-\aboverulesep=\dimen194
-\abovetopsep=\dimen195
-\cmidrulesep=\dimen196
-\cmidrulekern=\dimen197
-\defaultaddspace=\dimen198
-\@cmidla=\count145
-\@cmidlb=\count146
-\@aboverulesep=\dimen199
-\@belowrulesep=\dimen256
-\@thisruleclass=\count147
-\@lastruleclass=\count148
-\@thisrulewidth=\dimen257
-)
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\ziffer\ziffer.sty")
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
-Package: textcomp 2016/06/19 v1.99m Standard LaTeX package
+\heavyrulewidth=\dimen136
+\lightrulewidth=\dimen137
+\cmidrulewidth=\dimen138
+\belowrulesep=\dimen139
+\belowbottomsep=\dimen140
+\aboverulesep=\dimen141
+\abovetopsep=\dimen142
+\cmidrulesep=\dimen143
+\cmidrulekern=\dimen144
+\defaultaddspace=\dimen145
+\@cmidla=\count125
+\@cmidlb=\count126
+\@aboverulesep=\dimen146
+\@belowrulesep=\dimen147
+\@thisruleclass=\count127
+\@lastruleclass=\count128
+\@thisrulewidth=\dimen148
+))
+("D:\Software\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -1063,14 +760,13 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+ ("D:\Software\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
-File: ts1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+("D:\Software\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -1203,236 +899,223 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+) (../_header/style_phys.tex
+Package scrkbase Info: You've told me to redefine the font selection of the
+(scrkbase)             element `pagehead' that is an alias of element
+(scrkbase)             `pageheadfoot' on input line 34.
+Package hyperref Info: Option `colorlinks' set `true' on input line 53.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 53.
+) (../_header/command.tex
+\c@ale=\count129
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
-Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+("D:\Software\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("D:\Software\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count130
+\lst@gtempboxa=\box30
+\lst@token=\toks24
+\lst@length=\count131
+\lst@currlwidth=\dimen149
+\lst@column=\count132
+\lst@pos=\count133
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count134
+\lst@lineno=\count135
+\lst@maxwidth=\dimen152
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count136
+\lst@skipnumbers=\count137
+\lst@framebox=\box31
+)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (listingdefines.tex)
+(NumeRe-Dokumentation.aux)
+\openout1 = `NumeRe-Dokumentation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
+ ("D:\Software\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 19.
+
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+(C:\Users\drake\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count138
+\scratchdimen=\dimen153
+\scratchbox=\box32
+\nofMPsegments=\count139
+\nofMParguments=\count140
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen154
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
+\everyMPtoPDFconversion=\toks26
+) ("D:\Software\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+ ("D:\Software\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)) (../_header/style_phys.tex
-Package scrkbase Info: You've told me to redefine the font selection of the
-(scrkbase)             element `pagehead' that is an alias of element
-(scrkbase)             `pageheadfoot' on input line 34.
-Package hyperref Info: Option `colorlinks' set `true' on input line 53.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 53.
-)
-(../_header/command.tex
-\c@ale=\count149
-)) ("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count150
-\lst@gtempboxa=\box42
-\lst@token=\toks36
-\lst@length=\count151
-\lst@currlwidth=\dimen258
-\lst@column=\count152
-\lst@pos=\count153
-\lst@lostspace=\dimen259
-\lst@width=\dimen260
-\lst@newlines=\count154
-\lst@lineno=\count155
-\lst@maxwidth=\dimen261
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count156
-\lst@skipnumbers=\count157
-\lst@framebox=\box43
-)
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2015/06/04 1.6 listings configuration
-))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
-
-(NumeRe-Dokumentation.aux)
-\openout1 = `NumeRe-Dokumentation.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 69.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
-File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-)
-("C:\Users\Erik Â»DracyonÂ« HÃ¤nel\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
-\scratchdimen=\dimen262
-\scratchbox=\box44
-\nofMPsegments=\count159
-\nofMParguments=\count160
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count161
-\MPscratchDim=\dimen263
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
-\everyMPtoPDFconversion=\toks38
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 69.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring ON on input line 19.
+ ("D:\Software\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+("D:\Software\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count164
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
- (NumeRe-Dokumentation.out)
-(NumeRe-Dokumentation.out)
-\@outlinefile=\write4
-\openout4 = `NumeRe-Dokumentation.out'.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
+ (NumeRe-Dokumentation.out) (NumeRe-Dokumentation.out)
+\@outlinefile=\write3
+\openout3 = `NumeRe-Dokumentation.out'.
 
- ABD: EveryShipout initializing macros
-\c@lstlisting=\count165
+\c@lstlisting=\count145
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 77.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 77.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 77.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 27.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 27.
+ ("D:\Software\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 77.
+(Font)              scaled to size 10.40245pt on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 77.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 77.
+(Font)              scaled to size 10.40245pt on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 77.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.70294pt on input line 77.
+(Font)              scaled to size 19.70294pt on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 77.
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 19.70294pt on input line 77.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 77.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 77.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 77.
+(Font)              scaled to size 19.70294pt on input line 27.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+
+Package xcolor Warning: Incompatible color definition on input line 27.
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 27.
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 77.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd"
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 27.
+ ("D:\Software\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd"
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 77.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 27.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd"
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd"
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 77.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd"
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 27.
+ ("D:\Software\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd"
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 77.
+(Font)              scaled to size 15.0049pt on input line 27.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 77.
+(Font)              scaled to size 10.42007pt on input line 27.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 77.
+(Font)              scaled to size 8.33606pt on input line 27.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 77.
+(Font)              scaled to size 15.0049pt on input line 27.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 77.
+(Font)              scaled to size 10.42007pt on input line 27.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 77.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 77.
+(Font)              scaled to size 8.33606pt on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 27.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-) <_graphics/folder.png, id=310, 120.45pt x 120.45pt>
+) <_graphics/folder.png, id=295, 120.45pt x 120.45pt>
 File: _graphics/folder.png Graphic file (type png)
 
 <use _graphics/folder.png>
-Package pdftex.def Info: _graphics/folder.png used on input line 77.
+Package pdftex.def Info: _graphics/folder.png used on input line 27.
 (pdftex.def)             Requested size: 234.73526pt x 234.7589pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
  [1
 
 
 
-{C:/Users/Erik Â»DracyonÂ« HÃ¤nel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./_graphics/folder.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
- [2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./_graphics/folder.png>] [2
+
+] [3
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
- [3
+[4
+
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
- [4
+
+Package xcolor Warning: Incompatible color definition on input line 27.
+
+(NumeRe-Dokumentation.toc
+
+Package xcolor Warning: Incompatible color definition on input line 2.
 
 
-] (NumeRe-Dokumentation.toc
+Package xcolor Warning: Incompatible color definition on input line 3.
+
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 3.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1441,56 +1124,240 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 3.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 3.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
- [5
+
+Package xcolor Warning: Incompatible color definition on input line 4.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+Package xcolor Warning: Incompatible color definition on input line 6.
+
+
+Package xcolor Warning: Incompatible color definition on input line 8.
+
+
+Package xcolor Warning: Incompatible color definition on input line 9.
+
+
+Package xcolor Warning: Incompatible color definition on input line 11.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 16.
+
+
+Package xcolor Warning: Incompatible color definition on input line 17.
+
+
+Package xcolor Warning: Incompatible color definition on input line 18.
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
+
+
+Package xcolor Warning: Incompatible color definition on input line 21.
+
+
+Package xcolor Warning: Incompatible color definition on input line 22.
+
+
+Package xcolor Warning: Incompatible color definition on input line 23.
+
+
+Package xcolor Warning: Incompatible color definition on input line 25.
+
+
+Package xcolor Warning: Incompatible color definition on input line 27.
+
+
+Package xcolor Warning: Incompatible color definition on input line 28.
+
+
+Package xcolor Warning: Incompatible color definition on input line 29.
+
+
+Package xcolor Warning: Incompatible color definition on input line 30.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 36.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+[5
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
- [6])
-\tf@toc=\write5
-\openout5 = `NumeRe-Dokumentation.toc'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
- [7]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
- [8
+Package xcolor Warning: Incompatible color definition on input line 38.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 41.
+
+
+Package xcolor Warning: Incompatible color definition on input line 42.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+
+Package xcolor Warning: Incompatible color definition on input line 44.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 46.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+
+Package xcolor Warning: Incompatible color definition on input line 48.
+
+
+Package xcolor Warning: Incompatible color definition on input line 49.
+
+
+Package xcolor Warning: Incompatible color definition on input line 50.
+
+
+Package xcolor Warning: Incompatible color definition on input line 51.
+
+
+Package xcolor Warning: Incompatible color definition on input line 52.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 54.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+Package xcolor Warning: Incompatible color definition on input line 61.
+
+
+Package xcolor Warning: Incompatible color definition on input line 62.
+
+
+Package xcolor Warning: Incompatible color definition on input line 64.
+
+
+Package xcolor Warning: Incompatible color definition on input line 65.
+
+
+Package xcolor Warning: Incompatible color definition on input line 66.
+
+
+Package xcolor Warning: Incompatible color definition on input line 68.
+
+
+Package xcolor Warning: Incompatible color definition on input line 69.
+
+
+Package xcolor Warning: Incompatible color definition on input line 70.
+
+
+Package xcolor Warning: Incompatible color definition on input line 72.
+
+
+Package xcolor Warning: Incompatible color definition on input line 73.
+
+
+Package xcolor Warning: Incompatible color definition on input line 74.
+
+
+Package xcolor Warning: Incompatible color definition on input line 75.
+
+
+Package xcolor Warning: Incompatible color definition on input line 76.
+
+
+Package xcolor Warning: Incompatible color definition on input line 77.
+
+[6]
+
+Package xcolor Warning: Incompatible color definition on input line 77.
+
+
+Package xcolor Warning: Incompatible color definition on input line 78.
+
+
+Package xcolor Warning: Incompatible color definition on input line 79.
+
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+
+Package xcolor Warning: Incompatible color definition on input line 83.
+
+
+Package xcolor Warning: Incompatible color definition on input line 84.
+
+
+Package xcolor Warning: Incompatible color definition on input line 85.
+
+
+Package xcolor Warning: Incompatible color definition on input line 86.
+
+
+Package xcolor Warning: Incompatible color definition on input line 88.
+
+)
+\tf@toc=\write4
+\openout4 = `NumeRe-Dokumentation.toc'.
+
+
+
+Package xcolor Warning: Incompatible color definition on input line 29.
+
+[7] [8
 
 
 ]
 chapter without number
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
 
 Class scrbook Warning: \float@addtolists detected!
 (scrbook)              Implementation of \float@addtolist became
@@ -1506,1388 +1373,1852 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
+
+Package xcolor Warning: Incompatible color definition on input line 29.
+
+
+Package xcolor Warning: Incompatible color definition on input line 29.
+
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 80.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 80.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 82.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
+(Font)              scaled to size 13.67995pt on input line 30.
+
+Package xcolor Warning: Incompatible color definition on input line 30.
+
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 32.
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 LaTeX Font Info:    Font shape `TS1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `TS1/ppl/b/n' tried instead on input line 82.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
- [9]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
- [10]
+(Font)              Font shape `TS1/ppl/b/n' tried instead on input line 32.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+
+Package xcolor Warning: Incompatible color definition on input line 44.
+
+[9]
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+[10]
 chapter without number
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 112.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 112.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 67.
+
 [11
 
 
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
- [12
+] [12
 
 
 ]
 part I.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 120.
+(scrkbase)              on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 120.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 120.
+(Font)              scaled to size 23.63593pt on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 120.
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 23.63593pt on input line 120.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
-[13]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
- [14]
+(Font)              scaled to size 23.63593pt on input line 71.
+
+Package xcolor Warning: Incompatible color definition on input line 71.
+
+[13] [14]
 chapter 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 125.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 125.
-<_graphics/ui_0.png, id=460, 454.69875pt x 537.50812pt>
-File: _graphics/ui_0.png Graphic file (type png)
- <use _graphics/ui_0.png>
-Package pdftex.def Info: _graphics/ui_0.png used on input line 136.
-(pdftex.def)             Requested size: 422.5206pt x 499.4755pt.
-LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 137.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 143.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
- [15
+Package xcolor Warning: Incompatible color definition on input line 72.
 
 
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
- [16 <./_graphics/ui_0.png (PNG copy)>]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 158.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 158.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 158.
+Package xcolor Warning: Incompatible color definition on input line 72.
 
-<_graphics/ui_1.png, id=476, 454.69875pt x 537.50812pt>
-File: _graphics/ui_1.png Graphic file (type png)
- <use _graphics/ui_1.png>
-Package pdftex.def Info: _graphics/ui_1.png used on input line 181.
-(pdftex.def)             Requested size: 422.5206pt x 499.4755pt.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 186.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 186.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 186.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 186.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 186.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 186.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 186.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 186.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 186.
-LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <9> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 186.
-LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 8.54997pt on input line 186.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 187.
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 187.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 194.
- [17]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 194.
- [18 <./_graphics/ui_1.png (PNG copy)>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 201.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 201.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 227.
- [19]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 230.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 230.
- <_graphics/first_calc_0.png, id=517, 454.69875pt x 537.50812pt>
-File: _graphics/first_calc_0.png Graphic file (type png)
- <use _graphics/first_calc_0.png>
-Package pdftex.def Info: _graphics/first_calc_0.png used on input line 238.
-(pdftex.def)             Requested size: 422.5206pt x 499.4755pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
- [20]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 264.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 264.
- [21 <./_graphics/first_calc_0.png (PNG copy)>] <_graphics/first_calc_1.png, id=540, 454.69875pt x 537.50812pt>
-File: _graphics/first_calc_1.png Graphic file (type png)
 
-<use _graphics/first_calc_1.png>
-Package pdftex.def Info: _graphics/first_calc_1.png used on input line 268.
-(pdftex.def)             Requested size: 422.5206pt x 499.4755pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 272.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 272.
- <_graphics/ui.png, id=542, 454.69875pt x 537.50812pt>
+Package xcolor Warning: Incompatible color definition on input line 76.
+
+<_graphics/ui.png, id=440, 1445.4pt x 782.925pt>
 File: _graphics/ui.png Graphic file (type png)
  <use _graphics/ui.png>
-Package pdftex.def Info: _graphics/ui.png used on input line 284.
-(pdftex.def)             Requested size: 422.5206pt x 499.4755pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
- [22]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
+Package pdftex.def Info: _graphics/ui.png used on input line 79.
+(pdftex.def)             Requested size: 469.47052pt x 254.29231pt.
 
-[23 <./_graphics/first_calc_1.png (PNG copy)>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
- [24 <./_graphics/ui.png (PNG copy)>]
-chapter 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 303.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 303.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 311.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 311.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 311.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 311.
-[25
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
+(Font)              scaled to size 10.40245pt on input line 80.
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+<_graphics/filetree.png, id=441, 154.32657pt x 690.32906pt>
+File: _graphics/filetree.png Graphic file (type png)
+ <use _graphics/filetree.png>
+Package pdftex.def Info: _graphics/filetree.png used on input line 88.
+(pdftex.def)             Requested size: 93.89267pt x 420.00462pt.
+
+<_graphics/symboltree.png, id=442, 153.57375pt x 691.08188pt>
+File: _graphics/symboltree.png Graphic file (type png)
+ <use _graphics/symboltree.png>
+Package pdftex.def Info: _graphics/symboltree.png used on input line 89.
+(pdftex.def)             Requested size: 93.89267pt x 422.51892pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 93.
+("D:\Software\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+Package xcolor Warning: Incompatible color definition on input line 93.
+
+[15
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 326.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 326.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 332.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 332.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 332.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 332.
- [26]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 342.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 342.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 360.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 360.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 360.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 360.
- [27]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 385.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 385.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 385.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 385.
- [28]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 387.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 387.
- <_graphics/histogramm.png, id=602, 1816.7875pt x 681.54625pt>
-File: _graphics/histogramm.png Graphic file (type png)
- <use _graphics/histogramm.png>
-Package pdftex.def Info: _graphics/histogramm.png used on input line 406.
-(pdftex.def)             Requested size: 469.47052pt x 176.11629pt.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 106.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 106.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 106.
 
-Overfull \hbox (0.48027pt too wide) in paragraph at lines 419--420
-[]\T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 kann auch Hi-sto-gram-me von zwei-di-men-sio-na-len Da-ten-sät-zen an-fe
-r-ti-gen. Hier-zu sind
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+[16 <./_graphics/ui.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+[17 <./_graphics/filetree.png> <./_graphics/symboltree.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 128.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 128.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 128.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 128.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 128.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.54997pt on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <9> not available
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
+(Font)              scaled to size 8.54997pt on input line 128.
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 129.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 129.
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 148.
+
+[18]
+
+Package xcolor Warning: Incompatible color definition on input line 155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 169.
+
+
+Package xcolor Warning: Incompatible color definition on input line 169.
+
+
+Package xcolor Warning: Incompatible color definition on input line 169.
+
+
+Package xcolor Warning: Incompatible color definition on input line 182.
+
+[19]
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+<_graphics/first_calc_1.png, id=501, 1445.4pt x 782.925pt>
+File: _graphics/first_calc_1.png Graphic file (type png)
+ <use _graphics/first_calc_1.png>
+Package pdftex.def Info: _graphics/first_calc_1.png used on input line 188.
+(pdftex.def)             Requested size: 469.47052pt x 254.29231pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 192.
+
+
+Overfull \hbox (7.4732pt too wide) in paragraph at lines 202--203
+\T1/ppl/m/n/10.95 Eingabe von [][]\T1/pcr/m/n/10.95 help KOMMANDO []\T1/ppl/m/n/10.95 oder die Ver-wen-dung des entsprec
+hen-den Ein-trags im Kon-textmenü
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 423.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 423.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 423.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 423.
-[29]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 458.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 458.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 458.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 458.
- [30 <./_graphics/histogramm.png>]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 458.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
+
+Package xcolor Warning: Incompatible color definition on input line 203.
+
+[20 <./_graphics/first_calc_1.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 208.
+
+[21] [22
+
+
+]
+chapter 2.
+
+Package xcolor Warning: Incompatible color definition on input line 208.
+
+
+Package xcolor Warning: Incompatible color definition on input line 208.
+
+
+Package xcolor Warning: Incompatible color definition on input line 210.
+
+
+Overfull \hbox (5.06413pt too wide) in paragraph at lines 214--215
+\T1/ppl/m/n/10.95 Pro-gram-mierer freut sich über eine entsprechende Bug-mel-dung inkl. der ange-hängten Datei.) 
+ []
+
+
+Overfull \hbox (3.65248pt too wide) in paragraph at lines 215--216
+[]\T1/ppl/b/n/10.95 JCAMP-DX-Datei (*.dx, *.jdx und *.jcm). \T1/ppl/m/n/10.95 JCAMP-DX-Dateien (von \T1/ppl/m/it/10.95 J
+oint Com-mit-tee on Atomic
+ []
+
+[23]
+Overfull \hbox (5.78784pt too wide) in paragraph at lines 219--220
+[]\T1/ppl/b/n/10.95 NumeRe-Datenfile (*.ndat). \T1/ppl/m/n/10.95 NumeRe-Datenfiles sind ein \T1/ppl/m/sc/10.95 Nu-me-Re\
+T1/ppl/m/n/10.95 -eigenes, binäres Dateifor-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Overfull \hbox (1.96924pt too wide) in paragraph at lines 227--228
+\T1/ppl/m/n/10.95 ten [][]\T1/pcr/m/n/10.95 . []\T1/ppl/m/n/10.95 als Dez-i-mal-trennze-ichen. (Möglicher-weise kann die
+s von gewöhn-lichen Tabel-lenkalku-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 233.
+
+
+Package xcolor Warning: Incompatible color definition on input line 239.
+
+[24]
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+[25]
+Overfull \hbox (4.28645pt too wide) in paragraph at lines 285--286
+\T1/ppl/m/n/10.95 Min-i-mum und Max-i-mum), Sum-mieren oder Mul-ti-plizieren alle El-e-mente, suchen El-e-mente, zählen
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+[26]
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+<_graphics/histogramm.png, id=559, 1816.7875pt x 681.54625pt>
+File: _graphics/histogramm.png Graphic file (type png)
+ <use _graphics/histogramm.png>
+Package pdftex.def Info: _graphics/histogramm.png used on input line 313.
+(pdftex.def)             Requested size: 469.47052pt x 176.11629pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+
+Package xcolor Warning: Incompatible color definition on input line 322.
+
+
+Overfull \hbox (2.4034pt too wide) in paragraph at lines 324--325
+[]\T1/ppl/m/n/10.95 Es wird für jede Spalte eine Häu-figkeit-s-anal-yse durchge-führt und das Ergeb-nis in einem gemein-
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 327.
+
+[27]
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Overfull \hbox (10.18791pt too wide) in paragraph at lines 328--330
+\T1/ppl/m/n/10.95 ysemeth-ode durch das An-passen einer Funk-tion (auch \T1/ppl/m/it/10.95 Mod-el-lkurve \T1/ppl/m/n/10.
+95 oder \T1/ppl/m/it/10.95 Re-gres-sions-funk-tion \T1/ppl/m/n/10.95 genannt)
+ []
+
+
+Overfull \hbox (7.19902pt too wide) in paragraph at lines 336--337
+\T1/ppl/m/n/10.95 hin-ter-legt, so dass mit diesen di-rekt weiter gerech-net wer-den kann. (In neueren \T1/ppl/m/sc/10.9
+5 Nu-me-Re\T1/ppl/m/n/10.95 -Versionen
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 365.
+
+[28 <./_graphics/histogramm.png>]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 365.
+ ("D:\Software\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
-<_graphics/plot.png, id=625, 1284.8pt x 963.6pt>
+<_graphics/plot.png, id=582, 1284.8pt x 963.6pt>
 File: _graphics/plot.png Graphic file (type png)
  <use _graphics/plot.png>
-Package pdftex.def Info: _graphics/plot.png used on input line 462.
+Package pdftex.def Info: _graphics/plot.png used on input line 369.
 (pdftex.def)             Requested size: 469.47052pt x 352.10072pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 478.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 478.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 478.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 478.
- [31]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 487.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 487.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 487.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 487.
- [32 <./_graphics/plot.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
- [33]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
- [34
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 376.
+
+
+Package xcolor Warning: Incompatible color definition on input line 381.
+
+[29]
+Overfull \hbox (30.78479pt too wide) in paragraph at lines 382--383
+[][]\T1/pcr/m/n/10.95 fitw []\T1/ppl/m/n/10.95 (für \T1/ppl/m/it/10.95 weighted fit\T1/ppl/m/n/10.95 ) ver-wen-det die F
+ehler-w-erte in der drit-ten Spalte um die Daten-punkte entsprechend
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 390.
+
+
+Package xcolor Warning: Incompatible color definition on input line 390.
+
+
+Package xcolor Warning: Incompatible color definition on input line 390.
+
+
+Package xcolor Warning: Incompatible color definition on input line 392.
+
+[30 <./_graphics/plot.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 396.
+
+[31] [32
 
 
 ]
 chapter 3.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 491.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 491.
 
-Overfull \hbox (8.6744pt too wide) in paragraph at lines 507--508
-[][]\T1/pcr/m/n/10.95 vect\T1/ppl/m/n/10.95 : die-ser Plot-stil be-rech-net einen Vek-tor-plot ei-nes 2D-Vektorfeldes: $
-[]\OML/zplm/m/it/10.95 A\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x; y\OT1/zplm/m/n/10.95 ) = \OML/zplm/m/it/10.95 A[]\O
-T1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x; y\OT1/zplm/m/n/10.95 ) []\OML/zplm/m/it/10.95 e[] \OT1/zplm/m/n/10.95 +
+Package xcolor Warning: Incompatible color definition on input line 396.
+
+
+Package xcolor Warning: Incompatible color definition on input line 396.
+
+
+Overfull \hbox (4.11073pt too wide) in paragraph at lines 397--398
+\T1/ppl/m/n/10.95 Eine beson-ders wichtige Funk-tion-al-ität von \T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 ist die E
+rzeu-gung von Funktions- und Daten-
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 509.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 509.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 509.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 509.
-[35]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 510.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 510.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 520.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 520.
- <_graphics/plot_0.png, id=668, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 398.
+
+
+Overfull \hbox (10.09392pt too wide) in paragraph at lines 414--415
+[][][]\T1/pcr/m/n/10.95 vect[]\T1/ppl/m/n/10.95 : dieser Plot-stil berech-net einen Vek-tor-plot eines 2D-Vektorfeldes: 
+$[]\OML/zplm/m/it/10.95 A\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 y\OT1/zplm
+/m/n/10.95 ) = \OML/zplm/m/it/10.95 A[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10
+.95 y\OT1/zplm/m/n/10.95 ) []\OML/zplm/m/it/10.95 e[] \OT1/zplm/m/n/10.95 +
+ []
+
+[33]
+
+Package xcolor Warning: Incompatible color definition on input line 417.
+
+
+Package xcolor Warning: Incompatible color definition on input line 426.
+
+
+Package xcolor Warning: Incompatible color definition on input line 426.
+
+
+Package xcolor Warning: Incompatible color definition on input line 426.
+
+
+Package xcolor Warning: Incompatible color definition on input line 427.
+
+
+Package xcolor Warning: Incompatible color definition on input line 440.
+
+<_graphics/plot_0.png, id=625, 1284.8pt x 963.6pt>
 File: _graphics/plot_0.png Graphic file (type png)
  <use _graphics/plot_0.png>
-Package pdftex.def Info: _graphics/plot_0.png used on input line 536.
+Package pdftex.def Info: _graphics/plot_0.png used on input line 443.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_1.png, id=669, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 443.
+
+
+Package xcolor Warning: Incompatible color definition on input line 443.
+
+<_graphics/plot_1.png, id=626, 1284.8pt x 963.6pt>
 File: _graphics/plot_1.png Graphic file (type png)
  <use _graphics/plot_1.png>
-Package pdftex.def Info: _graphics/plot_1.png used on input line 537.
+Package pdftex.def Info: _graphics/plot_1.png used on input line 444.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_2.png, id=670, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 444.
+
+
+Package xcolor Warning: Incompatible color definition on input line 444.
+
+
+Package xcolor Warning: Incompatible color definition on input line 444.
+
+
+Package xcolor Warning: Incompatible color definition on input line 444.
+
+<_graphics/plot_2.png, id=627, 1284.8pt x 963.6pt>
 File: _graphics/plot_2.png Graphic file (type png)
  <use _graphics/plot_2.png>
-Package pdftex.def Info: _graphics/plot_2.png used on input line 538.
+Package pdftex.def Info: _graphics/plot_2.png used on input line 445.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_3.png, id=671, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+
+Package xcolor Warning: Incompatible color definition on input line 445.
+
+<_graphics/plot_3.png, id=628, 1284.8pt x 963.6pt>
 File: _graphics/plot_3.png Graphic file (type png)
  <use _graphics/plot_3.png>
-Package pdftex.def Info: _graphics/plot_3.png used on input line 539.
+Package pdftex.def Info: _graphics/plot_3.png used on input line 446.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_4.png, id=672, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 446.
+
+
+Package xcolor Warning: Incompatible color definition on input line 446.
+
+
+Package xcolor Warning: Incompatible color definition on input line 446.
+
+
+Package xcolor Warning: Incompatible color definition on input line 446.
+
+<_graphics/plot_4.png, id=629, 1284.8pt x 963.6pt>
 File: _graphics/plot_4.png Graphic file (type png)
  <use _graphics/plot_4.png>
-Package pdftex.def Info: _graphics/plot_4.png used on input line 540.
+Package pdftex.def Info: _graphics/plot_4.png used on input line 447.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_5.png, id=673, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 447.
+
+
+Package xcolor Warning: Incompatible color definition on input line 447.
+
+
+Package xcolor Warning: Incompatible color definition on input line 447.
+
+
+Package xcolor Warning: Incompatible color definition on input line 447.
+
+<_graphics/plot_5.png, id=630, 1284.8pt x 963.6pt>
 File: _graphics/plot_5.png Graphic file (type png)
  <use _graphics/plot_5.png>
-Package pdftex.def Info: _graphics/plot_5.png used on input line 541.
+Package pdftex.def Info: _graphics/plot_5.png used on input line 448.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
- [36]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 556.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 556.
- [37 <./_graphics/plot_0.png> <./_graphics/plot_1.png> <./_graphics/plot_2.png> <./_graphics/plot_3.png> <./_graphics/pl
-ot_4.png> <./_graphics/plot_5.png>]
-<_graphics/mesh_0.png, id=709, 1284.8pt x 963.6pt>
+
+
+Package xcolor Warning: Incompatible color definition on input line 448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 449.
+
+
+Package xcolor Warning: Incompatible color definition on input line 449.
+
+
+Package xcolor Warning: Incompatible color definition on input line 449.
+
+
+Package xcolor Warning: Incompatible color definition on input line 449.
+
+
+Package xcolor Warning: Incompatible color definition on input line 453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 458.
+
+
+Package xcolor Warning: Incompatible color definition on input line 463.
+
+[34]
+
+Package xcolor Warning: Incompatible color definition on input line 463.
+
+[35 <./_graphics/plot_0.png> <./_graphics/plot_1.png> <./_graphics/plot_2.png> <./_graphics/plot_3.png> <./_graphics/plo
+t_4.png> <./_graphics/plot_5.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 464.
+
+
+Overfull \hbox (4.36414pt too wide) in paragraph at lines 466--467
+[][]\T1/pcr/m/n/10.95 data(:,1:4)[]\T1/ppl/m/n/10.95 . Dies ver-wen-det en-tweder Spalte 1 und 4 oder Spalte 1 bis 4, fa
+lls der entsprechende
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 472.
+
+
+Overfull \hbox (12.10373pt too wide) in paragraph at lines 474--475
+[]\T1/ppl/m/n/10.95 Die Plot-in-ter-valle kön-nen für einen Plot global über-schrieben wer-den, wenn sie ex-plizit angeg
+eben
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 486.
+
+
+Package xcolor Warning: Incompatible color definition on input line 488.
+
+
+Package xcolor Warning: Incompatible color definition on input line 488.
+
+
+Package xcolor Warning: Incompatible color definition on input line 488.
+
+<_graphics/mesh_0.png, id=666, 1284.8pt x 963.6pt>
 File: _graphics/mesh_0.png Graphic file (type png)
  <use _graphics/mesh_0.png>
-Package pdftex.def Info: _graphics/mesh_0.png used on input line 588.
+Package pdftex.def Info: _graphics/mesh_0.png used on input line 495.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/mesh_1.png, id=710, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+<_graphics/mesh_1.png, id=667, 1284.8pt x 963.6pt>
 File: _graphics/mesh_1.png Graphic file (type png)
  <use _graphics/mesh_1.png>
-Package pdftex.def Info: _graphics/mesh_1.png used on input line 589.
+Package pdftex.def Info: _graphics/mesh_1.png used on input line 496.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/mesh_2.png, id=711, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 496.
+
+
+Package xcolor Warning: Incompatible color definition on input line 496.
+
+
+Package xcolor Warning: Incompatible color definition on input line 496.
+
+
+Package xcolor Warning: Incompatible color definition on input line 496.
+
+<_graphics/mesh_2.png, id=668, 1284.8pt x 963.6pt>
 File: _graphics/mesh_2.png Graphic file (type png)
  <use _graphics/mesh_2.png>
-Package pdftex.def Info: _graphics/mesh_2.png used on input line 590.
+Package pdftex.def Info: _graphics/mesh_2.png used on input line 497.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/vect_0.png, id=712, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+<_graphics/vect_0.png, id=669, 1284.8pt x 963.6pt>
 File: _graphics/vect_0.png Graphic file (type png)
  <use _graphics/vect_0.png>
-Package pdftex.def Info: _graphics/vect_0.png used on input line 591.
+Package pdftex.def Info: _graphics/vect_0.png used on input line 498.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/vect_1.png, id=713, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 498.
+
+
+Package xcolor Warning: Incompatible color definition on input line 498.
+
+
+Package xcolor Warning: Incompatible color definition on input line 498.
+
+
+Package xcolor Warning: Incompatible color definition on input line 498.
+
+<_graphics/vect_1.png, id=670, 1284.8pt x 963.6pt>
 File: _graphics/vect_1.png Graphic file (type png)
  <use _graphics/vect_1.png>
-Package pdftex.def Info: _graphics/vect_1.png used on input line 592.
+Package pdftex.def Info: _graphics/vect_1.png used on input line 499.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 601.
- [38]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 601.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 601.
- [39 <./_graphics/mesh_0.png> <./_graphics/mesh_1.png> <./_graphics/mesh_2.png> <./_graphics/vect_0.png> <./_graphics/ve
-ct_1.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 627.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 627.
 
-<_graphics/plot_6.png, id=751, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 500.
+
+
+Package xcolor Warning: Incompatible color definition on input line 500.
+
+
+Package xcolor Warning: Incompatible color definition on input line 500.
+
+
+Package xcolor Warning: Incompatible color definition on input line 500.
+
+
+Package xcolor Warning: Incompatible color definition on input line 503.
+
+
+Overfull \hbox (15.43361pt too wide) in paragraph at lines 503--504
+[][]\T1/pcr/m/n/10.95 mesh []\T1/ppl/m/n/10.95 erzeugt den gewün-schten Git-ter-plot ([][]Fig-ure 3.2[][][]a). Die Funk-
+tion [][]\T1/pcr/m/n/10.95 norm() []\T1/ppl/m/n/10.95 ist die $\OML/zplm/m/it/10.95 n$\T1/ppl/m/n/10.95 -dimensionale,
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 507.
+
+
+Package xcolor Warning: Incompatible color definition on input line 508.
+
+[36]
+
+Package xcolor Warning: Incompatible color definition on input line 508.
+
+[37 <./_graphics/mesh_0.png> <./_graphics/mesh_1.png> <./_graphics/mesh_2.png> <./_graphics/vect_0.png> <./_graphics/vec
+t_1.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 516.
+
+
+Package xcolor Warning: Incompatible color definition on input line 518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 518.
+
+
+Package xcolor Warning: Incompatible color definition on input line 525.
+
+
+Package xcolor Warning: Incompatible color definition on input line 531.
+
+
+Package xcolor Warning: Incompatible color definition on input line 533.
+
+
+Package xcolor Warning: Incompatible color definition on input line 533.
+
+
+Package xcolor Warning: Incompatible color definition on input line 533.
+
+
+Package xcolor Warning: Incompatible color definition on input line 534.
+
+<_graphics/plot_6.png, id=708, 1284.8pt x 963.6pt>
 File: _graphics/plot_6.png Graphic file (type png)
  <use _graphics/plot_6.png>
-Package pdftex.def Info: _graphics/plot_6.png used on input line 631.
+Package pdftex.def Info: _graphics/plot_6.png used on input line 538.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/plot_7.png, id=752, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+<_graphics/plot_7.png, id=709, 1284.8pt x 963.6pt>
 File: _graphics/plot_7.png Graphic file (type png)
  <use _graphics/plot_7.png>
-Package pdftex.def Info: _graphics/plot_7.png used on input line 632.
+Package pdftex.def Info: _graphics/plot_7.png used on input line 539.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/surf_0.png, id=753, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 539.
+
+
+Package xcolor Warning: Incompatible color definition on input line 539.
+
+
+Package xcolor Warning: Incompatible color definition on input line 539.
+
+
+Package xcolor Warning: Incompatible color definition on input line 539.
+
+<_graphics/surf_0.png, id=710, 1284.8pt x 963.6pt>
 File: _graphics/surf_0.png Graphic file (type png)
  <use _graphics/surf_0.png>
-Package pdftex.def Info: _graphics/surf_0.png used on input line 633.
+Package pdftex.def Info: _graphics/surf_0.png used on input line 540.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
 
-<_graphics/surf_1.png, id=754, 1284.8pt x 963.6pt>
+
+Package xcolor Warning: Incompatible color definition on input line 540.
+
+
+Package xcolor Warning: Incompatible color definition on input line 540.
+
+
+Package xcolor Warning: Incompatible color definition on input line 540.
+
+
+Package xcolor Warning: Incompatible color definition on input line 540.
+
+<_graphics/surf_1.png, id=711, 1284.8pt x 963.6pt>
 File: _graphics/surf_1.png Graphic file (type png)
  <use _graphics/surf_1.png>
-Package pdftex.def Info: _graphics/surf_1.png used on input line 634.
+Package pdftex.def Info: _graphics/surf_1.png used on input line 541.
 (pdftex.def)             Requested size: 211.2603pt x 158.44312pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 645.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 645.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 645.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 645.
- [40]
-Overfull \hbox (1.38858pt too wide) in paragraph at lines 656--657
-\T1/ppl/m/n/10.95 erhält man [][]Ab-bil-dung 3.3[][][]c. Die ein-ge-brach-te Op-ti-on []\T1/pcr/m/n/10.95 light \T1/ppl/
-m/n/10.95 ak-ti-viert den drei-di-men-sio-na-len Licht-
+
+
+Package xcolor Warning: Incompatible color definition on input line 541.
+
+
+Package xcolor Warning: Incompatible color definition on input line 541.
+
+
+Package xcolor Warning: Incompatible color definition on input line 541.
+
+
+Package xcolor Warning: Incompatible color definition on input line 541.
+
+
+Package xcolor Warning: Incompatible color definition on input line 542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 546.
+
+
+Package xcolor Warning: Incompatible color definition on input line 552.
+
+[38]
+
+Package xcolor Warning: Incompatible color definition on input line 553.
+
+
+Overfull \hbox (0.90262pt too wide) in paragraph at lines 559--560
+[]\T1/ppl/m/n/10.95 In Kom-bi-na-tion mit drei-di-men-sion-alen Plot-funk-tio-nen wech-selt man nun au-toma-tisch ins zy
+lin-
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 658.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 658.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 658.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 658.
-[41 <./_graphics/plot_6.png> <./_graphics/plot_7.png> <./_graphics/surf_0.png> <./_graphics/surf_1.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 667.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 667.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 667.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 667.
- [42]
+
+Package xcolor Warning: Incompatible color definition on input line 563.
+
+
+Package xcolor Warning: Incompatible color definition on input line 565.
+
+[39 <./_graphics/plot_6.png> <./_graphics/plot_7.png> <./_graphics/surf_0.png> <./_graphics/surf_1.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 571.
+
+
+Package xcolor Warning: Incompatible color definition on input line 573.
+
+
+Package xcolor Warning: Incompatible color definition on input line 573.
+
+
+Package xcolor Warning: Incompatible color definition on input line 573.
+
+
+Package xcolor Warning: Incompatible color definition on input line 574.
+
+[40]
 chapter 4.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 667.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 667.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 669.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 669.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 673.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 673.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 691.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 691.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 691.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 691.
-[43
+
+Package xcolor Warning: Incompatible color definition on input line 574.
+
+
+Package xcolor Warning: Incompatible color definition on input line 574.
+
+
+Package xcolor Warning: Incompatible color definition on input line 576.
+
+
+Package xcolor Warning: Incompatible color definition on input line 580.
+
+
+Package xcolor Warning: Incompatible color definition on input line 588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 596.
+
+
+Package xcolor Warning: Incompatible color definition on input line 596.
+
+
+Package xcolor Warning: Incompatible color definition on input line 596.
+
+[41
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 706.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 706.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 723.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 723.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 729.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 729.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 729.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 729.
- [44]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 763.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 763.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 763.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 763.
- [45]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 763.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 763.
 
-Overfull \hbox (3.4362pt too wide) in paragraph at lines 770--771
-\T1/ppl/m/n/10.95 Dies be-rech-net Mit-tel-wer-t/-Stan-dard-ab-wei-chung/etc. der ge-sam-ten Ta-bel-le als ge-mein-sa-me
-n Wert.
+Package xcolor Warning: Incompatible color definition on input line 612.
+
+
+Package xcolor Warning: Incompatible color definition on input line 612.
+
+
+Package xcolor Warning: Incompatible color definition on input line 612.
+
+
+Package xcolor Warning: Incompatible color definition on input line 613.
+
+
+Package xcolor Warning: Incompatible color definition on input line 630.
+
+
+Overfull \hbox (17.2946pt too wide) in paragraph at lines 633--634
+\T1/ppl/m/n/10.95 sortiert wer-den. Damit kön-nen z.B. bes-timmte Schwellen-werte oder in-ter-es-sante Stellen in Messpu
+nk-
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 771.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 771.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 771.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 771.
-[46]
+
+Package xcolor Warning: Incompatible color definition on input line 636.
+
+[42]
+
+Package xcolor Warning: Incompatible color definition on input line 649.
+
+
+Package xcolor Warning: Incompatible color definition on input line 649.
+
+
+Package xcolor Warning: Incompatible color definition on input line 649.
+
+
+Package xcolor Warning: Incompatible color definition on input line 660.
+
+
+Package xcolor Warning: Incompatible color definition on input line 660.
+
+
+Package xcolor Warning: Incompatible color definition on input line 660.
+
+
+Package xcolor Warning: Incompatible color definition on input line 669.
+
+
+Package xcolor Warning: Incompatible color definition on input line 669.
+
+
+Package xcolor Warning: Incompatible color definition on input line 669.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+[43]
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+
+Overfull \hbox (4.52725pt too wide) in paragraph at lines 677--678
+\T1/ppl/m/n/10.95 Dies berech-net Mit-tel-w-ert/-S-tan-dard-ab-we-ichung/etc. der gesamten Tabelle als gemein-samen Wert
+.
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 678.
+
+[44]
 chapter 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 771.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 771.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 773.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 773.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 781.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 781.
-<_graphics/highlighting.png, id=851, 710.655pt x 699.36281pt>
-File: _graphics/highlighting.png Graphic file (type png)
- <use _graphics/highlighting.png>
-Package pdftex.def Info: _graphics/highlighting.png used on input line 785.
-(pdftex.def)             Requested size: 469.47052pt x 462.02908pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
- [47
+
+Package xcolor Warning: Incompatible color definition on input line 678.
+
+
+Package xcolor Warning: Incompatible color definition on input line 678.
+
+
+Overfull \hbox (3.40988pt too wide) in paragraph at lines 679--680
+\T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -Scripte bi-eten die Möglichkeit, kom-plexe Rech-nun-gen und häu-fig wieder
+kehrende Anal-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 680.
+
+
+Overfull \hbox (16.99986pt too wide) in paragraph at lines 681--682
+\T1/ppl/m/n/10.95 von \T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 gele-sen wird. \T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m
+/n/10.95 wird dann die Aus-drücke und Kom-man-dos in der entsprechen-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 688.
+
+
+Package xcolor Warning: Incompatible color definition on input line 692.
+
+[45
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
- [48 <./_graphics/highlighting.png (PNG copy)>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 793.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 793.
-
-Overfull \hbox (2.62674pt too wide) in paragraph at lines 818--819
-\T1/ppl/m/n/10.95 wobei []\T1/pcr/m/n/10.95 ## \T1/ppl/m/n/10.95 einen Zei-len-kom-men-tar ein-lei-tet, der von \T1/ppl/
-m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 eben-falls igno-riert wird. Das []\T1/pcr/m/n/10.95 ignore
+Overfull \hbox (1.12263pt too wide) in paragraph at lines 699--700
+\T1/ppl/m/n/10.95 in die \T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -Konsole ein. Es wird ein \T1/ppl/m/sc/10.95 Nu-me
+-Re\T1/ppl/m/n/10.95 -Script >>er-stes.nscr<< in [][]\T1/pcr/m/n/10.95 <scriptpath> []\T1/ppl/m/n/10.95 erzeugt,
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 827.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 827.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 827.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 827.
-[49]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
- [50]
+
+Overfull \hbox (3.84853pt too wide) in paragraph at lines 717--718
+\T1/ppl/m/n/10.95 wobei [][]\T1/pcr/m/n/10.95 ## []\T1/ppl/m/n/10.95 einen Zeilenkom-men-tar ein-leitet, der von \T1/ppl
+/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 eben-falls ig-nori-ert wird. Das [][]\T1/pcr/m/n/10.95 ignore
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 734.
+
+[46]
+
+Package xcolor Warning: Incompatible color definition on input line 750.
+
+[47] [48
+
+
+]
 part II.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
 Package scrkbase Info: You've told me to use the font selection of the element
 (scrkbase)             `partprefix' that is an alias of element `partnumber'
-(scrkbase)              on input line 851.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
+(scrkbase)              on input line 750.
+
+Package xcolor Warning: Incompatible color definition on input line 750.
+
+[49] [50]
+chapter 6.
+
+Package xcolor Warning: Incompatible color definition on input line 751.
+
+
+Package xcolor Warning: Incompatible color definition on input line 751.
+
+
+Package xcolor Warning: Incompatible color definition on input line 753.
+
+
+Package xcolor Warning: Incompatible color definition on input line 783.
+
+
+Package xcolor Warning: Incompatible color definition on input line 783.
+
+
+Package xcolor Warning: Incompatible color definition on input line 783.
+
 [51
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 851.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 851.
- [52]
-chapter 6.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 852.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 852.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 854.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 854.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 886.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 886.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 886.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 886.
+
+Package xcolor Warning: Incompatible color definition on input line 801.
+
+
+Package xcolor Warning: Incompatible color definition on input line 801.
+
+
+Package xcolor Warning: Incompatible color definition on input line 801.
+
+
+Package xcolor Warning: Incompatible color definition on input line 802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 808.
+
+
+Package xcolor Warning: Incompatible color definition on input line 822.
+
+[52]
+chapter 7.
+
+Package xcolor Warning: Incompatible color definition on input line 822.
+
+
+Package xcolor Warning: Incompatible color definition on input line 822.
+
+
+Package xcolor Warning: Incompatible color definition on input line 824.
+
+
+Package xcolor Warning: Incompatible color definition on input line 833.
+
+
+Package xcolor Warning: Incompatible color definition on input line 833.
+
+
+Package xcolor Warning: Incompatible color definition on input line 833.
+
+
+Package xcolor Warning: Incompatible color definition on input line 834.
+
+
+Overfull \hbox (3.13625pt too wide) in paragraph at lines 835--836
+\T1/ppl/m/n/10.95 Neben den nu-merischen Vari-ablen und den Tabellen sind die Ze-ichen-ket-ten-vari-ablen (auch \T1/ppl/
+m/it/10.95 strings\T1/ppl/m/n/10.95 )
+ []
+
 [53
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 903.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 903.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 909.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 909.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 923.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 923.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 923.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 923.
- [54]
-chapter 7.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 923.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 923.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 925.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 925.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 935.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 935.
-
-Overfull \hbox (3.13625pt too wide) in paragraph at lines 936--937
-\T1/ppl/m/n/10.95 Neben den nu-me-ri-schen Va-ria-blen und den Ta-bel-len sind die Zei-chen-ket-ten-va-ria-blen (auch \T
-1/ppl/m/it/10.95 strings\T1/ppl/m/n/10.95 )
+Overfull \hbox (13.59273pt too wide) in paragraph at lines 844--845
+\T1/ppl/m/n/10.95 Eine Dekla-ra-tion mit dem Rück-gabe-w-ert einer Ze-ichen-ket-ten-funk-tion ist natür-lich eben-falls 
+möglich. 
  []
 
 
-Overfull \hbox (5.44pt too wide) in paragraph at lines 938--939
-[]\T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 er-kennt neue Zei-chen-ket-ten-va-ria-blen au-to-ma-tisch an-hand der De
--kla-ra-ti-on. Die-se muss
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 942.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 942.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 942.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 942.
-[55
+Package xcolor Warning: Incompatible color definition on input line 848.
 
 
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 958.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 958.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
- [56]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
- [57]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
- [58
+Package xcolor Warning: Incompatible color definition on input line 848.
+
+
+Package xcolor Warning: Incompatible color definition on input line 848.
+
+
+Package xcolor Warning: Incompatible color definition on input line 856.
+
+
+Package xcolor Warning: Incompatible color definition on input line 856.
+
+
+Package xcolor Warning: Incompatible color definition on input line 856.
+
+
+Package xcolor Warning: Incompatible color definition on input line 857.
+
+
+Package xcolor Warning: Incompatible color definition on input line 874.
+
+[54]
+
+Package xcolor Warning: Incompatible color definition on input line 874.
+
+[55] [56
 
 
 ]
 chapter 8.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 975.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 977.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 977.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 994.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 994.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 999.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 999.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 999.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 999.
-[59]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1004.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1004.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1016.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1016.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1025.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1025.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1025.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1025.
- [60]
+
+Package xcolor Warning: Incompatible color definition on input line 874.
+
+
+Package xcolor Warning: Incompatible color definition on input line 874.
+
+
+Package xcolor Warning: Incompatible color definition on input line 876.
+
+
+Package xcolor Warning: Incompatible color definition on input line 892.
+
+
+Package xcolor Warning: Incompatible color definition on input line 892.
+
+
+Package xcolor Warning: Incompatible color definition on input line 892.
+
+
+Package xcolor Warning: Incompatible color definition on input line 893.
+
+[57]
+Overfull \hbox (2.41406pt too wide) in paragraph at lines 900--901
+\T1/ppl/m/n/10.95 Auch hier kön-nen Aus-drücke und/oder Kom-man-dos im Aus-führungs-block en-thal-ten sein, ebenso
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 902.
+
+
+Package xcolor Warning: Incompatible color definition on input line 903.
+
+
+Overfull \hbox (8.05359pt too wide) in paragraph at lines 912--913
+\T1/ppl/m/n/10.95 Ebenso wie zu-vor kön-nen in diesem Block weit-ere Aus-drücke, Kom-man-dos, Schleifen und Verzwei-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 914.
+
+
+Package xcolor Warning: Incompatible color definition on input line 914.
+
+
+Package xcolor Warning: Incompatible color definition on input line 914.
+
+
+Package xcolor Warning: Incompatible color definition on input line 915.
+
+
+Package xcolor Warning: Incompatible color definition on input line 923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 924.
+
+[58]
 chapter 9.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1025.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1025.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1027.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1027.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1041.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1041.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1046.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1046.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1046.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1046.
-[61
+
+Package xcolor Warning: Incompatible color definition on input line 924.
+
+
+Package xcolor Warning: Incompatible color definition on input line 924.
+
+
+Package xcolor Warning: Incompatible color definition on input line 926.
+
+
+Package xcolor Warning: Incompatible color definition on input line 939.
+
+
+Package xcolor Warning: Incompatible color definition on input line 939.
+
+
+Package xcolor Warning: Incompatible color definition on input line 939.
+
+
+Package xcolor Warning: Incompatible color definition on input line 940.
+
+[59
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1067.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1067.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1067.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1067.
- [62]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1071.
- [63]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1071.
- [64
+Overfull \hbox (1.50409pt too wide) in paragraph at lines 945--946
+[][][]\T1/pcr/m/n/10.95 diag(x,y,z,...) []\T1/ppl/m/n/10.95 erzeugt eine Di-ag-o-nal-ma-trix mit [][]\T1/pcr/m/n/10.95 x
+,y,z,... []\T1/ppl/m/n/10.95 auf der Haupt-di-ag-o-nalen. 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 967.
+
+[60]
+
+Package xcolor Warning: Incompatible color definition on input line 970.
+
+[61] [62
 
 
 ]
 chapter 10.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1071.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1073.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1073.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1088.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1088.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1096.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1096.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1096.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1096.
+
+Package xcolor Warning: Incompatible color definition on input line 970.
+
+
+Package xcolor Warning: Incompatible color definition on input line 970.
+
+
+Package xcolor Warning: Incompatible color definition on input line 972.
+
+
+Package xcolor Warning: Incompatible color definition on input line 986.
+
+
+Package xcolor Warning: Incompatible color definition on input line 986.
+
+
+Package xcolor Warning: Incompatible color definition on input line 986.
+
+
+Package xcolor Warning: Incompatible color definition on input line 987.
+
+[63]
+
+Package xcolor Warning: Incompatible color definition on input line 996.
+
+
+Package xcolor Warning: Incompatible color definition on input line 996.
+
+
+Package xcolor Warning: Incompatible color definition on input line 996.
+
+
+Package xcolor Warning: Incompatible color definition on input line 997.
+
+
+Overfull \hbox (1.46146pt too wide) in paragraph at lines 1000--1001
+[]\T1/ppl/m/n/10.95 Mittels des Pa-ram-e-ters [][]\T1/pcr/m/n/10.95 -set []\T1/ppl/m/n/10.95 wer-den das In-te-gra-tions
+in-ter-vall und weit-ere Op-tio-nen übergeben,
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1011.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1011.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1011.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1012.
+
+
+Overfull \hbox (2.2718pt too wide) in paragraph at lines 1013--1014
+\T1/ppl/m/n/10.95 an der vorgegebe-nen $\OML/zplm/m/it/10.95 x$\T1/ppl/m/n/10.95 -Stelle oder entsprechend der Zahl der 
+gewün-schten Stützstellen ([][]\T1/pcr/m/n/10.95 samples[]\T1/ppl/m/n/10.95 )
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1024.
+
+[64]
+
+Package xcolor Warning: Incompatible color definition on input line 1026.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1026.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1026.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1027.
+
+
+Overfull \hbox (2.43573pt too wide) in paragraph at lines 1028--1029
+\T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 kann mit-tels [][]\T1/pcr/m/n/10.95 taylor []\T1/ppl/m/n/10.95 Funk-tio-ne
+n in Ab-hängigkeit von einer Vari-ablen mit-tels des Taylor-
+ []
+
+
+Overfull \hbox (6.42288pt too wide) in paragraph at lines 1035--1036
+\T1/ppl/m/n/10.95 Im All-ge-meinen wird als Funk-tion-sname [][]\T1/pcr/m/n/10.95 Taylor(x) []\T1/ppl/m/n/10.95 gewählt,
+ wenn allerd-ings die Op-tion [][]\T1/pcr/m/n/10.95 unique
+ []
+
+
+Overfull \hbox (12.31447pt too wide) in paragraph at lines 1036--1037
+[] []\T1/phv/b/n/10.95 Anmerkung[][] \T1/ppl/m/n/10.95 Bere-its ex-is-tente Funk-tio-nen, die mit dem-sel-ben Na-men im 
+Funk-tion-sspe-icher vorhan-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1038.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1038.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1038.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1039.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1045.
+
 [65]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1098.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1098.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1113.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1113.
 
-Overfull \hbox (2.2718pt too wide) in paragraph at lines 1114--1115
-\T1/ppl/m/n/10.95 an der vor-ge-ge-be-nen $\OML/zplm/m/it/10.95 x$\T1/ppl/m/n/10.95 -Stelle oder ent-spre-chend der Zahl
- der ge-wünsch-ten Stütz-stel-len ([]\T1/pcr/m/n/10.95 samples\T1/ppl/m/n/10.95 )
- []
+Package xcolor Warning: Incompatible color definition on input line 1048.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1125.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1125.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1125.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1125.
+
+Package xcolor Warning: Incompatible color definition on input line 1048.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1048.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1065.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1066.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1074.
+
 [66]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1128.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1128.
 
-Overfull \hbox (2.43573pt too wide) in paragraph at lines 1129--1130
-\T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 kann mit-tels []\T1/pcr/m/n/10.95 taylor \T1/ppl/m/n/10.95 Funk-tio-nen in
- Ab-hän-gig-keit von ei-ner Va-ria-blen mit-tels des Taylor-
+Package xcolor Warning: Incompatible color definition on input line 1079.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1079.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1079.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1080.
+
+
+Overfull \hbox (16.77992pt too wide) in paragraph at lines 1081--1082
+\T1/ppl/m/n/10.95 Die wenig-sten Dif-fer-en-tial-gle-ichun-gen lassen sich an-a-lytisch oder durch zufrieden-stel-lende 
+Näherun-
  []
 
 
-Overfull \hbox (6.29214pt too wide) in paragraph at lines 1136--1137
-\T1/ppl/m/n/10.95 Im All-ge-mei-nen wird als Funk-ti-ons-na-me []\T1/pcr/m/n/10.95 Taylor(x) \T1/ppl/m/n/10.95 ge-wählt,
- wenn al-ler-dings die Op-ti-on []\T1/pcr/m/n/10.95 unique
+Overfull \hbox (8.74248pt too wide) in paragraph at lines 1081--1082
+\T1/ppl/m/n/10.95 gen lösen. Dies ist das Fachge-biet der Nu-merik, die die Dif-fer-en-tial-gle-ichun-gen mit-tels nu-me
+rischen
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1140.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1140.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1146.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1146.
+
+Overfull \hbox (7.9111pt too wide) in paragraph at lines 1091--1092
+\T1/ppl/m/n/10.95 wobei nur die Funk-tio-nen [][]\T1/pcr/m/n/10.95 f1() []\T1/ppl/m/n/10.95 bis [][]\T1/pcr/m/n/10.95 fn
+() []\T1/ppl/m/n/10.95 in dieser Rei-hen-folge durch Kom-mata ge-trennt angegeben
+ []
+
+
+Overfull \hbox (14.3612pt too wide) in paragraph at lines 1101--1102
+[]\T1/ppl/m/n/10.95 Die Ergeb-nisse der In-te-gra-tion wer-den stan-dard-mäÿig in den Cache [][]\T1/pcr/m/n/10.95 ode() 
+[]\T1/ppl/m/n/10.95 als Tabelle geschrieben.
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1102.
+
 [67]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1167.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1167.
 
-Overfull \hbox (1.80133pt too wide) in paragraph at lines 1168--1169
-\T1/ppl/m/n/10.95 Fou-rier-trans-for-ma-tio-nen, die zum Bei-spiel auch fre-quenz-ab-hän-gi-ge In-for-ma-tio-nen aus ei-
-nem voll-
+Package xcolor Warning: Incompatible color definition on input line 1110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1111.
+
+[68]
+chapter 11.
+
+Package xcolor Warning: Incompatible color definition on input line 1111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1111.
+
+
+Overfull \hbox (3.83727pt too wide) in paragraph at lines 1112--1113
+\T1/ppl/m/n/10.95 wer-den. Allerd-ings bi-eten \T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -Prozeduren deut-lich um-fas
+sendere Möglichkeiten, Auf-gaben-
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1175.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1175.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1175.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1175.
-[68]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1181.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1181.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1204.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1204.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1204.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1204.
- [69]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1212.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1212.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1212.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1212.
- [70]
-chapter 11.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1212.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1212.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1214.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1214.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1222.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1222.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1231.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1231.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1231.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1231.
-[71
+
+Package xcolor Warning: Incompatible color definition on input line 1113.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1121.
+
+[69
 
 
 ]
-Overfull \hbox (0.10522pt too wide) in paragraph at lines 1237--1238
-\T1/ppl/m/n/10.95 Der Flag []\T1/pcr/m/n/10.95 explicit \T1/ppl/m/n/10.95 ver-hin-dert die Aus-füh-rung von Plug-ins in 
-die-ser Pro-ze-dur, []\T1/pcr/m/n/10.95 private\T1/ppl/m/n/10.95 -geflagte
+Overfull \hbox (1.9217pt too wide) in paragraph at lines 1130--1131
+[]\T1/ppl/m/n/10.95 Die hier er-wäh-n-ten >>Flags<< haben auf die gesamte \T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -
+Prozedur Ein-fluss und un-terbinden
  []
 
 
-Overfull \hbox (1.19098pt too wide) in paragraph at lines 1251--1252
-\T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -Script ge-stal-tet sein. Die we-sent-li-chen Be-son-der-hei-ten wer-den in
- den fol-gen-de Ab-schnit-
+Overfull \hbox (0.23596pt too wide) in paragraph at lines 1136--1137
+\T1/ppl/m/n/10.95 Der Flag [][]\T1/pcr/m/n/10.95 explicit []\T1/ppl/m/n/10.95 ver-hin-dert die Aus-führung von Plu-g-ins
+ in dieser Proze-dur, [][]\T1/pcr/m/n/10.95 private[]\T1/ppl/m/n/10.95 -geflagte
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1252.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1252.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1261.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1261.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1263.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1263.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1263.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1263.
+
+Overfull \hbox (1.07907pt too wide) in paragraph at lines 1136--1137
+\T1/ppl/m/n/10.95 Proze-duren kön-nen nur von Proze-duren des-sel-ben Na-men-sraumes aufgerufen wer-den und Proze-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1161.
+
+[70]
+
+Package xcolor Warning: Incompatible color definition on input line 1161.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1173.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1190.
+
+[71]
+
+Package xcolor Warning: Incompatible color definition on input line 1194.
+
+
+Overfull \hbox (5.60051pt too wide) in paragraph at lines 1195--1196
+\T1/ppl/m/n/10.95 Fehler auf, der auf keine sin-nvolle Art be-han-delt wer-den kann (z.B. in Form einer falschen Eingabe
+),
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1206.
+
+<_graphics/debugger.png, id=1094, 591.71063pt x 446.41782pt>
+File: _graphics/debugger.png Graphic file (type png)
+ <use _graphics/debugger.png>
+Package pdftex.def Info: _graphics/debugger.png used on input line 1210.
+(pdftex.def)             Requested size: 469.47052pt x 354.20566pt.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1211.
+
+
+Overfull \hbox (2.72052pt too wide) in paragraph at lines 1207--1214
+\T1/ppl/m/n/10.95 führen einer solchen fehler-haften \T1/ppl/m/sc/10.95 Nu-me-Re\T1/ppl/m/n/10.95 -Prozedur wird \T1/ppl
+/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 ggf. an einer Stelle ab-brechen,
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1215.
+
+
+Overfull \hbox (3.30124pt too wide) in paragraph at lines 1215--1216
+\T1/ppl/m/n/10.95 au-toma-tisch den fehler-haften Aus-druck, die unge-fähre Zeile des Aus-drucks, das fehler-hafte Modul
+
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1218.
+
 [72]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1273.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1273.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1293.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1293.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1295.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1295.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1295.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1295.
- [73]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1305.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1305.
 
-Overfull \hbox (1.09976pt too wide) in paragraph at lines 1310--1311
-[]\T1/ppl/m/n/10.95 Zusätzlich zum au-to-ma-ti-schen Lis-ten bei Syn-tax-feh-lern kann der \T1/ppl/m/sc/10.95 Nu-me-Re\T
-1/ppl/m/n/10.95 -Debugger ver-gleich-
- []
+Package xcolor Warning: Incompatible color definition on input line 1221.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1336.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1336.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1336.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1336.
-[74]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1339.
- [75]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1339.
- [76
+
+Package xcolor Warning: Incompatible color definition on input line 1221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1222.
+
+[73 <./_graphics/debugger.png>] [74
 
 
 ]
 chapter 12.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1339.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1358.
-[77]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1358.
- [78
+
+Package xcolor Warning: Incompatible color definition on input line 1222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1222.
+
+
+Overfull \hbox (2.37987pt too wide) in paragraph at lines 1223--1224
+\T1/ppl/m/n/10.95 mierten Graphen verdeut-lichen kann. \T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 ver-fügt über eine 
+fest im-ple-men-tierte Möglichkeit,
+ []
+
+
+Overfull \hbox (2.18338pt too wide) in paragraph at lines 1223--1224
+\T1/ppl/m/n/10.95 eine solche An-i-ma-tion zu erzeu-gen. Eine An-i-ma-tion kann aber natür-lich auch mit-tels einer Schl
+eife
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1231.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1231.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1231.
+
+[75] [76
 
 
 ]
 chapter 13.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1358.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1381.
-[79]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1381.
- [80
+
+Package xcolor Warning: Incompatible color definition on input line 1241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1262.
+
+[77] [78
 
 
 ]
 chapter 14.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1381.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1383.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1383.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1387.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1387.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1406.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1406.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1406.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1406.
+
+Package xcolor Warning: Incompatible color definition on input line 1264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1270.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1283.
+
+[79]
+
+Package xcolor Warning: Incompatible color definition on input line 1301.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1326.
+
+[80]
+Overfull \hbox (9.25893pt too wide) in paragraph at lines 1346--1347
+\T1/ppl/m/n/10.95 den [][]\T1/pcr/m/n/10.95 <CMDSTRING>[]\T1/ppl/m/n/10.95 . Es kön-nen auch an-dere oder weit-ere Kom-m
+an-doaus-druck-ab-schnitte übergeben
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 1371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1373.
+
 [81]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1418.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1418.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1443.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1443.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1443.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1443.
- [82]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1490.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1490.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1490.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1490.
- [83]
-Overfull \hbox (5.18132pt too wide) in paragraph at lines 1506--1506
+
+Package xcolor Warning: Incompatible color definition on input line 1389.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1389.
+
+
+Overfull \hbox (5.18132pt too wide) in paragraph at lines 1389--1389
  [][]
  []
 
 
-Overfull \hbox (5.18132pt too wide) in paragraph at lines 1506--1506
+Package xcolor Warning: Incompatible color definition on input line 1389.
+
+
+Overfull \hbox (5.18132pt too wide) in paragraph at lines 1389--1389
 [][]  
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1510.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1510.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1510.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1510.
-[84]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1511.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1511.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1536.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1536.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1545.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1545.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1549.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1549.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1549.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1549.
- [85]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1549.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1549.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1392.
+
+Package xcolor Warning: Incompatible color definition on input line 1392.
+
+[82]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1392.
  (NumeRe-Dokumentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1549.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1549.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1392.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1392.
 Package rerunfilecheck Info: File `NumeRe-Dokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: FB127AB7629214127FF47B1AEE58C0A1;5213.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1549.
+(rerunfilecheck)             Checksum: 861C6C32D8E180611D9FD6711A0AE5A5;4908.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1392.
  ) 
 Here is how much of TeX's memory you used:
- 25131 strings out of 493334
- 458511 string characters out of 3136615
- 613993 words of memory out of 3000000
- 27528 multiletter control sequences out of 15000+200000
+ 15005 strings out of 493323
+ 224354 string characters out of 3141221
+ 431292 words of memory out of 3000000
+ 17656 multiletter control sequences out of 15000+200000
  97598 words of font info for 157 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,13n,76p,8863b,1859s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/Erik Â»DracyonÂ« HÃ¤nel/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmr.pfb><C:/U
-sers/Erik Â»DracyonÂ« HÃ¤nel/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrb
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on NumeRe-Dokumentation.pdf (85 pages, 5123360 bytes).
+ 56i,11n,66p,8866b,1850s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Software/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/Software/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<D:/Software/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Software/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><D:/Software/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/drake/AppData/Roaming/MiKTeX/2.9/
+fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/drake/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb>
+<D:/Software/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/courier/u
+crb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
+vb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/up
+lb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/up
+lri8a.pfb>
+Output written on NumeRe-Dokumentation.pdf (82 pages, 4863602 bytes).
 PDF statistics:
- 1446 PDF objects out of 1728 (max. 8388607)
- 602 named destinations out of 1000 (max. 500000)
- 741 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1393 PDF objects out of 1440 (max. 8388607)
+ 585 named destinations out of 1000 (max. 500000)
+ 700 words of extra memory for PDF output out of 10000 (max. 10000000)
 
