@@ -136,6 +136,7 @@ is_data(STRING)~Gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false~i
 is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number
 is_string(EXPR)~Gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false. Siehe "help string"~zeichenketten # \" is_string()
 invert(MAT)~Invertiert die Matrix MAT, siehe "help matop"~invert() matrix invertieren
+ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()
 # L
 laguerre(n,x)~Berechnet den numerischen Wert der Laguerre-Polynome der Ordnung n an der Stelle x~laguerrepolynome laguerre()
 laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polynome der Ordnung n mit k = [0,n] an der Stelle x~laguerrepolynome zugeordnete laguerre_a()
@@ -223,6 +224,7 @@ smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der
 sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus
 sort~Sortiert einen Datensatz, siehe "help data" oder "help cache"~ordnen order sortieren aufsteigend absteigend ascending descending
+spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion
 split(STRING,CHAR)~Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split()
 sqrt(x)~Wurzel von x~wurzel root sqrt()
 stats~Berechnet die Statistiken einer gegebenen Tabelle~standardabweichung mittelwert statistiken fehler

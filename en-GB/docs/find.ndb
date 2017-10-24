@@ -135,7 +135,8 @@ is_data(STRING)~Returns true, if STRING is a data object, false otherwise~is_dat
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number
 is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenketten # \" is_string()
 invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren
-Joke~It's theory, if you know, how it should work, but it don't. It's practice, if it works, but you don't know, why it doesn't. It's physics, if just nothing works and no one knows, why!~witz gag joke
+Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke
+ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()
 # L
 laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome laguerre()
 laguerre_a(n,k,x)~Numerical value of the associate Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome zugeordnete laguerre_a()
@@ -154,7 +155,7 @@ matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the mi
 matfl(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,...~matfl()
 matflf(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,..., in which the missing elements are added logically~matflf()
 MatLab~Who needs MatLab, if one can have NumeRe?~matlab octave
-matop~Matrix based evaluation of the expression EX~matrix matrizenrechnungen matrices mtrxop
+matop~Matrix based evaluation of the expression~matrix matrizenrechnungen matrices mtrxop
 max(x,y,z,...)~Returns the maximal value of x,y,z,... Can be applied to strings and uses then string logic~maximum zeichenketten strings max()
 med(x,y,z,...)~Returns the median of x,y,z,...~zentralwert median untermedian obermedian med()
 mesh~Generates a meshgrid plot~meshgrid gitterplot
@@ -225,6 +226,7 @@ sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen bessel
 Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver
 solve(MAT)~Solves the system of linear equations, which is described by the matrix MAT, using the gaussian algorithm~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus
 sort~Sorts a data set~ordnen order sortieren aufsteigend absteigend ascending descending
+spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion
 split(STRING,CHAR)~Splits the string STRING at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()
 sqrt(x)~Square root of x~wurzel root sqrt()
 stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler

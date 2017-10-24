@@ -5,7 +5,7 @@
 
 procedure $%%1%%()
 	## Füge hier deine Kommandos und Ausdrücke ein.
-	return true
+	return true;
 endprocedure
 
 #* Ende der Prozedur

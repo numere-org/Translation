@@ -1,0 +1,38 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2017  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="spline">
+	<title string="Splines berechnen" />
+	Um einzelne Datenpunkte miteinandere zu verbinden, kann NumeRe kubische Ausgleichsfunktionen, sogenannte "Splines" berechnen. Diese Splines sind abschnittsweise definiert (stets zwischen zwei Datenpunkten), wobei sichergestellt ist, dass sie überall zweimal stetig differenzierbar sind.
+	Um die Splines zu einem Datensatz zu berechnen, müssen die <expr>x</expr>- und <expr>y</expr>-Werte als Spalten an das Kommando <code>spline</code> übergeben werden:
+	<codeblock>
+		spline DATEN(i1:i2,j1:j2)
+	</codeblock>
+	Das Kommando <code>spline</code> wird dann die Koeffizienten des Polynoms zwischen den Datenpunkten berechnen und das gesamte Polynom mittels der Funktion <expr>ivl(x,x0,x1,1,2)</expr> als <code>Spline(x)</code> definieren.
+	<example desc="Erzeugen eines Splines und graphisches Darstellen:" type="verbatim">
+		|&lt;- cache(:,1) = 0,1,4,5;
+		|
+		|&lt;- cache(:,2) = 0,1,1,2;
+		|
+		|&lt;- spline cache()
+		|-&gt; Spline(x) := (0+1.2*x-0.2*x^3)*ivl(x,0,1,1,2) + (1+0.6*(x-1)-0.6*(x-1)^2+0.1333*(x-1)^3)*ivl(x,1,4,1,2) + (1+0.6*(x-4)+0.6*(x-4)^2-0.2*(x-4)^3)*ivl(x,4,5,1,2)
+		|
+		|&lt;- plot cache(), Spline(x)
+	</example>
+	<img src="<>/docs/spline.png" />
+</article>

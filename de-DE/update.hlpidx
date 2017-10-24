@@ -1133,6 +1133,16 @@
 			<keyword>kurzzeit</keyword>
 			<keyword>shorttime</keyword>
 		</keywords>
+	</article>	
+	<article id="spline">
+		<file path="<>/docs/spline.nhlp" />
+		<title string="Splines berechnen" idxkey="spline" />
+		<keywords>
+			<keyword>spline</keyword>
+			<keyword>kubisch</keyword>
+			<keyword>cubic</keyword>
+			<keyword>cspline</keyword>
+		</keywords>
 	</article>
 	<article id="language">
 		<file path="<>/docs/language.nhlp" />

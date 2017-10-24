@@ -1135,6 +1135,16 @@
 			<keyword>shorttime</keyword>
 		</keywords>
 	</article>
+	<article id="spline">
+		<file path="<>/docs/spline.nhlp" />
+		<title string="Calculating splines" idxkey="spline" />
+		<keywords>
+			<keyword>spline</keyword>
+			<keyword>kubisch</keyword>
+			<keyword>cubic</keyword>
+			<keyword>cspline</keyword>
+		</keywords>
+	</article>
 	<article id="language">
 		<file path="<>/docs/language.nhlp" />
 		<title string="Adding languages" idxkey="language" />
