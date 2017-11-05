@@ -1661,10 +1661,13 @@ GUI_ANALYZER_TEMPLATE=%%1%% >> %%2%%: %%3%%
 GUI_ANALYZER_NOTE=Hinweis
 GUI_ANALYZER_WARN=Warnung
 GUI_ANALYZER_ERROR=Fehler
+GUI_ANALYZER_NOTE_TOTAL=In dieser Datei sind %%1%% Hinweise.
+GUI_ANALYZER_WARN_TOTAL=In dieser Datei sind %%1%% Warnungen.
+GUI_ANALYZER_ERROR_TOTAL=In dieser Datei sind %%1%% Fehler.
 GUI_ANALYZER_THROW_ADDMESSAGE=Eine an "throw" übergebene Nachricht kann zusätzliche Informationen bereitstellen
 GUI_ANALYZER_NAMESPACE_ALWAYSMAIN=Diese Anweisung wechselt immer in den Namensraum "main~"
 GUI_ANALYZER_PROGRESS_RUNTIME=Die Fortschrittsanzeige benötigt zusätzlich Laufzeit
-GUI_ANALYZER_MISSINGPARENTHESIS=Fehlende Klammer im Argument
+GUI_ANALYZER_MISSINGPARENTHESIS=Fehlende Klammer
 GUI_ANALYZER_MISSINGARGUMENT=Fehlendes Argument
 GUI_ANALYZER_ASSIGNMENTINARGUMENT=Das Argument enthält einen Zuweisungsoperator "=", der nicht auf Gleichheit prüft ("==")
 GUI_ANALYZER_IF_ALWAYSTRUE=Das Argument ist immer true
