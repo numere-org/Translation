@@ -69,39 +69,39 @@
 			\paragraph{Note}
 				The >>Stable Version<< installer only writes the file links and the link to the uninstaller into the windows registry. No configuration values or other relevant data for execution are written to the registry.
 	\part{Basic Usage}
-		\chapter{Erste Schritte}
-			Aller Anfang ist schwer. Das ist uns sehr wohl bewusst, daher haben wir hier die wesentlichen ersten Dinge zusammengetragen, die den Einstieg in \NR\ leichter gestalten sollen. Allerdings erhebt diese Dokumentation natürlich keinen Anspruch auf Vollständigkeit. Die Feinheiten aller Optionswerte werden hier ebenfalls nicht beschrieben. Eine Beschreibung derselben findet man in der integrierten Dokumentation.
-			\paragraph{Anmerkung}
-				Diese Dokumentation ist mit Marginalien ausgestattet, die auf Aktionen in \NR\ verweisen sollen. Marginalien in rot sind Syntaxelemente, die in die \NR-Konsole eingegeben werden können. Gerahmte Marginalien in dunkelblau bezeichnen Artikel der integrierten \NR-Hilfe.
-			\section{Das User Interface}
+		\chapter{First Steps}
+			Most beginnings are not really easy. This is quite obvious, therefore we gathered all relevant first things, which shall make the beginning of the Work with \NR\ as easy as possible. But this documentation doesn't claim that it might by complete. All these possible options and their values are not described here. Their description may be found in the integrated documentation.
+			\paragraph{Note}
+				This documentation is supported with marginal texts, which shall point to actions inside \NR. Marginal texts printed in read are syntax elements, which may be entered into the \NR\ console. Bordered and dark blue marginal texts name articles in the integrated \NR\ documentation.
+			\section{The User Interface}
 				\begin{figure}[htb]%
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/ui.png}
-					\caption{Die Startansicht von \NR\ mit den erwähnten Interface-Elementen. Ebenfalls zu sehen ist die Startseite von \NR, die ein paar Basics erklärt}
+					\caption{The starting view of \NR\ with the described interface elements. The starting page of \NR, which describes some basics, is also visible. \emph{Note: All screenshots shown in this document are in german language but if you've installed the english version, the interface language will be English, of course}}
 					\label{fig:ui}
-				\end{figure}	
-				Das User Interface von \NR\ ist in fünf wesentliche Elemente unterteilt. Zentral sind hierbei die \emph{Konsole} (Mitte unten) und der \emph{Editor} (open rechts). Mit der Konsole kann man direkt mit \NR\ interagieren und der Editor kann genutzt werden, um Textdateien, \NR-Scripte und \NR-Prozeduren zu bearbeiten. Daneben gibt es noch die \emph{Eingabehistorie} (unten rechts), die alle Eingaben in die Konsole protokolliert, so dass man sie durch Drag'n'Drop oder per Doppelklick erneut ausführen kann. Zur Navigation in den Dateien existiert der \emph{Dateibaum} (linke Sidebar, erster Tab) und zur Übersicht über Funktionen und Kommandos noch der \emph{Symbolbaum} (linke Sidebar, zweiter Tab). Der Editor ist zusätzlich auch noch in Tabs organisiert, so dass mehrere Dateien auf zugleich geöffnet sein können.
+				\end{figure}
+				The user interface of \NR\ is separated in five central elements. Most important of them is the \emph{console} (bottom center) and the \emph{editor} (top right). With the console one may interact directly with \NR\ and the editor may be used to edit text files, \NR\ scripts and \NR\ procedures. The \emph{entry history} (bottom right) is an additional element, which protocols all entries in the console, so that they may be repeated by dragging them to the console or by double clicking in them. The \emph{file tree} (left sidebar, first tab) and the \emph{symbol tree} (left sidebar, second tab) support the navigation in the files or the commands and functions, respectively. The editor itself also contains tabs, so that multiple files may be opened and edited.
 				
-				Beim ersten Start zeigt der \NR-Editor eine Startseite an, die den Einstieg in die Applikation vereinfachen soll. Nutzer, die bereits ähnliche Software, wie z.B. \textsc{Matlab}, kennen, werden sich mit diesen Informationen vermutlich schnell zurecht finden. Ein paar einleitende Worte werden wir dennoch anfügen.
+				During the first start the \NR\ editor displays a starting page, which shall make the first task in the application more easy. Users, which are already knowing similar software (such as \textsc{Matlab}), will get familiar with these information really fast. However, we will add some first words.
 				\begin{figure}[p]%
 					\centering
 					\includegraphics[width=0.2\textwidth]{_graphics/filetree.png}\hspace{5em}
 					\includegraphics[width=0.2\textwidth]{_graphics/symboltree.png}
-					\caption{Datei- und Symbolbaum im \NR-Interface}
+					\caption{File and symbol tree in the \NR\ interface}
 					\label{fig:trees}
 				\end{figure}
-				Die Bedienung über die Konsole soll unser erstes Augenmerk sein. Am Anfang der Zeile erscheint in der Konsole ein Pfeil \verb+<-+, der verdeutlichen soll, dass hier eine Eingabe erwartet wird (\autoref{fig:ui}). Ausgaben, die das Programm tätigt, werden alle durch den entgegen gerichteten Pfeil \verb+->+ begonnen. Es können \emph{nur dann} Eingaben getätigt werden, wenn ein solcher Pfeil (oder die explizite Aufforderung) erscheint.
+				First, we'll look at the interaction over the console. There's an arrow \verb+<-+ at the beginning of the line, which emphasises that an input is expected (\autoref{fig:ui}). The program's output is prefixed with an arrow, pointing in the opposite direction \verb+->+. You may \emph{only} enter something, if such an arrow (or an explicit claim) appears.
 				
-				\paragraph{Anmerkung}
-					In einem späteren Kapitel werden Verzweigungen und Schleifen beschrieben. In diesen Fällen ändert sich der Pfeil am Anfang der Zeile zu einem spezielleren Symbol. Dies soll an dieser Stelle aber nicht weiter von Bedeutung sein.
+				\paragraph{Note}
+					In a later chapter we will describe how to use loops and forks. The arrows at the beginning of the line are changing to a more special symbol. However, this is not important in this context.
 				\bigskip\\
-				In die \NR-Konsole können an dieser Stelle sowohl mathematisch-numerische Ausdrücke als auch Kommandos eingegeben werden. Die Syntax der mathematisch-numerischen Ausdrücke ist recht intuitiv und wird im übernächsten Abschnitt nochmals erläutert. Die Syntax der Kommandos bedarf hingegen einer kurzen Erläuterung.
+				You may enter mathematical-numerical expressions as well as commands into the \NR\ console. The syntax of the mathematical-numerical expressions is quite intuitive and will be described in the next section. The syntax of the commands has to be described more precisely.
 				
-				Es wurde versucht, \NR\ so intuitiv wie irgend möglich zu gestalten. Diese Prämisse war auch für die Kommandosyntax vorgegeben, ist aber aufgrund der Tatsache, dass \NR\ ein >>gewachsenes<< Programm ist, an ein paar Stellen vielleicht nicht wirklich erfüllt. Dennoch halten sich die Kommandos alle an dasselbe Schema:
+				We tried to create \NR\ as intuitive as possible. This target should apply to the command syntax as well, but because \NR\ is a long-term and somehow >>grown<< application, we could not fulfill the target everywhere. However, all commands are following the same scheme:
 				\begin{verbatim}
-					KOMMANDO [AUSDRUCK] [-PARAMETER[=WERT] [OPTIONEN[=WERT]]]
+					COMMAND [EXPRESSION] [-PARAMETER[=VALUE] [OPTIONS[=VALUE]]]
 				\end{verbatim}
-				Syntaxelemente in eckigen Klammern sind teils optional teils nicht bei jedem Kommando vorhanden. Beispiele für die Kommandosyntax sind
+				Syntax elements in brackets are sometimes optional or for some commands not present, respectively. Examples for the command syntax are
 				\begin{lstlisting}
 help
 help expression
@@ -109,294 +109,293 @@ plot sin(x)
 mesh sin(x)+cos(y) -set box
 copy <>/samples/data* -target=<loadpath>/*
 				\end{lstlisting}
-				Hier ist zu sehen, dass (manche) Kommandos nicht zwangsläufig einen Ausdruck oder einen Parameter benötigen.
+				You'll recognize that (some) commands are not requiring an expression or a parameter.
 				
-				Diese Kommandosyntax wird durch den >>Merksatz<< 
+				This command syntax is illustrated in the following sentence:
 				\begin{quotation}
-					\noindent\emph{>>Führe eine Aktion [auf etwas] aus und verwende dabei die folgenden Parameter.<<}
+					\noindent\emph{>>Apply an action [on something] by using the follwing parameters.<<}
 				\end{quotation}
-				vermutlich etwas eingängiger. Auf die obigen Beispiele ausgeführt, könnte dies zum Beispiel
+				Applied to one of the upper examples, you can possibly say
 				\begin{quotation}
-					\noindent\emph{>>Öffne die Hilfe, die sich mit >>expression<< befasst.<<}
+					\noindent\emph{>>Open the documentation article, which has >>expression<< as topic.<<}
 				\end{quotation}
-				oder
+				or
 				\begin{quotation}
-					\noindent\emph{>>Generiere einen Gitterplot der Funktion >>sin(x)+cos(y)<< und verwende eine umfassende Box.<<}
+					\noindent\emph{>>Create a meshgrid plot of the function >>sin(x)+cos(y)<< by using the surrounding box.<<}
 				\end{quotation}
-				lauten.
 				
 				\helpidx{syntax}
-				Alle Kommandos sind im Symbolbaum aufgelistet und dort in verschiedene Kategorien eingeteilt, so dass das nötige Kommando rasch gefunden werden kann. Wenn man mit der Maus über einem Kommando verweilt, so wird eine kurze Erklärung angezeigt. Sollte auch dies nicht weiterhelfen, so kann der zum Kommando gehörende Artikel der \NR-Hilfe aufgerufen werden, z.B. durch\cmd{help}
+				All commands are listed in the symbol tree and separated in different categories, so that the needed command may be found easily. If you dwell your mouse over a command, a tooltip will be displayed showing a short explanation. If this information is not enough, you may display the documentation article concerning the command, e.g. through\cmd{help}
 				\begin{lstlisting}
 help plot
 				\end{lstlisting}
-				In diesen Artikeln finden sich alle Parameter und Syntaxinformationen, sowie ein Beispiel der Syntax, die für die korrekte Ausführung nötig sind.
+				All parameters and syntax information for correct execution are listed in these articles, as well as an example of the syntax.
 				
 				\helpidx{numere}
-				Sollte einmal eine Eingabe fehlerhaft sein, wird \NR\ eine entsprechende Meldung auf die Konsole ausgeben. Wenn eine mathematisch-numerischer Ausdruck fehlerhaft ist, wird die Position des Fehlers -- sofern zutreffend -- mit ausgegeben. Bei Fehlern in der Verwendung der Kommandosyntax gibt \NR\ neben der Meldung auch eine Referenz auf den entsprechenden Hilfeartikel zurück.
+				If an entry is probably erroneous, \NR\ will display an corresponding message in the console. If a mathematical-numerical expression is erroneous, the position of the error---if possible---will be displayed as well. If the error results from the command syntax, \NR\ will display also a reference to the corresponding article in the \NR\ documentation.
 				
-				Ausdrucks- und Kommandofehler werden sämtliche Auswertungen abbrechen. Demzufolge werden auch \NR-Scripte und \NR-Prozeduren mit Ausgabe der entsprechenden Meldung abgebrochen.
-			\section{Einstellungen}
-				Alle Einstellungen in \NR\ werden im Optionendialog getättigt, der im Werkzeuge-Menü zu finden ist. Zusätzlich können viele Einstellungen auch mit dem Kommando \verb+set+ durchgeführt. Als Parameter muss dabei die Bezeichnung der Einstellung und der gewünschte Wert folgen:\cmd{set}
+				Errors in expressions or commands will abort all calculations. As a consequence all \NR\ scripts and \NR\ procedures will be aborted with an corresponding message as well.
+			\section{Preferences}
+				All preferences for \NR\ are set in the options dialogue, which may be found in the tools menu. Some settings may additionally be changed with the command \verb+set+. The desired setting and its new value have to follow this command:\cmd{set}
 				\begin{lstlisting}
-set -EINSTELLUNG=WERT
+set -SETTING=VALUE
 				\end{lstlisting}
-				Falls der Wert der Einstellung Leerzeichen enthält (z.B. in einem Dateipfad), muss dieser mit umschließenden Anführungszeichen angegeben werden:
+				If the value of the setting shall contain whitespaces (e.g. a file path), it has to be passed surrounded with quotation marks:
 				\begin{lstlisting}
-set -EINSTELLUNG="WERT MIT LEERZEICHEN"
+set -SETTING="VALUE WITH WHITESPACES"
 				\end{lstlisting}
-				Das \verb+list+-Kommando kann eine Auflistung aller Einstellungen anzeigen:\cmd{list}
+				The command \verb+list+ may display a list of all preferences:\cmd{list}
 				\begin{lstlisting}
 list -settings
 				\end{lstlisting}
-				Eigentlich sind alle Einstellungen, die \NR\ mitbringt, bereits sinnvoll.
+				All default preferences of \NR\ are in principle set reasonable.
 				
-				Die geänderten Einstellungen werden zum Programmende hin gespeichert und sind bei einem Neustart wieder verfügbar.
-			\section{Einfache Rechnungen}
-				\NR\ kann als Framework für numerische Rechnungen natürlich numerisch rechnen. Die zu berechnenden Gleichungen können ähnlich wie in einen Taschenrechner eingegeben werden. Abstände zwischen Operatoren und Werten spielen natürlich keine Rolle, allerdings dürfen zwischen Funktionsnamen und ihren Argumentklammern (ebenso bei den späteren Tabellenobjekten) \emph{keine} Leerzeichen sein. Daneben wird zwischen Groß- und Kleinschreibung unterschieden und der Malpunkt \verb+*+ muss stets mit eingegeben werden:
+				Changed settings are saved at application termination and available again after a restart.
+			\section{Simple Calculations}
+				As a framework for numerical calculations, \NR\ may of course calculate numerically. The equations, which shall be evaluated, may be entered similar to a pocket calculator. Spaces between operators and values don't play any role, but there are \emph{no spaces} allowed between function names and their argument parentheses. Lower- and uppercase letters are of course different and the multiplication dot \verb+*+ mustn't be omitted:
 				\begin{lstlisting}
 5*cos(_2pi)
 				\end{lstlisting}
-				multipliziert $\cos2\pi$ mit 5 und gibt das Ergebnis direkt aus. Als Dezimaltrennzeichen wird der Punkt \verb+.+ verwendet: die Zahl \verb+5.2+ ist in deutscher Dezimalschreibweise folglich identisch zu 5,2. \verb+_2pi+ ist dabei eine vordefinierte Konstante für $2\pi$ und \verb+cos()+ ist natürlich die Kosinus-Funktion.
+				multiplies $\cos2\pi$ with 5 and returns the result in the next line. The value \verb+_2pi+ is a built-in constant for $2\pi$ and \verb+cos()+ is of course the cosine function.
 
-				Die vordefinierten Konstanten und Funktionen sind im Symbolbaum zu finden. Sie können aber auch mittels 
+				The built-in constants and functions may be found in the symbol tree. They may be found as well by entering 
 				\begin{lstlisting}
 list -const
 list -func
 				\end{lstlisting}
-				aufgelistet werden. \verb+list -func+ kann noch weiter eingeschränkt werden.
+				into the console. \verb+list -func+ may also be restricted further.
 				
 				\helpidx{list}
-				\NR\ kann aber nicht nur mit Zahlen umgehen, sondern auch mit Variablen. Die Variablen \verb+x+, \verb+y+, \verb+z+, \verb+t+ und \verb+ans+ sind bereits vordefiniert. Es können aber auch weitere Variablen definiert werden. Das geschieht entweder automatisch (sobald \NR\ auf eine unbekannte Variable stößt) oder durch eine direkte Zuweisung:
+				\NR\ cannot only handle numbers but also variables. The variables \verb+x+, \verb+y+, \verb+z+, \verb+t+ and \verb+ans+ are already predefined. However, you may define more variables for the current session. This is done either automatically (if \NR\ stumbles upon an unknown variable) or through and explicit assignment:
 				\begin{lstlisting}
 neue_variable = 5
 				\end{lstlisting}
-				Hier wird die neue Variable \verb+neue_variable+ mit dem Wert 5 definiert. Die obige Gleichung kann damit auch auf folgende Art geschrieben werden:
+				(\emph{This variable's name is german for staying consistent with the screenshots.}) This line declares the new variable \verb+neue_variable+ and assigns the value 5 to it. The upper equation may now be written as follows:
 				\begin{lstlisting}
 neue_variable*cos(_2pi)
 				\end{lstlisting}
 				
-				\NR\ kann auch mehrere Ausdrücke zugleich auswerten. Die Ausdrücke müssen dabei durch jeweils ein Komma \verb+,+ getrennt sein. Innerhalb dieser Ausdrücke wird von links nach rechts vorgegangen. Die Zeile 
+				\NR\ may as well evaluate multiple expressions simultaneous. The expressions have to be separated by a comma \verb+,+. In the whole (multiple) expression line, \NR\ will evaluate the values from left to right. The line
 				\begin{lstlisting}
 neue_variable = 5, neue_variable*cos(_2pi), neue_variable = 1
 				\end{lstlisting}
-				setzt \verb+neue_variable+ auf 5, berechnet $5\cos2\pi$ und setzt \verb+neue_variable+ anschließend auf 1 (\autoref{fig:first_calc_1}). In Schleifen kann diese Schreibweise erhebliche Geschwindigkeitsvorteile bringen.
+				assigns 5 to \verb+neue_variable+, calculates $5\cos2\pi$ and finally assigns 1 to \verb+neue_variable+ (\autoref{fig:first_calc_1}). This way of writing a calculation may be speed up the evaluation inside of loops significantly.
 				
 				\helpidx{expression}
 				\begin{figure}[htb]%
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/first_calc_1.png}
-					\caption{\NR\ nach Eingabe der letzten Rechnung. Zu beachten ist, dass die Eingaben auch in der Eingabehistorie protokolliert wurden}
+					\caption{\NR\ after the evalution of the last calculation. You may notice that the input is as well stored in the entry history}
 					\label{fig:first_calc_1}
 				\end{figure}
-			\section{Wichtige Kommandos}
-				\NR\ wird vornehmlich durch Kommandos bedient. Die wichtigsten Kommandos sind hierbei\cmd{help\\find\\list\\quit}
+			\section{Important Commands}
+				You will interact with \NR\ mainly with commands. The most important commands are\cmd{help\\find\\list\\quit}
 					\begin{lstlisting}
 help
-help THEMA
-find BEGRIFFE
-list -OBJEKT
+help TOPIC
+find TERMS
+list -OBJECT
 					\end{lstlisting}
-					Diese Kommandos rufen die integrierte Dokumentation (\verb+help+ bzw. \verb+help THEMA+ zum THEMA), die Stichwortsuche (\verb+find BEGRIFFE+) auf und listen OBJEKTE (\verb+list -OBJEKT+).
+					These commands call the integrated documentation (\verb+help+ or \verb+help TOPIC+ for the desired topic, respectively), the keyword search (\verb+find TERMS+) and list objects (\verb+list -OBJECT+).
 					
-					Alle Kommandos haben einen Eintrag in der \NR-Hilfe. Dieser Artikel kann durch die Eingabe von \verb+help KOMMANDO+ oder die Verwendung des entsprechenden Eintrags im Kontextmenü angezeigt werden und enthält alle Informationen zu einem Kommando und ggf. noch Referenzen auf weitere wichtige Dokumentationsartikel. Im Falle, dass eine Information einmal nicht direkt in der \NR-Hilfe gefunden werden kann, kann die Stichwortsuche (\verb+find+) große Dienste erweisen, da selbige auch direkt passende Artikel der \NR-Hilfe liefert.
-					\paragraph{Anmerkung}
-						Mittels Semikola >>\verb+;+<< können auch mehrere Kommandos und mehrere Ausdrücke, die nacheinander auszuwerten sind, gemeinsam in einer Zeile angegeben werden:
+					All commands have an entry in the \NR\ documentation. This article may be read by entering \verb+help COMMAND+ into the console or by using the corresponding item in the context menu and contains all necessary information about the command and---if applicable---references to further important articles. In the case that an information may not be found direclty in the \NR\ documentation, you may use the keyword search (\verb+find+), which will also return the corresponding articles in the \NR\ documentation.
+					\paragraph{Note}
+						By using a semicolon >>\verb+;+<< you may also enter multiple commands and expressions, which shall be evaluated successively, in a single line:
 						\begin{lstlisting}
-KOMMANDO1; KOMMANDO2; AUSDRUCK1; KOMMANDO3; AUSDRUCK2; ...
+COMMAND1; COMMAND2; EXPRESSION1; COMMAND3; EXPRESSION2; ...
 						\end{lstlisting}
-		\chapter{Daten laden und verwenden}
-			Da ein großer Teil der wissenschaftlichen Arbeit auf der Datenanalyse beruht, ist es notwendig, Programme zu verwenden, die entsprechende Datenmengen in einem vernünftige Zeitrahmen laden und verarbeiten können. \NR\ interpretiert alle gelesen Daten in einer tabellarischen Darstellung und kann Statistiken, Histogramme und fortgeschrittenere Auswertungen durchführen.
-			\section{Dateitypen}
-				Neben reinen Textdateien im ANSI-Format (Dateiendungen *.txt und *.dat) kann \NR\ die folgenden Dateiformaten lesen:
+		\chapter{Loading and Using Data}
+			One of the main tasks in scientific work is data analysis. Therefore it is necessary to use applications, which may load and process the corresponding large amout of data in a reasonable time frame. \NR\ transforms all read data into a table and may calculate statistics, histograms and more elaborate evaluations.
+			\section{File Types}
+				In addition to simple text files in ANSI format (using the file extensions *.txt and *-dat) \NR\ can load the following file formats:
 				\begin{itemize}
-					\item \textbf{CassyLab-Datei (*.labx).} Dieser Datentyp wird nur von CassyLab verwendet und enthält ein komplettes CassyLab-Experiment. \NR\ wird jedoch nur die tabellarischen Daten extrahieren.
-					\item \textbf{CSV-Datei (*.csv).} Comma-Separated-Values-Dateien sind ein Quasi-Standard zum Austauschen von Daten. Allerdings existiert kein >>CSV-Standard<<, so dass es trotz umfassenden Tests vorkommen kann, dass eine CSV-Datei nicht korrekt interpretiert werden kann. (Der Programmierer freut sich über eine entsprechende Bugmeldung inkl. der angehängten Datei.)
-					\item \textbf{JCAMP-DX-Datei (*.dx, *.jdx und *.jcm).} JCAMP-DX-Dateien (von \emph{Joint Committee on Atomic and Molecular Physical data -- Data eXchange}) sind ein Dateistandard für den Austausch von Spek\-tro\-sko\-pie-Daten. \NR\ wird auch aus diesen Dateien nur die tabellarischen Daten extrahieren.
-					\item \textbf{OpenDocument-Spreadsheet (*.ods).} Tabellarische Daten, die z.B. von OpenOffice Calc erzeugt wurden. \NR\ wird hier nur die numerischen Werte und die Zeichenketten, jedoch nicht die Gleichungen lesen. Zu beachten ist, dass OpenOffice Calc geöffnete Dateien \emph{lockt}: Spreadsheets, die in OpenOffice Calc geöffnet sind, können \emph{nicht} von \NR\ gelesen werden.
-					\item \textbf{Excel-Workbooks (*.xls und *.xlsx).} Tabellarische Daten, die z.B. von Excel erzeugt wurden. \NR\ wird hier nur die numerischen Werte und die Zeichenketten, jedoch nicht die Gleichungen lesen. Eine Einschränkung des alten Excelformates ist zusätzlich, dass Ergebnisse, die durch Gleichungen berechnet wurden, ebenfalls nicht gelesen werden können. Zu beachten ist außerdem, dass Excel wie OpenOffice Calc geöffnete Dateien \emph{lockt}: Workbooks, die in Excel geöffnet sind, können \emph{nicht} von \NR\ gelesen werden.
-					\item \textbf{IGOR Binary Waves (*.ibw).} IGOR Binary Waves enthalten die Daten einer (1-, 2- oder 3-dimensionalen) IGOR-Welle.
-					\item \textbf{NumeRe-Datenfile (*.ndat).} NumeRe-Datenfiles sind ein \NR-eigenes, binäres Dateiformat zum schnellen Speichern und Lesen der Datensätze.
+					\item \textbf{CassyLab file (*.labx).} This file type is only used by CassyLab and contains a complete CassyLab experiment. However, \NR\ will only extract the data table.
+					\item \textbf{CSV file (*.csv).} Comma-Separated-Values files are a nearly-standard for data exchange. However, there is no real >>CSV standard<< defined, so that though tested it is possible that \NR\ cannot read single CSV files correctly. (Please notify the programmer if you face such a problem and forward him the file.)
+					\item \textbf{JCAMP-DX file (*.dx, *.jdx and *.jcm).} JCAMP-DX files (meaning \emph{Joint Committee on Atomic and Molecular Physical data -- Data eXchange}) are a standard for file exchanges of spectroscopy data. \NR\ will only extract the data table out of these files.
+					\item \textbf{OpenDocument spreadsheet (*.ods).} These are data tables, which are created for example by OpenOffice Calc. \NR\ can only extract the real numerical and string values but not the equations. Please note also that files opened with OpenOffice Calc are locked: these spreadsheets are not readable by \NR.
+					\item \textbf{Excel workbooks (*.xls and *.xlsx).} These are data tables, whcich are created by Excel. \NR\ will only extract the numerical and string values, not the equations. The legacy Excel format also doesn't provide the values calculated by the equations in the data tables, so that these are not available in this case. Please note also that files opened with Excel are locked: these workbooks are not readable by \NR.
+					\item \textbf{IGOR Binary Waves (*.ibw).} IGOR Binary Waves contain the data of a (1, 2 or 3 dimensional) IGOR wave.
+					\item \textbf{NumeRe data file (*.ndat).} NumeRe data files are a data format by \NR, which is used for fast saving and loading of data sets.
 				\end{itemize}
 				
 				\helpidx{load}
-				\NR\ kann jedoch nicht alle Formate schreiben. Als Ausgabeformate stehen die folgenden zur Verfügung:
+				However, \NR\ may not write all of these formats. The following output formats are available:
 				\begin{itemize}
-					\item \textbf{Textdatei (*.dat oder *.txt).} \NR\ erzeugt eine Textdatei in ANSI-Codierung, die dem Formatierungsstandard des folgenden Abschnitts genügt. Diese Textdateien sollten von den meisten anderen Programmen gelesen werden können
-					\item \textbf{NumeRe-Datenfile (*.ndat).} Dieses Dateiformat kann (nur) von \NR\ gelesen werden. Das Dateiformat ist jedoch online dokumentiert und kann in andere Programme implementiert werden.
-					\item \textbf{CSV-Datei (*.csv).} \NR\ erstellt eine CSV-Datei mit Kommata \verb+,+ als Spalten- und Punkten \verb+.+ als Dezimaltrennzeichen. (Möglicherweise kann dies von gewöhnlichen Tabellenkalkulationen nicht korrekt gelesen werden: das Ersetzen der Kommata durch Semikola \verb+;+ und der Punkte durch Kommata behebt dieses Problem gegebenenfalls. Der Grund hierfür entzieht sich dem Programmierer.)
-					\item \textbf{Excel Workbook (*.xls).} \NR\ kann die Daten im alten Excel-(97-2003)-Format (*.xls) exportieren, so dass sie in Excel und Konsorten weiterverarbeitet werden können.
-					\item \textbf{\TeX-Datei (*.tex).} \NR\ schreibt eine Tabelle im \TeX-Format. In den Kommentaren der erzeugten Datei finden sich die Voraussetzungen, um die erzeugte Tabelle in ein \TeX-Do\-ku\-ment einzubinden (\emph{booktabs}- und \emph{longtable}-Packages). Es werden ebenfalls Punkte als Dezimaltrennzeichen verwendet.
+					\item \textbf{Text file (*.dat or *.txt).} \NR\ creates a text file in ANSI encoding, which is following the formatting standards in the next section. Most of the other applications should be able to read these files
+					\item \textbf{NumeRe  data file (*.ndat).} This file format can only be read by \NR. However, this file format is documented online and may implemented in other programs.
+					\item \textbf{CSV file (*.csv).} \NR\ creates a CSV file, where commas \verb+,+ are used as column and dots verb+.+ are used as decimal separators. (Some table calculations, especially those, which are using the comma as decimal separator, probably cannot read these files: if you replace the commas with semicolons \verb+;+ and the dots with commas, this problem should be fixed. The programmer does not understand this behavior.)
+					\item \textbf{Excel Workbook (*.xls).} \NR\ may write the data in the legacy Excel-(97-2003)-Format (*.xls) for further processing in Excel and similar applications.
+					\item \textbf{\TeX\ file (*.tex).} \NR\ writes a table using the \TeX\ standard. The comments in this file contain the preconditions for including the table in a \TeX\ document (\emph{booktabs} and \emph{longtable} Packages).
 				\end{itemize}
 				
 				\helpidx{save}
-			\section{Formatierung von Textdateien}
-				Obwohl \NR\ in der Konsole den Punkt \verb+.+ als Dezimaltrennzeichen erfordert, ist dies bei Dateien nicht erforderlich. \NR\ kann sogar Dateien laden, die den Punkt und das Komma gemischt verwenden. Intern werden die Kommata in einen Punkt umgewandelt.
+			\section{Formatting of Text Files}
+				Although \NR\ uses the dot \verb+.+ in the console as decimal separator, it is not necessary for files. \NR\ may even read files, which are using the comma and the dot mixed. All commas are transformed to dots internally.
 				
-				Textdateien müssen allerdings auf jeden Fall tabellarisch formatiert sein. Es spielt hier jedoch keine Rolle, ob die Spalten durch Leerzeichen, Tabulatoren oder einer Mischung derselben getrennt sind.
+				However, text files have to be formatted as a table. It is not relevant, if the columns of this file are separated using whitespaces, tabulators or a mixture of both.
 				
-				Text innerhalb von tabellarischen Daten wird ignoriert. Soll eine Spaltenüberschrift angegeben werden, muss dies in der letzten Zeile vor den eigentlichen Daten geschehen. Leerzeichen in einem einzelnen Spaltenkopf müssen durch einen Unterstrich \verb+_+ ersetzt werden. Text, der als Kommentar dienen soll, sollte durch ein \verb+#+ am Anfang der Zeile auskommentiert werden. (Auch Spaltenüberschriften können so auskommentiert werden. Sie werden trotzdem gefunden.) Zwischen der Kopfzeile und den tabellarischen Werten kann auch noch eine trennende Linie aus Gleichheitszeichen \verb+=+ verwendet werden.
+				If you have text inside of the data table, it will be ignored. If you want to provide a column header, you have to put these headers in the last line before the actual data. Whitespaces in a single column header have to be replaced with underscores \verb+_+. If you want to provide some comments in this file, prefix that with a \verb+#+ at the beginning of the line (Column headers are found even it they are prefixed with a \verb+#+). You may also use a separating line between the column headers and the data table made out of \verb+=+.
 				\begin{verbatim}
-					# KOMMENTAR
-					# KOMMENTAR
-					# KOPF_1  KOPF_2  KOPF_3 [...]
+					# COMMENT
+					# COMMENT
+					# HEAD_1  HEAD_2  HEAD_3 [...]
 					# =======================[...]
 					   0,225      12       0 [...]
 					   0,245    12.5      .5 [...]
 				\end{verbatim}
 				
 				\helpidx{data}
-			\section{Laden und Verwenden}
-				Dateien in den oben genannten Dateiformaten können geladen werden durch Drag'n'Drop in die Konsole, den entsprechenden Eintrag im Kontextmenü des Dateibaums und durch\cmd{load}
+			\section{Loading and Using of Files}
+				You may load the file in the previously defined formats, if you drag and drop them on the console, use the corresponding item in the context menu of the file tree and through\cmd{load}
 				\begin{lstlisting}
-load DATEIPFAD/DATEI.EXT
+load FILEPATH/FILE.EXT
 				\end{lstlisting}
-				Dateipfade und -Namen mit Leerzeichen müssen von Anführungzeichen umgeben sein. Der hier gezeigte \verb+DATEIPFAD+ kann dabei auch weggelassen werden, wenn die Datei sich im Standardordner \verb+<loadpath>+ (Standardmäßig der Unterordner >>data<< im \NR-Stammverzeichnis) befindet. Wird die Dateierweiterung \verb+.EXT+ weggelassen, interpretiert \NR\ dies als eine Textdatei mit der Endung *.dat. In der \NR-Hilfe finden sich unter \verb+help load+ noch weitere Informationen.
+				File paths and file names containing whitespaces have to be surrounded with quotation marks. The exemplary \verb+FILEPATH+ may be omitted, if the file is located in the default directory \verb+<loadpath>+ (which is---as default---the folder >>data<< in the \NR\ root directory). If the file extension \verb+.EXT+ is omitted, \NR\ will interpret that as an text file with the foile extension *.dat. There is further information on this topic in the \NR\ documentation at \verb+help load+.
 				
-				In einer Standard-\NR-Installation befinden sich Beispieldateien im Unterordner >>samples<<. Diese können durch z.B.
+				There are some example files in the subdirectory >>samples<< in a default \NR\ installation. You may load them for example through
 				\begin{lstlisting}
 load <>/samples/data
 				\end{lstlisting}
-				geladen werden. \verb+<>+ ist der Pfadplatzhalter, der auf das \NR-Stammverzeichnis weist. Diese Zeile lädt die Datei >>data.dat<< in \NR's Speicher. Die Daten dieser Datei sind nun in tabellarischer Form im Datenobjekt \verb+data()+ abgelegt und können nun verwendet werden (Es ist reiner Zufall, dass die Datei und das Datenobjekt denselben Namen haben. Geladene Daten befinden sich immer in \verb+data()+).
+				The symbol \verb+<>+ is a path placeholder, which points to the \NR\ root directory. This line loads the file >>data.dat<< to \NR's memory. The data is now available as a table in the data object \verb+data()+ and may be used (It is a coincidence that the file and the data object carry the same name. The data of loaded files is always stored to \verb+data()+).
 				
-				Die tabellarische Darstellung der geladenen Daten kann man mittels des Kommandos \verb+show+\cmd{show} erhalten:
+				You may display the data table with the command \verb+show+:\cmd{show}
 				\begin{lstlisting}
 show data()
 				\end{lstlisting}
-				hierbei wird entweder die gesamte Tabelle oder nur die ersten und die letzten Zeilen angezeigt, abhängig davon, ob die Einstellung \verb+compact+ aktiv ist oder nicht. Die Kommandovariante \verb+showf+ umgeht diese Einstellung.
+				This will display the table in a separate window.
 				
-				Der Zugriff auf die Daten in \verb+data()+ geschieht mittels der \emph{Bereichs- oder Intervallsyntax} \verb+a:b+ (für Werte von \verb+a+ bis einschl. \verb+b+). Dabei werden die Zeilen- und Spaltenbereiche angegeben, aus denen die Werte entnommen werden sollen und den Argumentklammern von \verb+data()+ übergeben:\cmd{data()}
+				You may access the data in \verb+data()+ using the so-called \emph{interval syntax} \verb+a:b+ (for values ranging from \verb+a+ to \verb+b+). This is used to define the column and row ranges, from where the data should be taken. You pass these indices inside of the argument parentheses of \verb+data()+:\cmd{data()}
 				\begin{lstlisting}
 data(3,1)
 data(:,1)
 data(4:55,4)
 data(3,3:)
 				\end{lstlisting}
-				In diesen Beispielen wird ein einzelnes Element (\verb+data(3,1)+ für dritte Zeile, erste Spalte), eine ganze Spalte (\verb+data(:,1)+ für alle Zeilen, erste Spalte), ein Spaltenausschnitt (\verb+data(4:55,4)+ für vierte bis fünfundfünfzigste Zeile, vierte Spalte) oder ein Zeilenausschnitt (\verb+data(3,3:)+ für dritte Zeile, dritte bis letzte Spalte) referenziert.
+				In these examples a single element is selected (\verb+data(3,1)+ for third row and first column), a whole column (\verb+data(:,1)+ for all rows in the first column), a subselection of a column (\verb+data(4:55,4)+ for fourth to 55th row and fourth column) or a subsection of a row (\verb+data(3,3:)+ for third row and third to last column).
 				
-				In Rechnungen können die Daten entweder nur zeilen- oder nur spaltenweise extrahiert werden, d.h., die Bereichssyntax darf entweder für in Zeilen oder nur für Spalten verwendet werden. Die Rechnung mit Untertabellen ist hier nicht, jedoch mittels Matrix-Operationen möglich, die aber in einem späteren Kapitel besprochen werden. Aber natürlich kann ein Ausdruck mehrmals Elemente aus \verb+data()+ verwenden:
+				You only may extract values using columns or rows inside of calculations, i.e. the interval syntax may only be used for rows or columns. It is not possible to perform calculations using subtables, however, you may use the matrix operations out of a later chapter to achieve this behaviour. However, you may use different elements of \verb+data()+ in a single expression:
 				\begin{lstlisting}
 (cos(data(:,1)) + sin(data(:,2))) * sqrt(data(1,3:))
 				\end{lstlisting}
-				Bei dieser Rechnung werden nun so viele Ergebnisse zurückgegeben, wie der längste Bereich Elemente umfasst. Es gibt aber auch ein paar Funktionen, die beliebig viele Elemente aufnehmen können und nur einen einzelnen Wert als Ergebnis ausgeben:
+				This expression will return as many elements as the longest interval nominates. There are also functions, which can handle an arbitrary number of elements and calculate a single result:
 				\begin{lstlisting}
 avg(), cmp(), cnt(), max(), med(), min(), norm(), num(), prd(), std(), sum(), to_char()
 				\end{lstlisting}
-				Diese Funktionen berechnen Statistiken der Elemente (Mittelwert, Median, Standardabweichung, Minimum und Maximum), Summieren oder Multiplizieren alle Elemente, suchen Elemente, zählen Elemente oder wandeln die Werte in ASCII-Zeichencodes um (die Verwendung von Zeichenketten wird im Abschnitt >>Fortgeschrittene Bedienung<< erläutert und soll hier nicht weiter von Belang sein).
+				These functions calculate statistics of the elements (average, median, standard deviation, minimal and maximal value), summarize or multiply their arguments, search for elements, count elements or transform the values to ASCII character codes (the usage of strings is explained in the part >>Advanced Usage<< and is not relevant at this point).
 				
-				\paragraph{Anmerkung}
-					Nutzer, die von Matlab oder Octave kommen, werden die Unterscheidung zwischen \verb+OPERATOR+ und \verb+.OPERATOR+ kennen. Dies existiert in \NR\ nicht, da \NR\ vollständig als Tabellenkalkulation ausgelegt ist. Elemente aus verschiedenen Spalten/Zeilen werden also immer elementweise verarbeitet und nicht gemäß einer Matrix-/Vektoralgebra (eine Matrix-Matrix- oder Matrix-Vektor-Multiplikation wird in diesem Framework im Rahmen des \verb+matop+-Kommandos durch den Operator \verb+**+ dargestellt).\bigskip\\
-				Manche Kommandos, wie \verb+fit+, \verb+fft+ und \verb+plot+ (sowie Konsorten) können auch mit Untertabellen umgehen. Bei diesen Kommandos darf die Bereichssyntax sowohl in Spalten als auch Zeilen auftreten.
+				\paragraph{Note}
+					Users, who are already familiar with Matlab or Octave, will know the difference between \verb+OPERATOR+ and \verb+.OPERATOR+. This doesn't exist in \NR, because \NR\ was completely designed as a table calculation. Elements from different columns or lines will always be processed element by element and not following a matrix or vector algebra (a matrix-matrix or a matrix-vector multiplication is provided by the framework in the context of the \verb+matop+ command using the \verb+**+ operator).\bigskip\\
+				Some commands, like \verb+fit+, \verb+fft+ and \verb+plot+ (and similar) can handle whole subtables. In the context of this commands you may use the interval syntax in both, columns and rows.
 				
-				Die Tabelle in \verb+data()+ ist ein sogenannter \emph{Read-Only}-Datensatz. Dies bedeutet, dass die Daten in dieser Tabelle nicht beschrieben oder anderweitig geändert werden können. In einem späteren Kapitel werden Caches als manipulierbare Tabellen besprochen.
+				The table in \verb+data()+ is a so-called \emph{read-only} data set. This means that the data in this table may not be overwritten or modified in other means. In a later chapter we will explain the caches as tables, which may be manipulated.
 				
 				\helpidx{data}
-			\section{Datenanalyse}
-				Die Datenanalyse ist wohl einer der Hauptgründe, sich nach einem schnell und einfach zu bedienenden Numerikprogramm umzusehen. \NR\ bietet viele vordefinierte Analysefunktionen, die schnell und größtenteils unkompliziert eingesetzt werden können. Die Bedürfnisse des gewöhnlichen Statistikers sollten damit hinreichend erfüllt sein.
+			\section{Data Analysis}
+				The data analysis is probably the main reason, why someone should search for a fast and simple numerics application. \NR\ provides many predefined functions for analysis, which may be used fast and mostly uncomplicated. The needs for the most common statistics should be fulfilled satisfyingly.
 				
-				Statistiken können entweder kompakt durch das Kommando \verb+stats+\cmd{stats}
+				You may either calculate the statistics all at once with the command \verb+stats+\cmd{stats}
 				\begin{lstlisting}
 stats data(i1:i2,j1:j2)
 				\end{lstlisting}
-				oder einzeln durch die im vorherigen Abschnitt genannten Statistikfunktionen bestimmt werden:
+				or single with the statistical functions, which where mentioned in the previous section:
 				\begin{lstlisting}
 std(data(i1:i2,j1))
 avg(data(i1:i2,j1))
 [...]
 				\end{lstlisting}
-				Das Kommando \verb+stats+ gibt dabei nahezu alle sinnvollen Statistikwerte der Tabelle aus, u.A. Mittelwert, Standardabweichung und -fehler, RMS, Schiefe, Exzess und Student-Faktor (für einen zweiseitigen, 95 \%-Konfidenzbereich). Die meisten darunter können auch als einzelne Funktionen aufgerufen werden.
+				The command \verb+stats+ returns nearly all reasonable statistical value of the table, which is for example the average, the standard deviation and the standard error, RMS, skewness, excess and the student factor (for a two-fold 95 \%\ confidence interval). Most of them can also be calculated through single functions.
 				
 				\helpidx{stats}
-				Eine weitere verbreitete Analysemethode ist die Erzeugung eines Histogramms. Histogramme sind eine Visualisierung der Häufigkeiten einer gemessenen Größe. Dies kann die Periodendauer einer Schwingung, die Lebensdauern von Elementarteilchen oder eine andere Größe sein.
+				A very common way of analyzing a data set is generating a histogram. Histograms are a way to visualize the frequency of a measured quantity. This may either be the period of a oscillation, or the life time of elementary particles or another quantity.
 				\begin{figure}[htb]%
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/histogramm.png}
-					\caption{Histogramm eines Datensatzes erzeugt durch \texttt{hist}}
+					\caption{Histogram of a data set, which was created using \texttt{hist}}
 					\label{fig:histogramm}
 				\end{figure}
 				
-				Histogramme der geladenen Daten erhält man durch \cmd{hist}
+				Histograms of the loaded data are created using \cmd{hist}
 				\begin{lstlisting}
 hist data(i1:i2,j1:j2)
 				\end{lstlisting}
-				Das Kommando \verb+hist+ unterstützt dabei eine große Zahl an Parametern, die das erzeugte Histogramm noch weiter beeinflussen können, aber bereits ohne Parameter werden gute Ergebnisse erzielt (\autoref{fig:histogramm}). Die Zahl der verwendeten Rubriken (auch \emph{bins}) wird durch die \emph{Sturges-Regel} bestimmt, kann aber auch direkt oder durch die \emph{Scott}- oder die \emph{Freedman-Diaconis-Regel} festgelegt werden.
+				The command \verb+hist+ supports a large number of parameters, which may modify the created histogram even further, though the results without any parameters are already good (\autoref{fig:histogramm}). The number of used bins is determined by the \emph{Rule of Sturges}, but may also be set directly or based upon the \emph{Rule of Scott} or the \emph{Rule of Freedman and Diaconis}.
 				
-				Es wird für jede Spalte eine Häufigkeitsanalyse durchgeführt und das Ergebnis in einem gemeinsamen Diagramm dargestellt. Spalten, die keine für eine Häufigkeitsanalyse sinnvollen Daten enthalten, sollten durch die Bereichssyntax ausgeschlossen werden.
+				A histogram is calculated for each column of the data set and the results are presented in a common graph. Columns, which don't contain any reasonale data, have to be excluded using the interval syntax.
 				
-				\NR\ kann auch Histogramme von zweidimensionalen Datensätzen anfertigen. Hierzu sind entweder die Option \verb+grid+ für ein einzelnes Histogramm oder das Kommando \cmd{hist2d}\verb+hist2d+ für Histogramme in zwei Raumrichtungen nötig. Details finden sich in dem entsprechenden Hilfeartikel.
+				\NR\ may also calculate histograms out of a two-dimensional data set. You either have to pass the option \verb+grid+ for a single histogram or the command \cmd{hist2d}\verb+hist2d+ for histograms in two spatial directions. Futher details are listed in the corresponding documentation article.
 				
 				\helpidx{hist}
-				Neben den Histogrammen und der Berechnung der Statistiken ist eine weitere, übliche Analysemethode durch das Anpassen einer Funktion (auch \emph{Modellkurve} oder \emph{Regressionsfunktion} genannt) an die gemessen (und ggf. zusätzlich aufbereiteten) Daten gegeben.
+				One additional, very common way of analyzing data next to histograms and statistics is to fit a function (sometimes called \emph{model} or \emph{regression curve}) to the measured (and already somehow processed) data.
 				
-				Um eine Funktion \verb+FUNCTION()+ an Daten in \verb+data()+ anzupassen kann \verb+fit+ verwendet werden:\cmd{fit}
+				To fit a function \verb+FUNCTION()+ to data in \verb+data()+, you can use the command \verb+fit+:\cmd{fit}
 				\begin{lstlisting}
 fit data(:,j1:j2) -with=FUNCTION(x,PARAMS) params=[PARAMS=INITIALW.]
 fit data(:,1:2) -with=A*sin(B*x+C) params=[A=1,B=1,C=0]
 				\end{lstlisting}
-				\NR\ wird nun versuchen, die Parameter \verb+PARAMS+ so zu variieren, dass \verb+FUNCTION()+ die Datenpunkte möglichst treffend beschreibt. Die angepassten Werte werden in den Parametern hinterlegt, so dass mit diesen direkt weiter gerechnet werden kann. (In neueren \NR-Versionen ist \verb+params+ nicht mehr zwingend erforderlich, da die Parameter auch automatisch erkannt werden können.)
+				\NR\ will now try to alter the parameters \verb+PARAMS+ in a way that the \verb+FUNCTION()+ matches the data points best. The fitted values are stored in the parameters so that you can continue your calculations with these values directly. (In newer \NR\ versions it os not necessary to provide the parameters through \verb+params+. \NR\ will detect them on its own.)
 				
-				Sobald \NR\ ein Minimum erreicht hat, bricht es den Algorithmus ab und gibt eine Übersicht aller Parameter aus, die im Folgenden beispielhaft dargestellt ist:
+				If \NR\ reaches an optimal set of parameters, it will cancel the algorithm and return an overview of the parameters, which is presented as an example in the following:
 				\begin{verbatim}
-					Funktion: 0.646875*sin(3.00223*x+0.00837336)
-					Datenpunkte:                            101 ohne Gewichtungsfaktoren
-					Freiheitsgrade:                         98
-					Algorithmusparameter:                   TOL=0.0001, MAXITER=500
-					Iterationen:                            7
-					Gewichtete Summe der Residuen (chi^2):  2.33825
-					Varianz der Residuen (red. chi^2):      0.0238597
-					Standardabweichung der Residuen:        0.1544658
+					Function: 0.646875*sin(3.00223*x+0.00837336)
+					Data points:                            101 without weighting factors
+					Degrees of freedom:                     98
+					Parameters for the algorithm:           TOL=0.0001, MAXITER=500
+					Iterations:                             7
+					Weighted sum of the residuals (chi^2):  2.33825
+					Variance of the residuals (red. chi^2): 0.0238597
+					Standard deviation of the residuals:    0.1544658
 
-					Parameter  Initialwert      Anpassung    Asymptotischer Standardfehler
-					----------------------------------------------------------------------
-					A                    1      0.6468754    ± 0.02188576         (3.383%)
-					B                    3       3.002228   ± 0.005649476        (0.1882%)
-					C                    0    0.008373364    ± 0.06579646         (785.8%)
+					Parameter  Initial value        Fitted        Asymptotic standard error
+					-----------------------------------------------------------------------
+					A                      1     0.6468754    ± 0.02188576         (3.383%)
+					B                      3      3.002228   ± 0.005649476        (0.1882%)
+					C                      0   0.008373364    ± 0.06579646         (785.8%)
 					----------------------------------------------------------------------
 
-					Korrelationsmatrix der angepassten Parameter:
+					Correlation matrix of the fitted parameters:
 
 					/          1     0.0159    -0.0164 \
 					|     0.0159          1     -0.862 |
 					\    -0.0164     -0.862          1 /
 
-					Fitanalyse:
-					Die angepasste Funktion kann den Verlauf der Datenpunkte beschreiben,
-					jedoch ist noch Raum für Optimierungen.
+					Fitting result analysis:
+					The fitted function could describe the trend of the data points, but 
+					there is some room for optimisation.
 				\end{verbatim}
-				Diese Übersicht enthält den bedeutenden $\chi^2$-Wert, der die Summe der quadratischen Abweichungen der Datenpunkten von der angepassten Funktion beschreibt. Außerdem finden sich hier die Ergebniswerte der Parameter und die berechneten Fehlerwerte, die in eine daraus erfolgende Fehlerfortpflanzung eingefügt werden können. Die Korrelationsmatrix der Parameter beschreibt, wie sehr die Parameter voneinander abhängen und die Fitanalyse fasst in Worte, was aus $\chi^2$ bzw. dem reduzierten $\chi^2$ herausgelesen werden kann. Diese Übersicht wird des Weiteren in \verb+<savepath>/numerefit.log+ protokolliert.
+				This overview contains the important quantity $\chi^2$, which contains the sum of the quadratic deviations of the data points to the fitted function. In addition, you'll find the result values of the parameters and the calculated error values, which may inserted in the concluding error progression. The correlation matrix of the parameters contains an information, how the parameters are connected to each other and the fitting result analysis is a summary of what can be learned from the value of $\chi^2$. This overview will also be stored in the fit log file at \verb+<savepath>/numerefit.log+.
 				\begin{figure}[htb]%
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/plot.png}
-					\caption{Anpassung des Modells eines exponentiellen Zerfalls an Messpunkte mittels \texttt{fitw}}
+					\caption{Fitting a model for an exponential decay with \texttt{fitw}}
 					\label{fig:fit}
 				\end{figure}
 				
-				\paragraph{Anmerkung}
-					Inwiefern der $\chi^2$-Wert eine Aussage über die Qualität einer Anpassung ist, ist eine Streitfrage. Im Allgemeinen nimmt man an, dass ein Fit mit einem möglichst kleinen $\chi^2$-Wert besonders gut ist. Genauer betrachtet ist die aussagekräftigere Größe der reduzierte $\chi^2$-Wert: für ihn gilt, dass wenn er deutlich kleiner als 1 ist, scheint die Anpassung gut zu treffen. Bei einem Fit, der Fehlerwerte berücksichtigt (s.u.), sollte dieser Wert jedoch möglichst nahe an 1 liegen. \NR\ berücksichtigt dies und liefert eine entsprechende Fitanalyse. Die Fitanalyse kann allerdings den optischen Vergleich von angepasster Funktion und Datenpunkten (siehe nächstes Kapitel) nicht ersetzen.\bigskip\\
-				Im Anschluss an die Anpassung kann die angepasste Funktion zusammen mit den Daten mittels des Kommandos \verb+plot+ (siehe nächstes Kapitel) graphisch dargestellt werden (\autoref{fig:fit}). Dies bietet eine gute Möglichkeit, das Ergebnis der Anpassung zu überprüfen (und sollte eigentlich auch stets ausgeführt werden).
+				\paragraph{Note}
+					If the quantity $\chi^2$ is an indicator on the quality of the fit, can be discussed. In common, one assumes that a fit with the smallest possible $\chi^2$ value has the best possible parameter set. More precise: it's the so-called reduced $\chi^2$ value, which is the important quantity: if it is noticeable smaller than 1, the resulting parameter set seems to fit the data points quite well. If you perform a fit, which will consider the error estimations (see below), this value should be in the range of 1. \NR\ will consider all these conditions and return a corresponding fitting result analysis. But note that the analysis may only support and not fully replace the optical comparation of fitted function and data points.\bigskip\\
+				After the fitting procedure, the fitted function may be displayed graphically using the command \verb+plot+ (see next chapter) (\autoref{fig:fit}). This is a good possibility to check the results of the fitting procedure (and should always be performed).
 				
-				Eine Anpassung an Datenpunkte, die mit Fehlern versehen sind, kann diese berücksichtigen. Dazu verwendet man\cmd{fitw}
+				If you can estimate the measurment errors, \NR\ may consider these values. Just use\cmd{fitw}
 				\begin{lstlisting}
 fitw data(:,1:2:3) -with=A*sin(B*x+C) params=[A=1,B=1,C=0]
 				\end{lstlisting}
-				\verb+fitw+ (für \emph{weighted fit}) verwendet die Fehlerwerte in der dritten Spalte um die Datenpunkte entsprechend zu gewichten: Datenpunkte mit hohen Fehlern werden schwächer gewichtet als Datenpunkte mit geringen Fehlern.
+				\verb+fitw+ (for \emph{weighted fit}) uses the error estimations in the third column to calculate the weighting factors for the data points: data points with higher errors are considered less important than those with small errors.
 				
-				Sollte ein Fit mal nicht konvergieren, kann es helfen, die Initialwerte der Parameter (die stets angegeben werden sollten) selbst zu variieren. Ebenfalls kann es hilfreich sein, den Fitbereich einzugrenzen. Dies kann entweder durch eine Einschränkung der Zeilen in \verb+data()+ oder durch Übergabe der Option \verb+x=a:b+ erreicht werden:
+				If a fitting procedure does not converge, it may help varying the initial values of the parameters (which shall be passed everytime). It also may help to restrict the fitting interval. This may be done either through restricting the rows in \verb+data()+ or through passing the option \verb+x=a:b+:
 				\begin{lstlisting}
 fit data(:,1:2) -with=A*sin(B*x+C) params=[A=1,B=1,C=0] x=0:4
 				\end{lstlisting}
-				Zusätzlich können die Zahl der maximalen Iterationen, die Genauigkeit und einzuhaltende Bedingungen für die angegebenen Parameter vorgegeben werden. Letztere Option kann die Stabilität des Algorithmus allerdings drastisch beeinflussen.
+				In addition the maximal number of iterations, the precision and further restrictions of the parameters can be set. The last option may have a large influence on the stability of the algorithm.
 				
 				\helpidx{fit}
-				Alle erwähnten Kommandos agieren spaltenweise. Falls die Daten zeilenweise vorliegen, muss man die folgende Zeile ausführen\cmd{copy}
+				All mentioned commands are acting along the columns. If the data is organized in rows, one has to perform the following line\cmd{copy}
 				\begin{lstlisting}
 copy data(:,:) -target=cache(:,:) transpose
 				\end{lstlisting}
-				und alle \verb+data+ in den vorherigen Beispielen durch \verb+cache+ ersetzen.
-		\chapter{Erzeugen von Graphen}
-			Eine besonders wichtige Funktionalität von \NR\ ist die Erzeugung von Funktions- und Datengraphen. Hiermit können die Verläufe von Funktionen und Daten visualisiert und damit einfacher analysiert werden. \NR\ gibt alle generierten Darstellungen automatisch als Bildatei aus. Wenn \NR\ mit einem Bildbetrachter verknüpft ist, wird dieser im Anschluss an den \emph{Plotvorgang} automatisch mit der Bilddatei gestartet.
-			\section{Typen von Graphen}
-				\NR\ kennt eine große Zahl unterschiedlicher Plotarten, die durch die Angabe weiterer Plotoptionen noch auf unzählige weitere Arten modifiziert werden können. Hier sollen nur die wichtigsten aufgezählt werden, der komplette Satz an Plottypen ist unter \verb+list -cmd+ zu finden:
+				and replace \verb+data+ with \verb+cache+ in all previous examples.
+		\chapter{Creating Graphs}
+			A very important functionality of \NR\ is the creation of function and data graphs. You may visualize the behaviour of functions and data and analyze them more easy. \NR\ can store all created graphs in image files, if you specify that in the options list of the graph.
+			\section{Types of Graphs}
+				\NR\ knows a large number of different plot types, which may be modified further by passing further options to the options list. The following list shall only mention the most important plot types. You can get the full list by entering the command \verb+list -cmd+:
 				\begin{lstlisting}
 plot
 plot3d
@@ -407,336 +406,336 @@ vect3d
 ...
 				\end{lstlisting}
 				\begin{itemize}
-					\item \verb+plot+: dies erzeugt einen Standardgraphen, bei dem $y$ gegen $x$ aufgetragen ist. Dieses Kommando wird verwendet, um z.B. $\sin x$ oder $x^2$ graphisch darzustellen.
-					\item \verb+plot3d+: dieses Kommando generiert einen Graphen auf Basis einer 3D-Trajektorie. Aus drei Funktionen mit der Variable $t$ wird eine Bahnkurve berechnet und diese dreidimensional dargestellt.
-					\item \verb+mesh+: eine Funktion $z = f(x,y)$ kann mit diesem Kommando dargestellt werden. Es wird ein Gitterplot berechnet und dreidimensional dargestellt.
-					\item \verb+dens+: im Gegensatz zu \verb+mesh+ stellt dieses Kommando die Funktion $z = f(x,y)$ nur durch reine Farbwerte als Projektion auf die $x$-$y$-Ebene dar.
-					\item \verb+vect+: dieser Plotstil berechnet einen Vektorplot eines 2D-Vektorfeldes: $\vec A(x,y) = A_x(x,y)\,\hat e_x + A_y(x,y)\,\hat e_y$.
-					\item \verb+vect3d+: ähnlich wie \verb+vect+ berechnet dies einen Vektorplot, allerdings den eines dreidimensionalen Vektorfeldes: $\vec A(x,y,z) = A_x(x,y,z)\,\hat e_x + A_y(x,y,z)\,\hat e_y + A_z(x,y,z)\,\hat e_z$.
+					\item \verb+plot+: this creates a standard graph, which displays $y$ against $x$. This command is being used, if you want to visualize $\sin x$ or $x^2$.
+					\item \verb+plot3d+: this command creates a graph on the basis of a 3-dimensional trajectory. A trajectory is calculated from three functions sharing the variable $t$ and visualized three-dimensionally.
+					\item \verb+mesh+: a function $z = f(x,y)$ may be displayed with this command. A meshgrid is calculated and displayed three-dimensionally.
+					\item \verb+dens+: this command visualizes the function $z = f(x,y)$ in contrast to \verb+mesh+ only through colour values projected to the $x$-$y$ plane.
+					\item \verb+vect+: this plotting style calculates a vector plot of a 2D vector field: $\vec A(x,y) = A_x(x,y)\,\hat e_x + A_y(x,y)\,\hat e_y$.
+					\item \verb+vect3d+: this calculates a vector plot similar to \verb+vect+, but it uses a three-dimensional vector field as data basis: $\vec A(x,y,z) = A_x(x,y,z)\,\hat e_x + A_y(x,y,z)\,\hat e_y + A_z(x,y,z)\,\hat e_z$.
 				\end{itemize}
-			\section{Ausgabe}
-				Das standardmäßige Ausgabe für Plots ist der \NR-GraphViewer, in dem Plots noch zusätzlich modifiziert werden können. Zusätzlich können Plots aber auch direkt in eine Bilddatei im PNG-Format im Verzeichnis \verb+<plotpath>+ (Dies ist standardmäßig der Unterorder >>plots<< im \NR-Stammverzeichnis) exportiert werden. Dies kann mit den Plotoptionen \verb+opng+, \verb+oeps+, \verb+ogif+, \verb+osvg+ und \verb+otex+ erreicht werden.
+			\section{Output}
+				The default output channel for plots is the \NR\ GraphViewer, in which the plots may be modified further. Additionally, the plots may be stored into an image file in the PNG format in the directory \verb+<plotpath>+ (This is per default the subdirectory >>plots<< in the \NR\ root). You may change the image file format to othe formats. This may be done with the plotoptions \verb+opng+, \verb+oeps+, \verb+ogif+, \verb+osvg+ and \verb+otex+.
 				
-				Um einen einfachen Plot in z.B. >>graph\_der\_messung.png<< zu erzeugen, ist die Option
+				To create a simple plot in for example >>graph\_of\_the\_measurement.png<<, you've to pass the option
 				\begin{lstlisting}
-opng=graph_der_messung
+opng=graph_of_the_measurement
 				\end{lstlisting}
-				zu übergeben. Sollte der Dateiname Leerzeichen enthalten, muss dieser in Anführungszeichen angegeben werden.
+				If the file name of the target file shall contain whitespaces, you've to pass it in enclosing quotation marks.
 				
 				\helpidx{plotoptions}
-			\section{Verwendung}
-				Alle Plotbefehle folgen in ihrer Syntax dem folgenden Schema:
+			\section{Usage}
+				The syntax of all plotting commands is following this scheme:
 				\begin{lstlisting}
-KOMMANDO FUNKTIONEN/DATEN -set OPTIONEN
+COMMAND FUNCTIONS/DATA -set OPTIONS
 				\end{lstlisting}
-				wobei die \verb+OPTIONEN+ optional sind und nicht angegeben werden müssen.
+				where \verb+OPTIONS+ are optional and may be omitted.
+
+				Default variables are $x, y, z$ and $t$. Depending on the actual plotting command, one, two, three or all four of these variables are used as plotting variables and the others are parameters. \verb+plot+ uses only $x$, \verb+plot3d+ only $t$, \verb+mesh+, \verb+dens+ and \verb+vect+ $x$ and $y$ and \verb+vect3d+ uses $x, y$ and $z$. All other variables are parameters.
 				
-				Standardvariablen sind $x, y, z$ und $t$. Je nach Plotkommando wird eine, zwei, drei oder alle vier dieser Variablen als Variablen verwendet und die restlichen als Parameter betrachtet. \verb+plot+ verwendet nur $x$, \verb+plot3d+ nur $t$, \verb+mesh+, \verb+dens+ und \verb+vect+ $x$ und $y$ und \verb+vect3d+ $x,y$ und $z$. Alle anderen Variablen werden als Parameter betrachtet.
-				
-				Ein einfacher Sinus-Plot wird durch\cmd{plot}
+				A simple plot of a sine is created with\cmd{plot}
 				\begin{lstlisting}
 plot sin(x)
 				\end{lstlisting}
-				erreicht. Hier wird automatisch ein Achsenkreuz und ein Sinus von $-10$ bis 10 berechnet, wobei die $y$-Achse passend, jedoch ein kleines Stück größer gewählt wird. Die Achsenbeschriftung und die Legende wird ebenfalls selbstständig bestimmt (\autoref{fig:sinusplots}a)
+				This calculates a sine function from $-10$ to $10$ automatically, where the $y$ axis was chosen fitting but a small amount larger than the minimal and maximal value of the function. The axis labels and the legend are also determined automatically (\autoref{fig:sinusplots}a)
 				\begin{figure}[p]%
 					\centering
-					\subfloat[ohne Optionen]{\includegraphics[width=0.45\textwidth]{_graphics/plot_0.png}}
-					\subfloat[mit \texttt{box} und \texttt{grid}]{\includegraphics[width=0.45\textwidth]{_graphics/plot_1.png}}\\
-					\subfloat[mit eigener Legende]{\includegraphics[width=0.45\textwidth]{_graphics/plot_2.png}}
-					\subfloat[mit Datensatz]{\includegraphics[width=0.45\textwidth]{_graphics/plot_3.png}}\\
-					\subfloat[mit eigenen Intervallgrenzen]{\includegraphics[width=0.45\textwidth]{_graphics/plot_4.png}}
-					\subfloat[mit Fehlerbalken]{\includegraphics[width=0.45\textwidth]{_graphics/plot_5.png}}
-					\caption{Die Ergebnisgraphen unter Verwendung der gezeigten Optionen}
+					\subfloat[without options]{\includegraphics[width=0.45\textwidth]{_graphics/plot_0.png}}
+					\subfloat[with \texttt{box} and \texttt{grid}]{\includegraphics[width=0.45\textwidth]{_graphics/plot_1.png}}\\
+					\subfloat[with custom legend]{\includegraphics[width=0.45\textwidth]{_graphics/plot_2.png}}
+					\subfloat[with data set]{\includegraphics[width=0.45\textwidth]{_graphics/plot_3.png}}\\
+					\subfloat[with custom interval]{\includegraphics[width=0.45\textwidth]{_graphics/plot_4.png}}
+					\subfloat[with errorbars]{\includegraphics[width=0.45\textwidth]{_graphics/plot_5.png}}
+					\caption{The resulting graphs using the shown options}
 					\label{fig:sinusplots}
 				\end{figure}
 				
 				\helpidx{plot}
-				Eine umfassende Box und ein Koordinatengitter wird erreicht durch
+				You are getting a surrounding box and a coordinate grid with 
 				\begin{lstlisting}
 plot sin(x) -set box grid
 				\end{lstlisting}
-				Ab diesem Plot werden alle folgenden Plots ebenfalls mit Gitter und umfassender Box ausgestattet (\autoref{fig:sinusplots}b und c).
+				This and all further plots will also get a grid and a box (\autoref{fig:sinusplots}b and c).
 				
-				Möchte man außerdem noch >>Sinusfunktion<< statt >>$\sin(x)$<< als Legende haben, gibt man folgendes an:
+				If you want to have >>Sine function<< instead of >>$\sin(x)$<< as legend, you'll have to enter the following:
 				\begin{lstlisting}
-plot sin(x) "Sinusfunktion" -set box grid
+plot sin(x) "Sine function" -set box grid
 				\end{lstlisting}
-				(\autoref{fig:sinusplots}c; Eine leere Legende erreicht man durch Angabe einer leeren Zeichenkette \verb+""+)
+				(\autoref{fig:sinusplots}c; An empty legend is achieved by passing an empty string \verb+""+)
 				
-				\NR\ kann auch Datensätze graphisch darstellen. Dazu gibt man den Datensatz in \verb+data()+ analog zu einer Funktion an. Bleibt die Argumentklammer leer, wird dies automatisch durch \verb+data(:,:)+ ersetzt. Es können aber auch direkt die nötigen Spalten angegeben werden, z.B. \verb+data(:,1:4)+. Dies verwendet entweder Spalte 1 und 4 oder Spalte 1 bis 4, falls der entsprechende Plotstil mehr als zwei Spalten benötigt. Es können hierbei bis zu 6 einzelne Spalten in beliebiger Reihenfolge angegeben werden: \verb+data(:,4:2:6:1:3:8)+.
+				\NR\ may also display data points graphically. To achieve this, one has to pass the data set in \verb+data()+ analogous to a function. If you leave the argument's parentheses empty, this will be replaced automatically with \verb+data(:,:)+. You may also specify the desired columns by yourself, e.g. \verb+data(:,1:4)+. \NR\ will use either the columns 1 and 4 or the columns 1 to 4, if the corresponding plotting style needs more than two columns. You may specify up to six columns in an arbitrary order: \verb+data(:,4:2:6:1:3:8)+.
 				
-				In Verbindung mit dem vorherigen Beispiel könnte man Spalten 1 und 2 und den Sinus zusammen durch
+				In combination with the previous example, one may visualize the columns 1 and 2 together with the sine function through
 				\begin{lstlisting}
-plot sin(x) "Sinusfunktion", data() -set box grid
+plot sin(x) "Sine function", data() -set box grid
 				\end{lstlisting}
-				darstellen (\autoref{fig:sinusplots}d). Auch für \verb+data()+ kann eine eigene Legende angegeben werden. Anderenfalls wird eine Kombination aus den Spaltentiteln verwendet. Interessant ist des Weiteren, dass mit Einbringen des Datensatzes die $x$-Achse passend zum Datensatz gewählt wird und nicht mehr zwangsläufig von $-10$ bis 10 verläuft. Dazu wird auffallen, dass die \NR\ Datenpunkte als einzelne Punkte darstellt und sie nicht durch eine (unphysikalische) Linie verbindet.
+				(\autoref{fig:sinusplots}d). Even for \verb+data()+ one may pass a customn legend. Otherwise \NR\ will create a combination of the columns titles. Additional it's noticable that adding the data set has scaled the $x$ axis corresponding to the data set. Also noticeable is that \NR\ displays the data points as single points and doesn't connect them with a (non-physical) line.
 				
-				Die Plotintervalle können für einen Plot global überschrieben werden, wenn sie explizit angegeben werden:
+				The plotting intervals may be overwritten for a plot, if they are passed explicitly:
 				\begin{lstlisting}
-plot sin(x) "Sinusfunktion", data() -set box grid [-10:10,-5:5]
+plot sin(x) "Sine function", data() -set box grid [-10:10,-5:5]
 				\end{lstlisting}
-				Dies erzeugt einen Graphen mit dem $x$-Intervall $[-10;10]$ und dem $y$-Intervall $[-5;5]$ (\autoref{fig:sinusplots}e). Diese Option wird \emph{nicht} für alle folgenden Plots übernommen.
+				This creates a graph with the $x$ interval $[-10;10]$ and the $y$ interval $[-5;5]$ (\autoref{fig:sinusplots}e). This option will \emph{not} be used for successive plots.
 				
-				Messungen von Datenpunkten sind in vielen Fällen mit Fehlern belastet. Sind diese bekannt, so kann \NR\ diese auch darstellen. Sind nur die $y$-Werte mit Fehlern behaftet, so benötigt \NR\ drei Spalten ($x,y,\Delta y$), bei Fehlern in beide Richtungen sind es vier ($x,y,\Delta x, \Delta y$). Die dazu nötige Plotoption heißt \verb+errorbars+ bzw. \verb+yerrorbars+, wenn nur $y$-Fehler vorhanden sind.
+				Measurements of data points are often combined with measurement errors. If these are known, \NR\ may display them correspondingly. If only the $y$ values have errors, \NR\ needs three columns ($x,y,\Delta y$), if both directions have errors, \NR\ will need four ($x,y,\Delta x, \Delta y$). The needed plotting option is \verb+errorbars+ or \verb+yerrorbars+, if only $y$ errors are available.
 				
-				Nehmen wir nun an, dass die Datenpunkte in obigem Beispiel mit $y$-Fehlern behaftet sind:
+				If wie assume that the data points in the upper example have errors in $y$ direction, we may enter:
 				\begin{lstlisting}
-plot sin(x) "Sinusfunktion", data() -set box grid [-10:10,-5:5] yerrorbars
+plot sin(x) "Sine function", data() -set box grid [-10:10,-5:5] yerrorbars
 				\end{lstlisting}
-				Es erscheinen Fehlerbalken in $y$-Richtung, obwohl die Angabe der Spaltenzahl nicht geändert wurde! \NR\ interpretiert die leere Argumentklammer nun automatisch um und verwendet die ersten drei Spalten (\autoref{fig:sinusplots}f).
+				Errorbars in $y$ direction are appearing, although the number of columns was not changed! \NR\ interprets the empty argument's parenthesis now automatically in another way and uses the first three columns (\autoref{fig:sinusplots}f).
 				
 				\helpidx{plotoptions}
-				\cmd{mesh}In einem anderen Fall soll eine zweidimensionale Funktion durch ein Gitterplot dargestellt werden: ein Sinus Cardinalis von $\varrho$ ($\text{sinc}\,\varrho$):
+				\cmd{mesh}In another case a two-dimensional function shall be visualized using a meshgrid plot: the function is the cardinal sine of $\varrho$ ($\text{sinc}\,\varrho$):
 				\begin{lstlisting}
 mesh sinc(norm(x,y))
 				\end{lstlisting}
 				\begin{figure}[p]%
 					\centering
-					\subfloat[nur \texttt{mesh}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_0.png}}
-					\subfloat[mit \texttt{nobox}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_1.png}}\\
-					\subfloat[mit \texttt{rotate}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_2.png}}\\
-					\subfloat[nur \texttt{vect}]{\includegraphics[width=0.45\textwidth]{_graphics/vect_0.png}}
-					\subfloat[mit \texttt{flength}]{\includegraphics[width=0.45\textwidth]{_graphics/vect_1.png}}
-					\caption{Ergebnisse der Gitter- und Vektorplots}
+					\subfloat[only \texttt{mesh}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_0.png}}
+					\subfloat[with \texttt{nobox}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_1.png}}\\
+					\subfloat[with \texttt{rotate}]{\includegraphics[width=0.45\textwidth]{_graphics/mesh_2.png}}\\
+					\subfloat[only \texttt{vect}]{\includegraphics[width=0.45\textwidth]{_graphics/vect_0.png}}
+					\subfloat[with \texttt{flength}]{\includegraphics[width=0.45\textwidth]{_graphics/vect_1.png}}
+					\caption{Results of the meshgrid and vector plots}
 					\label{fig:mesh_vect}
 				\end{figure}
-				\verb+mesh+ erzeugt den gewünschten Gitterplot (\autoref{fig:mesh_vect}a). Die Funktion \verb+norm()+ ist die $n$-dimensionale, euklidische Vektornorm (diese Funktion kann beliebig viele Argumente aufnehmen):
+				The command \verb+mesh+ creates the desired meshgrid plot (\autoref{fig:mesh_vect}a). The function \verb+norm()+ is the $n$-dimensional, euklidic vector norm (This function will accept an arbitrary number of arguments):
 				\begin{equation*}
 					\text{norm}(x,y,z,\ldots) := \sqrt{x^2+y^2+z^2+\ldots}
 				\end{equation*}
-				Für diesen Fall beschreibt $\text{norm}(x,y) = \varrho$. Direkt im Anschluss an den vorherigen Plot ausgeführt sollte auffallen, dass auch der Gitterplot von einer umfassenden Box umgeben und ein Gitter im Hintergrund zeigt. Um die Box zu entfernen, gibt man \verb+nobox+ an (\autoref{fig:mesh_vect}b):
+				In this case $\text{norm}(x,y) = \varrho$. Because this was visualized directly after the previous plots in this chapter, you should notice that the meshgrid plot is also surrounded by a box and has a grid in the background. To remove the box, you may enter \verb+nobox+ (\autoref{fig:mesh_vect}b):
 				\begin{lstlisting}
 mesh sinc(norm(x,y)) -set nobox
 				\end{lstlisting}
 				
-				Der Gitterplot ist automatisch auf eine bestimmte Ausrichtung gedreht. Dies kann auch geändert werden:
+				The meshgrid plot is oriented automatically into a predefined direction. This may also be changed:
 				\begin{lstlisting}
 mesh sinc(norm(x,y)) -set rotate=45,135
 				\end{lstlisting}
-				Der Graph erscheint nun etwas mehr gekippt und auch die $x$- und $y$-Achsen erscheinen symmetrisch zu beiden Seiten (\autoref{fig:mesh_vect}c). Tatsächlich wurde der Graph mit diesen Werten in Richtung der ersten Raumdiagonale gedreht. Die Winkelwerte von \verb+rotate+ sind in Grad angegeben und zwar in der Reihenfolge $\vartheta,\varphi$, wobei $\vartheta$ den Graphen kippt und $\varphi$ ihn rotiert.
+				The graph now appears now more tilted and the $x$ and $y$ axes seem to be symmetric to both sides (\autoref{fig:mesh_vect}c). You probably notice that the graph was oriented with these angular values into the direction of the first space diagonal. The angular values of \verb+rotate+ have to be passed in degrees in the order $\vartheta,\varphi$, where $\vartheta$ tilts the graph and $\varphi$ rotates it.
 				
 				\helpidx{mesh}
-				Ein weiteres Beispiel soll der Vektorplot eines 2D-Rotationsfeldes sein:
+				A further example is the vectorfield plot of a two-dimensional rotation field:
 				\[\vec A(x,y) = 2\svec{-y\\x}\]
-				Dies erreicht man durch\cmd{vect}
+				This is achieved through\cmd{vect}
 				\begin{lstlisting}
 vect -2*y,2*x
 				\end{lstlisting}
-				Hier wird die erste Funktion als Amplitude in $\hat e_x$-Richtung und die zweite Funktion in $\hat e_y$-Richtung interpretiert (\autoref{fig:mesh_vect}d). Zwecks der Übersicht akzeptiert \verb+vect+ (und \verb+vect3d+) nur ein Vektorfeld.
+				The first function will be interpreted as the amplitude in $\hat e_x$ direction and the second in $\hat e_y$ direction (\autoref{fig:mesh_vect}d). This command will only accept only one vectorfield per plot.
 				
-				Die Länge der Vektorpfeile entspricht der lokalen Amplitude des Vektorfeldes. Um diesen Effekt zu deaktivieren, kann 
+				The length of the vector arrows correspond to the local amplitude of the vectorfield. To deactivate this effect, you may pass
 				\begin{lstlisting}
 vect -2*y,2*x -set flength
 				\end{lstlisting}
-				angegeben werden (\autoref{fig:mesh_vect}e).
+				(\autoref{fig:mesh_vect}e).
 				
 				\helpidx{vect}
-			\section{Koordinatensysteme}
-				Zuletzt soll an dieser Stelle noch auf die unterschiedlichen Koordinatensysteme eingegangen werden. \NR\ unterstützt drei verschiedene Koordinatensysteme: das \emph{kartesische}, das \emph{polare} oder \emph{zylindrische} und das \emph{sphärische}.
+			\section{Coordinate Systems}
+				The last section of this chapter shall focus on the different coordinate systems. \NR\ supports three different coordinate systems: the \emph{cartesian}, the \emph{polar} or \emph{cylindrical} and the \emph{spherical} one.
 				\begin{figure}[htb]%
 					\centering
-					\subfloat[\texttt{plot} mit \texttt{coords=polar}]{\includegraphics[width=0.45\textwidth]{_graphics/plot_6.png}}
-					\subfloat[mit größerem Intervall]{\includegraphics[width=0.45\textwidth]{_graphics/plot_7.png}}\\
-					\subfloat[\texttt{surf} mit \texttt{light}]{\includegraphics[width=0.45\textwidth]{_graphics/surf_0.png}}
-					\subfloat[mit \texttt{coords=spherical}]{\includegraphics[width=0.45\textwidth]{_graphics/surf_1.png}}
-					\caption{Ergebnisse verschiedener Koordinatensysteme}
+					\subfloat[\texttt{plot} with \texttt{coords=polar}]{\includegraphics[width=0.45\textwidth]{_graphics/plot_6.png}}
+					\subfloat[with larger interval]{\includegraphics[width=0.45\textwidth]{_graphics/plot_7.png}}\\
+					\subfloat[\texttt{surf} with \texttt{light}]{\includegraphics[width=0.45\textwidth]{_graphics/surf_0.png}}
+					\subfloat[with \texttt{coords=spherical}]{\includegraphics[width=0.45\textwidth]{_graphics/surf_1.png}}
+					\caption{Results of the different coordinate systems}
 					\label{fig:coords}
 				\end{figure}
 				
-				Um das Koordinatensystem zu ändern, verwendet man die Option \verb+coords=KOORDINATEN+. Um beispielsweise zu polare Koordinaten zu wechseln, gibt man die folgende Zeile ein (\autoref{fig:coords}a):
+				To change the coordinate system, one uses the option \verb+coords=COORDINATES+. For example: to switch to polar coordinates, one passes the following line (\autoref{fig:coords}a):
 				\begin{lstlisting}
 plot x -set coords=polar
 				\end{lstlisting}
 				
-				Man sieht, dass die Variable $x$ hier als $\varphi$ und der Funktionswert $y$ als radiale Koordinate $\varrho$ interpretiert werden. Die Azimuth-Achse ist in Einheiten von $\pi$ dargestellt, kann aber ggf. mittels der Option \verb+axisscale=SCALE+ geändert werden.
+				It's noticable that the variable $x$ is used as $\varphi$ and the functions value $y$ as the radial coordinate $\varrho$. The azimuthal axis is displayed in units of $\pi$, but may be changed with the option \verb+axiscale=SCALE+, if desired. 
 				
-				Wenn man des Weiteren das Intervall für $x$ (ergo: $\varphi$) ändert, erhält man mit der folgende Zeile das Ergebnis von \autoref{fig:coords}b:
+				If one changes the interval for $x$ (meaning $\varphi$), one gets the result of \autoref{fig:coords}b with the following line:
 				\begin{lstlisting}
 plot x -set coords=polar [0:10*_pi]
 				\end{lstlisting}
-				ggf. kann es hierbei von Vorteil sein, die Zahl der Samples mittels \verb+samples=WERT+ zu erhöhen.
+				It's possible an advantage, to enlarge the number of samples with \verb+samples=WERT+.
 				
-				In Kombination mit dreidimensionalen Plotfunktionen wechselt man nun automatisch ins zylindrische System, z.B. mittels 
+				In combination with three-dimensional plotting functions, one switches automatically into the cylindrical system, e.g. through
 				\begin{lstlisting}
 surf sinc(norm(y)) -set light
 				\end{lstlisting}
-				erhält man \autoref{fig:coords}c. Die eingebrachte Option \verb+light+ aktiviert den dreidimensionalen Lichteffekt, der das Volumen verdeutlicht.
+				one gets \autoref{fig:coords}c. The added option \verb+light+ activates the three-dimensional lighting, which emphasises the volume of the plot.
 				
-				In diesem Fall wird deutlich, dass die Variable $y$ nun als $z$ und der Funktionswert $\Phi(x,y)$ nun die Funktion der radialen Variable $\varrho$ eingenommen hat.
+				It's getting obvious in this case that the variable $y$ has been used as $z$ and the function value $\Phi(x,y)$ has been interpreted as the radial variable $\varrho$.
 				
-				Abschließend soll hier noch das sphärische Koordinatensystem dargestellt werden. In dieses wechselt man durch z.B.
+				Last but not least, the spherical coordinate system shall be presented here. One switches with
 				\begin{lstlisting}
 surf Y(3,2,y,x) -set coords=spherical
 				\end{lstlisting}
-				und erhält die nette Kugelflächenfunktion (ihr Realteil) $Y_{3\,2}(\vartheta,\varphi)$ in \autoref{fig:coords}d. In diesem Koordinatensystem hat $y$ die Funktion von $\vartheta$, $x$ ist wieder $\varphi$ und der Funktionswert $\Phi(x,y)$ wird durch die radiale Koordinate $r$ dargestellt.
+				to this system and creates the neat Spherical Harmonics (its real part) $Y_{3\,2}(\vartheta,\varphi)$ in \autoref{fig:coords}d. In this coordinate system $y$ is used as $\vartheta$, $x$ is again $\varphi$ and the function value $\Phi(x,y)$ is presented through the radial coordinate $r$.
 				
 				\helpidx{coords}
-		\chapter{Tabellen: der Cache}
-			Große Datensätze verwaltet \NR\ in Form von Tabellen. Die Standardtabelle für geladene Daten ist \verb+data()+, wie bereits erwähnt wurde. Allerdings ist diese \emph{Read-Only}. Als manipulierbare Tabellen in \NR\ existieren die sogenannten \emph{Caches}.
-			\section{Konzept}
-				Caches sind Tabellen in \NR, deren Inhalt ähnlich gewöhnlicher Variablen frei manipuliert werden kann. Ihre Größe ist beliebig und passt sich automatisch den Wünschen des Nutzers an. Standardmäßig existiert bereits der Cache \verb+cache()+, doch es können noch weitere erzeugt werden.
+		\chapter{Tables: the Cache}
+			\NR\ manages large datasets as tables. As previously mentioned, the default table for loaded data is \verb+data()+. However, this table is \emph{read only}. If you need a table, which you may modify to your needs, you've to use the so-called \emph{caches}.
+			\section{Concept}
+				Caches are tables in \NR, whose content---similar to usual variables---may be modified freely. Their sizes are arbitrary and fit always to the needs of the user. As default, the default cache \verb+cache()+ already exists. You may also add additional caches.
 				
-				Caches besitzen außerdem eine Autosave-Funktion. Sobald der Inhalt eines Caches verändert wird, werden diese Änderungen nach Ablauf des Autosave-Intervalls in eine externe Datei übertragen. Bei einem Neustart von \NR\ werden diese Caches und die in ihnen enthaltenen Daten automatisch wiederhergestellt und können direkt weiterverwendet werden.
-			\section{Erzeugen und Entfernen von Caches}
-				Um weitere Caches zu erzeugen, kann das Kommando \verb+new+ verwendet werden (dieses Kommando kann auch noch weitere Objekte generieren):\cmd{new}
+				Caches are autosaving their contents. If the content of a cache is altered, these changes are saved to an external file after the autosave interval is passed. The caches and their contents are automatically recreated after a restart so that you can continue your work immediately.
+			\section{Creating and Removing Caches}
+				You can use the command \verb+new+ to create new caches (this command may also create further objects):\cmd{new}
 				\begin{lstlisting}
 new CACHE1(), CACHE2(), CACHE3(), ...
 new amplitude(), phase(), results()
 				\end{lstlisting}
-				Die dadurch generierten Caches enthalten keine Daten und können wie \verb+cache()+ verwendet werden. Sollten ein oder mehrere Caches der Liste bereits existieren, wird \NR\ diese Caches in keinster Weise beeinflussen.
+				You may use the created caches just like the standard \verb+cache()+. If one or more caches of the list are already existing, \NR\ won't change them in any way.
 				
 				\helpidx{new}
-				Selbst generierte Caches können auch wieder entfernt werden, falls der Speicher nicht mehr für weitere Analysen benötigt wird:\cmd{remove}
+				Custom created caches may also be removed, if their memory is not needed any more for further calculations:\cmd{remove}
 				\begin{lstlisting}
 remove CACHE1(), CACHE2(), CACHE3(), ...
 remove amplitude(), phase(), results()
 				\end{lstlisting}
-				Der von \NR\ tatsächlich benötigte Speicher wird jedoch erst nach einem Neustart reduziert.
+				However, the memory, which is occupied by \NR, is only freed after a restart.
 				
 				\helpidx{remove}
-				Allerdings können Caches anstatt entfernt zu werden auch umbenannt werden:\cmd{rename}
+				You may also rename caches instead of removing them:\cmd{rename}
 				\begin{lstlisting}
-rename -CACHE1=NEUERNAME
+rename -CACHE1=NEWNAME
 rename -amplitude=phase
 				\end{lstlisting}
 				
-				Um alle Caches auf einmal zu entfernen und den kompletten Speicher freizugeben, kann 
+				To remove all caches at once and free the complete memory, you may use 
 				\begin{lstlisting}
 clear cache()
 				\end{lstlisting}
-				verwendet werden. Hierbei wird auch der tatsächlich benötigte Speicher reduziert. Für eine einfache Löschung einzelner Elemente genügt auch \cmd{delete}
+				This will also free all the occupied memory of \NR. If you only want to delete the contents of a cache, just use \cmd{delete}
 				\begin{lstlisting}
 delete CACHE(i1:i2,j1:j2)
 				\end{lstlisting}
 				
 				\helpidx{cache}
-			\section{Verwendung}
-				Caches können verwendet werden wie die \verb+data()+-Tabelle. Ein wesentlicher Unterschied besteht jedoch in der Tatsache, dass die Inhalte von Caches auch bearbeitet werden können. Demzufolge können ihre Elemente entsprechend Variablen neue Werte zugewiesen werden:\cmd{cache()}
+			\section{Usage}
+				You may use caches similar to the \verb+data()+ table. The central difference is the fact that the contents of caches may be altered. This means, you can also assign new values similar to variables to their elements:\cmd{cache()}
 				\begin{lstlisting}
-CACHE(:,1) = WERT1, WERT2, WERT3, ...
+CACHE(:,1) = VALUE1, VALUE2, VALUE3, ...
 CACHE(4,5:) = data(:,1)
 CACHE(:,1) = CACHE(2,:)
 				\end{lstlisting}
-				Die neuen Werte überschreiben dabei die bereits vorhandenen Werte in \verb+CACHE()+.
+				The new values replace the already available values in \verb+CACHE()+.
 				
-				An allen Stellen, an denen bisher \verb+data()+ verwendet wurde, können mit der identischen Syntax auch Caches eingefügt werden. Intern besteht (außer der Möglichkeit, Elemente zu ändern) kein Unterschied zwischen \verb+data()+ und den Caches:
+				At all location, where we used \verb+data()+ previously, you may also use caches with the identical syntax. Internally there's no difference (except of the possibility of changing elements) between \verb+data()+ and the caches:
 				\begin{lstlisting}
 hist cache(:,1)
 stats cache()
 fit cache(:,4:5) -with=A*sin(B*x+C) params=[A=1, B=1, C=0]
 				\end{lstlisting}
 				
-				Daten, die manche Kommandos (z.B. \verb+datagrid+) erzeugen, werden teilweise automatisch in \verb+cache()+ geschrieben, teilweise erzeugen sie ihre Zielcaches auch selbst.
-			\section{Sortieren, Glätten und Resamplen}
-				Ggf. muss man Datenpunkte weiter modifizieren, um sie vernünftig verarbeiten zu können. \NR\ bietet hier die Möglichkeiten, die Daten zu sortieren, sie zu glätten und die Zahl der Datenpunkte zu verändern.
+				Data, which is created by some commands (e.g. \verb+datagrid+), is sometimes written automatically to \verb+cache()+. Also, some of the commands are creating their target caches by themselves.
+			\section{Sorting, Smoothing and Resampling}
+				Sometimes one has to modify the data points further that one can reasonable process them. \NR\ offers the possibility to sort, smooth or resample (change the number of data points) the data.
 				
-				Die Daten in einem Cache (und im Grunde auch in \verb+data()+) können auf- oder absteigend sortiert werden. Damit können z.B. bestimmte Schwellenwerte oder interessante Stellen in Messpunkten leichter gefunden werden.
+				The data in a cache (and in principle also in \verb+data()+) may be sorted ascending or descending. In the following one might find distinct thresholds or points of interest in the measured data more easily.
 				
-				Mittels der Eingabe von\cmd{sort}
+				Through entering\cmd{sort}
 				\begin{lstlisting}
 CACHE -sort
 				\end{lstlisting}
-				wird der gesamte Cache \verb+CACHE+ aufsteigend sortiert. Um ihn absteigend zu sortieren, verwendet man den Wert \verb+desc+
+				the whole cache \verb+CACHE+ is sorted ascending. To sort it descending, one has to use the value \verb+desc+
 				\begin{lstlisting}
 CACHE -sort=desc
 				\end{lstlisting}
-				Mittels der Option \verb+cols+ können die zu sortierenden Spalten ausgewählt werden. Außerdem können damit eine Gruppe an Spalten angegeben werden, die anhand einer Index-Spalte sortiert werden sollen (wenn beispielsweise $x$-Werte und Funktionswerte zufällig angeordnet sind, können die Funktionswerte anhand der $x$-Werte sortiert werden und die Beziehung zwischen $x$-Werten und Funktionswerten bleibt bestehen):
+				Using the option \verb+cols+ to columns, which shall be sorted, may be selected. In addition one may select a group of columns, which shall be sorted according an index column (if, for example, $x$ values and their function values are sorted arbitrary, the function values may be sorted according to the $x$ values without losing the connection between the  $x$ values and the function values):
 				\begin{lstlisting}
-CACHE -sort cols=SPALTEN[SPALTENGRUPPEN]
+CACHE -sort cols=COLUMNS[COLUMNGROUPS]
 cache -sort cols=5[2:4]
 				\end{lstlisting}
 				
 				\helpidx{cache}
-				Neben dem Sortieren der Daten können Daten im Cache von Rauschen oder anderen vergleichbaren Artefakten befreit werden. Dies erreicht man durch ein Glätten der Daten.
+				In addition to sorting the data, the data points in a cache may be freed from noise and comparable artifacts. This is achieved through smoothing the data points.
 				
-				Das Kommando\cmd{smooth}
+				The command\cmd{smooth}
 				\begin{lstlisting}
-smooth CACHE(i1:i2,j1:j2) -order=ORDNUNG
+smooth CACHE(i1:i2,j1:j2) -order=ORDER
 				\end{lstlisting}
-				glättet den Cache \verb+CACHE+ im ausgewählten Bereich, wobei über \verb+ORDNUNG+ Punkte linear interpoliert wird. Standardmäßig wird hier zweidimensional geglättet, sofern dies aufgrund der Dimension des verwendeten Bereichs Sinn macht. Um dies auf zeilen- oder spaltenweises Glätten umzuschalten, können hier die Optionen \verb+lines+ und \verb+cols+ verwendet werden.
+				smooths the cache \verb+CACHE+ in the selected range, where the data points are interpolated linearily over \verb+ORDER+ data points. \NR\ will smooth the data in two dimensions automatically, if this is reasonable according to the selected range. To switch this to column- or linewise smoothing, one may pass the options \verb+lines+ and \verb+cols+.
 				
-				Glätten funktioniert im Prinzip durch Einbringen eines Tiefpass-Filters. Sollten daher hochfrequente Daten interessant sein, kann Glätten diese teilweise oder auch vollständig zerstören. Als Probe bietet es sich an, die geglätteten Daten von den verrauschten Daten abzuziehen und das Ergebnis zu plotten. Wenn nur Rauschen entfernt wurde, sollte der Plot auch nur ein Rauschen zeigen.
+				Smoothing is in principle similar to applying a low-pass filter. If high-frequent data is of interest, smoothing will destroy this information partly or sometimes completely. As a test one might subtract the smoothed from the noisy data and plot the result. If only noise was removed, the plot should only display noise as well.
 				
 				\helpidx{smooth}
-				Um die Zahl der Datenpunkte anzupassen (z.B. ist die Samplerate unpassend oder man möchte zwei Datenreihen miteinander verrechnen) kann \NR\ weitere Stützstellen in die Daten interpolieren oder die Zahl der Datenpunkte ebenso auch verringern.
+				To alter the number of data points (e.g. if the sample rate is not fitting or one wants to combine different data rows) \NR\ may interpolare further samples into the data or remove them as well.
 				
-				Dies wird mittels\cmd{resample}
+				You'll achieve this with\cmd{resample}
 				\begin{lstlisting}
 resample CACHE(i1:i2,j1:j2) -samples=SAMPLES
 				\end{lstlisting}
-				erreicht. Im gewählten Bereich wird dabei spaltenweise die Zahl der Stützstellen zu \verb+SAMPLES+ verändert. Sollte \verb+SAMPLES+ größer als der gewählte Bereich sein, geht keine Information verloren, da die neuen Datenpunkte aus den bisherigen interpoliert werden. Wird Zahl hingegen kleiner gewählt, muss Information verloren gehen..
+				The number of samples is altered columnwise to \verb+SAMPLES+. If \verb+SAMPLES+ is larger than the selected range, no information is lost, because the new data points are interpolated from the previous ones. If the number is smaller, of course information is lost.
 				
 				\helpidx{resample}
-			\section{Statistik-Funktionalität}
-				Caches (und auch die \verb+data()+-Tabelle) können zusätzlich zu \verb+stats+ und den Statistik-Funktionen (\verb+std()+, \verb+avg()+, \ldots) auch globale Statistikoperationen ausführen. Dazu werden die Caches als Kommando verwendet und mit den Statistikfunktionen als Parameter ausgeführt (in diesem Fall tauchen keine Klammern in dem Ausdruck auf):
+			\section{Statistics Functionalities}
+				Caches (and the \verb+data()+ table as well) may execute global statistics operations on the data (similar to \verb+stats+ and statistics functions \verb+std()+, \verb+avg()+, \ldots). One has to use the caches as a command and append the desired statistics function as a parameter (there are no parentheses in the expression in this case):
 				\begin{lstlisting}
 CACHE -avg
 CACHE -std
 ...
 				\end{lstlisting}
-				Dies berechnet Mittelwert/Standardabweichung/etc. der gesamten Tabelle als gemeinsamen Wert. Mit zusätzlichen Optionen kann dies noch weiter eingeschränkt werden: die Option \verb+grid+ berechnet die entsprechenden Statistikwerte, wobei der Cache als Datengitter interpretiert wird. Die Option \verb+cols+ berechnet die Werte spalten- und \verb+lines+ zeilenweise. Die Optionen \verb+lines+ und \verb+cols+ können mit \verb+grid+ kombiniert werden.
-		\chapter{NumeRe-Scripte}
-			\NR-Scripte bieten die Möglichkeit, komplexe Rechnungen und häufig wiederkehrende Analysen in eine Datei auszulagern, von der sie einfach und wiederholt ausgeführt werden können.
-			\section{Konzept}
-				Das Konzept hinter \NR-Scripten ist simpel: alle Eingaben, die man in die \NR-Konsole eingeben möchte, werden stattdessen zeilenweise in eine Textdatei geschrieben, die im Anschluss von \NR\ gelesen wird. \NR\ wird dann die Ausdrücke und Kommandos in der entsprechenden Reihenfolge abarbeiten und auswerten.
+				This calculates the average/standard deviation/etc. of the whole table as a single value. The additional options may be restricted further: the option \verb+grid+ calculates the statistics and considers the cache as a datagrid. The option \verb+cols+ calculates the values column- and \verb+lines+ linewise. The options \verb+lines+ and \verb+cols+ may be combined with \verb+grid+.
+		\chapter{NumeRe Scripts}
+			\NR\ scripts provide the possibility to outsource complex calculations and repeated analyses into a file, from where they may be easily and repeatedly executed.
+			\section{Concept}
+				The concept building the basis for \NR\ scripts is quite easy: all entries, which one might enter into the \NR\ console, are typed into a textfile instead, which will be read by \NR\ afterwards. \NR\ will execute the expressions and commands in the corresponding order and evaluate them.
 				
-				Der Vorteil liegt auf der Hand: die Befehlskette kann einfach wiederholt werden und Fehler können schnell und simpel korrigiert werden.
-				\paragraph{Anmerkung}
-					In einem späteren Kapitel werden auch \NR-Prozeduren besprochen. Diese repräsentieren die Programmierbarkeit von \NR. Die meisten Problemstellungen, die keine allzu komplexen Abstraktionen erfordern, lassen sich aber problemlos mithilfe von \NR-Scripten lösen.
+				The advantage is obvious: the order of commands may easily be repeated and errors may corrected fastly without having to retype erverything.
+				\paragraph{Note}
+					We will talk about \NR\ procedures in a later chapter. These represent the programmability of \NR. However, most problems, which do not need too complex abstractions, may be solved using \NR\ scripts.
 				
 				\helpidx{script}
-			\section{Syntaxhhervorhebung}
-				Die Syntax von \NR-Scripten wird automatisch hervorgehoben, wenn die Datei mit der Endung >>.nscr<< gespeichert wird. Dies ist ein fester Bestandteil des \NR-Editors. Sie umfasst neben der Hervorhebung von Syntaxelementen auch das Hervorheben von zusammengehörigen Klammern und Kontrollflussblöcken (z.B. \verb+if ... else ... endif+).
+			\section{Syntax Highlighting}
+				The syntax of \NR\ scripts is highlighted automatically, if the file was saved with the extension >>.nscr<<. It's a central part of the \NR\ editor. It provides highlighting of syntax elements, of matching parentheses and control flow blocks (e.g. \verb+if ... else ... endif+).
 				
-				Es steht jedem frei, die Farbgebung der Syntaxhervorhebung zu bearbeiten. Dies kann man im Optionen-Dialog, der im Werkzeuge-Menü gefunden werden kann, unter dem Tab >>Style<< durchführen. 
-			\section{Ein einfaches Script}
-				Als Beispiel soll hier ein einfaches Script gezeigt werden.
+				Everybody is free to change the colours of the syntax highlighting to his or her need. This may be done in the options dialogue, which is available in the tools menu, at the tab >>Style<<. 
+			\section{A Simple Script}
+				As example, a simple script is presented here.
 				
-				Um ein \NR-Script schnell und einfach zu erstellen, verwende man den Menüpunkt im Datei-Menü, klicke man auf die Schaltfläche in der Toolbar oder gebe man 
+				To create a \NR\ script fast and easily, one uses the corresponding item in the file menu or click on the tool in the toolbar or enter 
 				\begin{lstlisting}
-new -script=erstes
+new -script=first
 				\end{lstlisting}
-				in die \NR-Konsole ein. Es wird ein \NR-Script >>erstes.nscr<< in \verb+<scriptpath>+ erzeugt, dass in den ersten beiden Fällen automatisch im Editor geöffnet wird. Im letzteren Fall öffnet die Zeile\cmd{edit}
+				into the \NR\ console. A \NR\ script with the name >>first.nscr<< is created in \verb+<scriptpath>+, which is in the first two cases opened automatically in the editor. In the latter case the line\cmd{edit}
 				\begin{lstlisting}
-edit erstes.nscr
+edit first.nscr
 				\end{lstlisting}
-				dieses \NR-Script im \NR-Editor, so dass es bearbeitet werden kann. (Die Dateierweitung ist hier nötig, da \verb+edit+ sonst nicht im korrekten Verzeichnis nach dem Script sucht) Zwischen die beiden im Script erscheinenden Textblöcke (Alles zwischen \verb+#*...*#+ ist ein Kommentar und wird von \NR\ nicht interpretiert) füge man die folgenden Zeilen ein:
+				opens the \NR\ script in the \NR\ editor so that it may be edited. (The file extension is here necessary, because \verb+edit+ would look for the script in the wrong directory.) Between the both text blocks in the script (everything between \verb+#*...*#+ is a comment and won't be evaluated by \NR) one enters the following lines:
 				\begin{lstlisting}
-#* Cacheinhalt komplett loeschen *#
+#* Delete the contents of the cache completely *#
 delete cache() -ignore
 
-#* Zufallszahlen erzeugen *#
+#* Create random numbers *#
 random -lines=1e5 cols=2 distrib=uniform mean=0.5 width=1
 
-#* Innerhalb des Viertel-Einheitskreises? *#
+#* Are the number inside of the circle of unity? *#
 cache(:,3) = (cache(:,1)^2+cache(:,2)^2) <= 1 ? true : false;
 
-#* PI berechnen *#
+#* Calculate pi *#
 4*sum(cache(:,3))/1e5
 				\end{lstlisting}
-				wobei \verb+##+ einen Zeilenkommentar einleitet, der von \NR\ ebenfalls ignoriert wird. Das \verb+ignore+ in der zweiten Zeile unterdrückt die Sicherheitsabfrage, ob der Cacheinhalt wirklich gelöscht werden soll. \cmd{random}\verb+random+ erzeugt Zufallszahlen und schreibt selbige in den Cache. Hier werden zweimal 100\,000 gleichverteilte Zufallszahlen im Intervall $[0;1]$ erzeugt.
+				where \verb+##+ starts a line comment, which is ignored by \NR, too. The option \verb+ignore+ in the second line suppresses the confirmation, if one is sure that the contents of the cache shall be deleted. \cmd{random}\verb+random+ creates random numbers and writes them into the cache. In this case, two times 100,000 equally distributed random numbers are created in the interval $[0;1]$.
 				
-				Die dritte Anweisung ist die tückischste. Hier wird an die dritte Spalte in \verb+cache()+ das Ergebnis einer Bedingung zugewiesen. Sinngemäß steht hier so was wie
+				The third expression is the trickiest. Here the result of a condition is written to the third column of \verb+cache()+. If written with words, this means something like
 				\begin{quotation}
-					\noindent\emph{>>Ist der Vektorbetrag kleiner-gleich als 1, dann schreibe >>wahr<<, sonst schreibe >>falsch<< in den Cache.<<}
+					\noindent\emph{>>If the length of the vector is smaller or equal to 1, then write >>true<<, otherwise write >>false<< to the cache.<<}
 				\end{quotation}
-				Der sogenannte \emph{Ternary}-Operator
+				The so-called \emph{ternary} operator
 				\begin{lstlisting}
-BEDINGUNG ? DANN_WERT : SONST_WERT
+CONDITION ? TRUE_VALUE : FALSE_VALUE
 				\end{lstlisting}\cmd{()? \ldots\ : \ldots}
-				ist eine Abkürzung für die \verb+if...else...endif+-Verzweigung, die an späterer Stelle besprochen werden soll. Der Vorteil des \emph{Ternarys} ist, dass er tendenziell schneller ausgeführt wird, dafür jedoch keine Kommandos aufnehmen kann. Eine Auflistung aller Logikausdrücke erhält man durch
+				is an abbreviation for the \verb+if...else...endif+ fork, which is explained in a later chapter. The advantage of the \emph{ternary} is that it may be executed faster but it cannot contain commands. A list of all possible logical expressions is obtained through
 				\begin{lstlisting}
 list -logic
 				\end{lstlisting}
-				Am Ende der Zeile findet man auch ein Semikolon \verb+;+. Dieses unterdrückt die Ausgabe der Ergebnisse auf der \NR-Konsole.
+				At the end of this line one finds a semicolon \verb+;+. This suppresses the output of its result to the \NR\ console.
 				
-				Das gesamte \NR-Script ist eine ganz simple \emph{Monte-Carlo}-Simulation. Es werden zufällig Punkte auf einem Quadrat mit der Kantenlänge 1 platziert und anschließend gezählt, wie viele der Punkte auf dem (Viertel-)Einheitskreis liegen, der Teil des Quadrates ist. Unter der Annahme, dass die Wahrscheinlichkeit für jeden Punkt im Quadrat gleich hoch ist, muss das Verhältnis von den im Kreis liegenden zur Gesamtzahl der Punkte $\pi/4$ sein.
+				The whole \NR\ script is a really simple \emph{Monte-Carlo} simulation. Points are placed arbitrary into a square of the length 1 and afterwards it's counted, how many of them are located in the circle of unity, which is part of this square. Assuming that the probability for each point in the square is equal, the relation of the number of all points to the number of points in the circle of unity has to be equal to $\pi/4$.
 				
-				Führt man das \NR-Script durch Klicken auf >>Ausführen<< oder mittels\cmd{start}
+				If one executes the \NR\ script by clicking on >>Execute<< or through\cmd{start}
 				\begin{lstlisting}
-start erstes
+start first
 				\end{lstlisting}
-				aus (\verb+random+ benötigt einen Moment), so bekommt man Ergebnisse ähnlich zu
+				(the evaluation of \verb+random+ takes a moment), one gets results similar to
 				\begin{lstlisting}
 3.1364
 3.13668
@@ -744,125 +743,124 @@ start erstes
 3.13952
 ...
 				\end{lstlisting}
-				Diese Zahlen liegen schon relativ nahe an $\pi$ dran, obwohl sie im Grunde nur durch eine clevere Ausnutzung des Zufalls generiert wurden.
+				These numbers are quite near to $\pi$, although they are created through a smart usage of random numbers.
 				
-				Erhöht man die Zahl der erzeugten Zufallszahlen (z.B. \verb+1e6+ statt \verb+1e5+), so wird die Annäherung zunehmend genau. Allerdings unterstützt der Cache nicht beliebig viele Elemente. Für noch größere Zahlen muss man also auf andere Verfahren zurückgreifen.
-	\part{Fortgeschrittene Bedienung}
-		\chapter{Eigene Funktionen}
-			\NR\ bringt bereits eine große Zahl vordefinierter Funktionen mit (siehe \verb+list -func+). Dennoch kann es häufig hilfreich und praktisch sein, wenn man sich eigene Funktionen definieren kann, die z.B. bereits bestehende zusammenfassen. \NR\ kann bis zu 100 selbst definierte Funktionen speichern.
+				If one enlarges the number of random numbers (e.g. \verb+1e6+ instead of \verb+1e5+) the approximation gets even more precise. However, the cache doesn't support an arbitrary number of elements. For even larger numbers one has to use other ways of calculating.
+	\part{Advanced Usage}
+		\chapter{Definition of Custom Functions}
+			\NR\ already contains a large number of predefined functions (see \verb+list -func+). However, it's sometimes useful and practicable, if one may define his own functions, which are e.g. combining already existing ones. \NR\ may store up to 100 custom defined functions.
 			\section{Definition}
-				\cmd{define}Eine eigene Funktion wird mittels
+				\cmd{define}A custom function is defined using
 				\begin{lstlisting}
-define meine_funktion(ARGS) := AUSDRUCK(ARGS)
+define my_function(ARGS) := EXPRESSION(ARGS)
 				\end{lstlisting}
-				definiert. Diese Zeile erzeugt die Funktion \verb+meine_funktion()+, die den komplexeren Ausdruck der Argumente zusammenfasst. Die Bezeichnungen und die Zahl der Argumente können beliebig gewählt werden, so lange sie die Maximalzahl von 10 nicht überschreiten. Wenn das letzte Argument der Funktion >>\verb+...+<< lautet, so kann für dieses Argument von einem bis zu beliebig vielen Werten angegeben werden. Der definierte Ausdruck muss dann allerdings auch mit beliebig vielen Werten umgehen können, z.B.:\cmd{"\ldots"\:}
+				This line creates the function \verb+my_function()+, which combines the complex expression of the arguments. The names and the number of arguments may be chosen arbitrary, as long as the number of arguments is not larger than 10. If the last argument of the function is called >>\verb+...+<<, one may pass from one to an arbitrary number of values for this argument. You have to ensure that the defined expression is able to handle an arbitrary number of values, e.g.:\cmd{"\ldots"\:}
 				\begin{lstlisting}
-define meine_funktion(x,...) := x*sum(...)
+define my_function(x,...) := x*sum(...)
 				\end{lstlisting}
 				
-				Der Name der Funktion ist auch beliebig, so lange er nicht mit einer Ziffer beginnt oder einer bereits (vor-)definierten Funktion entspricht.
+				The name of the function may be chosen freely, while ensuring that it doesn't start with a number nor is identical to a (pre-)defined function.
 				
-				\cmd{redefine}Mit
+				\cmd{redefine}With
 				\begin{lstlisting}
-redefine meine_funktion(ARGS) := NEUER_AUSDRUCK(ARGS)
+redefine my_function(ARGS) := NEW_EXPRESSION(ARGS)
 				\end{lstlisting}
-				kann die Funktion \verb+meine_funktion()+ umdefiniert werden. Hierbei müssen die neuen Argumente natürlich nicht mit den bisherigen übereinstimmen.
+				the function \verb+my_function()+ may be redefined. The number of arguments of course doesn't have to be identical to the previous definition.
 				
-				Selbst definierte Funktionen können mit Kommentaren versehen werden, um zu erläutern, was der Zweck der Funktion ist. Dieser Kommentar wird dann unter
+				Custom defined functions may be supported by comments, which illustrate, what the purpose of the function is. This comment is displayed together with the definition at
 				\begin{lstlisting}
 list -define
 				\end{lstlisting}
-				zusammen mit der Definition angezeigt.
 				
-				Der Kommentar kann bei der Definition mittels
+				The comment may be added to the definition with´
 				\begin{lstlisting}
-define meine_funktion(ARGS) := AUSDRUCK(ARGS) -set comment="KOMMENTAR"
+define my_function(ARGS) := EXPRESSION(ARGS) -set comment="COMMENT"
 				\end{lstlisting}
-				angegeben werden. Eine nachträgliche Kommentierung kann mittels \verb+redefine+ durchgeführt werden.
+				or passed later with \verb+redefine+.
 				
 				\helpidx{define}
-				\cmd{undefine}Um selbst definierte Funktionen wieder zu entfernen, verwendet man
+				\cmd{undefine}To remove custom defined functions, you may use the command
 				\begin{lstlisting}
-undefine meine_funktion()
+undefine my_function()
 				\end{lstlisting}
-				am Programmende wird der Funktionsspeicher jedoch auch automatisch geleert. Möchte man dies verhindern, kann man entweder
+				However, the function storage is cleared at the end of the application automatically. If one wants to prevent this behavior, one may either enter
 				\begin{lstlisting}
 define -save
 				\end{lstlisting}
-				eingeben und beim nächsten Start
+				and the follwing line after the restart
 				\begin{lstlisting}
 define -load
 				\end{lstlisting}
-				um die Funktionen zu laden, oder man aktiviert die automatische Definitionsverwaltung durch
+				to load the functions, or one activate the automatic definition management through
 				\begin{lstlisting}
 set -defcontrol=true
 				\end{lstlisting}
 				
 				\helpidx{set}
-			\section{Bedingte Definition}
-				In \NR-Scripten kann es von Vorteil sein, wenn \NR\ nicht bei jedem Durchlauf den Fehler bringt, dass eine Funktion, die im Script definiert werden soll, bereits definiert ist. Für diesen Fall gibt es die Möglichkeit, entweder \verb+redefine+ zu verwenden, oder man gibt stattdessen\cmd{ifndefined}
+			\section{Conditioned Definition}
+				In \NR\ scripts it may be an advantage, if \NR\ won't always raise an error that a function, which shall be defined in that script, is already existing. One possible solution for this case is using the command \verb+redefine+, another is using\cmd{ifndefined}
 				\begin{lstlisting}
-ifndefined meine_funktion(ARGS) := ...
+ifndefined my_function(ARGS) := ...
 				\end{lstlisting}
-				an. Nun wird die Funktion nur dann definiert, wenn sie nicht schon bereits im Funktionsspeicher vorhanden ist.
-			\section{Verwendung}
-				Eine selbst definierte Funktion kann wie die vordefinierten Funktionen verwendet werden, da sie intern vor der eigentlichen Auswertung in ihre Definition umgewandelt werden. Daher ergeben
+				instead. The function is now only defined, if it isn't already available in the function storage.
+			\section{Usage}
+				A custom defined function may be used just like the predefined functions, because it is transformed in its definition internally before its execution. Therefore the calls to
 				\begin{lstlisting}
-meine_funktion(1,2,3)
+my_function(1,2,3)
 				\end{lstlisting}
-				und 
+				and 
 				\begin{lstlisting}
 sin(1)+cos(2)+sinc(3)
 				\end{lstlisting}
-				für die Definition
+				are identical for the definition
 				\begin{lstlisting}
-define meine_funktion(x,y,z) := sin(x)+cos(y)+sinc(z)
+define my_function(x,y,z) := sin(x)+cos(y)+sinc(z)
 				\end{lstlisting}
-				dasselbe Ergebnis. Es können auch weniger Werte angegeben werden, wie die definierte Funktion Argumente besitzt. \NR\ wird die fehlenden Werte dann durch \verb+0+ ergänzen.
-		\chapter{Zeichenketten}
-			Neben numerischen Werten kann \NR\ auch mit Zeichenketten umgehen. Zunächst eingeführt, um die Spaltentitel der Tabellen formatieren zu können, sind die Zeichenkettenfunktionen inzwischen aber zu einem festen und sicher verwendbaren Konstrukt in \NR's Architektur geworden.
-			\section{Konzept}
-				Zeichenketten sind zunächst aneinandergereihte Zeichen, die \NR\ nicht als Variablen oder numerische Werte interpretiert. Um dies zu erreichen, sind Zeichenketten durch umschließende Anführungszeichen einzugeben:
+				You may also pass a lesser number of values as the function has arguments. \NR\ will replace the missing ones automatically with \verb+0+.
+		\chapter{Character Strings}
+			\NR\ may handle character string in addition to numerical values. First introduced to format the column titles of the tables, character strings are now a major and elaborate part or \NR's architecture.
+			\section{Concept}
+				Character strings (\emph{strings} for short) are successive chains of characters, which are not interpreted as variables or numerical values by \NR. To achieve this, strings have to be entered as enclosing quotation marks:
 				\begin{lstlisting}
-"Dies ist eine Zeichenkette."
+"This is a string."
 				\end{lstlisting}
-				Der eigentliche Inhalt der Zeichenkette sind alle Zeichen zwischen den Anführungszeichen. Die Zeichenkette \verb+""+ ist folglich leer und hat die Länge 0.
+				The actual content of the string are all characters between the quotation marks. As a consequence, the string \verb+""+ is empty and has the length 0.
 				
-				Zeichenketten können durch spezielle Funktionen modifiziert werden: es gibt Funktionen zur Umwandlung von Groß- in Kleinbuchstaben (oder umgekehrt), zum Suchen von Zeichenketten in Zeichenketten, zum Extrahieren einer Zeichenkette aus einer anderen, zum Ersetzen von Zeichenketten in einer anderen, usw. Der eigentliche Vorteil von Zeichenketten sind die Möglichkeit, Ausgaben zu formatieren und das Verarbeiten mehrerer Dateien zu automatisieren. (Außerdem sind sie Grundvoraussetzung für die Programmierung durch \NR-Prozeduren)
+				Strings may be modified by special functions: there are functions for converting upper- to lowercase letters (or the other way around), for searching strings inside of strings, to extract a string from another string, to replace strings inside of another one, etc. The main advantage of character strings is the possibility, to format the output and to automate the processing of many files (and they are a precondition for the programming with \NR\ procedures).
 				
 				\helpidx{string}
-			\section{Variablentyp}
-				Neben den numerischen Variablen und den Tabellen sind die Zeichenkettenvariablen (auch \emph{strings}) der dritte Variablentyp in \NR. Numerische Variablen können jedoch nicht in Zeichenketten und Zeichenkettenvariablen nicht in numerische umgewandelt werden. Ihre jeweiligen Inhalte jedoch schon (s.u.).
+			\section{Variable Type}
+				The variable type for strings is the third variable type (next to numericals and tables) in \NR. Numerical variables may neiter be converted to string variables nor the other way around. However, there values may (see below).
 				
-				\NR\ erkennt neue Zeichenkettenvariablen automatisch anhand der Deklaration. Diese muss -- im Gegensatz zur Deklaration numerischer Variablen, welche \emph{on-the-fly} vonstatten gehen kann -- \emph{immer} mit einem Wert in Form einer Zeichenkette erfolgen (zumindest einer leeren Zeichenkette):
+				\NR\ recognizes new string variables automatically using the declaration. This declaration has to be---in contrast to numerical variables, which may be done \emph{on-the-fly}---\emph{always} be followed by a string value (at least an empty string):
 				\begin{lstlisting}
-numerische_variable = 3.1415926
-auch_numerisch
-zeichenkette = "Hallo Welt!"
-auch_zeichenkette = ""
+numerical_variable = 3.1415926
+also_numerical
+string = "Hello World!"
+also_string = ""
 				\end{lstlisting}
-				Eine Deklaration mit dem Rückgabewert einer Zeichenkettenfunktion ist natürlich ebenfalls möglich.
+				A declaration with the return value of a string function is also possible.
 				
-				Neben den Zeichenkettenvariablen kennt \NR\ noch das \cmd{string()}\verb+string()+-Objekt. Dies ist im Prinzip eine einspaltige Tabelle, die beliebig viele Zeichenketten aufnehmen kann. In den Argumentklammern kann die Bereichssyntax verwendet werden, um einen Satz an Zeichenketten zu extrahieren, oder ein einzelner Index für eine einzelne Zeichenkette. Bleiben hier die Argumentklammern leer, wird automatisch die zuletzt zugewiesene Zeichenkette verwendet.
+				In addition to the string variables, \NR\ knows the \cmd{string()}\verb+string()+ object. This is in principle a single column table, which may contain an arbitrary number of strings. The interval syntax may be used in the argument parentheses to extract a range of strings or a single value. If the argument parentheses are kept empty, the last written string is used automatically.
 				
 				\helpidx{string}
-				Mithilfe von Zeichenketten können auch die Tabellenköpfe von \verb+data()+ und den Caches geändert werden. Dies erreicht man durch\cmd{data(\#,:)\\cache(\#,:)}
+				Using strings one may modify the column heads of \verb+data()+ and the caches. This is achieved through entering\cmd{data(\#,:)\\cache(\#,:)}
 				\begin{lstlisting}
-data(#,1) = "Spaltenueberschrift 1"
-cache(#,:) = "Spalte 1", "Spalte 2", "Spalte 3"
+data(#,1) = "Column heading 1"
+cache(#,:) = "Column 1", "Column 2", "Column 3"
 				\end{lstlisting}
-				Wie man sieht, ist auch hier die Bereichssyntax möglich. Die Raute \verb+#+ referenziert die Tabellenköpfe.
+				As you can see, you may use the interval syntax in this context, too. The hash sign \verb+#+ references the column headings.
 				
 				\helpidx{cache}
-			\section{Konvertierung}
-				Der Wert einer Zeichenkettenvariable kann zu einem numerischen umgewandelt werden und umgekehrt. Dabei wird der Inhalt der Zeichenkette ggf. als neue Variable, als Ausdruck oder ggf. sogar als Kommando interpretiert. Hierbei gibt es zwei Funktionen:
+			\section{Conversion}
+				The value of a string variable may be transformed to a numerical value and the other way around. The content of a string will be interpreted as a new variable, as an expression or even as a command, if applicable. Two functions exist for this purpose:
 				\begin{lstlisting}
 to_value()
 to_cmd()
 				\end{lstlisting}
-				Die Funktion \verb+to_value()+ wandelt die übergebene Zeichenkette in einen ma\-the\-ma\-tisch-nu\-me\-ri\-schen Ausdruck um und wertet ihn entsprechend aus. \verb+to_cmd()+ wandelt die Zeichenkette hingegen in einen Kommandoausdruck um.
+				The function \verb+to_value()+ converts the passed string to a ma\-the\-ma\-tic\-al-nu\-me\-ri\-cal expression and evaluates it correspondingly. \verb+to_cmd()+ transforms the string directly to a command expression.
 				
-				Die Umkehrung kann auf verschiedene Arten vonstatten gehen:\cmd{\#VAR\\\#(EXPRESSION)}
+				The inverted conversion may be done in different ways:\cmd{\#VAR\\\#(EXPRESSION)}
 				\begin{lstlisting}
 #VAR
 #(EXPRESSION)
@@ -870,55 +868,55 @@ valtostr(EXPR,C,N)
 to_string()
 string_cast()
 				\end{lstlisting}
-				Die Syntax \verb+#VAR+ oder \verb+#(EXPRESSION)+ wertet den darauffolgenden Ausdruck/Variable aus und wandelt den numerischen Wert direkt in eine Zeichenkette um. Zwischen \verb+#+ und dem Ausdruck können noch ein oder mehrere \verb+~+ eingefügt werden, welche die Zeichenzahl durch vorangestellte \verb+0+ auf eine entsprechende Zahl an Zeichen zzgl. des \verb+#+'s ergänzen. Dies wird durch die Funktion \verb+valtostr()+ verallgemeinert, die das Füllzeichen mittels des Zeichens \verb+C+ übergeben bekommt. Die Funktion \verb+to_string()+ wandelt alles, was keine Zeichenkette ist, direkt in eine Zeichenkette um, ohne etwas zuvor auszuwerten, und \verb+string_cast()+ wandelt selbst Zeichenkettenvariablennamen in Zeichenketten um.
-		\chapter{Schleifen und Verzweigungen}
-			Der Ablauf von \NR-Scripten (und den im nächsten Kapitel eingeführten \NR-Pro\-ze\-du\-ren) kann durch die Einführung von Schleifen und Verzweigungen teils drastisch vereinfacht werden (was nicht heißen soll, dass Schleifen und Verzweigungen nicht auch direkt in der \NR-Konsole verwendbar wären).
-			\section{Verzweigungen}
-				Eine Verzweigung ist eine Stelle im Script, an der der weitere Verlauf des Scriptes von einer gegebenen Bedingung abhängt. Solche Verzweigungen werden durch das folgende Konstrukt repräsentiert:\cmd{if ()\\\ldots\\elseif ()\\\ldots\\else\\\ldots\\endif}
+				The syntax \verb+#VAR+ or \verb+#(EXPRESSION)+ evaluates the following expression/variable and transforms the numerical value directly to a string. Between \verb+#+ and the expression one or more \verb+~+ may be inserted, which will add zeros in front of the value until the corresponding number of characters plus one for the \verb+#+ is reached. The function \verb+valtostr()+ is doing similar, although it's more versatile, because one may pass the filling character through the character \verb+C+.The function \verb+to_string()+ transforms everything, which isn't a string, directly to a string without evaluating it and \verb+string_cast()+ transforms even string variable names into strings.
+		\chapter{Loops and Forks as Control Flow Statements}
+			The evaluation of \NR\ scripts (and the in one of the following chapters introduced \NR\ procedures) may sometimes be simplified drastically by introducing loops and forks. (However, loops and forks are also usable directly from the \NR\ console.)
+			\section{Forks}
+				A fork is a location in a script, where the further evaluation of the script depends on the evaluation of a condition. Such forks are represented through the following construct:\cmd{if ()\\\ldots\\elseif ()\\\ldots\\else\\\ldots\\endif}
 				\begin{lstlisting}
-if (BEDINGUNG1)
-	AUSFUEHREN, FALLS WAHR
-elseif (BEDINGUNG2)
-	AUSFUEHREN, FALLS BEDINGUNG1 FALSCH UND BEDINGUNG2 WAHR
+if (CONDITION1)
+	EXECUTE, IF TRUE
+elseif (CONDITION2)
+	EXECUTE, IF CONDITION1 IS FALSE AND CONDITION2 IS TRUE
 else
-	AUSFUEHREN, FALLS ALLE BEDINGUNGEN FALSCH
+	EXECUTE, IF ALL CONDITIONS ARE FALSE
 endif
 				\end{lstlisting}
 				
-				Eine Verzweigung muss mindestens aus einem \verb+if ()+ und einem abschließenden \verb+endif+ bestehen. Es können dazwischen beliebig viele \verb+elseif ()+ und höchstens ein \verb+else+ als allgemeiner \emph{Sonst-Fall} verwendet werden, wobei \verb+else+ als letzter Fall vor \verb+endif+ verwendet werden muss. Eine Verzweigung, die nur aus einem \verb+if ()+ und einem \verb+endif+ besteht, wird nur dann ausgeführt, wenn die Bedingung erfüllt ist, anderenfalls wird sie komplett übersprungen.
-				
-				Die Blöcke, die zwischen \verb+if ()+, \verb+endif+ und den restlichen Schlüsselwörtern stehen, können beliebig lange sein und sowohl Ausdrücke als auch Kommandos enthalten. Zusätzlich können die Blöcke auch weitere Verzweigungen und Schleifen enthalten.
+				A fork has to be composed at least out of a \verb+if ()+ and a closing \verb+endif+. In between an arbitrary number of \verb+elseif ()+ and at most one \verb+else+ as \emph{fallback case} may be used, where the \verb+else+ case has to be the last case before the closing \verb+endif+. A fork, which is only composed out of a \verb+if ()+ and a \verb+endif+, will only be executed, if the condition evaluates to true, otherwise it is ignored completely.
+			
+				The blocks between \verb+if ()+, \verb+endif+ and the other keywords may contain an arbitrary number of commands and expressions. In addition, these blocks may contain further loops and forks.
 				
 				\helpidx{if}
-			\section{Bedingte Schleifen}
-				\cmd{while ()\\\ldots\\endwhile}Eine bedingte Schleife wird nur (so lange) ausgeführt, so lange die Bedingung wahr ist. Die Syntax dazu ist
+			\section{Conditioned Loops}
+				\cmd{while ()\\\ldots\\endwhile}A conditioned loops will only be executed, as long as the condition evaluates to true. The syntax is as follows
 				\begin{lstlisting}
-while (BEDINGUNG)
-	AUSFUEHREN, SO LANGE WAHR
+while (CONDITION)
+	EXECUTE, AS LONG AS TRUE
 endwhile
 				\end{lstlisting}
-				Auch hier können Ausdrücke und/oder Kommandos im Ausführungsblock enthalten sein, ebenso wie weitere Verzweigungen und Schleifen.
+				In the contained block commands and/or expressions or even further loops and forks may be used.
 				
 				\helpidx{while}
-			\section{Zählschleifen}
-				Eine Zählschleife macht ihre Auswertung vom Wert einer Indexvariable abhängig. Über den Bereichssyntax muss hierbei der Start- und Endwert vorgegeben werden. Sollte der Endwert \emph{kleiner} als der Startwert sein, zählt die Zählschleife automatisch rückwärts. Nach jedem Schleifendurchlauf wird der Indexwert automatisch um eins erhöht (bzw. erniedrigt, wenn die Schleife rückwärts zählt). Der Index selbst kann in der Schleife als Variable verwendet werden.
+			\section{Counting Loops}
+				The execution of a counting loop depends on the value of a index variable. Using the interval syntax, a starting and an ending value have to be passed. If the ending value is \emph{smaller} than the starting value, the counting loop will count backwards automatically. After each single loop pass the index value is increased (or decreased, if the loop counts backwards) by one automatically. The index can be used in the execution block of the loop as a usual variable.
 				
-				Die Syntax einer Zählschleife lautet wie folgt:
+				The syntax of a counting loop is as follows:
 				\cmd{for ()\\\ldots\\endfor}\begin{lstlisting}
 for (INDEX = START:END)
-	AUSFUEHREN, SO LANGE INDEX IN [START;END]
+	EXECUTE, AS LONG AS INDEX IS IN [START;END]
 endfor
 				\end{lstlisting}
-				Ebenso wie zuvor können in diesem Block weitere Ausdrücke, Kommandos, Schleifen und Verzweigungen verwendet werden. Die Indexvariable wird nach Abschluss der Schleife -- falls sie nicht bereits vor der Schleife bekannt war -- automatisch gelöscht.
+				Similar to the other control flow statements, one may use commands, expressions and even further loops and forks in the execution block. After the termination of the counting loop, the index variable will be deleted automatically, if it didn't already exist before the loop.
 				
 				\helpidx{for}
-			\section{Ablaufkontrollen}
-				Auf den Ablauf einer Schleife kann mit einem der beiden Kommandos\cmd{continue\\break}
+			\section{Further Control Flow Statements}
+				You may influence the execution of a loop with the both commands\cmd{continue\\break}
 				\begin{lstlisting}
 continue
 break
 				\end{lstlisting}
-				weiter Einfluss genommen werden. \verb+continue+ überspringt den restlichen Schleifenablauf und beginnt sofort einen neuen Schleifendurchlauf. Hingegen bricht \verb+break+ die gesamte Schleife sofort ab und springt in die nächsthöhere (also umschließende) Schleife, sofern vorhanden. Falls es keine umschließende Schleife gibt, wird \NR\ mit dem restlichen Script-/Programmablauf fortfahren. Eine sinnvolle Anwendung dieser Kommandos kann eigentlich nur aus einer \verb+if+-Ver\-zwei\-gung im inneren der betreffenden Schleife geschehen.
+				\verb+continue+ jumps over the remaining part of the current execution block and starts a new loop pass. The command \verb+break+ cancels the loop completely and jumps the surrounding execution block. If the surrounding execution block is outside of any loop or fork, the whole loop or fork is terminated. A reasonable application of these commands is using them in the execution block of a fork.
 				
 				\helpidx{if}
 		\chapter{Matrix-Operationen}
