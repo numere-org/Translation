@@ -36,27 +36,27 @@
 \BOOKMARK [1][-]{section.6.1}{6.1 Definition}{chapter.6}% 36
 \BOOKMARK [1][-]{section.6.2}{6.2 Conditioned Definition}{chapter.6}% 37
 \BOOKMARK [1][-]{section.6.3}{6.3 Usage}{chapter.6}% 38
-\BOOKMARK [0][-]{chapter.7}{7 Zeichenketten}{part.2}% 39
-\BOOKMARK [1][-]{section.7.1}{7.1 Konzept}{chapter.7}% 40
-\BOOKMARK [1][-]{section.7.2}{7.2 Variablentyp}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.3}{7.3 Konvertierung}{chapter.7}% 42
-\BOOKMARK [0][-]{chapter.8}{8 Schleifen und Verzweigungen}{part.2}% 43
-\BOOKMARK [1][-]{section.8.1}{8.1 Verzweigungen}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.2}{8.2 Bedingte Schleifen}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.3}{8.3 Z\344hlschleifen}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.4}{8.4 Ablaufkontrollen}{chapter.8}% 47
-\BOOKMARK [0][-]{chapter.9}{9 Matrix-Operationen}{part.2}% 48
-\BOOKMARK [1][-]{section.9.1}{9.1 Ausf\374hren einer Matrix-Operation}{chapter.9}% 49
-\BOOKMARK [1][-]{section.9.2}{9.2 Spezielle Funktionen}{chapter.9}% 50
-\BOOKMARK [0][-]{chapter.10}{10 Spezielle Kommandos}{part.2}% 51
-\BOOKMARK [1][-]{section.10.1}{10.1 Nullstellen}{chapter.10}% 52
+\BOOKMARK [0][-]{chapter.7}{7 Character Strings}{part.2}% 39
+\BOOKMARK [1][-]{section.7.1}{7.1 Concept}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.2}{7.2 Variable Type}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.3}{7.3 Conversion}{chapter.7}% 42
+\BOOKMARK [0][-]{chapter.8}{8 Loops and Forks as Control Flow Statements}{part.2}% 43
+\BOOKMARK [1][-]{section.8.1}{8.1 Forks}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.2}{8.2 Conditioned Loops}{chapter.8}% 45
+\BOOKMARK [1][-]{section.8.3}{8.3 Counting Loops}{chapter.8}% 46
+\BOOKMARK [1][-]{section.8.4}{8.4 Further Control Flow Statements}{chapter.8}% 47
+\BOOKMARK [0][-]{chapter.9}{9 Matrix Operations}{part.2}% 48
+\BOOKMARK [1][-]{section.9.1}{9.1 Execution of Matrix Operations}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.2}{9.2 Special Functions}{chapter.9}% 50
+\BOOKMARK [0][-]{chapter.10}{10 Special Commands}{part.2}% 51
+\BOOKMARK [1][-]{section.10.1}{10.1 Roots}{chapter.10}% 52
 \BOOKMARK [1][-]{section.10.2}{10.2 Extrema}{chapter.10}% 53
 \BOOKMARK [1][-]{section.10.3}{10.3 Integration}{chapter.10}% 54
-\BOOKMARK [1][-]{section.10.4}{10.4 Ableitung}{chapter.10}% 55
-\BOOKMARK [1][-]{section.10.5}{10.5 Taylorentwicklung}{chapter.10}% 56
-\BOOKMARK [1][-]{section.10.6}{10.6 Funktionswerte in 1D und 2D}{chapter.10}% 57
-\BOOKMARK [1][-]{section.10.7}{10.7 Fouriertransformation}{chapter.10}% 58
-\BOOKMARK [1][-]{section.10.8}{10.8 Differentialgleichungen}{chapter.10}% 59
+\BOOKMARK [1][-]{section.10.4}{10.4 Differentiation}{chapter.10}% 55
+\BOOKMARK [1][-]{section.10.5}{10.5 Taylor Expansion}{chapter.10}% 56
+\BOOKMARK [1][-]{section.10.6}{10.6 Function Values in 1D and 2D}{chapter.10}% 57
+\BOOKMARK [1][-]{section.10.7}{10.7 Fourier Transformation}{chapter.10}% 58
+\BOOKMARK [1][-]{section.10.8}{10.8 Differential Equations}{chapter.10}% 59
 \BOOKMARK [0][-]{chapter.11}{11 NumeRe-Prozeduren}{part.2}% 60
 \BOOKMARK [1][-]{section.11.1}{11.1 Konzept}{chapter.11}% 61
 \BOOKMARK [1][-]{section.11.2}{11.2 Struktur}{chapter.11}% 62

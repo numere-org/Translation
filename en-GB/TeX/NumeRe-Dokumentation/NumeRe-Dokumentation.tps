@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=NumeRe-Dokumentation.tex
 
 [Frame0_View0,0]
-TopLine=1038
-Cursor=70688
+TopLine=1247
+Cursor=86510
 
 [Frame1]
 Flags=0

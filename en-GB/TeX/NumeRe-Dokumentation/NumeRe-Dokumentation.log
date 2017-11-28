@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  9 NOV 2017 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.14)  26 NOV 2017 20:51
 entering extended mode
 **./NumeRe-Dokumentation.tex
 (NumeRe-Dokumentation.tex
@@ -2483,21 +2483,10 @@ Package xcolor Warning: Incompatible color definition on input line 831.
 
 Package xcolor Warning: Incompatible color definition on input line 832.
 
-
-Overfull \hbox (3.13625pt too wide) in paragraph at lines 833--834
-\T1/ppl/m/n/10.95 Neben den nu-merischen Vari-ablen und den Tabellen sind die Ze-ichen-ket-ten-vari-ablen (auch \T1/ppl/
-m/it/10.95 strings\T1/ppl/m/n/10.95 )
- []
-
 [49
 
 
 ]
-Overfull \hbox (13.59273pt too wide) in paragraph at lines 842--843
-\T1/ppl/m/n/10.95 Eine Dekla-ra-tion mit dem Rück-gabe-w-ert einer Ze-ichen-ket-ten-funk-tion ist natür-lich eben-falls 
-möglich. 
- []
-
 
 Package xcolor Warning: Incompatible color definition on input line 846.
 
@@ -2523,13 +2512,6 @@ Package xcolor Warning: Incompatible color definition on input line 855.
 Package xcolor Warning: Incompatible color definition on input line 872.
 
 [50]
-
-Package xcolor Warning: Incompatible color definition on input line 872.
-
-[51] [52
-
-
-]
 chapter 8.
 
 Package xcolor Warning: Incompatible color definition on input line 872.
@@ -2552,11 +2534,10 @@ Package xcolor Warning: Incompatible color definition on input line 890.
 
 Package xcolor Warning: Incompatible color definition on input line 891.
 
-[53]
-Overfull \hbox (2.41406pt too wide) in paragraph at lines 898--899
-\T1/ppl/m/n/10.95 Auch hier kön-nen Aus-drücke und/oder Kom-man-dos im Aus-führungs-block en-thal-ten sein, ebenso
- []
+[51
 
+
+]
 
 Package xcolor Warning: Incompatible color definition on input line 900.
 
@@ -2568,11 +2549,6 @@ Package xcolor Warning: Incompatible color definition on input line 900.
 
 
 Package xcolor Warning: Incompatible color definition on input line 901.
-
-
-Overfull \hbox (8.05359pt too wide) in paragraph at lines 910--911
-\T1/ppl/m/n/10.95 Ebenso wie zu-vor kön-nen in diesem Block weit-ere Aus-drücke, Kom-man-dos, Schleifen und Verzwei-
- []
 
 
 Package xcolor Warning: Incompatible color definition on input line 912.
@@ -2598,7 +2574,7 @@ Package xcolor Warning: Incompatible color definition on input line 921.
 
 Package xcolor Warning: Incompatible color definition on input line 922.
 
-[54]
+[52]
 chapter 9.
 
 Package xcolor Warning: Incompatible color definition on input line 922.
@@ -2621,23 +2597,18 @@ Package xcolor Warning: Incompatible color definition on input line 937.
 
 Package xcolor Warning: Incompatible color definition on input line 938.
 
-[55
+[53
 
 
 ]
-Overfull \hbox (1.50409pt too wide) in paragraph at lines 943--944
-[][][]\T1/pcr/m/n/10.95 diag(x,y,z,...) []\T1/ppl/m/n/10.95 erzeugt eine Di-ag-o-nal-ma-trix mit [][]\T1/pcr/m/n/10.95 x
-,y,z,... []\T1/ppl/m/n/10.95 auf der Haupt-di-ag-o-nalen. 
- []
 
+Package xcolor Warning: Incompatible color definition on input line 963.
 
-Package xcolor Warning: Incompatible color definition on input line 965.
-
-[56]
+[54]
 
 Package xcolor Warning: Incompatible color definition on input line 968.
 
-[57] [58
+[55] [56
 
 
 ]
@@ -2663,7 +2634,7 @@ Package xcolor Warning: Incompatible color definition on input line 984.
 
 Package xcolor Warning: Incompatible color definition on input line 985.
 
-[59]
+[57]
 
 Package xcolor Warning: Incompatible color definition on input line 994.
 
@@ -2675,12 +2646,6 @@ Package xcolor Warning: Incompatible color definition on input line 994.
 
 
 Package xcolor Warning: Incompatible color definition on input line 995.
-
-
-Overfull \hbox (1.46146pt too wide) in paragraph at lines 998--999
-[]\T1/ppl/m/n/10.95 Mittels des Pa-ram-e-ters [][]\T1/pcr/m/n/10.95 -set []\T1/ppl/m/n/10.95 wer-den das In-te-gra-tions
-in-ter-vall und weit-ere Op-tio-nen übergeben,
- []
 
 
 Package xcolor Warning: Incompatible color definition on input line 1009.
@@ -2695,16 +2660,6 @@ Package xcolor Warning: Incompatible color definition on input line 1009.
 Package xcolor Warning: Incompatible color definition on input line 1010.
 
 
-Overfull \hbox (2.2718pt too wide) in paragraph at lines 1011--1012
-\T1/ppl/m/n/10.95 an der vorgegebe-nen $\OML/zplm/m/it/10.95 x$\T1/ppl/m/n/10.95 -Stelle oder entsprechend der Zahl der 
-gewün-schten Stützstellen ([][]\T1/pcr/m/n/10.95 samples[]\T1/ppl/m/n/10.95 )
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1022.
-
-[60]
-
 Package xcolor Warning: Incompatible color definition on input line 1024.
 
 
@@ -2716,23 +2671,9 @@ Package xcolor Warning: Incompatible color definition on input line 1024.
 
 Package xcolor Warning: Incompatible color definition on input line 1025.
 
+[58]
 
-Overfull \hbox (2.43573pt too wide) in paragraph at lines 1026--1027
-\T1/ppl/m/sc/10.95 Nu-me-Re \T1/ppl/m/n/10.95 kann mit-tels [][]\T1/pcr/m/n/10.95 taylor []\T1/ppl/m/n/10.95 Funk-tio-ne
-n in Ab-hängigkeit von einer Vari-ablen mit-tels des Taylor-
- []
-
-
-Overfull \hbox (6.42288pt too wide) in paragraph at lines 1033--1034
-\T1/ppl/m/n/10.95 Im All-ge-meinen wird als Funk-tion-sname [][]\T1/pcr/m/n/10.95 Taylor(x) []\T1/ppl/m/n/10.95 gewählt,
- wenn allerd-ings die Op-tion [][]\T1/pcr/m/n/10.95 unique
- []
-
-
-Overfull \hbox (12.31447pt too wide) in paragraph at lines 1034--1035
-[] []\T1/phv/b/n/10.95 Anmerkung[][] \T1/ppl/m/n/10.95 Bere-its ex-is-tente Funk-tio-nen, die mit dem-sel-ben Na-men im 
-Funk-tion-sspe-icher vorhan-
- []
+Package xcolor Warning: Incompatible color definition on input line 1025.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1036.
@@ -2747,10 +2688,6 @@ Package xcolor Warning: Incompatible color definition on input line 1036.
 Package xcolor Warning: Incompatible color definition on input line 1037.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1043.
-
-[61]
-
 Package xcolor Warning: Incompatible color definition on input line 1046.
 
 
@@ -2759,6 +2696,10 @@ Package xcolor Warning: Incompatible color definition on input line 1046.
 
 Package xcolor Warning: Incompatible color definition on input line 1046.
 
+
+Package xcolor Warning: Incompatible color definition on input line 1048.
+
+[59]
 
 Package xcolor Warning: Incompatible color definition on input line 1063.
 
@@ -2772,9 +2713,9 @@ Package xcolor Warning: Incompatible color definition on input line 1063.
 Package xcolor Warning: Incompatible color definition on input line 1064.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1072.
+Package xcolor Warning: Incompatible color definition on input line 1077.
 
-[62]
+[60]
 
 Package xcolor Warning: Incompatible color definition on input line 1077.
 
@@ -2788,34 +2729,6 @@ Package xcolor Warning: Incompatible color definition on input line 1077.
 Package xcolor Warning: Incompatible color definition on input line 1078.
 
 
-Overfull \hbox (16.77992pt too wide) in paragraph at lines 1079--1080
-\T1/ppl/m/n/10.95 Die wenig-sten Dif-fer-en-tial-gle-ichun-gen lassen sich an-a-lytisch oder durch zufrieden-stel-lende 
-Näherun-
- []
-
-
-Overfull \hbox (8.74248pt too wide) in paragraph at lines 1079--1080
-\T1/ppl/m/n/10.95 gen lösen. Dies ist das Fachge-biet der Nu-merik, die die Dif-fer-en-tial-gle-ichun-gen mit-tels nu-me
-rischen
- []
-
-
-Overfull \hbox (7.9111pt too wide) in paragraph at lines 1089--1090
-\T1/ppl/m/n/10.95 wobei nur die Funk-tio-nen [][]\T1/pcr/m/n/10.95 f1() []\T1/ppl/m/n/10.95 bis [][]\T1/pcr/m/n/10.95 fn
-() []\T1/ppl/m/n/10.95 in dieser Rei-hen-folge durch Kom-mata ge-trennt angegeben
- []
-
-
-Overfull \hbox (14.3612pt too wide) in paragraph at lines 1099--1100
-[]\T1/ppl/m/n/10.95 Die Ergeb-nisse der In-te-gra-tion wer-den stan-dard-mäÿig in den Cache [][]\T1/pcr/m/n/10.95 ode() 
-[]\T1/ppl/m/n/10.95 als Tabelle geschrieben.
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1100.
-
-[63]
-
 Package xcolor Warning: Incompatible color definition on input line 1108.
 
 
@@ -2827,7 +2740,11 @@ Package xcolor Warning: Incompatible color definition on input line 1108.
 
 Package xcolor Warning: Incompatible color definition on input line 1109.
 
-[64]
+[61]
+
+Package xcolor Warning: Incompatible color definition on input line 1109.
+
+[62]
 chapter 11.
 
 Package xcolor Warning: Incompatible color definition on input line 1109.
@@ -2856,7 +2773,7 @@ Package xcolor Warning: Incompatible color definition on input line 1118.
 
 Package xcolor Warning: Incompatible color definition on input line 1119.
 
-[65
+[63
 
 
 ]
@@ -2882,7 +2799,7 @@ Package xcolor Warning: Incompatible color definition on input line 1149.
 
 Package xcolor Warning: Incompatible color definition on input line 1159.
 
-[66]
+[64]
 
 Package xcolor Warning: Incompatible color definition on input line 1159.
 
@@ -2892,7 +2809,7 @@ Package xcolor Warning: Incompatible color definition on input line 1171.
 
 Package xcolor Warning: Incompatible color definition on input line 1188.
 
-[67]
+[65]
 
 Package xcolor Warning: Incompatible color definition on input line 1192.
 
@@ -2905,7 +2822,7 @@ Overfull \hbox (5.60051pt too wide) in paragraph at lines 1193--1194
 
 Package xcolor Warning: Incompatible color definition on input line 1204.
 
-<_graphics/debugger.png, id=1079, 591.71063pt x 446.41782pt>
+<_graphics/debugger.png, id=1070, 591.71063pt x 446.41782pt>
 File: _graphics/debugger.png Graphic file (type png)
  <use _graphics/debugger.png>
 Package pdftex.def Info: _graphics/debugger.png used on input line 1208.
@@ -2941,7 +2858,7 @@ Overfull \hbox (3.30124pt too wide) in paragraph at lines 1213--1214
 
 Package xcolor Warning: Incompatible color definition on input line 1216.
 
-[68]
+[66]
 
 Package xcolor Warning: Incompatible color definition on input line 1219.
 
@@ -2954,7 +2871,7 @@ Package xcolor Warning: Incompatible color definition on input line 1219.
 
 Package xcolor Warning: Incompatible color definition on input line 1220.
 
-[69 <./_graphics/debugger.png>] [70
+[67 <./_graphics/debugger.png>] [68
 
 
 ]
@@ -2986,7 +2903,7 @@ Package xcolor Warning: Incompatible color definition on input line 1229.
 
 Package xcolor Warning: Incompatible color definition on input line 1229.
 
-[71] [72
+[69] [70
 
 
 ]
@@ -3006,7 +2923,7 @@ Package xcolor Warning: Incompatible color definition on input line 1260.
 
 Package xcolor Warning: Incompatible color definition on input line 1260.
 
-[73] [74
+[71] [72
 
 
 ]
@@ -3032,14 +2949,14 @@ Package xcolor Warning: Incompatible color definition on input line 1281.
 
 Package xcolor Warning: Incompatible color definition on input line 1281.
 
-[75]
+[73]
 
 Package xcolor Warning: Incompatible color definition on input line 1299.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1324.
 
-[76]
+[74]
 Overfull \hbox (9.25893pt too wide) in paragraph at lines 1344--1345
 \T1/ppl/m/n/10.95 den [][]\T1/pcr/m/n/10.95 <CMDSTRING>[]\T1/ppl/m/n/10.95 . Es kön-nen auch an-dere oder weit-ere Kom-m
 an-doaus-druck-ab-schnitte übergeben
@@ -3057,7 +2974,7 @@ Package xcolor Warning: Incompatible color definition on input line 1369.
 
 Package xcolor Warning: Incompatible color definition on input line 1371.
 
-[77]
+[75]
 
 Package xcolor Warning: Incompatible color definition on input line 1387.
 
@@ -3081,20 +2998,20 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1390.
 
 Package xcolor Warning: Incompatible color definition on input line 1390.
 
-[78]
+[76]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1390.
  (NumeRe-Dokumentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1390.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1390.
 Package rerunfilecheck Info: File `NumeRe-Dokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: E5FE928C212C4D0959B9357BCCB09AF1;4870.
+(rerunfilecheck)             Checksum: 17908398599ACDA0DE4DB4362E5145A6;4879.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1390.
  ) 
 Here is how much of TeX's memory you used:
- 15009 strings out of 493323
- 224419 string characters out of 3141221
+ 15008 strings out of 493323
+ 224383 string characters out of 3141221
  437422 words of memory out of 3000000
- 17662 multiletter control sequences out of 15000+200000
+ 17663 multiletter control sequences out of 15000+200000
  100614 words of font info for 159 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,66p,8866b,1850s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3107,9 +3024,9 @@ crb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><D:/Softwar
 vb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
 vro8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/u
 plr8a.pfb><D:/Software/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on NumeRe-Dokumentation.pdf (78 pages, 4858755 bytes).
+Output written on NumeRe-Dokumentation.pdf (76 pages, 4855528 bytes).
 PDF statistics:
- 1379 PDF objects out of 1440 (max. 8388607)
- 581 named destinations out of 1000 (max. 500000)
+ 1371 PDF objects out of 1440 (max. 8388607)
+ 579 named destinations out of 1000 (max. 500000)
  700 words of extra memory for PDF output out of 10000 (max. 10000000)
 

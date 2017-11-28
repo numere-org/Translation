@@ -919,42 +919,42 @@ break
 				\verb+continue+ jumps over the remaining part of the current execution block and starts a new loop pass. The command \verb+break+ cancels the loop completely and jumps the surrounding execution block. If the surrounding execution block is outside of any loop or fork, the whole loop or fork is terminated. A reasonable application of these commands is using them in the execution block of a fork.
 				
 				\helpidx{if}
-		\chapter{Matrix-Operationen}
-			\NR\ ist in Form einer Tabellenkalkulation ausgelegt, da es in der Wissenschaft ungemein wahrscheinlicher ist, dass Messreihen verarbeitet werden müssen, als dass eine Matrix-Operation durchgeführt werden muss. Dennoch ist auch \NR\ in der Lage, mit Matrizen umzugehen und wesentliche Auswertungen durchzuführen.
-			\section{Ausführen einer Matrix-Operation}
-				Matrix-Operationen verbergen sich hinter dem \verb+matop+- bzw. \verb+mtrxop+-Kommando (Synonyme)\cmd{matop}. Dieses Kommando leitet einen Ausdruck ein, der mittels Matrix-Operationen verarbeitet werden soll, wobei die Matrizen durch Ausschnitte des Caches, eines Datenfiles oder durch spezielle Funktionen repräsentiert werden. Hierbei ist jedoch noch zu beachten, dass alle Auswertungen (also auch die Multiplikation zweier Matrizen) standardmäßig elementweise durchgeführt werden.
+		\chapter{Matrix Operations}
+			\NR\ was created as a table calculation, because it's much more probable that one has to process measurement data instead of processing some matrix opertions. However, \NR\ may also do so and evaluate matrix expressions.
+			\section{Execution of Matrix Operations}
+				Matrix operations can only be executed in the context of the \verb+matop+ or \verb+mtrxop+ command\cmd{matop} (those are synoymes). This command starts an expression, which shall be processed using matrix operations, where the actual matrices are realized as excerpts from caches or data files or special functions. But note that as default all evaluations are still executed elementwise (even the multiplication of two matrices).
 				\begin{lstlisting}
 matop CACHE(i1:i2,j1:j2) * DATA(i1:i2,j1:j2) + CACHE(:,:) / ...
 				\end{lstlisting}
 				
-				Um eine Matrix-Matrix- oder Matrix-Vektor-Multiplikation durchzuführen, muss der \cmd{... ** ...}\verb+**+-O\-pe\-ra\-tor verwendet werden. Dieser Operator hat eine höhere Priorität als alle anderen Operatoren, daher ist es ggf. wichtig, entsprechend zu klammern. Außerdem ist es wichtig, dass die Dimensionen der Matrizen gemäß den Regeln der Matrizenmultiplikation übereinstimmen.
+				To process a matrix-matrix or matrix-vector multiplication, one has to use the \verb+**+\cmd{... ** ...} operator. This operator has a higher priority than all other operators, so it might be necessary to use parentheses correspondingly. In addition it is important that the dimensions of the matrices are matching each other in the context of matrix multiplication.
 				\begin{lstlisting}
 matop CACHE() ** (DATA() * CACHE())
 				\end{lstlisting}
 				
-				Wenn \verb+matop+ kein Zielcache, in den die Matrix gespeichert werden kann, vorgegeben wird, wird automatisch \verb+matrix()+ verwendet. In diesem Fall werden die Inhalte von \verb+matrix()+ komplett überschrieben.
+				If one doesn't provide a target cache for \verb+matop+, where the result may be stored, the cache \verb+matrix()+ is used automatically. In this case the contents of \verb+matrix()+ are overwritten completely.
 				
 				\helpidx{matop}
-			\section{Spezielle Funktionen}
-				Spezielle oder temporäre Matrizen bzw. weitergehende Matrix-Operationen können mit den folgenden Funktionen erreicht werden, wenn sie innerhalb des \verb+matop+-Kommandos verwendet werden.
+			\section{Special Functions}
+				Special or temporary matrices or advanced matrix operations may be done with the following functions, if they are used inside of the \verb+matop+ command.
 				\begin{itemize}
-					\item \verb+cross(MAT)+ berechnet das $n$-dimensionale Kreuzprodukt der $n\times(n-1)$-Matrix \verb+MAT+.
-					\item \verb+det(MAT)+ berechnet die Determinante der quadratischen Matrix \verb+MAT+.
-					\item \verb+diag(x,y,z,...)+ erzeugt eine Diagonalmatrix mit \verb+x,y,z,...+ auf der Hauptdiagonalen.
-					\item \verb+diagonalize(MAT)+ diagonalisiert die quadratische Matrix \verb+MAT+. Sollten die berechneten Diagonalelemente komplex sein, wird eine $n\times2\,n$-Matrix zurückgegeben mit den Realteilen auf der unteren und den Imaginärteilen auf der oberen ersten Nebendiagonalen.
-					\item \verb+eigenvals(MAT)+ berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurück. Sind die Eigenwerte komplex, werden sie als zweispaltige Matrix zurückgegeben, mit dem Realteil in der ersten und dem Imaginärteil in der zweiten Spalte.
-					\item \verb+eigenvects(MAT)+ berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurück. Sind die Eigenvektoren komplex, werden sie als $n \times 2\,n$-Matrix zurückgegeben, mit den Realteilen in den ungeraden und den Imaginärteilen der Vektorkomponenten in den geraden Spalten.
-					\item \verb+identity(n)+ generiert eine $n\times n$-Einheitsmatrix
-					\item \verb+invert(MAT)+ invertiert die symmetrische Matrix \verb+MAT+, falls eine Inverse existiert.
-					\item \verb+matfc(X,Y,Z,...)+ konstruiert eine Matrix aus den Spalten \verb+X,Y,Z,...+. Fehlende Elemente werden durch 0 ergänzt.
-					\item \verb+matfcf(X,Y,Z,...)+ konstruiert eine Matrix aus den Spalten \verb+X,Y,Z,...+. Fehlende Elemente werden aus den vorhandenen logisch ergänzt.
-					\item \verb+matfl(X,Y,Z,...)+ konstruiert eine Matrix aus den Zeilen \verb+X,Y,Z,...+. Fehlende Elemente werden durch 0 ergänzt.
-					\item \verb+matflf(X,Y,Z,...)+ konstruiert eine Matrix aus den Zeilen \verb+X,Y,Z,...+. Fehlende Elemente werden aus den vorhandenen logisch ergänzt.
-					\item \verb+one(n,m)+ erzeugt eine $n\times m$-Matrix, die vollständig mit 1-en gefüllt ist. Wird nur eine Dimension vorgegeben, erzeugt \NR\ eine symmetrische Matrix.
-					\item \verb+solve(MAT)+ löst das lineare Gleichungssystem, das durch die Matrix \verb+MAT+ beschrieben wird.
-					\item \verb+trace(MAT)+ berechnet die Spur der quadratischen Matrix \verb+MAT+.
-					\item \verb+transpose(MAT)+ transponiert die Matrix \verb+MAT+ (vertauscht Zeilen mit Spalten).
-					\item \verb+zero(n,m)+ erzeugt eine $n\times m$-Matrix, die vollständig mit 0-en gefüllt ist. Wird nur eine Dimension vorgegeben, erzeugt \NR\ eine symmetrische Matrix.
+					\item \verb+cross(MAT)+ calculates the $n$ dimensional cross product (vector product) of the vectors, which form the $n-1$ columns of the matrix \verb+MAT+.
+					\item \verb+det(MAT)+ calculates the determinant of the matrix \verb+MAT+, if \verb+MAT+ is a square matrix.
+					\item \verb+diag(x,y,z,...)+ creates a diagonal matrix with the elements \verb+x,y,z,...+ as main diagonal.
+					\item \verb+diagonalize(MAT)+ diagonalizes the square matrix \verb+MAT+. If the calculated diagonal elements should be complex, then a $n \times 2\,n$ matrix will be returned with the real parts on the lower and the imaginary parts on the upper first diagonal.
+					\item \verb+eigenvals(MAT)+ calculates the eigenvalues of the square matrix \verb+MAT+ and returns them in the shape of a vector. If the eigenvalues are complex, then they will be returned as a matrix with two columns, where the first contains the real and the second contains the imaginary part.
+					\item \verb+eigenvects(MAT)+ calculates the eigenvectors of the square matrix \verb+MAT+ and returns them in the shape of a matrix, where each column is one eigenvector. If the eigenvectors are complex, then a $n \times 2\,n$ matrix will be returned with the real parts in the odd and the imaginary parts in the even columns.
+					\item \verb+identity(n)+ creates a $n$ dimensional identity matrix.
+					\item \verb+invert(MAT)+ inverts the matrix \verb+MAT+, if an inverse matrix exists.
+					\item \verb+matfc(X,Y,Z,...)+ creates a matrix out of the columns \verb+X,Y,Z,...+. If the number of elements is not sufficient for the maximal dimension, the missing ones will be replaced by 0.
+					\item \verb+matfcf(X,Y,Z,...)+ creates a matrix out of the columns \verb+X,Y,Z,...+. If the number of elements is not sufficient for the maximal dimension, the missing ones will be logically generated out of the already present ones.
+					\item \verb+matfl(X,Y,Z,...)+ creates a matrix out of the lines \verb+X,Y,Z,...+. If the number of elements is not sufficient for the maximal dimension, the missing ones will be replaced by 0.
+					\item \verb+matflf(X,Y,Z,...)+ creates a matrix out of the lines \verb+X,Y,Z,...+. If the number of elements is not sufficient for the maximal dimension, the missing ones will be logically generated out of the already present ones.
+					\item \verb+one(n,m)+ creates a $n \times m$ matrix, which is filled with ones. If only one argument was passed, then a square matrix will be created.
+					\item \verb+solve(MAT)+ solves the linear system of equations, which is described by the matrix \verb+MAT+, with the Gaussian algorithm.
+					\item \verb+trace(MAT)+ calculates the trace of the square matrix \verb+MAT+.
+					\item \verb+transpose(MAT)+ transposes the matrix \verb+MAT+ (column and line indices will be exchanged).
+					\item \verb+zero(n,m)+ creates a $n \times m$ matrix, which is filled with zeroes. If only one argument was passed, then a square matrix will be created.
 				\end{itemize}
 				\begin{lstlisting}
 matop matfc({1,2,3},{4,5,6},{7,8,9})
@@ -965,130 +965,130 @@ matop zero(2,4)
 / 0  0  0  0 \
 \ 0  0  0  0 /
 				\end{lstlisting}
-		\chapter{Spezielle Kommandos}
-			An dieser Stelle sollen einige spezielle Kommandos Erwähnung finden, die bisher noch nicht genannt wurden, aber einen großen Teil von \NR's Funktionalität ausmachen.
-			\section{Nullstellen}
-				\NR\ kann mittels des Kommandos \verb+zeroes+\cmd{zeroes} Nullstellen von Funktionen und Datenreihen suchen. Im Falle von Datenreihen gibt dieses die Indices der Nullstellen (bzw. des Punktes, der sich am nächsten befindet) oder, wenn ein $x$-Datensatz übergeben wurde, den entsprechenden $x$-Wert zurück:
+		\chapter{Special Commands}
+			This chapter shall focus on some special commands, which weren't mentioned up to here but building a great part of the functionality of \NR.
+			\section{Roots}
+				\NR\ may locate roots of functions and data sets using the command \verb+zeroes+\cmd{zeroes}. In the case of data sets this command returns the indices of the roots (or of the location, which is neares) or, if a data set for the $x$ axis was passed, the corresponding $x$ value:
 				\begin{lstlisting}
-zeroes DATEN()
-zeroes DATEN() -set x=XWERTE()
+zeroes DATA()
+zeroes DATA() -set x=XVALUES()
 				\end{lstlisting}
 				
-				Wenn die Nullstellen von Funktionen bzw. der Schnittpunkt zweier Funktionen gesucht werden soll, muss allerdings ein $x$-Intervall vorgegeben werden, in dem \NR\ suchen soll:
+				If the roots of a function or the intersection of two functions shall be searched, a searching interval for the $x$ axis has to be specified:
 				\begin{lstlisting}
 zeroes f(x) -set x=x1:x2
 				\end{lstlisting}
 				
-				Im entsprechenden Hilfeartikel finden sich noch weitere Optionen, die \verb+zeroes+ übergeben werden können.
+				Further options, which may be passed to \verb+zeroes+, can be found in the corresponding documentation article.
 				
 				\helpidx{zeroes}
 			\section{Extrema}
-				Ähnlich wie bei \verb+zeroes+ verhält es sich bei \verb+extrema+.\cmd{extrema} \NR\ kann die Extrema von Funktionen und Datensätzen bestimmen. Bei Funktionen werden die $x$-Werte zurückgegeben, bei Datensätzen die Indices bzw. die $x$-Werte der Punkte, die das Extrema beschreiben.
+				The command \verb+extrema+\cmd{extrema} is working similar to \verb+zeroes+. Using this command, \NR\ will locate the extrema of functions and data sets. In the case of functions, their $x$ values are returned. In the case of data sets, their indices or the $x$ values of the locations, which are describing the extrema, are returned.
 				\begin{lstlisting}
 extrema f(x) -set x=x1:x2
-extrema DATEN()
-extrema DATEN() -set x=XWERTE()
+extrema DATA()
+extrema DATA() -set x=XVALUES()
 				\end{lstlisting}
-				\paragraph{Anmerkung}Im Gegensatz zu Nullstellen sind Extrema von Datensätzen nicht \emph{wirklich eindeutig} bestimmbar -- zumindest, wenn die Daten mit Rauschen behaftet sind. Dies ist aber in den meisten Fällen erfüllt, daher beschränkt \NR\ sich immer auf die Bestimmung der Indices bzw. $x$-Werte der Maxima bzw. Minima eines Datensatzes anstatt sie, wie bei \verb+zeroes+ ggf. zu interpolieren. Ebenso kann \NR\ aufgrund der numerischen Berechnung Sattelpunkte gar nicht oder nur sehr schlecht identifizieren, da diese Stellen keine Vorzeichenwechsel in der Ableitung aufweisen.
+				\paragraph{Note} Extrema are---in contrast to roots---not easy to locate---at least, if the data has some noisy parts. However, this is true in most cases, therefore \NR\ only returns the indices or the $x$ values of the minimal or maximal value instead of interpolating them. Saddle points are also not always found. This is related to the numerical algorithm, which is sensitive to sign changes (which are not available at saddle points).
 				
 				\helpidx{extrema}
 			\section{Integration}
-				\NR\ kann sowohl Funktionen als auch Daten mittels \verb+integrate+\cmd{integrate} numerisch integrieren, wobei nur für Funktionen eine 2D-Integration unterstützt wird. Ob eine 2D-Integration ausgeführt werden soll, entscheidet \NR\ anhand der übergebenen Integrationsintervalle. Wenn nur ein $x$-Intervall übergeben wird, wird eine 1D-Integration ausgeführt; wenn zusätzlich ein $y$-Intervall übergeben wird, wird zweidimensional integriert.
+				\NR\ may numerically integrate functions and data sets using the command \verb+integrate+\cmd{integrate}, however, only functions may be integrated two-dimensionally. If a 2D integration shall be calculated is determined by the number of passed integration intervals. If only an interval for $x$ was passed, then \NR\ will calculate a one-dimensional integration. If the command string contains a second interval for $y$ then the integration is in two dimensions.
 				
-				Mittels des Parameters \verb+-set+ werden das Integrationsintervall und weitere Optionen übergeben, wie z.B. die Präzision der Integration, die Methode, ob die Funktionswerte des Integrals zurückgegeben werden sollen, etc. Details finden sich im entsprechenden Hilfeartikel.
+				The integration intervals and further options are passed Using the parameter \verb+-set+. Further options are for example the precision of the integration, the numerical method, if the integration shall return the function values of the integral, etc. Further details are noted in the corresponding documentation article.
 				\begin{lstlisting}
 integrate x^2 -set [1:2]
 				\end{lstlisting}
 				
-				Um 1D-Datensätze zu integrieren, sind diese statt der Funktion zu übergeben: wenn nur eine Spalte übergeben wird, wird nur die Summe des Datensatzes berechnet, werden zwei Spalten angegeben, wird die erste als $x$- und die zweite als die entsprechenden $y$-Werte interpretiert und das entsprechende Integral bestimmt.
+				If you want to integrate data sets, you've to pass them instead of the function: if the data set contains only one column, the integral is identical to the sum. If two columns are passed, then the first is used as $x$ and the second as the corresponding $y$ values for the calculated integral.
 				\begin{lstlisting}
-integrate DATEN(:,1)
-integrate DATEN(:,1:3)
+integrate DATA(:,1)
+integrate DATA(:,1:3)
 				\end{lstlisting}
 				
 				\helpidx{integrate}
-			\section{Ableitung}
-				Neben der Integration ist \NR\ auch zur numerischen Ableitung erster Ordnung mittels des Kommandos \verb+diff+\cmd{diff} fähig. Abhängig von den übergebenen Parametern wird dabei die Ableitung an der vorgegebenen $x$-Stelle oder entsprechend der Zahl der gewünschten Stützstellen (\verb+samples+) über ein ganzes Intervall berechnet.
+			\section{Differentiation}
+				\NR\ does also provide the ability to differentiate functions numerically to the first order using the command \verb+diff+\cmd{diff}. Depending on the passed parameters the differentiation is calculated at the location of $x$ or for a number of \verb+samples+ for a complete interval.
 				\begin{lstlisting}
 diff sin(x) -set x=1
 diff sin(x) -set [0:1]
 				\end{lstlisting}
 				
-				Ebenfalls ist \NR\ in der Lage, Datensätze numerisch zu differenzieren. Wenn hierbei eine Spalte übergeben wird, wird der Abstand zwischen den Stützstellen als 1 angenommen, wenn zwei Spalten angegeben werden, wird die erste als $x$- und die zweite als $y$-Werte interpretiert.
+				In addition, \NR\ may differentiate data sets numerically. If only one column is provided, then the distance between the samples is assumed to be 1. Otherwise, the first column is used as $x$ and the second as the corresponding $y$ values.
 				\begin{lstlisting}
-diff DATEN(:,1)
-diff DATEN(:,1:2)
+diff DATA(:,1)
+diff DATA(:,1:2)
 				\end{lstlisting}
-				Hierbei werden nur die $y$-Werte der Ableitung berechnet. Mittels der Option \verb+xvals+ werden stattdessen die neuen $x$-Werte (die mit den vorgegeben nicht übereinstimmen) bestimmt und zurückgegeben.
+				Only the $y$ values of the differentiation is calculated. Using the option \verb+xvals+ the corresponding $x$ values (which are not matching to the provided ones) are calculated and returned.
 				
 				\helpidx{diff}
-			\section{Taylorentwicklung}
-				\NR\ kann mittels \verb+taylor+\cmd{taylor} Funktionen in Abhängigkeit von einer Variablen mittels des Taylor-Verfahrens durch ein Polynom der Ordnung $n \geq 0$ approximieren. Dieses Polynom muss allerdings (außer an der Entwicklungsstelle) nirgends mit der approximierten Funktion übereinstimmen (dies ist eine Eigenschaft der Taylorentwicklung und tatsächlich keine numerische Problematik).
+			\section{Taylor Expansion}
+				With the command \verb+taylor+\cmd{taylor} \NR\ may approximate functions of one variable numerically with a polynomial of the order $n\geq0$ using the taylor expansion. However, this polynomial doesn't have to share more than one point with the original function (this is an issue of the taylor expansion and not an numerical error).
 	
-				Die Approximation geschieht rein numerisch. Dadurch kommt es zu unvermeidlichen Rundungsfehlern, die für die niedrigen Ordnungen der Entwicklung begrenzt sind. Bis etwa zur Ordnung $n = 10$ (anzugeben durch die Option \verb+n=ORDNUNG+; Standard ist 6) kann \NR\ gute Koeffizienten bestimmen, oberhalb davon kommt es jedoch zu starken Abweichungen im Vergleich zu einer analytischen Berechnung.
+				The approximation is done only numerically. As a result, numerical errors are unavoidable. However, they are limited for low orders of the expansion. \NR\ will calculate numerical stable coefficients up to the order of $n = 10$ (passed through the option \verb+n=ORDER+, default is 6). Over this limit the numerical errors are enormous and will lead to large deviations compared to an analytic determination.
 				\begin{lstlisting}
 taylor cos(x)*exp(-x/2) -set x=2
 				\end{lstlisting}
 				
-				Das entwickelte Polynom wird automatisch als eine Funktion im Funktionenspeicher definiert. Im Allgemeinen wird als Funktionsname \verb+Taylor(x)+ gewählt, wenn allerdings die Option \verb+unique+ übergeben wurde, ist der Funktionsname deutlich komplexer.
-				\paragraph{Anmerkung}Bereits existente Funktionen, die mit demselben Namen im Funktionsspeicher vorhanden sind, werden bei dieser Definition überschrieben. Die Option \verb+unique+ generiert jedoch relativ zuverlässig eindeutige Funktionsnamen, da Ausdruck und Ordnung enthalten sind.
+				The calculated polynomial is automatically defined as a function in the function memory. Usual \NR\ will choose the name \verb+Taylor(x)+, however, if the option \verb+unique+ was passed, then the will be much more complex.
+				\paragraph{Note} Already existing functions, which are stored with an identical name in the function memory, are overwritten by the new definition. The option \verb+unique+ creates quite reliable function names, because expression and order of expansion are contained.
 				
 				\helpidx{taylor}
-			\section{Funktionswerte in 1D und 2D} %eval datagrid
-				Mittels der Kommandos \verb+eval+ und \verb+datagrid+\cmd{eval\\datagrid} kann \NR\ Funktionswerte von ein- oder zweidimensionalen Funktionen in einem vorgegebenen Intervall und zu einer vorgegebenen Anzahl an Stützstellen auswerten und entsprechend zurückgeben.
+			\section{Function Values in 1D and 2D} %eval datagrid
+				Using the commands \verb+eval+ and \verb+datagrid+\cmd{eval\\datagrid} \NR\ will calculate and return function values of one- or two-dimensional functions in a predefined interval and for a predefined number of samples.
 				
-				Das Kommando \verb+eval+ gibt die Funktionswerte eindimensionaler Funktionen im vorgegebenen Intervall zurück. Dieses Ergebnis kann direkt in einen Cache gespeichert werden. Die Stützstellen werden durch \verb+samples+ vorgegeben (Standard ist 100) und standardmäßig linear verteilt. Durch die Option \verb+logscale+ kann dies auf logarithmische Skalierung geändert werden.
+				The command \verb+eval+ returns the function values of one-dimensional functions in the predefined interval. The result may be stored direktly into a cache. The number of samples are predefined using \verb+samples+ (default is 100) and linearly distributed by default. Through the option \verb+logscale+ this distribution is switched to a logarithmic one.
 				\begin{lstlisting}
 eval FUNCTION(x) -set [x0:x1] OPTIONEN
 eval sin(x) -set [0:_2pi] samples=200
 				\end{lstlisting}
 				
 				\helpidx{eval}
-				An manchen Stellen erwartet \NR\ sogenannte \emph{Datengitter}. Dies ist ein tabellarischer Datensatz, wobei die $x$-Werte durch die erste, die $y$-Werte durch die zweite und die $z$-Werte durch die darauffolgenden Spalten repräsentiert werden, wobei die Zahl der Zeilen mit der ersten Spalte und die Zahl der Spalten mit der zweiten Spalte übereinstimmen muss.
+				\NR\ needs sometimes so-called \emph{datagrids}. This is a tabular data set, where the $x$ values are stored in the first, the $y$ values are in the second and the $z$ values are stored in the remaining columns, where the number of lines has to match to the first column and the number of columns has to match to the second column.
 				
-				Diese Datengitter kann \NR\ durch \verb+datagrid+ selbständig erzeugen. Dabei können die Werte für $x$ und $y$ auf verschiedene Weisen gegeben werden: entweder als Intervall in der gemeinsamen Form \verb+[x0:x1,y0:y1]+ oder einzeln durch \verb+x=x0:x1+ oder als Spalte/Zeile eines Datensatzes wie \verb+y=data(:,3)+.
+				These datagrids may be created by \verb+datagrid+. The values for $x$ and $y$ may be passed in different ways: either as an interval in the common form \verb+{x0:x1,y0:y1]+ or separate through \verb+x=x0:x1+ or as a column/row of a data set such as \verb+y=data(:,3)+.
 				
-				Für $z$ stehen ebenfalls mehrere Möglichkeiten zur Verfügung: entweder als Funktion von $x$ und $y$ ($f(x,y) = \cos(x)\exp(-y)$), als Matrix eines Datensatzes (\verb+cache(3:,7:100)+) oder als einzelne Spalte/Zeile eines Datensatzes (\verb+data(4,2:)+). Im letzteren Fall versucht \NR, die dadurch definierten $(x,y,z)$-Punkte durch Triangulation zu verbinden, und ein Gitter durch lineare Interpolation zu erzeugen.
+				For the $z$ values there are also multiple possibilities: either as a function of $x$ and $y$ ($f(x,y) = \cos(x)\exp(-y)$), as a matrix of a data set (\verb+cache(3:,7:100)+) or as a single column/row of a dataset (\verb+data(4,2:)+). \NR\ tries in the latter case to connect the defined $(x,y,z)$ points by triangulation and to create a grid using linear interpolation.
 				\begin{lstlisting}
-datagrid z-WERTE -x=x-WERTE y=y-WERTE
+datagrid z-VALUES -x=x-VALUES y=y-VALUES
 datagrid data(:,3) -x=data(:,1) y=data(:,2)
 				\end{lstlisting}
 				
-				Der Parameter \verb+samples=STÜTZSTELLEN+ ist optional und beschreibt nur, wie viele Stützstellen berechnet werden sollen, falls eine Komponente des Datengitters berechnet werden muss. Standardmäßig werden (wie bei den 2D-Plots) $100 \times 100$ Stützstellen berechnet.
+				The parameter \verb+samples=SAMPLES+ is optional und defines, how many samples \NR\ shall calculate if a component of the datagrid has to be calculated. As default (just like in 2D plots) \NR\ calculates $100\times100$ samples.
 				
-				Falls die $x$- und $y$-Achse der Datenpunkte vertauscht sind ($x =$ Zeilen, $y =$ Spalten), kann \verb+datagrid+ noch der Parameter \verb+transpose+ übergeben werden. Dadurch werden Zeilen und Spalten beim Erzeugen des Datengitters vertauscht.
+				If the $x$ and $y$ axis of the data points are swapped ($x =$ lines, $y=$ columns), one can pass the parameter \verb+transpose+ to \verb+datagrid+ This way the datapoint matrix is transposed before the datagrid is constructed.
 	
-				Das erzeugte Datengitter wird dabei automatisch an eine freie Stelle im Cache \verb+grid()+ (wird automatisch erzeugt, falls erforderlich) rechts von bereits bestehenden Daten kopiert und kann von dort aus geplottet werden.
+				The created datagrid is automatically saved to a free location in the cache \verb+grid()+ (will be created automatically, if necessary) right og already existing data and may be plotted using this cache.
 				
 				\helpidx{datagrid}
-			\section{Fouriertransformation}
-				Zu den häufig verwendeten Auswertealgorithmen in der modernen Wissenschaft gehören auch Fouriertransformationen, die zum Beispiel auch frequenzabhängige Informationen aus einem vollkommen verrauschten Signal extrahieren können.
+			\section{Fourier Transformation}
+				One of the quite common evaluation algorithms in modern science is the calculation of a Fourier transformation, which may extract frequency-dependent information out of a total noisy signal.
 				
-				\NR\ ist hierzu mit einem Algorithmus zur schnellen Fouriertransformation (\emph{fast fourier transform}) ausgestattet, der durch das Kommando \verb+fft+\cmd{fft} ausgerufen wird und die übergebenen Datensätze zur Analyse in ihre enthaltenen Frequenzen zerlegen kann:
+				\NR\ provides an algorithm for a fast Fourier transform, which is invoked with the command \verb+fft+\cmd{fft} and may calculate the amplitudes of the contained frequencies of the passed data:
 				\begin{lstlisting}
-fft DATEN()
+fft DATA()
 				\end{lstlisting}
-				Das übergebene Datenobjekt muss mindestens zwei Spalten besitzen: Achsenwerte in der ersten Spalte (Zeit oder Frequenz) und die zugehörige Amplitude in der zweiten Spalte. Werden drei Spalten angegeben, so werden diese als Achsenwerte, Amplitude und Phase (in dieser Reihenfolge) oder -- falls die zusätzliche Option \verb+-complex+ übergeben wird -- als Achsenwerte, Real- und Imaginärteil der Amplitude interpretiert.
+				The passed data object has to contain at least two columns: the axis values in the first column (time or frequency) and the corresponding amplitude in the second one. If three columns are passed, then they are interpreted as axis values, amplitude and phase (in this order) or---if the additional option \verb+-complex+ was specified---as axis values, real and imaginary part of the amplitude.
 				
-				\verb+fft+ wird die transformierten Daten als neue Spalten im übergebenen Datenobjekt (bzw. in \verb+cache()+, falls das Datenobjekt \verb+data()+ ist) anlegen. Hierbei wird Frequenz, Amplitude (auch \emph{Magnitude}) und Phase zurückgegeben. Mit der Option \verb+-complex+ werden Real- und Imaginärteile statt Amplitude und Phase zurückgegeben.
+				\verb+fft+ will store the transformed data as new columns in the passed data set (or in \verb+cache()+, if \verb+data()+ was passed). The values returned are frequency, amplitude (or \emph{magnitude}) and phase. Using the option \verb+-complex+ the real and imaginary parts are returned instead of amplitude and phase.
 				
-				Um Daten invers zu transformieren, kann die Option \verb+-inverse+ übergeben werden.
+				An inverse transformation is achieved by passing the option \verb+-inverse+.
 				
 				\helpidx{fft}
-			\section{Differentialgleichungen}
-				Die wenigsten Differentialgleichungen lassen sich analytisch oder durch zufriedenstellende Näherungen lösen. Dies ist das Fachgebiet der Numerik, die die Differentialgleichungen mittels numerischen Algorithmen integriert und dadurch die entsprechenden Trajektorien berechnen kann.
+			\section{Differential Equations}
+				Few of all possible ordinary differential equations may be solved analytical or through a reasonable approximation. This is the central topic of numerics, which solves the differential equations using numerical algorithms and calculate the corresponding trajectories.
 				
-				\NR\ bietet einen solchen Integrationsalgorithmus mittels des Kommandos \verb+odesolve+\cmd{odesolve}. Dieser Algorithmus kann Differentialgleichungen erster Ordnung numerisch integrieren. Da man aber auch Differentialgleichungen $n$-ter Ordnung in $n$ Differentialgleichungen erster Ordnung zerlegen kann, stellt dies kein allzu großes Hindernis dar.
+				\NR\ provides an integration algorithm with the command \verb+odesolve+\cmd{odesolve}. This algorithm may numerically integrate differential equations of the first order. Because one may transform a differential equiation of the $n$-th order into $n$ equations for the first order, this is not a problem.
 				
-				Die Differentialgleichung kann dabei aus ein oder mehreren Teilgleichungen bestehen und damit auch ein ganzes System bilden. Die Gleichungen müssen dem folgenden Schema genügen:
+				The differential equation may be composed out of multiple equations and may form a whole system. The equations have to follow this scheme:
 				\begin{lstlisting}
 dy1/dx = f1(x,y1,y2,...)
 dy2/dx = f2(x,y1,y2,...)
 ...,				
 				\end{lstlisting}
-				wobei nur die Funktionen \verb+f1()+ bis \verb+fn()+ in dieser Reihenfolge durch Kommata getrennt angegeben werden müssen. \verb+x+ ist hierbei die Integrationsvariable und \verb+y1+ bis \verb+yn+ sind vordefinierte Funktionsvariablen, in denen \NR\ die Ergebnisse des letzten Integrationsschritts ablegt. Alle anderen Variablen werden als Parameter betrachtet.
+				where only the functions \verb+f1()+ to \verb+fn()+ (in this order) have to be passed. \verb+x+ is the integration variable and \verb+y1+ to \verb+yn+ are predefined function variables, in which \NR\ stores the results of the previous integration step. All other variables are considered as parameters.
 	
-				Differentialgleichungen $n$-ter Ordnung $DGL(x,y,y',y'',\ldots,y^{(n)})$ können stets in ein System von $n$ Differentialgleichungen erster Ordnung überführt werden, indem $n-1$ zusätzliche Funktionen eingeführt werden: $y' = dy1/dx = y2, y'' = dy2/dx = y3, \ldots$ Ein solches System folgt dann dem Schema:
+				Differential equations of the $n$-th order $DGL(x,y,y',y'',\ldots,y^{(n)})$ may always be transformed into $n$ equations of the first order by introducing $n-1$ additional functions: $y' = dy1/dx = y2, y'' = dy2/dx = y3, \ldots$ Such a system follows this scheme:
 				\begin{lstlisting}
 dy1/dx = y2
 dy2/dx = y3
@@ -1096,14 +1096,14 @@ dy2/dx = y3
 dyn/dx = DGL(x,y1,y2,...,y(n-1))
 				\end{lstlisting}
 	
-				Die Ergebnisse der Integration werden standardmäßig in den Cache \verb+ode()+ als Tabelle geschrieben. Die erste Spalte enthält dabei die $x$-Werte und die folgenden Spalten die dazu integrierten Funktionswerte.
+				The results of the integration are stored per default as a table in the cache \verb+ode()+. The first column contains the $x$ values and the following columns the corresponding integrated function values.
 				
-				Um Startwerte vorzugeben (\NR\ wird anderen falls stets 0 verwenden), kann die Option \verb+fx0=STARTWERTE+ verwendet werden. Außerdem kann die Integrationsmethode, die zu verwendenden Toleranzen, die Zahl der berechneten Funktionswerte und andere Dinge modifiziert werden. Details hierzu finden sich in der integrierten Dokumentation.
+				To pass initial values (\NR\ uses otherwise 0 as initial value), one may use the option \verb+fx0=INITIALVALUES+. Additionally one may select the integration method, the tolerances the number of samples and other things. Details may be found in the integrated documentation.
 				\begin{lstlisting}
-odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONEN
+odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONS
 odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
 				\end{lstlisting}
-				\paragraph{Anmerkung}\NR\ wird die Zahl der Funktionsvariablen entsprechend der Zahl der Gleichungen bereitstellen: bei einer Gleichung ist nur \verb+y1+ verfügbar, bei zwei \verb+y1+ und \verb+y2+, etc. Werden mehr Variablen benötigt (um z.B. ein vektorielles Problem zu lösen), können 0-Gleichungen als entsprechende Gleichung eingeführt werden, die Variable wird dann jedoch als Konstante betrachtet.
+				\paragraph{Note} \NR\ will provide the number of function variables corresponding to the number of equations: for one equation only \verb+y1+ is available, for two it's \verb+y1+ and \verb+y2+, etc. If for some reason more function variables are necessary (e.g. for a vector problem), one may pass additional 0-equations. However, the function variables are considered as constants in this case.
 				
 				\helpidx{odesolve}
 		\chapter{NumeRe-Prozeduren}
