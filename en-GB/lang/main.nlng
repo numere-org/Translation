@@ -1706,6 +1706,7 @@ GUI_DUPCODE_SETTINGS=Replace for semantic analysis
 GUI_DUPCODE_VARSEMANTICS=Variables
 GUI_DUPCODE_STRINGSEMANTICS=String literals
 GUI_DUPCODE_NUMSEMANTICS=Numeric literals
+GUI_DUPCODE_FUNCTIONSEMANTICS=Caches/Custom function definitions
 GUI_DUPCODE_START=Start
 # Graph viewer strings
 GUI_GRAPH_EXPORT=Export graph
