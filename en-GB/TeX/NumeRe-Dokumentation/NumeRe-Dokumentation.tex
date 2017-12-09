@@ -322,7 +322,7 @@ hist data(i1:i2,j1:j2)
 				
 				A histogram is calculated for each column of the data set and the results are presented in a common graph. Columns, which don't contain any reasonale data, have to be excluded using the interval syntax.
 				
-				\NR\ may also calculate histograms out of a two-dimensional data set. You either have to pass the option \verb+grid+ for a single histogram or the command \cmd{hist2d}\verb+hist2d+ for histograms in two spatial directions. Futher details are listed in the corresponding documentation article.
+				\NR\ may also calculate histograms out of a two-dimensional data set. You either have to pass the option \verb+grid+ to \verb+hist+, then a single histogram of only the $z$ values ignoring their spatial information is calculated. Or you can use the command \cmd{hist2d}\verb+hist2d+ for histograms in two spatial directions (like projections along the $x$ and $y$ axes). Further details are listed in the corresponding documentation article.
 				
 				\helpidx{hist}
 				One additional, very common way of analyzing data next to histograms and statistics is to fit a function (sometimes called \emph{model} or \emph{regression curve}) to the measured (and already somehow processed) data.
@@ -407,7 +407,7 @@ vect3d
 				\end{lstlisting}
 				\begin{itemize}
 					\item \verb+plot+: this creates a standard graph, which displays $y$ against $x$. This command is being used, if you want to visualize $\sin x$ or $x^2$.
-					\item \verb+plot3d+: this command creates a graph on the basis of a 3-dimensional trajectory. A trajectory is calculated from three functions sharing the variable $t$ and visualized three-dimensionally.
+					\item \verb+plot3d+: this command creates a graph on the basis of a 3-dimensional trajectory. A trajectory is calculated from three functions sharing the variable $t$ and visualized three-di\-men\-sion\-al\-ly.
 					\item \verb+mesh+: a function $z = f(x,y)$ may be displayed with this command. A meshgrid is calculated and displayed three-dimensionally.
 					\item \verb+dens+: this command visualizes the function $z = f(x,y)$ in contrast to \verb+mesh+ only through colour values projected to the $x$-$y$ plane.
 					\item \verb+vect+: this plotting style calculates a vector plot of a 2D vector field: $\vec A(x,y) = A_x(x,y)\,\hat e_x + A_y(x,y)\,\hat e_y$.
@@ -731,7 +731,7 @@ list -logic
 				
 				The whole \NR\ script is a really simple \emph{Monte-Carlo} simulation. Points are placed arbitrary into a square of the length 1 and afterwards it's counted, how many of them are located in the circle of unity, which is part of this square. Assuming that the probability for each point in the square is equal, the relation of the number of all points to the number of points in the circle of unity has to be equal to $\pi/4$.
 				
-				If one executes the \NR\ script by clicking on >>Execute<< or through\cmd{start}
+				If one executes the \NR\ script by either clicking on >>Execute<< or through entering the command\cmd{start}
 				\begin{lstlisting}
 start first
 				\end{lstlisting}
@@ -1023,21 +1023,21 @@ diff DATA(:,1:2)
 				
 				\helpidx{diff}
 			\section{Taylor Expansion}
-				With the command \verb+taylor+\cmd{taylor} \NR\ may approximate functions of one variable numerically with a polynomial of the order $n\geq0$ using the taylor expansion. However, this polynomial doesn't have to share more than one point with the original function (this is an issue of the taylor expansion and not an numerical error).
+				With the command \verb+taylor+\cmd{taylor} \NR\ may approximate functions of one variable numerically with a polynomial of the order $n\geq0$ using the taylor expansion. However, this polynomial doesn't have to share more than one point (the expansion point) with the original function (this is an issue of the taylor expansion and not a numerical or algorithmic error).
 	
 				The approximation is done only numerically. As a result, numerical errors are unavoidable. However, they are limited for low orders of the expansion. \NR\ will calculate numerical stable coefficients up to the order of $n = 10$ (passed through the option \verb+n=ORDER+, default is 6). Over this limit the numerical errors are enormous and will lead to large deviations compared to an analytic determination.
 				\begin{lstlisting}
 taylor cos(x)*exp(-x/2) -set x=2
 				\end{lstlisting}
 				
-				The calculated polynomial is automatically defined as a function in the function memory. Usual \NR\ will choose the name \verb+Taylor(x)+, however, if the option \verb+unique+ was passed, then the will be much more complex.
-				\paragraph{Note} Already existing functions, which are stored with an identical name in the function memory, are overwritten by the new definition. The option \verb+unique+ creates quite reliable function names, because expression and order of expansion are contained.
+				The calculated polynomial is automatically defined as a function in the function memory. Usually, \NR\ will choose the name \verb+Taylor(x)+, however, if the option \verb+unique+ was passed to the command \verb+taylor+, then the used function name will be much more complex, because it will contain the expression and the order of of the polynomial expansion.
+				\paragraph{Note} Already existing functions, which are stored with an identical name in the function memory, are automatically overwritten by the new definition done by this command. Therefore, the option \verb+unique+ creates quite reliable function names, which won't interfere with other defined functions in function memory.
 				
 				\helpidx{taylor}
 			\section{Function Values in 1D and 2D} %eval datagrid
 				Using the commands \verb+eval+ and \verb+datagrid+\cmd{eval\\datagrid} \NR\ will calculate and return function values of one- or two-dimensional functions in a predefined interval and for a predefined number of samples.
 				
-				The command \verb+eval+ returns the function values of one-dimensional functions in the predefined interval. The result may be stored direktly into a cache. The number of samples are predefined using \verb+samples+ (default is 100) and linearly distributed by default. Through the option \verb+logscale+ this distribution is switched to a logarithmic one.
+				The command \verb+eval+ returns the function values of one-dimensional functions in the predefined interval. The result may be stored directly into a cache. The number of samples is predefined using the option \verb+samples+ (where the default is 100) and they are linearly distributed by default. Through the option \verb+logscale+ this distribution is switched to a logarithmic one, which may be an advantage if one plans to display them on a logarithmic $x$ axis.
 				\begin{lstlisting}
 eval FUNCTION(x) -set [x0:x1] OPTIONEN
 eval sin(x) -set [0:_2pi] samples=200
@@ -1106,150 +1106,150 @@ odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
 				\paragraph{Note} \NR\ will provide the number of function variables corresponding to the number of equations: for one equation only \verb+y1+ is available, for two it's \verb+y1+ and \verb+y2+, etc. If for some reason more function variables are necessary (e.g. for a vector problem), one may pass additional 0-equations. However, the function variables are considered as constants in this case.
 				
 				\helpidx{odesolve}
-		\chapter{NumeRe-Prozeduren}
-			Neben den \NR-Scripten können Befehlsroutinen auch in \NR-Prozeduren ausgelagert werden. Allerdings bieten \NR-Prozeduren deutlich umfassendere Möglichkeiten, Aufgabenstellungen zu abstrahieren. Dazu gehört auch die Möglichkeit, \NR-Prozeduren rekursiv aufzurufen und ihre Rückgabewerte weiter zu verarbeiten.
-			\section{Konzept}
-				\NR-Prozeduren sind im Prinzip gestaltet wie eine Mischung aus einer selbst definierten Funktion und einem \NR-Script. Zusätzlich dazu kann eine \NR-Prozedur sich auch selbst rekursiv aufrufen (\verb+define+ würde einen Fehler zurückgeben) und deutlich komplexere Befehle und Ausdrücke abarbeiten (Prozeduren sind nicht auf Ausdrücke begrenzt, die sich in einer Zeile ausdrücken lassen müssen).
+		\chapter{NumeRe Procedures}
+			In addition to be written in \NR\ scripts, command sequences may also be outsources to \NR\ procedures. \NR\ procedures provide additional functionalities to solve problems more abstract. One example is the possibility to call \NR\ procedures recursively and further process their return values.
+			\section{Concept}
+				\NR\ procedures are in principle similar to a mixture of a custom defined function and a \NR\ script. In addition, \NR\ procedures may call themselves recursively (\verb+define+ would raise an error if one would try that) and evaluate more complex commands and expressions (Procedures are not restricted to expressions, which have to fit into one single line).
 				
-				Mittels \NR-Prozeduren ist es des Weiteren möglich, eigene Unterprogramme in \NR\ zu schreiben oder weitere Funktionalität in Form eines neuen Kommandos hinzuzufügen (dies ist als \emph{Plugin} bekannt).
+				Using \NR\ procedures it's possible to write own subprograms in \NR\ or add further functionalities as new commands (this is known as \emph{plugin}).
 				
-				Der Stellenwert einer \NR-Prozedur innerhalb von \NR\ ist als in etwa das Äquivalent einer Funktion in einer gewöhnlichen Programmiersprache.
-				
+				The ideal value of a \NR\ procedure in \NR\ corresponds to the function of a usual programming language.
+								
 				\helpidx{procedure}
-			\section{Struktur}
-				\NR-Prozeduren gliedern sich in ihrer Struktur in drei Teile: Prozedurkopf, Prozedurrumpf und Prozedurfuß. Der Kopf enthält den Namen, die Argumentliste und zusätzliche >>Flags<<, der Prozedurrumpf enthält die kompletten Befehlsroutinen:\cmd{procedure\\\ldots\\endprocedure}
+			\section{Structure}
+				The structure of \NR\ procedures has three main sections: the procedure head, the procedure body and the procdure tail. The head contains the name, the argument list and additional >>flags<<, the body contains the complete commands and expressions:\cmd{procedure\\\ldots\\endprocedure}
 				\begin{lstlisting}
-procedure $PROZEDURNAME(ARGLIST) :: FLAGS   ## Prozedurkopf
-	PROZEDURRUMPF                           ## Befehle und Ausdruecke
-endprocedure                                ## Prozedurfuss
+procedure $PROCEDURE_NAME(ARGLIST) :: FLAGS  ## Procedure head
+	PROCEDURE BODY                           ## Commands and expressions
+endprocedure                                 ## Procedure tail
 				\end{lstlisting}
-				Um eine \NR-Prozedur aufzurufen, gibt man \verb+$PROZEDURNAME(VARS)+ in \NR-Scrip\-ten, anderen \NR-Prozeduren oder der \NR-Konsole an. Die \verb+VARS+ sollten dabei mit der Zahl der Argumente in \verb+ARGLIST+ übereinstimmen. Falls in \verb+ARGLIST+ Defaultwerte für die Argumente angegeben wurden, können diese in \verb+VARS+ auch weggelassen werden. Es werden dann die Defaultwerte für die entsprechenden Argumente verwendet.
+				To call a \NR\ procedure, one enters \verb+$PROCEDURE_NAME(VARS+ in \NR\ scripts, other \NR\ procedures or the \NR\ console. The \verb+VARS+ should correspond to the number of arguments in \verb+ARGLIST+. If \verb+ARGLIST+ contains default values for arguments, then the values for these arguments may be omitted on \verb+VARS+. The default values for the corresponding arguiments are used in this case.
 				
-				Die hier erwähnten >>Flags<< haben auf die gesamte \NR-Prozedur Einfluss und unterbinden oder erlauben bestimmte Verhaltensweise von \NR\ in dieser Prozedur. Im Grunde setzen diese Flags jedoch das Wissen der folgenden Abschnitte und Kapitel voraus:\cmd{explicit\\private\\inline}
+				The mentioned >>flags<< take influence on the \NR\ procedure as a whole and suppress or allow a distinct behaviour of \NR\ in this procedure. However, a correct usage of flags requires the knowledge of the following sections and chapters:\cmd{explicit\\private\\inline}
 				\begin{lstlisting}
 explicit
 private
 inline
 				\end{lstlisting}
-				Der Flag \verb+explicit+ verhindert die Ausführung von Plugins in dieser Prozedur, \verb+private+-geflagte Prozeduren können nur von Prozeduren desselben Namensraumes aufgerufen werden und Prozeduren mit dem \verb+inline+-Flag erlauben schnellere Schleifenausführungen, wenn die Schleifen nur \NR-Pro\-ze\-du\-ren dieses Typs enthalten. Dafür sind \verb+inline+-Pro\-ze\-du\-ren vergleichsweise eingeschränkt.
+				The flag \verb+explicit+ suppresses the execution of plugins in this procedure, procedures with the flag \verb+private+ may only be called from the same namespace and procedures with the flag \verb+inline+ allow faster execution of loops, if only procedures of this type are used in the loops. However, \verb+inline+ procedures are quite restricted in their usage.
 				
-				Flags können in jeder beliebigen Kombination/Reihenfolge angegeben werden, da sie sich nicht gegenseitig beeinflussen.
+				Flags may be used in an arbitrary combination/order, because they do not interfere with each other.
 				
-				Jede \NR-Prozedur muss sich in einer eigenen *.nprc-Datei befinden, die den Namen der Prozedur trägt. Was im ersten Moment jedoch aufwändig und fehleranfällig klingt, kann von voll und ganz von \NR\ erledigt werden. Durch den entsprechenden Menüpunkt im Datei-Menü, durch Klicken auf die Schaltfläche der Toolbar oder durch
+				Each \NR\ procedure has to be written to its own *.nprc file, which carries the name of the procedure. Although this sounds difficult and may be a additional error source, it might be done completely by \NR\. Through the corresponding menu item in the file menu, through clicking on the button of the toolbar or through
 				\begin{lstlisting}
-new -proc=$PROZEDURNAME
+new -proc=$PROCEDURE_NAME
 				\end{lstlisting}
-				wird die \NR-Prozedur \verb+$PROZEDURNAME+ in \verb+<procpath>/PROZEDURNAME.nprc+ angelegt. Durch die darauffolgende Eingabe von
+				a \NR\ procedure with the name \verb+$PROCEDURE_NAME+ is created at the default procedure storing location \verb+<procpath>/PROCEDURE_NAME.nprc+. By entering 
 				\begin{lstlisting}
-edit $PROZEDURNAME
+edit $PROCEDURE_NAME
 				\end{lstlisting}
-				kann \verb+$PROZEDURNAME+ im verknüpften Texteditor bearbeitet werden.
+				the procedure \verb+$PROCEDURE_NAME+ may be edited in the \NR\ editor.
 				
-				Der Prozedurrumpf einer \NR-Prozedur kann im Großen und Ganzen analog zu einem \NR-Script gestaltet sein. Die wesentlichen Besonderheiten werden in den folgende Abschnitten besprochen.
-			\section{Lokale und globale Variablen}
-				\NR-Prozeduren unterscheiden zwischen lokalen und globalen Variablen. Globale Variablen sind Variablen, die von jeder Prozedur, jedem Script und der \NR-Konsole selbst aufgerufen und verwendet werden können. Demgegenüber sind lokale Variablen, die \emph{nur} in \emph{dieser} Prozedur und auch dann \emph{nur} in \emph{dieser} Rekursion der Prozedur verwendet werden können.
+				The procedure body of a \NR\ procedure may be written just like a \NR\ script. The few differences are explained in the following sections.
+			\section{Local and Global Variables}
+				\NR\ procedures distinguish between local and global variables. Global variables are variables, which may be used from every procedure, every script and the \NR\ console. Local variables, in contrast, may \emph{only} be used in \emph{this} procedure and \emph{only} in \emph{this} recursion of this procedure.
 				
-				Lokale Variablen werden mittels\cmd{var\\str\\tab}
+				Local variable are declared with\cmd{var\\str\\tab}
 				\begin{lstlisting}
-var VARIABLEN
-str ZEICHENKETTENVARIABLEN
+var VARIABLES
+str STRINGVARIABLES
 tab CACHES
 				\end{lstlisting}
-				deklariert. Diese Kommandos dürfen je Prozedur nur einmal auftreten und deklarieren jeweils einen Satz an lokalen numerischen Variablen, Zeichenkettenvariablen oder lokalen Caches. Diese Variablen werden am Ende der Prozedur automatisch wieder gelöscht. (Lokale Variablen können genauso wie globale heißen. In einer \NR-Prozedur haben die lokalen Variablen dann die höhere Priorität. Man spricht dann von \emph{schattieren}.)
-			\section{Rückgabewerte}
-				Standardmäßig geben \NR-Prozeduren den Wert \verb+true+ zurück, wenn die Auswertung die Zeile \verb+endprocedure+ erreicht. \NR-Prozeduren können aber auch andere Werte zurückgeben, wenn\cmd{return}
+				These commands may only be used once per procedure and declare a set of local numerical variables, string variables and local caches. These variables will be deleted automatically at the end of the procedure. (Local variables may be have an identical name to a global one. In the body of a \NR\ procedure the local variables have the higher priority. This behaviour is called \emph{shadowing}.)
+			\section{Return Values}
+				\NR\ procedures return as default the value \verb+true+, if the evaluation reaches the final line of a procedure: \verb+endprocedure+. Additionally, \NR\ procedures may also return other values if\cmd{return}
 				\begin{lstlisting}
-return WERT
+return VALUE
 				\end{lstlisting}
-				an der entsprechenden Stelle in der Prozedur auftritt. \NR\ wird die Prozedur auf jeden Fall verlassen, sobald \NR\ an einer Stelle auf dieses Kommando trifft (Es kann auch mehrmals in einer Prozedur verwendet werden). \verb+WERT+ kann dabei entweder ein numerischer Wert oder eine Zeichenkette sein. Davon abgesehen kann auch explizit \verb+true+ oder \verb+false+ als \verb+WERT+ verwendet werden.
+				occurs at the corresponding line in the procedure. \NR\ will leave the procedure as soon as \NR\ reaches this command (It may be used multiple times in a procedure). \verb+VALUE+ may be either a numerical value or a string. Additionally one may use \verb+true+ and \verb+false+ explicitly as \verb+VALUE+.
 				
-				Dabei muss \verb+WERT+ nicht auf einen einzigen Wert beschränkt werden. Es können auch mehrere numerische Werte oder mehrere Zeichenketten zugleich zurückgegeben werden. Sogar die Kombination aus beiden Variablentypen ist möglich, aber zugleich auch fehleranfälliger als Werte eines einzelnen Variablentyps, da die ggf. aufrufende Prozedur auch mit dem Satz an Werten zurecht kommen muss.
+				\verb+VALUE+ doesn't have to be one single value. You may also return multiple numerical values or multiple strings together. Even a combination of both variable types is possible, although another error source, because the calling procedure must be able to handle the returned set an values.
 				
-				Werden Prozeduren mit mehreren Rückgabewerten für \verb+while+-Schleifen- oder \verb+if+-Bedingungen verwendet, so wird dort nur der erste Wert für die Logikoperationen ausgewertet.
+				If procedures with multiple return values are used for \verb+while+ loops or \verb+if+ conditions, then only the first returned value is used for the logical operations.
 				
-				Der spezielle Wert \verb+void+ dient dazu, \NR\ mitzuteilen, dass diese Prozedur tatsächlich \emph{keinen} Rückgabewert hat.
-			\section{Namensräume}
-				Ähnlich wie C++ ist \NR\ mit Namensräumen ausgestattet, die es erlauben, Prozeduren gleichen Namens aber unterschiedlichen Verhaltens in unterschiedlichen Namensräumen zu besitzen. Aufgerufen werden Prozeduren aus einem anderen als dem Standardnamensraum \verb+main+ durch 
+				The special value \verb+void+ is used to notify \NR\ that this procedure explicitly \emph{doesn't} have a return value.
+			\section{Namespaces}
+				\NR\ can handle namespaces similar to C++, which allow to have multiple procedures with the same name but different behaviour in different namespaces. Procedures of other namespaces than the \verb+main+ namespaces are called through 
 				\begin{lstlisting}
-$NAMENSRAUM~PROZEDURNAME(VARS)
+$NAMESPACE~PROCEDURNAME(VARS)
 				\end{lstlisting}
-				Die entsprechende Prozedur \verb+$PROZEDURNAME+ liegt dabei in der Datei 
+				The corresponding procedure \verb+$PROCEDURENAME+ is stored in the file 
 				\begin{lstlisting}
-<procpath>/NAMENSRAUM/PROZEDURNAME.nscr
+<procpath>/NAMESPACE/PROCEDURENAME.nscr
 				\end{lstlisting}
-				Das Kommando \verb+new+ kann auch automatisch Prozeduren in untergeordneten Namensräumen erzeugen, wenn dies entsprechend angegeben wird:
+				The command \verb+new+ may create procedures in namespaces automatically, if that is mentioned explicitly:
 				\begin{lstlisting}
-new -proc=$NAMENSRAUM~PROZEDURNAME
-edit $NAMENSRAUM~PROZEDURNAME
+new -proc=$NAMESPACE~PROCEDURENAME
+edit $NAMESPACE~PROCEDURENAME
 				\end{lstlisting}
-				Gleiches gilt aber auch, wenn man die Funktionen der graphischen Oberfläche verwendet.
+				If one uses the functionalities of the graphical user interface, this is also true.
 				
-				Werden in einer Prozedur häufiger \NR-Prozeduren aus einem bestimmten Namensraum aufgerufen, kann dieser Namensraum auch als temporärer Standardnamensraum vorgegeben werden, indem\cmd{namespace}
+				If in one procedure \NR\ procedures out of a specific namespace are called more often, the one can predefine this namespace as a temporary default namespace by adding\cmd{namespace}
 				\begin{lstlisting}
-namespace NAMENSRAUM
+namespace NAMESPACE
 				\end{lstlisting}
-				in die Prozedur eingebunden wird. (Prozeduren aus anderen Namensräumen können jedoch immer noch aufgerufen werden, indem der Namensraum wie oben gezeigt explizit angegeben wird.)
-			\section{Fehlerbehandlung}
-				\NR-Prozeduren verfügen über ein simples Verfahren, mit Fehlern umzugehen. Tritt ein Fehler auf, der auf keine sinnvolle Art behandelt werden kann (z.B. in Form einer falschen Eingabe), dann kann mittels des Kommandos\cmd{throw}
+				to the procedure's body. (Procedures out of other namespaces may be still be called, by naming their namespace explicitly.)
+			\section{Exception Handling}
+				\NR\ procedures provide a somehow rudimentary way of handling exceptions. If an exception occurs, which may not be handled in any reasonable way (e.g. a wrong input), then the evaluation of the procedure can be aborted immediately through the command\cmd{throw}
 				\begin{lstlisting}
 throw
 				\end{lstlisting}
-				ein unmittelbares Abbrechen der Prozedurauswertung erzwungen werden. Dieses Kommando wird bis ganz oben durchgereicht, bis es schließlich auf die Standard-\NR-Konsole trifft und dort eine entsprechende Fehlermeldung produziert.
+				This command is passed through the whole stack until it reaches the default \NR\ console, where it produces a corresponding error message.
 				
-				Etwas informativer wird die Fehlermeldung durch Übergeben einer eigenen Meldung. Dies geschieht in Form einer Zeichenkette
+				It's somehow more informative, if one passes an explicit error message. This is done as a string
 				\begin{lstlisting}
-throw "Das ist die Fehlermeldung."
+throw "This is the error message."
 				\end{lstlisting}
-				die in der \NR-Konsole schließlich angezeigt wird.
+				which is finally displayed in the \NR\ console.
 			\section{Debugging}
-				In den wenigsten Fällen wird eine \NR-Prozedur beim ersten Versuch bereits lauffähig und fehlerfrei sein. Hierzu sind kleinere Tipp- oder Logikfehler viel zu wahrscheinlich. Beim Ausführen einer solchen fehlerhaften \NR-Prozedur wird \NR\ ggf. an einer Stelle abbrechen, wenn es sich um einen Syntaxfehler handelt, aber nicht unbedingt, wenn ein Rechenfehler aufgetreten ist.
+				A \NR\ procedure will only in very few cases run without problems and be free of errors. Typos and logical errors are much too probable to avoid such kind of mistakes. During the execution of such a erroneous \NR\ procedure \NR\ will, if it's a syntax error, abort the evaluation at the position of the error. However, it won't always abort if there's an error in the calculations.
 				\begin{figure}[htb]
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/debugger.png}%
-					\caption{Der \NR-Debugger an einem Breakpoint. Mit rot werden die Änderungen zum letzten ausgewerteten Breakpoint hervorgehoben}%
+					\caption{The \NR\ debugger at a breakpoint. Changes to the previously evaluated breakpoint are highlighted in red}%
 					\label{fig:debugger}%
 				\end{figure}
 				
-				\NR\ besitzt zum Aufspüren und Entfernen solcher Fehler einen sogenannten \NR-\emph{Debugger} (\autoref{fig:debugger}). Dieser kann durch den entsprechenden Menüpunkt im Werkzeuge-Menü oder durch Klicken auf die Schaltfläche der Toolbar aktiviert werden und listet bei Syntaxfehlern automatisch den fehlerhaften Ausdruck, die ungefähre Zeile des Ausdrucks, das fehlerhafte Modul (Datei), eine Stacktrace und alle lokalen Variablen der aktuellen Prozedur inklusive ihrer Werte. Mittels der Stacktrace kann rekonstruiert werden, in welcher Prozedur der Fehler aufgetreten ist und welche Argumente an diese übergeben wurden.
+				To locate and solve such errors, \NR\ provides the so-called \NR\ debugger (\autoref{fig:debugger}). This functionality may be activated with the corresponding item in the Tools menu or through clicking on the button of the toolbar. It lists at syntax errors automatically the erroneous expression, the approximated line number, the erroneous module (the file), a stack trace and all local variables including their values of the current procedure. Using the stack trace one may reconstruct, in which procedure the error occured and which arguments were passed to this procedure.
 				
-				Zusätzlich zum automatischen Listen bei Syntaxfehlern kann der \NR-Debugger vergleichbare Informationen an einem \emph{Breakpoint} liefern. Ein temporärer Breakpoint kann durch die Funktionen der Toolbar oder durch Klicken auf die betreffende Zeile der Seitenleiste gesetzt werden. Man beachte, dass in Zeilen, die nur aus Kommentaren bestehen, oder Zeilen, die leer sind, \emph{keine} temporären Breakpoints gesetzt werden können. 
+				In addition to the automatic listing at syntax errors the \NR\ debugger may provide similar information at a \emph{breakpoint}. A temporary breakpoint may be set using the function of the toolbar or through clicking on the sidebar at the corresponding line. Please note that you \emph{cannot} place temporary breakpoints in empty or comment-only lines.
 				
-				Permanente Breakpoints werden mittels \verb+|>+ am Anfang einer Zeile gesetzt, sind aber selten nötig. \NR\ unterbricht, bevor die \emph{aktuelle Zeile} ausgewertet wird, und listet Stacktrace und Variablenwerte. Durch Klicken auf >>Fortsetzen<< kann die Auswertung fortgesetzt werden, durch >>Abbrechen<< wird die Auswertung komplett abgebrochen. (Außerhalb des Debug-Modus werden Breakpoints selbstverständlich ignoriert.)
+				Permanent breakpoints are set with \verb+|>+ at the beginning of a line, but they are seldom necessary. \NR\ stops, before the \emph{current line} is evaluated and lists stack trace and variable values. Through clicking on >>Continue<< the evaluation is continued, through clicking on >>Cancel<< the whole evaluation is aborted. (Breakpoints are of course ignored, if the debugger is not active.)
 				
 				\helpidx{debugger}
-		\chapter{Animierte Graphen}
-			Manchmal kann es hilfreich sein, wenn man den zeitlichen Verlauf einer Größe mithilfe eines animierten Graphen verdeutlichen kann. \NR\ verfügt über eine fest implementierte Möglichkeit, eine solche Animation zu erzeugen. Eine Animation kann aber natürlich auch mittels einer Schleife erzeugt werden, indem die Frames einzeln gespeichert und später zu einer Animation zusammengesetzt werden.
+		\chapter{Animated Graphs}
+			In some cases it's suitable that one may enhance the derivation in time of a quantity using an animated graph. \NR\ has a built-in possibility to create such an animation. However, an animation may also be created using a loop, saving every frame independent and combine all frames to an animation afterwards.
 			
-			Um eine Animation direkt durch \NR\ erzeugen zu lassen, muss mindestens an einer Stelle die Variable \verb+t+ in einem zu plottenden Ausdruck verwendet werden. Diese Variable ist in diesem Fall der Zeitparameter, der für die Animation variiert wird. Zusätzlich muss die Option \verb+animate+ bei einem Plotvorgang übergeben werden:\cmd{animate}
+			To create an animation by \NR\ one has to use at least once the variable \verb+t+ in the expression, which shall be plotted. This variable is the time parameter, which will be varied by the animation. Additionally, one has to pass the option \verb+animate+ to the plotting command:\cmd{animate}
 			\begin{lstlisting}
-PLOTCMD AUSDRUCK(t,VARS) -set animate OPTIONEN
+PLOTCMD EXPRESSION(t,VARS) -set animate OPTIONS
 			\end{lstlisting}
-			Dies wird eine Animation erzeugen, die aus mehreren, inkludierten Einzelbildern besteht. Im \NR-GraphViewer kann diese Animation abgespielt oder die Frames einzeln betrachtet werden.
+			This will create an animation, which is composed out of multiple frames. In the \NR\ Graph\-Viewer one can play this animation or examine each frame independently.
 			
 			\helpidx{plotoptions}
-			\paragraph{Anmerkung}
-				\NR\ kann nativ keine Animationen aus Datensätzen erzeugen. Dies ist u.A. der Tatsache geschuldet, dass der Zeitparameter auch nicht-ganzzahlig Werte annehmen kann, Tabellenobjekte allerdings nur ganzzahlige Indices akzeptieren. Um eine Animation aus Datensätzen zu generieren, muss folglich auf die Einzelbilderzeugung mittels einer Schleife zurückgegriffen werden.\bigskip\\
-			Standardmäßig erzeugt \NR\ 50 Frames je Animation mit einer jeweiligen Dauer von $1/25$~s und verwendet als Zeitparameter \verb+t+ das Intervall $[0;1]$. Dies kann natürlich geändert werden, allerdings kann es bei zu vielen Frames zu Speicherschwierigkeiten kommen, da die Frames einzeln im Speicher abgelegt werden müssen:
+			\paragraph{Note}
+				\NR\ cannot create animations from datasets. The reason is that the time parameter is a floating number, whereas indices for tables are integer. To create an animation from a dataset, one has to create the frames independent using a loop.\bigskip\\
+			\NR\ creates per default 50 frames per animation with a duration of $1/25$~s each and uses the interval $[0;1]$ for the time parameter \verb+t+. This may be altered of course, however, it's possible that too many frames will result in memory problems, because every single frame is stored in memory first:
 			\begin{lstlisting}
-PLOTCMD AUSDRUCK(t,VARS) -set t=0:2 animate=100 OPTIONEN
+PLOTCMD EXPRESSION(t,VARS) -set t=0:2 animate=100 OPTIONS
 			\end{lstlisting}
-			Nun wird die Animation mit 100 Frames erzeugt, wobei der Zeitparameter das Intervall $[0;2]$ verwendet.
-			\paragraph{Anmerkung}
-				Manche Plotarten können möglicherweise zu viel Speicherplatz erfordern, so dass eine Animation nicht möglich ist. Es kann hierbei helfen, die \verb+samples+ der Abbildung zu reduzieren.
-		\chapter{Zusammengesetzte Graphen}
-			Es mag vorkommen, dass ein gewünschtes Plotlayout nur erreichbar ist, wenn man zwei Plotstile miteinander kombinieren könnte. Dies ist in \NR\ auch möglich, wenn man\cmd{compose\\\ldots\\endcompose}
+			Now an animation with 100 frames is created and the time parameter uses the interval $[0;2]$.
+			\paragraph{Note}
+				Some plot types may need too many memory so that an animation is not possible. It may help to reduce the number of \verb+samples+ for this image.
+		\chapter{Composed Graphs}
+			It's possible that a desired plotting layout is only possible, if one could combine two plotting types. Using the command block\cmd{compose\\\ldots\\endcompose}
 			\begin{lstlisting}
 compose
-	PLOTSTIL1
-	PLOTSTIL2
+	PLOTTYPE1
+	PLOTTYPE2
 	...
 endcompose
 			\end{lstlisting}
-			verwendet. Der \verb+compose+-Modus nimmt allerdings nur Plotkommandos auf, das heißt, dass die für die jeweiligen Plotstile nötigen Berechnungen bereits zuvor abgeschlossen sein müssen.
+			it's possible in \NR. The \verb+compose+ mode may only contain plotting commands. This means that all calculations for the desired plot types have to be finished in advance.
 			
-			Manche Plotoptionen gelten für einen kompletten zusammengesetzten Plot (wie z.B. Plotintervall, Achsenbeschriftung, Gitter, etc.), andere können je nach Plot aus- oder eingeschaltet werden (z.B. Transparenz, Lichteffekt, zusätzliche Konturlinien, Fehlerbalken, etc.). Die Plotfarben und Linienstile können auch für jeden Plot einzeln gewählt werden, jedoch ist zu beachten, dass \NR\ einen internen Zähler für alle Linien hat und dieser für jeden Plot erhöht wird. Demzufolge müssen die Styleinformationen ggf. entsprechend angepasst werden.
+			Some plot options are valid for the whole composed plot (e.g. the plot interval, the axis labels, the grid, etc.), others may be switched on or off for each plot independent (e.g. transparency, lighting, additional contour lines, errorbars, etc.). The plotting colours and the line styles may also be selected for each plot, however, one has to keep in mind that \NR\ has an internal counter, which will be incremented for each line in all plots of the composed plot. The styling information has to be adapted to deal with this behaviour.
 			
-			Mithilfe des \verb+compose+-Modus können Plots zwei verschiedener Größen gemeinsam dargestellt werden, z.B. ein Vektorfeld zusammen mit seinem Potential. Es spielt hierbei keine Rolle, in welcher Reihenfolge \verb+vect+ und \verb+dens+ angegeben werden, da \NR\ die Plots intern in eine sinnvolle Reihenfolge bringt:
+			Using the \verb+compose+ mode one may display plots of different quantities together, e.g. a vector field together with its potential. It's not necessary to use a distinct order, \NR\ will order the plots by itself so that they are in a reasonable order:
 			\begin{lstlisting}
 compose
 	dens 1/norm(x,y)
@@ -1258,131 +1258,130 @@ endcompose
 			\end{lstlisting}
 			
 			\helpidx{compose}
-			Der \verb+compose+-Modus erlaubt es des Weiteren, die Beschränkung auf eine einzelne Funktion bei den 3D-Plotstilen (außer \verb+plot3d+) zu umgehen, indem die Funktionen innerhalb des \verb+compose+-Modus in sukzessiven 3D-Plots angegeben wird.
+			The \verb+compose+ mode also enables to work around the restriction of a single function per 3D plot type (except of \verb+plot3d+), if the functions are passed in a \verb+compose+ environment successive 3D plots.
 		\chapter{Plugins}
-			\NR\ wird zwar beständig weiterentwickelt, doch es wird immer Funktionalitäten geben, die nicht implementiert werden, oder Funktionen, die nicht dem tatsächlichen Wunsch des \NR-Benutzers entsprechen. Hier kommen die \NR-Plugins in Spiel, die bestehende Funktionalitäten umschreiben oder neue hinzufügen können.
-			\section{Funktionsweise}
-				Plugins werden vollständig in die Kommandoarchitektur integriert, so dass von außen gar nicht bemerkt wird, dass im Augenblick ein Plugin ausgeführt wird. Sie werden durch eigene oder bereits bestehende Kommandos (deren Funktionen sie ersetzen) aufgerufen und verwenden die übliche \NR-Syntax.
+			Although \NR\ is constantly extended, some functionalities might not be implemented or not correspond to the desires of the \NR\ user. This is the regime of the \NR\ plugins, which may overwrite existing functionalities or add new ones.
+			\section{Functionality}
+				Plugins are completely integrated into the command architecture so that one might not recognize from the outside that the routines currently executed are part of a plugin. They are called through own or already existing commands (replacing their functionalities) and use the usual \NR\ syntax.
 				
-				Da außerdem die Möglichkeit besteht, dass Plugins einen eigenen Artikel zur \NR-Hilfe hinzufügen, ist die Beschreibung eines Plugins gleich enthalten und kann auf die übliche Art und Weise aufgerufen werden.
+				Additionally, one might add a documentation article to the documentation index. So the description of the plugin is included and may be called in the usual way.
 			\section{Installation}
-				Plugins werden in Form von \NR-Scripten veröffentlicht, die\cmd{<install>\\\ldots\\<endinstall>}
+				Plugins are published as installation routines in \NR\ scripts, which contain\cmd{<install>\\\ldots\\<endinstall>}
 				\begin{lstlisting}
 <install>
-	DEKLARATIONEN UND PROZEDUREN
+	DECLARATIONS AND PROCEDURES
 <endinstall>
 				\end{lstlisting}
-				enthalten. Um ein solches Plugin zu installieren, muss lediglich\cmd{install}
+				To install such a plugin one has to enter\cmd{install}
 				\begin{lstlisting}
 install SCRIPTNAME
 				\end{lstlisting}
-				in die \NR-Konsole eingegeben werden (sollte das Script nicht in \verb+<scriptpath>+ vorliegen, muss der Pfad mit angegeben werden). \NR\ wird nun die Installationsroutine ausführen, die entsprechenden Prozeduren erzeugen und die ebenfalls nötigen Verknüpfungen generieren. Es ist \emph{nicht} möglich, ein Plugin mit den Funktionen der graphischen Benutzeroberfläche zu installieren.
+				into the \NR\ console (if the script is not located in \verb+<scriptpath>+, one has to add the path, too). \NR\ will execute the installation routine, create the corresponding procedures and generate the needed connections. It's \emph{not} possible, to install a plugin iwth the functionalities of the graphical user interface.
 				
 				\helpidx{install}
-				Nach Abschluss des Scripts ist das Plugin installiert. Es sollte nun unter
+				After the script was finished, the plugin is installed. Now it should be listed at
 				\begin{lstlisting}
 list -plugins
 				\end{lstlisting}
-				gelistet werden und kann folglich mit dem dort angegebenen Kommando ausgeführt werden. Die angegebene Beschreibung sollte eine knappe Information über die Funktionsweise des Plugins enthalten.
+				and may be executed with the displayed command. The shown description should contain a brief information of the functionalities of the plugin.
 				
-				Um ein Plugin wieder zu deinstallieren, gibt man einfach\cmd{uninstall}
+				To uninstall a plugin afterwards, one enters\cmd{uninstall}
 				\begin{lstlisting}
 uninstall PLUGINNAME
 				\end{lstlisting}
-				in die \NR-Konsole ein. Der \verb+PLUGINNAME+ ist unter
+				into the \NR\ console. The \verb+PLUGINNAME+ is displayed at
 				\begin{lstlisting}
 list -plugins
 				\end{lstlisting}
-				in eckigen Klammern angegeben. Ggf. ist es nötig, dass der \verb+PLUGINNAME+ in Anführungszeichen angegeben wird.
-				\paragraph{Anmerkung}
-					Es ist nicht nötig, ein Plugin zunächst zu deinstallieren, um eine neue Version desselben zu installieren. Die Installation kann direkt über die bestehende ausgeführt werden. \NR\ wird die entsprechenden Verknüpfungen selbstständig ändern.
-			\section{Eigene Plugins}
-				Die Entwicklung eines eigenen Plugins mag zunächst kompliziert klingen, aber tatsächlich ist es das eigentlich nicht. \NR\ gibt bereits eine Hilfstellung, indem das Template (Vorlage) verwendet wird. Mittels der entsprechenden Funktionen der graphischen Benutzeroberfläche oder durch
+				in brackets next to the description. In some cases it might be necessary to enclose \verb+PLUGINNAME+ in quotation marks.
+				\paragraph{Note}
+					It's not necessary to uninstall a plugin first before a newer version of itself might be installed. The installation may be executed directly over the already existing one. \NR\ will change the corresponding connections by itself.
+			\section{Custom Plugins}
+				The development of custom plugins may sound complicated first, but actually it's not so difficult. \NR\ aides by creating a template for the plugin installation routine. This template is created by using the functionalities of the graphical user interface or through entering
 				\begin{lstlisting}
 new -plugin=PLUGINNAME
 				\end{lstlisting}
-				wird ein Plugin des Namens PLUGINNAME in Form eines \NR-Scripts unter
+				This creates a plugin with the name PLUGINNAME as a \NR\ script at
 				\begin{lstlisting}
 <scriptpath>/plgn_PLUGINNAME.nscr
 				\end{lstlisting}
-				mit der Hauptprozedur
+				with the main procedure
 				\begin{lstlisting}
 $plugins~PLUGINNAME~main(<CMDSTRING>)
 				\end{lstlisting}
-				erzeugt, das bereits alle Elemente für eine vollständige Installation (inklusive der Hilfedatenbankeinträge) mit entsprechenden Platzhaltern umfasst.
+				This plugin template contains already all necessary installation elements (including the documentation article) with the corresponding placeholders.
 				
-				Plugins bestehen im Wesentlichen aus ein oder mehreren Prozeduren, welche die Pluginfunktionalität repräsentieren. Bei der Deklaration eines Plugins muss eine Hauptprozedur angegeben werden, die \NR\ aufruft, sobald das Pluginkommando eingegeben wird. Dieser Prozedur übergibt \NR\ den entsprechenden Kommandoausdruck in einer oder mehreren der folgenden Gestalten, wobei \NR\ dies bei der Deklaration mitgeteilt werden muss:\cmd{<CMDSTRING>\\<EXPRESSION>\\<PARAMSTRING>}
+				Plugins are composed out of one or more procedures, which represent the plugin's functionality. Together with the declaration of a plugin, a main procedure has to be named, which is called by \NR\ as soon as the plugin's command is entered. \NR\ then passes the command string in one or more of the following shapes to this procedure. The shapes (or >>tags<<) have to be named during the declaration of the plugin:\cmd{<CMDSTRING>\\<EXPRESSION>\\<PARAMSTRING>}
 				\begin{lstlisting}
 <CMDSTRING>
 <EXPRESSION>
 <PARAMSTRING>
 				\end{lstlisting}
 				\begin{itemize}
-					\item \verb+<CMDSTRING>+ übergibt die gesamte Kommandozeile (inklusive des Plugin-Kommandos)
-					\item \verb+<EXPRESSION>+ übergibt den Ausdruck, der zwischen dem Kommando und den optionalen Parametern gefunden wird
-					\item \verb+<PARAMSTRING>+ übergibt den Parametersatz, der entweder ab \verb+-set+ (bei einer vorhandenen \verb+<EXPRESSION>+) oder ab dem ersten \verb+-+ nach dem Kommando beginnt
+					\item \verb+<CMDSTRING>+ passes the whole command line (including the plugin's command)
+					\item \verb+<EXPRESSION>+ passes the expression, which may be found between the command and optional parameters
+					\item \verb+<PARAMSTRING>+ passes the parameter set, which begins either at \verb+-set+ (if an \verb+<EXPRESSION>+ is available) or at the first \verb+-+ after the command
 				\end{itemize}
 				
-				Die Prozeduren, die die Pluginfunktionalität umfassen, kopiert man in ein Script, umschließt sie mit\cmd{<info>\\\ldots\\<endinfo>}
+				The procedures, which represent the plugin's functionality have to be copied to that script. Afterwards one has to update the installation information block:\cmd{<info>\\\ldots\\<endinfo>}
 				\begin{lstlisting}
 <install>
 	<info>
-		-author="AUTORNAME"
+		-author="AUTHORNAME"
 		-version="VERSION"
 		-type=TYPE_PLUGIN
 		-flags=ENABLE_DEFAULTS
 		-name="PLUGINNAME"
-		-pluginmain=$PLUGINHAUPTPROZEDUR(<CMDSTRING>)
-		-plugincommand="PLUGINKOMMANDO"
-		-plugindesc="BESCHREIBUNG"
+		-pluginmain=$PLUGINMAINPROCEDURE(<CMDSTRING>)
+		-plugincommand="PLUGINCOMMAND"
+		-plugindesc="DESCRIPTION"
 	<endinfo>
-	PROZEDUREN
+	PROCEDURES
 <endinstall>
 				\end{lstlisting}
-				und installiert das Plugin mit dem Kommando \verb+install+ (Die Werte zu \verb+type+ und \verb+flags+ sind tatsächlich in Großbuchstaben anzugeben).
+				The plugin may now installed with the command \verb+install+ (The values for \verb+type+ and \verb+flags+ are actually uppercase letters).
 				
-				Wenn nun das \verb+PLUGINKOMMANDO+ in die \NR-Kommandozeile eingegeben wird, ruft \NR\ die Prozedur \verb+$PLUGINHAUPTPROZEDUR()+ auf und übergibt dieser dabei auch gleichzeitig den \verb+<CMDSTRING>+. Es können auch andere oder weitere Kommandoausdruckabschnitte übergeben werden, wenn diese als eigene Argumente der Prozedur angegeben werden.
+				If the \verb+PLUGINCOMMAND+ is now entered into the \NR\ console, then \NR\ calls the procedure \verb+$PLUGINMAINPROCEDURE()+ and passes it the tag \verb+<CMDSTRING>+. One may also pass other or further sub expressions of the command line, if they are named as arguments of the main procedure.
 				
-				Soll das Plugin einen Wert zurückgeben, mit dem man weiterarbeiten können soll, dann muss als \verb+type+ der Typ
+				If the plugin shall return a value, which one may process further, then the \verb+type+ has to be changed to
 				\begin{lstlisting}
 -type=TYPE_PLUGIN_WITH_RETURN_VALUE
 				\end{lstlisting}
-				angegeben werden.
 				
-				Der \verb+version+-Flag kann als 
+				The \verb+version+ flag may be passed as
 				\begin{lstlisting}
 -version=<AUTO>
 				\end{lstlisting}
-				angegeben werden. Bei jeder Installation des Plugins wird die Versionsnummer nun automatisch erhöht. Dies ist zum Beispiel während der Entwicklung hilfreich, wenn man anhand der Zahl der Änderungen die Versionsnummer festlegen will.
+				For each installation of the plugin the version number is incremented automatically. This is for example of great use during the development, if one wants to fix the version number to the number of changes.
 				
-				Um die Ausgabe auf der \NR-Konsole zu unterdrücken, kann
+				Normally, the installed procedures are logged in the console, so that the user may see, what's happening. One may also suppress this output by setting
 				\begin{lstlisting}
 -flags=DISABLE_SCREEN_OUTPUT
 				\end{lstlisting}
-				statt \verb+ENABLE_DEFAULTS+ angegeben werden. Weitere Flags sind
+				instead \verb+ENABLE_DEFAULTS+. Further flags are
 				\begin{lstlisting}
 ENABLE_FULL_LOGGING
 ENABLE_FORCE_OVERRIDE
 				\end{lstlisting}
-				die entweder die komplette Installation zeilenweise in \verb+<>/install.log+ protokollieren oder bereits vorhandene Plugins eines anderen Autors mit gleichem Pluginkommando überschreiben.
+				They are either logging the complete installation linewise to \verb+<>/install.log+ or they enable the overwriting of an already available plugin with the same command but a different author, which is prevented by default.
 				
 				\helpidx{plugins}
-				Vor \verb+<endinstall>+ besteht noch die Möglichkeit, dass ein eifriger Programmierer die Information für den \NR-Hilfeartikel in Form einer XML-Syntax eingebindet:\cmd{<helpindex>\\\ldots\\</helpindex>\\<helpfile>\\\ldots\\</helpfile>}
+				Before \verb+<endinstall>+ one has the possibilty to add the information to a documentation article for the \NR\ documentation using a XML-like syntax:\cmd{<helpindex>\\\ldots\\</helpindex>\\<helpfile>\\\ldots\\</helpfile>}
 				\begin{lstlisting}
 <install>
 	...
-	PROZEDUREN
+	PROCEDURES
 	<helpindex>
-		INDEXINFORMATIONEN
+		INDEXINFORMATION
 	</helpindex>
 	<helpfile>
-		HILFEARTIKEL
+		DOCUMENTATIONARTICLE
 	</helpfile>
 <endinstall>
 				\end{lstlisting}
-				Die \verb+INDEXINFORMATIONEN+ enthalten die Schlüsselwörter, unter denen \NR\ den betreffenden Artikel zeigen soll, sowie die Informationen zur Darstellung der Artikelübersicht, wenn man \verb+help idx+ eingibt.
+				The \verb+INDEXINFORMATION+ contain the keywords, for which \NR\ shall display the corresponding article, as well as information for the index itself, if one enters \verb+help idx+.
 				
-				Im \verb+HILFEARTIKEL+ finden sich dann die tatsächlichen Erläuterungen und Beschreibungen zum geschriebenen Plugin.
+				The section \verb+DOCUMENTATIONARTICLE+ contains the actual documentation and description of the installed plugin.
 				
 				\helpidx{documentation}
 				%

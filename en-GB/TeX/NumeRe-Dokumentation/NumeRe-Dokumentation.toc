@@ -68,21 +68,21 @@
 \contentsline {section}{\numberline {10.6}Function Values in 1D and 2D}{59}{section.10.6}
 \contentsline {section}{\numberline {10.7}Fourier Transformation}{60}{section.10.7}
 \contentsline {section}{\numberline {10.8}Differential Equations}{61}{section.10.8}
-\contentsline {paragraph}{\nonumberline Note}{61}{section*.27}
-\contentsline {chapter}{\numberline {11}NumeRe-Prozeduren}{63}{chapter.11}
-\contentsline {section}{\numberline {11.1}Konzept}{63}{section.11.1}
-\contentsline {section}{\numberline {11.2}Struktur}{63}{section.11.2}
-\contentsline {section}{\numberline {11.3}Lokale und globale Variablen}{64}{section.11.3}
-\contentsline {section}{\numberline {11.4}R\IeC {\"u}ckgabewerte}{65}{section.11.4}
-\contentsline {section}{\numberline {11.5}Namensr\IeC {\"a}ume}{65}{section.11.5}
-\contentsline {section}{\numberline {11.6}Fehlerbehandlung}{66}{section.11.6}
+\contentsline {paragraph}{\nonumberline Note}{62}{section*.27}
+\contentsline {chapter}{\numberline {11}NumeRe Procedures}{63}{chapter.11}
+\contentsline {section}{\numberline {11.1}Concept}{63}{section.11.1}
+\contentsline {section}{\numberline {11.2}Structure}{63}{section.11.2}
+\contentsline {section}{\numberline {11.3}Local and Global Variables}{64}{section.11.3}
+\contentsline {section}{\numberline {11.4}Return Values}{65}{section.11.4}
+\contentsline {section}{\numberline {11.5}Namespaces}{65}{section.11.5}
+\contentsline {section}{\numberline {11.6}Exception Handling}{66}{section.11.6}
 \contentsline {section}{\numberline {11.7}Debugging}{66}{section.11.7}
-\contentsline {chapter}{\numberline {12}Animierte Graphen}{69}{chapter.12}
-\contentsline {paragraph}{\nonumberline Anmerkung}{69}{section*.29}
-\contentsline {paragraph}{\nonumberline Anmerkung}{69}{section*.30}
-\contentsline {chapter}{\numberline {13}Zusammengesetzte Graphen}{71}{chapter.13}
+\contentsline {chapter}{\numberline {12}Animated Graphs}{69}{chapter.12}
+\contentsline {paragraph}{\nonumberline Note}{69}{section*.29}
+\contentsline {paragraph}{\nonumberline Note}{69}{section*.30}
+\contentsline {chapter}{\numberline {13}Composed Graphs}{71}{chapter.13}
 \contentsline {chapter}{\numberline {14}Plugins}{73}{chapter.14}
-\contentsline {section}{\numberline {14.1}Funktionsweise}{73}{section.14.1}
+\contentsline {section}{\numberline {14.1}Functionality}{73}{section.14.1}
 \contentsline {section}{\numberline {14.2}Installation}{73}{section.14.2}
-\contentsline {paragraph}{\nonumberline Anmerkung}{74}{section*.31}
-\contentsline {section}{\numberline {14.3}Eigene Plugins}{74}{section.14.3}
+\contentsline {paragraph}{\nonumberline Note}{74}{section*.31}
+\contentsline {section}{\numberline {14.3}Custom Plugins}{74}{section.14.3}

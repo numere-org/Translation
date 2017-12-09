@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
+NormalPos.right=1541
 NormalPos.bottom=919
 Class=LaTeXView
 Document=NumeRe-Dokumentation.tex
 
 [Frame0_View0,0]
-TopLine=1247
-Cursor=86510
+TopLine=1577
+Cursor=106991
 
 [Frame1]
 Flags=0
@@ -29,7 +29,7 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
+NormalPos.right=1541
 NormalPos.bottom=919
 Class=LaTeXView
 Document=listingdefines.tex
@@ -47,7 +47,7 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
+NormalPos.right=1541
 NormalPos.bottom=919
 Class=LaTeXView
 Document=..\_header\header_phys_en.tex
@@ -65,7 +65,7 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
+NormalPos.right=1541
 NormalPos.bottom=919
 Class=LaTeXView
 Document=..\_header\command.tex
