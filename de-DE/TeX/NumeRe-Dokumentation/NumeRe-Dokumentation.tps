@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
-NormalPos.bottom=893
+NormalPos.right=1541
+NormalPos.bottom=919
 Class=LaTeXView
 Document=NumeRe-Dokumentation.tex
 
 [Frame0_View0,0]
-TopLine=747
-Cursor=52196
+TopLine=724
+Cursor=55097
 
 [Frame1]
 Flags=0
@@ -29,16 +29,34 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1682
-NormalPos.bottom=893
+NormalPos.right=1541
+NormalPos.bottom=919
 Class=LaTeXView
-Document=listingdefines.tex
+Document=..\..\..\en-GB\TeX\NumeRe-Dokumentation\NumeRe-Dokumentation.tex
 
 [Frame1_View0,0]
+TopLine=639
+Cursor=47428
+
+[Frame2]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=1541
+NormalPos.bottom=919
+Class=LaTeXView
+Document=..\..\..\common\listingdefines.tex
+
+[Frame2_View0,0]
 TopLine=0
-Cursor=181
+Cursor=5861
 
 [SessionInfo]
-FrameCount=2
+FrameCount=3
 ActiveFrame=0
 
