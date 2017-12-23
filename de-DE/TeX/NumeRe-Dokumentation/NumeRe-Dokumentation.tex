@@ -249,7 +249,7 @@ KOMMANDO1; KOMMANDO2; AUSDRUCK1; KOMMANDO3; AUSDRUCK2; ...
 				\begin{lstlisting}
 load DATEIPFAD/DATEI.EXT
 				\end{lstlisting}
-				Dateipfade und -Namen mit Leerzeichen müssen von Anführungzeichen umgeben sein. Der hier gezeigte \lstinline+DATEIPFAD+ kann dabei auch weggelassen werden, wenn die Datei sich im Standardordner \lstinline+<loadpath>+ (Standardmäßig der Unterordner ">data"< im \NR-Stammverzeichnis) befindet. Wird die Dateierweiterung \lstinline+.EXT+ weggelassen, verwendet \NR\ die erste Datei, deren Name mit \lstinline+DATEI+ übereinstimmt und bestimmt den Dateityp selbst. In der \NR-Hilfe finden sich unter \lstinline+help load+ noch weitere Informationen.
+				Dateipfade und -Namen mit Leerzeichen müssen von Anführungzeichen umgeben sein. Der hier gezeigte \lstinline+DATEIPFAD+ kann dabei auch weggelassen werden, wenn die Datei sich im Standardordner \verb+<loadpath>+ (Standardmäßig der Unterordner ">data"< im \NR-Stammverzeichnis) befindet. Wird die Dateierweiterung \lstinline+.EXT+ weggelassen, verwendet \NR\ die erste Datei, deren Name mit \lstinline+DATEI+ übereinstimmt und bestimmt den Dateityp selbst. In der \NR-Hilfe finden sich unter \lstinline+help load+ noch weitere Informationen.
 				
 				In einer Standard-\NR-Installation befinden sich Beispieldateien im Unterordner ">samples"<. Diese können durch z.B.
 				\begin{lstlisting}
@@ -413,7 +413,7 @@ vect3d
 					\item \lstinline+vect3d+: ähnlich wie \lstinline+vect+ berechnet dies einen Vektorplot, allerdings den eines dreidimensionalen Vektorfeldes: $\vec A(x,y,z) = A_x(x,y,z)\,\hat e_x + A_y(x,y,z)\,\hat e_y + A_z(x,y,z)\,\hat e_z$.
 				\end{itemize}
 			\section{Ausgabe}
-				Das standardmäßige Ausgabe für Plots ist der \NR-GraphViewer, in dem Plots noch zusätzlich modifiziert werden können. Zusätzlich können Plots aber auch direkt in eine Bilddatei im PNG-Format im Verzeichnis \lstinline+<plotpath>+ (Dies ist standardmäßig der Unterorder ">plots"< im \NR-Stammverzeichnis) exportiert werden. Dies kann mit den Plotoptionen \lstinline+opng+, \lstinline+oeps+, \lstinline+ogif+, \lstinline+osvg+ und \lstinline+otex+ erreicht werden.
+				Das standardmäßige Ausgabe für Plots ist der \NR-GraphViewer, in dem Plots noch zusätzlich modifiziert werden können. Zusätzlich können Plots aber auch direkt in eine Bilddatei im PNG-Format im Verzeichnis \verb+<plotpath>+ (Dies ist standardmäßig der Unterorder ">plots"< im \NR-Stammverzeichnis) exportiert werden. Dies kann mit den Plotoptionen \lstinline+opng+, \lstinline+oeps+, \lstinline+ogif+, \lstinline+osvg+ und \lstinline+otex+ erreicht werden.
 				
 				Um einen einfachen Plot in z.B. ">graph\_der\_messung.png"< zu erzeugen, ist die Option
 				\begin{lstlisting}
@@ -758,16 +758,13 @@ start erstes
 				Erhöht man die Zahl der erzeugten Zufallszahlen (z.B. \lstinline+1e6+ statt \lstinline+1e5+), so wird die Annäherung zunehmend genau. Allerdings unterstützt der Cache nicht beliebig viele Elemente. Für noch größere Zahlen muss man also auf andere Verfahren zurückgreifen.
 	\part{Fortgeschrittene Bedienung}
 		\chapter{Eigene Funktionen}
-			\NR\ bringt bereits eine große Zahl vordefinierter Funktionen mit (siehe \lstinline+list -func+). Dennoch kann es häufig hilfreich und praktisch sein, wenn man sich eigene Funktionen definieren kann, die z.B. bereits bestehende zusammenfassen. \NR\ kann bis zu 100 selbst definierte Funktionen speichern.
+			\NR\ bringt bereits eine große Zahl vordefinierter Funktionen mit (siehe \lstinline+list -func+). Dennoch kann es praktisch sein, wenn man sich eigene Funktionen definieren kann, die z.B. bereits bestehende zusammenfassen. \NR\ kann bis zu 100 selbst definierte Funktionen speichern.
 			\section{Definition}
 				\cmd{define}Eine eigene Funktion wird mittels
 				\begin{lstlisting}
 define meine_funktion(ARGS) := AUSDRUCK(ARGS)
 				\end{lstlisting}
-				definiert. Diese Zeile erzeugt die Funktion \lstinline+meine_funktion()+, die den komplexeren Ausdruck der Argumente zusammenfasst. Die Bezeichnungen und die Zahl der Argumente können beliebig gewählt werden, so lange sie die Maximalzahl von 10 nicht überschreiten. Wenn das letzte Argument der Funktion ">\lstinline+...+"< lautet, so kann für dieses Argument von einem bis zu beliebig vielen Werten angegeben werden. Der definierte Ausdruck muss dann allerdings auch mit beliebig vielen Werten umgehen können, z.B.:\cmd{"\ldots"\:}
-				\begin{lstlisting}
-define meine_funktion(x,...) := x*sum(...)
-				\end{lstlisting}
+				definiert. Diese Zeile erzeugt die Funktion \lstinline+meine_funktion()+, die den komplexeren Ausdruck der Argumente zusammenfasst. Die Bezeichnungen und die Zahl der Argumente können beliebig gewählt werden, so lange sie die Maximalzahl von 10 nicht überschreiten. Wenn das letzte Argument der Funktion ">\lstinline+...+"< lautet, so kann für dieses Argument von einem bis zu beliebig vielen Werten angegeben werden. Der definierte Ausdruck muss dann allerdings auch mit beliebig vielen Werten umgehen können, z.B.:\cmd{"\ldots"\:} \lstinline+meine_funktion(x,...) := x*sum(...)+
 				
 				Der Name der Funktion ist auch beliebig, so lange er nicht mit einer Ziffer beginnt oder einer bereits (vor-)definierten Funktion entspricht.
 				
@@ -777,7 +774,7 @@ redefine meine_funktion(ARGS) := NEUER_AUSDRUCK(ARGS)
 				\end{lstlisting}
 				kann die Funktion \lstinline+meine_funktion()+ umdefiniert werden. Hierbei müssen die neuen Argumente natürlich nicht mit den bisherigen übereinstimmen.
 				
-				Selbst definierte Funktionen können mit Kommentaren versehen werden, um zu erläutern, was der Zweck der Funktion ist. Dieser Kommentar wird dann unter
+				Selbst definierte Funktionen können mit Kommentaren versehen werden, um zu erläutern, was der Zweck der Funktion ist. Dieser Kommentar wird dann im Funktionenbaum und unter
 				\begin{lstlisting}
 list -define
 				\end{lstlisting}
@@ -787,7 +784,7 @@ list -define
 				\begin{lstlisting}
 define meine_funktion(ARGS) := AUSDRUCK(ARGS) -set comment="KOMMENTAR"
 				\end{lstlisting}
-				angegeben werden. Eine nachträgliche Kommentierung kann mittels \lstinline+redefine+ durchgeführt werden.
+				angegeben, bzw. nachträglich mittels \lstinline+redefine+ durchgeführt werden.
 				
 				\helpidx{define}
 				\cmd{undefine}Um selbst definierte Funktionen wieder zu entfernen, verwendet man
@@ -1075,7 +1072,7 @@ datagrid data(:,3) -x=data(:,1) y=data(:,2)
 			\section{Fouriertransformation}
 				Zu den häufig verwendeten Auswertealgorithmen in der modernen Wissenschaft gehören auch Fouriertransformationen, die zum Beispiel auch frequenzabhängige Informationen aus einem vollkommen verrauschten Signal extrahieren können.
 				
-				\NR\ ist hierzu mit einem Algorithmus zur schnellen Fouriertransformation (\emph{fast fourier transform}) ausgestattet, der durch das Kommando \lstinline+fft+\cmd{fft} ausgerufen wird und die übergebenen Datensätze zur Analyse in ihre enthaltenen Frequenzen zerlegen kann:
+				\NR\ ist hierzu mit einem Algorithmus zur schnellen Fouriertransformation (\emph{fast fourier transform}) ausgestattet, der durch das Kommando \lstinline+fft+\cmd{fft} aufgerufen wird und die übergebenen Datensätze zur Analyse in ihre enthaltenen Frequenzen zerlegen kann:
 				\begin{lstlisting}
 fft DATEN()
 				\end{lstlisting}
@@ -1087,7 +1084,7 @@ fft DATEN()
 				
 				\helpidx{fft}
 			\section{Differentialgleichungen}
-				Die wenigsten Differentialgleichungen lassen sich analytisch oder durch zufriedenstellende Näherungen lösen. Dies ist das Fachgebiet der Numerik, die die Differentialgleichungen mittels numerischen Algorithmen integriert und dadurch die entsprechenden Trajektorien berechnen kann.
+				Die wenigsten Differentialgleichungen lassen sich analytisch oder durch zufriedenstellende Näherungen lösen. Dies ist das Fachgebiet der Numerik, die die Differentialgleichungen mittels numerischer Algorithmen integriert und dadurch die entsprechenden Trajektorien berechnen kann.
 				
 				\NR\ bietet einen solchen Integrationsalgorithmus mittels des Kommandos \lstinline+odesolve+\cmd{odesolve}. Dieser Algorithmus kann Differentialgleichungen erster Ordnung numerisch integrieren. Da man aber auch Differentialgleichungen $n$-ter Ordnung in $n$ Differentialgleichungen erster Ordnung zerlegen kann, stellt dies kein allzu großes Hindernis dar.
 				
@@ -1124,7 +1121,7 @@ odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
 				
 				Mittels \NR-Prozeduren ist es des Weiteren möglich, eigene Unterprogramme in \NR\ zu schreiben oder weitere Funktionalität in Form eines neuen Kommandos hinzuzufügen (dies ist als \emph{Plugin} bekannt).
 				
-				Der Stellenwert einer \NR-Prozedur innerhalb von \NR\ ist als in etwa das Äquivalent einer Funktion in einer gewöhnlichen Programmiersprache.
+				Der Stellenwert einer \NR-Prozedur innerhalb von \NR\ ist also in etwa das Äquivalent einer Funktion in einer gewöhnlichen Programmiersprache.
 				
 				\helpidx{procedure}
 			\section{Struktur}
@@ -1150,7 +1147,7 @@ inline
 				\begin{lstlisting}
 new -proc=$PROZEDURNAME
 				\end{lstlisting}
-				wird die \NR-Prozedur \lstinline+$PROZEDURNAME+ in \lstinline+<procpath>/PROZEDURNAME.nprc+ angelegt. Durch die darauffolgende Eingabe von
+				wird die \NR-Prozedur \lstinline+$PROZEDURNAME+ in \verb+<procpath>/PROZEDURNAME.nprc+ angelegt. Durch die darauffolgende Eingabe von
 				\begin{lstlisting}
 edit $PROZEDURNAME
 				\end{lstlisting}
@@ -1239,7 +1236,7 @@ PLOTCMD AUSDRUCK(t,VARS) -set animate OPTIONEN
 			
 			\helpidx{plotoptions}
 			\paragraph{Anmerkung}
-				\NR\ kann nativ keine Animationen aus Datensätzen erzeugen. Dies ist u.A. der Tatsache geschuldet, dass der Zeitparameter auch nicht-ganzzahlig Werte annehmen kann, Tabellenobjekte allerdings nur ganzzahlige Indices akzeptieren. Um eine Animation aus Datensätzen zu generieren, muss folglich auf die Einzelbilderzeugung mittels einer Schleife zurückgegriffen werden.\bigskip\\
+				\NR\ kann nativ keine Animationen aus Datensätzen erzeugen. Dies ist u.A. der Tatsache geschuldet, dass der Zeitparameter auch nicht-ganzzahlige Werte annehmen kann, Tabellenobjekte allerdings nur ganzzahlige Indices akzeptieren. Um eine Animation aus Datensätzen zu generieren, muss folglich auf die Einzelbilderzeugung mittels einer Schleife zurückgegriffen werden.\bigskip\\
 			Standardmäßig erzeugt \NR\ 50 Frames je Animation mit einer jeweiligen Dauer von $1/25$~s und verwendet als Zeitparameter \lstinline+t+ das Intervall $[0;1]$. Dies kann natürlich geändert werden, allerdings kann es bei zu vielen Frames zu Speicherschwierigkeiten kommen, da die Frames einzeln im Speicher abgelegt werden müssen:
 			\begin{lstlisting}
 PLOTCMD AUSDRUCK(t,VARS) -set t=0:2 animate=100 OPTIONEN
@@ -1270,6 +1267,10 @@ endcompose
 			
 			\helpidx{compose}
 			Der \lstinline+compose+-Modus erlaubt es des Weiteren, die Beschränkung auf eine einzelne Funktion bei den 3D-Plotstilen (außer \lstinline+plot3d+) zu umgehen, indem die Funktionen innerhalb des \lstinline+compose+-Modus in sukzessiven 3D-Plots angegeben wird.
+			
+			Zusätzlich wird mittels dieses Modus, des Parameters \lstinline+-multiplot+ und des Kommandos \lstinline+subplot+ die Erzeugung mehrerer Plots nebeneinander im gleichen Frame ermöglicht. Details finden sich im entsprechenden Hilfeartikel.
+			
+			\helpidx{subplot}
 		\chapter{Plugins}
 			\NR\ wird zwar beständig weiterentwickelt, doch es wird immer Funktionalitäten geben, die nicht implementiert werden, oder Funktionen, die nicht dem tatsächlichen Wunsch des \NR-Benutzers entsprechen. Hier kommen die \NR-Plugins in Spiel, die bestehende Funktionalitäten umschreiben oder neue hinzufügen können.
 			\section{Funktionsweise}
@@ -1375,7 +1376,7 @@ $plugins~PLUGINNAME~main(<CMDSTRING>)
 ENABLE_FULL_LOGGING
 ENABLE_FORCE_OVERRIDE
 				\end{lstlisting}
-				die entweder die komplette Installation zeilenweise in \lstinline+<>/install.log+ protokollieren oder bereits vorhandene Plugins eines anderen Autors mit gleichem Pluginkommando überschreiben.
+				die entweder die komplette Installation zeilenweise in \verb+<>/install.log+ protokollieren oder bereits vorhandene Plugins eines anderen Autors mit gleichem Pluginkommando überschreiben.
 				
 				\helpidx{plugins}
 				Vor \lstinline+<endinstall>+ besteht noch die Möglichkeit, dass ein eifriger Programmierer die Information für den \NR-Hilfeartikel in Form einer XML-Syntax eingebindet:\cmd{<helpindex>\\\ldots\\</helpindex>\\<helpfile>\\\ldots\\</helpfile>}

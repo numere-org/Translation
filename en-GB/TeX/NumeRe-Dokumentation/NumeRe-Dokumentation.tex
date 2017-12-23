@@ -71,9 +71,9 @@
 				The >>Stable Version<< installer only writes the file links and the link to the uninstaller into the windows registry. No configuration values or other relevant data for execution are written to the registry.
 	\part{Basic Usage}
 		\chapter{First Steps}
-			Most beginnings are not really easy. This is quite obvious, therefore we gathered all relevant first things, which shall make the beginning of the Work with \NR\ as easy as possible. But this documentation doesn't claim that it might by complete. All these possible options and their values are not described here. Their description may be found in the integrated documentation.
+			Most beginnings are not really easy. This is quite obvious, therefore we gathered all relevant first things, which shall make the beginning of the work with \NR\ as easy as possible. But this documentation doesn't claim that it might by complete. Not all of the possible options and their values are described here. Their description may be found in the integrated documentation.
 			\paragraph{Note}
-				This documentation is supported with marginal texts, which shall point to actions inside \NR. Marginal texts printed in read are syntax elements, which may be entered into the \NR\ console. Bordered and dark blue marginal texts name articles in the integrated \NR\ documentation.
+				This documentation is supported with marginal texts, which shall point to actions in \NR. Marginal texts printed in red are syntax elements, which may be entered into the \NR\ console. Bordered and dark blue marginal texts name articles in the integrated \NR\ documentation.
 			\section{The User Interface}
 				\begin{figure}[htb]%
 					\centering
@@ -81,9 +81,9 @@
 					\caption{The starting view of \NR\ with the described interface elements. The starting page of \NR, which describes some basics, is also visible. \emph{Note: All screenshots shown in this document are in german language but if you've installed the english version, the interface language will be English, of course}}
 					\label{fig:ui}
 				\end{figure}
-				The user interface of \NR\ is separated in five central elements. Most important of them is the \emph{console} (bottom center) and the \emph{editor} (top right). With the console one may interact directly with \NR\ and the editor may be used to edit text files, \NR\ scripts and \NR\ procedures. The \emph{entry history} (bottom right) is an additional element, which protocols all entries in the console, so that they may be repeated by dragging them to the console or by double clicking in them. The \emph{file tree} (left sidebar, first tab) and the \emph{symbol tree} (left sidebar, second tab) support the navigation in the files or the commands and functions, respectively. The editor itself also contains tabs, so that multiple files may be opened and edited.
+				The user interface of \NR\ is separated in five central elements. Most important of them is the \emph{console} (bottom center) and the \emph{editor} (top right). Using the console one may interact directly with \NR\ and the editor may be used to edit text files, \NR\ scripts and \NR\ procedures. The \emph{input history} (bottom right) is an additional element, which protocols all inputs in the console, so that they may be repeated by dragging them to the console or by double clicking in them. The \emph{file tree} (left sidebar, first tab) and the \emph{symbol tree} (left sidebar, second tab) support the navigation in the files or the commands and functions, respectively. The editor itself also contains tabs, so that multiple files may be opened and edited.
 				
-				During the first start the \NR\ editor displays a starting page, which shall make the first task in the application more easy. Users, which are already knowing similar software (such as \textsc{Matlab}), will get familiar with these information really fast. However, we will add some first words.
+				During the first start the \NR\ editor displays a starting page, which shall make the first task in the application more easy. Users, who are already knowing similar software (such as \textsc{Matlab}), will get familiar to \NR\ with these information really fast. However, we will add some first words.
 				\begin{figure}[p]%
 					\centering
 					\includegraphics[width=0.2\textwidth]{_graphics/filetree.png}\hspace{5em}
@@ -92,7 +92,7 @@
 					\label{fig:trees}
 				\end{figure}
 				
-				First, we'll look at the interaction over the console. There's an arrow \lstinline+<-+ at the beginning of the line, which emphasises that an input is expected (\autoref{fig:ui}). The program's output is prefixed with an arrow, pointing in the opposite direction \lstinline+->+. You may \emph{only} enter something, if such an input arrow (or an explicit claim) appears.
+				First, we'll look at the interaction over the console. There's an arrow \lstinline+<-+ at the beginning of the line, which emphasises that an input is expected (\autoref{fig:ui}). The program's output is prefixed with an arrow, pointing to the opposite direction \lstinline+->+. You may \emph{only} enter something, if such an input arrow (or an explicit claim) appears.
 				
 				You may enter mathematical-numerical expressions as well as commands into the \NR\ console. The syntax of the mathematical-numerical expressions is quite intuitive and will be described in the next section. The syntax of the commands has to be described more precisely.
 				
@@ -124,7 +124,7 @@ copy <>/samples/data* -target=<loadpath>/*
 				\end{quotation}
 				
 				\helpidx{syntax}
-				All commands are listed in the symbol tree and separated in different categories, so that the needed command may be found easily. If you dwell your mouse over a command, a tooltip will be displayed showing a short explanation. If this information is not enough, you may display the documentation article concerning the command, e.g. through\cmd{help}
+				All commands are listed in the symbol tree and they are separated into different categories, so that the needed command may be found easily. If you dwell your mouse over a command, a tooltip will be displayed showing a short explanation. If this information is not enough, you may display the documentation article concerning the command, e.g. through\cmd{help}
 				\begin{lstlisting}
 help plot
 				\end{lstlisting}
@@ -163,7 +163,7 @@ list -func
 				into the console. \lstinline+list -func+ may also be restricted further.
 				
 				\helpidx{list}
-				\NR\ cannot only handle numbers but also variables. The variables \lstinline+x+, \lstinline+y+, \lstinline+z+, \lstinline+t+ and \lstinline+ans+ are already predefined. However, you may define more variables for the current session. This is done either automatically (if \NR\ stumbles upon an unknown variable) or through and explicit assignment:
+				\NR\ cannot only handle numbers but also variables. The variables \lstinline+x+, \lstinline+y+, \lstinline+z+, \lstinline+t+ and \lstinline+ans+ are already predefined. However, you may define more variables for the current session. This is done either automatically (if \NR\ stumbles upon an unknown variable) or through an explicit assignment:
 				\begin{lstlisting}
 neue_variable = 5
 				\end{lstlisting}
@@ -195,22 +195,22 @@ list -OBJECT
 					\end{lstlisting}
 					These commands call the integrated documentation (\lstinline+help+ or \lstinline+help TOPIC+ for the desired topic, respectively), the keyword search (\lstinline+find TERMS+) and list objects (\lstinline+list -OBJECT+).
 					
-					All commands have an entry in the \NR\ documentation. This article may be read by entering \lstinline+help COMMAND+ into the console or by using the corresponding item in the context menu and contains all necessary information about the command and---if applicable---references to further important articles. In the case that an information may not be found direclty in the \NR\ documentation, you may use the keyword search (\lstinline+find+), which will also return the corresponding articles in the \NR\ documentation.
+					All commands have an entry in the \NR\ documentation. This article may be read by entering \lstinline+help COMMAND+ into the console or by using the corresponding item in the context menu and contains all necessary information about the command and---if applicable---references to further important articles. In the case that an information may not be found directly in the \NR\ documentation, you may use the keyword search (\lstinline+find+), which will also return the corresponding articles in the \NR\ documentation.
 					\paragraph{Note}
 						By using a semicolon >>\lstinline+;+<< you may also enter multiple commands and expressions, which shall be evaluated successively, in a single line:
 						\begin{lstlisting}
 COMMAND1; COMMAND2; EXPRESSION1; COMMAND3; EXPRESSION2; ...
 						\end{lstlisting}
 		\chapter{Loading and Using Data}
-			One of the main tasks in scientific work is data analysis. Therefore it is necessary to use applications, which may load and process the corresponding large amout of data in a reasonable time frame. \NR\ transforms all read data into a table and may calculate statistics, histograms and more elaborate evaluations.
+			One of the main tasks in scientific work is data analysis. Therefore it is necessary to use applications, which may load and process the corresponding large amount of data in a reasonable time frame. \NR\ transforms all read data into a table and may calculate statistics, histograms and more elaborate evaluations.
 			\section{File Types}
-				In addition to simple text files in ANSI format (using the file extensions *.txt and *-dat) \NR\ can load the following file formats:
+				In addition to simple text files in ANSI format (using the file extensions *.txt and *.dat) \NR\ can load the following file formats:
 				\begin{itemize}
 					\item \textbf{CassyLab file (*.labx).} This file type is only used by CassyLab and contains a complete CassyLab experiment. However, \NR\ will only extract the data table.
 					\item \textbf{CSV file (*.csv).} Comma-Separated-Values files are a nearly-standard for data exchange. However, there is no real >>CSV standard<< defined, so that though tested it is possible that \NR\ cannot read single CSV files correctly. (Please notify the programmer if you face such a problem and forward him the file.)
 					\item \textbf{JCAMP-DX file (*.dx, *.jdx and *.jcm).} JCAMP-DX files (meaning \emph{Joint Committee on Atomic and Molecular Physical data -- Data eXchange}) are a standard for file exchanges of spectroscopy data. \NR\ will only extract the data table out of these files.
-					\item \textbf{OpenDocument spreadsheet (*.ods).} These are data tables, which are created for example by OpenOffice Calc. \NR\ can only extract the real numerical and string values but not the equations. Please note also that files opened with OpenOffice Calc are locked: these spreadsheets are not readable by \NR.
-					\item \textbf{Excel workbooks (*.xls and *.xlsx).} These are data tables, whcich are created by Excel. \NR\ will only extract the numerical and string values, not the equations. The legacy Excel format also doesn't provide the values calculated by the equations in the data tables, so that these are not available in this case. Please note also that files opened with Excel are locked: these workbooks are not readable by \NR.
+					\item \textbf{OpenDocument spreadsheet (*.ods).} These are data tables, which are created for example by OpenOffice Calc. \NR\ can only extract the real numerical and string values but not the equations. Please note also that files opened by OpenOffice Calc are locked: these spreadsheets are not readable by \NR.
+					\item \textbf{Excel workbooks (*.xls and *.xlsx).} These are data tables, which are created by Excel. \NR\ will only extract the numerical and string values, not the equations. The legacy Excel format also doesn't provide the values calculated by the equations in the data tables, so that these are not available in this case. Please note also that files opened with Excel are locked: these workbooks are not readable by \NR.
 					\item \textbf{IGOR Binary Waves (*.ibw).} IGOR Binary Waves contain the data of a (1, 2 or 3 dimensional) IGOR wave.
 					\item \textbf{NumeRe data file (*.ndat).} NumeRe data files are a data format by \NR, which is used for fast saving and loading of data sets.
 				\end{itemize}
@@ -220,7 +220,7 @@ COMMAND1; COMMAND2; EXPRESSION1; COMMAND3; EXPRESSION2; ...
 				\begin{itemize}
 					\item \textbf{Text file (*.dat or *.txt).} \NR\ creates a text file in ANSI encoding, which is following the formatting standards in the next section. Most of the other applications should be able to read these files
 					\item \textbf{NumeRe  data file (*.ndat).} This file format can only be read by \NR. However, this file format is documented online and may implemented in other programs.
-					\item \textbf{CSV file (*.csv).} \NR\ creates a CSV file, where commas \lstinline+,+ are used as column and dots lstinline+.+ are used as decimal separators. (Some table calculations, especially those, which are using the comma as decimal separator, probably cannot read these files: if you replace the commas with semicolons \lstinline+;+ and the dots with commas, this problem should be fixed. The programmer does not understand this behavior.)
+					\item \textbf{CSV file (*.csv).} \NR\ creates a CSV file, where commas \lstinline+,+ are used as column and dots \lstinline+.+ are used as decimal separators. (Some table calculations, especially those, which are using the comma as decimal separator, probably cannot read these files: if you replace the commas with semicolons \lstinline+;+ and the dots with commas, this problem should be fixed. The programmer does not understand this behavior.)
 					\item \textbf{Excel Workbook (*.xls).} \NR\ may write the data in the legacy Excel-(97-2003)-Format (*.xls) for further processing in Excel and similar applications.
 					\item \textbf{\TeX\ file (*.tex).} \NR\ writes a table using the \TeX\ standard. The comments in this file contain the preconditions for including the table in a \TeX\ document (\emph{booktabs} and \emph{longtable} Packages).
 				\end{itemize}
@@ -247,7 +247,7 @@ COMMAND1; COMMAND2; EXPRESSION1; COMMAND3; EXPRESSION2; ...
 				\begin{lstlisting}
 load FILEPATH/FILE.EXT
 				\end{lstlisting}
-				File paths and file names containing whitespaces have to be surrounded with quotation marks. The exemplary \lstinline+FILEPATH+ may be omitted, if the file is located in the default directory \lstinline+<loadpath>+ (which is---as default---the folder >>data<< in the \NR\ root directory). If the file extension \lstinline+.EXT+ is omitted, \NR\ will use the first file matching to \lstinline+FILE+ and determine the filetype by itself. There is further information on this topic in the \NR\ documentation at \lstinline+help load+.
+				File paths and file names containing whitespaces have to be surrounded with quotation marks. The exemplary \lstinline+FILEPATH+ may be omitted, if the file is located in the default directory \verb+<loadpath>+ (which is---as default---the folder >>data<< in the \NR\ root directory). If the file extension \lstinline+.EXT+ is omitted, \NR\ will use the first file matching to \lstinline+FILE+ and determine the filetype by itself. There is further information on this topic in the \NR\ documentation at \lstinline+help load+.
 				
 				There are some example files in the subdirectory >>samples<< in a default \NR\ installation. You may load them for example through
 				\begin{lstlisting}
@@ -270,7 +270,7 @@ data(3,3:)
 				\end{lstlisting}
 				In these examples a single element is selected (\lstinline+data(3,1)+ for third row and first column), a whole column (\lstinline+data(:,1)+ for all rows in the first column), a subselection of a column (\lstinline+data(4:55,4)+ for fourth to 55th row and fourth column) or a subsection of a row (\lstinline+data(3,3:)+ for third row and third to last column).
 				
-				You only may extract values using columns or rows inside of calculations, i.e. the interval syntax may only be used for rows or columns. It is not possible to perform calculations using subtables, however, you may use the matrix operations out of a later chapter to achieve this behaviour. However, you may use different elements of \lstinline+data()+ in a single expression:
+				You only may extract values using columns or rows inside of calculations, i.e. the interval syntax may only be used for rows or columns. It is not possible to perform calculations using subtables. Instead, you may use the matrix operations out of a later chapter to achieve this behaviour. However, you may use different elements of \lstinline+data()+ in a single expression:
 				\begin{lstlisting}
 (cos(data(:,1)) + sin(data(:,2))) * sqrt(data(1,3:))
 				\end{lstlisting}
@@ -303,7 +303,7 @@ avg(data(i1:i2,j1))
 				The command \lstinline+stats+ returns nearly all reasonable statistical value of the table, which is for example the average, the standard deviation and the standard error, RMS, skewness, excess and the student factor (for a two-fold 95 \%\ confidence interval). Most of them can also be calculated through single functions.
 				
 				\helpidx{stats}
-				A very common way of analyzing a data set is generating a histogram. Histograms are a way to visualize the frequency of a measured quantity. This may either be the period of a oscillation, or the life time of elementary particles or another quantity.
+				A very common way of analyzing a data set is generating a histogram. Histograms are a way to visualize the frequency of a measured quantity. This may either be the period of an oscillation, the life time of elementary particles, the distribution of measured length values or another measured quantity.
 				\begin{figure}[htb]%
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/histogramm.png}
@@ -317,19 +317,19 @@ hist data(i1:i2,j1:j2)
 				\end{lstlisting}
 				The command \lstinline+hist+ supports a large number of parameters, which may modify the created histogram even further, though the results without any parameters are already good (\autoref{fig:histogramm}). The number of used bins is determined by the \emph{Rule of Sturges}, but may also be set directly or based upon the \emph{Rule of Scott} or the \emph{Rule of Freedman and Diaconis}.
 				
-				A histogram is calculated for each column of the data set and the results are presented in a common graph. Columns, which don't contain any reasonale data, have to be excluded using the interval syntax.
+				A histogram is calculated for each column of the data set and the results are presented in a common graph. Columns, which don't contain any reasonable data, have to be excluded using the interval syntax.
 				
 				\NR\ may also calculate histograms out of a two-dimensional data set. You either have to pass the option \lstinline+grid+ to \lstinline+hist+, then a single histogram of only the $z$ values ignoring their spatial information is calculated. Or you can use the command \cmd{hist2d}\lstinline+hist2d+ for histograms in two spatial directions (like projections along the $x$ and $y$ axes). Further details are listed in the corresponding documentation article.
 				
 				\helpidx{hist}
-				One additional, very common way of analyzing data next to histograms and statistics is to fit a function (sometimes called \emph{model} or \emph{regression curve}) to the measured (and already somehow processed) data.
+				In addition to histograms and statistics it's very common to fit a function (sometimes called \emph{model} or \emph{regression curve}) to the measured (and already somehow processed) data.
 				
 				To fit a function \lstinline+FUNCTION()+ to data in \lstinline+data()+, you can use the command \lstinline+fit+:\cmd{fit}
 				\begin{lstlisting}
 fit data(:,j1:j2) -with=FUNCTION(x,PARAMS) params=[PARAMS=INITIALW.]
 fit data(:,1:2) -with=A*sin(B*x+C) params=[A=1,B=3,C=0]
 				\end{lstlisting}
-				\NR\ will now try to alter the parameters \lstinline+PARAMS+ in a way that the \lstinline+FUNCTION()+ matches the data points best. The fitted values are stored in the parameters so that you can continue your calculations with these values directly. (In newer \NR\ versions it os not necessary to provide the parameters through \lstinline+params+. \NR\ will detect them on its own.)
+				\NR\ will now try to alter the parameters \lstinline+PARAMS+ in a way that the \lstinline+FUNCTION()+ matches the data points best. The fitted values are stored in the parameters so that you can continue your calculations with these values directly. (In newer \NR\ versions it is not necessary to provide the parameters through \lstinline+params+. \NR\ will detect them on its own.)
 				
 				If \NR\ reaches an optimal set of parameters, it will cancel the algorithm and return an overview of the parameters, which is presented as an example in the following:
 				\begin{verbatim}
@@ -371,13 +371,13 @@ fit data(:,1:2) -with=A*sin(B*x+C) params=[A=1,B=3,C=0]
 					If the quantity $\chi^2$ is an indicator on the quality of the fit, can be discussed. In common, one assumes that a fit with the smallest possible $\chi^2$ value has the best possible parameter set. More precise: it's the so-called reduced $\chi^2$ value, which is the important quantity: if it is noticeable smaller than 1, the resulting parameter set seems to fit the data points quite well. If you perform a fit, which will consider the error estimations (see below), this value should be in the range of 1. \NR\ will consider all these conditions and return a corresponding fitting result analysis. But note that the analysis may only support and not fully replace the optical comparation of fitted function and data points.\bigskip\\
 				After the fitting procedure, the fitted function may be displayed graphically using the command \lstinline+plot+ (see next chapter) (\autoref{fig:fit}). This is a good possibility to check the results of the fitting procedure (and should always be performed).
 				
-				If you can estimate the measurment errors, \NR\ may consider these values. Just use\cmd{fitw}
+				If you can estimate the measurement errors, \NR\ may consider these values. Just use\cmd{fitw}
 				\begin{lstlisting}
 fitw data(:,1:2:3) -with=A*sin(B*x+C) params=[A=1,B=1,C=0]
 				\end{lstlisting}
 				\lstinline+fitw+ (for \emph{weighted fit}) uses the error estimations in the third column to calculate the weighting factors for the data points: data points with higher errors are considered less important than those with small errors.
 				
-				If a fitting procedure does not converge, it may help varying the initial values of the parameters (which shall be passed everytime). It also may help to restrict the fitting interval. This may be done either through restricting the rows in \lstinline+data()+ or through passing the option \lstinline+x=a:b+:
+				If a fitting procedure does not converge, it may help varying the initial values of the parameters (which always shall be passed). It also may help to restrict the fitting interval. This may be done either through restricting the rows in \lstinline+data()+ or through passing the option \lstinline+x=a:b+:
 				\begin{lstlisting}
 fit data(:,1:2) -with=A*sin(B*x+C) params=[A=1,B=1,C=0] x=0:4
 				\end{lstlisting}
@@ -390,7 +390,7 @@ copy data(:,:) -target=cache(:,:) transpose
 				\end{lstlisting}
 				and replace \lstinline+data+ with \lstinline+cache+ in all previous examples.
 		\chapter{Creating Graphs}
-			A very important functionality of \NR\ is the creation of function and data graphs. You may visualize the behaviour of functions and data and analyze them more easy. \NR\ can store all created graphs in image files, if you specify that in the options list of the graph.
+			A very important functionality of \NR\ is the creation of graphs of functions and data. You may visualize the behaviour of functions and data and analyze them more easy. \NR\ can store all created graphs in image files, if you specify that in the options list of the graph.
 			\section{Types of Graphs}
 				\NR\ knows a large number of different plot types, which may be modified further by passing further options to the options list. The following list shall only mention the most important plot types. You can get the full list by entering the command \lstinline+list -cmd+:
 				\begin{lstlisting}
@@ -411,7 +411,7 @@ vect3d
 					\item \lstinline+vect3d+: this calculates a vector plot similar to \lstinline+vect+, but it uses a three-dimensional vector field as data basis: $\vec A(x,y,z) = A_x(x,y,z)\,\hat e_x + A_y(x,y,z)\,\hat e_y + A_z(x,y,z)\,\hat e_z$.
 				\end{itemize}
 			\section{Output}
-				The default output channel for plots is the \NR\ GraphViewer, in which the plots may be modified further. Additionally, the plots may be stored into an image file in the PNG format in the directory \lstinline+<plotpath>+ (This is per default the subdirectory >>plots<< in the \NR\ root). You may change the image file format to othe formats. This may be done with the plotoptions \lstinline+opng+, \lstinline+oeps+, \lstinline+ogif+, \lstinline+osvg+ and \lstinline+otex+.
+				The default output channel for plots is the \NR\ GraphViewer, in which the plots may be modified further. Additionally, the plots may be stored into an image file in the PNG format in the directory \verb+<plotpath>+ (This is per default the subdirectory >>plots<< in the \NR\ root). You may change the image file format to other formats. This may be done with the plotoptions \lstinline+opng+, \lstinline+oeps+, \lstinline+ogif+, \lstinline+osvg+ and \lstinline+otex+.
 				
 				To create a simple plot in for example >>graph\_of\_the\_measurement.png<<, you've to pass the option
 				\begin{lstlisting}
@@ -518,7 +518,7 @@ mesh sinc(norm(x,y)) -set rotate=45,135
 				\begin{lstlisting}
 vect -2*y,2*x
 				\end{lstlisting}
-				The first function will be interpreted as the amplitude in $\hat e_x$ direction and the second in $\hat e_y$ direction (\autoref{fig:mesh_vect}d). This command will only accept only one vectorfield per plot.
+				The first function will be interpreted as the amplitude in $\hat e_x$ direction and the second in $\hat e_y$ direction (\autoref{fig:mesh_vect}d). This command will accept only one vectorfield per plot.
 				
 				The length of the vector arrows correspond to the local amplitude of the vectorfield. To deactivate this effect, you may pass
 				\begin{lstlisting}
@@ -618,7 +618,7 @@ delete CACHE(i1:i2,j1:j2)
 				
 				\helpidx{cache}
 			\section{Usage}
-				You may use caches similar to the \lstinline+data()+ table. The central difference is the fact that the contents of caches may be altered. This means, you can also assign new values similar to variables to their elements:\cmd{cache()}
+				You may use caches similar to the \lstinline+data()+ table. The central difference is the fact that the contents of caches may be altered. This means, you can also assign new values to their elements similar to the way, variables are handled:\cmd{cache()}
 				\begin{lstlisting}
 CACHE(:,1) = VALUE1, VALUE2, VALUE3, ...
 CACHE(4,5:) = data(:,1)
@@ -626,7 +626,7 @@ CACHE(:,1) = CACHE(2,:)
 				\end{lstlisting}
 				The new values replace the already available values in \lstinline+CACHE()+.
 				
-				At all location, where we used \lstinline+data()+ previously, you may also use caches with the identical syntax. Internally there's no difference (except of the possibility of changing elements) between \lstinline+data()+ and the caches:
+				At every occasion, where we used \lstinline+data()+ previously, you may also use caches with the identical syntax. Internally there's no difference (except of the possibility of changing elements) between \lstinline+data()+ and the caches:
 				\begin{lstlisting}
 hist cache(:,1)
 stats cache()
@@ -635,9 +635,9 @@ fit cache(:,4:5) -with=A*sin(B*x+C) params=[A=1, B=1, C=0]
 				
 				Data, which is created by some commands (e.g. \lstinline+datagrid+), is sometimes written automatically to \lstinline+cache()+. Also, some of the commands are creating their target caches by themselves.
 			\section{Sorting, Smoothing and Resampling}
-				Sometimes one has to modify the data points further that one can reasonable process them. \NR\ offers the possibility to sort, smooth or resample (change the number of data points) the data.
+				Sometimes one has to modify the data points further so that one can process them reasonably. \NR\ offers the possibility to sort, smooth or resample (change the number of data points) the data.
 				
-				The data in a cache (and in principle also in \lstinline+data()+) may be sorted ascending or descending. In the following one might find distinct thresholds or points of interest in the measured data more easily.
+				The data in a cache (and in principle also in \lstinline+data()+) may be sorted ascending or descending. As a consequence one might find distinct thresholds or points of interest in the measured data more easily.
 				
 				Through entering\cmd{sort}
 				\begin{lstlisting}
@@ -647,14 +647,14 @@ sort -CACHE
 				\begin{lstlisting}
 sort -CACHE=desc
 				\end{lstlisting}
-				Using the option \lstinline+cols+ to columns, which shall be sorted, may be selected. In addition one may select a group of columns, which shall be sorted according an index column (if, for example, $x$ values and their function values are sorted arbitrary, the function values may be sorted according to the $x$ values without losing the connection between the  $x$ values and the function values):
+				Using the option \lstinline+cols+ then columns, which shall be sorted, may be selected. In addition one may select a group of columns, which shall be sorted according an index column (if, for example, $x$ values and their function values are in an arbitrary order, the function values may be sorted according to the $x$ values without losing the connection between the  $x$ values and the function values):
 				\begin{lstlisting}
 sort -CACHE cols=COLUMNS[COLUMNGROUPS]
 sort -cache cols=5[2:4]
 				\end{lstlisting}
 				
 				\helpidx{cache}
-				In addition to sorting the data, the data points in a cache may be freed from noise and comparable artifacts. This is achieved through smoothing the data points.
+				In addition to sorting the data, the data points in a cache may be freed from noise and similar artifacts. This is achieved through smoothing the data points.
 				
 				The command\cmd{smooth}
 				\begin{lstlisting}
@@ -685,9 +685,9 @@ CACHE -std
 		\chapter{NumeRe Scripts}
 			\NR\ scripts provide the possibility to outsource complex calculations and repeated analyses into a file, from where they may be easily and repeatedly executed.
 			\section{Concept}
-				The concept building the basis for \NR\ scripts is quite easy: all entries, which one might enter into the \NR\ console, are typed into a textfile instead, which will be read by \NR\ afterwards. \NR\ will execute the expressions and commands in the corresponding order and evaluate them.
+				The concept, which builds up the basis for \NR\ scripts, is quite easy: all entries, which one might enter into the \NR\ console, are typed into a text file instead, which will be read by \NR\ afterwards. \NR\ will execute the expressions and commands in the corresponding order and evaluate them.
 				
-				The advantage is obvious: the order of commands may easily be repeated and errors may corrected fastly without having to retype erverything.
+				The advantage is obvious: the order of commands may easily be repeated and errors may corrected fast without being forced to retype everything.
 				\paragraph{Note}
 					We will talk about \NR\ procedures in a later chapter. These represent the programmability of \NR. However, most problems, which do not need too complex abstractions, may be solved using \NR\ scripts.
 				
@@ -695,11 +695,11 @@ CACHE -std
 			\section{Syntax Highlighting}
 				The syntax of \NR\ scripts is highlighted automatically, if the file was saved with the extension >>.nscr<<. It's a central part of the \NR\ editor. It provides highlighting of syntax elements, of matching parentheses and control flow blocks (e.g. \lstinline+if ... else ... endif+).
 				
-				Everybody is free to change the colours of the syntax highlighting to his or her need. This may be done in the options dialogue, which is available in the tools menu, at the tab >>Style<<. 
+				Everybody is free to change the colours of the syntax highlighting to his or her needs. This may be done in the options dialogue, which is available in the tools menu. In the dialogue, go to in the tab >>Style<<. 
 			\section{A Simple Script}
 				As example, a simple script is presented here.
 				
-				To create a \NR\ script fast and easily, one uses the corresponding item in the file menu or click on the tool in the toolbar or enter 
+				To create a \NR\ script fast and easily, one either uses the corresponding item in the file menu, clicks on the tool in the toolbar or enters 
 				\begin{lstlisting}
 new -script=first
 				\end{lstlisting}
@@ -707,7 +707,7 @@ new -script=first
 				\begin{lstlisting}
 edit first.nscr
 				\end{lstlisting}
-				opens the \NR\ script in the \NR\ editor so that it may be edited. (The file extension is here necessary, because \lstinline+edit+ would look for the script in the wrong directory.) Between the both text blocks in the script one enters the following lines:
+				opens the \NR\ script in the \NR\ editor so that it may be edited. (The file extension is here necessary, because otherwise \lstinline+edit+ would look for the script in the wrong directory.) Between the both text blocks in the script one adds the following lines:
 				\begin{lstlisting}
 ## Delete the contents of the cache completely
 delete cache() -ignore
@@ -721,9 +721,9 @@ cache(:,3) = (cache(:,1)^2+cache(:,2)^2) <= 1 ? true : false;
 ## Calculate pi
 4*sum(cache(:,3))/1e5
 				\end{lstlisting}
-				where \lstinline+##+ starts a line comment, which is ignored by \NR (Alternatively one may use \lstinline+#*...*#+ as a block comment). The option \lstinline+ignore+ in the second line suppresses the confirmation, if one is sure that the contents of the cache shall be deleted. \cmd{random}\lstinline+random+ creates random numbers and writes them into the cache. In this case, two times 100,000 equally distributed random numbers are created in the interval $[0;1]$.
+				where \lstinline+##+ starts a line comment, which is ignored by \NR\ (Alternatively, one may use \lstinline+#*...*#+ as a block comment). The option \lstinline+ignore+ in the second line suppresses the confirmation, if one is sure that the contents of the cache shall be deleted. \cmd{random}\lstinline+random+ creates random numbers and writes them into the cache. In this case, two sets of 100,000 equally distributed random numbers are created in the interval $[0;1]$.
 				
-				The third expression is the trickiest. Here the result of a condition is written to the third column of \lstinline+cache()+. If written with words, this means something like
+				The third expression is the trickiest. Here, the result of a condition is written to the third column of \lstinline+cache()+. If written with words, it would mean something like
 				\begin{quotation}
 					\noindent\emph{>>If the length of the vector is smaller or equal to 1, then write >>true<<, otherwise write >>false<< to the cache.<<}
 				\end{quotation}
@@ -737,7 +737,7 @@ list -logic
 				\end{lstlisting}
 				At the end of this line one finds a semicolon \lstinline+;+. This suppresses the output of its result to the \NR\ console.
 				
-				The whole \NR\ script is a really simple \emph{Monte-Carlo} simulation. Points are placed arbitrary into a square of the length 1 and afterwards it's counted, how many of them are located in the circle of unity, which is part of this square. Assuming that the probability for each point in the square is equal, the relation of the number of all points to the number of points in the circle of unity has to be equal to $\pi/4$.
+				The whole \NR\ script is a real simple \emph{Monte-Carlo} simulation. Points are placed arbitrary into a square of the length 1 and afterwards it's counted, how many of them are located in the circle of unity, which is part of this square. Assuming that the probability for each point in the square is equal, the relation of the number of all points to the number of points in the circle of unity has to be equal to $\pi/4$.
 				
 				If one executes the \NR\ script by either clicking on >>Execute<< or through entering the command\cmd{start}
 				\begin{lstlisting}
@@ -751,7 +751,7 @@ start first
 3.13952
 ...
 				\end{lstlisting}
-				These numbers are quite near to $\pi$, although they are created through a smart usage of random numbers.
+				These numbers are quite near to $\pi$, although they are created through smart usage of random numbers.
 				
 				If one enlarges the number of random numbers (e.g. \lstinline+1e6+ instead of \lstinline+1e5+) the approximation gets even more precise. However, the cache doesn't support an arbitrary number of elements. For even larger numbers one has to use other ways of calculating.
 	\part{Advanced Usage}
@@ -762,25 +762,22 @@ start first
 				\begin{lstlisting}
 define my_function(ARGS) := EXPRESSION(ARGS)
 				\end{lstlisting}
-				This line creates the function \lstinline+my_function()+, which combines the complex expression of the arguments. The names and the number of arguments may be chosen arbitrary, as long as the number of arguments is not larger than 10. If the last argument of the function is called >>\lstinline+...+<<, one may pass from one to an arbitrary number of values for this argument. You have to ensure that the defined expression is able to handle an arbitrary number of values, e.g.:\cmd{"\ldots"\:}
-				\begin{lstlisting}
-define my_function(x,...) := x*sum(...)
-				\end{lstlisting}
+				This line creates the function \lstinline+my_function()+, which combines the complex expression of the arguments. The names and the number of arguments may be chosen arbitrary, as long as the number of arguments is not larger than 10. If the last argument of the function is called >>\lstinline+...+<<, one may pass from one to an arbitrary number of values for this argument. You have to ensure that the defined expression is able to handle an arbitrary number of values, e.g.:\cmd{"\ldots"\:} \lstinline+my_function(x,...) := x*sum(...)+
 				
-				The name of the function may be chosen freely, while ensuring that it doesn't start with a number nor is identical to a (pre-)defined function.
+				The name of the function may be chosen freely, while ensuring that it neither starts with a number nor is identical to a (pre-)defined function.
 				
 				\cmd{redefine}With
 				\begin{lstlisting}
 redefine my_function(ARGS) := NEW_EXPRESSION(ARGS)
 				\end{lstlisting}
-				the function \lstinline+my_function()+ may be redefined. The number of arguments of course doesn't have to be identical to the previous definition.
+				the function \lstinline+my_function()+ may be redefined. The number of arguments doesn't have to be identical to the previous definition, of course.
 				
-				Custom defined functions may be supported by comments, which illustrate, what the purpose of the function is. This comment is displayed together with the definition at
+				Custom defined functions may be supported by comments, which illustrate, what the purpose of the function is. This comment is displayed together with the definition in the function tree or at
 				\begin{lstlisting}
 list -define
 				\end{lstlisting}
 				
-				The comment may be added to the definition with´
+				The comment may be added to the definition with
 				\begin{lstlisting}
 define my_function(ARGS) := EXPRESSION(ARGS) -set comment="COMMENT"
 				\end{lstlisting}
@@ -799,14 +796,14 @@ define -save
 				\begin{lstlisting}
 define -load
 				\end{lstlisting}
-				to load the functions, or one activate the automatic definition management through
+				to load the functions, or one activates the automatic definition management through
 				\begin{lstlisting}
 set -defcontrol=true
 				\end{lstlisting}
 				
 				\helpidx{set}
 			\section{Conditioned Definition}
-				In \NR\ scripts it may be an advantage, if \NR\ won't always raise an error that a function, which shall be defined in that script, is already existing. One possible solution for this case is using the command \lstinline+redefine+, another is using\cmd{ifndefined}
+				In \NR\ scripts it may be an advantage, if \NR\ won't always raise an error that a function, which shall be defined in that script, is already existing. One possible solution for this case is using the command \lstinline+redefine+, the other is using\cmd{ifndefined}
 				\begin{lstlisting}
 ifndefined my_function(ARGS) := ...
 				\end{lstlisting}
@@ -826,21 +823,21 @@ define my_function(x,y,z) := sin(x)+cos(y)+sinc(z)
 				\end{lstlisting}
 				You may also pass a lesser number of values as the function has arguments. \NR\ will replace the missing ones automatically with \lstinline+0+.
 		\chapter{Character Strings}
-			\NR\ may handle character string in addition to numerical values. First introduced to format the column titles of the tables, character strings are now a major and elaborate part or \NR's architecture.
+			In addition to numerical values \NR\ may also handle character strings. First introduced to format the column titles of the tables, character strings are now a major and elaborate part or \NR's architecture.
 			\section{Concept}
-				Character strings (\emph{strings} for short) are successive chains of characters, which are not interpreted as variables or numerical values by \NR. To achieve this, strings have to be entered as enclosing quotation marks:
+				Character strings (\emph{strings} for short) are successive chains of characters, which are not interpreted as variables or numerical values by \NR. To achieve this, strings have to be entered with enclosing quotation marks:
 				\begin{lstlisting}
 "This is a string."
 				\end{lstlisting}
 				The actual content of the string are all characters between the quotation marks. As a consequence, the string \lstinline+""+ is empty and has the length 0.
 				
-				Strings may be modified by special functions: there are functions for converting upper- to lowercase letters (or the other way around), for searching strings inside of strings, to extract a string from another string, to replace strings inside of another one, etc. The main advantage of character strings is the possibility, to format the output and to automate the processing of many files (and they are a precondition for the programming with \NR\ procedures).
+				Strings may be modified by special functions: there are functions for converting upper- to lowercase letters (or the other way around), for searching strings inside of strings, to extract a string from another string, to replace strings inside of another one, etc. The main advantage of character strings is the possibility, to format the output and to automate the processing of many files (and they are also a precondition for the programming with \NR\ procedures).
 				
 				\helpidx{string}
 			\section{Variable Type}
-				The variable type for strings is the third variable type (next to numericals and tables) in \NR. Numerical variables may neiter be converted to string variables nor the other way around. However, there values may (see below).
+				The variable type for strings is the third variable type (next to numericals and tables) in \NR. Numerical variables may neither be converted to string variables nor the other way around. However, their values may (see below).
 				
-				\NR\ recognizes new string variables automatically using the declaration. This declaration has to be---in contrast to numerical variables, which may be done \emph{on-the-fly}---\emph{always} be followed by a string value (at least an empty string):
+				\NR\ recognizes new string variables automatically using the declaration. This declaration has to be---in contrast to numerical variables, which may be done \emph{on-the-fly}---\emph{always} followed by a string value (at least an empty string):
 				\begin{lstlisting}
 numerical_variable = 3.1415926
 also_numerical
@@ -852,7 +849,7 @@ also_string = ""
 				In addition to the string variables, \NR\ knows the \cmd{string()}\lstinline+string()+ object. This is in principle a single column table, which may contain an arbitrary number of strings. The interval syntax may be used in the argument parentheses to extract a range of strings or a single value. If the argument parentheses are kept empty, the last written string is used automatically.
 				
 				\helpidx{string}
-				Using strings one may modify the column heads of \lstinline+data()+ and the caches. This is achieved through entering\cmd{data(\#,:)\\cache(\#,:)}
+				Using strings one may modify the column headings of \lstinline+data()+ and the caches. This is achieved through entering\cmd{data(\#,:)\\cache(\#,:)}
 				\begin{lstlisting}
 data(#,1) = "Column heading 1"
 cache(#,:) = "Column 1", "Column 2", "Column 3"
@@ -878,7 +875,7 @@ string_cast()
 				\end{lstlisting}
 				The syntax \lstinline+#VAR+ or \lstinline+#(EXPRESSION)+ evaluates the following expression/variable and transforms the numerical value directly to a string. Between \lstinline+#+ and the expression one or more \lstinline+~+ may be inserted, which will add zeros in front of the value until the corresponding number of characters plus one for the \lstinline+#+ is reached. The function \lstinline+valtostr()+ is doing similar, although it's more versatile, because one may pass the filling character through the character \lstinline+C+.The function \lstinline+to_string()+ transforms everything, which isn't a string, directly to a string without evaluating it and \lstinline+string_cast()+ transforms even string variable names into strings.
 		\chapter{Loops and Forks as Control Flow Statements}
-			The evaluation of \NR\ scripts (and the in one of the following chapters introduced \NR\ procedures) may sometimes be simplified drastically by introducing loops and forks. (However, loops and forks are also usable directly from the \NR\ console.)
+			The creation of \NR\ scripts (and the in one of the following chapters introduced \NR\ procedures) may be simplified drastically by introducing loops and forks. (However, loops and forks are also usable directly from the \NR\ console.)
 			\section{Forks}
 				A fork is a location in a script, where the further evaluation of the script depends on the evaluation of a condition. Such forks are represented through the following construct:\cmd{if ()\\\ldots\\elseif ()\\\ldots\\else\\\ldots\\endif}
 				\begin{lstlisting}
@@ -897,7 +894,7 @@ endif
 				
 				\helpidx{if}
 			\section{Conditioned Loops}
-				\cmd{while ()\\\ldots\\endwhile}A conditioned loops will only be executed, as long as the condition evaluates to true. The syntax is as follows
+				\cmd{while ()\\\ldots\\endwhile}A conditioned loop will only be executed, as long as the condition evaluates to true. The syntax is as follows
 				\begin{lstlisting}
 while (CONDITION)
 	EXECUTE, AS LONG AS TRUE
@@ -907,7 +904,7 @@ endwhile
 				
 				\helpidx{while}
 			\section{Counting Loops}
-				The execution of a counting loop depends on the value of a index variable. Using the interval syntax, a starting and an ending value have to be passed. If the ending value is \emph{smaller} than the starting value, the counting loop will count backwards automatically. After each single loop pass the index value is increased (or decreased, if the loop counts backwards) by one automatically. The index can be used in the execution block of the loop as a usual variable.
+				The execution of a counting loop depends on the value of an index variable. Using the interval syntax, a starting and an ending value have to be passed. If the ending value is \emph{smaller} than the starting value, the counting loop will count backwards automatically. After each single loop pass the index value is increased (or decreased, if the loop counts backwards) by one automatically. The index can be used in the execution block of the loop as a usual variable.
 				
 				The syntax of a counting loop is as follows:
 				\cmd{for ()\\\ldots\\endfor}\begin{lstlisting}
@@ -928,9 +925,9 @@ break
 				
 				\helpidx{if}
 		\chapter{Matrix Operations}
-			\NR\ was created as a table calculation, because it's much more probable that one has to process measurement data instead of processing some matrix opertions. However, \NR\ may also do so and evaluate matrix expressions.
+			\NR\ was created as a table calculation, because it's much more probable that one has to process measurement data instead of processing some matrix operations. However, \NR\ may also do so and evaluate matrix expressions.
 			\section{Execution of Matrix Operations}
-				Matrix operations can only be executed in the context of the \lstinline+matop+ or \lstinline+mtrxop+ command\cmd{matop} (those are synoymes). This command starts an expression, which shall be processed using matrix operations, where the actual matrices are realized as excerpts from caches or data files or special functions. But note that as default all evaluations are still executed elementwise (even the multiplication of two matrices).
+				Matrix operations can only be executed in the context of the \lstinline+matop+ or \lstinline+mtrxop+ command\cmd{matop} (those are synonymes). This command starts an expression, which shall be processed using matrix operations, where the actual matrices are realized as excerpts from caches or data files or special functions. But note that as default all evaluations are still executed elementwise (even the multiplication of two matrices).
 				\begin{lstlisting}
 matop CACHE(i1:i2,j1:j2) * DATA(i1:i2,j1:j2) + CACHE(:,:) / ...
 				\end{lstlisting}
@@ -976,7 +973,7 @@ matop zero(2,4)
 		\chapter{Special Commands}
 			This chapter shall focus on some special commands, which weren't mentioned up to here but building a great part of the functionality of \NR.
 			\section{Roots}
-				\NR\ may locate roots of functions and data sets using the command \lstinline+zeroes+\cmd{zeroes}. In the case of data sets this command returns the indices of the roots (or of the location, which is neares) or, if a data set for the $x$ axis was passed, the corresponding $x$ value:
+				\NR\ may locate roots of functions and data sets using the command \lstinline+zeroes+\cmd{zeroes}. In the case of data sets this command returns the indices of the roots (or of the location, which is nearest) or, if a data set for the $x$ axis was passed, the corresponding $x$ value:
 				\begin{lstlisting}
 zeroes DATA()
 zeroes DATA() -set x=XVALUES()
@@ -1001,14 +998,14 @@ extrema DATA() -set x=XVALUES()
 				
 				\helpidx{extrema}
 			\section{Integration}
-				\NR\ may numerically integrate functions and data sets using the command \lstinline+integrate+\cmd{integrate}, however, only functions may be integrated two-dimensionally. If a 2D integration shall be calculated is determined by the number of passed integration intervals. If only an interval for $x$ was passed, then \NR\ will calculate a one-dimensional integration. If the command string contains a second interval for $y$ then the integration is in two dimensions.
+				\NR\ may numerically integrate functions and data sets using the command \lstinline+integrate+\cmd{integrate}, however, only functions may be integrated two-dimensionally. It is determined by the number of passed integration interval, if a 2D integration shall be calculated. If only an interval for $x$ was passed, then \NR\ will calculate a one-dimensional integration. If the command string contains a second interval for $y$ then the integration is performed in two dimensions.
 				
-				The integration intervals and further options are passed Using the parameter \lstinline+-set+. Further options are for example the precision of the integration, the numerical method, if the integration shall return the function values of the integral, etc. Further details are noted in the corresponding documentation article.
+				The integration intervals and further options are passed using the parameter \lstinline+-set+. Further options are for example the precision of the integration, the numerical method, whether the integration shall return the function values of the integral, etc. Further details are noted in the corresponding documentation article.
 				\begin{lstlisting}
 integrate x^2 -set [1:2]
 				\end{lstlisting}
 				
-				If you want to integrate data sets, you've to pass them instead of the function: if the data set contains only one column, the integral is identical to the sum. If two columns are passed, then the first is used as $x$ and the second as the corresponding $y$ values for the calculated integral.
+				If you want to integrate data sets, you've to pass them instead of the function: if the data set contains only one column, the integral is identical to the sum of this column. If two columns are passed, then the first is used as $x$ and the second as the corresponding $y$ values for the calculated integral.
 				\begin{lstlisting}
 integrate DATA(:,1)
 integrate DATA(:,1:3)
@@ -1016,7 +1013,7 @@ integrate DATA(:,1:3)
 				
 				\helpidx{integrate}
 			\section{Differentiation}
-				\NR\ does also provide the ability to differentiate functions numerically to the first order using the command \lstinline+diff+\cmd{diff}. Depending on the passed parameters the differentiation is calculated at the location of $x$ or for a number of \lstinline+samples+ for a complete interval.
+				\NR\ does also provide the ability to differentiate functions numerically to the first order using the command \lstinline+diff+\cmd{diff}. Depending on the passed parameters the differentiation is calculated at the location of $x$ or for a number of \lstinline+samples+ over a complete interval.
 				\begin{lstlisting}
 diff sin(x) -set x=1
 diff sin(x) -set [0:1]
@@ -1027,7 +1024,7 @@ diff sin(x) -set [0:1]
 diff DATA(:,1)
 diff DATA(:,1:2)
 				\end{lstlisting}
-				Only the $y$ values of the differentiation is calculated. Using the option \lstinline+xvals+ the corresponding $x$ values (which are not matching to the provided ones) are calculated and returned.
+				Only the $y$ values of the differentiation are calculated. Using the option \lstinline+xvals+ the corresponding $x$ values (which are not matching to the provided ones) are calculated and returned.
 				
 				\helpidx{diff}
 			\section{Taylor Expansion}
@@ -1038,23 +1035,23 @@ diff DATA(:,1:2)
 taylor cos(x)*exp(-x/2) -set x=2
 				\end{lstlisting}
 				
-				The calculated polynomial is automatically defined as a function in the function memory. Usually, \NR\ will choose the name \lstinline+Taylor(x)+, however, if the option \lstinline+unique+ was passed to the command \lstinline+taylor+, then the used function name will be much more complex, because it will contain the expression and the order of of the polynomial expansion.
+				The calculated polynomial is automatically defined as a function in function memory. Usually, \NR\ will choose the name \lstinline+Taylor(x)+ for this definition, however, if the option \lstinline+unique+ was passed to the command \lstinline+taylor+, then the used function name will be much more complex, because it will contain the expression and the order of the polynomial expansion.
 				\paragraph{Note} Already existing functions, which are stored with an identical name in the function memory, are automatically overwritten by the new definition done by this command. Therefore, the option \lstinline+unique+ creates quite reliable function names, which won't interfere with other defined functions in function memory.
 				
 				\helpidx{taylor}
 			\section{Function Values in 1D and 2D} %eval datagrid
-				Using the commands \lstinline+eval+ and \lstinline+datagrid+\cmd{eval\\datagrid} \NR\ will calculate and return function values of one- or two-dimensional functions in a predefined interval and for a predefined number of samples.
+				Using the commands \lstinline+eval+ and \lstinline+datagrid+\cmd{eval\\datagrid} \NR\ will calculate and return the function values of one- or two-dimensional functions over a predefined interval and for a predefined number of samples.
 				
-				The command \lstinline+eval+ returns the function values of one-dimensional functions in the predefined interval. The result may be stored directly into a cache. The number of samples is predefined using the option \lstinline+samples+ (where the default is 100) and they are linearly distributed by default. Through the option \lstinline+logscale+ this distribution is switched to a logarithmic one, which may be an advantage if one plans to display them on a logarithmic $x$ axis.
+				The command \lstinline+eval+ returns the function values of one-dimensional functions in the predefined interval. The result may be stored directly into a cache. The number of samples is chosen using the option \lstinline+samples+ (where the default is 100) and they are linearly distributed by default. Through the option \lstinline+logscale+ this distribution is switched to a logarithmic one, which may be an advantage if one plans to display them on a logarithmic $x$ axis.
 				\begin{lstlisting}
 eval FUNCTION(x) -set [x0:x1] OPTIONEN
 eval sin(x) -set [0:_2pi] samples=200
 				\end{lstlisting}
 				
 				\helpidx{eval}
-				\NR\ needs sometimes so-called \emph{datagrids}. This is a tabular data set, where the $x$ values are stored in the first, the $y$ values are in the second and the $z$ values are stored in the remaining columns, where the number of lines has to match to the first column and the number of columns has to match to the second column.
+				\NR\ needs sometimes so-called \emph{datagrids}. A datagrid is a tabular data set, where the $x$ values are stored in the first, the $y$ values are in the second and the $z$ values are stored in the remaining columns, where the number of lines has to match to the first column and the number of columns has to match to the second column.
 				
-				These datagrids may be created by \lstinline+datagrid+. The values for $x$ and $y$ may be passed in different ways: either as an interval in the common form \lstinline+{x0:x1,y0:y1]+ or separate through \lstinline+x=x0:x1+ or as a column/row of a data set such as \lstinline+y=data(:,3)+.
+				These datagrids may be created by \lstinline+datagrid+. The values for $x$ and $y$ may be passed in different ways: either as an interval in the common form \lstinline+[x0:x1,y0:y1]+ or separate through \lstinline+x=x0:x1+ or as a column/row of a data set such as \lstinline+y=data(:,3)+.
 				
 				For the $z$ values there are also multiple possibilities: either as a function of $x$ and $y$ ($f(x,y) = \cos(x)\exp(-y)$), as a matrix of a data set (\lstinline+cache(3:,7:100)+) or as a single column/row of a dataset (\lstinline+data(4,2:)+). \NR\ tries in the latter case to connect the defined $(x,y,z)$ points by triangulation and to create a grid using linear interpolation.
 				\begin{lstlisting}
@@ -1066,7 +1063,7 @@ datagrid data(:,3) -x=data(:,1) y=data(:,2)
 				
 				If the $x$ and $y$ axis of the data points are swapped ($x =$ lines, $y=$ columns), one can pass the parameter \lstinline+transpose+ to \lstinline+datagrid+ This way the datapoint matrix is transposed before the datagrid is constructed.
 	
-				The created datagrid is automatically saved to a free location in the cache \lstinline+grid()+ (will be created automatically, if necessary) right og already existing data and may be plotted using this cache.
+				The created datagrid is automatically saved to a free location in the cache \lstinline+grid()+ (will be created automatically, if necessary) right of already existing data and may be plotted using this cache.
 				
 				\helpidx{datagrid}
 			\section{Fourier Transformation}
@@ -1086,7 +1083,7 @@ fft DATA()
 			\section{Differential Equations}
 				Few of all possible ordinary differential equations may be solved analytical or through a reasonable approximation. This is the central topic of numerics, which solves the differential equations using numerical algorithms and calculate the corresponding trajectories.
 				
-				\NR\ provides an integration algorithm with the command \lstinline+odesolve+\cmd{odesolve}. This algorithm may numerically integrate differential equations of the first order. Because one may transform a differential equiation of the $n$-th order into $n$ equations for the first order, this is not a problem.
+				\NR\ provides an integration algorithm with the command \lstinline+odesolve+\cmd{odesolve}. This algorithm may numerically integrate differential equations of the first order. Because one may transform a differential equation of the $n$-th order into $n$ equations of the first order, this is not a problem.
 				
 				The differential equation may be composed out of multiple equations and may form a whole system. The equations have to follow this scheme:
 				\begin{lstlisting}
@@ -1106,7 +1103,7 @@ dyn/dx = DGL(x,y1,y2,...,y(n-1))
 	
 				The results of the integration are stored per default as a table in the cache \lstinline+ode()+. The first column contains the $x$ values and the following columns the corresponding integrated function values.
 				
-				To pass initial values (\NR\ uses otherwise 0 as initial value), one may use the option \lstinline+fx0=INITIALVALUES+. Additionally one may select the integration method, the tolerances the number of samples and other things. Details may be found in the integrated documentation.
+				To pass initial values (\NR\ uses otherwise 0 as initial value), one may use the option \lstinline+fx0=INITIALVALUES+. Additionally one may select the integration method, the tolerances, the number of samples and other things. Details may be found in the integrated documentation.
 				\begin{lstlisting}
 odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONS
 odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
@@ -1121,7 +1118,7 @@ odesolve y2,-sin(y1) -set [0:20] fx0=[0,1]
 				
 				Using \NR\ procedures it's possible to write own subprograms in \NR\ or add further functionalities as new commands (this is known as \emph{plugin}).
 				
-				The ideal value of a \NR\ procedure in \NR\ corresponds to the function of a usual programming language.
+				One may compare a \NR\ procedure in \NR\ with a function of a usual programming language.
 								
 				\helpidx{procedure}
 			\section{Structure}
@@ -1131,23 +1128,23 @@ procedure $PROCEDURE_NAME(ARGLIST) :: FLAGS  ## Procedure head
 	PROCEDURE BODY                           ## Commands and expressions
 endprocedure                                 ## Procedure tail
 				\end{lstlisting}
-				To call a \NR\ procedure, one enters \lstinline+$PROCEDURE_NAME(VARS+ in \NR\ scripts, other \NR\ procedures or the \NR\ console. The \lstinline+VARS+ should correspond to the number of arguments in \lstinline+ARGLIST+. If \lstinline+ARGLIST+ contains default values for arguments, then the values for these arguments may be omitted on \lstinline+VARS+. The default values for the corresponding arguiments are used in this case.
+				To call a \NR\ procedure, one enters \lstinline+$PROCEDURE_NAME(VARS)+ in \NR\ scripts, other \NR\ procedures or the \NR\ console. The \lstinline+VARS+ should correspond to the number of arguments in \lstinline+ARGLIST+. If \lstinline+ARGLIST+ contains default values for arguments, then the values for these arguments may be omitted in \lstinline+VARS+. The default values for the corresponding arguiments are used in this case.
 				
-				The mentioned >>flags<< take influence on the \NR\ procedure as a whole and suppress or allow a distinct behaviour of \NR\ in this procedure. However, a correct usage of flags requires the knowledge of the following sections and chapters:\cmd{explicit\\private\\inline}
+				The mentioned >>flags<< influence the processing of a \NR\ procedure as a whole and suppress or allow a distinct behaviour of \NR\ in this procedure. However, a correct usage of flags requires the knowledge of the following sections and chapters:\cmd{explicit\\private\\inline}
 				\begin{lstlisting}
 explicit
 private
 inline
 				\end{lstlisting}
-				The flag \lstinline+explicit+ suppresses the execution of plugins in this procedure, procedures with the flag \lstinline+private+ may only be called from the same namespace and procedures with the flag \lstinline+inline+ allow faster execution of loops, if only procedures of this type are used in the loops. However, \lstinline+inline+ procedures are quite restricted in their usage.
+				The flag \lstinline+explicit+ suppresses the execution of plugins in this procedure, procedures with the flag \lstinline+private+ may only be called from the same namespace and procedures with the flag \lstinline+inline+ allow faster execution of surrounding loops, if only procedures of this type are used in the loops. However, \lstinline+inline+ procedures are quite restricted in their usage.
 				
 				Flags may be used in an arbitrary combination/order, because they do not interfere with each other.
 				
-				Each \NR\ procedure has to be written to its own *.nprc file, which carries the name of the procedure. Although this sounds difficult and may be a additional error source, it might be done completely by \NR\. Through the corresponding menu item in the file menu, through clicking on the button of the toolbar or through
+				Each \NR\ procedure has to be written to its own *.nprc file, which carries the name of the procedure. Although this sounds difficult and may be a additional error source, it might be done completely by \NR\ through the corresponding menu item in the file menu, through clicking on the button of the toolbar or through
 				\begin{lstlisting}
 new -proc=$PROCEDURE_NAME
 				\end{lstlisting}
-				a \NR\ procedure with the name \lstinline+$PROCEDURE_NAME+ is created at the default procedure storing location \lstinline+<procpath>/PROCEDURE_NAME.nprc+. By entering 
+				a \NR\ procedure with the name \lstinline+$PROCEDURE_NAME+ is created at the default procedure storing location \verb+<procpath>/PROCEDURE_NAME.nprc+. By entering 
 				\begin{lstlisting}
 edit $PROCEDURE_NAME
 				\end{lstlisting}
@@ -1192,13 +1189,13 @@ edit $NAMESPACE~PROCEDURENAME
 				\end{lstlisting}
 				If one uses the functionalities of the graphical user interface, this is also true.
 				
-				If in one procedure \NR\ procedures out of a specific namespace are called more often, the one can predefine this namespace as a temporary default namespace by adding\cmd{namespace}
+				If \NR\ procedures out of a specific namespace are called more often in one single procedure, one can predefine this namespace as a temporary default namespace by adding\cmd{namespace}
 				\begin{lstlisting}
 namespace NAMESPACE
 				\end{lstlisting}
 				to the procedure's body. (Procedures out of other namespaces may be still be called, by naming their namespace explicitly.)
 			\section{Exception Handling}
-				\NR\ procedures provide a somehow rudimentary way of handling exceptions. If an exception occurs, which may not be handled in any reasonable way (e.g. a wrong input), then the evaluation of the procedure can be aborted immediately through the command\cmd{throw}
+				\NR\ procedures provide a somehow rudimentary but effective way of handling exceptions. If an exception occurs, which can not be handled in any reasonable way in a \NR\ procedure (e.g. a wrong input), then the evaluation of the procedure can be aborted immediately through the command\cmd{throw}
 				\begin{lstlisting}
 throw
 				\end{lstlisting}
@@ -1210,7 +1207,7 @@ throw "This is the error message."
 				\end{lstlisting}
 				which is finally displayed in the \NR\ console.
 			\section{Debugging}
-				A \NR\ procedure will only in very few cases run without problems and be free of errors. Typos and logical errors are much too probable to avoid such kind of mistakes. During the execution of such a erroneous \NR\ procedure \NR\ will, if it's a syntax error, abort the evaluation at the position of the error. However, it won't always abort if there's an error in the calculations.
+				A new \NR\ procedure will only in very few cases run without problems and be free of errors for the first time. Typos and logical errors are much too probable to avoid such kind of mistakes. During the execution of such an erroneous \NR\ procedure \NR\ will, if it's a syntax error, abort the evaluation at the position of the error. However, it won't always abort if there's an error in the calculations.
 				\begin{figure}[htb]
 					\centering
 					\includegraphics[width=\textwidth]{_graphics/debugger.png}%
@@ -1218,32 +1215,32 @@ throw "This is the error message."
 					\label{fig:debugger}%
 				\end{figure}
 				
-				To locate and solve such errors, \NR\ provides the so-called \NR\ debugger (\autoref{fig:debugger}). This functionality may be activated with the corresponding item in the Tools menu or through clicking on the button of the toolbar. It lists at syntax errors automatically the erroneous expression, the approximated line number, the erroneous module (the file), a stack trace and all local variables including their values of the current procedure. Using the stack trace one may reconstruct, in which procedure the error occured and which arguments were passed to this procedure.
+				To locate and solve such errors, \NR\ provides the so-called \NR\ debugger (\autoref{fig:debugger}). This functionality may be activated using the corresponding item in the Tools menu or through clicking on the button of the toolbar. If \NR\ faces a syntax error, it lists automatically the erroneous expression, the approximated line number, the erroneous module (the file), a stack trace and all local variables including their values of the current procedure. Using the stack trace one may reconstruct, in which procedure the error occured and which arguments were passed to this procedure.
 				
-				In addition to the automatic listing at syntax errors the \NR\ debugger may provide similar information at a \emph{breakpoint}. A temporary breakpoint may be set using the function of the toolbar or through clicking on the sidebar at the corresponding line. Please note that you \emph{cannot} place temporary breakpoints in empty or comment-only lines.
+				In addition to the automatic listing at syntax errors the \NR\ debugger may provide similar information at a \emph{breakpoint}. A temporary breakpoint may be set using the function of the toolbar or through clicking on the sidebar at the corresponding line. Please note that you \emph{cannot} place temporary breakpoints at empty or comment-only lines.
 				
-				Permanent breakpoints are set with \lstinline+|>+ at the beginning of a line, but they are seldom necessary. \NR\ stops, before the \emph{current line} is evaluated and lists stack trace and variable values. Through clicking on >>Continue<< the evaluation is continued, through clicking on >>Cancel<< the whole evaluation is aborted. (Breakpoints are of course ignored, if the debugger is not active.)
+				Permanent breakpoints are set with \lstinline+|>+ at the beginning of a line, but they are seldom necessary. \NR\ stops, before the \emph{current line} is evaluated and lists stack trace and variable values. Through clicking on >>Continue<< the evaluation is continued, through clicking on >>Cancel<< the whole evaluation is aborted. (Of course, breakpoints are ignored, if the debugger is not active.)
 				
 				\helpidx{debugger}
 		\chapter{Animated Graphs}
-			In some cases it's suitable that one may enhance the derivation in time of a quantity using an animated graph. \NR\ has a built-in possibility to create such an animation. However, an animation may also be created using a loop, saving every frame independent and combine all frames to an animation afterwards.
+			In some cases it's suitable that one may visualize the time dependency of a quantity using an animated graph. \NR\ has a built-in possibility to create such an animation. However, an animation may also be created using a loop, saving every frame independent and combine all frames to an animation afterwards.
 			
 			To create an animation by \NR\ one has to use at least once the variable \lstinline+t+ in the expression, which shall be plotted. This variable is the time parameter, which will be varied by the animation. Additionally, one has to pass the option \lstinline+animate+ to the plotting command:\cmd{animate}
 			\begin{lstlisting}
 PLOTCMD EXPRESSION(t,VARS) -set animate OPTIONS
 			\end{lstlisting}
-			This will create an animation, which is composed out of multiple frames. In the \NR\ Graph\-Viewer one can play this animation or examine each frame independently.
+			This will create an animation, which is composed out of multiple frames. One can use the \NR\ Graph\-Viewer to play this animation or examine each frame independently.
 			
 			\helpidx{plotoptions}
 			\paragraph{Note}
-				\NR\ cannot create animations from datasets. The reason is that the time parameter is a floating number, whereas indices for tables are integer. To create an animation from a dataset, one has to create the frames independent using a loop.\bigskip\\
+				\NR\ cannot create animations from data sets. The reason is that the time parameter is a floating number, whereas indices for tables are integral values. To create an animation from a dataset, one has to create the frames independent using a loop.\bigskip\\
 			\NR\ creates per default 50 frames per animation with a duration of $1/25$~s each and uses the interval $[0;1]$ for the time parameter \lstinline+t+. This may be altered of course, however, it's possible that too many frames will result in memory problems, because every single frame is stored in memory first:
 			\begin{lstlisting}
 PLOTCMD EXPRESSION(t,VARS) -set t=0:2 animate=100 OPTIONS
 			\end{lstlisting}
 			Now an animation with 100 frames is created and the time parameter uses the interval $[0;2]$.
 			\paragraph{Note}
-				Some plot types may need too many memory so that an animation is not possible. It may help to reduce the number of \lstinline+samples+ for this image.
+				Some plot types may need too much memory so that an animation is not possible. It may help to reduce the number of \lstinline+samples+ for this image.
 		\chapter{Composed Graphs}
 			It's possible that a desired plotting layout is only possible, if one could combine two plotting types. Using the command block\cmd{compose\\\ldots\\endcompose}
 			\begin{lstlisting}
@@ -1253,9 +1250,9 @@ compose
 	...
 endcompose
 			\end{lstlisting}
-			it's possible in \NR. The \lstinline+compose+ mode may only contain plotting commands. This means that all calculations for the desired plot types have to be finished in advance.
+			it's possible to do that in \NR. The \lstinline+compose+ mode may only contain plotting commands. This means that all calculations for the desired plot types have to be finished in advance.
 			
-			Some plot options are valid for the whole composed plot (e.g. the plot interval, the axis labels, the grid, etc.), others may be switched on or off for each plot independent (e.g. transparency, lighting, additional contour lines, errorbars, etc.). The plotting colours and the line styles may also be selected for each plot, however, one has to keep in mind that \NR\ has an internal counter, which will be incremented for each line in all plots of the composed plot. The styling information has to be adapted to deal with this behaviour.
+			Some plot options are valid for the whole composed plot (e.g. the plotting interval, the axis labels, the grid, etc.), others may be switched on or off for each plot independent (e.g. transparency, lighting, additional contour lines, errorbars, etc.). The plotting colours and the line styles may also be selected for each plot, however, one has to keep in mind that \NR\ has an internal counter, which will be incremented for each line in all plots of the composed plot. The styling information has to be adapted to deal with this behaviour.
 			
 			Using the \lstinline+compose+ mode one may display plots of different quantities together, e.g. a vector field together with its potential. It's not necessary to use a distinct order, \NR\ will order the plots by itself so that they are in a reasonable order:
 			\begin{lstlisting}
@@ -1266,9 +1263,13 @@ endcompose
 			\end{lstlisting}
 			
 			\helpidx{compose}
-			The \lstinline+compose+ mode also enables to work around the restriction of a single function per 3D plot type (except of \lstinline+plot3d+), if the functions are passed in a \lstinline+compose+ environment successive 3D plots.
+			The \lstinline+compose+ mode also enables to work around the restriction of a single function per 3D plot type (except of \lstinline+plot3d+), if the functions are passed as successive 3D plots in a \lstinline+compose+ environment.
+			
+			This mode allows additionally, if the parameter \lstinline+-multiplot+ and the command \lstinline+subplot+ are used, to create multiple graphs next to each other but in the same frame. Further details are found in the corresponding documentation article.
+			
+			\helpidx{subplot}			
 		\chapter{Plugins}
-			Although \NR\ is constantly extended, some functionalities might not be implemented or not correspond to the desires of the \NR\ user. This is the regime of the \NR\ plugins, which may overwrite existing functionalities or add new ones.
+			Although \NR\ is constantly extended, some functionalities might not get implemented or they do not correspond to the desires of the \NR\ user. This is the regime of the \NR\ plugins, which may overwrite existing functionalities or add new ones.
 			\section{Functionality}
 				Plugins are completely integrated into the command architecture so that one might not recognize from the outside that the routines currently executed are part of a plugin. They are called through own or already existing commands (replacing their functionalities) and use the usual \NR\ syntax.
 				
@@ -1284,10 +1285,10 @@ endcompose
 				\begin{lstlisting}
 install SCRIPTNAME
 				\end{lstlisting}
-				into the \NR\ console (if the script is not located in \lstinline+<scriptpath>+, one has to add the path, too). \NR\ will execute the installation routine, create the corresponding procedures and generate the needed connections. It's \emph{not} possible, to install a plugin iwth the functionalities of the graphical user interface.
+				into the \NR\ console (if the script is not located in \lstinline+<scriptpath>+, one has to add the path, too). \NR\ will execute the installation routine, create the corresponding procedures and generate the needed connections. It's \emph{not} possible, to install a plugin with the functionalities of the graphical user interface.
 				
 				\helpidx{install}
-				After the script was finished, the plugin is installed. Now it should be listed at
+				After the script was finished, the plugin is installed and may be used. Now it should be listed in the symbols tree or at
 				\begin{lstlisting}
 list -plugins
 				\end{lstlisting}
@@ -1349,11 +1350,15 @@ $plugins~PLUGINNAME~main(<CMDSTRING>)
 				\end{lstlisting}
 				The plugin may now installed with the command \lstinline+install+ (The values for \lstinline+type+ and \lstinline+flags+ are actually uppercase letters).
 				
-				If the \lstinline+PLUGINCOMMAND+ is now entered into the \NR\ console, then \NR\ calls the procedure \lstinline+$PLUGINMAINPROCEDURE()+ and passes it the tag \lstinline+<CMDSTRING>+. One may also pass other or further sub expressions of the command line, if they are named as arguments of the main procedure.
+				If the \lstinline+PLUGINCOMMAND+ is now entered into the \NR\ console, then \NR\ calls the procedure \lstinline+$PLUGINMAINPROCEDURE()+ and passes it the tag \lstinline+<CMDSTRING>+. One may also pass other or further sub expressions of the command line, if they are named as arguments of the main procedure. It's not possible to pass other arguments to the main procedure.
 				
-				If the plugin shall return a value, which one may process further, then the \lstinline+type+ has to be changed to
+				If the plugin shall return a value, which one may process further, then the \lstinline+type+ of the plugin has to be changed to
 				\begin{lstlisting}
 -type=TYPE_PLUGIN_WITH_RETURN_VALUE
+				\end{lstlisting}
+				now it may be used as follows:
+				\begin{lstlisting}
+result = PLUGINCOMMAND
 				\end{lstlisting}
 				
 				The \lstinline+version+ flag may be passed as
@@ -1371,25 +1376,25 @@ $plugins~PLUGINNAME~main(<CMDSTRING>)
 ENABLE_FULL_LOGGING
 ENABLE_FORCE_OVERRIDE
 				\end{lstlisting}
-				They are either logging the complete installation linewise to \lstinline+<>/install.log+ or they enable the overwriting of an already available plugin with the same command but a different author, which is prevented by default.
+				They are either logging the complete installation linewise to \verb+<>/install.log+ or they enable the overwriting of an already available plugin with the same command but a different author, which is prevented by default.
 				
 				\helpidx{plugins}
-				Before \lstinline+<endinstall>+ one has the possibilty to add the information to a documentation article for the \NR\ documentation using a XML-like syntax:\cmd{<helpindex>\\\ldots\\</helpindex>\\<helpfile>\\\ldots\\</helpfile>}
+				Before \lstinline+<endinstall>+ one has the possibility to add information to a documentation article for the \NR\ documentation using a XML-like syntax:\cmd{<helpindex>\\\ldots\\</helpindex>\\<helpfile>\\\ldots\\</helpfile>}
 				\begin{lstlisting}
 <install>
 	...
 	PROCEDURES
 	<helpindex>
-		INDEXINFORMATION
+		INDEX INFORMATION
 	</helpindex>
 	<helpfile>
-		DOCUMENTATIONARTICLE
+		DOCUMENTATION ARTICLE
 	</helpfile>
 <endinstall>
 				\end{lstlisting}
-				The \lstinline+INDEXINFORMATION+ contain the keywords, for which \NR\ shall display the corresponding article, as well as information for the index itself, if one enters \lstinline+help idx+.
+				The \lstinline+INDEX INFORMATION+ contain the keywords, for which \NR\ shall display the corresponding article, as well as information for the index itself, if one enters \lstinline+help idx+.
 				
-				The section \lstinline+DOCUMENTATIONARTICLE+ contains the actual documentation and description of the installed plugin.
+				The section \lstinline+DOCUMENTATION ARTICLE+ contains the actual documentation and description of the installed plugin.
 				
 				\helpidx{documentation}
 				%
