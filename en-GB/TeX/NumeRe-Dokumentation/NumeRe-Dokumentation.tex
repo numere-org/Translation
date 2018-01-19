@@ -1130,13 +1130,14 @@ endprocedure                                 ## Procedure tail
 				\end{lstlisting}
 				To call a \NR\ procedure, one enters \lstinline+$PROCEDURE_NAME(VARS)+ in \NR\ scripts, other \NR\ procedures or the \NR\ console. The \lstinline+VARS+ should correspond to the number of arguments in \lstinline+ARGLIST+. If \lstinline+ARGLIST+ contains default values for arguments, then the values for these arguments may be omitted in \lstinline+VARS+. The default values for the corresponding arguiments are used in this case.
 				
-				The mentioned >>flags<< influence the processing of a \NR\ procedure as a whole and suppress or allow a distinct behaviour of \NR\ in this procedure. However, a correct usage of flags requires the knowledge of the following sections and chapters:\cmd{explicit\\private\\inline}
+				The mentioned >>flags<< influence the processing of a \NR\ procedure as a whole and suppress or allow a distinct behaviour of \NR\ in this procedure. However, a correct usage of flags requires the knowledge of the following sections and chapters:\cmd{explicit\\private\\inline\\mask}
 				\begin{lstlisting}
 explicit
 private
 inline
+mask
 				\end{lstlisting}
-				The flag \lstinline+explicit+ suppresses the execution of plugins in this procedure, procedures with the flag \lstinline+private+ may only be called from the same namespace and procedures with the flag \lstinline+inline+ allow faster execution of surrounding loops, if only procedures of this type are used in the loops. However, \lstinline+inline+ procedures are quite restricted in their usage.
+				The flag \lstinline+explicit+ suppresses the execution of plugins in this procedure, procedures with the flag \lstinline+private+ may only be called from the same namespace and procedures with the flag \lstinline+inline+ allow faster execution of surrounding loops, if only procedures of this type are used in the loops. However, \lstinline+inline+ procedures are quite restricted in their usage. The flag \lstinline+mask+ suppresses all system messages during the execution of this and all from here called procedures.
 				
 				Flags may be used in an arbitrary combination/order, because they do not interfere with each other.
 				

@@ -1133,13 +1133,14 @@ endprocedure                                ## Prozedurfuss
 				\end{lstlisting}
 				Um eine \NR-Prozedur aufzurufen, gibt man \lstinline+$PROZEDURNAME(VARS)+ in \NR-Scrip\-ten, anderen \NR-Prozeduren oder der \NR-Konsole an. Die \lstinline+VARS+ sollten dabei mit der Zahl der Argumente in \lstinline+ARGLIST+ übereinstimmen. Falls in \lstinline+ARGLIST+ Defaultwerte für die Argumente angegeben wurden, können diese in \lstinline+VARS+ auch weggelassen werden. Es werden dann die Defaultwerte für die entsprechenden Argumente verwendet.
 				
-				Die hier erwähnten ">Flags"< haben auf die gesamte \NR-Prozedur Einfluss und unterbinden oder erlauben bestimmte Verhaltensweise von \NR\ in dieser Prozedur. Im Grunde setzen diese Flags jedoch das Wissen der folgenden Abschnitte und Kapitel voraus:\cmd{explicit\\private\\inline}
+				Die hier erwähnten ">Flags"< haben auf die gesamte \NR-Prozedur Einfluss und unterbinden oder erlauben bestimmte Verhaltensweise von \NR\ in dieser Prozedur. Im Grunde setzen diese Flags jedoch das Wissen der folgenden Abschnitte und Kapitel voraus:\cmd{explicit\\private\\inline\\mask}
 				\begin{lstlisting}
 explicit
 private
 inline
+mask
 				\end{lstlisting}
-				Der Flag \lstinline+explicit+ verhindert die Ausführung von Plugins in dieser Prozedur, \lstinline+private+-geflagte Prozeduren können nur von Prozeduren desselben Namensraumes aufgerufen werden und Prozeduren mit dem \lstinline+inline+-Flag erlauben schnellere Schleifenausführungen, wenn die Schleifen nur \NR-Pro\-ze\-du\-ren dieses Typs enthalten. Dafür sind \lstinline+inline+-Pro\-ze\-du\-ren vergleichsweise eingeschränkt.
+				Der Flag \lstinline+explicit+ verhindert die Ausführung von Plugins in dieser Prozedur, \lstinline+private+-geflagte Prozeduren können nur von Prozeduren desselben Namensraumes aufgerufen werden und Prozeduren mit dem \lstinline+inline+-Flag erlauben schnellere Schleifenausführungen, wenn die Schleifen nur \NR-Pro\-ze\-du\-ren dieses Typs enthalten. Dafür sind \lstinline+inline+-Pro\-ze\-du\-ren vergleichsweise eingeschränkt. Der Flag \lstinline+mask+ unterdrückt alle Systemausgaben während der Ausführung dieser und der von ihr aufgerufenen Prozeduren.
 				
 				Flags können in jeder beliebigen Kombination/Reihenfolge angegeben werden, da sie sich nicht gegenseitig beeinflussen.
 				
