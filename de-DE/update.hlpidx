@@ -354,6 +354,20 @@
 			<keyword>complex</keyword>
 			<keyword>inverse</keyword>
 		</keywords>
+	</article>	
+	<article id="fwt">
+		<file path="<>/docs/fwt.nhlp" />
+		<title string="Wavelet-Transformation von Datensätzen" idxkey="fwt" />
+		<keywords>
+			<keyword>fwt</keyword>
+			<keyword>wavelet</keyword>
+			<keyword>daubechies</keyword>
+			<keyword>cdaubechies</keyword>
+			<keyword>haar</keyword>
+			<keyword>chaar</keyword>
+			<keyword>bspline</keyword>
+			<keyword>cbspline</keyword>
+		</keywords>
 	</article>
 	<article id="find">
 		<file path="<>/docs/find.nhlp" />

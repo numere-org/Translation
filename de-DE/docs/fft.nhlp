@@ -20,9 +20,10 @@
 	<title string="Fourier-Transformation von Datensätzen" />
 	NumeRe ist mit einem Algorithmus zu schnellen Fourier-Transformation (<em>fast fourier transformation; fft</em>) ausgestattet, der Datensätze zur Analyse in ihre enthaltenen Frequenzen zerlegen kann. Dieser Algorithmus wird mit dem Kommando <code>fft</code> gestartet, wobei die Datenreihen zusätzlich angegeben werden müssen:<codeblock>fft DATENOBJEKT(I1:I2,J1:J2)</codeblock>
 	NumeRe erwartet bei einer Fourier-Transformation mindestens zwei Spalten: Achsenwerte (Zeit oder Frequenz) und Amplitude. Wenn drei Spalten angegeben werden, werden diese als Achsenwerte, Amplitude und Phase, oder - falls die zusätzliche Option <code>-complex</code> übergeben wird - als Achsenwerte, Realteil und Imaginärteil der Amplitude interpretiert. Die Option <code>-complex</code> hat bei zwei Spalten keinen Effekt auf die Interpretation der Eingabe.
-	Das Ergebnis der Fourier-Transformation wird im Form mehrerer neuer Datenreihen im aktuellen Cache (bzw. direkt in <code>cache()</code>, falls Daten aus <code>data()</code> transformiert werden sollen) gespeichert. Per default werden drei Spalten erzeugt: Frequenz [Hz], Amplitude und Phase [rad]. Mit der zusätzlichen Option <code>-complex</code> wird der Real- und Imaginärteil der Amplitude statt deren Betrag und der Phase in den Cache gespeichert.
+	Das Ergebnis der Fourier-Transformation wird in Form mehrerer neuer Datenreihen im Cache <code>fftdata()</code> (wird ggf. automatisch erzeugt) gespeichert. Das Ziel der Transformation kann aber auch mittels der Option <code>target=TARGETCACHE()</code> angepasst werden. Per default werden drei Spalten erzeugt: Frequenz [Hz], Amplitude und Phase [rad]. Mit der zusätzlichen Option <code>-complex</code> wird der Real- und Imaginärteil der Amplitude statt deren Betrag und der Phase in den Cache gespeichert.
 	NumeRe kann auch eine inverse Transformation ausführen. Dazu muss die zusätzliche Option <code>-inverse</code> übergeben werden.
 	<example desc="Fourier-Transformation der Spalten 2 und 3 in <code>data()</code>, wobei die Zeit in Spalte 3 enthalten ist, und Ausgabe mit Real- und Imaginärteil:">
 		fft data(:,3:2) -complex
 	</example>
+	<em>Siehe auch:</em> <a href="nhlp://fwt?frame=self">help fwt</a> und <a href="nhlp://stfa?frame=self">help stfa</a>
 </article>

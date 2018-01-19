@@ -97,7 +97,7 @@ export~Textual export of the passed data set~exportieren textdatei data csvdatei
 extrema~Calls the function for the numerical determination of the extrema of the passend expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren
 # F
 faculty(n)~Faculty of the integral number n [n!]~fakultaet fakultät faculty()
-fft~Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex
+fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien existieren files existing present valid gueltig gültig findfile()
 findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen findparam()
@@ -106,6 +106,7 @@ Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"
 fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten anpassen daten fehler errors abweichungen trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
 floor(x)~Rounds x to the nearest lower integral value~floor() abrunden ganzzahlen
 for (VAR = INI:FIN)~Starts the definition of a FOR loop~zaehlschleife zählschleife endfor for()
+fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettransformation transformieren invers daubechies haar bspline
 # G
 gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaet fakultät kontinuierlich gamma()
 gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution

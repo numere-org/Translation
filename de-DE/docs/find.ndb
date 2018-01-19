@@ -107,6 +107,7 @@ fitw~Passt eine Funktion mittels Parameter an eine Datenreihe an und gewichtet d
 floor(x)~rundet x auf die n‰chsttiefere Ganzzahl ab~floor() abrunden ganzzahlen
 for (VAR = INI:FIN)~Z‰hlschleife, siehe "help for"~zaehlschleife z‰hlschleife endfor for()
 Frage~Stell' ich hier die Fragen oder du?~question
+fwt~Schnelle Wavelet-Transformation eines Datensatzes~fast schnelle wavelettransformation transformieren invers daubechies haar bspline
 # G
 gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaet fakult‰t kontinuierlich gamma()
 gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gauﬂverteilung distribution

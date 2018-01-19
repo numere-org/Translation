@@ -34,6 +34,8 @@ COMMON_SUCCESS=Erfolg
 COMMON_FAILURE=Misserfolg
 COMMON_DONE=Abgeschlossen
 COMMON_EVALUATING=Werte aus
+COMMON_COEFFICIENT=Koeffizient
+COMMON_LEVEL=Stufe
 COMMON_FREQUENCY=Frequenz
 COMMON_AMPLITUDE=Amplitude
 COMMON_PHASE=Phase
@@ -112,7 +114,7 @@ BUILTIN_CLEARCACHE_CONFIRM=Alle Caches und die automatische Speicherung werden g
 BUILTIN_CLEARCACHE_SUCCESS=Alle Caches wurden entfernt und der Speicher wurde erfolgreich freigegeben.
 BUILTIN_CLEARCACHE_EMPTY=Der Cache ist bereits leer.
 BUILTIN_CREDITS_BUILD=Build-Datum
-BUILTIN_CREDITS_VERSIONINFO=Charles Augustin de COULOMB (1736-1806) war ein französischer Physiker und begründete die Elektro- und Magnetostatik. Das bekannte Coloumb-Gesetz ist nach ihm benannt.
+BUILTIN_CREDITS_VERSIONINFO=Charles Augustin de COULOMB (1736-1806) war ein französischer Physiker und begründete die Elektro- und Magnetostatik. Das bekannte Coulomb-Gesetz ist nach ihm benannt.
 #BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
 BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz, oder (nach Ihrer Option) jeder späteren Version.
 BUILTIN_CREDITS_LICENCE_2=Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
@@ -564,6 +566,7 @@ PARSERFUNCS_LISTCMD_CMD_FIND_[MAINCTRL]=				find         NM             - NumeRe
 PARSERFUNCS_LISTCMD_CMD_FIT_[EVAL]=						fit          OB -PAR        - Funktionen über Parameter an Datensätze anpassen
 PARSERFUNCS_LISTCMD_CMD_FITW_[EVAL]=					fitw         OB -PAR        - Funktionen über Parameter an Datensätze mit Fehlerwerten anpassen
 PARSERFUNCS_LISTCMD_CMD_FOR_[FLOWCTRL]=					for          (EX)           - Startet die Definition einer Zählschleife.
+PARSERFUNCS_LISTCMD_CMD_FWT_[EVAL]=						fwt          OB -PAR        - Wavelet-Transformation eines Datensatzes
 PARSERFUNCS_LISTCMD_CMD_GET_[MAINCTRL]=					get          -PAR           - Programmeinstellungen abfragen
 PARSERFUNCS_LISTCMD_CMD_GLOBAL_[MISC]=					global       EX/CMD         - Eine Scriptzeile als global deklarieren
 PARSERFUNCS_LISTCMD_CMD_GRAD_[PLOTTING]=				grad         EX [-set PAR]  - Erzeugung eines Gradienten-Plots
@@ -707,8 +710,10 @@ PARSERFUNCS_FIT_IMPROVABLE_WO_ERROR=Die angepasste Funktion kann den Verlauf der
 PARSERFUNCS_FIT_NOT_GOOD_WO_ERROR=Die angepasste Funktion könnte den Verlauf der Datenpunkte beschreiben, scheint diesen aber noch nicht ganz zu fassen. Möglicherweise werden die Ergebnisse besser, wenn zusätzliche Gewichtungsfaktoren abgeschätzt und übergeben werden.
 PARSERFUNCS_FIT_BAD_WO_ERROR=Offenbar konnte die Funktion die Datenpunkte gar nicht oder nur sehr schlecht beschreiben. Das verwendete Modell ist ggf. nicht für diese Datenpunkte angebracht, Ausreißer verzerren das Ergebnis, oder die Datenpunkte können nur mit ausreichend groß gewählten Gewichtungsfaktoren durch das Modell beschrieben werden.
 PARSERFUNCS_FIT_OVERFITTING=Es wurden exakt so viele Parameter wie Datenpunkte vorgegeben. Die angepasste Funktion beschreibt die Datenpunkte wahrscheinlich exakt. Ob diese Funktion als sinnvolles Modell gelten kann, ist allerdings fragwürdig.
-PARSERFUNCS_FFT_FOURIERTRANSFORMING=Fourier-transformiere Spalten %%1%% und %%2%%:$Nyquist-Grenzfrequenz ist %%3%% Hz ...
-PARSERFUNCS_FFT_INVERSE_FOURIERTRANSFORMING=Invers-Fourier-transformiere Spalten %%1%% und %%2%%:$Ergebnis-Zeitintervall ist %%3%% s ...
+PARSERFUNCS_FFT_FOURIERTRANSFORMING=Fourier-transformiere %%1%% Spalten:$Nyquist-Grenzfrequenz ist %%2%% Hz ...
+PARSERFUNCS_FFT_INVERSE_FOURIERTRANSFORMING=Invers-Fourier-transformiere %%1%% Spalten:$Ergebnis-Zeitintervall ist %%2%% s ...
+PARSERFUNCS_WAVELET_TRANSFORMING=Berechne Wavelet-Transformation mit "%%1%%"-Wavelets ...
+PARSERFUNCS_WAVELET_INVERSE_TRANSFORMING=Berechne inverse Wavelet-Transformation mit "%%1%%"-Wavelets ...
 PARSERFUNCS_PULSE_HEADLINE=Puls-Analyse
 PARSERFUNCS_PULSE_TABLE_1_MAXAMP=		Maximale Amplitude:              %%1%%
 PARSERFUNCS_PULSE_TABLE_2_POSMAX=		Position des Maximums:           %%1%%
@@ -1274,9 +1279,13 @@ GUI_EDITOR_CALLTIP_OPT_BOTTOMLEFT=legend=bottomleft [%%GUI_EDITOR_CALLTIP_COMMON
 GUI_EDITOR_CALLTIP_OPT_BOTTOMRIGHT=legend=bottomright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_BOX=box [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_BOXPLOT=boxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BSPLINE=type=bspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
 GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CBSPLINE=type=cbspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_CDAUBECHIES=type=cdaubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_CHAAR=type=chaar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_CHIMAP=chimap=CHIMAP() [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
 GUI_EDITOR_CALLTIP_OPT_CHORUS=chorus [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CLOG=clog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1308,6 +1317,7 @@ GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMM
 GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=type=daubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
@@ -1341,6 +1351,7 @@ GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_GRID=grid[=TYPE]
 GUI_EDITOR_CALLTIP_OPT_GRIDSTYLE=gridstyle=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HAAR=type=haar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_HBARS=hbars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_HEAD=head=LINENUMBER
 GUI_EDITOR_CALLTIP_OPT_HEROS=heros [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
@@ -1351,7 +1362,7 @@ GUI_EDITOR_CALLTIP_OPT_HOT=colorscheme=hot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_HTML=html
 GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
 GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
+GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft/fwt]
 GUI_EDITOR_CALLTIP_OPT_ITER=iter=VAL
 GUI_EDITOR_CALLTIP_OPT_KEEPDIM=keepdim [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
 GUI_EDITOR_CALLTIP_OPT_LAST=last=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
