@@ -1,0 +1,28 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="execute">
+	<title string="Using the Windows shell" />
+	Sometimes it might be necessary to call a second program for a specific task, e.g. if one has implemented as simulation in an own program and wants to call this program automatically, or if one has created a file with NumeRe and wants to process this file in a second program. NumeRe may use the Windows shell API using the command <code>execute</code>.
+	<em>Important:</em> The command <code>execute</code> is <em>disabled</em> by default, because it is a security risk. (Bad code can directly access the Windows shell and execute arbitrary commands.) If the command is necessary, the it can be enabled using the options dialogue in the "Tools" menu.
+	To use the command <code>execute</code> one has to append the desired program as a string to the command:<codeblock>execute "PATH/TO/PROGRAM"</codeblock>Additionally, one may add further filenames or parameters if one uses the option <code>params=PARAMETER</code>:<codeblock>execute "PATH/TO/PROGRAM" -set params="PATH/TO/FILE"</codeblock>
+	The path to the program might be omitted, if the program's directory is listed in the environment variable <code>PATH</code> (One can obtain this information, if one calls <code>execute "cmd"</code> and enters <code>PATH</code> in the opened window). Typical examples are the Windows default applications like "notepad.exe", "calc.exe", "cmd.exe", ...
+	<example desc="Open the fit logfile using the Windows editor:">
+		execute "notepad.exe" -set params=#&lt;savepath&gt;+"/numerefit.log"
+	</example>
+</article>

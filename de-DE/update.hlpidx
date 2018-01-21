@@ -306,7 +306,16 @@
 		<keywords>
 			<keyword>viewer</keyword>
 		</keywords>
-	</article>	
+	</article>		
+	<article id="execute">
+		<file path="<>/docs/execute.nhlp" />
+		<title string="Die Windows-Shell verwenden" idxkey="execute" />
+		<keywords>
+			<keyword>shell</keyword>
+			<keyword>bash</keyword>
+			<keyword>execute</keyword>
+		</keywords>
+	</article>
 	<article id="graphviewer">
 		<file path="<>/docs/graphviewer.nhlp" />
 		<title string="NumeRe-GraphViewer" idxkey="graphviewer" />

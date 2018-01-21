@@ -1,0 +1,28 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="execute">
+	<title string="Die Windows-Shell verwenden" />
+	Manchmal kann es nötig sein, dass ein zweites Programm für eine Aufgabe aufgerufen wird, z.B. wenn man eine Simulation in einem eigenen Programm implementiert hat und dieses Programm automatisiert aufrufen will, oder wenn man eine Datei mit NumeRe erzeugt hat und diese in einem anderen Programm weiterverarbeiten will. NumeRe kann dazu die Windows-Shell API mithilfe des Kommando <code>execute</code> nutzen.
+	<em>Wichtig:</em> Das Kommando <code>execute</code> ist standardmäßig <em>deaktiviert</em>, da es ein Sicherheitsrisiko darstellt. (Schadhafter Code kann damit direkt auf die Windows-Shell zugreifen und beliebige Kommandos ausführen.) Sollte das Kommando zwingend nötig sein, so kann es im Optionen-Dialog im "Werkzeuge"-Menü aktiviert werden.
+	Um das Kommando <code>execute</code> zu verwenden, muss man das gewünschte Programm als Zeichenkette an das Kommando übergeben:<codeblock>execute "PFAD/ZUM/PROGRAMM"</codeblock>Des Weiteren kann man dem Kommando auch noch eventuelle Parameter oder Dateipfade übergeben, wenn man die Option <code>params=PARAMETER</code> nutzt:<codeblock>execute "PFAD/ZUM/PROGRAMM" -set params="PFAD/ZUR/DATEI"</codeblock>
+	Der Pfad zum Programm kann dabei auch weggelassen werden, wenn sich der Programmordner in der Umgebungsvariable <code>PATH</code> befindet (Dies kann man z.B. herausfinden, indem man <code>execute "cmd"</code> ausführt und in der sich öffnenden Konsole einfach nur <code>PATH</code> eingibt). Typische Beispiel dafür sind Standard-Windows-Programme wie "notepad.exe", "calc.exe", "cmd.exe", ...
+	<example desc="Öffnen der Fitprotokolldatei im Windows-Editor:">
+		execute "notepad.exe" -set params=#&lt;savepath&gt;+"/numerefit.log"
+	</example>
+</article>

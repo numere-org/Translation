@@ -91,6 +91,7 @@ eigenvects(MAT)~Calculates the eigenvectors of the quadratic matrix MAT~eigenvec
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunktion erf()
 erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gaussssche gaußsche fehlerfunktion errorfunktion erfc()
 eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace
+execute~Executes a command using the windows shell~command bash programm
 exp(x)~Exponential function of x~exponentialfunktion eulersche zahl exp()
 explicit~Deactivates all plugins for the current command~plugins deaktivieren überschreiben ueberschreiben
 export~Textual export of the passed data set~exportieren textdatei data csvdatei texdatei texttabelle textabelle
