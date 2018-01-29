@@ -1,4 +1,4 @@
-#*
+#**
  * Dieses Script wurde automatisch von NumeRe erzeugt
  * SCRIPTNAME:  %%1%%
  * ERZEUGT:     %%2%%
@@ -13,7 +13,7 @@
  *#
 
 
-#* Ende des Scripts
+#**Ende des Scripts
  * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://sites.google.com/site/numereframework/
  *#

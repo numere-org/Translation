@@ -1,0 +1,43 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="latex">
+	<title string="LaTeX documentation and the LaTeX compiler" />
+	If a LaTeX distribution (e.g. <em>MikTeX</em> or <em>TeXLive</em>) is installed on this machine, then in the settings dialogue it may be connected to NumeRe. NumeRe may use this distribution to generate documentations of scripts or procedures or to compile already existing TeX files in to PDFs.
+	In the "Tools" menu a the item "LaTeX generator" there are the possibilities to create a documentation of a script or a procedure using the TeX format, to compile it directly into a PDF (this will create the needed main file and the header automatically) or to run the LaTeX compiler on an already existing TeX file. The XeLaTeX compiler is always used.
+	<em>Note:</em> Documentations, which were created as single LaTeX files, cannot be compiled directly. You've to provide a LaTeX main file and to define the syntax highlighting correspondingly. A complete set is created if a file is compiled directly.
+	If a documentation is created, then the code of the procedure or the file is copied into a so-called <em>Listing</em>, where the syntax is highlighted using colours and bold font.
+	Some distinct comments may be transformed into simple text, if they are either prefixed with <code>##!</code> or located inside of <code>#*! ... *#</code>. Lists such as
+	<codeblock>
+		#*! Text
+		- List item
+		- List item
+		Text
+		*#
+	</codeblock>
+	are also transformed into the corresponding LaTeX environment:
+	<codeblock>
+		Text
+		\begin{itemize}
+		\item List item
+		\item List item
+		\end{itemize}
+		Text
+	</codeblock>
+	Comments, which are prefixed with <code>##~</code> or located inside of <code>#** ... *#</code> are ignored completely and won't be displayed in the documentation. (Can be used to hide commented-out code.)
+</article>

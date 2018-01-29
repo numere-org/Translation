@@ -1,4 +1,4 @@
-#*
+#**
  * Dieses Plugin-Template wurde automatisch von NumeRe erzeugt
  * PLUGINNAME:  %%1%%
  * ERZEUGT:     %%2%%
@@ -22,7 +22,7 @@
 	<endinfo>
 
 	procedure $plugins~%%1%%~main(cmdstring) :: explicit
-		#* Dies ist die Hauptprozedur für dein neues Plugin. 
+		#**Dies ist die Hauptprozedur für dein neues Plugin. 
 		 * Ergänze hier die Kommandos und Auswertungen, die dein Plugin ausführen soll.
 		 * Falls dein Plugin Prozeduren aufrufen soll, kopiere diese mit Namensraum in diese Installationsroutine. *#
 		namespace plugins~%%1%% ## Standard-Namensraum. Du könntest auch "this" verwenden.
@@ -55,7 +55,7 @@
 	</helpfile>
 <endinstall>
 
-#* Ende des Plugin-Templates
+#**Ende des Plugin-Templates
  * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://sites.google.com/site/numereframework/
  *#

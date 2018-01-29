@@ -8,7 +8,7 @@ procedure $%%1%%()
 	return true;
 endprocedure
 
-#* End of the procedure
+#**End of the procedure
  * NumeRe: Framework für Numerische Rechnungen | Free numerical software licenced under GNU GPL v3
  * https://sites.google.com/site/numereframework/
  **********************************************************************************************#
