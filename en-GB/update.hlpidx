@@ -121,13 +121,19 @@
 			<keyword>cache</keyword>
 			<keyword>rename</keyword>
 			<keyword>swap</keyword>
-			<keyword>sort</keyword>
 			<keyword>desc</keyword>
 			<keyword>lines</keyword>
 			<keyword>cols</keyword>
 			<keyword>every</keyword>
 		</keywords>
 	</article>
+	<article id="sort">
+		<file path="<>/docs/sort.nhlp" />
+		<title string="Sorting data" idxkey="sort" />
+		<keywords>
+			<keyword>sort</keyword>
+		</keywords>
+	</article>	
 	<article id="calc">
 		<file path="<>/docs/calc.nhlp" />
 		<title string="Calculator mode" idxkey="calc" />

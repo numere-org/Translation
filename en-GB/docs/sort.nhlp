@@ -1,0 +1,37 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="sort">
+	<title string="Sorting data" />
+	NumeRe may sort loaded data or data in a cache using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
+	<codeblock>
+		sort DATA(I1:I2,J1:J2)
+	</codeblock>
+	The default call of the command sorts the complete data ascending along the columns. If one likes to restrict the columns, one can use the option <code>cols</code>: <code>cols=COLUMNS</code>. You may also use index columns, which may be used for sorting the whole data:
+	<codeblock>
+		sort DATA(I1:I2,J1:J2) -set cols=INDEX[COLUMNS]
+	</codeblock>
+	One may use index columns heirarchically, if one adds <code>INDEX[COLUMNS]</code> in <code>COLUMNS</code> again: <code>cols=INDEX1[INDEX2[INDEX3[COLUMNS]]]</code>. Please note that index columns will be sorted, too.
+	Instead of sorting the data directly, one can also obtain an index vector using the option <code>index</code>. One can use this vector to sort the columns by himself:
+	<codeblock>
+		INDEX() = sort DATA(I1:I2,J1:J2) -set cols=INDEX[COLUMNS] index
+	</codeblock>
+	<example desc="Sorting the data after columns 1 and 2">
+		sort data() -set cols=1[2[3:]]
+	</example>
+</article>

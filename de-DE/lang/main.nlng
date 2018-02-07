@@ -615,7 +615,7 @@ PARSERFUNCS_LISTCMD_CMD_SCRIPT_[MISC_MAINCTRL]=			script       -PAR           - 
 PARSERFUNCS_LISTCMD_CMD_SET_[MAINCTRL]=					set          -PAR           - Programmeinstellung tätigen
 PARSERFUNCS_LISTCMD_CMD_SHOW_[DATACTRL]=				show         OB             - Den Inhalt eines Datensatzes anzeigen
 PARSERFUNCS_LISTCMD_CMD_SMOOTH_[EVAL]=					smooth       OB -PAR        - Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung.
-PARSERFUNCS_LISTCMD_CMD_SORT_[DATACTRL]=				sort         -OB PAR        - Sortiert einen Datensatz
+PARSERFUNCS_LISTCMD_CMD_SORT_[DATACTRL]=				sort         OB [-PAR]      - Sortiert einen Datensatz
 PARSERFUNCS_LISTCMD_CMD_SPLINE_[EVAL]=					spline       OB             - Berechnet kubische Splines für die gegebenen Datenpunkte
 PARSERFUNCS_LISTCMD_CMD_START_[MISC]=					start        NM             - Startet das bezeichnete Script
 PARSERFUNCS_LISTCMD_CMD_STATS_[EVAL]=					stats        OB [-PAR]      - Berechnung der Statistiken eines Datensatzes
@@ -1380,6 +1380,7 @@ GUI_EDITOR_CALLTIP_OPT_HLINES=hlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_P
 GUI_EDITOR_CALLTIP_OPT_HOT=colorscheme=hot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_HTML=html
 GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
+GUI_EDITOR_CALLTIP_OPT_INDEX=index [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
 GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft/fwt]
 GUI_EDITOR_CALLTIP_OPT_ITER=iter=VAL

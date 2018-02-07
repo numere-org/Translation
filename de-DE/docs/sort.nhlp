@@ -1,0 +1,37 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="sort">
+	<title string="Daten sortieren" />
+	NumeRe kann geladene Daten oder Daten in einem Cache mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
+	<codeblock>
+		sort DATEN(I1:I2,J1:J2)
+	</codeblock>
+	Der standardmäßige Aufruf des Kommandos sortiert den übergebenen Datensatz spaltenweise und aufsteigend. Welche Spalten sortiert werden sollen, kann mit der Option <code>cols</code> beeinflusst werden: <code>cols=SPALTEN</code>. Dazu können auch Indexspalten ausgewählt werden, nach denen sortiert werden soll:
+	<codeblock>
+		sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN]
+	</codeblock>
+	Indexspalten können hierarchisch verwendet werden, indem in <code>SPALTEN</code> erneut <code>INDEX[SPALTEN]</code> verwendet wird: <code>cols=INDEX1[INDEX2[INDEX3[SPALTEN]]]</code>. Zu beachten ist, dass hierbei auch die Indexspalten sortiert werden.
+	Anstatt die Daten selbst zu sortieren, kann mittels <code>index</code> ein Indexvektor zurückgegeben werden, mit dessen Hilfe die Spalten selbst sortiert werden können:
+	<codeblock>
+		INDEX() = sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN] index
+	</codeblock>
+	<example desc="Sortieren der Daten nach Spalten 1 und 2">
+		sort data() -set cols=1[2[3:]]
+	</example>
+</article>
