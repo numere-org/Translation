@@ -267,10 +267,12 @@ tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen
 taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sph‰rische theta()
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer
+timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit sekunden dauer formatieren formatting
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII-Values and returns their corresponding characters as one string~zeichenkette # \" character ascii to_char()
 to_cmd(STRING)~Transforms the passed string STRING to a command expression~zeichenkette # \" command kommando to_cmd()
 to_lowercase(STRING)~Transforms the uppercase letters in STRING to lowercase~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben
 to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette wert # \" to_string()
+to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren zeitstempel timestamp umwandeln
 to_uppercase(STRING)~Transforms the lowercase letters in STRING to uppercase~string zeichenkette wert # \" to_value()
 to_value(STRING)~Evaluates the string STRING and transforms it to a numerical value afterwards~string zeichenkette wert # \" to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben
 trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente
