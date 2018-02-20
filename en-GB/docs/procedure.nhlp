@@ -25,6 +25,7 @@
 		\tPROCEDURE BODY                           ## Expressions and commands
 		endprocedure                                 ## Prozedure tail
 	</codeblock>
+	The argument list has to be separated using commas. One can define a default value for each argument, which will be used, if no value for this argument was passed to the procedure: <code>ARG1 = DEFAULTVALUE1, ARG2, ARG3 = DEFAULTVALUE2, ...</code> If one argument has to be a cache, then it has to be declared useing parentheses (<code>CACHE() = DEFAULTCACHE(), ...</code>).
 	Procedures must be available as single "NumeRe procedure files" (*.nprc) in the default procedure path, where the name of the file must match the name of the procedure. If you want to be sure, then you may enter the procedure(s) to a NumeRe script in a <code>&lt;install&gt;...&lt;endinstall&gt;</code> block and run the script by <code>install SCRIPT</code>. NumeRe will create the corresponding procedure files by itself in the matching location. (NumeRe may load procedures out of other files, if the relative or absolute file path in <em>single</em> quotation marks is entered: <code>$'PATH_TO_THE_PROCEDURE'(VARLIST)</code>. Because it's likely that such long file name have errors, it's not recommended to use this feature.)
 	It's possible to gather multiple procedures in a single file, as long as one of them carries the name of the file. The other procedures may be called from the naming procedure with the special syntax <code>$thisfile~...</code> (see below).
 	The following flags are available:
