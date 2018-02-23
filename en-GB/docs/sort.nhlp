@@ -27,6 +27,7 @@
 		sort DATA(I1:I2,J1:J2) -set cols=INDEX[COLUMNS]
 	</codeblock>
 	One may use index columns heirarchically, if one adds <code>INDEX[COLUMNS]</code> in <code>COLUMNS</code> again: <code>cols=INDEX1[INDEX2[INDEX3[COLUMNS]]]</code>. Please note that index columns will be sorted, too.
+	To change the sorting direction to descending, one has to pass the option <code>desc</code>.
 	Instead of sorting the data directly, one can also obtain an index vector using the option <code>index</code>. One can use this vector to sort the columns by himself:
 	<codeblock>
 		INDEX() = sort DATA(I1:I2,J1:J2) -set cols=INDEX[COLUMNS] index

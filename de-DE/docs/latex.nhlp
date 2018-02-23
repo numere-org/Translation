@@ -39,5 +39,6 @@
 		\end{itemize}
 		Text
 	</codeblock>
+	Wenn Code im normalen Text gezeigt werden soll, so muss dieser Abschnitt durch doppelte Ausrufezeichen umgegeben sein: <code>!!CODE IN EINEM TEXT!!</code>
 	Kommentare, die hinter <code>##~</code> stehen oder sich zwischen <code>#** ... *#</code> befinden, werden vollkommen ignoriert und nicht in der Dokumentation angezeigt. (Dies kann verwendet werden, um auskommentierten Code zu verstecken.)
 </article>

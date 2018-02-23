@@ -39,5 +39,6 @@
 		\end{itemize}
 		Text
 	</codeblock>
+	If some code shall be displayed in the usual text, then this section has to be surrounded with doubled exclamation marks: <code>!!CODE IN THE TEXT!!</code>
 	Comments, which are prefixed with <code>##~</code> or located inside of <code>#** ... *#</code> are ignored completely and won't be displayed in the documentation. (Can be used to hide commented-out code.)
 </article>

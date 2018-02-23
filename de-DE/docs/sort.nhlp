@@ -27,6 +27,7 @@
 		sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN]
 	</codeblock>
 	Indexspalten können hierarchisch verwendet werden, indem in <code>SPALTEN</code> erneut <code>INDEX[SPALTEN]</code> verwendet wird: <code>cols=INDEX1[INDEX2[INDEX3[SPALTEN]]]</code>. Zu beachten ist, dass hierbei auch die Indexspalten sortiert werden.
+	Um die Sortierrichtung auf absteigend zu ändern, ist die Option <code>desc</code> mit zu übergeben.
 	Anstatt die Daten selbst zu sortieren, kann mittels <code>index</code> ein Indexvektor zurückgegeben werden, mit dessen Hilfe die Spalten selbst sortiert werden können:
 	<codeblock>
 		INDEX() = sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN] index

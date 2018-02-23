@@ -543,7 +543,7 @@
 	</article>
 	<article id="load_save">
 		<file path="<>/docs/load_save.nhlp" />
-		<title string="Loading and saving" idxkey="load, save, append" />
+		<title string="Loading and saving" idxkey="load, save, append, export" />
 		<keywords>
 			<keyword>append</keyword>
 			<keyword>csv</keyword>
