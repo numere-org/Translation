@@ -1043,6 +1043,7 @@ GUI_OPTIONS_PRINT_COLOR=Colour
 GUI_OPTIONS_DEFAULTFONT=Default font for plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Print linenumbers
 GUI_OPTIONS_SAVE_SESSION=Session recovery%%LINEBREAK%%(Only saved changes are recoverable)
+GUI_OPTIONS_FORMAT_BEFORE_SAVING=Format file before saving
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Show text on the toolbar
 GUI_OPTIONS_HISTORY_LINES=Buffersize of the NumeRe console
 GUI_OPTIONS_PRECISION=Precision (Decimals int the console)
