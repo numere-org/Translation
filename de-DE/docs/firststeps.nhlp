@@ -19,21 +19,21 @@
 <article id="firststeps">
 	<title string="Erste Schritte" />
 	NumeRe mag zu Beginn überwältigend wirken, da es ein klein wenig Vorwissen voraussetzt. Dieses Vorwissen soll in diesem Abschnitt erarbeitet werden.
-	<em>Funktionsweise</em>
+	<h>Funktionsweise</h>
 	Die Benutzeroberfläche von NumeRe setzt sich aus drei wesentlichen Komponenten zusammen: dem <a href="nhlp://filetree?frame=new">Dateibaum</a>, dem <a href="nhlp://editor?frame=new">Editor</a> und der <a href="nhlp://console?frame=new">Konsole</a>. Während der Dateibaum eine Übersicht über die vorhandenen Dateien bietet, können im Editor Textdateien, Scripte und Prozeduren geschrieben werden. Die Konsole schließlich erlaubt die Interaktion mit der verarbeitenden Schicht von NumeRe - wir kommen gleich dazu.
 	NumeRe ist dazu ausgelegt, dass es Befehle und mathematische Ausdrücke abarbeitet, die zuvor definiert wurden, ähnlich einer imperativen Programmiersprache. Dies kann von Hand Befehl je Befehl (bzw. Ausdruck je Ausdruck) passieren, oder die entsprechenden Routinen können zuvor in eine Datei - ein sogenanntes Script - geschrieben und von dort ausgeführt werden.
 	Die graphische Benutzeroberfläche ist eine Hilfestellung, um mit der ausführenden Schicht von NumeRe einfacher arbeiten zu können. Die ausführende Schicht läuft im Hintergrund und arbeitet die Befehle und Ausdrücke, die ihr vorgegeben wurden, eine nach dem anderen ab.
 	Um eine bildliche Sprache zu wählen: ein Script ist ein Drehbuch, die Benutzeroberfläche ist die Studiotechnik, die der Benutzer (Regisseur) nutzen kann und die ausführende Schicht ist der Schauspieler, der die Anordnungen des Regisseurs bzw. des Drehbuchs umsetzen muss - lediglich auf einer mathematisch-numerischen Ebene.
-	<em>Was tue ich als erstes?</em>
+	<h>Was tue ich als erstes?</h>
 	Zunächst muss NumeRe eingerichtet werden: Dazu gehören vor allem die Standardpfade. Öffne die Optionen im Werkzeugemenü, wähle den Tab "Verzeichnisse" und passe die dort vorgegebenen Pfade auf deine Wünsche an. Es spielt keine Rolle, ob hierbei "\" oder "/" zum Trennen der Pfade verwendet wird.
 	Der Importordner beschreibt das Verzeichnis, an dem deine Daten liegen. Falls das kein eindeutiger Ordner ist, brauchst du diesen Pfad nicht ändern, sondern kannst das Arbeitsverzeichnis entsprechend anpassen, indem du<codeblock>workpath "PFAD/ZU/DEINEN/DATEN"</codeblock>in die Konsole eingibst. Dies wird nur für die aktuelle Sitzung gespeichert und kann über den Platzhalter <code>&lt;wp&gt;</code> verwendet werden.
 	Der Speicherordner ist der Pfad, wo die exportierten Daten oder anderweitig gespeicherten Daten abliegen.
 	Der Scriptordner ist der standardmäßige Suchpfad für Scripte. Du kannst diesen Pfad sowie den Prozedurenordner im Moment einfach beibehalten. (Es müssten sich bereits Scripte in deinem Scriptordner befinden)
 	Der Plotspeicherordner beschreibt den Pfad, wo die erzeugten Plots, also die graphischen Ausgaben von NumeRe abgelegt werden.
 	Klicke auf "Anwenden" und fertig.
-	<em>Fertig mit dem Einstellen. Was soll ich nun machen?</em>
+	<h>Fertig mit dem Einstellen. Was soll ich nun machen?</h>
 	Rumprobieren wäre erst mal eine gute Idee, bevor du dich an die produktive Arbeit machst. Am besten fokussierst du dich zunächst auf die Konsole.
-	<em>Erst mal etwas plotten ...</em>
+	<h>Erst mal etwas plotten ...</h>
 	Probiere in der Konsole mal einfach die folgende Zeile aus, die du mittels <code>[ENTER]</code> an die ausführende Schicht weiterreichst:<codeblock>plot sin(x)</codeblock>
 	Es müsste eine graphische Ausgabe wie die folgende erzeugt werden:
 	<img src="<>/docs/plotsinx.png" />
@@ -45,7 +45,7 @@
 	Das sollte diese Ausgabe erzeugen, wobei die Box und das Gitter zu beachten sind, die aus dem vorherigen Plot übernommen wurden:
 	<img src="<>/docs/plotsinxcosx.png" />
 	Herzlichen Glückwunsch! Du hast nun gelernt, wie ein Plot erzeugt wird, wie mehr als eine Funktion geplottet wird und wie Optionen funktionieren. Weitere Details zum Plotten findest du, indem du<codeblock>help plot</codeblock>in die Konsole eingibst. Im Allgemeinen kann das <code>help</code>-Kommando in vielen Fällen bereits mit den nötigen Informationen weiterhelfen.
-	<em>Nun zur Arbeit mit Datensätzen ...</em>
+	<h>Nun zur Arbeit mit Datensätzen ...</h>
 	Wir wollen uns nun etwas mit der Arbeit mit Datensätzen beschäftigen. Datensätze werden von NumeRe eigentlich immer als eine Tabelle interpretiert. D.h. wiederum, dass die Daten irgendwie in Form einer Tabelle vorhanden sein müssen - nach Möglichkeit mit den Datenreihen in den Spalten.
 	NumeRe kommt bereits mit ein paar Beispieldatensätzen. Probiere mal:<codeblock>load &lt;&gt;/samples/data</codeblock>
 	Es müsste eine Erfolgsmeldung ausgegeben werden, die des Weiteren die Größe des Datensatzes umfasst. Beachte auch, dass die Dateiendung <code>*.dat</code> erraten wurde. Das funktioniert mit <code>*.dat</code>, <code>*.txt</code> und <code>*.ndat</code>.
@@ -84,7 +84,7 @@
 	Du solltest die folgende Ausgabe erhalten haben:
 	<img src="<>/docs/fit.png" />
 	Wie zu sehen ist, verläuft die angepasste Funktion mitten durch die Datenpunkte und gleicht sie aus.
-	<em>Was kommt nun?</em>
+	<h>Was kommt nun?</h>
 	Wenn du die bisherigen Informationen langweilig fandest, dann kannst du direkt loslegen. Wir konnten dir hier nichts mehr beibringen, du weißt offenbar schon alles.
 	Im anderen Fall jedoch seiest du auf die PDF-Dokumentation verwiesen, die diesem Programm beiliegt und unter <code>&lt;&gt;/docs</code> gefunden werden kann.
 </article>

@@ -31,6 +31,7 @@
 		<item node="&lt;a href=&quot;...&quot;&gt;">Bindet einen internen Link ein, der im Hilfefenster entsprechend umgesetzt wird. Das Protokoll nennt sich <code>nhlp</code> gefolgt vom Schlüsselword und erkennt zwei Optionen: <code>?frame=self</code> (im aktuellen Fenster öffnen) und <code>?frame=new</code> (in einem neuen Fenster öffnen). Der Link zu diesem Artikel wäre <code>nhlp://documentation?frame=new</code></item>
 		<item node="&lt;img src=&quot;...&quot;&gt;">Mit diesem Tag kann ein Bild eingebunden werden. Dieses Bild wird nur im externen Hilfefenster angezeigt und muss dabei lokal abgelegt sein; für Plugins am besten in "&lt;&gt;/docs/plugins" und kann während der Installation eines Plugins ggf. automatisch erstellt werden. Der Pfad zum Bild (<code>src=...</code>) sollte dabei mittels der Pfadplatzhalter inklusive der Dateiendung angegeben werden.</item>
 		<item node="&lt;em&gt;">Fasst zu betonende Abschnitte. Wird durch <em>Großbuchstaben</em> (bzw. kursiv und fett im HTML-Format) umgesetzt</item>
+		<item node="&lt;h&gt;">Beschreibt eine Überschrift. Wird durch Großbuchstaben bzw. durch <code>&lt;h4&gt;</code> Tags interpretiert</item>
 		<item node="&lt;code&gt;">Fasst nicht zu interpretierende Zeichenketten, wie z.B. NumeRe-Code (außer spitze Klammern)</item>
 		<item node="&lt;expr&gt;">Für (einfache) mathematische Ausdrücke. Wird nur im HTML-Format interpretiert.</item>
 		<item node="&lt;codeblock&gt;">Abgesetzter Block für NumeRe-Code</item>

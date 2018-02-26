@@ -31,6 +31,7 @@
 		<item node="&lt;a href=&quot;...&quot;&gt;">Includes a internal link, which will be implemented in the help windod correspondingly. The protocol is <code>nhlp</code> followed by the keyword and knows two options: <code>?frame=self</code> (open in the current window) and <code>?frame=new</code> (open in a new window). The link to this article would be <code>nhlp://documentation?frame=new</code></item>
 		<item node="&lt;img src=&quot;...&quot;&gt;">An image may be included in the documentation article with this tag. This image will only be displayed in the external help window and has to be available locally; for plugins it's best practice to save them at "&lt;&gt;/docs/plugins" and generate them during installation, if possible. The path to the image (<code>src=...</code>) should be passed including path placeholder and the file extension.</item>
 		<item node="&lt;em&gt;">Contains sections, which shall be emphasised. Will be displayed using <em>capital</em> (or bold and italic in HTML format) letters</item>
+		<item node="&lt;em&gt;">Contains a headline. Will be displayed as capital letters or through <code>&lt;h4&gt;</code> tags</item>
 		<item node="&lt;code&gt;">Contains strings, which shall not be interpreted, just like NumeRe-Code (but it doesn't ignore angle brackets: <code>&lt;&gt;</code>)</item>
 		<item node="&lt;expr&gt;">For (simple) mathematical expressions; will only be interpreted in HTML format.</item>
 		<item node="&lt;codeblock&gt;">Separate block for NumeRe-Code</item>

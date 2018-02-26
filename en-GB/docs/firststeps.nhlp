@@ -19,21 +19,21 @@
 <article id="firststeps">
 	<title string="First steps" />
 	At first glance NumeRe may appear overwhelming, because it needs some basic knowledge in advance. Evolving this knowledge shall be the goal of this section.
-	<em>Working principle</em>
+	<h>Working principle</h>
 	The user interface of NumeRe is constructed from three essential components: the <a href="nhlp://filetree?frame=new">file tree (or file browser)</a>, the <a href="nhlp://editor?frame=new">editor</a> and the <a href="nhlp://console?frame=new">console</a>. The file tree presents an overlook over the available files and the editor allows editing text files, scripts and procedures. The console finally enables the interaction between the user and the evaluating level of NumeRe--we will return to this topic soon.
 	NumeRe was developed to evaluate commands and mathematical expressions, just similar to an imperative programming language. This may be achieved manually by entering command by command (or expression by expression, respectively), or you may write the routines in a file in advance--a so-called script--and execute them out of this source.
 	The graphical user interface is a supportive measure to simplify the work with the evaluating layer of NumeRe. The evaluating layer runs in the background and executes the passed commands and expressions one after the other.
 	To choose a more figurative language: the script is just the same as the script in a movie or a theater, the user interface is the technical stuff of the studio, which the user (the movie director) may use and the evaluating layer corresponds to the actors, which have to execute the commands of the director or the script--only on a mathematical-numerical level.
-	<em>What shall I do first?</em>
+	<h>What shall I do first?</h>
 	Firstly, NumeRe must be somehow customized: this includes mainly the default paths. Open the options in the tools menu, choose the tab "Directories" and fit the predefined paths to your needs. It doesn't play any role, whether you use "\" or "/" to separate your paths.
 	The load path is the directory, where your data is located. If this is not a clear and unique directory, you don't have to change this path, but you may set the working directory corresponding by entering<codeblock>workpath "PATH/TO/YOUR/DATA"</codeblock>in the console. This will be saved for the current session and may be used with the placeholder <code>&lt;wp&gt;</code>.
 	The save path is the directory, where your exported data or data saved otherwise is located.
 	The script path is the default search path for scripts. You may stick to this path and to the procedure path for the moment. (There should already be some scripts in this predefined script path)
 	The plotting path is the folder for the created plots, which are more or less all the graphical outputs of NumeRe.
 	Click on "Apply" and finished.
-	<em>Done with customizing. What shall I do now?</em>
+	<h>Done with customizing. What shall I do now?</h>
 	Doing some trial and error would be an idea, at least before your going to your productive work. The best thing done first is focusing on the console.
-	<em>Doing some easy plots ...</em>
+	<h>Doing some easy plots ...</h>
 	Try the following line in the console, which you will pass to the evaluating layer by pressing <code>[ENTER]</code>:<codeblock>plot sin(x)</codeblock>
 	A graphical output just like the following image should've been created:
 	<img src="<>/docs/plotsinx.png" />
@@ -45,7 +45,7 @@
 	This should result in the following output, where you should consider the box and the grid, which were taken over from the last plot:
 	<img src="<>/docs/plotsinxcosx.png" />
 	Congratulations! You've just learned, how you create a plot, how you plot more than one function and how you work with options. You'll find further details, if you enter<codeblock>help plot</codeblock>into the console. In most cases, the <code>help</code> command may support you with the needed information for the current command.
-	<em>Moving over to the work with data sets ...</em>
+	<h>Moving over to the work with data sets ...</h>
 	We will now focus on the work with data sets. NumeRe interpretes data sets more or less always as a table. This means also that the data has to be available somehow in the shape of a table--this works best, if the data rows are forming the columns of the table.
 	NumeRe is shipped with some exemplary data sets. Just try:<codeblock>load &lt;&gt;/samples/data</codeblock>
 	NumeRe should display a message, which informs about the success and the size of the data set. Consider that the file extension <code>*.dat</code> was guessed by NumeRe. This works with <code>*.dat</code>, <code>*.txt</code> and <code>*.ndat</code>.
@@ -84,7 +84,7 @@
 	You should have obtained the following output:
 	<img src="<>/docs/fit.png" />
 	As you can see, the fitted function follows the data points and returns a smooth description of their behavior.
-	<em>What's now?</em>
+	<h>What's now?</h>
 	If you thought that the previous information was quite boring, you may directly go to work with NumeRe. We weren't able to teach you something new, because you seem to know everything already.
 	In the other case we want to recommend you the PDF documentation, which can be found at <code>&lt;&gt;/docs</code>.
 </article>
