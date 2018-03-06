@@ -1256,16 +1256,16 @@ GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start here
 # Tooltips
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Click right to search its definition
-GUI_EDITOR_CALLTIP_...=		...       - Allows an arbitrary number of arguments
-GUI_EDITOR_CALLTIP_ANS=		ans       - Contains the result of the last calculation
-GUI_EDITOR_CALLTIP_CACHE=	cache()   - Standard cache object. Its contents may be modified
-GUI_EDITOR_CALLTIP_DATA=	data()    - Data object. Contains all loaded data. Read-Only
-GUI_EDITOR_CALLTIP_FALSE=	false     - Constant for 0
-GUI_EDITOR_CALLTIP_INF=		inf       - Constant for the symbolic value infinity
-GUI_EDITOR_CALLTIP_NAN=		nan       - Constant for an invalid value
-GUI_EDITOR_CALLTIP_STRING=	string()  - String object. May contain an arbitrary number of strings
-GUI_EDITOR_CALLTIP_TRUE=	true      - Constant for 1
-GUI_EDITOR_CALLTIP_VOID=	void      - Constant for an empty value. Will sometimes be interpreted as "nan"
+GUI_EDITOR_CALLTIP_...=		...         - Allows an arbitrary number of arguments
+GUI_EDITOR_CALLTIP_ANS=		ans         - Contains the result of the last calculation
+GUI_EDITOR_CALLTIP_CACHE=	cache()  {} - Standard cache object. Its contents may be modified
+GUI_EDITOR_CALLTIP_DATA=	data()   {} - Data object. Contains all loaded data. Read-Only
+GUI_EDITOR_CALLTIP_FALSE=	false       - Constant for 0
+GUI_EDITOR_CALLTIP_INF=		inf         - Constant for the symbolic value infinity
+GUI_EDITOR_CALLTIP_NAN=		nan         - Constant for an invalid value
+GUI_EDITOR_CALLTIP_STRING=	string() {} - String object. May contain an arbitrary number of strings
+GUI_EDITOR_CALLTIP_TRUE=	true        - Constant for 1
+GUI_EDITOR_CALLTIP_VOID=	void        - Constant for an empty value. Will sometimes be interpreted as "nan"
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Conversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plot option
