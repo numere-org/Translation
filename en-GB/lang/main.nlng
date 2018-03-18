@@ -1732,6 +1732,7 @@ GUI_ANALYZER_WHILE_ALWAYSTRUE=Ensure that this loop will terminate
 GUI_ANALYZER_WHILE_ALWAYSFALSE=This loop will never start
 GUI_ANALYZER_FOR_INTERVALERROR=The definition of the loop interval is wrong
 GUI_ANALYZER_MISSINGENDPROCEDURE=The end of the procedure could not be found
+GUI_ANALYZER_UNFINISHEDBLOCK=This control flow block does not have a beginning or an end
 GUI_ANALYZER_UNUSEDVARIABLE=The local variable "%%1%%" is probably unused
 GUI_ANALYZER_NOVARIABLES=No local variables were defined
 GUI_ANALYZER_RETURN_ADDSEMICOLON=Append a semicolon ";" to suppress the doubled display of the result
