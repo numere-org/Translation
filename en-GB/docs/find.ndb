@@ -175,7 +175,6 @@ NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipf
 odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary
 one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix
 or(x,y,z,...)~Connects its arguments with "||"~logik logic oder
-
 # P
 pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile
 phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()
@@ -288,6 +287,7 @@ version()~Returns the version number of NumeRe as an integral number~numere vers
 while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while()
 workpath~Changes the current working directory for this session~workpath working directory cd change wp
 write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings # \"
+xor(x,y,z,...)~Connects its arguments with "|||"~logik logic oder exclusives xor() exklusives ausschliessendes ausschließendes
 # Y
 Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()
 # Z
