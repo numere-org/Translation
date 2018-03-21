@@ -27,11 +27,12 @@
 	The five functions <code>num()</code>, <code>cnt()</code>, <code>min()</code>, <code>max()</code> and <code>sum()</code> are overloaded for the work with strings: <code>num()</code> counts the non-empty strings, <code>cnt()</code> counts all strings, <code>min()</code> returns the smallest and <code>max()</code> returns the largest string. The function <code>sum()</code> concatenates all passed strings to a single string.
 	The following modificators may be used in strings, to modify the display of a string:
 	<list>
-		<item node="\n" type="verbatim">creates a line break at its position</item>
-		<item node="\t">creates a horizontal tabulator at its position</item>
-		<item node="\&quot;">creates a (non-suppressable) quotation mark at its position</item>
+		<item node="'\n'" type="verbatim">creates a line break at its position</item>
+		<item node="'\t'">creates a horizontal tabulator at its position</item>
+		<item node="'\&quot;'">creates a (non-suppressable) quotation mark at its position</item>
+		<item node="'\ '">escapes the backslash itself</item>
 	</list>
-	NumeRe may convert the value of a numerical value to a string, if the variable was called with a prefixed <code>#</code>. If one or more <code>~</code> are inserted between the variable's name and <code>#</code>, then NumeRe will prefix as many <code>0</code> as needed to get a string of the length of the number of <code>~</code>+1. If the value of the string already has enough characters, then NumeRe will ignore the <code>~</code>. Additionally, the results of whole expressions may be parsed through <code>#(EXPRESSION)</code>, as well as from functions through <code>#FUNCTION(ARGS)</code> and from path placeholders with <code>#&lt;PATH&gt;</code>.
+	NumeRe may convert the value of a numerical value to a string, if the variable was called with a prefixed <code>#</code>. If one or more <code>~</code> are inserted between the variable's name and <code>#</code>, then NumeRe will prefix as many <code>0</code> as needed to get a string of the length of the number of <code>~</code>+1. If the value of the string already has enough characters, then NumeRe will ignore the <code>~</code>. Additionally, the results of whole expressions may be parsed through <code>#(EXPRESSION)</code>, as well as from functions through <code>#FUNCTION(ARGS)</code> and from <a href="nhlp://explorer?frame=new">path placeholders</a> with <code>#&lt;PATH&gt;</code>.
 	The table heads of the data objects may be read and modified with the syntax <code>data(#,COLUMN)</code> or <code>CACHE(#,COLUMN)</code>, respectively. The filename of the loaded data file may be read with <code>data(#,#)</code>.
 	NumeRe is capable of processing logic operations with strings. The relational operators <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code> may be used to compare two strings. These operators compare the ASCII character codes of the two strings characterwise. In addition, logical expressions may be connected with <code>&&</code> and <code>||</code>.
 	The display of strings may be modified with the following parameters:
