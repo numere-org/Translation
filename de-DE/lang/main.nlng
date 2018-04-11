@@ -77,6 +77,13 @@ COMMON_FILETYPE_ODS=OpenDoc-Spreadsheet
 COMMON_FILETYPE_XLS=Excel-(97-2003)-Mappe
 COMMON_FILETYPE_XLSX=Excel-Mappe
 COMMON_FILETYPE_WAV=WAVE-Audiodatei
+COMMON_FILETYPE_M=MATLAB-Datei
+COMMON_FILETYPE_CPP=C++-Quelldatei
+COMMON_FILETYPE_CXX=%%COMMON_FILETYPE_CPP%%
+COMMON_FILETYPE_C=C-Quelldatei
+COMMON_FILETYPE_HPP=C++-Headerdatei
+COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
+COMMON_FILETYPE_H=C-Headerdatei
 # MAIN:
 # =================================
 MAIN_LOADING_CMDLINE=Verarbeite Kommandozeilenparameter
@@ -1029,6 +1036,9 @@ GUI_OPTIONS_EXECUTECOMMAND=Erlaube das Kommando "execute"%%LINEBREAK%%Sicherheit
 GUI_OPTIONS_SYNTAXHIGHLIGHTING=Farben der Syntaxhervorhebung:
 GUI_OPTIONS_RESETHIGHLIGHT=Zurücksetzen
 GUI_OPTIONS_DEFAULTBACKGROUND=Standardhintergrund
+GUI_OPTIONS_BOLD=Fett
+GUI_OPTIONS_ITALICS=Kursiv
+GUI_OPTIONS_UNDERLINE=Unterstrichen
 GUI_OPTIONS_CONFIG=Konfiguration
 GUI_OPTIONS_LOADPATH=Importordner | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Speicherordner | <savepath> =
@@ -1106,7 +1116,7 @@ GUI_FILTER_DATAFILES=%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_TXT
 GUI_FILTER_IMAGEFILES=Bilddateien
 GUI_FILTER_TEXSOURCE=TeX-Source
 GUI_FILTER_NONSOURCE=%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_LOG%% (*.log)|*.log|%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv
-GUI_FILTER_ALLSUPPORTEDFILES=Alle unterstützen Dateien|*.nscr;*.nprc;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex
+GUI_FILTER_ALLSUPPORTEDFILES=Alle unterstützten Dateien|*.nscr;*.nprc;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex;*.m;*.cpp;*.cxx;*.c;*.hpp;*.hxx;*.h
 
 GUI_NEWFILE_UNTITLED=<Unbenannt>
 GUI_SAVE_QUESTION=NumeRe: Speichern?
@@ -1127,6 +1137,13 @@ GUI_STATUSBAR_LOG=%%COMMON_FILETYPE_LOG%%
 GUI_STATUSBAR_INI=%%COMMON_FILETYPE_INI%%
 GUI_STATUSBAR_NHLP=%%COMMON_FILETYPE_NHLP%%
 GUI_STATUSBAR_NDB=%%COMMON_FILETYPE_NDB%%
+GUI_STATUSBAR_M=%%COMMON_FILETYPE_M%%
+GUI_STATUSBAR_CPP=%%COMMON_FILETYPE_CPP%%
+GUI_STATUSBAR_CXX=%%COMMON_FILETYPE_CPP%%
+GUI_STATUSBAR_C=%%COMMON_FILETYPE_C%%
+GUI_STATUSBAR_HPP=%%COMMON_FILETYPE_HPP%%
+GUI_STATUSBAR_HXX=%%COMMON_FILETYPE_HPP%%
+GUI_STATUSBAR_H=%%COMMON_FILETYPE_H%%
 GUI_STATUSBAR_UNSAVEDFILE=Ungesicherte Datei
 GUI_STATUSBAR_UNKNOWN=%%1%%-Datei
 GUI_STATUSBAR_LINECOL=Zeile: %d, Spalte: %d
@@ -1759,12 +1776,15 @@ GUI_ANALYZER_THISFILEPROCEDURE=Diese Prozedur befindet sich im "thisfile" Namens
 GUI_DUPCODE_TITLE=Code-Duplikate
 GUI_DUPCODE_MATCH=Zeilen
 GUI_DUPCODE_PERCENTAGE=Übereinstimmung
+GUI_DUPCODE_LINES=Zeilenzahl
 GUI_DUPCODE_SETTINGS=Ersetze für semantische Analyse
 GUI_DUPCODE_VARSEMANTICS=Variablen
 GUI_DUPCODE_STRINGSEMANTICS=Zeichenkettenliterale
 GUI_DUPCODE_NUMSEMANTICS=Numerische Literale
 GUI_DUPCODE_FUNCTIONSEMANTICS=Caches/Eigene Funktionsdefinitionen
 GUI_DUPCODE_START=Start
+GUI_DUPCODE_COPY=Ergebnis kopieren
+GUI_DUPCODE_REPORT=Ergebnis speichern
 # Graph viewer strings
 GUI_GRAPH_EXPORT=Graph exportieren
 GUI_GRAPH_COPY=Graph kopieren

@@ -1,6 +1,6 @@
 <!--
 	NumeRe: Framework fuer Numerische Rechnungen
-	Copyright (C) 2016  Erik Haenel et al.
+	Copyright (C) 2018  Erik Haenel et al.
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -17,7 +17,97 @@
 -->
 
 <article id="rekurs_oprt">
-	<title string="Recursive operators" />
+	<title string="Mathematical and string operators" />
+	Mathematical or string operations are needing a defined set of operations, which are represented through the operators listed below. Some operations may be used on numericals as well as on string values. Some operations are available recursive, too.
 	NumeRe may use the following recursive operators: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> and <code>^=</code>. These operators are abbreviatons for:<codeblock>VAR += EXPRESSION &lt;=&gt; VAR = VAR + (EXPRESSION)</codeblock>and similar for the other operators.
-	This may prevent you from having to type very much. The recursive operators will be internally transformed to their long variants, to prevent ambigousity.
+	The following operators are available:
+	<table>
+		<tr>
+			<td><em>Operation</em></td><td><em>Operator's symbol</em></td><td><em>Recursive operator</em></td><td><em>numerical</em></td><td><em>string</em></td>
+		</tr>
+		<tr>
+			<td>Addition/Concatenation</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Subtraction</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Multiplication</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Power</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Modulo</td><td><code>A % B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Matrix multiplication</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Assignment</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Logical NOT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Logical AND</td><td><code>A && B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Logical OR</td><td><code>A || B</code></td><td></td><td>X</td><td></td>
+		</tr>		
+		<tr>
+			<td>Logical XOR</td><td><code>A ||| B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Binary AND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Binary OR</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Equal</td><td><code>A == B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Not equal</td><td><code>A != B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Less than</td><td><code>A &lt; B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Greater than</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Less or equal</td><td><code>A &lt;= B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Greater or equal</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Interval</td><td><code>A : B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>String parser</td><td><code>#A</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Logical parentheses</td><td><code>(A)</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>List/vector braces</td><td><code>{A}</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>String</td><td><code>"A"</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>If-else-construct</td><td><code>A ? B : C</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Prompt</td><td><code>??</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Linebreak</td><td><code>\\</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+	</table>	
 </article>

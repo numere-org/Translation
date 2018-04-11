@@ -32,4 +32,5 @@
 	Der Editor kann auch eine <a href="nhlp://latex?frame=new">LaTeX-Dokumentation</a> eines aktuell geöffneten Scripts oder einer Prozedur erzeugen und den LaTeX-XeLaTeX-Compiler für eine aktuell geöffnete TeX-Datei aufrufen.
 	Das Kontextmenü des Editors unterstützt noch das permanente Hervorheben des aktuell angeklickten Textbausteins. Jedes Auftreten dieses Bausteins wird in der aktuellen Datei rot hervorgehoben. Im Gegensatz dazu kann mit einem Doppelklick auf einen Textbaustein dieser temporär hervorgehoben werden. Es wird in diesem Fall grün als Hervorhebung verwendet. Sobald die Selektion sich ändert oder etwas getippt wird, wird die Hervorhebung wieder aufgehoben.
 	Ebenfalls werden passende Klammern an der Position des Cursors (je eine öffnende und schließende) grün und Klammern, denen der Partner fehlt, rot hervorgehoben.
+	Der Editor ist auch in der Lage MATLAB-Dateien (*.m) und C/C++-Quelldateien (*.cpp,*.c,*.cxx,*.hpp,*.h,*.hxx) zu öffnen und entsprechend zu bearbeiten. Ebenso wird die suche nach dupliziertem Code unterstützt.
 </article>

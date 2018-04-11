@@ -604,7 +604,7 @@
 	</article>
 	<article id="rekurs_oprt">
 		<file path="<>/docs/rekurs_oprt.nhlp" />
-		<title string="Rekursive Operatoren" idxkey="rekursiv, operator" />
+		<title string="Mathematische und Zeichenketten-Operatoren" idxkey="rekursiv, operator" />
 		<keywords>
 			<keyword>*=</keyword>
 			<keyword>+=</keyword>
@@ -612,6 +612,7 @@
 			<keyword>/=</keyword>
 			<keyword>operat</keyword>
 			<keyword>rekurs</keyword>
+			<keyword>recurs</keyword>
 		</keywords>
 	</article>
 	<article id="plot">

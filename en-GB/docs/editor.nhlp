@@ -32,4 +32,5 @@
 	The editor may generate a <a href="nhlp://latex?frame=new">LaTeX documentation</a> of a currently opened script of a procedure as well as call the LaTeX-XeLaTeX compiler for a currently opened TeX file.
 	The context menu of the editor supports the permanent highlighting of the currently clicked text block. Each occurrence of this block will be marked red. In contrast you may temporary mark a text block by double-clicking on it. In this case the block and all occurrences are highlighted green. If the selection is changed or something was typed, the highlighting will vanish.
 	Matching parentheses at the position of the cursor (an opening and the corresponding closing parenthesis) will be highlighted green and parentheses without their corresponding companion will be highlighted red.
+	The editor may also open MATLAB (*.m) and C/C++ source files (*.cpp,*.c,*.cxx,*.hpp,*.h,*.hxx) and edit them correspondingly. The search for duplicated code is supported as well.
 </article>

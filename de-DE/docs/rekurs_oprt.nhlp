@@ -1,6 +1,6 @@
 <!--
 	NumeRe: Framework fuer Numerische Rechnungen
-	Copyright (C) 2016  Erik Haenel et al.
+	Copyright (C) 2018  Erik Haenel et al.
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -17,7 +17,97 @@
 -->
 
 <article id="rekurs_oprt">
-	<title string="Rekursive Operatoren" />
+	<title string="Mathematische und Zeichenketten-Operatoren" />
+	Mathematische oder Zeichenketten-Operationen benötigen einen definierten Satz an Operationen, die durch die unten aufgelisteten Operatoren repräsentiert werden. Dabei können viele Operationen sowohl mit numerischen Werten als auch mit Zeichenketten durchgeführt werden. Einige Operationen sind auch rekursiv verfügbar.
 	NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> und <code>^=</code>. Diese Operatoren sind Abkürzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog für die anderen Operatoren.
-	Dies kann speziell im Umgang mit dem Cache viel Tipparbeit ersparen. Die rekursiven Operatoren werden intern in ihre jeweilige ausführliche Variante umgewandelt, um Mehrdeutigkeiten zu vermeiden.
+	Die folgenden Operatoren sind verfügbar:
+	<table>
+		<tr>
+			<td><em>Operation</em></td><td><em>Operatorsymbol</em></td><td><em>Rekursiver Operator</em></td><td><em>numerisch</em></td><td><em>Zeichenkette</em></td>
+		</tr>
+		<tr>
+			<td>Addition/Verknüpfung</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Subtraktion</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Multiplikation</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Exponent</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Modulo</td><td><code>A % B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Matrixmultiplikation</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Zuweisung</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Logisches UND</td><td><code>A && B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Logisches ODER</td><td><code>A || B</code></td><td></td><td>X</td><td></td>
+		</tr>		
+		<tr>
+			<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Binäres UND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Binäres ODER</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Gleich</td><td><code>A == B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Ungleich</td><td><code>A != B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Kleiner als</td><td><code>A &lt; B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Größer als</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Kleiner oder gleich</td><td><code>A &lt;= B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Größer oder gleich</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Intervall</td><td><code>A : B</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Zeichenketten-Parser</td><td><code>#A</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Logische Klammern</td><td><code>(A)</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Listen-/Vektorklammern</td><td><code>{A}</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Zeichenkette</td><td><code>"A"</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>If-Else-Konstrukt</td><td><code>A ? B : C</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Eingabeaufforderung</td><td><code>??</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Zeilenumbruch</td><td><code>\\</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+	</table>
 </article>
