@@ -1221,6 +1221,8 @@ GUI_MENU_BOOKMARK_PREVIOUS=&Vorheriges Lesezeichen%%TAB%%Ctrl-Shift-M
 GUI_MENU_BOOKMARK_NEXT=&Nächstes Lesezeichen%%TAB%%Ctrl-M
 GUI_MENU_USETXTADV=Hebe Text durch "#", "*", "-" und "_" hervor
 GUI_MENU_USETXTADV_TTP=Verwende Markup-Hervorhebung für nur-Text Dateien mittels "#", "*", "-" und "_"
+GUI_MENU_USESECTIONS=Erkenne Abschnitte
+GUI_MENU_USESECTIONS_TTP=Verwende "##! ..." und "#*! ..." als den Beginn neuer Abschnitte
 GUI_MENU_VIEW=&Ansicht
 # Tools menu
 GUI_MENU_OPTIONS=&Optionen

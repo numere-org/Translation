@@ -131,6 +131,7 @@ hist2d~Generates a 2D histogram of a (x,y,z) data set. Expects either a data gri
 hline~Draws a double horizontal line. Using the parameter "-single", this command will only draw one single line~formatierung ausgabe trenner abstand doppellinie
 # I/J/K
 identity(n)~Generates a n-dimensional identity matrix~identity() matrix identität
+idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren
 if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
 integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
@@ -152,6 +153,7 @@ load~Loads the data of a file~laden load data dateien daten *.dat *.ndat *.txt *
 Log file~You'll find the log file at "<>/numere.log"~numerelog logfile
 log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()
 log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()
+logtoidx(MAT)~Transforms logical values to indices~logic index indices transformieren
 # M
 matfc(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,...~matfc()
 matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the missing elements are added logically~matfcf()

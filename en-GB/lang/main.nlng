@@ -1221,6 +1221,8 @@ GUI_MENU_BOOKMARK_PREVIOUS=&Previous bookmark%%TAB%%Ctrl-Shift-M
 GUI_MENU_BOOKMARK_NEXT=&Next bookmark%%TAB%%Ctrl-M
 GUI_MENU_USETXTADV=Markup text using "#", "*", "-" and "_"
 GUI_MENU_USETXTADV_TTP=Use markup highlighting for text-only files using "#", "*", "-" and "_"
+GUI_MENU_USESECTIONS=Identify sections
+GUI_MENU_USESECTIONS_TTP=Use "##! ..." and "#*! ..." as the beginning of new sections
 GUI_MENU_VIEW=&View
 # Tools menu
 GUI_MENU_OPTIONS=&Options

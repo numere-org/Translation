@@ -132,6 +132,7 @@ hist2d~Berechnet ein 2D-Histogramm aus einem gegebenen (x,y,z)-Datensatz. Erwart
 hline~Zeichnet eine horizontale Doppellinie~formatierung ausgabe trenner abstand doppellinie
 # I/J/K
 identity(n)~Erzeugt eine n-Dimensionale Einheitsmatrix, siehe "help matop"~identity() matrix identität
+idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index indices transformieren
 if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung COND aus, siehe "help if"~condition bedingung else elseif() if() endif wenn falls verzweigung
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal
@@ -152,6 +153,7 @@ load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data 
 Lösung~Was soll das denn? Ich kann numerisch rechnen - und nicht etwa hellsehen!~solution lösen solver
 log10(x)~Logarithmus zur Basis 10 von x~logarithmus basis 10 log10() log()
 log2(x)~Logarithmus zur Basis 2 von x~logarithmus basis 2 log2()
+logtoidx(MAT)~Wandelt Logikwerte in einer Matrix in Indexwerte um~logic index indices transformieren
 # M
 matfc(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., siehe "help matop"~matfc()
 matfcf(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., wobei fehlende Elemente logisch ergänzt werden, siehe "help matop"~matfcf()
