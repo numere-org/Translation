@@ -321,6 +321,7 @@
 			<keyword>bash</keyword>
 			<keyword>wait</keyword>
 			<keyword>execute</keyword>
+			<keyword>wp</keyword>
 		</keywords>
 	</article>
 	<article id="graphviewer">
@@ -1192,6 +1193,14 @@
 			<keyword>lang</keyword>
 			<keyword>sprach</keyword>
 			<keyword>transl</keyword>
+		</keywords>
+	</article>
+	<article id="imread">
+		<file path="<>/docs/imread.nhlp" />
+		<title string="Load image data" idxkey="imread" />
+		<keywords>
+			<keyword>images</keyword>
+			<keyword>bilder</keyword>
 		</keywords>
 	</article>
 </helpindex>

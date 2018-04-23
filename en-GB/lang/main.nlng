@@ -572,7 +572,7 @@ PARSERFUNCS_LISTCMD_CMD_ENDIF_[FLOWCTRL]=				endif                              
 PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE_[FLOWCTRL_PROC]=	endprocedure                        - Ends the definition of a previous initiated NumeRe procedure
 PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]                 - Ends the definition of a previous initiated WHILE loop. The parameter may be used for suppressing the status messages and to forcefully abort the loop after a defined number of iterations
 PARSERFUNCS_LISTCMD_CMD_EVAL_[DATACREATION]=			eval         EX -set PAR  -> {VAL}  - Calculates function values of the passed expression EX at distinct points (samples). The interval has to be passed through a parameter. Additionally, one can change the number of samples and switch to a logarithmic distribution using parameters
-PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Executes the command in STR using the Windows shell. The parameter may be used to append command line parameters to the command or to wait for the opened application to terminate
+PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Executes the command in STR using the Windows shell. The parameter may be used to append command line parameters to the command, to wait for the opened application to terminate or to define the working directory for the application
 PARSERFUNCS_LISTCMD_CMD_EXPLICIT_[MAINCTRL]=			explicit     CMD                    - Deactivates all plugins for the command expression CMD
 PARSERFUNCS_LISTCMD_CMD_EXPORT_[LOADSAVE]=				export       OB [-PAR]              - Exports the data in OB into the via the file extension defined file format. The file name has to be passed via the parameter
 PARSERFUNCS_LISTCMD_CMD_EXTREMA_[EVAL]=					extrema      EX -set PAR  -> {VAL}  - Determines the extrema of the expression or the data in EX numerically. The interval has to be passed through a parameter. Additionally, one can change the number of samples and restrict the results to minima and maxima using parameters
@@ -592,6 +592,7 @@ PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]              -
 PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]                 - Draws a double horizontal line. Using the parameter "-single", this command will draw only one single line
 PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)                   - Starts the definition of an IF construct. The expression EX must have a logical meaning
 PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Checks before the actual definition, if the current function in EX is not already defined, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM                     - Reads the image file NM as data grid into the cache "image()". The target cache may be changed using the options
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Creates a list of the values, which are available for the passed parameter. The possible parameters are available at "help list"
@@ -1603,6 +1604,7 @@ GUI_EDITOR_CALLTIP_OPT_WAIT=wait [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execut
 GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_WINDOWSIZE=windowsize [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_WITH=with=FUNCTION(x,PARAMS) [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_WP=wp=PATH [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
 GUI_EDITOR_CALLTIP_OPT_XERRORBARS=xerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_XLABEL=xlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_XLOG=xlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

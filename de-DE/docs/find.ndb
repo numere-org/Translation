@@ -135,6 +135,7 @@ identity(n)~Erzeugt eine n-Dimensionale Einheitsmatrix, siehe "help matop"~ident
 idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index indices transformieren
 if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung COND aus, siehe "help if"~condition bedingung else elseif() if() endif wenn falls verzweigung
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren
+imread~Liest eine Bildatei als Datengitter in den Cache~imageread images load bilder
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal
 is_data(STRING)~Gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false~is_data() datafile cache
 is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number

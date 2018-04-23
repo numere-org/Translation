@@ -134,6 +134,7 @@ identity(n)~Generates a n-dimensional identity matrix~identity() matrix identitä
 idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren
 if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
+imread~Reads an image file as data grid into the cache~imageread images load bilder
 integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
 is_data(STRING)~Returns true, if STRING is a data object, false otherwise~is_data() datafile cache
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number

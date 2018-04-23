@@ -432,7 +432,7 @@ PARSERFUNCS_LISTFUNC_FUNC_TO_CHAR_[STRING]=					to_char(x,y,z,...)              
 PARSERFUNCS_LISTFUNC_FUNC_TO_CMD_[STRING]=					to_cmd(sStr)                                 CMD      - Wandelt die enthaltene Zeichenkette sStr in einen Kommandoausdruck um
 PARSERFUNCS_LISTFUNC_FUNC_TO_LOWERCASE_[STRING]=			to_lowercase(sUpper)                         STR      - Wandelt die Großbuchstaben in sUpper in Kleinbuchstaben um
 PARSERFUNCS_LISTFUNC_FUNC_TO_STRING_[STRING]=				to_string(EXPR)                              STR      - Wandelt EXPR, wenn es sich um keine Zeichenkette handelt, in eine solche um (#(EXPR) würde zunächst den numerischen Wert von EXPR auswerten)
-PARSERFUNCS_LISTFUNC_FUNC_TO_TIME_[TIME_STRING]=			to_time(sPattern,sTime)                      VAL      - Wandelt die Zeit in sTime gemäß dem Schema sPattern in einen Zeitwert um. Die Zeichen "YMDHhms" (Jahr, Monat, Tag, Stunde (Uhrzeit),  Stunde (Dauer), Minute, Sekunde) in sPattern werden verwendet, um die Zeitangaben in sTime zu identifizieren
+PARSERFUNCS_LISTFUNC_FUNC_TO_TIME_[TIME_STRING]=			to_time(sPattern,sTime)                      VAL      - Wandelt die Zeit in sTime gemäß dem Schema sPattern in einen Zeitwert um. Die Zeichen "YMDHhms" (Jahr, Monat, Tag, Stunde (Uhrzeit), Stunde (Dauer), Minute, Sekunde) in sPattern werden verwendet, um die Zeitangaben in sTime zu identifizieren
 PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(sLower)                         STR      - Wandelt die Kleinbuchstaben in sLower in Großbuchstaben um
 PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(sToEval)                            VAL      - Wertet die Zeichenkette sToEval aus und wandelt das Ergebnis in einen Wert um
 PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)                                   VAL      - Berechnet die Spur der quadratischen Matrix MAT.
@@ -572,7 +572,7 @@ PARSERFUNCS_LISTCMD_CMD_ENDIF_[FLOWCTRL]=				endif                              
 PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE_[FLOWCTRL_PROC]=	endprocedure                        - Beendet die Definition einer zuvor begonnenen NumeRe-Prozedur
 PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]                 - Beendet die Definition einer zuvor begonnenen While-Schleife. Der Parameter kann genutzt werden, um die Statusanzeige zu underdrücken oder um die Schleife nach einer Zahl von Iterationen zwangsweise abzubrechen
 PARSERFUNCS_LISTCMD_CMD_EVAL_[DATACREATION]=			eval         EX -set PAR  -> {VAL}  - Berechnet Funktionswerte des Ausdrucks EX an festen Punkten (samples). Das Intervall ist über den Parameter anzugeben. Außerdem kann die Zahl der Stützstellen sowie eine logarithmische Verteilung derselben durch Parameter vorgegeben werden
-PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Führt das Kommando in STR mithilfe der Windows-Shell aus. Der Parameter kann genutzt werden, um Kommandozeilenparameter an das Kommando anzuhängen oder derauf zu warten, dass die geöffnete Applikation geschlossen wird
+PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Führt das Kommando in STR mithilfe der Windows-Shell aus. Der Parameter kann genutzt werden, um Kommandozeilenparameter an das Kommando anzuhängen, darauf zu warten, dass die geöffnete Applikation geschlossen wird oder um das Arbeitsverzeichnis festzulegen
 PARSERFUNCS_LISTCMD_CMD_EXPLICIT_[MAINCTRL]=			explicit     CMD                    - Deaktiviert alle Plugins für den Kommandoausdruck CMD
 PARSERFUNCS_LISTCMD_CMD_EXPORT_[LOADSAVE]=				export       OB [-PAR]              - Exportiert den Datensatz in OB in das durch die Dateiendung vorgegebene Dateiformat. Der Dateiname ist durch den Parameter anzugeben
 PARSERFUNCS_LISTCMD_CMD_EXTREMA_[EVAL]=					extrema      EX -set PAR  -> {VAL}  - Bestimmt die Extremstellen des Ausdrucks oder der Daten in EX numerisch. Das Intervall ist über den Parameter anzugeben. Außerdem kann die Zahl der Stützstellen sowie die Einschränkung auf Minima und Maxima durch Parameter erreicht werden
@@ -592,6 +592,7 @@ PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]              -
 PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]                 - Zeichnet eine horizontale Doppellinie. Mit "-single" wird eine Einfachlinie gezeichnet
 PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)                   - Startet die Definition einer IF-Verzweigung. Der Ausdruck EX muss logisch interpretierbar sein
 PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Prüft vor der Definition, ob die zu definierende Funktion in EX nicht schon bereits definiert wurde, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
+PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM                     - Liest die Bildatei NM als Datengitter in den Cache "image()". Der Zielcache kann mittels Optionen geändert werden
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Erzeugt eine Auflistung der Werte, die zum gewählten Parameter vorhanden sind. Die möglichen Parameter sind unter "help list" aufgelistet
@@ -1603,6 +1604,7 @@ GUI_EDITOR_CALLTIP_OPT_WAIT=wait [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execut
 GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_WINDOWSIZE=windowsize [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_WITH=with=FUNCTION(x,PARAMS) [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_WP=wp=PATH [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
 GUI_EDITOR_CALLTIP_OPT_XERRORBARS=xerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_XLABEL=xlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_XLOG=xlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

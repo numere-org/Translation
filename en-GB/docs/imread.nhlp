@@ -1,0 +1,24 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="imread">
+	<title string="Load image data" />
+	NumeRe may read images using the <code>imread</code> command as <a href="nhlp://datagrid?frame=new">datagrids</a> into memory. The usual image formats are supported: JPEG, BMP, GIF, TIFF, ... To load the image, one calls the command together with the image's filename:<codeblock>imread PATH/TO/FILE.png</codeblock>
+	Very large images probably may not be loaded to memory. A Workaround in this case might be to clear the cache completely using <code>clear</code>.
+	As default the image is loaded to the cache <code>image()</code>, which is created automatically if it's not present. Using the option <code>target=CACHE()</code> one may select another cache as target for the command.
+</article>

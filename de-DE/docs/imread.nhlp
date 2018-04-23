@@ -1,0 +1,24 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="imread">
+	<title string="Bilder als Daten einlesen" />
+	NumeRe kann Bilder durch das Kommando <code>imread</code> als Datensätze in Form eines <a href="nhlp://datagrid?frame=new">Datengitters</a> einlesen. Unterstützt werden dabei die gängigsten Bildformate: JPEG, BMP, GIF, TIFF, ... Das Bild wird eingelesen, indem das Kommando mit dem Dateinamen aufgerufen wird:<codeblock>imread PFAD/ZUR/DATEI.png</codeblock>
+	Sehr große Bilder können unter Umständen nicht im Speicher abgebildet werden. In diesem Fall kann es helfen, den kompletten Cache mit <code>clear</code> zu löschen.
+	Standardmäßig wird das Bild im Cache <code>image()</code> abgelegt, der auch erzeugt wird, sofern er nicht bereits vorhanden ist. Mit der Option <code>target=CACHE()</code> kann auch ein anderer Cache als Ziel angegeben werden.
+</article>
