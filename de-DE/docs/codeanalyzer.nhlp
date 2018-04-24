@@ -26,7 +26,7 @@
 	</list>
 	Außerdem werden Codemetriken wie die zyklomatische Komplexität angewandt. 
 	<list>
-		<item node="Zyklomatische Komplexität">Diese Metrik misst die Zahl der unabhängigen Pfade, die der Kontrollfluss in einem Modul nehmen kann, ergo die Zahl der <code>if</code>, <code>elseif</code>, <code>for</code> und <code>while</code> Anweisungen + 1. Es wird ein Hinweis für eine Komplexität höher 15 und eine Warnung für eine Komplexität höher als 20 angezeigt</item>
+		<item node="Zyklomatische Komplexität">Diese Metrik misst die Zahl der unabhängigen Pfade, die der Kontrollfluss in einem Modul nehmen kann, ergo die Zahl der <code>if</code>, <code>elseif</code>, <code>for</code> und <code>while</code> Anweisungen zzgl. der Zahl der Funktionen <code>and()</code>, <code>or()</code> und <code>xor()</code> sowie der Zahl der Operatoren <code>&&</code>, <code>||</code> und <code>|||</code> + 1. Es wird ein Hinweis für eine Komplexität höher 15 und eine Warnung für eine Komplexität höher als 20 angezeigt</item>
 		<item node="Codezeilen">Dies ist die Zahl der Zeilen, die nicht leer sind und die nicht nur aus Kommentaren bestehen, also die eigentlichen Zeilen mit Anweisungen und Ausdrücken</item>
 		<item node="Kommentardichte">Die Kommentardichte ergibt sich aus der Zahl der Zeilen, die Kommentare enthalten (mehrere Kommentare in einer Zeile werden berücksichtigt), durch die Zahl der Codezeilen (s.o.). Gut kommentierter Code hat eine Kommentardichte von 60 - 150 %</item>
 	</list>
