@@ -42,6 +42,7 @@ audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei
 avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean average durchschnitt stats statistiken
 # B
 bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen
+beta(x,y)~Calculates the value of the beta function of x and y~beta() betafunction
 betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()
 Bi(x)~Airy function Bi(x)~optik potentialtopf Bi() optics airyfunction
 binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()
@@ -49,6 +50,7 @@ break~Aborts the execution of a loop~abbruch abbrechen for while
 # C
 CACHE(i,j)~Cache object with access to the element "i,j"~zwischenspeicher save cache() sortieren swap rename
 char(STRING,POS)~Return the character at the Position POS in STRING~zeichen character string zeichenkette char()
+Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction
 clock()~Returns the number of processor clicks since the startu-up of NumeRe~time clicks zeit millisekunden milliseconds
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-2,-1,0,1,2}~cmp() compare vergleich dataelement cacheelement
 cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings.~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings
@@ -148,6 +150,7 @@ laguerre_a(n,k,x)~Numerical value of the associate Laguerre polynomial with the 
 lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches
 legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome legendre()
 legendre_a(l,m,x)~Numerical value of the Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome zugeordnete legendre_a()
+Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm
 list -OBJECT~Lists objects~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins
 ln(x)~Natural logarithm of x~logarithmus naturalis ln()
 load~Loads the data of a file~laden load data dateien daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook
@@ -188,6 +191,8 @@ prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product mu
 procedure~Defines a NumeRe-Procedure~prozedur $ programmierung plugins installation installieren
 Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt
 progress~Shows a the state of a progress. Only suitable for scripts and procedures~prozedur $ programmierung plugins balken warten
+psi(x)~Calculates the value of the digamma function at the location x~psi() digammafunction polygammafunction trigammafunction
+psi_n(n,x)~Calculates the value of the polygamma function of the order n at the location x~psi_n() digammafunction polygammafunction trigammafunction
 pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie halbwertsbreite fwhm
 # Q
 Question~Is it me, who asks the questions, or is it you?~question
@@ -297,3 +302,4 @@ Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and
 Z(n,m,rho,phi)~Value of the Zernike polynomials of the order n >= 0 with m = [-n,n] at the position rho in the interval [0,1] at the angle phi in the interval [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix
 zeroes~Calls the function for numerical calculation of the intersection with of functions and data sets~schnittpunkt nullstellen
+zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannsche

@@ -42,6 +42,7 @@ audio~Erzeugt eine WAVE-Datei aus einem Datensatz, siehe "help audio"~audiofile 
 avg(x,y,z,...)~Mittelwert von x,y,z,...~avg() mittelwert mean average durchschnitt stats statistiken
 # B
 bessel(n,x)~Besselfunktion erster Gattung der Ordnung n~bessel() first kind erster art besselfunktionen
+beta(x,y)~Berechnet den Wert der Betafunktion an den Stellen x und y~beta() betafunction
 betheweizsaecker(N,Z)~Berechnet die Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()
 Bi(x)~Airy-Funktion Bi(x)~optik potentialtopf Bi() optics airyfunction
 binom(n,k)~Berechnet Binomialkoeffizient der natürlichen Zahlen n und k~binomialkoeffizient binom()
@@ -49,6 +50,7 @@ break~Bricht eine FOR- oder WHILE-Schleife an der aktuellen Stelle ab~abbruch ab
 # C
 CACHE(i,j)~Cache-Objekt mit Zugriff auf Element "i,j", siehe "help cache"~zwischenspeicher save cache() sortieren swap rename
 char(STRING,POS)~Gibt das Zeichen aus der Zeichenkette STRING an der Stelle POS zurück~zeichen character string zeichenkette char()
+Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunction
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-2,-1,0,1,2} zurück~cmp() compare vergleich dataelement cacheelement
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings
@@ -148,6 +150,7 @@ laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polyn
 lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches
 legendre(n,x)~Berechnet den numerischen Wert der Legendre-Polynome der Ordnung n an der Stelle x~legendrepolynome legendre()
 legendre_a(l,m,x)~Berechnet den numerischen Wert der assoziierten Legendre-Polynome der Ordnung l mit m = [-l,l] an der Stelle x~legendrepolynome zugeordnete legendre_a()
+Li2(x)~Berechnet den Dilogarithmus von x~Li2() dilogarithm
 list -OBJEKT~Listet alle Objekte zu OBJEKT, siehe "help list"~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins
 ln(x)~natürlicher Logarithmus von x~logarithmus naturalis ln()
 load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data dateien daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xls opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel mappe workbook
@@ -189,6 +192,8 @@ procedure~Definiert eine NumeRe-Prozedur, siehe "help procedure"~prozedur $ prog
 Programmierer~Wenn du ihn nicht persönlich kennst: probier's mal mit "numere.developer@gmail.com"~erik entwickler bug report kontakt
 progress~Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet~prozedur $ programmierung plugins balken warten
 Protokolldatei~Die Protokolldatei findest du unter "<>/numere.log"~numerelog logfile
+psi(x)~Berechnet den Wert der Digammafunktion an der Stelle x~psi() digammafunction polygammafunction trigammafunction
+psi_n(n,x)~Berechnet den Wert der Polygammafunktion der Ordnung n and der Stelle x~psi_n() digammafunction polygammafunction trigammafunction
 pulse~Bestimmt die Pulseigenschaften des übergebenen Datensatzes~pulsanalyse pulseanalysis energie halbwertsbreite fwhm
 # Q
 quit~Beendet das Programm~schliessen beenden
@@ -297,3 +302,4 @@ Y(l,m,theta,phi)~Realteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l
 Z(n,m,rho,phi)~Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho im Intervall [0,1] unter dem Winkel phi im Intervall [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen
+zeta(x)~Berechnet den Wert der Riemann'schen Zetafunktion an der Stelle x~zeta() zetafunction riemannsche
