@@ -979,6 +979,8 @@ DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the 
 # ========================================
 GUI_DLG_OPTIONS=NumeRe: Options
 GUI_DLG_OPEN=NumeRe: Open file
+GUI_DGL_SAVE=NumeRe: Save file
+GUI_DGL_SAVE_ERROR=The file could not be saved, because the target file could not be opened or because of an error during writing the contents. There are probably non-convertible characters in this document.%%LINEBREAK%%The previous version of the file (if applicable) was recreated.
 GUI_DLG_SAVEAS=NumeRe: Save file as
 GUI_DLG_FIND=Find
 GUI_DLG_REPLACE=Find and replace

@@ -979,6 +979,8 @@ DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Fi
 # ========================================
 GUI_DLG_OPTIONS=NumeRe: Optionen
 GUI_DLG_OPEN=NumeRe: Datei öffnen
+GUI_DLG_SAVE=NumeRe: Datei speichern
+GUI_DLG_SAVE_ERROR=Die Datei konnte nicht gespeichert werden, weil die Zieldatei nicht geöffnet werden konnte oder ein Fehler während des Schreibens auftrat. Möglicherweise sind Zeichen in dem Dokument, die nicht konvertiert werden können.%%LINEBREAK%%Die vorherige Version der Datei (sofern vorhanden) wurde wiederhergestellt.
 GUI_DLG_SAVEAS=NumeRe: Datei speichern unter
 GUI_DLG_FIND=Suchen
 GUI_DLG_REPLACE=Suchen und Ersetzen
