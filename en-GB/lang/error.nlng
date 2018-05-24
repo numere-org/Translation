@@ -91,7 +91,7 @@ ERR_MUP_OPRT_TYPE_CONFLICT=No matching type overload was found for operator "$TO
 ERR_MUP_STR_RESULT=Function result is a string object.
 ERR_MUP_GENERIC=Generic parser error.
 ERR_MUP_LOCALE=Decimal separator character is identical to the argument separator character.
-ERR_MUP_UNEXPECTED_CONDITIONAL=The "$TOK$" operator has to succeed on a closing parenthesis.
+ERR_MUP_UNEXPECTED_CONDITIONAL=The "$TOK$" operator has to succeed on a closing parenthesis or be enclosed in parentheses.
 ERR_MUP_MISSING_ELSE_CLAUSE=The "If-Then-Else" (A?x:y) operator has no "else" case.
 ERR_MUP_MISPLACED_COLON=Misplaced colon at position $POS$. Forgotten data object or invalid use of the "If-Then-Else" (A?x:y) operator?
 # STD-Errors

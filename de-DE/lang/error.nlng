@@ -91,7 +91,7 @@ ERR_MUP_OPRT_TYPE_CONFLICT=Keine passende Überladung für den Operator "$TOK$" an
 ERR_MUP_STR_RESULT=Funktionsergebnis ist ein String.
 ERR_MUP_GENERIC=Parserfehler.
 ERR_MUP_LOCALE=Dezimaltrennzeichen ist identisch zum Argument-Trennzeichen.
-ERR_MUP_UNEXPECTED_CONDITIONAL=Der "$TOK$"-Operator muss auf eine schließende Klammer folgen.
+ERR_MUP_UNEXPECTED_CONDITIONAL=Der "$TOK$"-Operator muss auf eine schließende Klammer folgen, bzw. Teil einer Klammer sein.
 ERR_MUP_MISSING_ELSE_CLAUSE=Der "Wenn-Dann-Sonst"-(A?x:y)-Operator besitzt keinen "Sonst"-Fall.
 ERR_MUP_MISPLACED_COLON=Falsch gesetzter Doppelpunkt an der Stelle $POS$. Datenobjekt vergessen oder falsch verwendeter "Wenn-Dann-Sonst"-(A?x:y)-Operator?
 # STD-Errors

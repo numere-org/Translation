@@ -20,10 +20,11 @@
 	<title string="Mathematical and string operators" />
 	Mathematical or string operations are needing a defined set of operations, which are represented through the operators listed below. Some operations may be used on numericals as well as on string values. Some operations are available recursive, too.
 	NumeRe may use the following recursive operators: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> and <code>^=</code>. These operators are abbreviatons for:<codeblock>VAR += EXPRESSION &lt;=&gt; VAR = VAR + (EXPRESSION)</codeblock>and similar for the other operators.
+	The vector initializer in its both variants is special, too: <code>{A : B}</code> and <code>{A : C : B}</code>. These operators create a vector, which is composed out of the expansion of the elements from <code>A</code> to <code>B</code>. It is<codeblock>{A : B} = {A, A+1, A+2, ..., A+n, (B)}<br>{A : C : B} = {A, A+C, A+2C, ..., A+nC, (B)}</codeblock><code>B</code> is the limit of the incrementation. If <code>B</code> cannot be reached using the operation, then it won't be included in the vector, but the last element before. <code>B</code> may also be smaller than <code>A</code>. In the first case, the vector is created by decrementing automatically.
 	The following operators are available:
 	<table>
 		<tr>
-			<td><em>Operation</em></td><td><em>Operator's symbol</em></td><td><em>Recursive operator</em></td><td><em>numerical</em></td><td><em>string</em></td>
+			<td><em>Operation</em></td><td><em>Operator's symbol</em></td><td><em>Recursive</em></td><td><em>numerical</em></td><td><em>string</em></td>
 		</tr>
 		<tr>
 			<td>Addition/Concatenation</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
@@ -96,6 +97,12 @@
 		</tr>
 		<tr>
 			<td>List/vector braces</td><td><code>{A}</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Vector initializer with difference 1</td><td><code>{A : B}</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Vector initializer with C != 1</td><td><code>{A : C : B}</code></td><td></td><td>X</td><td></td>
 		</tr>
 		<tr>
 			<td>String</td><td><code>"A"</code></td><td></td><td>X</td><td>X</td>
