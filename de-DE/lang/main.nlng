@@ -1813,6 +1813,7 @@ GUI_DUPCODE_VARSEMANTICS=Variablen
 GUI_DUPCODE_STRINGSEMANTICS=Zeichenkettenliterale
 GUI_DUPCODE_NUMSEMANTICS=Numerische Literale
 GUI_DUPCODE_FUNCTIONSEMANTICS=Caches/Eigene Funktionsdefinitionen
+GUI_DUPCODE_NUMLINES=Min. Code-Blocklänge
 GUI_DUPCODE_START=Start
 GUI_DUPCODE_COPY=Ergebnis kopieren
 GUI_DUPCODE_REPORT=Ergebnis speichern
