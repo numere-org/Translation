@@ -42,7 +42,7 @@
 			<td>Lines of code</td><td>---</td><td>100</td><td>Separate the module by introducing procedures, because it may be difficult to understand due to the high number of lines.</td>
 		</tr>
 		<tr>
-			<td>Comment density</td><td>60 %</td><td>150 %</td><td>Comment the module further or examine it for commented out code, which is a common source for a high comment density.</td>
+			<td>Comment density</td><td>50 %</td><td>150 %</td><td>Comment the module further or examine it for commented out code, which is a common source for a high comment density.</td>
 		</tr>
 	</table>
 

@@ -42,7 +42,7 @@
 			<td>Codezeilen</td><td>---</td><td>100</td><td>Das Modul durch Einführen von Prozeduren unterteilen, da es durch die vielen Zeilen schwer zu überblicken ist.</td>
 		</tr>
 		<tr>
-			<td>Kommentardichte</td><td>60 %</td><td>150 %</td><td>Das Modul weiter kommentieren bzw. auf auskommentierten Code prüfen, der eine häufige Ursache für eine hohe Kommentardichte ist.</td>
+			<td>Kommentardichte</td><td>50 %</td><td>150 %</td><td>Das Modul weiter kommentieren bzw. auf auskommentierten Code prüfen, der eine häufige Ursache für eine hohe Kommentardichte ist.</td>
 		</tr>
 	</table>
 </article>

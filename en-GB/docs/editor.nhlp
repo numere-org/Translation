@@ -37,5 +37,5 @@
 	<h>Creating a documentation</h>
 	The editor may generate a <a href="nhlp://latex?frame=new">LaTeX documentation</a> of a currently opened script of a procedure as well as call the LaTeX-XeLaTeX compiler for a currently opened TeX file. Documentation sequences may be used as sections using a function in the "View menu", through which one may jump fastly by pressing <code>[CTRL-M]</code>
 	<h>Further file formats</h>
-	The editor may also open MATLAB (*.m) and C/C++ source files (*.cpp,*.c,*.cxx,*.hpp,*.h,*.hxx) and edit them correspondingly. The search for duplicated code is supported as well.
+	The editor may also open MATLAB (*.m) and C/C++ source files (*.cpp,*.c,*.cxx,*.hpp,*.h,*.hxx) and edit them correspondingly. The search for duplicated code and the static code analyzer is supported as well.
 </article>
