@@ -1803,6 +1803,7 @@ GUI_ANALYZER_LOWCOMMENTDENSITY=Only very few comments were found in this module 
 GUI_ANALYZER_HIGHCOMMENTDENSITY=This module contains a high number of comments (Comment density %%1%% %).
 GUI_ANALYZER_NONAMINGPROCEDURE=This procedure file does not contain a naming procedure.
 GUI_ANALYZER_THISFILEPROCEDURE=This procedure is member of the "thisfile" namespace.
+GUI_ANALYZER_MAGICNUMBER=This numerical literal should be replaced by a variable to make the code comprehensible.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code duplicates
 GUI_DUPCODE_MATCH=Lines
