@@ -437,7 +437,7 @@ PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(sLower)         
 PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(sToEval)                            VAL      - Evaluates the string sToEval and transforms it to a numerical value afterwards
 PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)                                   VAL      - Calculates the trace of the square matrix MAT.
 PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)                               MAT      - Transposes the matrix MAT (column and line indices will be exchanged)
-PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)                              VAL      - Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters
+PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)                              STR      - Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters
 PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()                                    VAL      - Returns the version number of NumeRe as an integral number: v1.0.8 will be returned as 108
 PARSERFUNCS_LISTFUNC_FUNC_XOR_[LOGIC]=						xor(x,y,z,...)                               LOG      - Connects its arguments with the "|||" operator
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)                             VAL      - Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
