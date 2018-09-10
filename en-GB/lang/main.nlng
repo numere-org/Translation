@@ -1015,6 +1015,8 @@ GUI_DLG_NEWNPRC_DFLT=new_procedure
 GUI_DLG_NEWPLUGIN=NumeRe: New plugin
 GUI_DLG_NEWPLUGIN_QUESTION=Please enter the desired plugin command:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
+GUI_DLG_RENAMESYMBOLS=NumeRe: Rename symbol
+GUI_DLG_RENAMESYMBOLS_QUESTION=Choose new symbol name:
 GUI_DLG_GOTO=NumeRe: Goto line
 GUI_DLG_GOTO_QUESTION=Insert a line number: 1-%%1%%
 GUI_DLG_GOTO_ERROR=This line doesn't exist.
@@ -1708,6 +1710,9 @@ GUI_MENU_EDITOR_CLEARBM=Remove all bookmarks
 GUI_MENU_EDITOR_HIGHLIGHT=Highlight '%%1%%' permanently
 GUI_MENU_EDITOR_FINDPROC=Find the definition of: '%%1%%'
 GUI_MENU_EDITOR_FINDINCLUDE=Find the script: '%%1%%'
+GUI_MENU_EDITOR_REFACTORING=Refactoring ...
+GUI_MENU_EDITOR_RENAME_SYMBOLS=Rename symbol
+GUI_MENU_EDITOR_ABSTRAHIZE_SECTION=Extract marked section
 GUI_MENU_EDITOR_UPPERCASE=Convert to UPPERCASE
 GUI_MENU_EDITOR_LOWERCASE=Convert to lowercase
 # Toolbar strings
@@ -1818,6 +1823,11 @@ GUI_DUPCODE_NUMLINES=Min. code block length
 GUI_DUPCODE_START=Start
 GUI_DUPCODE_COPY=Copy result
 GUI_DUPCODE_REPORT=Save result
+# Refactoring window strings
+GUI_REFACTORING_COPYWINDOW_HEAD=NumeRe-Refactorer: New procedure
+GUI_REFACTORING_NOTE=This procedure was extracted using a heuristic. Please verify the argument and return list.
+GUI_REFACTORING_ARGUMENTLIST=The argument list contains variables, which have been found at an earlier location than the current code fragment.
+GUI_REFACTORING_RETURNVALUES=The return list contains variables, which were found at a later location in the code.
 # Graph viewer strings
 GUI_GRAPH_EXPORT=Export graph
 GUI_GRAPH_COPY=Copy graph

@@ -102,7 +102,7 @@ extrema~Calls the function for the numerical determination of the extrema of the
 faculty(n)~Faculty of the integral number n [n!]~fakultaet fakultät faculty()
 fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben
-findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline
+findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien existieren files existing present valid gueltig gültig findfile()
 findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen findparam()
 fit~Fit functions to data sets via parameters~fitten anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints

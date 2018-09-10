@@ -1015,6 +1015,8 @@ GUI_DLG_NEWNPRC_DFLT=neue_prozedur
 GUI_DLG_NEWPLUGIN=NumeRe: Neues Plugin
 GUI_DLG_NEWPLUGIN_QUESTION=Bitte das Plugin-Kommando eingeben:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
+GUI_DLG_RENAMESYMBOLS=NumeRe: Symbol umbenennen
+GUI_DLG_RENAMESYMBOLS_QUESTION=Neuer Name für das Symbol:
 GUI_DLG_GOTO=NumeRe: Gehe zu Zeile
 GUI_DLG_GOTO_QUESTION=Eine Zeilennummer eingeben: 1-%%1%%
 GUI_DLG_GOTO_ERROR=Diese Zeile existiert nicht.
@@ -1708,6 +1710,9 @@ GUI_MENU_EDITOR_CLEARBM=Alle Lesezeichen entfernen
 GUI_MENU_EDITOR_HIGHLIGHT=Hebe '%%1%%' permanent hervor
 GUI_MENU_EDITOR_FINDPROC=Finde die Definition von: '%%1%%'
 GUI_MENU_EDITOR_FINDINCLUDE=Finde das Script: '%%1%%'
+GUI_MENU_EDITOR_REFACTORING=Refactoring ...
+GUI_MENU_EDITOR_RENAME_SYMBOLS=Symbol umbenennen
+GUI_MENU_EDITOR_ABSTRAHIZE_SECTION=Markierten Abschnitt extrahieren
 GUI_MENU_EDITOR_UPPERCASE=In GROSSBUCHSTABEN umwandeln
 GUI_MENU_EDITOR_LOWERCASE=In kleinbuchstaben umwandeln
 # Toolbar strings
@@ -1818,6 +1823,11 @@ GUI_DUPCODE_NUMLINES=Min. Code-Blocklänge
 GUI_DUPCODE_START=Start
 GUI_DUPCODE_COPY=Ergebnis kopieren
 GUI_DUPCODE_REPORT=Ergebnis speichern
+# Refactoring window strings
+GUI_REFACTORING_COPYWINDOW_HEAD=NumeRe-Refactorer: Neue Prozedur
+GUI_REFACTORING_NOTE=Diese Prozedur wurde anhang einer Heuristik extrahiert. Bitte prüfe Argument- und Rückgabeliste auf Vollständigkeit
+GUI_REFACTORING_ARGUMENTLIST=Die Argumentliste enthält Variablen, die vor dem Codefragment gefunden wurden.
+GUI_REFACTORING_RETURNVALUES=Die Rückgabeliste enthält Variablen, die an späterer Stelle im Code gefunden wurden.
 # Graph viewer strings
 GUI_GRAPH_EXPORT=Graph exportieren
 GUI_GRAPH_COPY=Graph kopieren

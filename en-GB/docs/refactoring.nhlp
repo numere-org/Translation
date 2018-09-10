@@ -1,0 +1,26 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2018  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="refactoring">
+	<title string="Code refactoring" />
+	NumeRe supports during the refactoring of code sections. In addition to the <a href="nhlp://analyzer?frame=new">code analyzer</a> NumeRe provides the following functions via the context menu of the editor:
+	<list>
+		<item node="Rename symbols">This function provides the possibility to rename each occurence of the current symbol with a new name. The scope of the symbol is considered in this case, therefore only symbols in the current scope are renamed.</item>
+		<item node="Extract sections">A marked section of code may be extracted into a new procedure with this function. NumeRe will open the procedure in a new window, where it may be modified further. One has to keep in mind that the procedure interfaces are created based upon a heuristic. Therefore errors are possible.</item>
+	</list>
+</article>

@@ -1203,4 +1203,12 @@
 			<keyword>bilder</keyword>
 		</keywords>
 	</article>
+	<article id="refactoring">
+		<file path="<>/docs/refactoring.nhlp" />
+		<title string="Code Refactoring" idxkey="refactoring" />
+		<keywords>
+			<keyword>refactor</keyword>
+			<keyword>rename</keyword>
+		</keywords>
+	</article>
 </helpindex>
