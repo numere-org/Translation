@@ -1081,6 +1081,7 @@ GUI_OPTIONS_PATHS=Directories
 GUI_OPTIONS_PRINT=Print text in:
 GUI_OPTIONS_PRINT_BW=Black/White
 GUI_OPTIONS_PRINT_COLOR=Colour
+GUI_OPTIONS_EDITORFONT=Font for the editor:
 GUI_OPTIONS_DEFAULTFONT=Default font for plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Print linenumbers
 GUI_OPTIONS_SAVE_SESSION=Session recovery%%LINEBREAK%%(Only saved changes are recoverable)

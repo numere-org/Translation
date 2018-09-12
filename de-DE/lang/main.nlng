@@ -1081,6 +1081,7 @@ GUI_OPTIONS_PATHS=Verzeichnisse
 GUI_OPTIONS_PRINT=Text drucken in:
 GUI_OPTIONS_PRINT_BW=Schwarz/Weiß
 GUI_OPTIONS_PRINT_COLOR=Farbig
+GUI_OPTIONS_EDITORFONT=Schriftart im Editor:
 GUI_OPTIONS_DEFAULTFONT=Standardschriftart für Plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Zeilennummern drucken
 GUI_OPTIONS_SAVE_SESSION=Sitzungswiederherstellung%%LINEBREAK%%(Nur gesicherte Änderungen können wiederhergestellt werden)
