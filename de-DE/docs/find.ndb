@@ -285,6 +285,7 @@ trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~t
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren
 # U
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen definieren neue definition
+unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() matrix matrices matrizen
 # V
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um. C ist ein optionales Zeichen, das verwendet wird, um x auf n Zeichen, die vorne angestellt werden, zu füllen~to string value wert zur # \" zeichenkette formatieren valtostr()
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver

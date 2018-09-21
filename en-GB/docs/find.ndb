@@ -286,6 +286,7 @@ trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix haupt
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren
 # U
 undefine~Removes a custom function definition~funktion entfernen loeschen definieren neue definition
+unique(MAT,nDim)~Sorts and returns only unique elements~unique() matrix matrices matrizen
 # V
 valtostr(x,C,n)~Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters~to string value wert zur # \" zeichenkette formatieren valtostr()
 vect~Generates a vector plot~vectorfield vektorfeld quiver

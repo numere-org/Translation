@@ -54,6 +54,7 @@
 		<item node="solve(MAT)">Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.</item>
 		<item node="trace(MAT)">Berechnet die Spur der quadratischen Matrix MAT.</item>
 		<item node="transpose(MAT)">Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)</item>
+		<item node="unique(MAT,n)">Sortiert und gibt nur eindeutige Elemente zurück. Ist MAT ein Vektor, so gibt die Funktion einen Vektor zurück. Ist MAT eine Matrix, so wird MAT ausgerollt und ein Vektor zurückgegeben. <expr>n</expr> ist optional, wird nur verwendet, wenn MAT eine Matrix ist, und ist standardmäßig 0. Ist <expr>n</expr> 1, so gibt die Funktion eine Matrix mit eindeutigen Elementen entlang der Zeilen zurück. Ist <expr>n</expr> 2, so werden die eindeutigen Elemente entlang der Spalten bestimmt</item>
 		<item node="zero(n,m)">Erzeugt eine <expr>n x m</expr>-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
 	</list>
 </article>

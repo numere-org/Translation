@@ -54,6 +54,7 @@
 		<item node="solve(MAT)">Solves the linear system of equations, which is described by the matrix MAT, with the Gaussian algorithm.</item>
 		<item node="trace(MAT)">Calculates the trace of the square matrix MAT.</item>
 		<item node="transpose(MAT)">Transposes the matrix MAT (column and line indices will be exchanged)</item>
+		<item node="unique(MAT,n)">Sorts and returns only unique elements. If MAT is a vector, then the function will return a vector. If MAT is a matrix, then MAT will be rolled out and a vector is returned. <expr>n</expr> is an optional value, will only be used, if MAT is a matrix, and is 0 as default. If <expr>n</expr> is equal to 1, then the function will return a matrix with unique elements along its rows. If <expr>n</expr> is 2, then the unique elements are determined along the columns</item>
 		<item node="zero(n,m)">Creates a <expr>n x m</expr> matrix, which is filled with zeroes. If only one argument was passed, then a square matrix will be created.</item>
 	</list>
 </article>
