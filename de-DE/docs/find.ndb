@@ -236,7 +236,7 @@ sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besself
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus
 sort~Sortiert einen Datensatz, siehe "help data" oder "help cache"~ordnen order sortieren aufsteigend absteigend ascending descending
 spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion
-split(STRING,CHAR)~Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split()
+split(STRING,CHAR)~Teilt die Zeichenkette STRING an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens
 sqrt(x)~Wurzel von x~wurzel root sqrt()
 stats~Berechnet die Statistiken einer gegebenen Tabelle~standardabweichung mittelwert statistiken fehler
 std(x,y,z,...)~Standardabweichung der Werte x,y,z,...~standardabweichung fehler varianz stats statistiken std()
@@ -249,7 +249,7 @@ STR.nmtch(STR,POS)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette,
 STR.nrmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette, das nicht in STR auftritt, bis zum Zeichen POS~methode strings zeichenketten # \" find last nrmtch()
 STR.rfnd(STR,POS)~Gibt die Position des letzten Auftretens von STR in der Zeichenkette bis zum Zeichen POS zurück~methode strings zeichenketten # \" find last rfnd()
 STR.rmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens aus STR in der Zeichenkette bis zum Zeichen POS~methode strings zeichenketten # \" find last rmtch()
-STR.splt(CHAR)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten # \" unterteilen tokenizer zerlegen splt()
+STR.splt(CHAR)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten # \" unterteilen tokenizer zerlegen splt() tokens
 STR.sub(POS,LEN)~Gibt LEN Zeichen ab dem Zeichen POS aus der Zeichenkette als neue Zeichenkette zurück~methode strings zeichenketten # \" ausschnitt ausschneiden sub()
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings  # \" find str_not_match()
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings  # \" find last str_not_rmatch()
@@ -271,6 +271,7 @@ swap~Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus~austausche
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie tan()
 tanh(x)~Tangens hyperbolicus von x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie tanh()
 taylor~Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n~reihenentwicklung entwickeln series expansion approximation approximieren
+textparse(sToParse,sPattern,nPos1,nPos2)~Zerlegt sToParse anhand des Schemas sPattern in einzelne Bausteine unterschiedlicher Variablentypen~split parsing tokens tokenizer textparse() zerlegen unterteilen
 theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaerische sphärische theta()
 time()~Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück~zeit sekunden dauer
 timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit sekunden dauer formatieren formatting

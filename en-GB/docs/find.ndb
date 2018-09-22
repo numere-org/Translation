@@ -272,6 +272,7 @@ swap~Swaps the contents of two caches~austauschen exchange content
 tan(x)~Tangent of xx~tangens trigonometrische funktionen trigonometrie tan()
 tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie tanh()
 taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren
+textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit sekunden dauer formatieren formatting
