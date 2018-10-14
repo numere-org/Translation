@@ -25,7 +25,13 @@
 		\tEXPRESSIONS
 		endfor
 	</codeblock>
-	FOR loops are closed with the command <code>endfor</code>. This command is needed for each previously opened loop. If the outermost loop is closed, then the execution of the whole block will start immediately. With the optional parameter <code>-sv</code>, which has to be appended to one <code>endfor</code> (doesn't matter, which), <em>all</em> steps of the evaluation will be shown on screen. If the parameter <code>-mask</code> is passed instead, then all screen output (including the progress value) will be suppressed. The parameter <code>-lnumctrl</code> canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code>.
+	FOR loops are closed with the command <code>endfor</code>. This command is needed for each previously opened loop. If the outermost loop is closed, then the execution of the whole block will start immediately. During closing a loop (doesn't matter, which) one can append the following parameters:
+	<list>
+		<item node="sv">Displays all steps of the evaluation (<em>This parameter is deprecated.</em>)</item>
+		<item node="mask">Suppresses the progress display. The usage of this parameter as default may be activated in the settings</item>
+		<item node="sp">Displays the progress display even if <code>mask</code> is used as default</item>
+		<item node="lnumctrl[=WERT]">Canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code></item>
+	</list>
 	A FOR loop may contain an arbitrary number of other FOR loops, WHILE loops or IF constructs (conditional forks).
 	A declaration may be canceled with the command <code>abort</code> without executing any of the previously entered commands. This is in contrast to the command <code>break</code>, which will be evaluated at runtime.
 	The two commands <code>break</code> and <code>continue</code> give extended control over a FOR loop. They may be passed inside of an IF construct (which is part of the actual FOR loop) and may influence the evaluation of the surrounding FOR loop:
@@ -38,7 +44,7 @@
 	<example desc="FOR loop, which counts from 1 to 10:" type="verbatim">
 		|&lt;- for (i = 1:10)
 		|FOR&gt; i
-		|FOR&gt; endfor -sv
+		|FOR&gt; endfor
 	</example>
 	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://string?frame=self">help string</a>
 </article>

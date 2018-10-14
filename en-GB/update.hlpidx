@@ -434,6 +434,7 @@
 			<keyword>break</keyword>
 			<keyword>continue</keyword>
 			<keyword>sv</keyword>
+			<keyword>sp</keyword>
 		</keywords>
 	</article>
 	<article id="functions">

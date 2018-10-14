@@ -592,10 +592,10 @@ PARSERFUNCS_LISTCMD_CMD_EDIT_[MAINCTRL]=				edit         OB                     
 PARSERFUNCS_LISTCMD_CMD_ELSE_[FLOWCTRL]=				else                                - Startet die Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll
 PARSERFUNCS_LISTCMD_CMD_ELSEIF_[FLOWCTRL]=				elseif       (EX)                   - Startet eine bedingte Definition, die beim gegenteiligen Fall von "if" bzw. "elseif", ausgeführt werden soll. Der Ausdruck EX muss logisch interpretierbar sein
 PARSERFUNCS_LISTCMD_CMD_ENDCOMPOSE_[PLOTTING]=			endcompose                          - Beendet die Definition einer zuvor begonnenen Plotkomposition
-PARSERFUNCS_LISTCMD_CMD_ENDFOR_[FLOWCTRL]=				endfor       [-PAR]                 - Beendet die Definition einer zuvor begonnenen Zählschleife. Der Parameter kann genutzt werden, um die Statusanzeige zu underdrücken oder um die Schleife nach einer Zahl von Iterationen zwangsweise abzubrechen
+PARSERFUNCS_LISTCMD_CMD_ENDFOR_[FLOWCTRL]=				endfor       [-PAR]                 - Beendet die Definition einer zuvor begonnenen Zählschleife. Der Parameter kann genutzt werden, um die Statusanzeige zu unterdrücken oder um die Schleife nach einer Zahl von Iterationen zwangsweise abzubrechen
 PARSERFUNCS_LISTCMD_CMD_ENDIF_[FLOWCTRL]=				endif                               - Beendet die Definition einer IF-Verzweigung
 PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE_[FLOWCTRL_PROC]=	endprocedure                        - Beendet die Definition einer zuvor begonnenen NumeRe-Prozedur
-PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]                 - Beendet die Definition einer zuvor begonnenen While-Schleife. Der Parameter kann genutzt werden, um die Statusanzeige zu underdrücken oder um die Schleife nach einer Zahl von Iterationen zwangsweise abzubrechen
+PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]                 - Beendet die Definition einer zuvor begonnenen While-Schleife. Der Parameter kann genutzt werden, um die Statusanzeige zu unterdrücken oder um die Schleife nach einer Zahl von Iterationen zwangsweise abzubrechen
 PARSERFUNCS_LISTCMD_CMD_EVAL_[DATACREATION]=			eval         EX -set PAR  -> {VAL}  - Berechnet Funktionswerte des Ausdrucks EX an festen Punkten (samples). Das Intervall ist über den Parameter anzugeben. Außerdem kann die Zahl der Stützstellen sowie eine logarithmische Verteilung derselben durch Parameter vorgegeben werden
 PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Führt das Kommando in STR mithilfe der Windows-Shell aus. Der Parameter kann genutzt werden, um Kommandozeilenparameter an das Kommando anzuhängen, darauf zu warten, dass die geöffnete Applikation geschlossen wird oder um das Arbeitsverzeichnis festzulegen
 PARSERFUNCS_LISTCMD_CMD_EXPLICIT_[MAINCTRL]=			explicit     CMD                    - Deaktiviert alle Plugins für den Kommandoausdruck CMD
@@ -1057,6 +1057,7 @@ GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo
 GUI_OPTIONS_ESCINSCRIPTS=ESC in Scripts
+GUI_OPTIONS_USEMASKASDEFAULT=Schleifen verwenden "-mask" standardmäßig
 GUI_OPTIONS_DEFCTRL=Funktionsdefinitionsverwaltung%%LINEBREAK%%(automatisches Laden und Speichern selbstdefinierter Funktionen)
 GUI_OPTIONS_COMPACTTABLES=Kompakte Tabellendarstellung
 GUI_OPTIONS_EMPTYCOLS=Laden leerer Spalten
@@ -1604,7 +1605,8 @@ GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SUM=sum [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
-GUI_EDITOR_CALLTIP_OPT_SV=sv
+GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
 GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
 GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
