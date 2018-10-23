@@ -69,7 +69,7 @@ data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben
-dblfacul(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet doppelfakultät dblfacul()
+dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dlbfact()
 Debugger~Sammelt zusätzliche Informationen bei Fehlern in Prozeduren, siehe "help debugger"~fehlersuche debugging error
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine
 degree(x)~Gradwert von x [Radiant]~todegree gradwert umrechnen degree()
@@ -100,7 +100,7 @@ explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren 
 export~Export eines Datensatzes als ANSI-Text-, CSV- oder TeX-Datei~exportieren textdatei data csvdatei texdatei texttabelle textabelle
 extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Siehe "help extrema"~minima maxima minimum maximum extremum extremieren minimieren maximieren
 # F
-faculty(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty()
+factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()
 fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex
 findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurück, deren Spaltenüberschrift mit STR2 übereinstimmen~column find search überschrift headline findcolumn()
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien existieren files existing present valid gueltig gültig findfile()

@@ -68,7 +68,7 @@ cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook
 datagrid~Generates a data grid~daten mesh surf dens grad cont
 date(TIME,TYP)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time
-dblfacul(n)~Double faculty of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul()
+dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial
 Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error
 define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine
 degree(x)~Degree value of x [rad]~todegree gradwert umrechnen degree()
@@ -99,7 +99,7 @@ explicit~Deactivates all plugins for the current command~plugins deaktivieren üb
 export~Textual export of the passed data set~exportieren textdatei data csvdatei texdatei texttabelle textabelle
 extrema~Calls the function for the numerical determination of the extrema of the passend expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren
 # F
-faculty(n)~Faculty of the integral number n [n!]~fakultaet fakultät faculty()
+factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fakultät faculty() factorial()
 fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()
