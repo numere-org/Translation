@@ -573,7 +573,7 @@
 	</article>
 	<article id="datamodification">
 		<file path="<>/docs/datamodification.nhlp" />
-		<title string="Modifikation von Datensätzen" idxkey="resample, smooth, retoque" />
+		<title string="Modifikation von Datensätzen" idxkey="resample, smooth, retouch" />
 		<keywords>
 			<keyword>modifi</keyword>
 			<keyword>resamp</keyword>
@@ -855,7 +855,7 @@
 	</article>
 	<article id="replaceline">
 		<file path="<>/docs/replaceline.nhlp" />
-		<title string="Eingabekorrektur in Schleifen und Bedingungen" idxkey="replaceline" />
+		<title string="(Kommando wurde entfernt)" idxkey="replaceline" />
 		<keywords>
 			<keyword>corr</keyword>
 			<keyword>repl</keyword>

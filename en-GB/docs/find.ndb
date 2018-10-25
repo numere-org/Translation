@@ -216,7 +216,7 @@ replaceall(STR1,STR2,STR3,POS1,POS2)~Replaces all occurrences of the second stri
 resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
 reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten 
 resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller
-retoque~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft
+retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()
 roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen
 round(x,n)~Rounds x to n decimals~runden round round()

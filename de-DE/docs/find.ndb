@@ -216,7 +216,7 @@ replaceall(STR1,STR2,STR3,POS1,POS2)~Ersetzt alle Vorkommnisse der Zeichenkette 
 resample~Ermöglicht die Erhöhung oder Verringerung der Zahl der Datenpunkten, wobei ein Lanczos-Filter angewandt wird~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
 reshape(MAT,n,m)~Formt die Matrix MAT zu einer (n x m)-Matrix um~umformen umgestalten 
 resize(MAT,n,m)~Ändert die Größe der Matrix MAT zu (n x m)~vergrößern verkleinern larger smaller
-retoque~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft
+retouch~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()
 roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen
 round(x,n)~x auf n Nachkommastellen runden~runden round round()

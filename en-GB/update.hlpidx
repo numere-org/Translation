@@ -573,7 +573,7 @@
 	</article>
 	<article id="datamodification">
 		<file path="<>/docs/datamodification.nhlp" />
-		<title string="Modification of data sets" idxkey="resample, smooth, retoque" />
+		<title string="Modification of data sets" idxkey="resample, smooth, retouch" />
 		<keywords>
 			<keyword>modifi</keyword>
 			<keyword>resamp</keyword>
@@ -855,7 +855,7 @@
 	</article>
 	<article id="replaceline">
 		<file path="<>/docs/replaceline.nhlp" />
-		<title string="Input correction in loops and forks" idxkey="replaceline" />
+		<title string="(Command was removed)" idxkey="replaceline" />
 		<keywords>
 			<keyword>corr</keyword>
 			<keyword>repl</keyword>
