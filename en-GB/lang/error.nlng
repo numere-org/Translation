@@ -98,7 +98,7 @@ ERR_MUP_MISPLACED_COLON=Misplaced colon at position $POS$. Forgotten data object
 # ====================
 ERR_STD_BADALLOC=NumeRe v %%1%% caused a critical access violation and has to be terminated.
 ERR_STD_INTERNAL=This is a non-critical error. If this error is (even after a restart) reproduceable, it should be assigned to the developer via <numere.developer@gmail.com> or at <https://sourceforge.net/p/numere/tickets/>.
-# NR-Errors
+# NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ====================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=The desired cache "%%1%%" already exists.$(If applicable invoke "%%1%% -swap=CACHE2" to swap the contents of "%%1%%" and CACHE2.)
 ERR_NR_0_1_CACHE_ALREADY_EXISTS=%%ERR_SEEALSO%%: "help new" and "help cache"
@@ -352,6 +352,8 @@ ERR_NR_3102_0_PROCEDURE_THROW=A NumeRe procedure required NumeRe to cancel the p
 ERR_NR_3102_1_PROCEDURE_THROW=%%ERR_SEEALSO%%: "help procedure"
 ERR_NR_3103_0_PROCEDURE_WITHOUT_INSTALL_FOUND=A procedure definition, which was not masked behind install tags, was found in the executed script.$(Automatic procedure installs are blocked for security reasons.)
 ERR_NR_3103_1_PROCEDURE_WITHOUT_INSTALL_FOUND=%%ERR_SEEALSO%%: "help install", "help script" and "help procedure"
+ERR_NR_3104_0_PROCEDURE_STACK_OVERFLOW=The call to the procedure %%1%% (Stack: %%2%% procedures) exceeds the maximal memory address limit, which is granted to procedures.$(The procedure was probably called recursively. Try to derive an non-recursive form of the algorithm to resolve this issue.)
+ERR_NR_3104_1_PROCEDURE_STACK_OVERFLOW=%%ERR_SEEALSO%%: "help procedure"
 ERR_NR_3200_0_PROCESS_ABORTED_BY_USER=A process was canceled by the user.$("ESC" was pressed during a process. This aborts the execution.)
 ERR_NR_3300_0_READ_ONLY_DATA=The loaded content of a data file cannot be overwritten.
 ERR_NR_3300_1_READ_ONLY_DATA=%%ERR_SEEALSO%%: "help data"

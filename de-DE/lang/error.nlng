@@ -98,7 +98,7 @@ ERR_MUP_MISPLACED_COLON=Falsch gesetzter Doppelpunkt an der Stelle $POS$. Dateno
 # ========================
 ERR_STD_BADALLOC=NumeRe v %%1%% verursachte eine kritische Speicherzugriffsverletzung und muss beendet werden.
 ERR_STD_INTERNAL=Dies ist ein nicht-kritischer Fehler. Sollte sich dieser Fehler (auch nach einem Neustart) wiederholen (lassen), freut der Entwickler sich über eine entsprechende Bugmeldung unter <numere.developer@gmail.com> oder <https://sourceforge.net/p/numere/tickets/>.
-# NR-Errors
+# NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ========================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=Der gewünschte Cache "%%1%%" existiert bereits.$(Verwende ggf. "%%1%% -swap=CACHE2" um den Inhalt von "%%1%%" mit CACHE2 zu vertauschen.)
 ERR_NR_0_1_CACHE_ALREADY_EXISTS=%%ERR_SEEALSO%%: "help new" und "help cache"
@@ -352,6 +352,8 @@ ERR_NR_3102_0_PROCEDURE_THROW=Eine NumeRe-Prozedur forderte NumeRe auf, den Proz
 ERR_NR_3102_1_PROCEDURE_THROW=%%ERR_SEEALSO%%: "help procedure"
 ERR_NR_3103_0_PROCEDURE_WITHOUT_INSTALL_FOUND=Im ausgeführten Script wurde eine Prozedurdefinition gefunden, die nicht als Installation deklariert ist.$(Aus Sicherheitsgründen wird eine Prozedurdefinition nicht automatisch übernommen.)
 ERR_NR_3103_1_PROCEDURE_WITHOUT_INSTALL_FOUND=%%ERR_SEEALSO%%: "help install", "help script" und "help procedure"
+ERR_NR_3104_0_PROCEDURE_STACK_OVERFLOW=Der Aufruf der Prozedur %%1%% (Stack: %%2%% Prozeduren) übersteigt das maximale Speicheradresslimit, das für Prozeduren zur Verfügung steht.$(Vermutlich wurde die Prozedur rekursiv aufgerufen. Versuche eine nicht-rekursive Darstellung des Algorithmus zu entwickeln, um dieses Problem zu beheben.)
+ERR_NR_3104_1_PROCEDURE_STACK_OVERFLOW=%%ERR_SEEALSO%%: "help procedure"
 ERR_NR_3200_0_PROCESS_ABORTED_BY_USER=Ein Prozess wurde vom Benutzer abgebrochen.$(Während eines Prozesses wurde "ESC" gedrückt. Dies bricht die Auswertung ab.)
 ERR_NR_3300_0_READ_ONLY_DATA=Die geladenen Daten eines Datenfiles können nicht überschrieben werden.
 ERR_NR_3300_1_READ_ONLY_DATA=%%ERR_SEEALSO%%: "help data"
