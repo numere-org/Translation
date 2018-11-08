@@ -117,6 +117,7 @@ gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaet fakultä
 gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gaußverteilung distribution
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen
+getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles%
 getfilelist(STRING,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getfolderlist(STRING,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()

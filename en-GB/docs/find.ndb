@@ -116,6 +116,7 @@ gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaet f
 gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen
+getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles%
 getfilelist(STRING,T)~Returns a list of strings containing all files matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getfolderlist(STRING,T)~Returns a list of strings containing all directories matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()
