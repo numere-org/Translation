@@ -117,7 +117,7 @@ gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaet fakultä
 gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gaußverteilung distribution
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen
-getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles%
+getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()
 getfilelist(STRING,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getfolderlist(STRING,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()
@@ -232,6 +232,7 @@ sin(x)~Sinus von x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Sinus cardinalis von x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
 sinh(x)~Sinus hyperbolicus von x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie sinh()
 size(MAT)~Gibt die Zahl der Zeilen und Spalten der Matrix MAT zurück~lines columns rows
+sleep(nMilliSeconds)~Wartet die angegebenen nMilliSeconds und gibt diesen Wert anschließend zurück~sleep() pause() waiting time zeit dauer warten
 smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung~noise reduction rauschen reduzieren verringern glaetten glätten smoothing
 sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus

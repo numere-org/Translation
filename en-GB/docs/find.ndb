@@ -116,7 +116,7 @@ gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaet f
 gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen
-getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles%
+getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()
 getfilelist(STRING,T)~Returns a list of strings containing all files matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getfolderlist(STRING,T)~Returns a list of strings containing all directories matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()
@@ -232,6 +232,7 @@ sin(x)~Sine of x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
 sinh(x)~Hyperbolic sine of x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie sinh()
 size(MAT)~Returns the number of lines and columns of the matrix MAT~lines columns rows
+sleep(nMilliSeconds)~Waits for the passed nMilliSeconds and returns this value after it~sleep() pause() waiting time zeit dauer warten
 smooth~Smoothes the passed data set by linearizing depending on the requested order~noise reduction rauschen reduzieren verringern glaetten glätten smoothing
 sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
 Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver

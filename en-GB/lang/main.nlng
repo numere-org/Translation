@@ -412,6 +412,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                     
 PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                                      VAL      - Cardinal sine of x. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                                      VAL      - Hyperbolic sine of x. Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_SIZE_[MAT]=						size(MAT)                                    VEC      - Returns the number of lines and columns of the matrix MAT as a vector
+PARSERFUNCS_LISTFUNC_FUNC_SLEEP_[TIME]=						sleep(nMilliSeconds)                         VAL      - Waits for the passed nMilliSeconds and returns this value after it
 PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)                                VAL      - Spherical Neumann function of the order n. Defined in R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)                                   VEC      - Solves the linear system of equations, which is described by the matrix MAT, with the Gaussian algorithm.
 PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(sToSplit,cSep)                        {STR}     - Splits the string sToSplit at the characters cSep in separate strings

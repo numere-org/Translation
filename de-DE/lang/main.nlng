@@ -412,6 +412,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                     
 PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                                      VAL      - Sinus cardinalis von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                                      VAL      - Sinus Hyperbolicus von x. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_SIZE_[MAT]=						size(MAT)                                    VEC      - Gibt die Zahl der Zeilen und Spalten der Matrix MAT als Vektor zurück
+PARSERFUNCS_LISTFUNC_FUNC_SLEEP_[TIME]=						sleep(nMilliSeconds)                         VAL      - Wartet die angegebenen nMilliSeconds und gibt diesen Wert anschließend zurück
 PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)                                VAL      - sphärische Neumannfunktion der Ordnung n. Definiert auf R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)                                   VEC      - Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.
 PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(sToSplit,cSep)                        {STR}     - Teilt die Zeichenkette sToSplit an den Zeichen cSep in einzelne Zeichenketten auf
