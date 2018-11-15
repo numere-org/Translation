@@ -119,6 +119,7 @@ gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greates
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()
 getfilelist(STRING,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
+getfileparts(sFilePath)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis
 getfolderlist(STRING,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()
 getmatchingparens(STRING)~Gibt die Position der passenen schließenden Klammer in STRING zurück.~klammer zu getmatchingparens()

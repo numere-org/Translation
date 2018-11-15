@@ -118,6 +118,7 @@ gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()
 getfilelist(STRING,T)~Returns a list of strings containing all files matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
+getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis
 getfolderlist(STRING,T)~Returns a list of strings containing all directories matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()
 getmatchingparens(STRING)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu getmatchingparens()
