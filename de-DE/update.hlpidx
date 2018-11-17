@@ -577,6 +577,7 @@
 		<keywords>
 			<keyword>modifi</keyword>
 			<keyword>resamp</keyword>
+			<keyword>retou</keyword>
 			<keyword>retoq</keyword>
 			<keyword>smooth</keyword>
 		</keywords>
@@ -1199,6 +1200,7 @@
 		<file path="<>/docs/imread.nhlp" />
 		<title string="Bilder als Daten einlesen" idxkey="imread" />
 		<keywords>
+			<keyword>imread</keyword>
 			<keyword>images</keyword>
 			<keyword>bilder</keyword>
 		</keywords>
