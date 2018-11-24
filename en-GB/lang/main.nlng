@@ -1831,6 +1831,7 @@ GUI_DUPCODE_NUMLINES=Min. code block length
 GUI_DUPCODE_START=Start
 GUI_DUPCODE_COPY=Copy result
 GUI_DUPCODE_REPORT=Save result
+GUI_DUPCODE_SAVEREPORT=NumeRe: Save result report
 # Refactoring window strings
 GUI_REFACTORING_COPYWINDOW_HEAD=NumeRe-Refactorer: New procedure
 GUI_REFACTORING_NOTE=This procedure was extracted using a heuristic. Please verify the argument and return list.

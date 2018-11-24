@@ -1831,6 +1831,7 @@ GUI_DUPCODE_NUMLINES=Min. Code-Blocklänge
 GUI_DUPCODE_START=Start
 GUI_DUPCODE_COPY=Ergebnis kopieren
 GUI_DUPCODE_REPORT=Ergebnis speichern
+GUI_DUPCODE_SAVEREPORT=NumeRe: Ergebnisbericht speichern
 # Refactoring window strings
 GUI_REFACTORING_COPYWINDOW_HEAD=NumeRe-Refactorer: Neue Prozedur
 GUI_REFACTORING_NOTE=Diese Prozedur wurde anhang einer Heuristik extrahiert. Bitte prüfe Argument- und Rückgabeliste auf Vollständigkeit
