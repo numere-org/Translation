@@ -22,7 +22,7 @@
 #
 # Basics
 Plots und Graphen können auf etliche Arten modifiziert werden. "help plotoptions" zeigt einen großen Teil der Optionen, die "plot" und Konsorten übergeben werden können.
-Komplexe oder häufig wiederkehrende Eingaben können in Scripte oder in mehr abstrahierter Form in Prozeduren ausgelagert werden. "help script" und "help procedure" geben hierzu Hinweise.
+Komplexe oder häufig wiederkehrende Eingaben können in Scripte oder in mehr abstrahierter Form in Prozeduren ausgelagert werden. "help script" und "help procedure" geben hierzu Hinweise. Im Scriptordner gibt es auch viele Beispiele.
 Die Einstellungen finden sich im "Werkzeuge"-Menü unter "Optionen". NumeRe kann aber auch mit dem Kommando "set" konfiguriert werden. "help set" zeigt eine Liste aller Einstellungen; "list -settings" die aktuelle Konfiguration.
 Mit Datenreihen kann wie mit den Spalten einer Tabellenkalkulation gerechnet werden. Allerdings können die Daten in "data()" nicht überschrieben werden.
 Mit "new CACHE()" kann ein neuer Cache mit dem Namen CACHE erzeugt werden. "remove CACHE()" entfernt ihn wieder und "delete CACHE()" löscht nur den Inhalt. "clear cache()" entfernt alle Caches und setzt den Speicher zurück.

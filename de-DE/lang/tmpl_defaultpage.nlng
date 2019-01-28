@@ -13,19 +13,19 @@ aufwändige Aufgaben wohl zu bevorzugen ist.
 Schreibe ein Kommando oder einen Ausdruck in die Konsole (unten mitte) und 
 drücke [ENTER]. NumeRe wird das Ergebnis in der nächsten Zeile ausgeben.
 **Beispiel:**
-	Gebe "plot sin(x)" in die Konsole ein
+	Gebe "plot sin(x)" oder "cos(_pi) + 5" in die Konsole ein
 
 
 ##Scripte
 Erzeuge eine neues Script (im Dateimenü oder in der Toolbar oben links) und
 schreibe deine Kommandos und Ausdrücke zeilenweise in diese Datei. Nach dem 
 Speichern kannst du die Datei mit Klicken auf "Ausführen" oder mit [F5] 
-ausführen.
+ausführen. Im Scriptordner findest du viele Beispielscripte.
 **Beispiel:**
-	Gebe "edit <>/samples/sample.nscr" in die Konsole ein.
+	Gebe "edit examples/simple_integration.nscr" in die Konsole ein.
 
 
 ##Hilfe und weitere Unterstützung
 Hilfe und weitere Unterstützung findest du in der *NumeRe-Hilfe*. Drücke [F1], 
 um die Übersicht aufzurufen, oder klicke mit der rechten Maustaste auf ein 
-Kommando um die Hilfe zu diesem Kommando zu öffnen.
+Kommando, um die Hilfe zu diesem Kommando zu öffnen.

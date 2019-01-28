@@ -22,7 +22,7 @@
 #
 # Basics
 Plots and graphs may be modified on mulitple way. "help plotoptions" shows a large part of all options, which may be passed to "plot" and similar commands.
-Complex or often recurring inputs may be outsourced to scripts or to procedures as a more abstract variant. "help script" and "help procedure" give the necessary information.
+Complex or often recurring inputs may be outsourced to scripts or to procedures as a more abstract variant. "help script" and "help procedure" give the necessary information. There are many examples in the script folder.
 The settings are located in the "Tools" menu at "Options". NumeRe may as well be configured with the command "set". "help set" shows a list of all settings; "list -settings" shows the current configuration.
 You may use your data rows just like the columns of a table calculation. But keep in mind that you cannot overwrite the contents of "data()".
 The command "new CACHE()" generates a new cache with the name CACHE. "remove CACHE()" removes it completely and "delete CACHE()" deletes only its content. "clear cache()" removes all caches and resets the memory.

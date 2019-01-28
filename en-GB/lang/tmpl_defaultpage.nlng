@@ -13,15 +13,16 @@ favorable, if something with a high complexity shall be evaluated.
 Enter a command or an expression into the console (lower middle) and press 
 [ENTER]. NumeRe will return the result in the next line.
 **Example:**
-	Enter "plot sin(x)" into the console
+	Enter "plot sin(x)" or "cos(_pi) + 5" into the console
 
 
 ##Scripts
 Create a new script (in the file menu or using the toolbar upper left) and enter
 your commands and expressions linewise to this file. After saving, you may 
-execute the file by clicking on "Execute" or pressing [F5].
+execute the file by clicking on "Execute" or pressing [F5]. You'll find many 
+example scripts in the script folder.
 **Example:**
-	Enter "edit <>/samples/sample.nscr" into the console
+	Enter "edit examples/simple_integration.nscr" into the console
 
 
 ##Help and Further Support
