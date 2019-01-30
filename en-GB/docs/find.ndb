@@ -105,6 +105,7 @@ File explorer~"list -files" lists files (incl. their sizes), which are found in 
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien existieren files existing present valid gueltig gültig findfile()
 findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen findparam()
+findtoken(sString,sToken,sSep)~Returns the position, where the token sToken is found in the string sString, 0 otherwise~token match tokenize string zeichenkette
 fit~Fit functions to data sets via parameters~fitten anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
 Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult
 fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten anpassen daten fehler errors abweichungen trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
