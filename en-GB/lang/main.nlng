@@ -1304,6 +1304,11 @@ GUI_MENU_ANALYZER=Code analyzer%%TAB%%Ctrl-Shift-A
 GUI_MENU_ANALYZER_TTP=Analyses the code for possible improvements
 GUI_MENU_FIND_DUPLICATES=&Find Code duplicates
 GUI_MENU_FIND_DUPLICATES_TTP=Searches for copied code using a semantically analysis
+GUI_MENU_REFACTORING=%%GUI_MENU_EDITOR_REFACTORING%%
+GUI_MENU_RENAME_SYMBOL=%%GUI_MENU_EDITOR_RENAME_SYMBOLS%%%%TAB%%Ctrl-Alt-R
+GUI_MENU_RENAME_SYMBOL_TTP=Replaces each occurence of the symbol at the cursor in the current scope
+GUI_MENU_ABSTRAHIZE_SECTION=%%GUI_MENU_EDITOR_ABSTRAHIZE_SECTION%%%%TAB%%Ctrl-Alt-E
+GUI_MENU_ABSTRAHIZE_SECTION_TTP=Extrahcts the marked lines into a new procedure
 GUI_MENU_TOOLS=&Tools
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
