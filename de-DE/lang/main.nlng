@@ -1768,6 +1768,12 @@ GUI_TB_INDENTONTYPE=Ausrichten
 GUI_TB_INDENTONTYPE_TTP=Richtet die Zeilen automatisch während der Eingabe aus.
 GUI_TB_LINEWRAP=Zeilenumbruch
 GUI_TB_LINEWRAP_TTP=%%GUI_MENU_LINEWRAP_TTP%%
+# Docbrowser toolbar strings
+GUI_TB_DOCBROWSER_HOME=%%DOC_HELP_START%%
+GUI_TB_DOCBROWSER_INDEX=%%DOC_HELP_INDEX%%
+GUI_TB_DOCBROWSER_BACK=%%DOC_HELP_BACK%%
+GUI_TB_DOCBROWSER_FORWARD=%%DOC_HELP_FORWARD%%
+GUI_TB_DOCBROWSER_PRINT=Drucken
 # Printing dialogs
 GUI_PRINT_ERROR=Beim Drucken wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
 GUI_PRINT_ERROR_HEAD=NumeRe: Drucken fehlgeschlagen

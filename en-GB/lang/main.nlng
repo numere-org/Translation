@@ -1768,6 +1768,12 @@ GUI_TB_INDENTONTYPE=Indent
 GUI_TB_INDENTONTYPE_TTP=Indents the lines automatically during input
 GUI_TB_LINEWRAP=Line wrap
 GUI_TB_LINEWRAP_TTP=%%GUI_MENU_LINEWRAP_TTP%%
+# Docbrowser toolbar strings
+GUI_TB_DOCBROWSER_HOME=%%DOC_HELP_START%%
+GUI_TB_DOCBROWSER_INDEX=%%DOC_HELP_INDEX%%
+GUI_TB_DOCBROWSER_BACK=%%DOC_HELP_BACK%%
+GUI_TB_DOCBROWSER_FORWARD=%%DOC_HELP_FORWARD%%
+GUI_TB_DOCBROWSER_PRINT=Print
 # Printing dialogs
 GUI_PRINT_ERROR=A problem was detected during printing.%%LINEBREAK%%Please check the printer settings and try again.
 GUI_PRINT_ERROR_HEAD=NumeRe: Printing failed
