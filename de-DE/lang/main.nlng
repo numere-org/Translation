@@ -1092,6 +1092,7 @@ GUI_OPTIONS_DEFAULTFONT=Standardschriftart für Plots:
 GUI_OPTIONS_PRINT_LINENUMBERS=Zeilennummern drucken
 GUI_OPTIONS_SAVE_SESSION=Sitzungswiederherstellung%%LINEBREAK%%(Nur gesicherte Änderungen können wiederhergestellt werden)
 GUI_OPTIONS_FORMAT_BEFORE_SAVING=Datei vor dem Speichern formatieren
+GUI_OPTIONS_KEEP_BACKUP_FILES=Ein Backup der Datei beim Speichern beibehalten
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
 GUI_OPTIONS_HISTORY_LINES=Puffergröße der NumeRe-Konsole
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
