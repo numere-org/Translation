@@ -34,6 +34,16 @@
 		<item node="-export=NAME">Daten aus dem gewählten Cache in die Textdatei NAME (*.dat) exportieren. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei, mit *.csv eine CSV-Datei und mit *.xls wird eine Excel(R)-Mappe erzeugt)</item>
 		<item node="-MAF">Führt die Multiargumentfunktion MAF auf alle Elemente aus und gibt das Ergebnis zurück. Multiargumentfunktionen sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Mit den zusätzlichen Parametern <code>-lines</code> und <code>-cols</code> wird die Berechnung Zeilenweise bzw. Spaltenweise durchgeführt und als Vektor zurückgegeben; mit <code>-grid</code> werden die Elemente als Teil eines Datengitters betrachtet und die Multiargumentfunktionen auf die <expr>z</expr>-Werte des Datengitters beschränkt. Die <code>-every=FIRST,INCR</code>-Option ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile und das Inkrement (jede => INCR=1, jede zweite => INCR=2, etc.) vorzugeben. Wird dieser Option nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet.<br>Diese veraltete Kommando-Parameter-Konstruktion kann ersetzt werden durch die Verwendung der Parameter als Methoden und damit auch in einem regulären Ausdruck verwendet werden. Aus dem Parameter <code>every=FIRST,INCR</code> wird dabei die Methode <code>.every(nFirst,nIncr)</code>, alle anderen benötigen keine Klammern, z.B.: <code>CACHE().sum.cols.every(2,2)</code>
 	</list>
+	Die Kommandos, die den Code lesbarer machen können und deswegen bevorzugt werden sollen, haben die folgenden Syntaxen:
+	<codeblock>
+		clear CACHE()
+		show CACHE()
+		showf CACHE()
+		rename CACHE(), NEUERNAME()
+		swap CACHE1(), CACHE2()
+		save CACHE() -set filename=NAME
+		export CACHE() -set filename=NAME
+	</codeblock>
 	Ein spezielles Kommando ist <code>delete CACHE(i1:i2,j1:j2)</code>. Dieses wird alle Einträge von Zeile <expr>i1</expr> bis <expr>i2</expr> und von Spalte <expr>j1</expr> bis <expr>j2</expr> unwiderruflich löschen. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden.
 	Selbst erzeugte Caches können mit dem Kommando <code>remove</code> wieder entfernt werden:<codeblock>remove CACHE1(), CACHE2(),...</codeblock>
 	An <code>clear</code> und <code>delete</code> kann <code>-ignore</code> angehängt werden, um die erforderliche Bestätigung zu unterdrücken.
