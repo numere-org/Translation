@@ -129,7 +129,7 @@
 	</article>
 	<article id="sort">
 		<file path="<>/docs/sort.nhlp" />
-		<title string="Daten sortieren" idxkey="sort" />
+		<title string="Daten und Zeichenketten sortieren" idxkey="sort" />
 		<keywords>
 			<keyword>sort</keyword>
 		</keywords>

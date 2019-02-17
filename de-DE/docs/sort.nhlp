@@ -17,8 +17,8 @@
 -->
 
 <article id="sort">
-	<title string="Daten sortieren" />
-	NumeRe kann geladene Daten oder Daten in einem Cache mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
+	<title string="Daten und Zeichenketten sortieren" />
+	NumeRe kann geladene Daten, Daten in einem Cache oder Zeichenketten im <code>string()</code> Objekt mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
 	<codeblock>
 		sort DATEN(I1:I2,J1:J2)
 	</codeblock>
@@ -28,6 +28,7 @@
 	</codeblock>
 	Indexspalten können hierarchisch verwendet werden, indem in <code>SPALTEN</code> erneut <code>INDEX[SPALTEN]</code> verwendet wird: <code>cols=INDEX1[INDEX2[INDEX3[SPALTEN]]]</code>. Zu beachten ist, dass hierbei auch die Indexspalten sortiert werden.
 	Um die Sortierrichtung auf absteigend zu ändern, ist die Option <code>desc</code> mit zu übergeben.
+	Beim Sortieren von Zeichenketten ist darauf zu achten, dass NumeRe diese standardmäßig naiv sortiert (also Groß- und Kleinbuchstaben als unterschiedliche Zeichen betrachtet). Mit der Option <code>ignorecase</code> kann umgeschaltet werden, damit Groß- und Kleinbuchstaben als dieselben Zeichen betrachtet werden.
 	Anstatt die Daten selbst zu sortieren, kann mittels <code>index</code> ein Indexvektor zurückgegeben werden, mit dessen Hilfe die Spalten selbst sortiert werden können:
 	<codeblock>
 		INDEX() = sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN] index
