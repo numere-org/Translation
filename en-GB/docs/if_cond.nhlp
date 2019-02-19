@@ -30,9 +30,10 @@
 		\tExpressions
 		endif
 	</codeblock>
+	A similar functionality is provided by the <a href="nhlp://switch?frame=self">switch condition</a>.
 	A fork doesn't have to contain an ELSE fork or an ELSEIF fork. If the condition for the IF fork was not fulfilled, NumeRe will jump over the whole construct and continue after <code>endif</code>.
 	The end of the whole construct will always be <code>endif</code>. As with FOR and WHILE loops you may append the parameter <code>-sv</code> to this command, which shows als intermediate results. If the parameter <code>-mask</code> was appended instead, then all notifications about the current execution will be suppressed.
-	An IF construct may contain an arbitrary number of FOR and WHILE loops and other IF constructs.
+	An IF construct may contain an arbitrary number of FOR and WHILE loops, SWITCH conditions and other IF constructs.
 	The declaration may be canceled using the command <code>abort</code>. All entered commands for the current IF construct will be deleted. This is in contrast to the command <code>break</code>, which will be evaluated at runtime.
 	You may check, if a data file was loaded or if there is data available in the cache CACHE, if you use <code>if (data())</code> or <code>if (CACHE())</code>, respectively. This may be used inside of scripts, which will need for example an empty cache. <em>Careful:</em> if <code>CACHE()</code> doesn't exist, a global error will be thrown and the evaluation will be canceled.
 	IF constructs inside of loops may influence them using the commands <code>break</code> and <code>continue</code> (See <a href="nhlp://for?frame=new">help for</a> and <a href="nhlp://while?frame=new">help while</a> for information about these commands). Inside of an IF construct, these commands have the same effect, as if <code>endif</code> would be present at its location (they cancel the evaluation of the current fork at this point), and they will be passed outside as long as they reach a surrounding loop or the outermost IF construct, which in this case will be aborted, too.
@@ -44,5 +45,5 @@
 		|ELSE&gt; ans = b
 		|ELSE&gt; endif
 	</example>
-	<em>See also:</em> <a href="nhlp://list?frame=self">help list</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://cache?frame=self">help cache</a>, <a href="nhlp://data?frame=self">help data</a> and <code>list -logic</code>
+	<em>See also:</em> <a href="nhlp://list?frame=self">help list</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://cache?frame=self">help cache</a>, <a href="nhlp://data?frame=self">help data</a> and <a href="nhlp://operator?frame=self">help operator</a>
 </article>

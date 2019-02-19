@@ -493,6 +493,16 @@
 			<keyword>if</keyword>
 		</keywords>
 	</article>
+	<article id="switch">
+		<file path="<>/docs/switch.nhlp" />
+		<title string="Auswahl-Verzweiungen" idxkey="switch, case" />
+		<keywords>
+			<keyword>switch</keyword>
+			<keyword>case</keyword>
+			<keyword>default</keyword>
+			<keyword>endswitch</keyword>
+		</keywords>
+	</article>
 	<article id="incr_decr">
 		<file path="<>/docs/incr_decr.nhlp" />
 		<title string="Inkrement und Dekrement" idxkey="dekrement, inkrement" />

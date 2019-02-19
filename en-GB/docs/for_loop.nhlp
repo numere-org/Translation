@@ -32,7 +32,7 @@
 		<item node="sp">Displays the progress display even if <code>mask</code> is used as default</item>
 		<item node="lnumctrl[=WERT]">Canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code></item>
 	</list>
-	A FOR loop may contain an arbitrary number of other FOR loops, WHILE loops or IF constructs (conditional forks).
+	A FOR loop may contain an arbitrary number of other FOR loops, WHILE loops, SWITCH conditions or IF constructs (conditional forks).
 	A declaration may be canceled with the command <code>abort</code> without executing any of the previously entered commands. This is in contrast to the command <code>break</code>, which will be evaluated at runtime.
 	The two commands <code>break</code> and <code>continue</code> give extended control over a FOR loop. They may be passed inside of an IF construct (which is part of the actual FOR loop) and may influence the evaluation of the surrounding FOR loop:
 	<list>
@@ -46,5 +46,5 @@
 		|FOR&gt; i
 		|FOR&gt; endfor
 	</example>
-	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://string?frame=self">help string</a>
+	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://string?frame=self">help string</a>
 </article>

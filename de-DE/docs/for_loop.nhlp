@@ -32,7 +32,7 @@
 		<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
 		<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 	</list>
-	Eine FOR-Schleife kann eine beliebige Zahl an anderen FOR-Schleifen, WHILE-Schleifen oder IF-Verzweigungen enthalten.
+	Eine FOR-Schleife kann eine beliebige Zahl an anderen FOR-Schleifen, WHILE-Schleifen, SWITCH-Verzweigungen oder IF-Verzweigungen enthalten.
 	Die Deklaration kann mit dem Kommando <code>abort</code> abgebrochen werden, ohne dass die bisher eingegebenen Befehle ausgeführt werden. Dies steht im Gegensatz zu dem Kommando <code>break</code>, das erst während der Laufzeit ausgewertet wird.
 	Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer IF-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
 	<list>
@@ -46,5 +46,5 @@
 		|FOR&gt; i
 		|FOR&gt; endfor
 	</example>
-	<em>Siehe auch:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> und <a href="nhlp://string?frame=self">help string</a>
+	<em>Siehe auch:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> und <a href="nhlp://string?frame=self">help string</a>
 </article>

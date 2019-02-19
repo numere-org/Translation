@@ -271,6 +271,7 @@ sum(x,y,z,...)~Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden~
 surf~Erstellen eines Oberflächenplots~oberflaechenplot oberflächenplot surface
 surf3d~Erstellen eines 3D-Oberflächenplots~oberflaechenplot oberflächenplot surface3d dreidimensional
 swap~Tauscht den Inhalt eines Caches mit dem Inhalt eines anderen aus~austauschen exchange content
+switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle
 # T
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie tan()
 tanh(x)~Tangens hyperbolicus von x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie tanh()

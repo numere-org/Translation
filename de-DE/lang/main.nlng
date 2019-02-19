@@ -575,7 +575,7 @@ PARSERFUNCS_LISTCMD_CMD_ABORT_[FLOWCTRL]=				abort                              
 PARSERFUNCS_LISTCMD_CMD_ABOUT_[MAINCTRL]=				about                               - Zeigt Lizenz- und Urheberinformationen zu NumeRe in der Konsole an
 PARSERFUNCS_LISTCMD_CMD_APPEND_[LOADSAVE]=				append       NM [-PAR]              - Hängt die Daten aus der Datei NM an bereits vorhandene Daten im Speicher an. Der Parameter erlaubt das Anhängen mehrerer Dateien zugleich
 PARSERFUNCS_LISTCMD_CMD_AUDIO_[LOADSAVE]=				audio        OB [-PAR]              - Erzeugt eine WAVE-Datei aus dem Datensatz in OB. Mittels Parameter kann die Samplerate und der Zieldateiname vorgegeben werden
-PARSERFUNCS_LISTCMD_CMD_BREAK_[FLOWCTRL]=				break                               - Bricht die aktuelle Schleife ab und springt im Programmfluss eine Ebene höher
+PARSERFUNCS_LISTCMD_CMD_BREAK_[FLOWCTRL]=				break                               - Bricht die aktuelle Schleife ab oder verlässt den aktuellen case eines switch-Blocks und springt im Programmfluss eine Ebene höher
 PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR  -> {VAL}         - Optionen auf dem Cache. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
 PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]              - Entfernt alle Caches/alle Elemente im string()-Objekt unwiderbringlich von diesem Rechner oder entfernt das data()-Objekt. Der Parameter kann genutzt werden, um die Bestätigung zu unterdrücken
 PARSERFUNCS_LISTCMD_CMD_COMPOSE_[PLOTTING]=				compose                             - Startet die Komposition mehrerer Plotstile, so dass ein kombinierter Plot aus den berechneten Plots dieser Umgebung erzeugt werden kann. Hiermit können auch mehrere Plots neben- oder übereinander in einem gemeinsamen Fenster angeordnet werden
@@ -678,6 +678,10 @@ PARSERFUNCS_LISTCMD_CMD_WHILE_[FLOWCTRL]=				while        (EX)                  
 PARSERFUNCS_LISTCMD_CMD_WORKPATH_[MISC_MAINCTRL]=		workpath     NM                     - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung zum Verzeichnis NM
 PARSERFUNCS_LISTCMD_CMD_WRITE_[LOADSAVE]=				write        STR -set PAR           - Schreibt die Zeichenketten STR zeilenweise in die gewählte Datei. Der Dateiname ist durch den Parametersatz zu definieren. Außerdem können die umfassenden Anführungszeichen unterdrückt werden und der Schreibmodus vorgegeben werden
 PARSERFUNCS_LISTCMD_CMD_ZEROES_[EVAL]=					zeroes       EX -set PAR  -> {VAL}  - Bestimmt die Nullstellen des Ausdrucks oder der Daten in EX numerisch. Das Intervall ist über den Parameter anzugeben. Außerdem kann die Zahl der Stützstellen sowie die Einschränkung auf Auf- oder Absteigende Nullstellen durch Parameter erreicht werden
+PARSERFUNCS_LISTCMD_CMD_SWITCH_[FLOWCTRL]=				switch      (EX)                    - Startet eine Auswahlverzweigung, die mindestens einen 'case' enthalten muss. Der Ausdruck EX muss numerisch oder eine Zeichenkettenausdruck sein
+PARSERFUNCS_LISTCMD_CMD_CASE_[FLOWCTRL]=				case         EX:                    - Definiert einen Fall in einer Auswahlverzweigung. Der Ausdruck EX muss ein numerischer Wert oder eine Zeichenkette sein
+PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                            - Definiert den "sonst"-Fall in einer Auswahlverzweigung
+PARSERFUNCS_LISTCMD_CMD_ENDSWITCH_[FLOWCTRL]=			endswitch                           - Beendet eine Auswahlverzweigung
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=Die Syntax ist schematisch angegeben: EX = Ausdruck, PAR = Parameter, OB = (Daten-)Objekt, STR = Zeichenkette, CMD = Kommando und NM = Name. Syntaxelemente in eckigen Klammern sind optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SIEHE AUCH: Zu jedem der gelisteten Befehle existiert ein Hilfeeintrag, der durch "help BEFEHL" aufgerufen werden kann.

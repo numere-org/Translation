@@ -1,0 +1,58 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2019  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="switch">
+	<title string="Auswahl-Verzweigungen" />
+	Eine Auswahl-Verzweigung besteht aus mindestens drei Kommandos: <code>switch (EX)</code>, <code>case VAL:</code> und <code>endswitch</code>. Es können beliebig viele <code>case</code> Statements verwendet werden. Zusätzlich kann noch <code>default:</code> nach dem letzten <code>case</code> verwendet werden, um den "Sonst-Fall" abzudecken. <code>EX</code> ist ein auswertbarer Ausdruck, der entweder einen numerischen Wert oder eine Zeichenkette zurückgibt. <code>VAL</code> sind ebenfalls numerische Werte oder Zeichenketten.
+	NumeRe wird den Ausdruck <code>EX</code> auswerten und mit den <code>VAL</code> der <code>case</code> Statements vergleichen und in den ersten <code>case</code>, dessen Wert mit dem Ergebnis von <code>EX</code> übereinstimmt, springen. Stimmt keiner überein, wird der optionale <code>default</code> Block verwendet. Danach wird NumeRe alle folgenden Ausdrücke auswerten (auch die der folgenden <code>case</code> und <code>default</code> Statements), bis es entweder das Ende der Auswahl-Verzweigung erreicht oder auf das Kommando <code>break</code> trifft.
+	<codeblock>
+		switch (EX)
+		case VAL1:
+		\tAusdrücke
+		\t[break]
+		case VAL2:
+		\tAusdrücke
+		\t[break]
+		[...]
+		default:
+		\tAusdrücke
+		endswitch
+	</codeblock>
+	Eine Verzweigung muss mindestens eine <code>case</code> Statement enthalten. Weitere <code>case</code> oder <code>default</code> Statements sind optional.
+	Die Auswahl-Verzweigung kann weitere <code>if</code>, <code>for</code> oder <code>while</code> Blöcke oder sogar weitere Auswahl-Verzweigungen enthalten. Es muss beachtet werden, dass das Kommando <code>break</code> <em>nicht</em> an umfassende die Schleifen weitergereicht wird, da es in <code>switch</code> selbst ausgewertet wird. Das Kommando <code>continue</code> wird normal weitergereicht.
+	Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen ähnliche Funktionalitäten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung für die Auswahl des korrekten Falls konstant. Die Ordnung der Fälle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benötigt <code>if</code> für jeden <code>elseif</code>, der als FALSCH ausgewertet wird, linear mehr Zeit.
+	Die Deklaration kann mit dem Kommando <code>abort</code> abgebrochen werden, ohne dass die bisher eingegebenen Befehle ausgeführt werden. Dies steht im Gegensatz zu dem Kommando <code>break</code>, dass erst während der Laufzeit ausgewertet wird.
+	<example desc="Eine Auswahl-Verzweigung, die nach Arbeitstagen und Wochenende selektiert:" type="verbatim">
+		|   switch (x)
+		|   case 1:
+		|   case 2:
+		|   case 3:
+		|   case 4:
+		|   case 5:
+		|       print "Arbeitstag"
+		|       break;
+		|   case 6:
+		|   case 7:
+		|       print "Wochenende"
+		|       break;
+		|   default:
+		|       print "Dieser Wochentag existiert nicht."
+		|   endswitch
+	</example>
+	<em>Siehe auch:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a> und <a href="nhlp://while?frame=self">help while</a>
+</article>

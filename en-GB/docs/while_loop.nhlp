@@ -27,7 +27,7 @@
 		<item node="sp">Displays the progress display even if <code>mask</code> is used as default</item>
 		<item node="lnumctrl[=WERT]">Canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code></item>
 	</list>
-	A WHILE loop may contain an arbitrary number of FOR loops, other WHILE loops and IF forks.
+	A WHILE loop may contain an arbitrary number of FOR loops, other WHILE loops, SWITCH conditions and IF forks.
 	The declaration of a loop may be canceled with the command <code>abort</code> without executing all already entered expressions. This is in contrast to the command <code>break</code>, which will evaluated at runtime.
 	The two commands <code>break</code> and <code>continue</code> grant further control over a WHILE loop. These commands may be placed inside of an IF fork (which is part of the WHILE loop itself) and influence the evaluation from there:
 	<list>
@@ -41,5 +41,5 @@
 		|WHL&gt; load ??
 		|WHL&gt; endwhile
 	</example>
-	<em>See also:</em> <a href="nhlp://vect?frame=self">help vect</a>, <a href="nhlp://colorscheme?frame=self">help colorscheme</a>, <a href="nhlp://multiresult?frame=self">help multiresult</a> and <a href="nhlp://plot?frame=self">help plot</a>
+	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://operator?frame=self">help operator</a>
 </article>
