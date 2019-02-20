@@ -1059,6 +1059,15 @@ GUI_SEARCH_END_HEAD=NumeRe: Suche abgeschlossen
 GUI_REPLACE_END=%%1%% Vorkommnisse von%%LINEBREAK%%"%%2%%" mit "%%3%%" ersetzt.
 GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
 # Options dialog
+# Section headlines
+GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche
+GUI_OPTIONS_INTERNALS=Interne Konfiguration
+GUI_OPTIONS_SYNTAXHIGHLIGHTING=Farben der Syntaxhervorhebung
+GUI_OPTIONS_FONTS=Schriftarten
+GUI_OPTIONS_PRINTING=Druckeinstellungen
+GUI_OPTIONS_SAVING=Speichereinstellungen
+GUI_OPTIONS_STARTING=Programmstart
+# Setting labels
 GUI_OPTIONS_AUTOSAVE=[sec] Cache-Autosave-Intervall
 GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
@@ -1073,7 +1082,6 @@ GUI_OPTIONS_HINTS=Tipps und Tricks beim Start anzeigen
 GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)%%LINEBREAK%%Siehe auch "help language"
 GUI_OPTIONS_EXTERNALVIEWER=Verwende externe Fenster für "show" und "help"
 GUI_OPTIONS_EXECUTECOMMAND=Erlaube das Kommando "execute"%%LINEBREAK%%Sicherheitsrisiko! Siehe auch "help execute"
-GUI_OPTIONS_SYNTAXHIGHLIGHTING=Farben der Syntaxhervorhebung:
 GUI_OPTIONS_RESETHIGHLIGHT=Zurücksetzen
 GUI_OPTIONS_DEFAULTBACKGROUND=Standardhintergrund
 GUI_OPTIONS_BOLD=Fett
@@ -1099,6 +1107,7 @@ GUI_OPTIONS_FORMAT_BEFORE_SAVING=Datei vor dem Speichern formatieren
 GUI_OPTIONS_KEEP_BACKUP_FILES=Ein Backup der Datei beim Speichern beibehalten
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
 GUI_OPTIONS_HISTORY_LINES=Puffergröße der NumeRe-Konsole
+GUI_OPTIONS_CARET_BLINK_TIME=[msec] Blinkdauer des Cursors
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
 GUI_OPTIONS_LATEXPATH=Pfad zu den Binaries der LaTeX-Distribution%%LINEBREAK%%(Der Unterordner "bin" oder "bin/x64" in der LaTeX-Distribution)
 GUI_OPTIONS_MISC=Verschiedenes
