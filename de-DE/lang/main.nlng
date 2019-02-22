@@ -1026,6 +1026,8 @@ GUI_DLG_NEWPLUGIN_QUESTION=Bitte das Plugin-Kommando eingeben:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
 GUI_DLG_RENAMESYMBOLS=NumeRe: Symbol umbenennen
 GUI_DLG_RENAMESYMBOLS_QUESTION=Neuer Name für das Symbol:
+GUI_DLG_RENAMESYMBOLS_ALREADYINUSE=NumeRe: Symbol bereits in Verwendung
+GUI_DLG_RENAMESYMBOLS_ALREADYINUSE_WARNING=Das gewählte Symbol ist in diesem Modul bereits in Verwendung. Trotzdem ersetzen?
 GUI_DLG_GOTO=NumeRe: Gehe zu Zeile
 GUI_DLG_GOTO_QUESTION=Eine Zeilennummer eingeben: 1-%%1%%
 GUI_DLG_GOTO_ERROR=Diese Zeile existiert nicht.
@@ -1062,6 +1064,8 @@ GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche
 GUI_OPTIONS_INTERNALS=Interne Konfiguration
+GUI_OPTIONS_DEFAULTPATHS=Standardordner
+GUI_OPTIONS_MISCPATHS=Zusätzliche Pfade
 GUI_OPTIONS_SYNTAXHIGHLIGHTING=Farben der Syntaxhervorhebung
 GUI_OPTIONS_FONTS=Schriftarten
 GUI_OPTIONS_PRINTING=Druckeinstellungen

@@ -1026,6 +1026,8 @@ GUI_DLG_NEWPLUGIN_QUESTION=Please enter the desired plugin command:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
 GUI_DLG_RENAMESYMBOLS=NumeRe: Rename symbol
 GUI_DLG_RENAMESYMBOLS_QUESTION=Choose new symbol name:
+GUI_DLG_RENAMESYMBOLS_ALREADYINUSE=NumeRe: Symbol already in use
+GUI_DLG_RENAMESYMBOLS_ALREADYINUSE_WARNING=The chosen symbol is already in use within this module. Replace nevertheless?
 GUI_DLG_GOTO=NumeRe: Goto line
 GUI_DLG_GOTO_QUESTION=Insert a line number: 1-%%1%%
 GUI_DLG_GOTO_ERROR=This line doesn't exist.
@@ -1062,11 +1064,13 @@ GUI_REPLACE_END_HEAD=NumeRe: Replacing finished
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=User interface
 GUI_OPTIONS_INTERNALS=Internal configuration
+GUI_OPTIONS_DEFAULTPATHS=Default paths
+GUI_OPTIONS_MISCPATHS=Additional paths
 GUI_OPTIONS_SYNTAXHIGHLIGHTING=Colours used for syntax highlighting
 GUI_OPTIONS_FONTS=Fonts
 GUI_OPTIONS_PRINTING=Print settings
 GUI_OPTIONS_SAVING=Save settings
-GUI_OPTIONS_STARTING=Application start up
+GUI_OPTIONS_STARTING=Application start-up
 # Setting labels
 GUI_OPTIONS_AUTOSAVE=[sec] Cache autosave interval
 GUI_OPTIONS_GREETING=Show greeting at start-up
