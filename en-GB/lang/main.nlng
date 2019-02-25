@@ -1163,6 +1163,7 @@ GUI_TREE_POP_NEWFOLDER=New folder
 GUI_TREE_POP_REMOVEFOLDER=Remove folder
 GUI_TREE_POP_OPENINEXPLORER=Show in Explorer
 # The history widget
+GUI_HISTORY=History
 GUI_HISTORY_DELETELINE=Delete this line
 GUI_HISTORY_COPYLINE=Copy this line
 # Filter strings for the file dialog
@@ -1896,3 +1897,12 @@ GUI_GRAPH_PREVIOUS=Previous frame
 GUI_GRAPH_NEXT=Next frame
 GUI_GRAPH_RUN=Run animation
 GUI_GRAPH_STOP=Stop animation
+# Variable viewer strings
+GUI_VARVIEWER=Defined variables
+GUI_VARVIEWER_NAME=Name
+GUI_VARVIEWER_DIM=Dim
+GUI_VARVIEWER_CLASS=Class
+GUI_VARVIEWER_VALUE=Value
+GUI_VARVIEWER_VARS=Numerical variables
+GUI_VARVIEWER_STRINGS=String variables
+GUI_VARVIEWER_TABLES=Tables

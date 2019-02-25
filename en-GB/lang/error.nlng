@@ -43,6 +43,7 @@ DBG_STACKTRACE=Stacktrace
 DBG_LOCALS=Local variables
 DBG_LOCALVARS=Local numerical variables
 DBG_LOCALSTRINGS=Local strings
+DBG_LOCALTABLES=Local tables
 DBG_PRESS_ENTER=Press ENTER to resume
 DBG_MODULE_TEMPLATE=Failing expression:   %%1%%$Failing module:       %%2%%$Line number:          %%3%%
 DBG_MODULE_TEMPLATE_BP=Current expression:     %%1%%$Current module:         %%2%%$Line Number:            %%3%%

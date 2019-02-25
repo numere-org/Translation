@@ -43,6 +43,7 @@ DBG_STACKTRACE=Stacktrace
 DBG_LOCALS=Lokale Variablen
 DBG_LOCALVARS=Lokale numerische Variablen
 DBG_LOCALSTRINGS=Lokale Zeichenketten
+DBG_LOCALTABLES=Lokale Tabellen
 DBG_PRESS_ENTER=Zum Fortfahren ENTER drücken
 DBG_MODULE_TEMPLATE=Fehlerhafter Ausdruck:   %%1%%$Fehlerhaftes Modul:      %%2%%$Zeilennummer:            %%3%%
 DBG_MODULE_TEMPLATE_BP=Aktueller Ausdruck:      %%1%%$Aktuelles Modul:         %%2%%$Zeilennummer:            %%3%%
