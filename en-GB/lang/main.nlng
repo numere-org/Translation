@@ -30,6 +30,7 @@ COMMON_LINES=line(s)
 COMMON_LINE=line
 COMMON_COLS=column(s)
 COMMON_COL=column
+COMMON_WARNING=Warning
 COMMON_SUCCESS=Success
 COMMON_FAILURE=Failure
 COMMON_DONE=Done
@@ -84,6 +85,9 @@ COMMON_FILETYPE_C=C source file
 COMMON_FILETYPE_HPP=C++ header file
 COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_H=C header file
+COMMON_FUNCTION_DEPRECATED=This function is deprecated and will be removed in the future.
+COMMON_COMMAND_DEPRECATED=This command is deprecated and will be removed in the future.
+COMMON_SYNTAX_DEPRECATED=This syntax is deprecated and will not be supported in the future.
 # MAIN:
 # =================================
 MAIN_LOADING_CMDLINE=Processing command line parameters

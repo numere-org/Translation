@@ -30,6 +30,7 @@ COMMON_LINES=Zeile(n)
 COMMON_LINE=Zeile
 COMMON_COLS=Spalte(n)
 COMMON_COL=Spalte
+COMMON_WARNING=Warnung
 COMMON_SUCCESS=Erfolg
 COMMON_FAILURE=Misserfolg
 COMMON_DONE=Abgeschlossen
@@ -84,6 +85,9 @@ COMMON_FILETYPE_C=C-Quelldatei
 COMMON_FILETYPE_HPP=C++-Headerdatei
 COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_H=C-Headerdatei
+COMMON_FUNCTION_DEPRECATED=Diese Funktion ist veraltet und wird in Zukunft entfernt.
+COMMON_COMMAND_DEPRECATED=Dieses Kommando ist veraltet und wird in Zukunft entfernt.
+COMMON_SYNTAX_DEPRECATED=Diese Syntax ist veraltet und wird in Zukunft nicht mehr unterstützt.
 # MAIN:
 # =================================
 MAIN_LOADING_CMDLINE=Verarbeite Kommandozeilenparameter
