@@ -19,7 +19,7 @@
 <article id="rekurs_oprt">
 	<title string="Mathematische und Zeichenketten-Operatoren" />
 	Mathematische oder Zeichenketten-Operationen benötigen einen definierten Satz an Operationen, die durch die unten aufgelisteten Operatoren repräsentiert werden. Dabei können viele Operationen sowohl mit numerischen Werten als auch mit Zeichenketten durchgeführt werden. Einige Operationen sind auch rekursiv verfügbar.
-	NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code> und <code>^=</code>. Diese Operatoren sind Abkürzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog für die anderen Operatoren.
+	NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code> und <code>**=</code>. Diese Operatoren sind Abkürzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog für die anderen Operatoren.
 	Speziell ist auch der Vektorinitialisierer in seinen beiden Formen: <code>{A : B}</code> und <code>{A : C : B}</code>. Diese Operatoren generieren einen Vektor, der sich aus einer Expansion der Elemente von <code>A</code> bis <code>B</code> ergibt. Dabei ist<codeblock>{A : B} = {A, A+1, A+2, ..., A+n, (B)}<br>{A : C : B} = {A, A+C, A+2C, ..., A+nC, (B)}</codeblock><code>B</code> ist die Grenze der Inkrementierung. Wenn <code>B</code> durch die Operation nicht erreicht werden kann, wird es nicht in den Vektor übernommen, sondern nur das letzte Element davor. <code>B</code> kann auch kleiner als <code>A</code> sein. Dann wird im ersteren Fall automatisch dekrementiert.
 	Die folgenden Operatoren sind verfügbar:
 	<table>
@@ -49,6 +49,12 @@
 		</tr>
 		<tr>
 			<td>Zuweisung</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
+		</tr>
+		<tr>
+			<td>Fakultät</td><td><code>A!</code></td><td></td><td>X</td><td></td>
+		</tr>
+		<tr>
+			<td>Doppelfakultät</td><td><code>A!!</code></td><td></td><td>X</td><td></td>
 		</tr>
 		<tr>
 			<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
@@ -96,7 +102,7 @@
 			<td>Logische Klammern</td><td><code>(A)</code></td><td></td><td>X</td><td>X</td>
 		</tr>
 		<tr>
-			<td>Listen-/Vektorklammern</td><td><code>{A}</code></td><td></td><td>X</td><td>X</td>
+			<td>Listen-/Vektorklammern</td><td><code>{A, B, ...}</code></td><td></td><td>X</td><td>X</td>
 		</tr>
 		<tr>
 			<td>Vektorinitialisierer mit Abstand 1</td><td><code>{A : B}</code></td><td></td><td>X</td><td></td>
