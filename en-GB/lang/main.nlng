@@ -788,7 +788,7 @@ PLOT_DENSITY=density
 PLOT_VECTOR=vector field
 PLOT_LOADING_BACKGROUND=Loading background
 PLOT_RENDERING_BACKGROUND=Rendering background
-PLOT_RENDERING_FRAME=Rendering frame %%1%% out of %%2%%
+PLOT_RENDERING_FRAME=Calculating frame %%1%% out of %%2%%
 PLOT_SAVING=Saving
 PLOT_SAVE_LOCATION=Saved at: "%%1%%"
 # LOOP
@@ -1906,6 +1906,8 @@ GUI_GRAPH_PREVIOUS=Previous frame
 GUI_GRAPH_NEXT=Next frame
 GUI_GRAPH_RUN=Run animation
 GUI_GRAPH_STOP=Stop animation
+GUI_GRAPH_RENDERING=Rendering frames ...
+GUI_GRAPH_RENDERING_DONE=Rendering finished
 # Variable viewer strings
 GUI_VARVIEWER=Defined variables
 GUI_VARVIEWER_NAME=Name
