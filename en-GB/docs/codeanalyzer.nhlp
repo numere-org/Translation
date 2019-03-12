@@ -45,5 +45,5 @@
 			<td>Comment density</td><td>50 %</td><td>150 %</td><td>Comment the module further or examine it for commented out code, which is a common source for a high comment density.</td>
 		</tr>
 	</table>
-
+	The code analyzer may be configured using the application settings.
 </article>
