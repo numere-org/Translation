@@ -5,10 +5,14 @@
 
 procedure $%%1%%()
 	## Füge hier deine Kommandos und Ausdrücke ein.
+	|
 	return true;
 endprocedure
 
-#**Ende der Prozedur
+## Ergänze hier weitere lokale Prozeduren
+
+
+#**Ende der Datei
  * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://sites.google.com/site/numereframework/
  **********************************************************************************************#

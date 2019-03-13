@@ -1,19 +1,12 @@
-#**
- * This script was automatically created by NumeRe
- * SCRIPT NAME:   %%1%%
- * GENERATED:     %%2%%
- * ==================================================
- *
- * Add your commands in the following or load definitions and global 
- * expressions using the syntay @SCRIPT out of the script SCRIPT in
- * this script.
- *
- * (If this script shall be made public, then you may include your licence
- * at this point)
- *#
+#**********************************************************************************************
+ * SCRIPT NAME: %%1%%
+ * ============================================================================================
+ * Generated: %%2%% *#
 
+## Insert your commands and expressions here.
+|
 
-#**End of script
+#**End of file
  * NumeRe: Framework für Numerische Rechnungen | Free numerical software licenced under GNU GPL v3
  * https://sites.google.com/site/numereframework/
- *#
+ **********************************************************************************************#

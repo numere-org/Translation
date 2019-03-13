@@ -26,7 +26,7 @@
 		 * Add all commands and calculations, which your plugin shall do, at this place.
 		 * If your plugin shall call other procedures, copy them including their namespace in this install routine. *#
 		namespace plugins~%%1%% ## Standard namespace. You may use "this" as well.
-		
+		|
 		## If you want to return a value, you should switch the type to "TYPE_PLUGIN_WITH_RETURN_VALUE".
 		return void
 	endprocedure

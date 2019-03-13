@@ -26,7 +26,7 @@
 		 * Ergänze hier die Kommandos und Auswertungen, die dein Plugin ausführen soll.
 		 * Falls dein Plugin Prozeduren aufrufen soll, kopiere diese mit Namensraum in diese Installationsroutine. *#
 		namespace plugins~%%1%% ## Standard-Namensraum. Du könntest auch "this" verwenden.
-		
+		|
 		## Wenn du einen Wert zurückgeben willst, solltest du den Typ zu "TYPE_PLUGIN_WITH_RETURN_VALUE" ändern.
 		return void
 	endprocedure
