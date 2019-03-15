@@ -1307,7 +1307,7 @@ GUI_MENU_DISPCTRLCHARS=&Show control characters
 GUI_MENU_DISPCTRLCHARS_TTP=Shows control characters such as tabulator and whitespaces
 GUI_MENU_TOGGLE_CONSOLE=Show/hide the &console%%TAB%%F2
 GUI_MENU_TOGGLE_FILETREE=Show/hide the file &browser%%TAB%%F3
-GUI_MENU_TOGGLE_HISTORY=Show/hide the input &history%%TAB%%F4
+GUI_MENU_TOGGLE_HISTORY=Show/hide the &list browser%%TAB%%F4
 GUI_MENU_MULTIROW=&Multirow tabs
 GUI_MENU_MULTIROW_TTP=Activates or deactives tabs in multiple rows
 GUI_MENU_FOLDALL=&Fold all%%TAB%%Ctrl-Alt-F
@@ -1955,3 +1955,6 @@ GUI_VARVIEWER_NEWNAME_QUESTION=New table name:
 GUI_VARVIEWER_NEWNAME=NumeRe: Rename table
 GUI_VARVIEWER_SAVENAME_QUESTION=Filename:
 GUI_VARVIEWER_SAVENAME=NumeRe: Save table
+# Procedure viewer strings
+GUI_PROCEDUREVIEWER=Local procedures
+GUI_PROCEDUREVIEWER_SIGNATURE=Procedure signature

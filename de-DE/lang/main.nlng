@@ -1307,7 +1307,7 @@ GUI_MENU_DISPCTRLCHARS=Zeige &Steuerzeichen
 GUI_MENU_DISPCTRLCHARS_TTP=Zeigt Steuerzeichen wie Tabulator und Leerzeichen an
 GUI_MENU_TOGGLE_CONSOLE=Zeige/Verberge die &Konsole%%TAB%%F2
 GUI_MENU_TOGGLE_FILETREE=Zeige/Verberge den Datei&navigator%%TAB%%F3
-GUI_MENU_TOGGLE_HISTORY=Zeige/Verberge die &Chronik%%TAB%%F4
+GUI_MENU_TOGGLE_HISTORY=Zeige/Verberge den &Listen-Browser%%TAB%%F4
 GUI_MENU_MULTIROW=&Mehrzeilige Dateireiter
 GUI_MENU_MULTIROW_TTP=Aktiviert oder deaktiviert mehrzeilige Dateireiter
 GUI_MENU_FOLDALL=Alles ein&falten%%TAB%%Ctrl-Alt-F
@@ -1955,3 +1955,6 @@ GUI_VARVIEWER_NEWNAME_QUESTION=Neuer Tabellenname:
 GUI_VARVIEWER_NEWNAME=NumeRe: Tabelle umbenennen
 GUI_VARVIEWER_SAVENAME_QUESTION=Dateiname:
 GUI_VARVIEWER_SAVENAME=NumeRe: Tabelle speichern
+# Procedure viewer strings
+GUI_PROCEDUREVIEWER=Lokale Prozeduren
+GUI_PROCEDUREVIEWER_SIGNATURE=Prozedursignatur

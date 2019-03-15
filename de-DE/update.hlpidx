@@ -82,11 +82,13 @@
 	</article>
 	<article id="history">
 		<file path="<>/docs/history.nhlp" />
-		<title string="Eingabehistorie" idxkey="history" />
+		<title string="Listen-Browser" idxkey="history,listbrowser" />
 		<keywords>
 			<keyword>histor</keyword>
 			<keyword>eingabe</keyword>
 			<keyword>entry</keyword>
+			<keyword>listbr</keyword>
+			<keyword>chronik</keyword>
 		</keywords>
 	</article>
 	<article id="firststeps">

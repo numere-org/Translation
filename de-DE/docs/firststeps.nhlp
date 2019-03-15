@@ -1,6 +1,6 @@
 <!--
 	NumeRe: Framework fuer Numerische Rechnungen
-	Copyright (C) 2017  Erik Haenel et al.
+	Copyright (C) 2019  Erik Haenel et al.
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -18,12 +18,20 @@
 
 <article id="firststeps">
 	<title string="Erste Schritte" />
-	NumeRe mag zu Beginn überwältigend wirken, da es ein klein wenig Vorwissen voraussetzt. Dieses Vorwissen soll in diesem Abschnitt erarbeitet werden.
-	<h>Funktionsweise</h>
+	<h>Hallo und Willkommen bei NumeRe: Framework für Numerische Rechnungen!</h>
+	NumeRe ist ausgelegt als eine Tabellenkalkulation, die durch Kommandos und Funktionen bedient wird, allerdings für die (Natur-)Wissenschaftliche Arbeit optimiert. So verfügt NumeRe über die Möglichkeit, durch Scripte vordefinierte Abläufe zu automatisieren, graphische Plots in vielerlei Varianten zu erzeugen, oder einige andere Dinge.
+	Dies ist eine kurze Einführung, die nicht alle Aspekte von NumeRe zeigen kann. Es gibt jedoch die Möglichkeit, zu allen Themen eine Hilfe zu erhalten: gib einfach <code>help THEMA</code> ein, um meine Hilfe zum THEMA aufzurufen, oder lass' THEMA weg, um die Hilfeübersicht anzuzeigen. Du kannst auch direkt im Baum auf der linken Seite dieses Fensters nach Artikeln suchen.
+	Solltest du einmal ein Kommando oder eine Funktion nicht finden können, kannst du die <a href="nhlp://find?frame=new">Stichwortsuche</a> verwenden: <code>find BEGRIFFE</code>. Wie durch BEGRIFFE angedeutet, kannst du hier auch mehrere Begriffe angeben, die durch Leerzeichen getrennt sein müssen.
+	<h>Funktionen von NumeRe</h>
 	Die Benutzeroberfläche von NumeRe setzt sich aus drei wesentlichen Komponenten zusammen: dem <a href="nhlp://filetree?frame=new">Dateibaum</a>, dem <a href="nhlp://editor?frame=new">Editor</a> und der <a href="nhlp://console?frame=new">Konsole</a>. Während der Dateibaum eine Übersicht über die vorhandenen Dateien bietet, können im Editor Textdateien, Scripte und Prozeduren geschrieben werden. Die Konsole schließlich erlaubt die Interaktion mit der verarbeitenden Schicht von NumeRe - wir kommen gleich dazu.
 	NumeRe ist dazu ausgelegt, dass es Befehle und mathematische Ausdrücke abarbeitet, die zuvor definiert wurden, ähnlich einer imperativen Programmiersprache. Dies kann von Hand Befehl je Befehl (bzw. Ausdruck je Ausdruck) passieren, oder die entsprechenden Routinen können zuvor in eine Datei - ein sogenanntes Script - geschrieben und von dort ausgeführt werden.
 	Die graphische Benutzeroberfläche ist eine Hilfestellung, um mit der ausführenden Schicht von NumeRe einfacher arbeiten zu können. Die ausführende Schicht läuft im Hintergrund und arbeitet die Befehle und Ausdrücke, die ihr vorgegeben wurden, eine nach dem anderen ab.
-	Um eine bildliche Sprache zu wählen: ein Script ist ein Drehbuch, die Benutzeroberfläche ist die Studiotechnik, die der Benutzer (Regisseur) nutzen kann und die ausführende Schicht ist der Schauspieler, der die Anordnungen des Regisseurs bzw. des Drehbuchs umsetzen muss - lediglich auf einer mathematisch-numerischen Ebene.
+	Als Framework für Numerische Rechnungen kann NumeRe natürlich vor allem eines: eingegebene Ausdrücke numerisch auswerten. Dazu kannst du den Ausdruck, der ausgewertet werden soll, im Prinzip eingeben, wie du ihn in einen beliebigen Taschenrechner eintippen würdest. Der Unterschied liegt lediglich darin, dass NumeRe mit Variablen umgehen kann und Leerstellen natürlich bedeutungslos sind. Teste es, indem du<codeblock>5*23*x + 2*x^2 - 15*cos(2)</codeblock>in die Konsole eintippst.
+	Diese Variablen musst du nicht zuvor deklarieren. NumeRe erkennt auch Variablen, die mit einem Ausdruck eingegeben werden, als solche und wird sie entsprechend anlegen. Du brauchst dir also darüber keine Sorgen machen. Allerdings solltest du beachten, dass neue Variablen stets den Wert 0 haben.
+	Deine Variablen können aus Buchstaben, Unterstrichen und Zahlen bestehen, jedoch dürfen sie niemals mit einer Ziffer beginnen. (Z.B.: <code>x</code>, <code>x0</code>, <code>_var_wert</code>, ...)
+	Den numerischen Wert, der von NumeRe erechnet wird, wird in der nächsten Zeile als <code>ans = WERT</code> ausgegeben. Dabei wird dieser Wert eben auch der speziellen Variable <code>ans</code> zugewiesen, so dass du beim nächsten Ausdruck damit weiterrechnen kannst.
+	NumeRe kann auch numerisch Differenzieren und Integrieren, sowie Extrema und Nullstellen suchen. Die dazu nötigen Kommandos sowie eine komplette Liste aller anderen findest du im <a href="nhlp://symboltree?frame=new">Symbolbaum</a> auf der linken Seite des Hauptfensters.
+	<em>Tipp:</em>Weiterführende Infos findest du unter <a href="nhlp://expression?frame=new">help expression</a>, <a href="nhlp://variables?frame=new">help variables</a>, <a href="nhlp://integrate?frame=new">help integrate</a>, <a href="nhlp://diff?frame=new">help diff</a>, <a href="nhlp://extrema?frame=new">help extrema</a> und <a href="nhlp://zeroes?frame=new">help zeroes</a>
 	<h>Was tue ich als erstes?</h>
 	Zunächst muss NumeRe eingerichtet werden: Dazu gehören vor allem die Standardpfade. Öffne die Optionen im Werkzeugemenü, wähle den Tab "Verzeichnisse" und passe die dort vorgegebenen Pfade auf deine Wünsche an. Es spielt keine Rolle, ob hierbei "\" oder "/" zum Trennen der Pfade verwendet wird.
 	Der Importordner beschreibt das Verzeichnis, an dem deine Daten liegen. Falls das kein eindeutiger Ordner ist, brauchst du diesen Pfad nicht ändern, sondern kannst das Arbeitsverzeichnis entsprechend anpassen, indem du<codeblock>workpath "PFAD/ZU/DEINEN/DATEN"</codeblock>in die Konsole eingibst. Dies wird nur für die aktuelle Sitzung gespeichert und kann über den Platzhalter <code>&lt;wp&gt;</code> verwendet werden.
@@ -33,7 +41,16 @@
 	Klicke auf "Anwenden" und fertig.
 	<h>Fertig mit dem Einstellen. Was soll ich nun machen?</h>
 	Rumprobieren wäre erst mal eine gute Idee, bevor du dich an die produktive Arbeit machst. Am besten fokussierst du dich zunächst auf die Konsole.
+	<h>Vordefinierte Funktionen und Konstanten</h>
+	NumeRe besitzt einen großen Satz vordefinierter Funktionen, Konstanten und Einheitenumrechnungen. Sie können im Symbolbaum auf der linken Seite gefunden werden, bzw. durch Eingabe von <code>list -units</code> in die Konsole für die Einheitenumrechnungen.
+	Du kannst auch noch eigene Funktionen definieren, mit denen du dann genauso wie mit den vordefinierten umgehen kannst. Dazu musst du NumeRe zuvor erklären, was deine Funktion können soll. Die dazu nötige <a href="nhlp://define?frame=new">Definition</a> machst du dabei durch das Schema <code>define FUNKTIONSNAME(ARGUMENTE) := FUNKTIONSAUSDRUCK(ARGUMENTE)</code>, z.B. durch<codeblock>define f(x, y) := cos(x) + sin(y)</codeblock>
 	<h>Erst mal etwas plotten ...</h>
+	NumeRe verfügt über einen vielseitigen Plotalgorithmus, der dir eine graphische Darstellung von Funktionen oder Datensätzen in vielen Varianten ermöglicht.
+	Einfache 1D-Plots (z.B. von <expr>f(x) = sin(x)</expr>) können durch die Eingabe von <code>plot FUNKTION -set OPTIONEN</code> erstellt werden. Dabei ist FUNKTION durch den Funktionsausdruck und OPTIONEN durch die gewünschten Plotoptionen zu ersetzen. Statt eines Funktionsausdrucks kann hierbei auch ein Datensatz angegeben werden.
+	2D-Plots von Funktionen der Form <expr>z = f(x, y)</expr> bekommst du durch <code>mesh</code>, <code>surf</code>, <code>dens</code> oder <code>cont</code>, je nach gewünschter Darstellungsmethode.
+	3D-Plots von Trajektorien oder Skalarfeldern (<expr>Phi = Phi(x, y, z)</expr>) werden durch das zusätzliche Anhängen von "3d" an ein Kommando (z.B. <code>surf3d</code>) erzeugt.
+	Vektorfelder können durch <code>vect</code> bzw. <code>vect3d</code> dargestellt werden.
+	<em>Tipp:</em> Weiterführende Infos findest du unter <a href="nhlp://plot?frame=new">help plot</a>, <a href="nhlp://plotoptions?frame=new">help plotoptions</a>, <a href="nhlp://plot3d?frame=new">help plot3d</a>, <a href="nhlp://mesh?frame=new">help mesh</a>, <a href="nhlp://mesh3d?frame=new">help mesh3d</a>, <a href="nhlp://vect?frame=new">help vect</a> und <a href="nhlp://vect3d?frame=new">help vect3d</a>
 	Probiere in der Konsole mal einfach die folgende Zeile aus, die du mittels <code>[ENTER]</code> an die ausführende Schicht weiterreichst:<codeblock>plot sin(x)</codeblock>
 	Es müsste eine graphische Ausgabe wie die folgende erzeugt werden:
 	<img src="<>/docs/plotsinx.png" />
@@ -46,7 +63,8 @@
 	<img src="<>/docs/plotsinxcosx.png" />
 	Herzlichen Glückwunsch! Du hast nun gelernt, wie ein Plot erzeugt wird, wie mehr als eine Funktion geplottet wird und wie Optionen funktionieren. Weitere Details zum Plotten findest du, indem du<codeblock>help plot</codeblock>in die Konsole eingibst. Im Allgemeinen kann das <code>help</code>-Kommando in vielen Fällen bereits mit den nötigen Informationen weiterhelfen.
 	<h>Nun zur Arbeit mit Datensätzen ...</h>
-	Wir wollen uns nun etwas mit der Arbeit mit Datensätzen beschäftigen. Datensätze werden von NumeRe eigentlich immer als eine Tabelle interpretiert. D.h. wiederum, dass die Daten irgendwie in Form einer Tabelle vorhanden sein müssen - nach Möglichkeit mit den Datenreihen in den Spalten.
+	Wir wollen uns nun etwas mit der Arbeit mit Datensätzen beschäftigen. Datensätze werden von NumeRe eigentlich immer als eine Tabelle interpretiert. D.h. wiederum, dass die Daten irgendwie in Form einer Tabelle vorhanden sein müssen - nach Möglichkeit mit den Datenreihen in den Spalten. Tabellen als Textdatei als *.dat oder *.txt kannst du mittels des Kommandos <code>load DATEI</code>, wobei DATEI der Dateiname des Datensatzes ist, in den Arbeitsspeicher laden. Kommentare müssen dabei durch ein <code>#</code> am Anfang der Zeile auskommentiert werden, Dezimaltrennzeichen kann der Punkt oder das Komma (oder beides) sein und die einzelnen Spalten müssen durch mindestens ein Leerzeichen oder einen Tabulator getrennt sein.
+	Des Weiteren kann NumeRe auch die Tabelle aus einer CASSY(R)-LABX-Datei extrahieren, sie auswerten und ggf. in eine *.dat-Datei exportieren. Außerdem versteht NumeRe Comma Separated Value-Datafiles (*.csv), JCAMP-DX-Files (*.dx), IGOR Binary Waves (*.ibw), OpenDocument-Spreadsheets (*.ods) und Excel(R)-Mappen (*.xls und *.xlsx). Das zusätzliche "NumeRe-Datafile"-Format (*.ndat) wird standardmäßig zum Speichern verwemdet, allerdings handelt es sich dabei um ein binäres Format, das nur von NumeRe gelesen werden kann. Die Daten können aber auch in eine Text-, eine TeXdatei oder eine Excel(R)-Mappe exportiert werden, wenn das gewünscht ist.
 	NumeRe kommt bereits mit ein paar Beispieldatensätzen. Probiere mal:<codeblock>load &lt;&gt;/samples/data</codeblock>
 	Es müsste eine Erfolgsmeldung ausgegeben werden, die des Weiteren die Größe des Datensatzes umfasst. Beachte auch, dass die Dateiendung <code>*.dat</code> erraten wurde. Das funktioniert mit <code>*.dat</code>, <code>*.txt</code> und <code>*.ndat</code>.
 	Wenn du willst, kannst du die Datei auch im <a href="nhlp://editor?frame=new">Editor</a> ansehen. Gebe hierzu einfach<codeblock>edit &lt;&gt;/samples/data</codeblock>in die Konsole ein.
@@ -59,12 +77,12 @@
 	<img src="<>/docs/hist.png" />
 	Wieder sieht man, dass Box und Gitter aus den vorherigen Plots übernommen wurde. Das Kommando <code>hist</code> hat ein <a href="nhlp://hist?frame=new">Histogramm</a> aus den Daten erzeugt und mittels <code>bins=32</code> wurden 32 Rubriken für das gesamte Histogramm verwendet. Eine Rubrik ist dabei immer um einen Intervallstrich zentriert zu verstehen, die Balken sind so schmal, damit alle vier um diesen Strich passen.
 	Gibt man die Zahl der Rubriken nicht vor, wird NumeRe automatisch die Bins anhand der Zahl der Datenpunkte bestimmen. In diesem Fall wäre das Ergebnis jedoch nicht ansehnlich.
-	Um die numerischen Werte der Verteilungen zu bekommen, kannst du<codeblock>stats data()</codeblock>verwenden. Dies gibt alle wesentlichen <a href="nhlp://stats?frame=new">Statistiken</a> der Spalten zurück.
+	Um die numerischen Werte der Verteilungen zu bekommen, kannst du<codeblock>stats data()</codeblock>verwenden. Dies gibt alle wesentlichen <a href="nhlp://stats?frame=new">Statistiken</a> der Spalten zurück. Tiefergehendere oder ausführlichere Auswertungen kann NumeRe machen, wenn du die dazu nötigen Gleichungen direkt eingibst, wobei die Daten im Arbeitsspeicher durch <code>data(ZEILE, SPALTE)</code> repräsentiert sind. Gebe einfach mal folgendes in die Konsole ein:<codeblock>7*exp(data(12, 3)^2)</codeblock>
 	Wir wollen lernen, wie man Datenpunkte selbst generieren kann. Dazu kannst du die folgenden Zeilen in die Konsole eingeben:
 	<codeblock>
 		new zerfall()
-		zerfall(:,1) = eval -set [0:20];
-		zerfall(:,2) = eval 5*exp(-x/20)+gauss(0,0.1) -set [0:20];
+		zerfall(:, 1) = eval -set [0:20];
+		zerfall(:, 2) = eval 5*exp(-x/20) + gauss(0, 0.1) -set [0:20];
 		plot zerfall()
 	</codeblock>
 	Mit dem ersten Kommando hast du einen neuen Cache erzeugt. Das ist sowas ähnliches wie <code>data()</code> mit dem Unterschied, dass die Daten in einem Cache modifiziert werden können. Details finden sich unter <a href="nhlp://cache?frame=new">help cache</a>.
@@ -84,6 +102,12 @@
 	Du solltest die folgende Ausgabe erhalten haben:
 	<img src="<>/docs/fit.png" />
 	Wie zu sehen ist, verläuft die angepasste Funktion mitten durch die Datenpunkte und gleicht sie aus.
+	<h>Automatisieren, Scripte & Prozeduren</h>
+	Wie zuvor erwähnt wurde, kann NumeRe vordefinierte Abläufe automatisieren. Dazu stehen dir einfache Programmierfunktionen zur Verfügung, die du während der Laufzeit direkt eingeben, oder aber in ein sogenanntes "NumeRe-Script" (*.nscr) auslagern kannst.
+	Als Funktionen stehen dir die Zählschleife (<code>for</code>-Schleife), die bedingte Schleife (<code>while</code>-Schleife), die bedingte Verzweigung (<code>if</code>-Verzweigung) und die Auswahlverzweigung (<code>switch</code>-Verzweigung) zur Verfügung, die im Wesentlichen über dieselben Fähigkeiten wie die entsprechenden Varianten aus C/C++ verfügen.
+	Scripte kannst du durch klicken auf die Toolbarfunktion "Ausführen" [F5] oder das Kommando <code>start SCRIPT</code>, wobei SCRIPT durch den Dateinamen des Scripts zu ersetzen ist, starten. Wenn ein Script gestartet wurde, werden alle Ausdrücke zeilenweise abgearbeitet, die im Script gefunden werden. Im Dateibaum unter "Scripte/examples" sollten ein paar Beispielscripte zu finden sein, sofern du sie bei Installation nicht abgewählt hast. Teste einfach mal<codeblock>start examples/amplitude</codeblock>
+	Die größtmögliche Flexibilität bietet dir der integrierte Interpreter, der in der Lage ist, komplexe Automatismen, "NumeRe-Prozeduren" (*.nprc) genannt, auszuführen. Diese Prozeduren kannst du verwenden, um deine eigenen Unterprogramme in diesem Framework zu entwickeln. Auch wenn die Vielfalt der Funktionen dieser Prozeduren vielleicht noch eingeschränkt erscheinen mag, so wird sie doch stetig erweitert.
+	<em>Tipp:</em> Weiterführende Infos findest du unter <a href="nhlp://for?frame=new">help for</a>, <a href="nhlp://while?frame=new">help while</a>, <a href="nhlp://if?frame=new">help if</a>, <a href="nhlp://switch?frame=new">help switch</a>, <a href="nhlp://script?frame=new">help script</a> und <a href="nhlp://procedure?frame=new">help procedure</a>
 	<h>Was kommt nun?</h>
 	Wenn du die bisherigen Informationen langweilig fandest, dann kannst du direkt loslegen. Wir konnten dir hier nichts mehr beibringen, du weißt offenbar schon alles.
 	Im anderen Fall jedoch seiest du auf die PDF-Dokumentation verwiesen, die diesem Programm beiliegt und unter <code>&lt;&gt;/docs</code> gefunden werden kann.
