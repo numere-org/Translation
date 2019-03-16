@@ -678,6 +678,7 @@ PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                 
 PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                     - Definiert den lokalen Variablensatz in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]          - Erzeugt einen (2D-)Vektorfeldplot aus dem Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
 PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]          - Erzeugt einen 3D-Vektorfeldplot aus dem Ausdruckl EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
+PARSERFUNCS_LISTCMD_CMD_WARN_[MAINCTRL]=				warn         STR                    - Zeigt die Zeichenkette STR als Warnung in der Konsole an
 PARSERFUNCS_LISTCMD_CMD_WHILE_[FLOWCTRL]=				while        (EX)                   - Startet die Definition einer While-Schleife. Der Ausdruck EX muss logisch interpretierbar sein
 PARSERFUNCS_LISTCMD_CMD_WORKPATH_[MISC_MAINCTRL]=		workpath     NM                     - Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung zum Verzeichnis NM
 PARSERFUNCS_LISTCMD_CMD_WRITE_[LOADSAVE]=				write        STR -set PAR           - Schreibt die Zeichenketten STR zeilenweise in die gewählte Datei. Der Dateiname ist durch den Parametersatz zu definieren. Außerdem können die umfassenden Anführungszeichen unterdrückt werden und der Schreibmodus vorgegeben werden

@@ -678,6 +678,7 @@ PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                 
 PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                     - Defines the local numerical variables in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]          - Creates a vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]          - Creates a 3D vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_WARN_[MAINCTRL]=				warn         STR                    - Displays the string STR as warning in the console
 PARSERFUNCS_LISTCMD_CMD_WHILE_[FLOWCTRL]=				while        (EX)                   - Starts the definition of a WHILE loop. The expression EX must have a logical meaning
 PARSERFUNCS_LISTCMD_CMD_WORKPATH_[MISC_MAINCTRL]=		workpath     NM                     - Changes the current working directory for this session to the directory NM
 PARSERFUNCS_LISTCMD_CMD_WRITE_[LOADSAVE]=				write        STR -set PAR           - Writes the passed strings STR into the chosen file. The file name has to be defined using the parameter set. In addition, one can suppress the surrounding quotation marks and choose the writing mode

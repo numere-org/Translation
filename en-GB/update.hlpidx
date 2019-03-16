@@ -29,13 +29,14 @@
 	</article>
 	<article id="additionalcommands">
 		<file path="<>/docs/additionalcommands.nhlp" />
-		<title string="Additional commands" idxkey="about, hline" />
+		<title string="Additional commands" idxkey="about, hline, warn" />
 		<keywords>
 			<keyword>about</keyword>
 			<keyword>hline</keyword>
 			<keyword>credits</keyword>
 			<keyword>info</keyword>
 			<keyword>single</keyword>
+			<keyword>warn</keyword>
 		</keywords>
 	</article>
 	<article id="main">

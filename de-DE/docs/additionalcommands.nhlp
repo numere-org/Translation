@@ -22,5 +22,6 @@
 	<list>
 		<item node="about">Dieses Kommando (und die Synonyme <code>credits</code> und <code>info</code>) zeigen rechtliche Informationen zu NumeRe und zur Version an.</item>
 		<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
+		<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
 	</list>
 </article>

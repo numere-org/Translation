@@ -299,6 +299,7 @@ vect~Generates a vector plot~vectorfield vektorfeld quiver
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion
 # W/X
+warn~Displays the passed string as a warning~warning information
 while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while()
 workpath~Changes the current working directory for this session~workpath working directory cd change wp
 write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings # \"

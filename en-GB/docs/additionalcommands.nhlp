@@ -22,5 +22,6 @@
 	<list>
 		<item node="about">This command (and its synonyms <code>credits</code> and <code>info</code>) display legal and versioning information about NumeRe.</item>
 		<item node="hline">This command draws a horizontal double line in the console. If the parameter <code>-single</code> is appended, this command will draw a single line.</item>
+		<item node="warn">This command will display the passed string as a warning in the console. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
 	</list>
 </article>

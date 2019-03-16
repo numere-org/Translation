@@ -298,6 +298,7 @@ vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion
 # W/X
+warn~Zeigt die übergebene Zeichenkette als Warnung an~warning information
 while (COND)~bedingte Schleife, siehe "help while"~whileschleife endwhile bedingung so lange falls wenn while()
 Witz~Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!~witz gag joke
 workpath~Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung~workpath working directory cd change wp
