@@ -1959,3 +1959,4 @@ GUI_VARVIEWER_SAVENAME=NumeRe: Save table
 # Procedure viewer strings
 GUI_PROCEDUREVIEWER=Local procedures
 GUI_PROCEDUREVIEWER_SIGNATURE=Procedure signature
+GUI_PROCEDUREVIEWER_EMPTY=No procedures in this file

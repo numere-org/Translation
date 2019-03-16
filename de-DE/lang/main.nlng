@@ -1959,3 +1959,4 @@ GUI_VARVIEWER_SAVENAME=NumeRe: Tabelle speichern
 # Procedure viewer strings
 GUI_PROCEDUREVIEWER=Lokale Prozeduren
 GUI_PROCEDUREVIEWER_SIGNATURE=Prozedursignatur
+GUI_PROCEDUREVIEWER_EMPTY=Keine Prozeduren in dieser Datei
