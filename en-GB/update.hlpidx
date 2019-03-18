@@ -200,9 +200,10 @@
 	</article>
 	<article id="define">
 		<file path="<>/docs/define.nhlp" />
-		<title string="Function definitions" idxkey="define" />
+		<title string="Function definitions" idxkey="define,lclfunc" />
 		<keywords>
 			<keyword>def</keyword>
+			<keyword>lclfunc</keyword>
 			<keyword>ifndef</keyword>
 			<keyword>redef</keyword>
 			<keyword>undef</keyword>

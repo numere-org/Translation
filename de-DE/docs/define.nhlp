@@ -32,8 +32,9 @@
 	NumeRe prüft bei jeder Funktionsdefinition, ob diese Funktion ggf. eine Endlosschleife durch eine rekursive Definition erzeugt und wird die Definition in diesem Fall ablehnen.
 	Mit dem Kommando <code>redefine</code> (und der sonst gleichen Syntax) kann eine bereits definierte Funktion neu definiert werden. Mit diesem Kommando kann eine Funktion (die ohne Argumente übergeben werden muss) auch nachträglich mit einem Kommentar versehen werden:<codeblock>redefine FUNKTION() -set comment=KOMMENTAR</codeblock>
 	Mit <code>ifndefined</code> (und der sonst gleichen Syntax) wird vor dem Versuch einer Definition geprüft, ob die zu definierende Funktion nicht bereits existiert und nur, wenn dies nicht der Fall ist, die Definition vollzogen.
-	Das Kommando <code>undefine</code> entfernt eine zuvor getätigte Definition aus dem Speicher. Dabei muss der Funktionsname mit leeren Argumentklammern angegeben werden:<codeblock>undefine FUNKTION()</codeblock>
+	Das Kommando <code>undefine</code> entfernt eine oder mehrere zuvor getätigte Definitionen aus dem Speicher. Dabei muss der Funktionsname mit leeren Argumentklammern angegeben werden:<codeblock>undefine FUNKTION(), FUNKTION2(), ...</codeblock>
 	Von NumeRe vordefinierte Funktionen (z.B. <expr>sin(x)</expr>) können nicht neu definiert werden.
+	Das Kommando <code>lclfunc</code> definiert die anschließende Funktion für den aktuell gültigen Bereich. Das kann entweder ein <a href="nhlp://script?frame?new">Script</a> oder eine <a href="nhlp://procedure?frame=new">Prozedur</a> sein. Nach dem Verlassen dieses Bereiches wird die definierte Funktion automatisch gelöscht.
 	<code>define</code> versteht des Weiteren drei erweiterte Parameter:
 	<list>
 		<item node="-save">Definierte Funktionen in die Definitionsdatei (&lt;&gt;/functions.def) speichern. Während des Speichervorganges werden nur aktualisierte Definitionen überschrieben. Die noch nicht verhandenen Definitionen werden an die bestehenden angehängt.</item>

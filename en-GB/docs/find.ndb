@@ -150,6 +150,7 @@ ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbit
 # L
 laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome laguerre()
 laguerre_a(n,k,x)~Numerical value of the associate Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome zugeordnete laguerre_a()
+lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition
 lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches
 legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome legendre()
 legendre_a(l,m,x)~Numerical value of the Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome zugeordnete legendre_a()

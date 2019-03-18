@@ -150,6 +150,7 @@ ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wä
 # L
 laguerre(n,x)~Berechnet den numerischen Wert der Laguerre-Polynome der Ordnung n an der Stelle x~laguerrepolynome laguerre()
 laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polynome der Ordnung n mit k = [0,n] an der Stelle x~laguerrepolynome zugeordnete laguerre_a()
+lclfunc~Definiert eine eigene Funktion für die lokale Verwendung, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine local definition
 lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches
 legendre(n,x)~Berechnet den numerischen Wert der Legendre-Polynome der Ordnung n an der Stelle x~legendrepolynome legendre()
 legendre_a(l,m,x)~Berechnet den numerischen Wert der assoziierten Legendre-Polynome der Ordnung l mit m = [-l,l] an der Stelle x~legendrepolynome zugeordnete legendre_a()

@@ -135,8 +135,8 @@ BUILTIN_CREDITS_MEMBERS=Konzept/UI: Erik HÄNEL; Mathe-Parser: Ingo BERG; Plottin
 BUILTIN_CREDITS_BUGS_REQUESTS=Bugs und Feature-Requests gerne an
 BUILTIN_CHECKKEYWORD_FIND_CANNOT_READ=Kann den Begriff nicht identifizieren.
 BUILTIN_CHECKKEYWORD_PLOTPARAMS=Plotparameter aktualisiert.
-BUILTIN_CHECKKEYWORD_UNDEF_FAIL=Diese Funktion existiert nicht, oder sie wurde nicht korrekt bezeichnet. Siehe "help -define" für weitere Informationen.
-BUILTIN_CHECKKEYWORD_UNDEF_SUCCESS=Die Funktion wurde erfolgreich aus dem Funktionsspeicher entfernt.
+BUILTIN_CHECKKEYWORD_UNDEF_FAIL=Die Funktion "%%1%%" existiert nicht, oder sie wurde nicht korrekt bezeichnet. Siehe "help -define" für weitere Informationen.
+BUILTIN_CHECKKEYWORD_UNDEF_SUCCESS=Die Funktion(en) "%%1%%" wurde(n) erfolgreich aus dem Funktionsspeicher entfernt.
 BUILTIN_CHECKKEYOWRD_LOAD_ALL_SUCCESS=Alle Daten der %%1%% Dateien "%%2%%" wurden erfolgreich in den Speicher geladen: der Datensatz besteht aus %%3%% %%COMMON_LINES%% und %%4%% %%COMMON_COLS%%.
 BUILTIN_CHECKKEYOWRD_LOAD_ALL_CACHES_SUCCESS=Alle Daten der %%1%% Dateien "%%2%%" wurden erfolgreich in die korrespondierenden Caches geladen.
 BUILTIN_CHECKKEYWORD_PASTE_SUCCESS=Die Daten wurden erfolgreich eingefügt: Der Datensatz besteht nun aus %%1%% %%COMMON_LINES%% und %%2%% %%COMMON_COLS%%.
@@ -589,7 +589,7 @@ PARSERFUNCS_LISTCMD_CMD_CONTINUE_[FLOWCTRL]=			continue                         
 PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              - Kopiert (je nach Ausdruck OB) Einträge/Spalten/Untertabellen zwischen Datenobjekten oder ganze Dateien. Durch Parameter können Zielcache oder -dateiname vorgegeben oder die Daten ggf. transponiert oder mehrere Dateien ausgewählt werden
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}         - Optionen auf Datensätzen. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                - Erzeugt ein Datengitter aus dem Ausdruck oder den Daten in EX. Die x- und y-Werte sind als Parameter anzugeben. Außerdem kann die Zahl der samples und der Zielcache durch Parameter angegeben werden.
-PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Definiert die Funktion in EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
+PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Definiert die Funktion in EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
 PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]              - Entfernt Einträge aus dem Cache/dem string()-Objekt in OB. Der Parameter kann genutzt werden, um die Bestätigung zu unterdrücken
 PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]          - Erzeugt einen Dichte-Plot aus dem Ausdruck oder den Daten in EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
 PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]          - Erzeugt einen 3D-Dichte-Plot aus dem Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
@@ -624,10 +624,11 @@ PARSERFUNCS_LISTCMD_CMD_HIST_[EVAL]=					hist         OB [-PAR]              - E
 PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]              - Erzeugt ein 2D-Histogramm eines (x,y,z)-Datensatzes. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel in OB. Das Histogramm kann auf viele Arten modifiziert werden. Siehe hierzu "help hist"
 PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]                 - Zeichnet eine horizontale Doppellinie. Mit "-single" wird eine Einfachlinie gezeichnet
 PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)                   - Startet die Definition einer IF-Verzweigung. Der Ausdruck EX muss logisch interpretierbar sein
-PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Prüft vor der Definition, ob die zu definierende Funktion in EX nicht schon bereits definiert wurde, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
+PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Prüft vor der Definition, ob die zu definierende Funktion in EX nicht schon bereits definiert wurde, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
 PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM                     - Liest die Bildatei NM als Datengitter in den Cache "image()". Der Zielcache kann mittels Optionen geändert werden
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
+PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]          - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Erzeugt eine Auflistung der Werte, die zum gewählten Parameter vorhanden sind. Die möglichen Parameter sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]              - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in einen Zielcache geschrieben werden
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                     - Wertet den Ausdruck EX mit dem Matrixmodus aus. ("mtrxop" ist ein Synonym)
@@ -647,7 +648,7 @@ PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]                 
 PARSERFUNCS_LISTCMD_CMD_RANDOM_[DATACREATION]=			random       -PAR                   - Generiert einen Satz an Zufallszahlen abhängig von der gewählten Verteilung und deren Parametersatz. Die Liste der Parameter ist unter "help random" verfügbar
 PARSERFUNCS_LISTCMD_CMD_READ_[LOADSAVE]=				read         NM [-PAR]  -> {STR}    - Liest den Inhalt der Datei NM zeilenweise als Zeichenketten ein. Durch einen Parameter kann ein Kommentarzeichen definiert werden. Binärdateien können hiermit nicht gelesen werden
 PARSERFUNCS_LISTCMD_CMD_READLINE_[PROC]=				readline     [-PAR]  -> {ARG}       - Ermöglicht eine formatierte Wertabfrage und das direkte Konvertieren des Wertes in einen numerischen Wert oder eine Zeichenkette. Der Parametersatz umfasst das Ausgeben einer Nachricht, Angeben eines Standardwertes und Konversionsschalter
-PARSERFUNCS_LISTCMD_CMD_REDEFINE_[DEF]=					redefine     EX [-set PAR]          - Überschreibt die bisherige Funktionsdefinition mit dem Ausdruck EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben kommentieren der Funktion, ein rekursives Definieren und das Ersetzen von Variablen durch ihre Werte
+PARSERFUNCS_LISTCMD_CMD_REDEFINE_[DEF]=					redefine     EX [-set PAR]          - Überschreibt die bisherige Funktionsdefinition mit dem Ausdruck EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion, ein rekursives Definieren und das Ersetzen von Variablen durch ihre Werte
 PARSERFUNCS_LISTCMD_CMD_REGULARIZE_[EVAL]=				regularize   OB [-PAR]              - Regularisiert Datenreihen in OB. Unregelmäßig verteilte x-Werte werden dadurch regelmäßig verteilt. Durch den Parameter kann die Zahl der x-Werte geändert werden
 PARSERFUNCS_LISTCMD_CMD_RELOAD_[LOADSAVE]=				reload       -OB                    - Aktualisiert die Daten im Speicher, wenn sie extern bearbeitet wurden
 PARSERFUNCS_LISTCMD_CMD_REMOVE_[MAINCTRL]=				remove       OB [-PAR]              - Entfernt den Cache oder die angegebene Datei in OB unwiderbringlich von diesem Computer. Durch den Parameter kann die eventuell nötige Bestätigung unterdrückt oder mehrere Dateien ausgewählt werden
@@ -806,14 +807,9 @@ SCRIPT_INSTALL_SUCCESS=Installation erfolgreich abgeschlossen.
 SCRIPT_INSTALLING_PROC=Installiere "%%1%%" ...
 # DEFINE
 # =============================
-DEFINE_FUNCTION_COMMENTED=Die Funktion "%%1%%" wurde erfolgreich kommentiert.
-DEFINE_FUNCTION_NOT_EXISTING=Die Funktion "%%1%%" existiert nicht.
-DEFINE_NEW_FUNCTION=Diese Funktion existiert nicht. Es wird eine neue Funktion definiert
+DEFINE_SUCCESS=Die Funktionsdefinitionen wurden erfolgreich aktualisiert.
+DEFINE_FAILURE=Die Funktionsdefinitionen konnten nicht aktualisiert werden.
 DEFINE_NO_SPACE=Kein freier Funktionsspeicher mehr vorhanden. Entferne Definitionen, die du nicht mehr benötigst, um Platz zu schaffen.
-DEFINE_UNDOING_REDEFINE=Die Neudefinition wird rückgängig gemacht
-DEFINE_REDEFINE_SUCCESS=Funktion "%%1%%" wurde erfolgreich aktualisiert.
-DEFINE_NEW_FUNCTION_SUCCESS=Funktion "%%1%%" wurde erfolgreich definiert.
-DEFINE_FREE_SPACE=freier Speicher: %%1%% Funktionen
 DEFINE_SAVING_FUNCTIONS=Speichere Funktionsdefinitionen
 DEFINE_ASK_OVERRIDE=Alle definierten Funktionen im Speicher werden überschrieben.$Sicher? (%%COMMON_YES_NO%%)
 DEFINE_LOADING_FUNCTIONS=Lade Funktionsdefinitionen

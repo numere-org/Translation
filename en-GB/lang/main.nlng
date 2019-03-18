@@ -135,8 +135,8 @@ BUILTIN_CREDITS_MEMBERS=Concept/UI: Erik HÄNEL; Mathematical parser: Ingo BERG; 
 BUILTIN_CREDITS_BUGS_REQUESTS=Bugs and feature requests are welcome at
 BUILTIN_CHECKKEYWORD_FIND_CANNOT_READ=Cannot identify the search term.
 BUILTIN_CHECKKEYWORD_PLOTPARAMS=Plotting parameters updated.
-BUILTIN_CHECKKEYWORD_UNDEF_FAIL=This function does not exist or was not named correctly. See "help define" for further information.
-BUILTIN_CHECKKEYWORD_UNDEF_SUCCESS=The function was successfully removed from memory.
+BUILTIN_CHECKKEYWORD_UNDEF_FAIL=The function "%%1%%" does not exist or was not named correctly. See "help define" for further information.
+BUILTIN_CHECKKEYWORD_UNDEF_SUCCESS=The function(s) "%%1%%" was/were successfully removed from memory.
 BUILTIN_CHECKKEYOWRD_LOAD_ALL_SUCCESS=All data of the %%1%% files "%%2%%" was successfully loaded into memory: the data set consists %%3%% %%COMMON_LINES%% and %%4%% %%COMMON_COLS%%.
 BUILTIN_CHECKKEYOWRD_LOAD_ALL_CACHES_SUCCESS=All data of the %%1%% files "%%2%%" was successfully loaded to the corresponding caches in memory.
 BUILTIN_CHECKKEYWORD_PASTE_SUCCESS=The data was pasted successfully: the data set now consists %%1%% %%COMMON_LINES%% and %%2%% %%COMMON_COLS%%.
@@ -589,7 +589,7 @@ PARSERFUNCS_LISTCMD_CMD_CONTINUE_[FLOWCTRL]=			continue                         
 PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              - Copies (depending on the actual expression OB) entries/columns/subtables between data objects or complete files. Using parameters one can specify the target cache or file or transpose the data if needed or select multiple files
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}         - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target cache can be passed via parameters
-PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Define the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Defines the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
 PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]              - Removes elements from a cache/from the string() object in OB. The parameter may be used to suppress the confirmation
 PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]          - Creates a density plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]          - Creates a 3D density plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
@@ -628,6 +628,7 @@ PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]         
 PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM                     - Reads the image file NM as data grid into the cache "image()". The target cache may be changed using the options
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
+PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]         - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Creates a list of the values, which are available for the passed parameter. The possible parameters are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]              - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target cache
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                     - Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym)
@@ -806,14 +807,9 @@ SCRIPT_INSTALL_SUCCESS=Installation was terminated successfully.
 SCRIPT_INSTALLING_PROC=Installing "%%1%%" ...
 # DEFINE
 # =============================
-DEFINE_FUNCTION_COMMENTED=The function "%%1%%" was commented successfully.
-DEFINE_FUNCTION_NOT_EXISTING=The function "%%1%%" does not exist.
-DEFINE_NEW_FUNCTION=This function does not exist. A new function will be defined
+DEFINE_SUCCESS=The function definitions were updated successfully.
+DEFINE_FAILURE=The function definitions could not be updated.
 DEFINE_NO_SPACE=No more free space for function definitions available. Remove definitions, you're not needing any more, to gain free space.
-DEFINE_UNDOING_REDEFINE=The redefinition will be reverted
-DEFINE_REDEFINE_SUCCESS=Function "%%1%%" was updated successfully.
-DEFINE_NEW_FUNCTION_SUCCESS=Function "%%1%%" was defined successfully.
-DEFINE_FREE_SPACE=free memory: %%1%% functions
 DEFINE_SAVING_FUNCTIONS=Saving function definitions
 DEFINE_ASK_OVERRIDE=All defined functions currently present in memory will be overwritten.$Are you sure? (%%COMMON_YES_NO%%)
 DEFINE_LOADING_FUNCTIONS=Loading function definitions

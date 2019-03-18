@@ -32,8 +32,9 @@
 	For each function definition NumeRe will check, if this function will generate an endless loop through a recursive definition and will deny this definition, if applicable.
 	Using the command <code>redefine</code> (and the same syntax) you may update your previous definition. Using this command for a function (passed without arguments) you may comment your function afterwards:<codeblock>redefine FUNCTION() -set comment=COMMENT</codeblock>
 	If you want to check in advance, if a function is already defined, then you can use the command <code>ifndefined</code> (and the same syntax). The function will be defined only if it is not already present.
-	The command <code>undefine</code> removes a previous defined function from memory. Pass only the function name and empty argument parentheses to this command:<codeblock>undefine FUNCTION()</codeblock>
-	Functions, which are predefined by NumeRe, cannot be redefined by the user.
+	The command <code>undefine</code> removes one or more previous defined functions from memory. Pass only the function name and empty argument parentheses to this command:<codeblock>undefine FUNCTION(), FUNCTION2(), ...</codeblock>
+	Functions, which are predefined by NumeRe (e.g. <expr>sin(x)</expr>), cannot be redefined by the user.
+	The command <code>lclfunc</code> defines the passed function for the current valid scopte. This may be either a <a href="nhlp://script?frame?new">script</a> or a <a href="nhlp://procedure?frame=new">procedure</a>. After NumeRe has left the current scope, the defined function is deleted automatically.
 	<code>define</code> understands three additional parameters:
 	<list>
 		<item node="-save">Saves the defined functions to the function definitions file (&lt;&gt;/functions.def). Updated definitions will be overwritten while saving. Definitions, which are not present in the file, will be appended.</item>
