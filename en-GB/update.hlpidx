@@ -126,7 +126,9 @@
 			<keyword>swap</keyword>
 			<keyword>desc</keyword>
 			<keyword>lines</keyword>
+			<keyword>nlines</keyword>
 			<keyword>cols</keyword>
+			<keyword>ncols</keyword>
 			<keyword>every</keyword>
 		</keywords>
 	</article>

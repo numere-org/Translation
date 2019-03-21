@@ -1390,6 +1390,8 @@ GUI_EDITOR_CALLTIP_NAN=		nan         - Konstante für keinen (darstellbaren) Wert
 GUI_EDITOR_CALLTIP_STRING=	string() {} - String-Objekt. Kann beliebig viele Zeichenketten enthalten
 GUI_EDITOR_CALLTIP_TRUE=	true        - Konstante für 1
 GUI_EDITOR_CALLTIP_VOID=	void        - Konstante für den leeren Wert. Wird teilweise auch als 'nan' interpretiert
+GUI_EDITOR_CALLTIP_NLINES=	nlines      - Enthält die Zahl der Zeilen des aktuellen Datenzugriffs
+GUI_EDITOR_CALLTIP_NCOLS=	ncols       - Enthält die Zahl der Spalten des aktuellen Datenzugriffs
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Konversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plotoption
