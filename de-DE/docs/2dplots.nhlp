@@ -31,10 +31,10 @@
 		<item node="cscale=WERT">Skalierungsfaktor WERT der Farbskala angeben</item>
 		<item node="cticklabels=LABELS">Selbstdefinierte Farbskalenskalierung festlegen. Die Skaleneinheiten werden äquidistant verteilt. Die LABELS sind als Zeichenkette anzugeben, wobei die Skalenwerte durch "\\n" voneinander getrennt sein müssen.</item>
 		<item node="cticks=FORMAT">Die Formatierung der Farbskalenbeschriftung auf FORMAT setzen. Siehe auch <a href="nhlp://ticks?frame=new">help ticks</a></item>
-		<item node="fcont/nofcont">Farbliche Konturfüllung aus-/einschalten</item>
-		<item node="lcont/nolcont">Mit Werten versehene Konturen aus-/einschalten</item>
+		<item node="fcont=NUM/<br>  nofcont">Farbliche Konturfüllung aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
+		<item node="lcont=NUM/<br>  nolcont">Mit Werten versehene Konturen aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
 		<item node="orthoproject/<br>  noorthoproject">Orthogonale Projektion von 2D- und 3D-Plots auf xy-, xz- und yz-Ebene ein-/ausschalten. Erzeugt alle vier Plots als Unterplots in der gewünschten Ausgabedatei. Verfügbar für Oberflächen- und Gitterplots, sowie 3D-Trajektorien und 3D-Vektorfelder.</item>
-		<item node="pcont/nopcont">Konturprojektion auf die untere Ebene aus-/einschalten</item>
+		<item node="pcont=NUM/<br>  nopcont">Konturprojektion auf die untere Ebene aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
 		<item node="rotate=THETA,PHI">Die Ansicht des Graphen um die Winkel PHI und THETA drehen. PHI dreht den Graphen um die <expr>z</expr>-Achse und THETA kippt ihn</item>
 	</list>
 	<code>lcont</code> verwendet bei den Kommandos <code>mesh</code> und <code>surf</code> automatisch die zugehörigen Konturlinienstile. Im Falle von <code>cont</code> sind sie entsprechend dem <expr>z</expr>-Wert gefärbt.
@@ -42,7 +42,7 @@
 	Für <code>mesh</code> und <code>surf</code> existiert noch die spezielle Option <code>cut/nocut</code>, die die beiden nach vorne gewandten Oktanten aus- bzw. einblendet und dadurch den Blick auf das Zentrum des Plots sichtbar machen kann.
 	Für das Kommando <code>surf</code> gibt es noch zwei zusätzliche Optionen, die aktiviert werden können:
 	<list>
-		<item node="alpha/noalpha">Oberflächen-Transparenz aus-/einschalten</item>
+		<item node="alpha=VAL/<br>  noalpha">Oberflächen-Transparenz aus-/einschalten. Die Stärke der Transparenz (0 = keine, 1 = vollständig transparent) kann mit dem optionalen Wert VAL angegeben werden</item>
 		<item node="alphamask/<br>  noalphamask">Surf-Transparenz entsprechend eines zweiten Datensatzes/Funktion berechnen.</item>
 		<item node="colormask/<br>  nocolormask">Die Oberfläche entsprechend eines zweiten Datensatzes/Funktion färben. Die Farbskala muss ggf. mittels <code>colorrange=c1:c2</code> angepasst werden</item>
 		<item node="light[=TYP]/<br>  nolight">plastischen 3D-Lichteffekt aus-/einschalten. TYP ist optional: TYP=smooth oder TYP=soft schalten auf weicheres Licht um</item>

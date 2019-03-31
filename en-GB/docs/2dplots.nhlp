@@ -31,10 +31,10 @@
 		<item node="cscale=VALUE">Define the scaling factor VALUE of the colorbar</item>
 		<item node="cticklabels=LABELS">Pass custom ticks for the colorbar. The ticks will be distributed equidistantly. The LABELS have to be entered as a string, in which the single ticks are separated with "\\n"</item>
 		<item node="cticks=FORMAT">Set the formatting of the tick labels to FORMAT. See also <a href="nhlp://ticks?frame=new">help ticks</a></item>
-		<item node="fcont/nofcont">Set the contour filling on/off</item>
-		<item node="lcont/nolcont">Set the labels of the contours on/off</item>
+		<item node="fcont=NUM/<br>  nofcont">Set the contour filling on/off. The number of contour lines may be modified using the optional NUM</item>
+		<item node="lcont=NUM/<br>  nolcont">Set the labels of the contours on/off. The number of contour lines may be modified using the optional NUM</item>
 		<item node="orthoproject/<br>  noorthoproject">Set the orthogonal projection of 2D and 3D plots to the <expr>xy</expr>, <expr>xz</expr> and <expr>yz</expr> plane to on/off. Generates all four plots in one file. Available for surface and meshgrid plots, as well as for 3D trajectories and 3D vector fields.</item>
-		<item node="pcont/nopcont">Set the contour projection to the lower plane on/off</item>
+		<item node="pcont=NUM/<br>  nopcont">Set the contour projection to the lower plane on/off. The number of contour lines may be modified using the optional NUM</item>
 		<item node="rotate=THETA,PHI">Rotate the view of the graph to the angles PHI and THETA. PHI rotates around the <expr>z</expr> axis and THETA tilts it</item>
 	</list>
 	If you apply the option <code>lcont</code> for the commands <code>mesh</code> or <code>surf</code>, then NumeRe will use the corresponding contour styles. In the case of <code>cont</code> they are colored corresponding to their <expr>z</expr> value.
@@ -42,8 +42,8 @@
 	There is the special option <code>cut/nocut</code>, which vanishes the front octants to grant the view to the center of the plot and which is only applicable to <code>mesh</code> and <code>surf</code>.
 	There are some additional options for <code>surf</code>:
 	<list>
-		<item node="alpha/noalpha">Set the surface transparancy on/off</item>
-		<item node="alphamask/<br>  noalphamask">Calculate the surface transparancy according a second function/data set</item>
+		<item node="alpha=VAL/<br>  noalpha">Set the surface transparency on/off. The strength of transparency (0 = no transparency, 1 full transparency) may be modified using the optional VAL</item>
+		<item node="alphamask/<br>  noalphamask">Calculate the surface transparency according a second function/data set</item>
 		<item node="colormask/<br>  nocolormask">Color the surface according a second function/data set. The colorscale probably must be resized with <code>colorrange=c1:c2</code></item>
 		<item node="light[=TYPE]/<br>  nolight">Set the 3D lighting effect on/off. The TYPE is an optional value: TYPE=smooth or TYPE=soft switch to a more smooth lighting</item>
 	</list>
