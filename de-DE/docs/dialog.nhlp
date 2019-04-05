@@ -1,0 +1,50 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2019  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="dialog">
+	<title string="Dialoge erzeugen und verwenden" />
+	NumeRe kann mehrere Typen von Dialogen erzeugen, mit denen graphisch mit dem Nutzer interagiert werden kann. Ein Dialog wird mit dem Kommando <code>dialog</code> generiert. Hierauf folgen Standardwerte und eine Reihe an Optionen. Generisch hat das Kommando die folgende Syntax:<codeblock>dialog STANDARDWERTE -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>Die Auswahl des Benutzers oder der Wert der geklickten Schaltfläche wird als Zeichenkette(n) zurückgegeben. Eine leere Zeichenkette ist dabei gleichbedeutend zu einem Klick auf die "Abbruch"-Schaltfläche.
+	<em>Wichtig:</em> ein Dialog unterbricht die Auswertung von NumeRe. NumeRe wird erst fortfahren, wenn der Nutzer den Dialog geschlossen hat. Ein Dialog eignet sich daher nicht, um den Status einer Auswertung oder vergleichbares darzustellen.
+	Der Typ des Dialogs wird durch <code>type=TYPE</code> vorgegeben. Hier sind die folgenden Werte möglich:
+	<list>
+		<item node="messagebox">Zeigt eine Messagebox an (Standard). Diese kann verwendet werden, um den Nutzer über irgendetwas zu informieren oder eine ja/nein-Entscheidung einzufordern. Die Messagebox benötigt keinen Standardwert. Außerdem können hier angezeigtes Icon und die Schaltflächen modifiziert werden (siehe unten). Der Rückgabewert dieses Dialogtyps ist von diesen Schaltflächen abhängig.</item>
+		<item node="textentry">Zeigt ein Fenster mit der Möglichkeit einer Texteingabe an. Der Standardwert wird dabei in der entsprechenden Zeile angezeigt.</item>
+		<item node="filedialog">Öffnet ein Dateiauswahlfenster an, in dem eine Datei ausgewählt werden kann, deren Dateipfad dann als Rückgabewert verfügbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+		<item node="dirdialog">Öffnet ein Verzeichnisauswahlfenster an, in dem ein Verzeichnis ausgewählt werden kann, dessen Dateipfad dann als Rückgabewert verfügbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+		<item node="listdialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine auswählen kann. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+		<item node="selectiondialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine oder mehrere auswählen kann, welche als Zeichenkettenvektor zurückgegeben werden. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+	</list>
+	Der Optionswert <code>msg=STRING</code> zeigt STRING als informative Nachricht im öffnenden Dialog an. <code>filedialog</code> und <code>dirdialog</code> unterstützen dies jedoch nicht. Durch <code>title=STRING</code> kann des Weiteren die Titelzeile des Fensters modifiziert werden.
+	Für den Typ <code>messagebox</code> kann das angezeigte Icon und die verwendeten Schaltflächen modifiziert werden. Für <code>icon=ICON</code> sind die folgenden Werte verfügbar:
+	<list>
+		<item node="infoicon">Zeigt ein normales Ausrufezeichen-Icon an (Standard)</item>
+		<item node="questionicon">Zeigt ein Fragezeichen-Icon an</item>
+		<item node="warnicon">Zeigt ein gelbes Warnschild-Icon an</item>
+		<item node="erroricon">Zeigt ein rotes Fehler-Icon an</item>
+	</list>
+	Für <code>buttons=BUTTONS</code> kann folgendes angegeben werden:
+	<list>
+		<item node="ok">Zeigt eine "OK"-Schaltfläche an (Standard). In einer Messagebox hat diese Schaltfläche den Wert <code>"ok"</code></item>
+		<item node="okcancel">Zeigt eine "OK"- und eine "Abbruch"-Schaltfläche an. In einer Messagebox haben diese Schaltflächen die Werte <code>"ok"</code> und <code>"cancel"</code></item>
+		<item node="yesno">Zeigt eine "Ja"- und eine "Nein"-Schaltfläche an. Hier wird außerdem auch automatisch das Fragezeichen-Icon verwendet. In einer Messagebox haben diese Schaltflächen die Werte <code>"yes"</code> und <code>"no"</code></item>
+	</list>
+	<example desc="Anzeigen eines listdialogs mit auswählbaren Optionen:">
+		sOption = dialog "Quadrat", "Ring", "Linie" -set type=listdialog title="Auswahl der Geometrie" msg="Bitte wähle die aktuelle Geometrie aus:"
+	</example>
+	<img src="<>/docs/dialog.png" />
+</article>

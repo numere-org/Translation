@@ -77,6 +77,7 @@ delete~Entfernt Einträge/Spalten/Untertabellen aus dem Cache, siehe "help delete
 dens~Erzeugt einen Dichte-Plot~density dichte
 dens3d~Erzeugt einen 3D-Dichte-Plot~density3d dichte dreidimensional
 det(MAT)~Berechnet die Determinante einer quadratischen Matrix MAT, siehe "help matop"~det() matrix
+dialog~Erzeugt ein Dialogfenster zur Interaktion mit dem Benutzer~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog
 diag(x,y,z,...)~Erzeugt eine Diagonalmatrix mit x,y,z,... als Hauptdiagonale, siehe "help matop"~diag() matrix diagonal
 diagonalize(MAT)~Diagonalisiert die quadratische Matrix MAT, siehe "help matop"~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren
 diff~numerische Differentiation einer gegebenen Funktion, siehe "help diff"~ableiten differenzieren differentieren ableitung differentiation

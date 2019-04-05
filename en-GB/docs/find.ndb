@@ -76,6 +76,7 @@ delete~Removes elements from a cache~loeschen löschen entfernen
 dens~Generates a density plot~density dichte
 dens3d~Generates a 3D density plot~density3d dichte dreidimensional
 det(MAT)~Calculates the determinant of a quadratic matrix MAT~det() matrix
+dialog~Creates a dialog window to interact with the user~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog
 diag(x,y,z,...)~Generates a diagonal matrix with x,y,z,... on its main diagonal~diag() matrix diagonal
 diagonalize(MAT)~Diagonalizes the quadratic matrix MAT~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren
 diff~Calls the function for numerical differentation of a function or a data set~ableiten differenzieren differentieren ableitung differentiation

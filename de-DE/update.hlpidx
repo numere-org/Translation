@@ -1229,4 +1229,26 @@
 			<keyword>rename</keyword>
 		</keywords>
 	</article>
+	<article id="dialog">
+		<file path="<>/docs/dialog.nhlp" />
+		<title string="Dialoge erzeugen und verwenden" idxkey="dialog" />
+		<keywords>
+			<keyword>dialog</keyword>
+			<keyword>messagebox</keyword>
+			<keyword>textentry</keyword>
+			<keyword>dirdialog</keyword>
+			<keyword>filedialog</keyword>
+			<keyword>listdialog</keyword>
+			<keyword>selectiondialog</keyword>
+			<keyword>icon</keyword>
+			<keyword>erroricon</keyword>
+			<keyword>warnicon</keyword>
+			<keyword>infoicon</keyword>
+			<keyword>questionicon</keyword>
+			<keyword>buttons</keyword>
+			<keyword>ok</keyword>
+			<keyword>okcancel</keyword>
+			<keyword>yesno</keyword>
+		</keywords>
+	</article>
 </helpindex>
