@@ -587,6 +587,7 @@ PARSERFUNCS_LISTCMD_CMD_CONT_[PLOTTING]=				cont         EX [-set PAR]          
 PARSERFUNCS_LISTCMD_CMD_CONT3D_[PLOTTING]=				cont3d       EX [-set PAR]          - Creates a 3D contour line plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_CONTINUE_[FLOWCTRL]=			continue                            - Jumps over the following commands of the current loop execution and starts the next execution
 PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              - Copies (depending on the actual expression OB) entries/columns/subtables between data objects or complete files. Using parameters one can specify the target cache or file or transpose the data if needed or select multiple files
+PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                     - Defines the local clusters in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}         - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target cache can be passed via parameters
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Defines the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
@@ -1402,6 +1403,7 @@ GUI_EDITOR_CALLTIP_TRUE=	true        - Constant for 1
 GUI_EDITOR_CALLTIP_VOID=	void        - Constant for an empty value. Will sometimes be interpreted as "nan"
 GUI_EDITOR_CALLTIP_NLINES=	nlines      - Contains the number of lines for the current data access
 GUI_EDITOR_CALLTIP_NCOLS=	ncols       - Contains the number of columns for the current data access
+GUI_EDITOR_CALLTIP_NLEN=	nlen        - Contains the number of elements in the currently accessed cluster
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Conversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plot option
@@ -1970,6 +1972,7 @@ GUI_VARVIEWER_VALUE=Value
 GUI_VARVIEWER_VARS=Numerical variables
 GUI_VARVIEWER_STRINGS=String variables
 GUI_VARVIEWER_TABLES=Tables
+GUI_VARVIEWER_CLUSTERS=Clusters
 GUI_VARVIEWER_ARGUMENTS=Procedure arguments
 GUI_VARVIEWER_GLOBALS=Global variables
 GUI_VARVIEWER_MENU_NEWTABLE=New table ...
