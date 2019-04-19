@@ -1,0 +1,28 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2019  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="cluster">
+	<title string="clusters" />
+	Clusters are special variable types, which may store multiple values just like a table. These objects are referenced using their name and the following curly braces and unlike normal tables, they will be created automatically, if one or more values are assigned to them:<codeblock>CLUSTER{} = {VALUE1, VALUE2, VALUE3, ...}</codeblock>
+	Clusters always have a single dimension and therefore they are not as flexible as tables. In exchange they may store numerical values and strings <em>mixed</em> and in an arbitrary order. Accessing the contained values is done using an index, which will be passed in the curly braces:<codeblock>VALUE = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEW_VALUE"</codeblock>The index may contain a whole range (<code>INDEX1:INDEX2</code>, of course. If no index was passed, it will be interpreted as <em>all</em> elements in the current cluster. This means that either all values will be read from the cluster or the cluster will be overwritten completely.
+	The special value <code>nlen</code> can be used during accessing a cluster to reference the last element in the corresponding cluster<codeblock>LAST_VALUE = CLUSTER{nlen}\nCLUSTER{nlen+1} = APPENDED_VALUE</codeblock>
+	<example desc="Using a cluster to store the contents of a text file:">
+		ini{} = read &lt;&gt;/numere.ini
+	</example>
+	<em>See also</em> <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://string?frame=self">help string</a> and <a href="nhlp://cache?frame=self">help cache</a>
+</article>

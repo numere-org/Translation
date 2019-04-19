@@ -810,6 +810,7 @@
 			<keyword>var</keyword>
 			<keyword>str</keyword>
 			<keyword>tab</keyword>
+			<keyword>cst</keyword>
 			<keyword>this</keyword>
 			<keyword>msg</keyword>
 			<keyword>main</keyword>
@@ -1251,4 +1252,11 @@
 			<keyword>yesno</keyword>
 		</keywords>
 	</article>
+	<article id="cluster">
+		<file path="<>/docs/cluster.nhlp" />
+		<title string="Cluster" idxkey="cluster" />
+		<keywords>
+			<keyword>cluster</keyword>
+		</keywords>
+	</article>	
 </helpindex>
