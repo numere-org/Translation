@@ -18,9 +18,10 @@
 
 <article id="sort">
 	<title string="Sorting data and strings" />
-	NumeRe may sort loaded data, data in a cache or strings in the <code>string()</code> object using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
+	NumeRe may sort loaded data, data in a cache, in a cluster or strings in the <code>string()</code> object using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
 	<codeblock>
 		sort DATA(I1:I2,J1:J2)
+		sort CLUSTER{I1:I2}
 	</codeblock>
 	The default call of the command sorts the complete data ascending along the columns. If one likes to restrict the columns, one can use the option <code>cols</code>: <code>cols=COLUMNS</code>. You may also use index columns, which may be used for sorting the whole data:
 	<codeblock>
@@ -28,6 +29,7 @@
 	</codeblock>
 	One may use index columns heirarchically, if one adds <code>INDEX[COLUMNS]</code> in <code>COLUMNS</code> again: <code>cols=INDEX1[INDEX2[INDEX3[COLUMNS]]]</code>. Please note that index columns will be sorted, too.
 	To change the sorting direction to descending, one has to pass the option <code>desc</code>.
+	<em>Note:</em> Clusters are always containing a single column, therefore the option <code>cols=COLUMNS</code> has no function if applied to clusters. Because clusters may contain mixed data types, the values of a mixed cluster are <em>always</em> interpreted as strings.
 	As default, NumeRe sorts strings case-sensitive (i.e. it considers upper- and lowercase letters as different). Using the option <code>ignorecase</code>, one may switch this behavior so that upper- and lowercase letters are considered as being equal.
 	Instead of sorting the data directly, one can also obtain an index vector using the option <code>index</code>. One can use this vector to sort the columns by himself:
 	<codeblock>
