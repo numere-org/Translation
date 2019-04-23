@@ -1087,6 +1087,7 @@ GUI_OPTIONS_AUTOSAVE=[sec] Cache autosave interval
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Extended file information
+GUI_OPTIONS_FOLD_DURING_LOADING=Fold code completely during loading the file
 GUI_OPTIONS_ESCINSCRIPTS=ESC in scripts
 GUI_OPTIONS_USEMASKASDEFAULT=Loops use "-mask" as default
 GUI_OPTIONS_DEFCTRL=Definition control%%LINEBREAK%%(automatic loading and saving of custom defined functions)
