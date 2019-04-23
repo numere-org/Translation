@@ -142,9 +142,11 @@ if (COND)~Starts the definition of an IF clause~condition bedingung else elseif(
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
 imread~Reads an image file as data grid into the cache~imageread images load bilder
 integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
-is_data(STRING)~Returns true, if STRING is a data object, false otherwise~is_data() datafile cache
+is_cluster(STRING)~Returns true, if STRING is a cluster, false otherwise~is_cluster() cluster
+is_data(STRING)~Returns true, if STRING is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number
 is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenketten # \" is_string()
+is_table(STRING)~Returns true, if STRING is a table, false otherwise~is_table() data cache table
 invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren
 Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke
 ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()
@@ -159,6 +161,7 @@ Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm
 list -OBJECT~Lists objects~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins
 ln(x)~Natural logarithm of x~logarithmus naturalis ln()
 load~Loads the data of a file~laden load data dateien daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook
+locate({STR},STR,N)~Searches for any occurences of the second string in the string array of the first argument and returns the corresponding indices~locate() find string array
 Log file~You'll find the log file at "<>/numere.log"~numerelog logfile
 log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()
 log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()

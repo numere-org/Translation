@@ -143,9 +143,11 @@ if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung C
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren
 imread~Liest eine Bildatei als Datengitter in den Cache~imageread images load bilder
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal
-is_data(STRING)~Gibt true zurück, wenn STRING ein Datenobjekt ist, sonst false~is_data() datafile cache
+is_cluster(STRING)~Gibt true zurück, wenn STRING ein Cluster ist, sonst false~is_cluster() cluster
+is_data(STRING)~Gibt true zurück, wenn STRING ein Datenobjekt (eine Tabelle oder ein Cluster) ist, sonst false~is_data() datafile cache cluster table
 is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number
 is_string(EXPR)~Gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false. Siehe "help string"~zeichenketten # \" is_string()
+is_table(STRING)~Gibt true zurück, wenn STRING eine Tabelle ist, sonst false~is_table() data cache table
 invert(MAT)~Invertiert die Matrix MAT, siehe "help matop"~invert() matrix invertieren
 ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()
 # L
@@ -159,6 +161,7 @@ Li2(x)~Berechnet den Dilogarithmus von x~Li2() dilogarithm
 list -OBJEKT~Listet alle Objekte zu OBJEKT, siehe "help list"~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins
 ln(x)~natürlicher Logarithmus von x~logarithmus naturalis ln()
 load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data dateien daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xls opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel mappe workbook
+locate({STR},STR,N)~Sucht nach dem Auftreten der zweiten Zeichenkette in dem Zeichenkettenarray des ersten Arguments und gibt die zugehörigen Indices zurück~locate() find string array
 Lösung~Was soll das denn? Ich kann numerisch rechnen - und nicht etwa hellsehen!~solution lösen solver
 log10(x)~Logarithmus zur Basis 10 von x~logarithmus basis 10 log10() log()
 log2(x)~Logarithmus zur Basis 2 von x~logarithmus basis 2 log2()
