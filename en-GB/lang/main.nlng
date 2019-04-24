@@ -1145,6 +1145,7 @@ GUI_OPTIONS_ANALYZER_STYLE=Coding style recommendations
 GUI_OPTIONS_ANALYZER_TYPE_ORIENTATION=Notify, if variable is not type-oriented
 GUI_OPTIONS_ANALYZER_ARGUMENT_UNDERSCORE=Notify, if procedure arguments are not preceded by an underscore
 GUI_OPTIONS_ANALYZER_VARIABLE_LENGTH=Notify, if a variable's name is quite short
+GUI_OPTIONS_ANALYZER_GLOBAL_VARIABLES=Warn, if global variables are used in procedures
 GUI_OPTIONS_ANALYZER=Static code analyzer
 GUI_OPTIONS_STACKTRACE=Stack trace
 GUI_OPTIONS_VARVIEWER=Variable viewer
@@ -1931,6 +1932,7 @@ GUI_ANALYZER_NONAMINGPROCEDURE=This procedure file does not contain a naming pro
 GUI_ANALYZER_THISFILEPROCEDURE=This procedure is member of the "thisfile" namespace.
 GUI_ANALYZER_MAGICNUMBER=This numerical literal should be replaced by a variable to make the code comprehensible.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Terminate a statement with a semicolon ";", to suppress the display of the result.
+GUI_ANALYZER_GLOBALVARIABLE=This variable seems to be a global one. It's good practice to use no or only very few global variables.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code duplicates
 GUI_DUPCODE_MATCH=Lines

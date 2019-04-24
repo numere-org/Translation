@@ -1145,6 +1145,7 @@ GUI_OPTIONS_ANALYZER_STYLE=Stilistische Empfehlungen
 GUI_OPTIONS_ANALYZER_TYPE_ORIENTATION=Markiere nicht Typ-orientierte Variablen
 GUI_OPTIONS_ANALYZER_ARGUMENT_UNDERSCORE=Markiere Argumente, die nicht mit Unterstrich beginnen
 GUI_OPTIONS_ANALYZER_VARIABLE_LENGTH=Markiere sehr kurze Variablennamen
+GUI_OPTIONS_ANALYZER_GLOBAL_VARIABLES=Warne, wenn globale Variablen in Prozeduren verwendet werden
 GUI_OPTIONS_ANALYZER=Code-Analyzer
 GUI_OPTIONS_STACKTRACE=Stack Trace
 GUI_OPTIONS_VARVIEWER=Variablenliste
@@ -1931,6 +1932,7 @@ GUI_ANALYZER_NONAMINGPROCEDURE=Diese Prozedurdatei enthält keine namensgebende P
 GUI_ANALYZER_THISFILEPROCEDURE=Diese Prozedur befindet sich im "thisfile" Namensraum.
 GUI_ANALYZER_MAGICNUMBER=Dieser numerische Literal sollte durch eine Variable ersetzt werden, um das Verständnis zu erleichtern.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Beende ein Ausdruck mit einem Semikolon ";", um die Anzeige des Ergebnisses zu unterdrücken.
+GUI_ANALYZER_GLOBALVARIABLE=Diese Variable scheint global zu sein. Es ist guter Stil, keine oder nur sehr wenig globale Variablen zu verwenden.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code-Duplikate
 GUI_DUPCODE_MATCH=Zeilen
