@@ -64,6 +64,7 @@ DBG_LEAVE_HLP=Führt die aktuelle Prozedur zum Ende aus und springt zurück
 DBG_STOPPED=Im Debugger angehalten
 DBG_CONTINUING=Wird fortgeführt ...
 DBG_ABORTED=Ausführung abgebrochen
+DBG_FINISHED=Ausführung abgeschlossen
 DBG_STACK_EMPTY=Keine Prozeduren auf dem Stack.
 DBG_LOCALVARS_EMPTY=Keine lokalen Variablen in dieser Prozedur.
 DBG_LOCALSTRINGS_EMPTY=Keine lokalen Zeichenketten in dieser Prozedur.

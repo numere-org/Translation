@@ -64,6 +64,7 @@ DBG_LEAVE_HLP=Executes the current procedure and returns
 DBG_STOPPED=Stopped in debugger
 DBG_CONTINUING=Continuing ...
 DBG_ABORTED=Execution aborted
+DBG_FINISHED=Execution finished
 DBG_STACK_EMPTY=No Procedures on stack.
 DBG_LOCALVARS_EMPTY=No local variables in this procedure.
 DBG_LOCALSTRINGS_EMPTY=No local strings in this procedure.
