@@ -521,9 +521,10 @@
 	</article>
 	<article id="install">
 		<file path="<>/docs/install.nhlp" />
-		<title string="Prozedurinstallation" idxkey="install" />
+		<title string="Prozedurinstallation und Packages" idxkey="install, package" />
 		<keywords>
 			<keyword>instal</keyword>
+			<keyword>package</keyword>
 		</keywords>
 	</article>
 	<article id="integrate">
