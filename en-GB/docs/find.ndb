@@ -62,6 +62,8 @@ copy~Copies (depending on the actual expression) entries/columns/subtables betwe
 cos(x)~Cosine of x~cos() cosinus kosinus trigonometrische funktionen trigonometrie
 cosh(x)~Hyperbolic cosine of x~cosh() cosinus hyperbolicus kosinus trigonometrische funktionen hyperbolische trigonometrie
 cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonometrie
+covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz
+correl(MAT,MAT)~Calculates the correlation matrix of the both arguments~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl()
 credits~Legal information about NumeRe~info about versionsinformationen
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt
 # D

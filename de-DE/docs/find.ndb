@@ -62,6 +62,8 @@ copy~Kopiert je nach Ausdruck Einträge/Spalten/Untertabellen zwischen Datenobjek
 cos(x)~Kosinus von x~cos() cosinus kosinus trigonometrische funktionen trigonometrie
 cosh(x)~Kosinus hyperbolicus von x~cosh() cosinus hyperbolicus kosinus trigonometrische funktionen hyperbolische trigonometrie
 cot(x)~Kotangens von x~cot() cotangens ctg() trigonometrische funktionen trigonometrie
+covar(MAT,MAT)~Berechnet die Kovarianz der beiden Argumente~covariance covar()
+correl(MAT,MAT)~Berechnet die Korrelationsmatrix aus den beiden Argumenten~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl()
 credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about versionsinformationen
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt
 # D

@@ -32,6 +32,8 @@
 	Innerhalb des <code>matop</code>-Kommandos können noch folgende zusätzliche Funktionen verwendet werden:
 	<list>
 		<item node="and(MAT)">Wendet den Operator && auf die Elemente der Matrix MAT an</item>
+		<item node="covar(MAT,MAT)">Berechnet die Kovarianz der beiden Argumente. Die Argumente müssen dieselben Dimensionen haben</item>
+		<item node="correl(MAT,MAT)">Berechnet die Korrelationsmatrix aus den beiden Argumenten. Wenn die beiden Argumente nicht die gleichen Dimensionen haben, werden sie um entsprechende Zeilen und Spalten ergänzt. Wenn die Argumente identisch sind, wird die Autokorrelationsmatrix berechnet. Die berechnete Ergebnismatrix hat die Dimensionen 2n-1 x 2m-1, wobei das Element MAT(n+1,m+1) die Korrelation der Nullverschiebung bezeichnet</item>
 		<item node="cross(MAT)">Berechnet das <expr>n</expr>-dimensionale Kreuzprodukt der Vektoren, welche die <expr>n-1</expr> Spalten der Matrix MAT bilden.</item>
 		<item node="det(MAT)">Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.</item>
 		<item node="diag(x,y,z,...)">Erzeugt eine Diagonalmatrix mit den Elementen <code>x,y,z,...</code> auf der Hauptdiagonalen.</item>
