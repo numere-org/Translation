@@ -22,19 +22,19 @@
 	<codeblock>
 		odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONEN
 	</codeblock>
-	Das Differentialgleichungssystem kann dabei aus ein oder mehreren Teilgleichungen bestehen. Diese Gleichungen müssen dem folgenden Schema genügen:<exprblock>dy1/dx = f1(x,y1,y2,...)\ndy2/dx = f2(x,y1,y2,...)\n...,</exprblock>wobei <em>nur</em> die Funktionen <expr>f1()</expr> bis <expr>fn()</expr> in dieser Reihenfolge durch Kommata getrennt angegeben werden müssen. <expr>x</expr> ist hierbei die Integrationsvariable und <expr>y1</expr> bis <expr>yn</expr> sind vordefinierte Funktionsvariablen, in denen NumeRe die Ergebnisse des letzten Integrationsschritts ablegt. Alle anderen Variablen werden als Parameter betrachtet.
+	Das Differentialgleichungssystem kann dabei aus ein oder mehreren Teilgleichungen bestehen. Diese Gleichungen müssen dem folgenden Schema genügen:<exprblock>dy1/dx = f1(x,y1,y2,...)\ndy2/dx = f2(x,y1,y2,...)\n...,</exprblock>wobei <em>nur</em> die Funktionen <expr>f1()</expr> bis <expr>f_n()</expr> in dieser Reihenfolge durch Kommata getrennt angegeben werden müssen. <expr>x</expr> ist hierbei die Integrationsvariable und <expr>y1</expr> bis <expr>y_n</expr> sind vordefinierte Funktionsvariablen, in denen NumeRe die Ergebnisse des letzten Integrationsschritts ablegt. Alle anderen Variablen werden als Parameter betrachtet.
 	<em>Wichtig:</em> NumeRe wird die Zahl der Funktionsvariablen entsprechend der Zahl der Gleichungen bereitstellen: bei einer Gleichung ist nur <code>y1</code> verfügbar, bei zwei <code>y1</code> und <code>y2</code>, etc. Werden mehr Variablen benötigt (um z.B. ein vektorielles Problem zu lösen), können "0"-Gleichungen als entsprechende Gleichung eingeführt werden, die Variable wird dann jedoch als Konstante betrachtet.
 	Differentialgleichungen <em>n-ter</em> Ordnung <expr>DGL(x,y,y',y'',...,y^n)</expr> können stets in ein System von <expr>n</expr> Differentialgleichungen erster Ordnung überführt werden, indem <expr>(n-1)</expr> zusätzliche Funktionen eingeführt werden: <expr>y' = dy1/dx = y2, y'' = dy2/dx = y3, ...</expr> Ein solches System folgt dann dem Schema:
 	<exprblock>
 		dy1/dx = y2
 		dy2/dx = y3
 		...
-		dyn/dx = DGL(x,y1,y2,...,y(n-1))
+		dy_n/dx = DGL(x,y1,y2,...,y_(n-1))
 	</exprblock>
 	Die Ergebnisse der Integration werden standardmäßig in den Cache <code>ode()</code> als Tabelle geschrieben. Die erste Spalte enthält dabei die <expr>x</expr>-Werte und die folgenden Spalten die dazu integrierten Funktionswerte.
 	Mit den Optionen kann weiter Einfluss auf die Auswertung des ODE-Solvers genommen werden:
 	<list>
-		<item node="method=METHODE">Dies bestimmt den Integrationsalgorithmus, der von NumeRe für diese DGL verwendet werden soll. Zur Wahl stehen<br>  rk2     - Runge-Kutta (2,3)<br>  rk4     - Runge-Kutta 4. Ordnung (Standard)<br>  rkck    - Runge-Kutta Cash-Carp (4,5)<br>  rkf45   - Runge-Kutta-Fehlberg (4,5)<br>  rk8pd   - Runge-Kutta Prince-Dormand (8,9)</item>
+		<item node="method=METHODE">Dies bestimmt den Integrationsalgorithmus, der von NumeRe für diese DGL verwendet werden soll. Zur Wahl stehen<br>  <code>rk2</code> - Runge-Kutta (2,3)<br>  <code>rk4</code> - Runge-Kutta 4. Ordnung (Standard)<br>  <code>rkck</code> - Runge-Kutta Cash-Carp (4,5)<br>  <code>rkf45</code> - Runge-Kutta-Fehlberg (4,5)<br>  <code>rk8pd</code> - Runge-Kutta Prince-Dormand (8,9)</item>
 		<item node="tol=TOLERANZEN">Legt die Toleranzen für den Algorithmus fest. Es können relative und absolute Toleranzen getrennt [REL,ABS] oder als gemeinsamer Wert angegeben werden.</item>
 		<item node="samples=SAMPLES">Bestimmt die Zahl der Stützstellen, die integriert werden. Standard ist 100</item>
 		<item node="target=CACHE()">Ändert den Speichercache von <code>ode()</code> zu <code>CACHE()</code>. Falls nötig wird der Cache <code>CACHE()</code> im Rahmen dieses Kommandos erzeugt</item>
@@ -45,5 +45,5 @@
 	<example desc="Numerisches Lösen des physikalischen Pendels:">
 		odesolve y2,-sin(y1) -set [0:20] samples=200 fx0=[0,1]
 	</example>
-	<em>Tipp:</em> Um die Lesbarkeit zu erhöhen, könnten die DGLS im obigen Beispiel auch durch <code>dy1 = y2, dy2 = -sin(y1)</code> übergeben werden.
+	<em>Tipp:</em> Um die Lesbarkeit zu erhöhen, könnten die DGLs im obigen Beispiel auch durch <code>dy1 = y2, dy2 = -sin(y1)</code> übergeben werden.
 </article>

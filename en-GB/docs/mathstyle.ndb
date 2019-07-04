@@ -1,0 +1,140 @@
+#****************************************************************************
+#   NumeRe: Framework fuer Numerische Rechnungen
+#   Copyright (C) 2019  Erik Haenel et al.
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#****************************************************************************
+# DATABASE FILE: mathstyle.ndb
+# LANGUAGE: en-GB
+#
+# This database contains the styles for mathematical objects in the documentation window.
+#
+# Special pi constructs
+_2pi~<span style="font-style: italic;">2&pi;</span>~VAL
+_pi~<span style="font-style: italic;">&pi;</span>~VAL
+PI~<span style="font-style: italic;">&pi;</span>~VAL
+# Uppercase greek letters
+Alpha~<span style="font-style: normal;">&Alpha;</span>~VAL
+Beta~<span style="font-style: normal;">&Beta;</span>~VAL
+Gamma~<span style="font-style: normal;">&Gamma;</span>~VAL
+Delta~<span style="font-style: normal;">&Delta;</span>~VAL
+Epsilon~<span style="font-style: normal;">&Epsilon;</span>~VAL
+Zeta~<span style="font-style: normal;">&Zeta;</span>~VAL
+Eta~<span style="font-style: normal;">&Eta;</span>~VAL
+Theta~<span style="font-style: normal;">&Theta;</span>~VAL
+Iota~<span style="font-style: normal;">&Iota;</span>~VAL
+Kappa~<span style="font-style: normal;">&Kappa;</span>~VAL
+Lambda~<span style="font-style: normal;">&Lambda;</span>~VAL
+Mu~<span style="font-style: normal;">&Mu;</span>~VAL
+Nu~<span style="font-style: normal;">&Nu;</span>~VAL
+Xi~<span style="font-style: normal;">&Xi;</span>~VAL
+Omicron~<span style="font-style: normal;">&Omicron;</span>~VAL
+Pi~<span style="font-style: normal;">&Pi;</span>~VAL
+Rho~<span style="font-style: normal;">&Rho;</span>~VAL
+Sigma~<span style="font-style: normal;">&Sigma;</span>~VAL
+Tau~<span style="font-style: normal;">&Tau;</span>~VAL
+Upsilon~<span style="font-style: normal;">&Upsilon;</span>~VAL
+Phi~<span style="font-style: normal;">&Phi;</span>~VAL
+Chi~<span style="font-style: normal;">&Chi;</span>~VAL
+Psi~<span style="font-style: normal;">&Psi;</span>~VAL
+Omega~<span style="font-style: normal;">&Omega;</span>~VAL
+# Lowercase greek letters
+alpha~<span style="font-style: italic;">&alpha;</span>~VAL
+beta~<span style="font-style: italic;">&beta;</span>~VAL
+gamma~<span style="font-style: italic;">&gamma;</span>~VAL
+delta~<span style="font-style: italic;">&delta;</span>~VAL
+epsilon~<span style="font-style: italic;">&epsilon;</span>~VAL
+zeta~<span style="font-style: italic;">&zeta;</span>~VAL
+eta~<span style="font-style: italic;">&eta;</span>~VAL
+theta~<span style="font-style: italic;">&thetasym;</span>~VAL
+iota~<span style="font-style: italic;">&iota;</span>~VAL
+kappa~<span style="font-style: italic;">&kappa;</span>~VAL
+lambda~<span style="font-style: italic;">&lambda;</span>~VAL
+mu~<span style="font-style: italic;">&mu;</span>~VAL
+nu~<span style="font-style: italic;">&nu;</span>~VAL
+xi~<span style="font-style: italic;">&xi;</span>~VAL
+omicron~<span style="font-style: italic;">&omicron;</span>~VAL
+pi~<span style="font-style: italic;">&pi;</span>~VAL
+rho~<span style="font-style: italic;">&rho;</span>~VAL
+sigma~<span style="font-style: italic;">&sigma;</span>~VAL
+tau~<span style="font-style: italic;">&tau;</span>~VAL
+upsilon~<span style="font-style: italic;">&upsilon;</span>~VAL
+phi~<span style="font-style: italic;">&phi;</span>~VAL
+chi~<span style="font-style: italic;">&chi;</span>~VAL
+psi~<span style="font-style: italic;">&psi;</span>~VAL
+omega~<span style="font-style: italic;">&omega;</span>~VAL
+# Infinity and other objects
+inf~<span style="font-style: italic;">&infin;</span>~VAL
+\n~<br>~OP
+# Math operators
++-~<span style="font-style: normal;">&plusmn;</span>~OP
++/-~<span style="font-style: normal;">&plusmn;</span>~OP
+-~<span style="font-style: normal;">&minus;</span>~OP
++~<span style="font-style: normal;">+</span>~OP
+*~&nbsp;~OP
+<="~<span style="font-style: normal;">&le;</span~OP
+&lt;=~<span style="font-style: normal;">&le;</span>~OP
+>=~<span style="font-style: normal;">&ge;</span>~OP
+&gt;=~<span style="font-style: normal;">&ge;</span>~OP
+!=~<span style="font-style: normal;">&ne;</span>~OP
+approx~<span style="font-style: normal;">&asymp;</span>~OP
+=~<span style="font-style: normal;">=</span>~OP
+:~<span style="font-style: normal;">:</span>~OP
+# Parentheses
+(~<span style="font-style: normal;">(</span>~OP
+)~<span style="font-style: normal;">)</span>~OP
+[~<span style="font-style: normal;">[</span>~OP
+]~<span style="font-style: normal;">]</span>~OP
+{~<span style="font-style: normal;">{</span>~OP
+}~<span style="font-style: normal;">}</span>~OP
+# Advanced math operators
+nabla~<span style="font-style: normal; font-weight: normal;">&nabla;</span>~OP
+integrate~<span style="font-style: italic;">&int;</span>~OP
+sum~<span style="font-style: normal;">&sum;</span>~OP
+product~<span style="font-style: normal;">&prod;</span>~OP
+and~<span style="font-style: normal;">&and;</span>~OP
+or~<span style="font-style: normal;">&or;</span>~OP
+not~<span style="font-style: normal;">&not;</span>~OP
+det~<span style="font-style: normal;">det</span>~OP
+# Mathematical functions
+cos~<span style="font-style: normal;">cos</span>~FCT
+acos~<span style="font-style: normal;">arccos</span>~FCT
+arccos~<span style="font-style: normal;">arccos</span>~FCT
+cosh~<span style="font-style: normal;">cosh</span>~FCT
+acosh~<span style="font-style: normal;">arcosh</span>~FCT
+arcosh~<span style="font-style: normal;">arcosh</span>~FCT
+sin~<span style="font-style: normal;">sin</span>~FCT
+asin~<span style="font-style: normal;">arcsin</span>~FCT
+arcsin~<span style="font-style: normal;">arcsin</span>~FCT
+sinh~<span style="font-style: normal;">sinh</span>~FCT
+asinh~<span style="font-style: normal;">arsinh</span>~FCT
+arsinh~<span style="font-style: normal;">arsinh</span>~FCT
+tan~<span style="font-style: normal;">tan</span>~FCT
+atan~<span style="font-style: normal;">arctan</span>~FCT
+arctan~<span style="font-style: normal;">arctan</span>~FCT
+tanh~<span style="font-style: normal;">tanh</span>~FCT
+atanh~<span style="font-style: normal;">artanh</span>~FCT
+artanh~<span style="font-style: normal;">artanh</span>~FCT
+cot~<span style="font-style: normal;">cot</span>~FCT
+sinc~<span style="font-style: normal;">sinc</span>~FCT
+exp~<span style="font-style: normal;">exp</span>~FCT
+sqrt~<span style="font-style: normal;">sqrt</span>~FCT
+Ai~<span style="font-style: normal;">Ai</span>~FCT
+Bi~<span style="font-style: normal;">Bi</span>~FCT
+erf~<span style="font-style: normal;">erf</span>~FCT
+erfc~<span style="font-style: normal;">erfc</span>~FCT
+ln~<span style="font-style: normal;">ln</span>~FCT
+log~<span style="font-style: normal;">log</span>~FCT
+Cl2~<span style="font-style: normal;">Cl<sub>2</sub></span>~FCT
+Li2~<span style="font-style: normal;">Li<sub>2</sub></span>~FCT

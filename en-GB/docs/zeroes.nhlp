@@ -28,11 +28,11 @@
 	</list>
 	Zeroes of data sets may be determined as well. The corresponding <expr>y</expr> values have to be part of the expression, which shall be evaluated:<codeblock>zeroes EXPRESSION(DATAPOINTS(I1:I2,J1:J2))</codeblock>The corresponding <expr>x</expr> values may passed with the parameter <code>x=x-DATAPOINTS()</code>. The <expr>x</expr> data set may have a different number of data points. In this case, the number of <expr>y</expr> values will be used and the eventual missing <expr>x</expr> values will be replaced with 0.0, if applicable. If no <expr>x</expr> values were passed, the command returns the indices, which are nearest to the zeroes. If the <expr>x</expr> values are available, <code>zeroes</code> returns linear interpolated <expr>x</expr> values of the actual zeroes.
 	<em>Note:</em> If no <expr>x</expr> values were passed, it is possible that indices will be returned twice. This is <em>not</em> an error, but occures, if the index is located in between of two zeroes and if it is as well the nearest point to both zeroes.
-	<example desc="Zeroes of the function <expr>f(x) = x^3-x</expr> in the interval -5 to 5 and zeroes of a data set:">
+	<example desc="Zeroes of the function <expr>f(x) = x^3 - x</expr> in the interval <expr>[-5,5]</expr> and zeroes of a data set:">
 		zeroes x^3-x -set x=-5:5
 		ans = {    -1,     0,     1}
 		zeroes data(:,2) -set x=data(:,1)
 		ans = { 3.445, 8.314, 9.862,  (...)}
 	</example>
-	<em>Tip:</em> This function may determine the intersections of two functions in an interval [<expr>x0,x1</expr>]:<codeblock>zeroes f(x)-g(x) -set x=x0:x1</codeblock>
+	<em>Tip:</em> This function may determine the intersections of two functions in an interval <expr>[x0,x1]</expr>:<codeblock>zeroes f(x)-g(x) -set x=x0:x1</codeblock>
 </article>

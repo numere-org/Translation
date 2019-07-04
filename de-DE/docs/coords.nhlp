@@ -31,8 +31,8 @@
 		<item node="spherical_rp">Sphärische Koordinaten mit <expr>x = r, y = phi, z = theta</expr></item>
 		<item node="spherical_rt">Sphärische Koordinaten mit <expr>x = r, y = theta, z = phi</expr></item>
 	</list>
-	NumeRe wählt automatisch die Plotintervalle [<expr>0,2PI</expr>] für <expr>phi</expr> und [<expr>0,PI</expr>] für <expr>theta</expr>, sofern nichts anderes vorgegeben wird. Die Darstellung der entsprechenden Achsen erfolgt dann jedoch auf <expr>PI</expr> normiert.
-	<example desc="Darstellen der Kugelflächenfunktion <expr>Y(3,2,theta,phi)</expr> in sphärischen Koordinaten:">
+	NumeRe wählt automatisch die Plotintervalle <expr>[0,2PI]</expr> für <expr>phi</expr> und <expr>[0,PI]</expr> für <expr>theta</expr>, sofern nichts anderes vorgegeben wird. Die Darstellung der entsprechenden Achsen erfolgt dann jedoch auf <expr>PI</expr> normiert.
+	<example desc="Darstellen der Kugelflächenfunktion <expr>Y_(3 2)(theta,phi)</expr> in sphärischen Koordinaten:">
 		surf Y(3, 2, y, x) -set coords=spherical_pt
 	</example>
 	<img src="<>/docs/sphericalharmonic.png" />

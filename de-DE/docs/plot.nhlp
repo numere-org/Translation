@@ -28,7 +28,7 @@
 	<em>Wichtig:</em> Auf Leerzeichen sollte weitestgehend verzichtet werden, da sie zum Separieren der Optionen verwendet werden. Sollten sie bei <code>title=</code>, <code>*label=</code> oder dem Dateinamen nötig sein, muss das gesamte Argument in Anführungszeichen gesetzt werden.
 	Optionen, die einmal gesetzt wurden, werden für die weitere Verwendung gespeichert und (so lange sie nicht widerrufen werden) bei allen weiteren Plots automatisch verwendet. Ausnahmen sind hierbei hohe Auflösung, Dateinamen, Titel, Plotintervalle, Linienfarben und Achsenbeschriftungen.
 	Wird als Ausgabeformat TeX (über <code>otex</code>) gewählt, so erzeugt NumeRe zwei Dateien: eine Datei mit dem gewählten Dateinamen und eine weitere, bei der <code>main</code> an den Dateinamen angehängt wurde. Diese fungiert als TeX-Hauptdatei, welche die erstere Datei, die die Graphik enthält, einlädt.
-	<example desc=" Plotten der Funktion <expr>f(x)=x^2</expr> und Datensätze der Spalten 2 und 3 aus dem Cache mit den Optionen <code>box grid title='Plot einer Parabel' opng=Parabel</code> und einer Legende zum Cache:" type="verbatim">
+	<example desc=" Plotten der Funktion <expr>f(x) = x^2</expr> und Datensätze der Spalten 2 und 3 aus dem Cache mit den Optionen <code>box grid title='Plot einer Parabel' opng=Parabel</code> und einer Legende zum Cache:" type="verbatim">
 		|&lt;- plot x^2, cache(:,2:3) "Näherung" -set box grid title="Plot einer Parabel" opng=Parabel
 		|-&gt; Berechne Daten für Plot ...
 		|-&gt; Speichern ... Erfolg!

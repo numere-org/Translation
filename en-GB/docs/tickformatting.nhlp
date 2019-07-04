@@ -18,7 +18,7 @@
 
 <article id="tickformatting">
 	<title string="Formatting of the labels of the axis ticks" />
-	The tick labels of the axes may be modified by the usage of the additional plot options <code>xticks</code>, <code>yticks</code>, <code>zticks</code> and <code>cticks</code>. The first three influence the labeling of the <expr>x, y</expr> or <expr>z</expr> axis; the last one corresponds to the tick labels of the color bar, which is displayed for many plot styles (like <code>mesh</code> or <code>surf3d</code>) right next to the actual plot.
+	The tick labels of the axes may be modified by the usage of the additional plot options <code>xticks</code>, <code>yticks</code>, <code>zticks</code> and <code>cticks</code>. The first three influence the labeling of the <expr>x</expr>, <expr>y</expr> or <expr>z</expr> axis; the last one corresponds to the tick labels of the color bar, which is displayed for many plot styles (like <code>mesh</code> or <code>surf3d</code>) right next to the actual plot.
 	The format of the tick labels has to be passed inside of quotation marks and has to follow the C scheme of the <code>printf()</code> function. Here, all characters, which are passed right before of <code>%</code>, will be regarded as normal letters and all characters after <code>%</code> will be used as formatting information for the number, which shall be displayed at this position.
 	The actual difficulty of these formatting options is based on the scheme, which has to be used and which contains many possibilities:<codeblock>%[FLG].[PRC][TYP]</codeblock>
 	<list>

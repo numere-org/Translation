@@ -23,7 +23,7 @@
 	If the number of samples is not passed, then NumeRe will automatically use 100 samples.
 	If the expression is not passed, then NumeRe will use the variable VAR as expression.
 	To obtain a logarithmic distribution of samples, you may use the parameter <code>-logscale</code>.
-	<example desc="Calculation of 200 samples out of <expr>sin(x)</expr> over the interval 0 to <expr>2PI</expr> and saving them to the Cache:">
+	<example desc="Calculation of 200 samples out of <expr>sin(x)</expr> over the interval <expr>0</expr> to <expr>2PI</expr> and saving them to the Cache:">
 		cache(:,1) = eval sin(x) -set x=0:_2pi samples=200
 	</example>
 </article>

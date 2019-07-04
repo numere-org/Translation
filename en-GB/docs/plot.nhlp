@@ -28,7 +28,7 @@
 	<em>Important:</em> You should avoid whitespaces in the values of your options, because they are used for separating the options themselves. If they are needed for <code>title=</code>, <code>*label=</code> or the filename, then the whole option value has to be passed surrounded by quotation marks.
 	Options, which were set once, will be saved for further usage and (as long as they won't be reverted) are automatically used for all further plots in the current session. Exceptions thereof are high resolution, filenames, title, plotting intervals, line styles and axis labels.
 	If the output format TeX (through <code>otex</code>) was chosen, NumeRe will create two files: a file with the desired filename and a further file, with <code>main</code> appended to the filename. This acts as TeX main file, which will include the previous file while a TeX compilation run.
-	<example desc="Plotting of the function <expr>f(x)=x^2</expr> and the columns 2 and 3 out of the cache with the options <code>box grid title='Plot of a parabola' opng=Parabola</code> and a custom legend to the cache:" type="verbatim">
+	<example desc="Plotting of the function <expr>f(x) = x^2</expr> and the columns 2 and 3 out of the cache with the options <code>box grid title='Plot of a parabola' opng=Parabola</code> and a custom legend to the cache:" type="verbatim">
 		|&lt;- plot x^2, cache(:,2:3) "Approximation" -set box grid title="Plot of a parabola" opng=Parabola
 		|-&gt; Calculating data for Plot ...
 		|-&gt; Saving ... Success.

@@ -31,8 +31,8 @@
 		<item node="spherical_rp">Spherical coordinates using <expr>x = r, y = phi, z = theta</expr></item>
 		<item node="spherical_rt">Spherical coordinates using <expr>x = r, y = theta, z = phi</expr></item>
 	</list>
-	NumeRe automatically chooses the plotting intervals [<expr>0,2PI</expr>] for <expr>phi</expr> and [<expr>0,PI</expr>] for <expr>theta</expr>, if nothing else was specified. The visualization of the corresponding axes will be normalized to <expr>PI</expr> to obtain nice values.
-	<example desc="Visualizing of the spherical harmonic <expr>Y(3,2,theta,phi)</expr> in spherical coordinates:">
+	NumeRe automatically chooses the plotting intervals <expr>[0,2PI]</expr> for <expr>phi</expr> and <expr>[0,PI]</expr> for <expr>theta</expr>, if nothing else was specified. The visualization of the corresponding axes will be normalized to <expr>PI</expr> to obtain nice values.
+	<example desc="Visualizing of the spherical harmonic <expr>Y_(3 2)(theta,phi)</expr> in spherical coordinates:">
 		surf Y(3, 2, y, x) -set coords=spherical
 	</example>
 	<img src="<>/docs/sphericalharmonic.png" />

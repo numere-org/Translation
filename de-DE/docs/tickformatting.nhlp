@@ -18,7 +18,7 @@
 
 <article id="tickformatting">
 	<title string="Formatieren der Skalenbeschriftung" />
-	Die Skalenbeschriftung der Achsen können in NumeRe beeinflusst werden, indem die zusätzlichen Plotoptionen <code>xticks</code>, <code>yticks</code>, <code>zticks</code> und <code>cticks</code> verwendet werden. Die ersteren drei beeinflussen die Beschriftung der <expr>x-, y</expr>- oder <expr>z</expr>-Achse; die letztere die Beschriftung der Farbskala, die bei vielen Plotstilen (wie <code>mesh</code> oder <code>surf3d</code>) rechts neben dem Plot angezeigt wird.
+	Die Skalenbeschriftung der Achsen können in NumeRe beeinflusst werden, indem die zusätzlichen Plotoptionen <code>xticks</code>, <code>yticks</code>, <code>zticks</code> und <code>cticks</code> verwendet werden. Die ersteren drei beeinflussen die Beschriftung der <expr>x</expr>-, <expr>y</expr>- oder <expr>z</expr>-Achse; die letztere die Beschriftung der Farbskala, die bei vielen Plotstilen (wie <code>mesh</code> oder <code>surf3d</code>) rechts neben dem Plot angezeigt wird.
 	Das Format der Skalenbeschriftung muss in Anführungszeichen angegeben werden und folgt dem C-Schema der <code>printf()</code>-Funktion. Dabei werden alle Zeichen, die vor <code>%</code> angegeben werden, als reguläre Zeichen betrachtet und alle Zeichen danach als Formatierungsoptionen der an dieser Stelle darzustellenden Zahl.
 	Die wesentliche Komplexität dieser Formatierungsoptionen besteht in dem einzuhaltenden Schema, das sehr viele Möglichkeiten umfasst:<codeblock>%[FLG].[PRC][TYP]</codeblock>
 	<list>

@@ -23,7 +23,7 @@
 		<item node="[x1:x2,y1:y2]">Set the plotting interval. You may only modify the <expr>x</expr> interval, the <expr>y</expr> interval will be calculated correspondingly. If no interval was passed, the default values or the data ranges of the data sets will be used</item>
 		<item node="addxaxis=AXIS/<br>  addyaxis=AXIS">Adds an additional axis for the <expr>x</expr> or <expr>y</expr> axis, respectively. This needs the surrounding box with <code>box</code>. The desired axis has to be passed as <code>(MIN,MAX[,LABEL[,COLOR]])</code> or <code>(LABEL[,COLOR])</code>, if only the label and the color shall be modified. LABEL and COLOR are strings. May only be used with the command <code>plot</code>.</item>
 		<item node="animate/<br>  noanimate">Activates the creation of a GIF animation, where <expr>t</expr> is used as time parameter. The output will always be a GIF; filenames with wrong extensions will be corrected automatically. With <code>animate=FRAMES</code> the number of calculated frames may be modified. The default value is 50</item>
-		<item node="area/noarea">Fill the area between the curve and the <expr>x</expr> axis or the <expr>x-y</expr> plane with the color of the curve. NumeRe will apply a gradient to white.</item>
+		<item node="area/noarea">Fill the area between the curve and the <expr>x</expr> axis or the <expr>x</expr>-<expr>y</expr> plane with the color of the curve. NumeRe will apply a gradient to white.</item>
 		<item node="aspect=VALUE">Modify the ratio of height to width of the plot. Values smaller than 1 result in portrait, values larger than 1 in landscape images</item>
 		<item node="axis/noaxis">(De-)activates the axes</item>
 		<item node="axisbind=AXIS">Bind functions and data sets to axes. The axes are represented with the characters <code>lbrt</code>. Each plot object is assigned to a horizontal (<code>tb</code>) and to a vertical (<code>lr</code>) axis. At <em>least</em> one object must be assigned to the left and one to the bottom axis. Needs <code>box</code>and may only be used for the command <code>plot</code>. Colors and labels of the secondary axes may be modified with <code>add*axis</code>.</item>
@@ -34,7 +34,7 @@
 		<item node="boxplot/<br>  noboxplot">(De-)activates the boxplot mode (Minimal, maximal value &amp; quartiles). Each data row (only <expr>y</expr> values will be used) creates a single boxplot marker in the final plot.If the whole data set is selected, then a boxplot of each column will be created. An index vector may be used to select distinct columns.</item>
 		<item node="connect/<br>  noconnect">(De-)activates the connections between data points</item>
 		<item node="coords=COORDS">Choose the coordinates COORDS. You may choose out of <code>cartesian</code>, <code>polar</code> (cylindrical) and <code>spherical</code>. Depending on the chosen plotting style the coordinate assignements are different. See <a href="nhlp://coords?frame=new">help coords</a> for further details.</item>
-		<item node="crust/nocrust">Reconstructs a 2D surface out of arbitrary distributed <expr>x-y-z</expr> points. The current colorscheme will be used</item>
+		<item node="crust/nocrust">Reconstructs a 2D surface out of arbitrary distributed <expr>(x,y,z)</expr> points. The current colorscheme will be used</item>
 		<item node="errorbars/<br>  noerrorbars">(De-)activates errorbars in <expr>x</expr> and <expr>y</expr> direction. Needs 4 columns: <expr>x, y, delta_x, delta_y</expr></item>
 		<item node="font=FONT">Uses the chosen font for the following plots. The default font is <code>pagella</code>; you may choose out of <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code> &amp; <code>schola</code></item>
 		<item node="grid=TYPE/nogrid">(De-)activates a grid of the type TYPE. You may choose out of <code>coarse</code> for a coarse grid and <code>fine</code> for a grid with subintervals</item>
@@ -49,7 +49,7 @@
 		<item node="linesizes=SIZES">Modify the line thicknesses in the plots. Each number in SIZES represents one plot object and may lay between 0 and 9.</item>
 		<item node="linestyles=STYLE">Modify the line style of plots. See <a href="nhlp://linestyles?frame=new">help linestyles</a> for further details.</item>
 		<item node="logscale/<br>  nologscale">(De-)activates the logarithmic scale of all axes</item>
-		<item node="marks=VALUE/<br>  nomarks">(Only for <code>plot3d</code>) Draws circles of the size VALUE at the <expr>x-y(-z)</expr> coordinates, where the circles are filled according the <expr>z</expr> values and the current color scheme</item>
+		<item node="marks=VALUE/<br>  nomarks">(Only for <code>plot3d</code>) Draws circles of the size VALUE at the <expr>(x,y,z)</expr> coordinates, where the circles are filled according the <expr>z</expr> values and the current color scheme</item>
 		<item node="maxline=COMMENT">Draws a horizontal line through the maximal function value of a plot and adds the COMMENT. In the form <code>maxline=(TEXT,STYLE)</code> the display of the line may be modified</item>
 		<item node="minline=COMMENT">Draws a horizontal line through the minimal function value of a plot and adds the COMMENT. In the form <code>minline=(TEXT,STYLE)</code> the display of the line may be modified</item>
 		<item node="oeps=NAME">Creates an EPS file instead of a PNG file with the filename NAME</item>
@@ -81,7 +81,7 @@
 		<item node="xerrorbars/<br>  noxerrorbars">(De-)activates errorbars in <expr>x</expr> direction. Needs three columns: <expr>x, y, delta_x</expr></item>
 		<item node="yerrorbars/<br>  noyerrorbars">(De-)activates errorbars in <expr>y</expr> direction. Needs three columns: <expr>x, y, delta_y</expr></item>
 	</list>
-	("*" is a placeholder for <expr>x, y &amp; z</expr>)
+	("*" is a placeholder for <expr>x, y, z</expr>)
 	STYLE is a string, which, depending on the current option, contains only colors, line thicknesses, line and point types or all three types of information. The style information consists of single characters, which are described in <a href="nhlp://colors?frame=new">help colors</a> and <a href="nhlp://linestyles?frame=new">help linestyles</a>. The line thickness is a number from 0 to 9.
 	<em>Important:</em> you should omit whitespace wherever possible, because they are used to separate the options. If they are necessary for <code>title=</code>, <code>*label=</code> or the file name, then the whole argument has to be passed surrounded by quotation marks.
 	Options, which were set once, are stored for the further usage and (as long as they aren't revised) will be used for all further plots automatically. Exceptions are high resolution, filename, title, plotting intervals and axis labels.

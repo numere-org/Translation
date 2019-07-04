@@ -119,9 +119,11 @@
 	</article>
 	<article id="cache">
 		<file path="<>/docs/cache.nhlp" />
-		<title string="Cache" idxkey="cache" />
+		<title string="Tabellen (Caches)" idxkey="cache" />
 		<keywords>
 			<keyword>cache</keyword>
+			<keyword>table</keyword>
+			<keyword>tabell</keyword>
 			<keyword>rename</keyword>
 			<keyword>swap</keyword>
 			<keyword>desc</keyword>
@@ -612,7 +614,7 @@
 	</article>
 	<article id="new">
 		<file path="<>/docs/new.nhlp" />
-		<title string="Erzeugen neuer Caches, Dateien und Verzeichnisse" idxkey="new" />
+		<title string="Erzeugen neuer Tabellen, Dateien und Verzeichnisse" idxkey="new" />
 		<keywords>
 			<keyword>new</keyword>
 			<keyword>proc</keyword>

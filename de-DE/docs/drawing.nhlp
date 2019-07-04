@@ -21,7 +21,7 @@
 	In NumeRe können auch einfache Zeichnungen mit Anmerkungen erstellt werden. Das dazu nötige Kommando ist <code>draw</code>, welches im Wesentlichen dieselbe Syntax wie <code>plot</code> und Konsorten verwendet. Jedes Objekt, das in diesem Modus in die Zeichenfläche (die natürlich ebenfalls ein Koordinatensystem enthält, das i.A. auch dargestellt wird) integriert werden soll, wird durch eine spezielle Funktion dargestellt.
 	Die Funktionen für den Zeichenmodus können nur im Zeichenmodus verwendet werden. Außerhalb desselben werden sie nicht als solche erkannt. Ihre Wirkungen werden im Folgenden aufgelistet. Dabei werden die folgenden Abkürzungen verwendet:
 	<list>
-		<item node="PNT">Bezeichnet ein <expr>x-y</expr>-Koordinatenpaar, das in der Form <code>x,y</code> einzugeben ist.</item>
+		<item node="PNT">Bezeichnet ein <expr>x</expr>-<expr>y</expr>-Koordinatenpaar, das in der Form <code>x,y</code> einzugeben ist.</item>
 		<item node="STL">Dies ist der stets optionale Style-String, in dem Formatierungsoptionen angegeben werden können. Die Formatierungsoptionen werden durch einzelne Zeichen dargestellt und ohne zusätzliche Trennzeichen als Zeichenkette angegeben, z.B. <code>r</code> für rote Färbung.</item>
 		<item node="DIR">Dies bezeichnet einen Tangenten-Richtungsvektor, in dessen Richtung beispielsweise die Kurve von <code>curve()</code> biegen soll. Muss ebenfalls in der Form <code>x,y</code> angegeben werden, jedoch stets als "Differenzenvektor".</item>
 		<item node="ANG">Die Funktion <code>arc()</code> benötigt die Angabe eines Winkels. Dieser wird hierdurch angedeutet. Die Angabe erfolgt dabei in Grad.</item>

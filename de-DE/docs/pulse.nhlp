@@ -24,7 +24,7 @@
 	<list>
 		<item node="Maximale Amplitude">Der maximale Funktionswert des bestimmten Pulses. Das muss nicht zwingend der entsprechende <expr>y</expr>-Wert sein</item>
 		<item node="Position des Maximums">Der <expr>x</expr>-Wert, an dem der maximale Funktionswert bestimmt wurde</item>
-		<item node="Halbwertsbreite">Die Breite des Pulses bei <expr>exp(-1)*maxAmpl</expr></item>
+		<item node="Halbwertsbreite">Die Breite des Pulses bei <expr>Amp_(max)*e^(-1)</expr></item>
 		<item node="Breite des Pulses">Die Breite des gesamten Pulses</item>
 		<item node="Energie im ersten Puls">Die bestimmte Energie, die in diesem Puls transportiert wird</item>
 	</list>

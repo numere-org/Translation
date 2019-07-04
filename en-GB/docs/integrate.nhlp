@@ -33,7 +33,7 @@
 	<code>integrate</code> may integrate 1D data sets as well. These data sets have to be passed instead of the functions: if only one column was passed, then only the sum of the data set will be calculated. If two columns were passed, then the first one will be interpreted as <expr>x</expr>, the second as the corresponding <expr>y</expr> values and the integral thereof will be calculated.
 	The numerical resolution determines, how fine or how coarse the integration interval will be sampled. Note: with finer resolution comes increasing calculation time. And there are of course numerical rounding errors, which limit the precision as well.
 	The execution may be canceled with the <code>ESC</code> key, if it needs too much time.
-	<example desc="Integration of the function <expr>f(x) = x^2</expr> from <expr>x = 1</expr> to <expr>x = 2</expr> with the numerical resolution of dx = 1e-3 and integration of the function <expr>f(x,y) = x</expr> from <expr>x = 0</expr> to <expr>x = 1</expr> and <expr>y = 0</expr> to <expr>y = _2pi</expr> with the numerical resolution of <expr>dx,dy = 1e-4</expr>:" type="verbatim">
+	<example desc="Integration of the function <expr>f(x) = x^2</expr> from <expr>x = 1</expr> to <expr>x = 2</expr> with the numerical resolution of <expr>dx = 10^(-3)</expr> and integration of the function <expr>f(x,y) = x</expr> from <expr>x = 0</expr> to <expr>x = 1</expr> and <expr>y = 0</expr> to <expr>y = _2pi</expr> with the numerical resolution of <expr>dx,dy = 10^(-4)</expr>:" type="verbatim">
 		|&lt;- integrate x^2 -set [1:2]
 		|-&gt; ans = 2.333333
 		|
@@ -41,5 +41,5 @@
 		|INTEGRATE&gt; Evaluating ... 100 %: Success.
 		|-&gt; ans = 3.141593
 	</example>
-	<em>Tip:</em> in most cases a numerical resolution of 1e-3 will be sufficient for a usable result of a first guess. A higher resolution shall only be used, if the integral seems to vanish although it shouldn't, or if a higher precision is really needed.
+	<em>Tip:</em> in most cases a numerical resolution of <expr>10^(-3)</expr> will be sufficient for a usable result of a first guess. A higher resolution shall only be used, if the integral seems to vanish although it shouldn't, or if a higher precision is really needed.
 </article>

@@ -27,7 +27,7 @@
 	</list>
 	Des Weiteren kann NumeRe Datensätze numerisch differenzieren. Dazu muss <code>diff</code> gefolgt vom gewünschten Datensatz angegeben werden:<codeblock>diff DATENSATZ(i1:i2,j1:j2)</codeblock>
 	Der Datensatz sollte <expr>x</expr>- und <expr>y</expr>-Werte in den Spalten enthalten um korrekte Ableitungen zu erhalten, anderenfalls werden Ableitungen zwischen Stützstellen der Breite 1 berechnet. Der Rückgabedatensatz ist zusätzlich um einen Punkt kürzer als der übergebene Datensatz. Da NumeRe standardmäßig die <expr>y</expr>-Werte berechnet, kann die Option <code>xvals</code> übergeben werden. Damit werden die entsprechenden <expr>x</expr>-Werte zurückgegeben.
-	<example desc="Numerische Differentiation der Funktion <expr>f(x) = x^2</expr> um die Stelle x=1 mit der Genauigkeit 1e-6 und numerische Differentiation eines Datensatzes:">
+	<example desc="Numerische Differentiation der Funktion <expr>f(x) = x^2</expr> um die Stelle <expr>x = 1</expr> mit der Genauigkeit <expr>10^(-6)</expr> und numerische Differentiation eines Datensatzes:">
 		diff x^2 -set x=1 eps=1e-6
 		ans = 2
 		diff data(:,1:2)

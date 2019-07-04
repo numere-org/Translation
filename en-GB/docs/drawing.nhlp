@@ -21,7 +21,7 @@
 	You may create simple drawings with annotations with NumeRe. The corresponding command is <code>draw</code>, which in principle has the same syntax just like <code>plot</code> and similar. Each object, which shall be integrated in this mode to the drawing plane (which has a coordinate system, too, which, in principle, will be showed as well), is representated using a special function.
 	The functions for the drawing mode may only be used in this mode. Without this mode, they won't be recognized as such. Their effect on the drawing is listed a few lines below. The following abbreviations will be used in the list:
 	<list>
-		<item node="PNT">Corresponds to a <expr>x-y</expr> coordinate pair, which shall be entered in the format <code>x,y</code>.</item>
+		<item node="PNT">Corresponds to a <expr>x</expr>-<expr>y</expr> coordinate pair, which shall be entered in the format <code>x,y</code>.</item>
 		<item node="STL">This is the always optional style string, in which further formatting options may be passed. The formatting options are represented by single characters and shall be passed without an additional separator as a string, e.g. <code>r</code> for coloring in red.</item>
 		<item node="DIR">This names a tangent direction vector, for example in which direction the <code>curve()</code> shall bend itself. Has to be passed through <code>x,y</code>.</item>
 		<item node="ANG">The function <code>arc()</code> needs the information of an angle, which is represented by this value. The angle has to be passed in degrees.</item>

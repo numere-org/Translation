@@ -33,7 +33,7 @@
 	<code>integrate</code> kann auch 1D-Datensätze numerisch integrieren. Diese Datensätze sind dann statt der Funktion zu übergeben: wenn nur eine Spalte übergeben wird, wird nur die Summe des Datensatzes berechnet, werden zwei Spalten angegeben, wird die erste als <expr>x</expr>- und die zweite als die entsprechenden <expr>y</expr>-Werte interpretiert und das entsprechende Integral bestimmt.
 	Die numerische Auflösung bestimmt, wie fein das Integrations-Intervall unterteilt wird. Je kleiner diese Auflösung, desto höher die Rechenzeit. Allerdings begrenzen irgendwann auch Rundungsfehler die Genauigkeit.
 	Die Auswertung kann mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
-	<example desc="Integration der Funktion <expr>f(x) = x^2</expr> von <expr>x = 1</expr> bis <expr>x = 2</expr> mit der num. Auflösung dx = 1e-3 und Integration der Funktion <expr>f(x,y) = x</expr> von <expr>x = 0</expr> bis <expr>x = 1</expr> und <expr>y = 0</expr> bis <expr>y = _2pi</expr> mit der num. Auflösung von <expr>dx,dy = 1e-4</expr>:" type="verbatim">
+	<example desc="Integration der Funktion <expr>f(x) = x^2</expr> von <expr>x = 1</expr> bis <expr>x = 2</expr> mit der num. Auflösung <expr>dx = 10^(-3)</expr> und Integration der Funktion <expr>f(x,y) = x</expr> von <expr>x = 0</expr> bis <expr>x = 1</expr> und <expr>y = 0</expr> bis <expr>y = _2pi</expr> mit der num. Auflösung von <expr>dx,dy = 10^(-4)</expr>:" type="verbatim">
 		|&lt;- integrate x^2 -set [1:2]
 		|-&gt; ans = 2.333
 		|
@@ -41,5 +41,5 @@
 		|INTEGRATE&gt; Werte aus ... 100 %: Erfolg!
 		|-&gt; ans = 3.141593
 	</example>
-	<em>Tipp:</em> In den meisten Fällen genügt eine numerische Auflösung von 1e-3 für ein brauchbares Ergebnis oder eine erste Abschätzung. Eine höhere Auflösung sollte nur gewählt werden, wenn das Integral wider Erwarten verschwindet oder die zusätzlichen Nachkommastellen wirklich von Belang sind.
+	<em>Tipp:</em> In den meisten Fällen genügt eine numerische Auflösung von <expr>10^(-3)</expr> für ein brauchbares Ergebnis oder eine erste Abschätzung. Eine höhere Auflösung sollte nur gewählt werden, wenn das Integral wider Erwarten verschwindet oder die zusätzlichen Nachkommastellen wirklich von Belang sind.
 </article>

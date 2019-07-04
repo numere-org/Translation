@@ -26,7 +26,7 @@
 	Als Variablennamen können beliebige Kombinationen aus dem Satz von Groß- und Kleinbuchstaben sowie dem Unterstrich <code>_</code> verwendet werden. Es können auch Ziffern verwendet werden, jedoch dürfen die Variablennamen niemals mit einer Ziffer beginnen.
 	NumeRe besitzt einen großen Satz an vordefinierten Konstanten, die mittels dem Kommando <code>list -const</code> (inklusive der phys. Einheit, sofern vorhanden) angezeigt werden können. Diesen Konstanten ist gemein, dass sie stets mit einem vorangestellten Unterstrich beginnen.
 	Die vordefinierten Funktionen weisen sogar eine noch größere Anzahl auf und können mittels <code>list -func</code> aufgelistet werden.
-	<example desc="Zuweisen von cos(_pi) an die Variable x und 'Hallo Welt' an Satz:">
+	<example desc="Zuweisen von <expr>cos(PI)</expr> an die Variable <expr>x</expr> und 'Hallo Welt' an Satz:">
 		x = cos(_pi)
 		ans = -1
 		Satz = "Hallo Welt"

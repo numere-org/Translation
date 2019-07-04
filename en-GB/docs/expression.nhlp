@@ -26,7 +26,7 @@
 	You may use arbitrary combinations of upper- and lowercase letters and the underscore <code>_</code> to create the variables' names. You may use numbers as well, but the first character of a variable's name may not be a number.
 	NumeRe owns a large set of predefined constants, which may be listed with the command <code>list -const</code> (including their physical units, if applicable). All constants have in common that their first letter is an underscore.
 	The set of predefined functions is even larger and may be displayed by invoking <code>list -func</code>.
-	<example desc="Assignment of cos(_pi) to the variable x and 'Hello World' to Sentence:">
+	<example desc="Assignment of <expr>cos(PI)</expr> to the variable <expr>x</expr> and 'Hello World' to Sentence:">
 		x = cos(_pi)
 		ans = -1
 		Sentence = "Hello World"
