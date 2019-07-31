@@ -1,0 +1,27 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2019  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="versioncontrol">
+	<title string="Versionskontrollsystem und Versionsverwaltung" />
+	Bei der Arbeit an Programm-Code kann es manchmal hilfreich sein, wenn man auf eine frühere Version derselben Datei zurückgehen kann, z.B. wenn eine der letzten Änderungen die Funktionsweise unwiederbringlich zerstört hat. Die "Rückgängig"-Funktion kann hier helfen, jedoch nur dann, wenn die Datei inzwischen nicht geschlossen wurde.
+	NumeRe unterstützt hier zusätzlich, indem ein Versionsverlauf jeder im <a href="nhlp://editor?frame=new">Editor</a> bearbeiteten Datei, die sich in einem der fünf Standardpfade befindet, angelegt wird. Jede Version in diesem Verlauf kann angesehen und auch wiederhergestellt werden, sollte das nötig sein. Außerdem kann eine spezifische <em>Revision</em> einer Datei mit einer zusätzlichen Markierung versehen werden, einem sogenannten <em>Tag</em>. Diese Funktion kann in den Optionen unter "Verschiedenes/Speichereinstellungen" aktiviert werden.
+	Um den Versionsverlauf einer Datei anzusehen, muss diese bereits mindestens eine Revision besitzen. Dies wird im <a href="nhlp://filetree?frame=new">Dateibaum</a> durch ein zusätzliches <em>(revXYZ)</em> im eingeblendeten Tooltip angezeigt, wobei XYZ die Nummer der aktuellen Revision zeigt. Klickt man mit der rechten Maustaste auf die entsprechende Datei, so erscheinen zwei neue Optionen: <em>Versionsverlauf...</em> und <em>Aktuelle Revision taggen</em>. Die erste öffnet den Versionsverlauf in einem neuen Fenster, die zweite bietet die Möglichkeit, die aktuell angezeigte, gespeicherte Revision mit einem zusätzlichen Kommentar zu markieren.
+	Der Versionsverlauf ist als ein Baum dargestellt, dessen Revisionen absteigend sortiert sind. Die aktuelle Revision ist dabei fett gedruckt. <em>Getaggte</em> Revisionen sind als zusätzliche, blaue Zweige dargestellt. Manche Dateioperationen, die im Dateibaum durchgeführt werden, erzeugen ebenfalls Revisionen. Das sind Umbenennen und Verschieben der Datei. Dies wird entsprechend im Versionsverlauf durch grüne und braune Einträge dargestellt. Externe Bearbeitungen einer Datei erzeugen ebenfalls eine neue Revision im Versionsverlauf. Dies passiert auch dann, wenn man die aktuell bearbeitete Datei <em>nicht</em> neu laden lässt.
+	Doppelklicken auf eine Revision öffnet diese als neue Registerkarte im Editor. Außerdem kann im Kontextmenü die gewählte Revision in einer Datei wiederhergestellt oder mit einem zusätzlichen Kommentar getaggt werden.
+	<em>Hinweis:</em> Der Versionsverlauf wird nicht in der Datei selbst, sondern in dem versteckten Unterordner ".revisions/..." in einer REVISIONS-Datei gespeichert. Dateioperationen, die durchgeführt werden, wenn NumeRe geschlossen ist, oder Verschieben und Umbenennen im Windows-Explorer können nicht in den Revisionen dargestellt werden.
+</article>

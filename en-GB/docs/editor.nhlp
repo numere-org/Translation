@@ -27,7 +27,7 @@
 	The editor may search for the definition of a NumeRe procedure and open it, if you right-click on a procedure's name. The namespaces will be considered while searching for the procedure. The same is valid for included scripts.
 	<h>Highlighting and markup</h>
 	The colors of the syntax highlighting for scripts and procedures may be customized in the options dialog. <em>Note:</em> the change of the colors will be adapted after clicking in the "Apply" button.	
-	All changes, which are performed in the editor, are tracked on the margin in orange color. After saving these markers are changing to green. This allows distinguishing between to saves.
+	All changes, which are performed in the editor, are tracked on the margin in orange color. After saving these markers are changing to green. This allows distinguishing between to saves. Additionally, the editor can create <a href="nhlp://revision?frame=new">revisions</a> of the currently edited file.
 	If you hover the mouse for a moment over a syntax text block, the editor will display a short tooltip containing the necessary information to this syntax element if it is available.
 	The context menu of the editor supports the permanent highlighting of the currently clicked text block. Each occurrence of this block will be marked red. In contrast you may temporary mark a text block by double-clicking on it. In this case the block and all occurrences are highlighted green. If the selection is changed or something was typed, the highlighting will vanish.
 	Matching parentheses at the position of the cursor (an opening and the corresponding closing parenthesis) will be highlighted green and parentheses without their corresponding companion will be highlighted red.

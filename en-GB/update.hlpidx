@@ -1263,4 +1263,12 @@
 			<keyword>cluster</keyword>
 		</keywords>
 	</article>	
+	<article id="versioncontrol">
+		<file path="<>/docs/versioncontrol.nhlp" />
+		<title string="Version control system and version management" idxkey="revision" />
+		<keywords>
+			<keyword>revision</keyword>
+			<keyword>versions</keyword>
+		</keywords>
+	</article>	
 </helpindex>
