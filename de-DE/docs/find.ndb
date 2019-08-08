@@ -145,11 +145,23 @@ if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung C
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren
 imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load bilder
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal
+is_alnum(STRING)~Prüft ob STRING einen alphanumeric character hat
+is_alpha(STRING)~Prüft ob STRING einen alphabetic character hat
+is_blank(STRING)~Prüft ob STRING einen blank character hat
 is_cluster(STRING)~Gibt true zurück, wenn STRING ein Cluster ist, sonst false~is_cluster() cluster
+is_cntrl(STRING)~Prüft ob STRING einen control character hat
 is_data(STRING)~Gibt true zurück, wenn STRING ein Datenobjekt (eine Tabelle oder ein Cluster) ist, sonst false~is_data() datafile cache cluster table
+is_digit(STRING)~Prüft ob STRING einen decimal digit character hat
+is_graph(STRING)~Prüft ob STRING einen graphical representation character hat
+is_lower(STRING)~Prüft ob STRING einen lowercase character hat
 is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number
+is_print(STRING)~Prüft ob STRING einen printable character hat
+is_punct(STRING)~Prüft ob STRING einen punctuation character hat
+is_space(STRING)~Prüft ob STRING einen white-space character hat
 is_string(EXPR)~Gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false. Siehe "help string"~zeichenketten # \" is_string()
 is_table(STRING)~Gibt true zurück, wenn STRING eine Tabelle ist, sonst false~is_table() data cache table
+is_upper(STRING)~Prüft ob STRING einen uppercase character hat
+is_xdigit(STRING)~Prüft ob STRING einen hexadecimal digit character hat
 invert(MAT)~Invertiert die Matrix MAT, siehe "help matop"~invert() matrix invertieren
 ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()
 # L
