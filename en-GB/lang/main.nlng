@@ -491,6 +491,18 @@ PARSERFUNCS_LISTFUNC_FUNC_LI2_[NUM]=					    Li2(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_CL2_[NUM]=					    Cl2(x)                                       VAL      - Calculates the value of the Clausen function at the location x, where x is in R
 PARSERFUNCS_LISTFUNC_FUNC_UNIQUE_[MAT]=                     unique(MAT,nDim)                             MAT      - Sorts and returns only unique elements. If MAT is a vector, then the function will return a vector. If MAT is a matrix, then MAT will be rolled out and a vector is returned. nDim is an optional value, will only be used, if MAT is a matrix, and is 0 as default. If nDim is equal to 1, then the function will return a matrix with unique elements along its rows. If nDim is 2, then the unique elements are determined along the columns
 PARSERFUNCS_LISTFUNC_FUNC_TEXTPARSE_[STRING]=               textparse(sToParse,sPattern,nPos1,nPos2)    {ARG}     - Splits sToParse up into single tokens of different variable types using the scheme sPattern. The variable types are defined using the identifiers "%s" (string), "%f" (float) and "%a" (any, will be ignored and can be used to jump over sections of text) in sPattern. nPos1 and nPos2 are optional values and define the starting and ending points
+PARSERFUNCS_LISTFUNC_FUNC_IS_BLANK_[STRING]=				is_blank(sToParse)                      	{VAL}     - Check if string has blank character
+PARSERFUNCS_LISTFUNC_FUNC_IS_ALNUM_[STRING]=				is_alnum(sToParse)                      	{VAL}     - Check if string has an alphanumeric character
+PARSERFUNCS_LISTFUNC_FUNC_IS_ALPHA_[STRING]=				is_alpha(sToParse)                      	{VAL}     - Check if string has an alphabetic character
+PARSERFUNCS_LISTFUNC_FUNC_IS_CNTRL_[STRING]=				is_cntrl(sToParse)                      	{VAL}     - Check if string has a control character
+PARSERFUNCS_LISTFUNC_FUNC_IS_DIGIT_[STRING]=				is_digit(sToParse)                      	{VAL}     - Check if string has a decimal digit
+PARSERFUNCS_LISTFUNC_FUNC_IS_GRAPH_[STRING]=				is_graph(sToParse)                      	{VAL}     - Check if string has a graphical representation
+PARSERFUNCS_LISTFUNC_FUNC_IS_LOWER_[STRING]=				is_lower(sToParse)                      	{VAL}     - Check if string has a lowercase letter
+PARSERFUNCS_LISTFUNC_FUNC_IS_PRINT_[STRING]=				is_print(sToParse)                      	{VAL}     - Check if string has a printable character
+PARSERFUNCS_LISTFUNC_FUNC_IS_PUNCT_[STRING]=				is_punct(sToParse)                      	{VAL}     - Check if string has a punctuation character
+PARSERFUNCS_LISTFUNC_FUNC_IS_SPACE_[STRING]=				is_space(sToParse)                      	{VAL}     - Check if string has a white-space
+PARSERFUNCS_LISTFUNC_FUNC_IS_UPPER_[STRING]=				is_upper(sToParse)                      	{VAL}     - Check if string has an uppercase letter 
+PARSERFUNCS_LISTFUNC_FUNC_IS_XDIGIT_[STRING]=				is_xdigit(sToParse)                     	{VAL}     - Check if string has a hexadecimal digit
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values; empty braces indicate no return value.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Further information concerning the predefined mathematical functions can be found in the NumeRe documentation at "help function".
