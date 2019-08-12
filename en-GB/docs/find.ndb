@@ -144,11 +144,23 @@ if (COND)~Starts the definition of an IF clause~condition bedingung else elseif(
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
 imread~Reads an image file as data grid into a table~imageread images load bilder
 integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
+is_alnum(STRING)~Determines for each character in sToParse, whether it is a alphanumeric  character type, or not~is_alnum()
+is_alpha(STRING)~Determines for each character in sToParse, whether it is a alphabetic  character type, or not~is_alpha()
+is_blank(STRING)~Determines for each character in sToParse, whether it is a blank character type, or not~is_alpha()
 is_cluster(STRING)~Returns true, if STRING is a cluster, false otherwise~is_cluster() cluster
+is_cntrl(STRING)~Determines for each character in sToParse, whether it is a control  character type, or not~is_cntrl()
 is_data(STRING)~Returns true, if STRING is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster
+is_digit(STRING)~Determines for each character in sToParse, whether it is a decimal character type, or not~is_digit()
+is_graph(STRING)~Determines for each character in sToParse, whether it is a graphical character type, or not~is_graph()
+is_lower(STRING)~Determines for each character in sToParse, whether it is a lowercase character type, or nott~is_lower()
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number
+is_print(STRING)~Determines for each character in sToParse, whether it is a printable character type, or not~is_print()
+is_punct(STRING)~Determines for each character in sToParse, whether it is a punctuation character type, or not~is_punct()
+is_space(STRING)~Determines for each character in sToParse, whether it is a white-space character type, or not~is_space()
 is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenketten # \" is_string()
 is_table(STRING)~Returns true, if STRING is a table, false otherwise~is_table() data cache table
+is_upper(STRING)~Determines for each character in sToParse, whether it is a uppercase character type, or not~is_upper()
+is_xdigit(STRING)~Determines for each character in sToParse, whether it is a hexadecimal character type, or not~is_xdigit()
 invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren
 Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke
 ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()
