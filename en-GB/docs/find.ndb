@@ -199,6 +199,7 @@ neumann(n,x)~Neumann function (Bessel function of the second kind) with the orde
 new~Generates new directories, scripts, procedures, files and caches~ordner scripte prozeduren erzeugen generieren verzeichnisse directory files
 nlines~Contains the number of lines for the current data access~rows dataaccess end number
 norm(x,y,z,...)~Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm norm()
+normalize(MAT)~Normalizes the values in the matrix MAT to the (absolute) range [0,1]~normalize() normieren
 num(x,y,z,...)~returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()
 NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipfad filepath version
 # O

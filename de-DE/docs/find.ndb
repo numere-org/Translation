@@ -199,6 +199,7 @@ neumann(n,x)~Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n~neum
 new~Erzeugt neue Ordner, Scripte, Prozeduren, Dateien und Caches~ordner scripte prozeduren erzeugen generieren verzeichnisse directory files
 nlines~Enthält die Zahl der Zeilen beim aktuellen Datenzugriff~rows dataaccess end number
 norm(x,y,z,...)~Berechnet die euklidische Norm eines Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm norm()
+normalize(MAT)~Normiert die Werte der Matrix MAT auf den (absoluten) Bereich [0,1]~normieren normalize()
 num(x,y,z,...)~Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()
 NumeRe v $$$~Deine NumeRe-Distribution befindet sich hier: $$$~numere programm dateipfad filepath version
 # O
