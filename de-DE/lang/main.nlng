@@ -404,6 +404,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                              
 PARSERFUNCS_LISTFUNC_FUNC_OR_[LOGIC]=						or(x,y,z,...)                                LOG      - Verknüpft die Argumente mit einem "||"-Operator
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[STATS]=						pct(x,y,z,...,p)                             VAL      - p-tes Perzentil aus x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[ANGULAR_COORDS]=				phi(x,y)                                     VAL      - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
+PARSERFUNCS_LISTFUNC_FUNC_POLYNOMIAL_[NUM_POLYNOMIAL]=		polynomial(x,a0,a1,a2,...)                   VAL      - Berechnet den Wert des Polynoms a0+a1*x+a2*x^2+... an der Stelle x
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)                               VAL      - Produkt der Argumente x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_RADIAN_[ANGULAR]=					radian(alpha)                                VAL      - Bogenmaßwert von Winkel alpha [Grad]. Definiert für ganz R
 PARSERFUNCS_LISTFUNC_FUNC_RAND_[NUM_RANDOM_DISTRIB]=		rand(x0,x1)                                  VAL      - Generiert eine (reelle und gleichverteilte) Zufallszahl im Intervall [x0,x1)
