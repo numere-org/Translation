@@ -85,6 +85,7 @@ COMMON_FILETYPE_C=C-Quelldatei
 COMMON_FILETYPE_HPP=C++-Headerdatei
 COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_H=C-Headerdatei
+COMMON_FILETYPE_DOT=Graphviz-DOT-Datei
 COMMON_FUNCTION_DEPRECATED=Diese Funktion ist veraltet und wird in Zukunft entfernt.
 COMMON_COMMAND_DEPRECATED=Dieses Kommando ist veraltet und wird in Zukunft entfernt.
 COMMON_SYNTAX_DEPRECATED=Diese Syntax ist veraltet und wird in Zukunft nicht mehr unterstützt.
@@ -2062,3 +2063,8 @@ GUI_PKGDLG_INSTALLERWARNING=Dies ist ein Installations-Script. Um die enthaltene
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Prozedur-Abhängigkeiten [%%1%%]
 GUI_DEPDLG_TREE=Abhängigkeitsbaum der Hauptprozedur in der aktuellen Datei
+GUI_DEPDLG_FOLDALL=Alles einfalten
+GUI_DEPDLG_UNFOLDALL=Alles ausfalten
+GUI_DEPDLG_FOLDITEM=Zweig einfalten
+GUI_DEPDLG_UNFOLDITEM=Zweig ausfalten
+GUI_DEPDLG_EXPORTDOT=In eine %%COMMON_FILETYPE_DOT%% exportieren

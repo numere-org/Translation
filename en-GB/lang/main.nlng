@@ -85,6 +85,7 @@ COMMON_FILETYPE_C=C source file
 COMMON_FILETYPE_HPP=C++ header file
 COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_H=C header file
+COMMON_FILETYPE_DOT=Graphviz DOT file
 COMMON_FUNCTION_DEPRECATED=This function is deprecated and will be removed in the future.
 COMMON_COMMAND_DEPRECATED=This command is deprecated and will be removed in the future.
 COMMON_SYNTAX_DEPRECATED=This syntax is deprecated and will not be supported in the future.
@@ -2063,3 +2064,8 @@ GUI_PKGDLG_INSTALLERWARNING=This is an installer script. To install the containe
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Procedure dependencies [%%1%%]
 GUI_DEPDLG_TREE=Dependency tree of the main procedure of the current file
+GUI_DEPDLG_FOLDALL=Fold all
+GUI_DEPDLG_UNFOLDALL=Unfold all
+GUI_DEPDLG_FOLDITEM=Fold branch
+GUI_DEPDLG_UNFOLDITEM=Unfold branch
+GUI_DEPDLG_EXPORTDOT=Export to %%COMMON_FILETYPE_DOT%%
