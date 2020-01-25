@@ -984,7 +984,7 @@ TOOLS_TIMESTAMP_AT=at
 # ===============================
 PROC_NAMESPACE_THISFILE_MESSAGE=Following procedures are implicit 'private'.
 PROC_ADDED_DATE=Added
-PROC_END_OF_PROCEDURE=End of procedure
+PROC_END_OF_PROCEDURE=End of file
 PROC_FOOTER=NumeRe: Framework für Numerische Rechnungen | Free numerical software licenced under GNU GPL v3
 # CACHE
 # ===============================
