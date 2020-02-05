@@ -32,7 +32,7 @@
 		<item node="Q3">upper quartile of each data row (Functions pendant: <code>pct()</code>)</item>
 		<item node="RMS">averaged norm of each data row (root mean square)</item>
 		<item node="Skew">Skewness of each data row: Skew &lt; 0 for left-skewed, Skew &gt; 0 for right-skewed distributions</item>
-		<item node="Exc">Excess kurtosis of each data row: Exc &lt; 0 for small-peaked, Exc &gt; 0 for wide-peaked distributions</item>
+		<item node="Exc">Excess kurtosis of each data row: Exc &gt; 0 for small-peaked, Exc &lt; 0 for wide-peaked distributions</item>
 		<item node="min">Minimal value (Functions pendant: <code>min()</code>)</item>
 		<item node="max">Maximal value (Functions pendant: <code>max()</code>)</item>
 		<item node="num">Number of values (excludes invalid values)</item>

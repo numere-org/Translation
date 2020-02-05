@@ -1403,6 +1403,8 @@ GUI_MENU_SORT_ASC=Zeilen aufsteigend sortieren
 GUI_MENU_SORT_ASC_TTP=Sortiert die aktuellen Zeilen aufsteigend
 GUI_MENU_SORT_DESC=Zeilen absteigend sortieren
 GUI_MENU_SORT_DESC_TTP=Sortiert die aktuellen Zeilen absteigend
+GUI_MENU_CREATE_DOCUMENTATION=Erzeuge Dokumentationsblock für Prozedur%%TAB%%Ctrl-Alt-B
+GUI_MENU_CREATE_DOCUMENTATION_TTP=Erzeugt einen vorgefüllten Dokumentations-Kommentarblock vor der aktuellen Prozedur
 GUI_MENU_CREATELATEX=LaTeX-Dokumentation erzeugen
 GUI_MENU_CREATELATEX_TTP=Erzeugt eine LaTeX-Datei aus dieser Datei und legt sie im Ordner "<savepath>/docs" ab
 GUI_MENU_RUNLATEX=LaTeX-Dokumentation erzeugen und kompilieren
@@ -1439,6 +1441,7 @@ GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start
 # Tooltips
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Klicke rechts, um die Definition zu suchen
+GUI_EDITOR_CALLTIP_PROC_PARAMS=Parameter dieser Prozedur
 GUI_EDITOR_CALLTIP_...=		...         - Ermöglicht eine beliebige Zahl an Argumenten
 GUI_EDITOR_CALLTIP_ANS=		ans         - Enthält das Ergebnis der letzten Berechnung
 GUI_EDITOR_CALLTIP_CACHE=	cache()  {} - Standard-Tabellen-Objekt. Der Inhalt kann modifiziert werden

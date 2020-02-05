@@ -1212,7 +1212,6 @@ GUI_ABOUT_CREDITS=NumeRe wouldn't be possible without the used libraries, the pa
 GUI_ABOUT_INFO=%%BUILTIN_CREDITS_VERSIONINFO%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_1%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_2%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_3%%
 GUI_ABOUT_STATS=Lines of C++ code:%%LINEBREAK%%   ~34 000 (GUI)%%LINEBREAK%%   ~87 000 (Kernel)%%LINEBREAK%%SVN commits:%%LINEBREAK%%   ~650%%LINEBREAK%%Number of source files:%%LINEBREAK%%   ~120 (GUI)%%LINEBREAK%%   ~110 (Kernel)%%LINEBREAK%%Languages:%%LINEBREAK%%   2 (German and English)%%LINEBREAK%%Begin of the project:%%LINEBREAK%%   October 2013%%LINEBREAK%%End of the projects:%%LINEBREAK%%   Not even planned%%LINEBREAK%%Number of fixed bugs:%%LINEBREAK%%   ~200 (Documented)%%LINEBREAK%%   ~500 (Undocumented)%%LINEBREAK%%Number of (new) bugs, which made it in a RC:%%LINEBREAK%%   ~35%%LINEBREAK%%Number of the (public) releases:%%LINEBREAK%%   ~35%%LINEBREAK%%Number of the comments about NumeRe:%%LINEBREAK%%   ~15 (Compliments)%%LINEBREAK%%   ~20 (Problems)%%LINEBREAK%%   ~80 (Bugs)%%LINEBREAK%%Number of overnighters:%%LINEBREAK%%   None%%LINEBREAK%%Number of "Ops" during a presentation:%%LINEBREAK%%   ~50%%LINEBREAK%%Amount of consumend caffeine:%%LINEBREAK%%   unmeasurable
 GUI_ABOUT_JOIN=Do you believe in Open Source and GPL? Crazy on Programming? An amazing idea? Or focus on intense testing? Everything is welcome!%%LINEBREAK%%%%LINEBREAK%%Get in touch through the following possibilities (the links are below):%%LINEBREAK%%  - Old school: write us an email%%LINEBREAK%%  - Bug or idea: submit a ticket%%LINEBREAK%%  - Gabble: chat with us directly on Discord%%LINEBREAK%%%%LINEBREAK%%The following skills are helpful, but not required:%%LINEBREAK%%  - Some knowledge in C++ (well, actually that's needed)%%LINEBREAK%%  - Some experiences in programming and debugging%%LINEBREAK%%%%LINEBREAK%%We're using the following tools and frameworks (we provide a complete setup as compiler suite including all libraries):%%LINEBREAK%%  - MinGW/TDM-GCC%%LINEBREAK%%  - Apache SVN%%LINEBREAK%%  - MathGL%%LINEBREAK%%  - Gnu Scientific Library (GSL)%%LINEBREAK%%  - Boost%%LINEBREAK%%  - wxWidgets%%LINEBREAK%%  - Code::Blocks%%LINEBREAK%%%%LINEBREAK%%Mail: numere.developer@gmail.com%%LINEBREAK%%Tickets: https://sourceforge.net/p/numere/tickets/ %%LINEBREAK%%Source: https://sourceforge.net/p/numere/source/ %%LINEBREAK%%Compiler suite: https://sourceforge.net/projects/numere/files/ %%LINEBREAK%%Discord: https://discord.gg/s5tSjwU
-
 # tree ctrl strings
 GUI_FILETREE=Files
 GUI_FUNCTIONTREE=Symbols
@@ -1404,6 +1403,8 @@ GUI_MENU_SORT_ASC=Sort lines ascending
 GUI_MENU_SORT_ASC_TTP=Sorts the current lines in ascending order
 GUI_MENU_SORT_DESC=Sort lines descending
 GUI_MENU_SORT_DESC_TTP=Sorts the current lines in descending order
+GUI_MENU_CREATE_DOCUMENTATION=Create documentation block for procedure%%TAB%%Ctrl-Alt-B
+GUI_MENU_CREATE_DOCUMENTATION_TTP=Creates a prefilled documentation comment block in front of the current procedure
 GUI_MENU_CREATELATEX=Create LaTeX documentation
 GUI_MENU_CREATELATEX_TTP=Creates a LaTeX file from this file and stores it at "<savepath>/docs"
 GUI_MENU_RUNLATEX=Create LaTeX documentation and run
@@ -1440,6 +1441,7 @@ GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start here
 # Tooltips
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Click right to search its definition
+GUI_EDITOR_CALLTIP_PROC_PARAMS=Parameters for this procedure
 GUI_EDITOR_CALLTIP_...=		...         - Allows an arbitrary number of arguments
 GUI_EDITOR_CALLTIP_ANS=		ans         - Contains the result of the last calculation
 GUI_EDITOR_CALLTIP_CACHE=	cache()  {} - Standard table object. Its contents may be modified

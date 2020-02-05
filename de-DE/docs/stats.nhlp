@@ -32,7 +32,7 @@
 		<item node="Q3">oberes Quartil der Datenreihen (Funktionen-Pendant: <code>pct()</code>)</item>
 		<item node="RMS">gemittelte Norm der Datenreihen (root mean square)</item>
 		<item node="Skew">Schiefe der Datensätze: Skew &lt; 0 für linksschiefe, Skew &gt; 0 für rechtsschiefe Verteilungen</item>
-		<item node="Exz">Exzess der Daten: Exz &lt; 0 für steilgipflige, Exz &gt; 0 für flachgipflige Verteilungen</item>
+		<item node="Exz">Exzess der Daten: Exz &gt; 0 für steilgipflige, Exz &lt; 0 für flachgipflige Verteilungen</item>
 		<item node="min">Minimaler Wert (Funktionen-Pendant: <code>min()</code>)</item>
 		<item node="max">Maximaler Wert (Funktionen-Pendant: <code>max()</code>)</item>
 		<item node="num">Zahl der Werte (schließt ungültige Werte aus)</item>
