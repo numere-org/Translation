@@ -1,6 +1,6 @@
 <!--
 	NumeRe: Framework fuer Numerische Rechnungen
-	Copyright (C) 2016  Erik Haenel et al.
+	Copyright (C) 2020  Erik Haenel et al.
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -53,6 +53,7 @@
 		<keywords>
 			<keyword>console</keyword>
 			<keyword>konsole</keyword>
+			<keyword>terminal</keyword>
 		</keywords>
 	</article>
 	<article id="filetree">
@@ -139,16 +140,11 @@
 		<title string="Daten und Zeichenketten sortieren" idxkey="sort" />
 		<keywords>
 			<keyword>sort</keyword>
+			<keyword>ascen</keyword>
+			<keyword>descen</keyword>
 		</keywords>
 	</article>
-	<article id="calc">
-		<file path="<>/docs/calc.nhlp" />
-		<title string="Rechner-Modus" idxkey="calc" />
-		<keywords>
-			<keyword>calc</keyword>
-			<keyword>rech</keyword>
-		</keywords>
-	</article>
+	<article id="calc" delete="true"></article>
 	<article id="color">
 		<file path="<>/docs/color.nhlp" />
 		<title string="Farbschemata und Linienfarben für Plots" idxkey="colors" />
@@ -445,9 +441,10 @@
 			<keyword>sp</keyword>
 		</keywords>
 	</article>
+	<article id="functions" delete="true"></article>
 	<article id="functions">
 		<file path="<>/docs/functions.nhlp" />
-		<title string="Vordefinierte mathematische Funktionen" idxkey="func" />
+		<title string="Vordefinierte mathematische Funktionen" idxkey="functions" />
 		<keywords>
 			<keyword>func</keyword>
 			<keyword>funk</keyword>
@@ -603,7 +600,7 @@
 	</article>
 	<article id="multiresult">
 		<file path="<>/docs/multiresult.nhlp" />
-		<title string="Parallel- und Multiergebnisrechnungen" idxkey="multiresult" />
+		<title string="Vektorisierte Berechnungen" idxkey="multiresult" />
 		<keywords>
 			<keyword>mehrf</keyword>
 			<keyword>multi</keyword>
@@ -620,7 +617,6 @@
 			<keyword>proc</keyword>
 			<keyword>file</keyword>
 			<keyword>dir</keyword>
-			<keyword>plugin</keyword>
 			<keyword>free</keyword>
 		</keywords>
 	</article>
@@ -874,14 +870,7 @@
 			<keyword>mode</keyword>
 		</keywords>
 	</article>
-	<article id="replaceline">
-		<file path="<>/docs/replaceline.nhlp" />
-		<title string="(Kommando wurde entfernt)" idxkey="replaceline" />
-		<keywords>
-			<keyword>corr</keyword>
-			<keyword>repl</keyword>
-		</keywords>
-	</article>
+	<article id="replaceline" delete="true"></article>
 	<article id="script">
 		<file path="<>/docs/script.nhlp" />
 		<title string="NumeRe-Scripte" idxkey="script" />
@@ -977,7 +966,7 @@
 	</article>
 	<article id="units">
 		<file path="<>/docs/units.nhlp" />
-		<title string="Einheitenumrechnung" idxkey="units" />
+		<title string="Einheitenumrechnung" idxkey="unit" />
 		<keywords>
 			<keyword>einheit</keyword>
 			<keyword>unit</keyword>
