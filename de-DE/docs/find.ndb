@@ -126,6 +126,7 @@ getfilelist(STRING,T)~Gibt eine Liste aller Dateien, auf die das Namensschema ST
 getfileparts(sFilePath)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis
 getfolderlist(STRING,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STRING zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()
+getkeyval({STR},STR,ARG,LOG)~Gibt den Wert zum zugehörigen Schlüssel aus der zweiten Zeichenkette aus der Schlüssel-Wert-Liste des ersten Zeichenkettenarrays zurück~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters
 getmatchingparens(STRING)~Gibt die Position der passenen schließenden Klammer in STRING zurück.~klammer zu getmatchingparens()
 getopt(STRING,POS)~Gibt den Wert eines Parameters in der Zeichenkette STRING, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente values getopt()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck kommando include einbinden

@@ -125,6 +125,7 @@ getfilelist(STRING,T)~Returns a list of strings containing all files matching to
 getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis
 getfolderlist(STRING,T)~Returns a list of strings containing all directories matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
 getindices(STRING,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()
+getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters
 getmatchingparens(STRING)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu getmatchingparens()
 getopt(STRING,POS)~Returns the value of a parameter in the string STRING, with the first character of the value at position POS~parameter werte argumente values getopt()
 global~Declares the current expression as global~globaler ausdruck kommando include einbinden
