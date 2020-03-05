@@ -252,6 +252,7 @@ sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art
 script~Ein NumeRe-Script (*.nscr) laden/ausführen, siehe "help script"~starten laden plugins installation installieren
 set -OPTION~Die Option OPTION ändern, siehe "help set"~einstellungen optionen settings konfigurieren konfiguration einstellen
 show~Den Inhalt eines Datensatzes anzeigen~data() cache() auflisten
+shuffle(n,m)~Gibt n zufällig ausgewählte und eindeutige Werte aus einem 1:m array zurück~mischen zufällig random
 sign(x)~Vorzeichen von x~vorzeichen signum sign()
 sin(x)~Sinus von x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Sinus cardinalis von x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()

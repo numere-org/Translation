@@ -53,6 +53,7 @@
 		<item node="or(MAT)">Applies the operator || to the elements of the matrix MAT</item>
 		<item node="reshape(MAT,n,m)">Changes the shape of the matrix MAT to a <expr>(n, m)</expr> matrix. The number of elements in the old and the new matrix must match for this function. Reshaping is done linewise</item>
 		<item node="resize(MAT,n,m)">Changes the size of the matrix MAT to <expr>(n, m)</expr>. Missing lines and rows are appended using zeros</item>
+		<item node="shuffle(sel,val)">Returns <expr>sel</expr> randomly selected and unique values out of a <expr>1:val</expr> array. <expr>val</expr> is an optional value, which defaults to <expr>sel</expr></item>
 		<item node="size(MAT)">Returns the number of lines and columns of the matrix MAT as a vector</item>
 		<item node="solve(MAT)">Solves the linear system of equations, which is described by the matrix MAT, with the Gaussian algorithm.</item>
 		<item node="trace(MAT)">Calculates the trace of the square matrix MAT.</item>

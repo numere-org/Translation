@@ -252,6 +252,7 @@ sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster ar
 script~Loads and starts scripts~starten laden plugins installation installieren
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen
 show~Shows the content of the passend data object~data() cache() auflisten
+shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random
 sign(x)~Returns the sign of x~vorzeichen signum sign()
 sin(x)~Sine of x~sinus trigonometrische funktionen trigonometrie sin()
 sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
