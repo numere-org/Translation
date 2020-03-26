@@ -143,6 +143,7 @@ identity(n)~Generates a n-dimensional identity matrix~identity() matrix identitä
 idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren
 if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
+implot~Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]~images bilder imageplot
 imread~Reads an image file as data grid into a table~imageread images load bilder
 integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
 is_alnum(STRING)~Determines for each character in sToParse, whether it is a alphanumeric  character type, or not~is_alnum()

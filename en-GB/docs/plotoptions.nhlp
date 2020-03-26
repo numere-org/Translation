@@ -52,7 +52,8 @@
 		<item node="marks=VALUE/<br>  nomarks">(Only for <code>plot3d</code>) Draws circles of the size VALUE at the <expr>(x,y,z)</expr> coordinates, where the circles are filled according the <expr>z</expr> values and the current color scheme</item>
 		<item node="maxline=COMMENT">Draws a horizontal line through the maximal function value of a plot and adds the COMMENT. In the form <code>maxline=(TEXT,STYLE)</code> the display of the line may be modified</item>
 		<item node="minline=COMMENT">Draws a horizontal line through the minimal function value of a plot and adds the COMMENT. In the form <code>minline=(TEXT,STYLE)</code> the display of the line may be modified</item>
-		<item node="oeps=NAME">Creates an EPS file instead of a PNG file with the filename NAME</item>
+		<item node="obps=NAME">Creates an EPS file using bitmap representation instead of a PNG file with the filename NAME</item>
+		<item node="oeps=NAME">Creates an EPS file using vector representation instead of a PNG file with the filename NAME</item>
 		<item node="open/noopen">Show/don't show the created graphic in an external viewer (if available)</item>
 		<item node="opng=NAME">Set the filename of the created PNG file to NAME. Already present files will be overwritten. Filenames containing whitespaces have to be passed inside of quotation marks</item>
 		<item node="origin=ORIGIN">Modify the coordinate origin: <code>origin=std</code> actives the default behavior, with <code>origin=sliding</code> the axes run through at least one 0 if available, and with <code>origin=X,Y,Z</code> (where values for X,Y,Z are mandatory) the origin may be moved to the desired position (if it is available. Otherwise the behavior of <code>origin=sliding</code> will be applied).</item>

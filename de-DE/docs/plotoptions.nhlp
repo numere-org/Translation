@@ -53,7 +53,8 @@
 		<item node="maxline=KOMNTR">Zeichnet eine horizontale Linie durch den maximalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>
 		<item node="minline=KOMNTR">Zeichnet eine horizontale Linie durch den minimalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>
 		<item node="open/noopen">Erzeugte Graphik in einem externen Viewer (sofern vorhanden) anzeigen/nicht anzeigen</item>
-		<item node="oeps=NAME">Erzeugt anstatt einer PNG-Datei eine EPS-Datei unter NAME</item>
+		<item node="obps=NAME">Erzeugt anstatt einer PNG-Datei eine EPS-Datei unter Verwendung einer Bitmap-Darstellung unter NAME</item>
+		<item node="oeps=NAME">Erzeugt anstatt einer PNG-Datei eine EPS-Datei unter Verwendung einer Vektor-Darstellung unter NAME</item>
 		<item node="opng=NAME">Dateiname der erzeugten PNG-Datei auf NAME setzen. Vorhandene Dateien werden überschrieben! Lange Dateinamen (mit Leerzeichen) können mit umschließenden Anführungszeichen angegeben werden</item>
 		<item node="origin=URSPRUNG">Den Koordinatenursprung beeinflussen: <code>origin=std</code> ist das Standardverhalten, mit <code>origin=sliding</code> gehen die Achsen durch mindestens eine 0, falls vorhanden, und mit <code>origin=X,Y,Z</code> (wobei Werte für X,Y,Z nötig sind) kann der Ursprung auf eine beliebige Position verschoben werden (falls dieser nicht Teil des Plots ist, wird das Verhalten von <code>origin=sliding</code> angewendet).</item>
 		<item node="osvg=NAME">Wie <code>oeps</code>, allerdings wird eine SVG-Datei erzeugt</item>

@@ -732,6 +732,7 @@
 			<keyword>onlystyl</keyword>
 			<keyword>open</keyword>
 			<keyword>opng</keyword>
+			<keyword>obps</keyword>
 			<keyword>origin</keyword>
 			<keyword>osvg</keyword>
 			<keyword>otex</keyword>
@@ -1207,9 +1208,10 @@
 	</article>	
 	<article id="imread">
 		<file path="<>/docs/imread.nhlp" />
-		<title string="Bilder als Daten einlesen" idxkey="imread" />
+		<title string="Bilder einlesen und darstellen" idxkey="imread, implot" />
 		<keywords>
 			<keyword>imread</keyword>
+			<keyword>implot</keyword>
 			<keyword>images</keyword>
 			<keyword>bilder</keyword>
 		</keywords>

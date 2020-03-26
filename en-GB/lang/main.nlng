@@ -651,6 +651,7 @@ PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]              -
 PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]                 - Draws a double horizontal line. Using the parameter "-single", this command will draw only one single line
 PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)                   - Starts the definition of an IF construct. The expression EX must have a logical meaning
 PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Checks before the actual definition, if the current function in EX is not already defined, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_IMPLOT_[PLOTTING]=				implot       EX [-set PAR]          - Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]. May be combined with other plotting styles
 PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM                     - Reads the image file NM as data grid into the table "image()". The target table may be changed using the options
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
@@ -1674,6 +1675,7 @@ GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOZLOG=nozlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NQ=nq
 GUI_EDITOR_CALLTIP_OPT_NUM=num [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
+GUI_EDITOR_CALLTIP_OPT_OBPS=obps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OK=buttons=ok [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
