@@ -52,7 +52,7 @@ CACHE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help cache"~zwisch
 char(STRING,POS)~Gibt das Zeichen aus der Zeichenkette STRING an der Stelle POS zurück~zeichen character string zeichenkette char()
 Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunction
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds
-cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-2,-1,0,1,2} zurück~cmp() compare vergleich dataelement cacheelement
+cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings
 compose~Erlaubt die Komposition mehrerer Plotstile und mehrerer Plots in einer Ausgabe, siehe "help compose"~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot
 cont~Erstellen eines Konturlinienplots~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien
