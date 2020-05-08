@@ -57,8 +57,9 @@
 		<item node="open/noopen">Show/don't show the created graphic in an external viewer (if available)</item>
 		<item node="opng=NAME">Set the filename of the created PNG file to NAME. Already present files will be overwritten. Filenames containing whitespaces have to be passed inside of quotation marks</item>
 		<item node="origin=ORIGIN">Modify the coordinate origin: <code>origin=std</code> actives the default behavior, with <code>origin=sliding</code> the axes run through at least one 0 if available, and with <code>origin=X,Y,Z</code> (where values for X,Y,Z are mandatory) the origin may be moved to the desired position (if it is available. Otherwise the behavior of <code>origin=sliding</code> will be applied).</item>
-		<item node="osvg=NAME">Similar to <code>oeps</code>, but creates an SVG file</item>
-		<item node="otex=NAME">Similar to <code>oeps</code>, but creates an TeX file (with the use of TikZ)</item>
+		<item node="osvg=NAME">Similar to <code>oeps</code>, but creates a SVG file</item>
+		<item node="otex=NAME">Similar to <code>oeps</code>, but creates a TeX file (with the use of TikZ)</item>
+		<item node="otif=NAME">Similar to <code>oeps</code>, but creates a TIFF file</item>
 		<item node="perspective=VALUE">Actives the perspective view. The value may be in the interval [0,1) and describes the strength of the perspective</item>
 		<item node="plotcolors=COLORS">Modify the COLORS of the lines in plots and 3D trajectories. See <a href="nhlp://plotcolors?frame=new">help plotcolors</a> for further details</item>
 		<item node="pointstyles=STYLE">Modify the appearance of the points in the plot. See <a href="nhlp://pointstyles?frame=new">help pointstyles</a> for further details</item>

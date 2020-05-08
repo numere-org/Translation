@@ -59,6 +59,7 @@
 		<item node="origin=URSPRUNG">Den Koordinatenursprung beeinflussen: <code>origin=std</code> ist das Standardverhalten, mit <code>origin=sliding</code> gehen die Achsen durch mindestens eine 0, falls vorhanden, und mit <code>origin=X,Y,Z</code> (wobei Werte für X,Y,Z nötig sind) kann der Ursprung auf eine beliebige Position verschoben werden (falls dieser nicht Teil des Plots ist, wird das Verhalten von <code>origin=sliding</code> angewendet).</item>
 		<item node="osvg=NAME">Wie <code>oeps</code>, allerdings wird eine SVG-Datei erzeugt</item>
 		<item node="otex=NAME">Wie <code>oeps</code>, allerdings wird eine TeX-Datei (mithilfe von TikZ) erzeugt</item>
+		<item node="otif=NAME">Wie <code>oeps</code>, allerdings wird eine TIFF-Datei erzeugt</item>
 		<item node="perspective=WERT">Perspektivische Ansicht aktivieren. Der Wert WERT darf im Interall [0,1) liegen und beschreibt die Stärke der Perspektive</item>
 		<item node="plotcolors=FARBEN">Die FARBEN der Linien in gewöhnlichen Plots und 3D-Trajektorien einstellen. Siehe <a href="nhlp://plotcolors?frame=new">help plotcolors</a> für weitere Details</item>
 		<item node="pointstyles=STYLE">Das Erscheinungsbild der Punkte in Plots einstellen. Siehe <a href="nhlp://pointstyles?frame=new">help pointstyles</a> für weitere Details</item>
