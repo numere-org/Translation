@@ -596,6 +596,9 @@
 			<keyword>retou</keyword>
 			<keyword>retoq</keyword>
 			<keyword>smooth</keyword>
+			<keyword>weightedlin</keyword>
+			<keyword>gaussian</keyword>
+			<keyword>savitzkygol</keyword>
 		</keywords>
 	</article>
 	<article id="multiresult">
