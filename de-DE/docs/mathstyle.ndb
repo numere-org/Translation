@@ -83,6 +83,7 @@ inf~<span style="font-style: italic;">&infin;</span>~VAL
 -~<span style="font-style: normal;">&minus;</span>~OP
 +~<span style="font-style: normal;">+</span>~OP
 *~&nbsp;~OP
+times~<span style="font-style: normal;">&times;</span>~OP
 <="~<span style="font-style: normal;">&le;</span~OP
 &lt;=~<span style="font-style: normal;">&le;</span>~OP
 >=~<span style="font-style: normal;">&ge;</span>~OP
@@ -107,6 +108,12 @@ and~<span style="font-style: normal;">&and;</span>~OP
 or~<span style="font-style: normal;">&or;</span>~OP
 not~<span style="font-style: normal;">&not;</span>~OP
 det~<span style="font-style: normal;">det</span>~OP
+in~<span style="font-style: normal; font-family: lucida sans unicode;">&isin;</span>~OP
+nin~<span style="font-style: normal; font-family: lucida sans unicode;">&notin;</span>~OP
+forall~<span style="font-style: normal; font-family: lucida sans unicode;">&forall;</span>~OP
+exist~<span style="font-style: normal; font-family: lucida sans unicode;">&exist;</span>~OP
+partial~<span style="font-style: normal;">&part;</span>~OP
+emptyset~<span style="font-style: normal; font-family: lucida sans unicode;">&empty;</span>~OP
 # Mathematical functions
 cos~<span style="font-style: normal;">cos</span>~FCT
 acos~<span style="font-style: normal;">arccos</span>~FCT
