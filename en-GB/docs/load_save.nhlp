@@ -25,16 +25,16 @@
 	<list>
 		<item node="-all">Appending of this parameter and using a filename, which contains <em>at least one wildcard</em>, will result in loading all files matching to this filename</item>
 		<item node="append">With this command you may append single files successively to already present data in memory: <code>append FILE</code> This command supports the parameter <code>-all</code> as well</item>
-		<item node="tocache">This parameter creates a cache with the corresponding filename and copies the contents of the data file directly to this cache. This parameter supports the additional parameter <code>-all</code> and creates multiple caches in this case</item>
+		<item node="-tocache">This parameter creates a table with the corresponding filename and copies the contents of the data file directly to this table. This parameter supports the additional parameter <code>-all</code> and creates multiple caches in this case</item>
 	</list>
 	If you don't pass a filename during saving, then NumeRe will choose a fitting filename and the corresponding storage location by itself.
 	You may pass the parameter <code>-ignore</code> to the command <code>load</code> to suppress a probable confirmation and to automatically free the needed memory, if applicable. Additionally, you may pass the number of the line in the comments, in which the column headings are located, if you pass <code>-head=LINE</code>. You'll only need this in the rare case that NumeRe is not capable of identifying them by its own.
 	To export a data set to a textual file, you may use the command <code>export</code> followed by the data set and the desired filename:<codeblock>export DATA(I1:I2,J1:J2) -file=FILE</codeblock>If you define the file extension "*.tex", then a table using the TeX syntax will be created instead of the usual output. Defining the extension "*.csv" will produce a comma separated values file and passing a filename with "*.xls" as extension will create a Excel (97-2003) sheet containing the exported data. Additionally one may change the number of significant digits by appending the option <code>precision=DIGITS</code>.
-	<example desc="Saving of the cache in the file <code>cache.ndat</code> and exporting of the first two columns to a TeX file:">
-		save cache() -file=cache		(.ndat will be appended automatically)
-		The data set was successfully saved to "&SAVEPATH&/cache.ndat".
-		export cache(:,1:2) -file=cache.tex
-		A table with 2088 elements was successfully written to the file "&SAVEPATH&/cache.tex".
+	<example desc="Saving the table <code>table()</code> into the file <code>table.ndat</code> and exporting the first two columns to a TeX file:">
+		save table() -file=table		(.ndat will be appended automatically)
+		The data set was successfully saved to "&SAVEPATH&/table.ndat".
+		export table(:,1:2) -file=table.tex
+		A table with 2088 elements was successfully written to the file "&SAVEPATH&/table.tex".
 	</example>
 	<em>See also:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
 </article>
