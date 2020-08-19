@@ -532,6 +532,7 @@ PARSERFUNCS_LISTFUNC_METHOD_COLS_[DATA]=			        cols                   {}    
 PARSERFUNCS_LISTFUNC_METHOD_LINES_[DATA]=			        lines                  {}       - Modifies the operation of the multi-argument function to linewise application
 PARSERFUNCS_LISTFUNC_METHOD_GRID_[DATA]=			        grid                   {}       - Modifies the operation of the multi-argument function, so that the data set will be interpreted as data grid
 PARSERFUNCS_LISTFUNC_METHOD_EVERY_[DATA]=				    every(nFirst,nIncr)    {}       - This method chooses in combination with .cols or .lines the first (nFirst) column/line, on which the multi-argument function will be applied. With the argument nIncr one may choose whether only each nIncr-th column/line shall be selected. If only nFirst is passed, then nIncr will be identical to nFirst. Columns/lines may also be selected directly, if a vector is passed for nFirst: every({VEC})
+PARSERFUNCS_LISTFUNC_METHOD_NAME_[DATA]=				    name                   STR      - Returns the table name as string e.g. to be used together with "findcolumn()"
 PARSERFUNCS_LISTFUNC_METHOD_MIN_[DATA]=				        min                   {VAL}     - Applies the multi-argument function "min()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
 PARSERFUNCS_LISTFUNC_METHOD_MAX_[DATA]=				        max                   {VAL}     - Applies the multi-argument function "max()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
 PARSERFUNCS_LISTFUNC_METHOD_SUM_[DATA]=				        sum                   {VAL}     - Applies the multi-argument function "sum()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
@@ -1625,6 +1626,7 @@ GUI_EDITOR_CALLTIP_OPT_MAXLINE=maxline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTT
 GUI_EDITOR_CALLTIP_OPT_MEAN=mean=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_MED=med [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_MEDIUM=hires=medium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MEMORY=memory [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% clear]
 GUI_EDITOR_CALLTIP_OPT_MESSAGEBOX=type=messagebox [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
 GUI_EDITOR_CALLTIP_OPT_MIN=min
@@ -1775,7 +1777,7 @@ GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
 GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
 GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
-GUI_EDITOR_CALLTIP_OPT_TOCACHE=tocache[=CACHE()]
+GUI_EDITOR_CALLTIP_OPT_TOTABLE=totable[=TABLE()]
 GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
 GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_TOPRIGHT=legend=topright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

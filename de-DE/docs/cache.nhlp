@@ -19,39 +19,40 @@
 <article id="cache">
 	<title string="Tabellen (Caches)" />
 	Tabellen sind aktive Speicher in NumeRe, die tabellare Daten zwischenspeichern können, damit selbige weiterverarbeitet werden können.
-	Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock> Die neu erzeugten Tabellen deklarieren ihrerseits auch gleich ein zugehöriges Kommando (siehe unten).
-	Einzelne Elemente einer Tabelle können auch mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
+	Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
+	Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
 	Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden.
 	Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nlines</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden. Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>
 	Die Spaltenüberschriften können ähnlich gelesen und bearbeitet werden: <code>TABLE(#,SPALTE)</code> bzw. <code>TABLE(#,SPALTE) = KOPF</code>
-	<code>table</code> bzw. die selbst erzeugten Tabellen können aus Kompatibilität mit älteren Versionen von NumeRe auch als Kommandos eingesetzt werden. Parameter für diese Kommandos sind die folgenden, die meisten sind auch als eigenes Kommando implementiert:
+	<h>Kommandos in Zusammenhang mit Tabellen</h>
+	In Zusammenhang mit Tabellen sind spezielle Kommandos verfügbar:
 	<list>
-		<item node="-clear">Alle Tabellen und die automatische Sicherung löschen</item>
-		<item node="-show">Daten aus der entsprechenden Tabelle anzeigen</item>
-		<item node="-showf">Vollständigen Datensatz anzeigen</item>
-		<item node="-rename=NAME">Die gewählte Tabelle zu NAME umbenennen. Dies kann nicht auf <code>table</code> angewendet werden!</item>
-		<item node="-swap=TABLE">Den Inhalt der gewählten Tabelle mit dem Inhalt von TABLE vertauschen</item>
-		<item node="-save=NAME">Daten aus der gewählten Tabelle in die Datei NAME (*.ndat) speichern. Dateinamen mit Leerzeichen müssen von Anführungszeichen umschlossen sein</item>
-		<item node="-export=NAME">Daten aus der gewählten Tabelle in die Textdatei NAME (*.dat) exportieren. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei, mit *.csv eine CSV-Datei und mit *.xls wird eine Excel(R)-Mappe erzeugt)</item>
-		<item node="-MAF">Führt die Multiargumentfunktion MAF auf alle Elemente aus und gibt das Ergebnis zurück. Multiargumentfunktionen sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Mit den zusätzlichen Parametern <code>-lines</code> und <code>-cols</code> wird die Berechnung zeilenweise bzw. spaltenweise durchgeführt und als Vektor zurückgegeben; mit <code>-grid</code> werden die Elemente als Teil eines Datengitters betrachtet und die Multiargumentfunktionen auf die <expr>z</expr>-Werte des Datengitters beschränkt. Die <code>-every=FIRST,INCR</code>-Option ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile und das Inkrement (jede => INCR=1, jede zweite => INCR=2, etc.) vorzugeben. Wird dieser Option nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für FIRST übergeben wird.<br>Diese veraltete Kommando-Parameter-Konstruktion kann ersetzt werden durch die Verwendung der Parameter als Methoden und damit auch in einem regulären Ausdruck verwendet werden. Aus dem Parameter <code>every=FIRST,INCR</code> wird dabei die Methode <code>.every(nFirst,nIncr)</code>, alle anderen benötigen keine Klammern, z.B.: <code>TABLE().sum.cols.every(2,2)</code>
+		<item node="new TABLE1(), TABLE2(), ...">Die Tabellen <code>TABLE1(), TABLE2(), ...</code> erzeugen</item>
+		<item node="clear TABLE()">Inhalt der Tabelle <code>TABLE()</code> löschen</item>
+		<item node="clear -memory">Alle Tabellen und die automatische Sicherung löschen</item>
+		<item node="show TABLE()">Daten aus der entsprechenden Tabelle anzeigen</item>
+		<item node="showf TABLE()">Vollständigen Datensatz anzeigen (hat nur Einfluss, wenn kein externer Viewer verwendet wird)</item>
+		<item node="rename TABLE(), NEUERNAME()">Die Tabelle <code>TABLE</code> zu <code>NEUERNAME</code> umbenennen. Dies kann nicht auf <code>table</code> angewendet werden!</item>
+		<item node="swap TABLE1(), TABLE2()">Den Inhalt der Tabelle <code>TABLE1</code> mit dem Inhalt von <code>TABLE2</code> vertauschen</item>
+		<item node="save TABLE()">Daten aus der gewählten Tabelle in eine Datei mit automatisch generiertem Namen speichern. Mit <code>save TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen von Anführungszeichen umschlossen sein</item>
+		<item node="export TABLE()">Daten aus der gewählten Tabelle in eine Textdatei mit automatisch generiertem Dateinamen exportieren. Mit <code>export TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei, mit *.csv eine CSV-Datei und mit *.xls wird eine Excel(R)-Mappe erzeugt)</item>
+		<item node="delete TABLE(i1:i2,j1:j2)">Alle Einträge von Zeile <expr>i1</expr> bis <expr>i2</expr> und von Spalte <expr>j1</expr> bis <expr>j2</expr> werden unwiderruflich gelöscht. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden</item>
+		<item node="remove TABLE1(), TABLE2(), ...">Entfernt die Tabellen <code>TABLE1(), TABLE2(), ...</code> komplett</item>
 	</list>
-	Die Kommandos, die den Code lesbarer machen können und deswegen bevorzugt werden sollen, haben die folgenden Syntaxen:
-	<codeblock>
-		clear TABLE()
-		show TABLE()
-		showf TABLE()
-		rename TABLE(), NEUERNAME()
-		swap TABLE1(), TABLE2()
-		save TABLE() -set filename=NAME
-		export TABLE() -set filename=NAME
-	</codeblock>
-	Ein spezielles Kommando ist <code>delete TABLE(i1:i2,j1:j2)</code>. Dieses wird alle Einträge von Zeile <expr>i1</expr> bis <expr>i2</expr> und von Spalte <expr>j1</expr> bis <expr>j2</expr> unwiderruflich löschen. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden.
-	Selbst erzeugte Tabellen können mit dem Kommando <code>remove</code> wieder entfernt werden:<codeblock>remove TABLE1(), TABLE2(),...</codeblock>
 	An <code>clear</code> und <code>delete</code> kann <code>-ignore</code> angehängt werden, um die erforderliche Bestätigung zu unterdrücken.
-	<example desc="Daten in der Tabelle 'table()' anzeigen und anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1:">
+	<h>Methoden für die Arbeit mit Tabellen</h>
+	Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methoden sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Die Methode <code>name</code> gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt. Als Modifizierer sind die folgenden definiert:
+	<list>
+		<item node="lines">Wendet die entsprechende Methode zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
+		<item node="cols">Wendet die entsprechende Methode spaltenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
+		<item node="grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
+		<item node="every(nFirst,nIncr)">Ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
+	</list>
+	<example desc="Daten in der Tabelle 'table()' anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
 		show table()
 		[...]
 		sort table() cols=1[3:6]
+		table().sum.cols.every(2,2)
 	</example>
 	<em>Siehe auch:</em> <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://remove?frame=self">help remove</a>, <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://save?frame=self">help save</a>, <a href="nhlp://string?frame=self">help string</a>, <a href="nhlp://cluster?frame=self">help cluster</a> und <a href="nhlp://delete?frame=self">help delete</a>
 </article>

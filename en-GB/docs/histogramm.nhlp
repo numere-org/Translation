@@ -26,7 +26,7 @@
 	The desired options may be directly passed to the command <code>hist</code>:
 	<list>
 		<item node="export=FILENAME">The desired output filename of the created histogram. Filenames containing whitespaces must be surrunded with quotation marks. (Using the file extension *.tex this option will create a TeX file.) If no filename was passed (but <code>export</code> was passed), NumeRe will generate a fitting filename</item>
-		<item node="tocache">Writes a copy of the result table to the cache. The cache may be specified with <code>tocache=CACHENAME</code> and it will be generated, if it doesn't exist.</item>
+		<item node="totable">Writes a copy of the result table to a <code>table()</code>. The table may be specified with <code>totable=TABLENAME</code> and it will be generated, if it doesn't exist.</item>
 		<item node="bins=BINS">Specify the number of bins</item>
 		<item node="width=INTERVALWIDTH">Specify the width of the bins. <em>Careful:</em> if the number of bins is already specified, this value won't be considered.</item>
 		<item node="x=XMIN:XMAX">Restrict the <expr>x</expr> axis to [XMIN,XMAX]</item>

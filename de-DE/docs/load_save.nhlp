@@ -24,8 +24,8 @@
 	NumeRe unterstützt das gleichzeitige Laden mehrerer Dateien. Dazu kann eine der folgenden Methoden verwendet werden:
 	<list>
 		<item node="-all">Durch Anhängen dieses Parameters und Verwendung eines Dateinamens, der <em>mindestens eine Wildcard</em> enthält, werden alle Dateien in den Speicher geladen, die durch diesen Dateinamen beschrieben werden</item>
-		<item node="append">Einzelne Dateien können mit diesem Kommando sukzessive an die Dateien angehängt werden: <code>append DATEI</code> Dieses Kommando unterstützt ebenfalls den Parameter <code>-all</code></item>
-		<item node="-tocache">Dieser Parameter generiert eine Tabelle mit dem Dateinamen und kopiert den Inhalt des Datenfiles direkt in diese. Dieser Parameter unterstützt ebenfalls <code>-all</code></item>
+		<item node="append FILE">Einzelne Dateien können mit diesem Kommando sukzessive an die Dateien angehängt werden. Dieses Kommando unterstützt ebenfalls den Parameter <code>-all</code></item>
+		<item node="-totable">Dieser Parameter generiert eine Tabelle mit dem Dateinamen und kopiert den Inhalt des Datenfiles direkt in diese. Dieser Parameter unterstützt ebenfalls <code>-all</code></item>
 	</list>
 	Werden beim Speichern keine Dateinamen übergeben, so wählt NumeRe automatisch einen passenden Namen und Speicherort.
 	<code>load</code> kann dabei mit <code>-ignore</code> ergänzt werden, um eine etwaige Bestätigung zu unterdrücken und ggf. automatisch den Speicherplatz freizugeben. Außerdem kann <code>load</code> auch mit <code>-head=ZEILE</code> die Kommentarzeile übergeben werden, in welcher sich die Tabellenköpfe befinden, falls der Fall eintreten sollte, dass NumeRe selbige nicht automatisch identifizieren konnte.

@@ -85,7 +85,7 @@
 		zerfall(:, 2) = eval 5*exp(-x/20) + gauss(0, 0.1) -set [0:20];
 		plot zerfall()
 	</codeblock>
-	Mit dem ersten Kommando hast du einen neuen Cache erzeugt. Das ist sowas ähnliches wie <code>data()</code> mit dem Unterschied, dass die Daten in einem Cache modifiziert werden können. Details finden sich unter <a href="nhlp://cache?frame=new">help cache</a>.
+	Mit dem ersten Kommando hast du eine neue Tabelle erzeugt. Das ist im Prinzip wie <code>data()</code> mit einem eigenen Namen. Details finden sich unter <a href="nhlp://table?frame=new">help table</a>.
 	Das zweite und dritte Kommando füllt die erste bzw. zweite Spalte mit automatisch berechneten Werten. Im ersten Fall sind es 100 gleichverteilte Werte zwischen 0 und 20, im zweiten Fall sind es die Funktionswerte einer Exponentialfunktion die mit gaußförmigem Rauschen mit der Halbwertsbreite 0,1 modifiziert wurden. Die Zeilen werden mit einem Semikolon <code>;</code> abgeschlossen, damit die Ergebnisse nicht in der nächsten Zeile ausgegeben werden.
 	Du solltest eine Ausgabe wie die folgende erhalten:
 	<img src="<>/docs/decay.png" />

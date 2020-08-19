@@ -120,7 +120,7 @@
 	</article>
 	<article id="cache">
 		<file path="<>/docs/cache.nhlp" />
-		<title string="Tables (Caches)" idxkey="cache" />
+		<title string="Tables (Caches)" idxkey="cache, table" />
 		<keywords>
 			<keyword>cache</keyword>
 			<keyword>rename</keyword>
@@ -270,6 +270,7 @@
 			<keyword>move</keyword>
 			<keyword>remove</keyword>
 			<keyword>clear</keyword>
+			<keyword>memory</keyword>
 			<keyword>target</keyword>
 			<keyword>transpose</keyword>
 		</keywords>
@@ -583,6 +584,7 @@
 			<keyword>head</keyword>
 			<keyword>all</keyword>
 			<keyword>tocache</keyword>
+			<keyword>totable</keyword>
 			<keyword>xy</keyword>
 			<keyword>xz</keyword>
 		</keywords>

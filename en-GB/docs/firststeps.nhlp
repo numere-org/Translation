@@ -85,7 +85,7 @@
 		decay(:, 2) = eval 5*exp(-x/20) + gauss(0, 0.1) -set [0:20];
 		plot decay()	
 	</codeblock>
-	The first command created a new cache. This in principle more or less the same as <code>data()</code> with the single difference that the data in a cache may be modified. Details may be found at <a href="nhlp://cache?frame=new">help cache</a>.
+	The first command created a new table. This in principle more or less the same as <code>data()</code> with a different name. Details may be found at <a href="nhlp://table?frame=new">help table</a>.
 	The second and third command fills the first or the second column, respectively, with automatically calculated values. In the first case it's 100 equal-spaced values between 0 and 20, in the second case it's function values of an exponential function, which are modified with a gaussian noise with a width of 0.1. The lines are ending with a semicolon <code>;</code> because we don't like to print the 200 newly generated values in the next line.
 	You should've got an output just like the following:
 	<img src="<>/docs/decay.png" />

@@ -26,7 +26,7 @@
 	Die gewünschten Optionen können dem Kommando <code>hist</code> direkt übergeben werden:
 	<list>
 		<item node="export=DATEINAME">Der gewünschte Ausgabe-Dateiname des erzeugten Histogramms. Dateinamen mit Leerzeichen müssen mit Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei erzeugt.) Wird kein Dateiname angegeben (sondern nur <code>export</code> übergeben), so wird ein automatischer Name generiert</item>
-		<item node="tocache">Schreibt eine Kopie der Ausgabe-Tabelle in den Cache. Mit <code>tocache=CACHENAME</code> kann der gewünschte Zielcache vorgeben werden, der auch erzeugt wird, wenn er nicht existiert.</item>
+		<item node="totable">Schreibt eine Kopie der Ausgabe-Tabelle in <code>table()</code>. Mit <code>totable=TABLENAME</code> kann die Zieltabelle vorgeben werden, die auch erzeugt wird, wenn sie nicht existiert.</item>
 		<item node="bins=RUBRIKEN/BINS">Die Anzahl an Bins/Rubriken/Summationsintervallen</item>
 		<item node="width=INTERVALLBREITE">Die Breite der Bins. <em>Achtung:</em> Falls bereits die Zahl der Bins bestimmt wurde, ist diese Option hinfällig und wird nicht ausgewertet!</item>
 		<item node="x=XMIN:XMAX">Die Rubrikenachse auf das Intervall [XMIN,XMAX] einschränken</item>
