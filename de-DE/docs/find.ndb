@@ -240,6 +240,7 @@ rename~Benennt eine vorhandene Tabelle um, siehe "help cache"~umbenennen name än
 repeat(STRING,n)~Fügt n Kopien von STRING ein~zeichenketten # \" wiederholen kopieren einfügen
 replace(STR1,POS,LEN,STR2)~Ersetzt LEN Zeichen ab der Stelle POS in der Zeichenkette STR1 mit der Zeichenkette STR2~ersetzen replace() string # \"
 replaceall(STR1,STR2,STR3,POS1,POS2)~Ersetzt alle Vorkommnisse der Zeichenkette STR2 in STR1 mit STR3. Die Variablen POS1 und POS2 sind optional und geben Anfangs- und Endpunkt der Ersetzung vor~ersetzen replaceall() string # \"
+repmat(MAT,n,m)~Wiederholt die Matrix MAT (n x m)-mal~wiederholen repeat vergrößern
 resample~Ermöglicht die Erhöhung oder Verringerung der Zahl der Datenpunkten, wobei ein Lanczos-Filter angewandt wird~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
 reshape(MAT,n,m)~Formt die Matrix MAT zu einer (n x m)-Matrix um~umformen umgestalten 
 resize(MAT,n,m)~Ändert die Größe der Matrix MAT zu (n x m)~vergrößern verkleinern larger smaller

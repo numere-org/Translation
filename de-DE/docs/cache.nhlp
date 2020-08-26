@@ -41,12 +41,19 @@
 	</list>
 	An <code>clear</code> und <code>delete</code> kann <code>-ignore</code> angehängt werden, um die erforderliche Bestätigung zu unterdrücken.
 	<h>Methoden für die Arbeit mit Tabellen</h>
-	Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methoden sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Die Methode <code>name</code> gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt. Als Modifizierer sind die folgenden definiert:
+	Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methoden sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Die folgenden Methoden sind zusätzlich definiert:
 	<list>
-		<item node="lines">Wendet die entsprechende Methode zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
-		<item node="cols">Wendet die entsprechende Methode spaltenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
-		<item node="grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
-		<item node="every(nFirst,nIncr)">Ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
+		<item node="TABLE().name">Gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt</item>
+		<item node="TABLE().size">Gibt die Größe der Tabelle in Zeilen und Spalten zurück</item>
+		<item node="TABLE().minpos">Bestimmt die Position des Minimums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
+		<item node="TABLE().maxpos">Bestimmt die Position des Maximums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
+	</list>
+	Als Modifizierer sind die folgenden definiert:
+	<list>
+		<item node=".lines">Wendet die entsprechende Methode zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
+		<item node=".cols">Wendet die entsprechende Methode spaltenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
+		<item node=".grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
+		<item node=".every(nFirst,nIncr)">Ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
 	</list>
 	<example desc="Daten in der Tabelle 'table()' anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
 		show table()

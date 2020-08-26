@@ -240,6 +240,7 @@ rename~Renames an already available table~umbenennen name ändern aendern neuer
 repeat(STRING,n)~Returns n copies of STRING~zeichenketten # \" wiederholen kopieren einfügen
 replace(STR1,POS,LEN,STR2)~Replaces LEN letters starting with the position POS in string STR1 with the string STR2~ersetzen replace() string # \"
 replaceall(STR1,STR2,STR3,POS1,POS2)~Replaces all occurrences of the second string STR2 in the first string STR1 with the third string STR3. The variables POS1 and POS2 are optional values limiting the action to start (POS1) and end position (POS2) in STR1~ersetzen replaceall() string # \"
+repmat(MAT,n,m)~Repeats the matrix MAT (n x m) times~wiederholen repeat vergrößern
 resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
 reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten 
 resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller
