@@ -190,10 +190,12 @@ matflf(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,..., in which the miss
 MatLab~Who needs MatLab, if one can have NumeRe?~matlab octave
 matop~Matrix based evaluation of the expression~matrix matrizenrechnungen matrices mtrxop
 max(x,y,z,...)~Returns the maximal value of x,y,z,... Can be applied to strings and uses then string logic~maximum zeichenketten strings max()
+maxpos(x,y,z,...)~Index of the maximal value of x,y,z,...~maximum position max() maxpos()
 med(x,y,z,...)~Returns the median of x,y,z,...~zentralwert median untermedian obermedian med()
 mesh~Generates a meshgrid plot~meshgrid gitterplot
 mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()
+minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()
 move~Moves (depending on the actual expression) entries/columns/subtables in caches or complete files~verschieben tabellen dateien files
 # N
 ncols~Contains the number of columns for the current data access~columns dataaccess end number

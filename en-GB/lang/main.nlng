@@ -401,8 +401,10 @@ PARSERFUNCS_LISTFUNC_FUNC_MATFCF_[MAT]=						matfcf(X,Y,Z,...)                  
 PARSERFUNCS_LISTFUNC_FUNC_MATFL_[MAT]=						matfl(X,Y,Z,...)                             MAT      - Creates a matrix out of the lines X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be replaced by 0.
 PARSERFUNCS_LISTFUNC_FUNC_MATFLF_[MAT]=						matflf(X,Y,Z,...)                            MAT      - Creates a matrix out of the lines X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be logically generated out of the already present ones.
 PARSERFUNCS_LISTFUNC_FUNC_MAX_[STATS_STRING]=				max(x,y,z,...)                               ARG      - Returns the maximal value of x,y,z,... Can be applied to strings, where it will use string logic
+PARSERFUNCS_LISTFUNC_FUNC_MAXPOS_[STATS]=					maxpos(x,y,z,...)                            VAL      - Index of the maximal value of x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_MED_[STATS]=						med(x,y,z,...)                               VAL      - Returns the median of x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_MIN_[STATS_STRING]=				min(x,y,z,...)                               ARG      - Returns the minimal value of x,y,z,... Can be applied to strings, where it will use string logic
+PARSERFUNCS_LISTFUNC_FUNC_MINPOS_[STATS]=					minpos(x,y,z,...)                            VAL      - Index of the minimal value of x,y,z,...
 PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)                                 VAL      - Neumann function (Bessel function of the second kind) with the order n at the position x. Defined in R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)                              VAL      - Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_NUM_[STATS_STRING]=				num(x,y,z,...)                               VAL      - returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string
