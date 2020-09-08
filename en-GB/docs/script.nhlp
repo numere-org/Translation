@@ -18,27 +18,21 @@
 
 <article id="script">
 	<title string="NumeRe scripts" />
-	Complex command routines may be outsourced to so-called "scripts". These have to be written using an external editor and saved with the file extension "*.nscr". The default folder, out of which NumeRe loads scripts, if no path was specified, may be read with <code>get -scriptpath</code> and modified using <code>set -scriptpath=PATH</code>.
-	The commands may be written to the script just like they were typed to the NumeRe console, but note that either only one expression or command is allowed each line or that they have to be separated using semicola otherwise:<codeblock>EXPRESSION;COMMAND;COMMAND;EXPRESSION...</codeblock>
-	The string <code>##</code> may be used to comment a line with some additional information which won't be interpreted by NumeRe. During evaluation, NumeRe will ignore the part of the line starting with <code>##</code> until the end of the line.
-	You may exclude whole blocks from the evaluation: everything starting from <code>#*</code> until the next <code>*#</code> won't be interpreted. These blocks may span over multiple lines and you may use them for some information about the evaluation or to exclude multiple expressions and commands from execution.
-	The string <code>\\</code> at the end of a line suppresses the execution of this line and will append the following line to the current line. If the next line is ended with <code>\\</code> as well, then this will repeated until a line without <code>\\</code> was found. After this, the concatenated line will be exectued.
-	The syntax <code>@SCRIPT</code> loads all definitions and "global expressions" out of the script SCRIPT to the current script at this point. NumeRe won't execute any other commands out of SCRIPT and as conclusion no other <code>@SCRIPT</code>, which were found inside of SCRIPT, as well. If the name of SCRIPT shall contain whitespaces, then you'll have to pass it surrounded with quotation marks (<code>@"SCRIPT"</code>). 
-	If only global expressions or only definitions shall be loaded, then this may be restricted further using the following instructions:<codeblock>@SCRIPT: defines   (loads only definitions)\n@SCRIPT: globals   (loads only globals expressions)</codeblock>
-	Global expressions are expressions and commands, which were invoked with the prefixed command <code>global</code>:<codeblock>global EXPRESSION</codeblock>or<codeblock>global COMMAND</codeblock>The command <code>global</code> itself doesn't have any influence on the actual execution.
-	Beside of the standard path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> may be used inside of scripts. It points to the directory, in which the script is located.
-	The parameters, which may be applied to the command <code>script</code> are as follows:
-	<list>
-		<item node="-load=SCRIPT">Loads the script SCRIPT out of the standard script directory. It won't be started automatically. Filenames containing whitespaces have to be surrounded with quotation marks</item>
-		<item node="-start">Executes the already loaded script</item>
-		<item node="-start=SCRIPT">Loads the script SCRIPT and directly starts its execution. Filenames containing whitespaces have to be surrounded with quotation marks. This command may be simplified with <code>start SCRIPT</code>
-		<item node="-install">Executes the install routines in the currently executed script to install procedures. May only be used in combination with <code>-start</code></item>
-	</list>
-	The execution may be canceled using the <code>ESC</code> key, if it needs too much time.
-	<example desc="Loading of the script 'script.nscr' and its execution:">
-		script -load=script
-		The script "&SCRIPTPATH&/script.nscr" was loaded successfully.
-		script -start
+	Complex command routines or calculations can be outsourced to so-called "NumeRe-Scripts", which are text files with the extension ".nscr". The integrated <a href="nhlp://editor?frame=new">Editor</a> supports the writing of these scripts by syntax highlighting, automatic formatting and static code analysis. The folder from which NumeRe loads the scripts by default can be obtained using <code>get -scriptpath</code> and edited using <code>set -scriptpath=PFAD</code> or in the settings. The editor automatically suggests the correct folder when saving.
+	To execute a script, use either the corresponding functions of the graphical interface [F5] or the command <code>start</code>:<codeblock>start SCRIPTNAME</codeblock>The script name must be specified in quotation marks if it contains spaces. A full path is also required if the script is not located in the corresponding default folder.
+	The evaluation can be aborted with the <code>ESC</code> key if it takes too much time.
+	Commands and expressions can be written into the script as they are entered directly in NumeRe, but please note that only one command/expression per line may be written, or that the commands/expressions are separated by semicolons:<codeblock>EXPRESSION;COMMANDO;COMMANDO;EXPRESSION...</codeblock>This is not recommended, however, as it makes the script badly readable.
+	The character string <code>##</code> can be used to comment out a line or to add additional information to a part of the script for overview. NumeRe will ignore the part of the line starting from <code>##</code> during evaluation.
+	In NumeRe scripts whole blocks can also be commented out: To do so, <code>#*</code> must be placed before the part to be commented out and <code>*#</code> at the end of this block. These blocks can extend over several lines. Also several of these block comments can occur in one line. NumeRe removes the corresponding comments before evaluation.
+	Comments can also be used as <a href="nhlp://latex?frame=new">documentation comments</a> if they are introduced with an additional exclamation mark (<code>##!</code> or <code>#*! ... *#</code>).
+	The character string <code>\\</code> at the end of a line interrupts the evaluation of the line and appends the following line to the previous one. If this line is also terminated by <code>\\</code>, it is repeatedly appended until a line without <code>\\\</code> is found at the end.
+	The syntax <code>@SCRIPT</code> loads all definitions and "global expressions" from the script SCRIPT at this point into the script to be executed. No further commands are processed and accordingly no further <code>@SCRIPT</code> commands found in the SCRIPT script are processed. If SCRIPT contains spaces, SCRIPT must be specified in quotation marks (<code>@"SCRIPT"</code>).
+	If only global expressions or only definitions are to be loaded, <code>@SCRIPT</code> can be further restricted:<codeblock>@SCRIPT: defines (loads only definitions)\n@SCRIPT: globals (loads only global expressions)</codeblock>
+	Global expressions are expressions and commands, which in turn are started by the command <code>global</code>:<codeblock>global EXPRESSION</codeblock>or<codeblock>global COMMANDO</codeblock>The command <code>global</code> has otherwise no further influence on the evaluation.
+	In scripts, in addition to the path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> can also be used, which contains the directory in which the script is located.
+	If you want to <a href="nhlp://install?frame=new">install</a> <a href="nhlp://procedure?frame=new">procedures</a> or whole <a href="nhlp://plugins?frame=new">plugins</a>, use the command <code>install</code> instead of <code>start</code>. Please note that <code>install</code> <em>only</em> can be used in the console.
+	<example desc="Executing the script 'script.nscr':">
+		start script
 	</example>
 	<em>See also:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://install?frame=self">help install</a> and <a href="nhlp://explorer?frame=self">help explorer</a>
 </article>
