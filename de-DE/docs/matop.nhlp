@@ -48,7 +48,7 @@
 		<item node="matfcf(X,Y,Z,...)">Erzeugt eine Matrix aus den Spalten <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergänzt.</item>
 		<item node="matfl(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.</item>
 		<item node="matflf(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergänzt.</item>
-		<item node="normalize(MAT)">Normiert die Werte der Matrix MAT auf den (absoluten) Bereich <expr>[0,1]</expr> (die Matrix wird durch ihren absolutes Maximum dividiert).</item>
+		<item node="normalize(MAT)">Normiert die Werte der Matrix MAT auf den Bereich <expr>[-1,1]</expr> (die Matrix wird durch ihren absolutes Maximum dividiert).</item>
 		<item node="one(n,m)">Erzeugt eine <expr>(n, m)</expr>-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
 		<item node="or(MAT)">Wendet den Operator || auf die Elemente der Matrix MAT an</item>
 		<item node="repmat(MAT,n,m)">Wiederholt die Matrix MAT <expr>(n, m)</expr>-mal</item>

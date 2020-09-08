@@ -465,7 +465,7 @@ PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)                 
 PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()                                    VAL      - Gibt die Versionsnummer von NumeRe als natürliche Zahl zurück: v1.0.8 wird als 108 zurückgegeben
 PARSERFUNCS_LISTFUNC_FUNC_XOR_[LOGIC]=						xor(x,y,z,...)                               LOG      - Verknüpft die Argumente mit einem "|||"-Operator
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)                             VAL      - Realteil der Kugelflächenfunktionen der Ordnung l >= 0 mit m = [-l,l] unter den Winkeln theta im Intervall [0,PI] und phi im Intervall [0,2*PI)
-PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)                               VAL      - Wert der Zernikepolynome der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho im Intervall [0,1] unter dem Winkel phi im Intervall [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)                               VAL      - Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho im Intervall [0,1] unter dem Winkel phi im Intervall [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)                                    MAT      - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 PARSERFUNCS_LISTFUNC_FUNC_SHUFFLE_[MAT]=					shuffle(sel,val)                             MAT      - Gibt sel zufällig ausgewählte und eindeutige Werte aus einem 1:val array zurück. val ist ein optionaler Wert und ist standardmäßig identisch zu sel.
 PARSERFUNCS_LISTFUNC_FUNC_ARCV_[DRAW]=						arcv(P,[D,]D,a,STYLE)                        {}       - Zeichnet einen Kreisbogen des Winkels a um den Punkt P vom Punkt P+D an. Die optionale Richtung D gibt den Normalvektor des Kreisbogens an, Standard ist die z-Achse. Der Umlaufsinn ist entgegen des Uhrzeigers. Der Stil der Kreisbogenlinie kann mittels STYLE geändert werden.
@@ -495,7 +495,7 @@ PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_MATCH_[STRING]=			str_not_match(sChars,sWhere,
 PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_RMATCH_[STRING]=			str_not_rmatch(sChars,sWhere,nPos)           VAL      - Sucht das letzte Auftreten eines Zeichens in der Zeichenkette sWhere, das nicht in sChars auftritt, bis zum Zeichen nPos. nPos ist ein optionaler Startwert für letzte Position und standardmäßig ist nPos = strlen(sWhere). Falls nichts gefunden wird, wird false zurückgegeben
 PARSERFUNCS_LISTFUNC_FUNC_LOGTOIDX_[MAT]=					logtoidx(MAT)                                MAT      - Wandelt Logikwerte in einer Matrix in Indexwerte um. Wird ein Vektor übergeben, so gibt die Funktion ein Vektor zurück mit den Indices zu den Elementen, welche true sind. Wird eine Matrix übergeben, dann gibt die Funktion eine zweispaltige Matrix zurück, mit den Zeilen- in der ersten und den Spaltenindices in der zweiten Spalte
 PARSERFUNCS_LISTFUNC_FUNC_IDXTOLOG_[MAT]=					idxtolog(MAT)                                MAT      - Wandelt Indexwerte in einer Matrix in Logikwerte um. Wird ein Vektor übergeben, so gibt die Funktion ein Vektor zurück mit den true in den Zeilen, auf denen die Indices weisen. Wird eine Matrix mit zwei Spalten übergeben, dann gibt die Funktion eine Matrix zurück mit true als Elemente, auf welche die Zeilen- as der ersten und die Spaltenindices aus der zweiten Spalte weisen
-PARSERFUNCS_LISTFUNC_FUNC_NORMALIZE_[MAT]=					normalize(MAT)                               MAT      - Normiert die Werte der Matrix MAT auf den (absoluten) Bereich [0,1] (die Matrix wird durch ihren absolutes Maximum dividiert)
+PARSERFUNCS_LISTFUNC_FUNC_NORMALIZE_[MAT]=					normalize(MAT)                               MAT      - Normiert die Werte der Matrix MAT auf den Bereich [-1,1] (die Matrix wird durch ihren absolutes Maximum dividiert)
 PARSERFUNCS_LISTFUNC_FUNC_PSI_[NUM]=					    psi(x)                                       VAL      - Berechnet den Wert der Digammafunktion an der Stelle x mit x aus R \ {0}
 PARSERFUNCS_LISTFUNC_FUNC_PSI_N_[NUM]=					    psi_n(n,x)                                   VAL      - Berechnet den Wert der Polygammafunktion der Ordnung n >= 0 and der Stelle x mit x > 0
 PARSERFUNCS_LISTFUNC_FUNC_BETA_[NUM]=					    beta(x,y)                                    VAL      - Berechnet den Wert der Betafunktion an den Stellen x und y mit x,y aus R \ {-n}
@@ -1122,6 +1122,7 @@ GUI_REPLACE_END_HEAD=NumeRe: Ersetzen abgeschlossen
 GUI_SEARCH_FILES=Dateien suchen ...
 GUI_SEARCH_SYMBOLS=Symbole suchen ...
 GUI_SEARCH_DOCUMENTATION=Artikel suchen ...
+GUI_SEARCH_TELLME=Was möchtest du tun?
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche

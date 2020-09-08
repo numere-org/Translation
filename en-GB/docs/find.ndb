@@ -21,321 +21,323 @@
 # This database contains the necessary information for the keyword search.
 #
 # SYNTAX
-# Function~Description~Keywords
+# Function~Description~Keywords~TerminalImport
 # The entries have to be alphabetically!
 #
 # A
-abs(x)~Absolute value of x~absolutwert betrag abs()
-acos(x)~Inverse cosine of x. arccos(x) is a synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie
-acosh(x)~Inverse hyperbolic cosine of x. arcosh(x) is a synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie
-Ai(x)~Airy function Ai(x)~optik potentialtopf Ai() optics airyfunction
-and(x,y,z,...)~ Connects its arguments with "&&"~logik logic und
-ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result
-Answer~The answer to life, the universe and everything: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis
-append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values
-asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie
-asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie
-ascii(STRING)~Returns the ASCII-Values of the characters in STRING~ascii() zeichenkette code string
-atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie
-atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie
-audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei
-avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean average durchschnitt stats statistiken
+abs(x)~Absolute value of x~absolutwert betrag abs()~abs(
+acos(x)~Inverse cosine of x. arccos(x) is a synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acos(
+acosh(x)~Inverse hyperbolic cosine of x. arcosh(x) is a synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acosh(
+Ai(x)~Airy function Ai(x)~optik potentialtopf Ai() optics airyfunction~Ai(
+and(x,y,z,...)~ Connects its arguments with "&&"~logik logic und~and(
+ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result~ans{}
+Answer~The answer to life, the universe and everything: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
+append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
+asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
+asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+ascii(STR)~Returns the ASCII-Values of the characters in STR~ascii() zeichenkette code string~ascii(
+atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
+atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
+audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
+avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 # B
-bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen
-beta(x,y)~Calculates the value of the beta function of x and y~beta() betafunction
-betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()
-Bi(x)~Airy function Bi(x)~optik potentialtopf Bi() optics airyfunction
-binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()
-break~Aborts the execution of a loop~abbruch abbrechen for while
+bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen~bessel(
+beta(x,y)~Calculates the value of the beta function of x and y~beta() betafunction~beta(
+betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()~betheweizsaecker(
+Bi(x)~Airy function Bi(x)~optik potentialtopf Bi() optics airyfunction~Bi(
+binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()~binom(
+break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbrechen cancel for while switch~help break
 # C
-CACHE(i,j)~Table object with access to the element "i,j"~zwischenspeicher save cache() sortieren swap rename
-char(STRING,POS)~Return the character at the Position POS in STRING~zeichen character string zeichenkette char()
-Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction
-clock()~Returns the number of processor clicks since the startu-up of NumeRe~time clicks zeit millisekunden milliseconds
-cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement
-cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings.~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings
-compose~Starts the composition of multiple plotting styles~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot
-cont~Generates a contour line plot~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien
-cont3d~Generates a 3D contour line plot~contour3d kontur niveau dreidimensional
-continue~Jumps over the following commands of the current loop execution and starts the next execution~ueberspringen überspringen for fortsetzen while
-copy~Copies (depending on the actual expression) entries/columns/subtables between data objects or complete files~kopieren  tabellen dateien files
-cos(x)~Cosine of x~cos() cosinus kosinus trigonometrische funktionen trigonometrie
-cosh(x)~Hyperbolic cosine of x~cosh() cosinus hyperbolicus kosinus trigonometrische funktionen hyperbolische trigonometrie
-cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonometrie
-covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz
-correl(MAT,MAT)~Calculates the correlation matrix of the both arguments~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl()
-credits~Legal information about NumeRe~info about versionsinformationen
-cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt
+char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
+Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
+clock()~Returns the number of processor clicks since the start-up of NumeRe~time clicks zeit millisekunden milliseconds~clock()
+cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
+cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count~cnt(
+compose~Starts the composition of multiple plotting styles~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose
+cont~Generates a contour line plot~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
+cont3d~Generates a 3D contour line plot~contour3d kontur niveau dreidimensional~help cont3d
+continue~Jumps over the following commands of the current loop execution and starts the next execution~ueberspringen überspringen for fortsetzen while~help continue
+copy~Copies (depending on the actual expression) entries/columns/subtables between data objects or complete files~kopieren  tabellen dateien files~help copy
+cos(x)~Cosine of x~cos() cosinus kosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~cos(
+cosh(x)~Hyperbolic cosine of x~cosh() cosinus hyperbolicus kosinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions~cosh(
+cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonometrie trigonometry trigonometric functions~cot(
+covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz~covar(
+correl(MAT,MAT)~Calculates the correlation matrix of the both arguments~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl() mustererkennung pattern recognition~correl(
+credits~Legal information about NumeRe~info about versionsinformationen~credits
+cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt~cross(
 # D
-data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook
-datagrid~Generates a data grid~daten mesh surf dens grad cont
-date(TIME,TYP)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time
-dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial
-Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error
-define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine
-degree(x)~Degree value of x [rad]~todegree gradwert umrechnen degree()
-delete~Removes elements from a table~loeschen löschen entfernen
-dens~Generates a density plot~density dichte
-dens3d~Generates a 3D density plot~density3d dichte dreidimensional
-det(MAT)~Calculates the determinant of a quadratic matrix MAT~det() matrix
-dialog~Creates a dialog window to interact with the user~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog
-diag(x,y,z,...)~Generates a diagonal matrix with x,y,z,... on its main diagonal~diag() matrix diagonal
-diagonalize(MAT)~Diagonalizes the quadratic matrix MAT~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren
-diff~Calls the function for numerical differentation of a function or a data set~ableiten differenzieren differentieren ableitung differentiation
-draw~Drawing mode~zeichnen drawings anmerkungen annotations zeichnungen
-draw3d~3D drawing mode~zeichnen drawings anmerkungen annotations zeichnungen
+data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
+datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
+date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
+dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
+Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error bugs throw~help debugger
+define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine~help define
+degree(x)~Degree value of x [rad]~todegree gradwert umrechnen rad2deg() degree()~degree(
+delete~Removes elements from a table~loeschen löschen entfernen remove erase~help delete
+dens~Generates a density plot~density dichte~help dens
+dens3d~Generates a 3D density plot~density3d dichte dreidimensional~help dens3d
+det(MAT)~Calculates the determinant of a quadratic matrix MAT~det() matrix~det(
+diag(x,y,z,...)~Generates a diagonal matrix with x,y,z,... on its main diagonal~diag() matrix diagonal~diag(
+diagonalize(MAT)~Diagonalizes the quadratic matrix MAT~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
+dialog~Creates a dialog window to interact with the user~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog
+diff~Calls the function for numerical differentation of a function or a data set~ableiten differenzieren differentieren ableitung differentiation~help diff
+draw~Drawing mode~zeichnen drawings anmerkungen annotations zeichnungen~help draw
+draw3d~3D drawing mode~zeichnen drawings anmerkungen annotations zeichnungen~help draw3d
 # E
-edit~Opens a file or a directory for editing its contents~bearbeiten oeffnen öffnen open view betrachten dateien programm
-Easteregg~It would be really nice, if they could be found this easy, wouldn't it? Go and look for them ...~easteregg osterei lustig
-ellipticD(x,n,k~Value of the elliptic integral D(x,n,k)~elliptisches integral
-ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral
-ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral
-ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral
-eigenvals(MAT)~Calculates the eigenvalues of the quadratic matrix MAT~eigenvals() eigenvalues matrix
-eigenvects(MAT)~Calculates the eigenvectors of the quadratic matrix MAT~eigenvects() eigenvectors matrix
-erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunktion erf()
-erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gaussssche gaußsche fehlerfunktion errorfunktion erfc()
-eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace
-execute~Executes a command using the windows shell~command bash programm wait
-exp(x)~Exponential function of x~exponentialfunktion eulersche zahl exp()
-explicit~Deactivates all plugins for the current command~plugins deaktivieren überschreiben ueberschreiben
-export~Textual export of the passed data set~exportieren textdatei data csvdatei texdatei texttabelle textabelle
-extrema~Calls the function for the numerical determination of the extrema of the passend expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren
+edit~Opens a file or a directory for editing its contents~bearbeiten oeffnen öffnen open view betrachten dateien programm~help edit
+Easteregg~It would be really nice, if they could be found this easy, wouldn't it? Go and look for them ...~easteregg osterei lustig~nan
+ellipticD(x,n,k~Value of the elliptic integral D(x,n,k)~elliptisches integral~ellipticD(
+ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral~ellipticE(
+ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral~ellipticF(
+ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral~ellipticPi(
+eigenvals(MAT)~Calculates the eigenvalues of the quadratic matrix MAT~eigenvals() eigenvalues matrix~eigenvals(
+eigenvects(MAT)~Calculates the eigenvectors of the quadratic matrix MAT~eigenvects() eigenvectors matrix~eigenvects(
+erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
+erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gausssche gaußsche komplementär fehlerfunktion errorfunction erfc()~erfc(
+eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace~help eval
+execute~Executes a command using the windows shell~command bash programm wait run ausführen cmd.exe~help execute
+exp(x)~Exponential function of x~exponentialfunktion eulersche zahl exp()~exp(
+explicit~Deactivates all plugins for the current command~plugins deaktivieren überschreiben ueberschreiben~help explicit
+export~Textual export of the passed data set~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
+extrema~Calls the function for the numerical determination of the extrema of the passed expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
 # F
-factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fakultät faculty() factorial()
-fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex
-File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben
-findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()
-findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien existieren files existing present valid gueltig gültig findfile()
-findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen findparam()
-findtoken(sString,sToken,sSep)~Returns the position, where the token sToken is found in the string sString, 0 otherwise~token match tokenize string zeichenkette
-fit~Fit functions to data sets via parameters~fitten anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
-Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult
-fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten anpassen daten fehler errors abweichungen trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints
-floor(x)~Rounds x to the nearest lower integral value~floor() abrunden ganzzahlen
-for (VAR = INI:FIN)~Starts the definition of a FOR loop~zaehlschleife zählschleife endfor for()
-fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettransformation transformieren invers daubechies haar bspline
+factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fakultät faculty() factorial()~factorial(
+fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
+File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben~help explorer
+findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()~findcolumn(
+findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
+findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen optionen options positions commandline findparam()~findparam(
+findtoken(sString,sToken,sSep)~Returns the position, where the token sToken is found in the string sString, 0 otherwise~token match tokenize string zeichenkette split() findtoken()~findtoken(
+fit~Fit functions to data sets via parameters~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
+Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult~edit <savepath>/numerefit.log
+fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten fitting anpassen daten fehler errors abweichungen deviations trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fitw
+floor(x)~Rounds x to the nearest lower integral value~floor() abrunden ganzzahlen integral number~floor(
+for (VAR = INI:FIN)~Starts the definition of a FOR loop~zaehlschleife zählschleife endfor for() loop command sequence flow control~help for () ... endfor
+fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettransformation transformieren invers daubechies haar bspline~help fwt
 # G
-gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaet fakultät kontinuierlich gamma()
-gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution
-gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer
-get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen
-getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()
-getfilelist(STRING,T)~Returns a list of strings containing all files matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
-getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis
-getfolderlist(STRING,T)~Returns a list of strings containing all directories matching to the naming scheme STRING~dateien files liste getfilelist() verzeichnis inhalt content directory
-getindices(STRING,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()
-getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters
-getmatchingparens(STRING)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu getmatchingparens()
-getopt(STRING,POS)~Returns the value of a parameter in the string STRING, with the first character of the value at position POS~parameter werte argumente values getopt()
-global~Declares the current expression as global~globaler ausdruck kommando include einbinden
-grad~Generates a gradient plot~gradienten feldlinien
-grad3d~Generates a 3D gradient plot~gradienten feldlinien dreidimensional
+gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
+gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
+gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
+get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
+getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
+getfilelist(STR,T)~Returns a list of strings containing all files matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
+getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
+getfolderlist(STR,T)~Returns a list of strings containing all directories matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
+getindices(STR,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
+getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyal(
+getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
+getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
+global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global
+grad~Generates a gradient plot~gradienten feldlinien field lines force kraft~help grad
+grad3d~Generates a 3D gradient plot~gradienten feldlinien dreidimensional field lines force three-dimensional~help grad3d
 # H
-help TOPIC~NumeRe documentation concerning the TOPIC~hilfe manual documentation dokumentation
-heaviside(x)~Heaviside (or Theta) function~thetafunktion heavisidefunktion heaviside() stufenfunktion distribution
-hermite(n,x)~Numerical value of the Hermite polynomial with the order n >= 0 at the position x~hermitepolynome hermite()
-hist~Generates a histogram~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken
-hist2d~Generates a 2D histogram of a (x,y,z) data set. Expects either a data grid or (x,y,z) tupels~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter
-hline~Draws a double horizontal line. Using the parameter "-single", this command will only draw one single line~formatierung ausgabe trenner abstand doppellinie
+help TOPIC~NumeRe documentation concerning the TOPIC~hilfe manual documentation dokumentation~help
+heaviside(x)~Heaviside (or Theta) function~thetafunktion function heavisidefunktion heaviside() stufenfunktion distribution~heaviside(
+hermite(n,x)~Numerical value of the Hermite polynomial with the order n >= 0 at the position x~hermitepolynome hermite()~hermite(
+hist~Generates a histogram~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
+hist2d~Generates a 2D histogram of a (x,y,z) data set. Expects either a data grid or (x,y,z) tupels~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter~help hist2d
+hline~Draws a (single or double) horizontal line~formatierung ausgabe trenner abstand doppellinie separator~help hline
 # I/J/K
-identity(n)~Generates a n-dimensional identity matrix~identity() matrix identität
-idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren
-if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung
-ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren
-implot~Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]~images bilder imageplot
-imread~Reads an image file as data grid into a table~imageread images load bilder
-integrate~Calls the function for the numerical integration of a function f(x) or f(x,y)~integral integrieren simpson trapezoidal
-is_alnum(STRING)~Determines for each character in sToParse, whether it is a alphanumeric  character type, or not~is_alnum()
-is_alpha(STRING)~Determines for each character in sToParse, whether it is a alphabetic  character type, or not~is_alpha()
-is_blank(STRING)~Determines for each character in sToParse, whether it is a blank character type, or not~is_alpha()
-is_cluster(STRING)~Returns true, if STRING is a cluster, false otherwise~is_cluster() cluster
-is_cntrl(STRING)~Determines for each character in sToParse, whether it is a control  character type, or not~is_cntrl()
-is_data(STRING)~Returns true, if STRING is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster
-is_digit(STRING)~Determines for each character in sToParse, whether it is a decimal character type, or not~is_digit()
-is_graph(STRING)~Determines for each character in sToParse, whether it is a graphical character type, or not~is_graph()
-is_lower(STRING)~Determines for each character in sToParse, whether it is a lowercase character type, or nott~is_lower()
-is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number
-is_print(STRING)~Determines for each character in sToParse, whether it is a printable character type, or not~is_print()
-is_punct(STRING)~Determines for each character in sToParse, whether it is a punctuation character type, or not~is_punct()
-is_space(STRING)~Determines for each character in sToParse, whether it is a white-space character type, or not~is_space()
-is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenketten # \" is_string()
-is_table(STRING)~Returns true, if STRING is a table, false otherwise~is_table() data cache table
-is_upper(STRING)~Determines for each character in sToParse, whether it is a uppercase character type, or not~is_upper()
-is_xdigit(STRING)~Determines for each character in sToParse, whether it is a hexadecimal character type, or not~is_xdigit()
-invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren
-Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke
-ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()
+identity(n)~Generates a n-dimensional identity matrix~identity() matrix identität eye()~identity(
+idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren~idxtolog(
+if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung loop command sequence flow control~help if () ... endif
+ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren condional define~help ifndefined
+implot~Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]~images bilder imageplot imagesc()~help implot
+imread~Reads an image file as data grid into a table~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp~help imread
+imY(l,m,theta,phi)~Imaginary part of the spherical harmonics with the orders l and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
+install~Installs a plugin or a package~procedure installieren aktualisieren update~help install
+integrate~Integrates a function f(x) or f(x,y) numerically~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
+is_alnum(STR)~Determines for each character in STR, whether it is a alphanumeric character type, or not~is_alnum() character type representation zeichen~is_alnum(
+is_alpha(STR)~Determines for each character in STR, whether it is a alphabetic character type, or not~is_alpha() character type representation zeichen~is_alpha(
+is_blank(STR)~Determines for each character in STR, whether it is a blank character type, or not~is_blank() character type representation zeichen~is_blank(
+is_cluster(STR)~Returns true, if STR is a cluster, false otherwise~is_cluster() cluster variablen type detection erkennung~is_cluster(
+is_cntrl(STR)~Determines for each character in STR, whether it is a control  character type, or not~is_cntrl() character type representation zeichen~is_cntrl(
+is_data(STR)~Returns true, if STR is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster variablen type detection erkennung~is_data(
+is_digit(STR)~Determines for each character in STR, whether it is a decimal character type, or not~is_digit() character type representation zeichen~is_digit(
+is_graph(STR)~Determines for each character in STR, whether it is a graphical character type, or not~is_graph() character type representation zeichen~is_graph(
+is_lower(STR)~Determines for each character in STR, whether it is a lowercase character type, or nott~is_lower() character type representation zeichen~is_lower(
+is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number~is_nan(
+is_print(STR)~Determines for each character in STR, whether it is a printable character type, or not~is_print() character type representation zeichen~is_print(
+is_punct(STR)~Determines for each character in STR, whether it is a punctuation character type, or not~is_punct() character type representation zeichen~is_punct(
+is_space(STR)~Determines for each character in STR, whether it is a white-space character type, or not~is_space() character type representation zeichen~is_space(
+is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenketten # \" is_string() variablen type detection erkennung~is_string(
+is_table(STR)~Returns true, if STR is a table, false otherwise~is_table() data cache table variablen type detection erkennung~is_table(
+is_upper(STR)~Determines for each character in STR, whether it is a uppercase character type, or not~is_upper() character type representation zeichen~is_upper(
+is_xdigit(STR)~Determines for each character in STR, whether it is a hexadecimal character type, or not~is_xdigit() character type representation zeichen~is_xdigit(
+invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren~invert(
+Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke~"It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!"
+ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()~ivl(
 # L
-laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome laguerre()
-laguerre_a(n,k,x)~Numerical value of the associate Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome zugeordnete laguerre_a()
-lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition
-lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches
-legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome legendre()
-legendre_a(l,m,x)~Numerical value of the Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome zugeordnete legendre_a()
-Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm
-list -OBJECT~Lists objects~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins
-ln(x)~Natural logarithm of x~logarithmus naturalis ln()
-load~Loads the data of a file~laden load data dateien daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook
-locate({STR},STR,N)~Searches for any occurences of the second string in the string array of the first argument and returns the corresponding indices~locate() find string array
-Log file~You'll find the log file at "<>/numere.log"~numerelog logfile
-log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()
-log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()
-logtoidx(MAT)~Transforms logical values to indices~logic index indices transformieren
+laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome polynomial laguerre()~laguerre(
+laguerre_a(n,k,x)~Numerical value of the associated Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
+lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
+lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
+legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome polynomial legendre()~legendre(
+legendre_a(l,m,x)~Numerical value of the associated Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
+Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm~Li2(
+list -OBJECT~Lists objects~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins~help list
+ln(x)~Natural logarithm of x~logarithmus naturalis ln()~ln(
+load~Loads the data of a file~laden load data files dateien einlesen read importieren daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help load
+locate({STR},STR,N)~Searches for any occurences of the second string in the string array of the first argument and returns the corresponding indices~locate() find string cluster position index array~locate(
+Log file~You'll find the log file at "<>/numere.log"~numerelog logfile~edit <>/numere.log
+log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()~log10(
+log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()~log2(
+logtoidx(MAT)~Transforms logical values to indices~logic index indices boolean position transformieren~logtoidx(
 # M
-matfc(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,...~matfc()
-matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the missing elements are added logically~matfcf()
-matfl(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,...~matfl()
-matflf(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,..., in which the missing elements are added logically~matflf()
-MatLab~Who needs MatLab, if one can have NumeRe?~matlab octave
-matop~Matrix based evaluation of the expression~matrix matrizenrechnungen matrices mtrxop
-max(x,y,z,...)~Returns the maximal value of x,y,z,... Can be applied to strings and uses then string logic~maximum zeichenketten strings max()
-maxpos(x,y,z,...)~Index of the maximal value of x,y,z,...~maximum position max() maxpos()
-med(x,y,z,...)~Returns the median of x,y,z,...~zentralwert median untermedian obermedian med()
-mesh~Generates a meshgrid plot~meshgrid gitterplot
-mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional
-min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()
-minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()
-move~Moves (depending on the actual expression) entries/columns/subtables in caches or complete files~verschieben tabellen dateien files
+matfc(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,...~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
+matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the missing elements are added logically~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
+matfl(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,...~matfl() create erzeugen erschaffen zusammensetzen combine~matfl(
+matflf(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,..., in which the missing elements are added logically~matflf() create erzeugen erschaffen zusammensetzen combine füllen fill~matflf(
+MATLAB~Who needs MatLab, if one can have NumeRe?~matlab octave~matlab = nan
+matop~Matrix based evaluation of the expression~matrix matrizenrechnungen matrices mtrxop calculation matrixmultiplikation matrixmultiplication~help matop
+max(x,y,z,...)~Returns the maximal value of x,y,z,... Can be applied to strings and uses then string logic~maximum zeichenketten strings max()~max(
+maxpos(x,y,z,...)~Index of the maximal value of x,y,z,...~maximum position max() maxpos()~maxpos(
+med(x,y,z,...)~Returns the median of x,y,z,...~zentralwert median untermedian obermedian med()~med(
+mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
+mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional~help mesh3d
+min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
+minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
+move~Moves (depending on the actual expression) entries/columns/subtables in caches or complete files~verschieben tabellen dateien files~help move
 # N
-ncols~Contains the number of columns for the current data access~columns dataaccess end number
-neumann(n,x)~Neumann function (Bessel function of the second kind) with the order n at the position x~neumann() bessel() besselfunktionen neumannfunktionen second kind zweiter art
-new~Generates new directories, scripts, procedures, files and caches~ordner scripte prozeduren erzeugen generieren verzeichnisse directory files
-nlines~Contains the number of lines for the current data access~rows dataaccess end number
-norm(x,y,z,...)~Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm norm()
-normalize(MAT)~Normalizes the values in the matrix MAT to the (absolute) range [0,1]~normalize() normieren
-num(x,y,z,...)~returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()
-NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipfad filepath version
+ncols~Contains the number of columns for the current data access~columns dataaccess end number~ncols
+neumann(n,x)~Neumann function (Bessel function of the second kind) with the order n at the position x~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
+new~Generates new directories, scripts, procedures, files and caches~ordner scripte prozeduren erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
+nlen~Contains the number of elements for the current cluster access~rows clusteraccess dataaccess end number~nlen
+nlines~Contains the number of lines for the current data access~rows dataaccess end number~nlines
+norm(x,y,z,...)~Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm vector euklidian norm()~norm(
+normalize(MAT)~Normalizes the values in the matrix MAT to the range [-1,1]~normalize() normieren~normalize(
+num(x,y,z,...)~returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()~num(
+NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipfad filepath version~"NumeRe v"+#version()+" is located at "+#<>
 # O
-odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary
-one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix
-or(x,y,z,...)~Connects its arguments with "||"~logik logic oder
+odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
+one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix~one(
+or(x,y,z,...)~Connects its arguments with "||"~logik logic oder~or(
 # P
-pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile
-phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()
-Physicist~He's probably in the nearby cellar ...~physiker
-plot~Graphical plotting of functions and data sets~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars
-plot3d~Graphical plotting of three dimensional data sets and trajectories~plotten graphisch dreidimensional
-prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product multiplizieren multiply prd()
-procedure~Defines a NumeRe-Procedure~prozedur $ programmierung plugins installation installieren
-Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt
-progress~Shows a the state of a progress. Only suitable for scripts and procedures~prozedur $ programmierung plugins balken warten
-psi(x)~Calculates the value of the digamma function at the location x~psi() digammafunction polygammafunction trigammafunction
-psi_n(n,x)~Calculates the value of the polygamma function of the order n at the location x~psi_n() digammafunction polygammafunction trigammafunction
-pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie halbwertsbreite fwhm
+pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
+phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
+plot~Graphical plotting of functions and data sets~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
+plot3d~Graphical plotting of three dimensional data sets and trajectories~plotten graphisch dreidimensional plot()~help plot3d
+prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product multiplizieren multiply prd()~prd(
+procedure~Defines a NumeRe procedure~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
+Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:numere.developer@gmail.com"
+progress~Shows the state of a progress. Only suitable for scripts and procedures~prozedur $ programmierung plugins balken warten waitbar() progressbar~help progress
+psi(x)~Calculates the value of the digamma function at the position x~psi() digammafunction polygammafunction trigammafunction~psi(
+psi_n(n,x)~Calculates the value of the polygamma function of the order n at the position x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
+pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 # Q
-Question~Is it me, who asks the questions, or is it you?~question
-quit~Exits NumeRe~schliessen beenden
+Question~Is it me, who asks the questions, or is it you?~question~"Nice try, my friend ..."
+quit~Exits NumeRe~schliessen close exit beenden~quit
 # R
-radian(a)~Calculates the radians of the angle alpha [Degree]~toradian bogenmasswert umrechnen radian()
-rand(x0,x1)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung generator rand()
-range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()
-random~Random number generator with freely choosable distributions~zufallszahlen generator gaussverteilung gaußverteilung gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung
-read~Reads the content of a file and returns it through strings~einlesen dateien files strings zeichenketten
-readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten
-rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function
-Recursion~Did you mean "Recursion"?~rekursion recursion
-redefine~Redefines an already existing, custom defined function~funktion ueberschreiben überschreiben definieren neue definition
-regularize~Regularizes data rows with arbitrary distributed x values~interpolieren interpolate äquidistant aequidistant gleichverteilen
-remove~Removes caches or the passed files from this computer irreversibly~entfernen loeschen löschen delete file datei
-rename~Renames an already available table~umbenennen name ändern aendern neuer
-repeat(STRING,n)~Returns n copies of STRING~zeichenketten # \" wiederholen kopieren einfügen
-replace(STR1,POS,LEN,STR2)~Replaces LEN letters starting with the position POS in string STR1 with the string STR2~ersetzen replace() string # \"
-replaceall(STR1,STR2,STR3,POS1,POS2)~Replaces all occurrences of the second string STR2 in the first string STR1 with the third string STR3. The variables POS1 and POS2 are optional values limiting the action to start (POS1) and end position (POS2) in STR1~ersetzen replaceall() string # \"
-repmat(MAT,n,m)~Repeats the matrix MAT (n x m) times~wiederholen repeat vergrößern
-resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern
-reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten 
-resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller
-retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque
-rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()
-roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen
-round(x,n)~Rounds x to n decimals~runden round round()
+radian(a)~Calculates the radians of the angle alpha [Degree]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
+rand(x0,x1)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
+range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()~range(
+random~Random number generator with freely choosable distributions~zufallszahlen generator gaussverteilung gaußverteilung gaussian gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
+read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten~help read
+readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
+rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(
+Recursion~Did you mean "Recursion"?~rekursion recursion~{x,y} = {y,x+y}
+redefine~Redefines an already existing, custom defined function~funktion ueberschreiben überschreiben definieren neue definition~help redefine
+regularize~Regularizes data rows with arbitrary distributed x values~interpolieren interpolate äquidistant aequidistant gleichverteilen resampling~help regularize
+remove~Removes tables or the passed files from this computer irreversibly~entfernen loeschen löschen delete file datei~help remove
+rename~Renames an already available table~umbenennen name ändern aendern neuer~help rename
+repeat(STR,n)~Returns n copies of STR~zeichenketten # \" wiederholen kopieren einfügen~repeat(
+replace(STR1,POS,LEN,STR2)~Replaces LEN letters starting with the position POS in string STR1 with the string STR2~ersetzen replace() string # \"~replace(
+replaceall(STR1,STR2,STR3,POS1,POS2)~Replaces all occurrences of the second string STR2 in the first string STR1 with the third string STR3. The variables POS1 and POS2 are optional values limiting the action to start (POS1) and end position (POS2) in STR1~ersetzen replaceall() string # \"~replaceall(
+repmat(MAT,n,m)~Repeats the matrix MAT (n x m) times~wiederholen repeat vergrößern repmat()~repmat(
+resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern upsampling downsampling~help resample
+reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten reshape()~reshape(
+resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller resize()~resize(
+retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
+rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()~rint(
+roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen ceil()~roof(
+round(x,n)~Rounds x to n decimals~runden round round()~round(
 # S
-save~Saves the passed object~saving daten datei file data functions settings options
-sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()
-script~Loads and starts scripts~starten laden plugins installation installieren
-set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen
-show~Shows the content of the passend data object~data() cache() auflisten
-shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random
-sign(x)~Returns the sign of x~vorzeichen signum sign()
-sin(x)~Sine of x~sinus trigonometrische funktionen trigonometrie sin()
-sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonometrie sinc()
-sinh(x)~Hyperbolic sine of x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie sinh()
-size(MAT)~Returns the number of lines and columns of the matrix MAT~lines columns rows
-sleep(nMilliSeconds)~Waits for the passed nMilliSeconds and returns this value after it~sleep() pause() waiting time zeit dauer warten
-smooth~Smoothes the passed data set by linearizing depending on the requested order~noise reduction rauschen reduzieren verringern glaetten glätten smoothing
-sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()
-Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver
-solve(MAT)~Solves the system of linear equations, which is described by the matrix MAT, using the gaussian algorithm~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus
-sort~Sorts a data set~ordnen order sortieren aufsteigend absteigend ascending descending
-spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion
-split(STRING,CHAR)~Splits the string STRING at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()
-sqrt(x)~Square root of x~wurzel root sqrt()
-stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler
-std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz stats statistiken std()
-stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm
-STR.at(POS)~Return the character at the position POS in the string~methode strings zeichenketten # \" character at()
-STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten # \" find fnd()
-STR.len~Length of the string~methode strings zeichenketten # \" laenge length len()
-STR.mtch(STR,POS)~Searches for the first occurrence of a char of STR in the string going from position POS~methode strings zeichenketten # \" find mtch()
-STR.nmtch(STR,POS)~Searches for the first occurrence of a char in the string going from position POS, which doesn't appear in STR~methode strings zeichenketten # \" find nmtch()
-STR.nrmtch(STR,POS)~Searches for the last occurrence of a char in the string up to position POS, which doesn't appear in STR~methode strings zeichenketten # \" find last nrmtch()
-STR.rfnd(STR,POS)~Returns the position of the last occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten # \" find last rfnd()
-STR.rmtch(STR,POS)~Searches for the last occurrence of a char of STR in the string up to position POS~methode strings zeichenketten # \" find last rmtch()
-STR.splt(CHAR)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten # \" unterteilen tokenizer zerlegen splt()
-STR.sub(POS,LEN)~Returns LEN characters starting with the letter POS from the string as a new string~methode strings zeichenketten # \" ausschnitt ausschneiden sub()
-str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings  # \" find str_not_match()
-str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()
-strfnd(STR1,STR2,P)~Returns the position of the first occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings  # \" find strfnd()
-string(i)~String object with access to the string "i"~zeichenketten # \" \n \t string()
-string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten wert # \" string_cast() strings
-strlen(STRING)~Returns the length of the string STRING~zeichenketten strings # \" laenge länge strlen()
-strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the string S2 going from position P~zeichenketten strings  # \" find strmatch()
-strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings # \" find rfind last strrfnd()
-strrmatch(S1,S2,P)~Searches for the last occurrence of a char of S1 in the string S2 up to position P~zeichenketten strings  # \" find last strrmatch()
-student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor
-subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots
-substr(STRING,n,l)~Returns l characters starting with the n-th letter from STRING as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()
-sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings and will concatenate them~summe summieren zeichenketten # \" strings sum()
-surf~Generates surface plots~oberflaechenplot oberflächenplot surface
-surf3d~Generates 3D surface plots~oberflaechenplot oberflächenplot surface3d dreidimensional
-swap~Swaps the contents of two caches~austauschen exchange content
-switch (EX)~Starts the definition of a switch condition, see "help switch"~cases default endswitch switch() verzweigung falls fälle
+save~Saves the passed object~saving daten datei file data functions settings options~help save
+sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
+show~Shows the content of the passend data object~data() cache() table() auflisten~help show
+shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random shuffle()~shuffle(
+sign(x)~Returns the sign of x~vorzeichen signum sign()~sign(
+sin(x)~Sine of x~sinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions sin()~sin(
+sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonometrie trigonometry trigonometric functions sinc()~sinc(
+sinh(x)~Hyperbolic sine of x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic sinh()~sinh(
+size(MAT)~Returns the number of lines and columns of the matrix MAT~lines columns rows size() nlines ncols~size(
+sleep(nMilliSeconds)~Waits for the passed nMilliSeconds and returns this value after it~sleep() pause() waiting time zeit dauer warten~sleep(
+smooth~Smoothes the passed data set by linearizing depending on the requested order~noise reduction rauschen reduzieren verringern glaetten glätten smoothing gaussian filter kernel savitzkygolay~help smooth
+sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()~sneumann(
+Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver~solution = nan
+solve(MAT)~Solves the system of linear equations, which is described by the matrix MAT, using the gaussian algorithm~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus~solve(
+sort~Sorts a data set~ordnen order sortieren aufsteigend absteigend ascending descending~help sort
+spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion~help spline
+split(STR,CHAR)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
+sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
+start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
+stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
+std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz variance stats statistiken std()~std(
+stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
+STR.at(POS)~Return the character at the position POS in the string~methode strings zeichenketten # \" character at()~.at(
+STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten # \" find fnd()~.fnd(
+STR.len~Length of the string~methode strings zeichenketten # \" laenge length len()~.len
+STR.mtch(STR,POS)~Searches for the first occurrence of a char of STR in the string going from position POS~methode strings zeichenketten # \" find mtch()~.mtch(
+STR.nmtch(STR,POS)~Searches for the first occurrence of a char in the string going from position POS, which doesn't appear in STR~methode strings zeichenketten # \" find nmtch()~.nmtch(
+STR.nrmtch(STR,POS)~Searches for the last occurrence of a char in the string up to position POS, which doesn't appear in STR~methode strings zeichenketten # \" find last nrmtch()~.nrmtch(
+STR.rfnd(STR,POS)~Returns the position of the last occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten # \" find last rfnd()~.rfnd(
+STR.rmtch(STR,POS)~Searches for the last occurrence of a char of STR in the string up to position POS~methode strings zeichenketten # \" find last rmtch()~.rmtch(
+STR.splt(CHAR)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten # \" unterteilen tokenizer zerlegen splt()~.splt(
+STR.sub(POS,LEN)~Returns LEN characters starting with the letter POS from the string as a new string~methode strings zeichenketten # \" ausschnitt ausschneiden sub()~.sub(
+str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings  # \" find str_not_match()~str_not_match(
+str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
+strfnd(STR1,STR2,P)~Returns the position of the first occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings  # \" find strfnd()~strfnd(
+string(i)~String object with access to the string "i"~zeichenketten # \" \n \t string()~help string()
+string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten wert # \" string_cast() strings~string_cast(
+strlen(STR)~Returns the length of the string STR~zeichenketten strings # \" laenge länge strlen()~strlen(
+strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the string S2 going from position P~zeichenketten strings  # \" find strmatch()~strmatch(
+strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
+strrmatch(S1,S2,P)~Searches for the last occurrence of a char of S1 in the string S2 up to position P~zeichenketten strings  # \" find last strrmatch()~strrmatch(
+student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor~student_t(
+subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
+substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
+sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings and will concatenate them~summe summieren zeichenketten # \" strings sum()~sum(
+surf~Generates surface plots~oberflaechenplot oberflächenplot surface()~help surf
+surf3d~Generates 3D surface plots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
+swap~Swaps the contents of two tables~austauschen exchange content table()~help swap
+switch (EX)~Starts the definition of a switch condition, see "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 # T
-tan(x)~Tangent of xx~tangens trigonometrische funktionen trigonometrie tan()
-tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie tanh()
-taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren
-textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen
-theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()
-time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer
-timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit sekunden dauer formatieren formatting
-to_char(x,y,z,...)~Interprets x,y,z,... as ASCII-Values and returns their corresponding characters as one string~zeichenkette # \" character ascii to_char()
-to_cmd(STRING)~Transforms the passed string STRING to a command expression~zeichenkette # \" command kommando to_cmd()
-to_lowercase(STRING)~Transforms the uppercase letters in STRING to lowercase~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben
-to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette wert # \" to_string()
-to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren zeitstempel timestamp umwandeln
-to_uppercase(STRING)~Transforms the lowercase letters in STRING to uppercase~string zeichenkette wert # \" to_value()
-to_value(STRING)~Evaluates the string STRING and transforms it to a numerical value afterwards~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben
-trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente
-transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren
+TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename~help table()
+tan(x)~Tangent of x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
+tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
+taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
+textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
+theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
+time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
+timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+to_char(x,y,z,...)~Interprets x,y,z,... as ASCII-Values and returns their corresponding characters as one string~zeichenkette # \" character ascii to_char()~to_char(
+to_cmd(STR)~Transforms the passed string STR to a command expression~zeichenkette # \" command kommando to_cmd()~to_cmd(
+to_lowercase(STR)~Transforms the uppercase letters in STR to lowercase~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
+to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette wert # \" to_string()~to_string(
+to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
+to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
+to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert # \" to_value()~to_value(
+trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
+transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 # U
-undefine~Removes a custom function definition~funktion entfernen loeschen definieren neue definition
-unique(MAT,nDim)~Sorts and returns only unique elements~unique() matrix matrices matrizen
+undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
+unique(MAT,nDim)~Sorts and returns only unique elements~unique() matrix matrices matrizen~unique(
 # V
-valtostr(x,C,n)~Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters~to string value wert zur # \" zeichenkette formatieren valtostr()
-vect~Generates a vector plot~vectorfield vektorfeld quiver
-vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d
-version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion
+valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert zur # \" zeichenkette formatieren valtostr()~valtostr(
+vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
+vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
+version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
 # W/X
-warn~Displays the passed string as a warning~warning information
-while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while()
-workpath~Changes the current working directory for this session~workpath working directory cd change wp
-write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings # \"
-xor(x,y,z,...)~Connects its arguments with "|||"~logik logic oder exclusives xor() exklusives ausschliessendes ausschließendes
+warn~Displays the passed string as a warning~warning highlight hervorheben print information~help warn
+while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while() loop command sequence flow control~help while () ... endwhile
+workpath~Changes the current working directory for this session~workpath working directory cd change wp~help workpath
+write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings # \"~help write
+xor(x,y,z,...)~Connects its arguments with "|||"~logik logic oder exclusives xor() exklusives ausschliessendes ausschließendes~xor(
 # Y
-Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()
+Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
 # Z
-Z(n,m,rho,phi)~Value of the Zernike polynomials of the order n >= 0 with m = [-n,n] at the position rho in the interval [0,1] at the angle phi in the interval [0,2*PI)~astigmatismus astigmatism aberration chromatic chromatische koma
-zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix
-zeroes~Calls the function for numerical calculation of the intersection with of functions and data sets~schnittpunkt nullstellen
-zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannsche
+Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position rho at the angle phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(
+zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix~zero(
+zeroes~Calls the function for numerical calculation of the intersection with zero of functions and data sets~schnittpunkt nullstellen roots~help zeroes
+zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannian riemannsche~zeta(
