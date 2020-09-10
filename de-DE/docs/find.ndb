@@ -35,7 +35,7 @@ Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen R
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
-ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() zeichenkette code string~ascii(
+ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
 audio~Erzeugt eine WAVE-Datei aus einem Datensatz, siehe "help audio"~audiofile pcm audiodatei sound wavefile wavedatei~help audio
@@ -288,7 +288,7 @@ str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenke
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
 strfnd(STR1,STR2,P)~Gibt die Position des ersten Auftretens der Zeichenkette STR1 in STR2 ab dem Zeichen P zurück~zeichenketten strings  # \" find strfnd()~strfnd(
 string(i)~Zeichenketten-Objekt mit Zugriff auf Zeichenkette "i", siehe "help string"~zeichenketten # \" \n \t string()~help string()
-string_cast(EXPR)~Wandelt EXPR ungeachtet eventueller Rechenoperationen in eine Zeichenkette um~zeichenketten wert # \" string_cast() strings~string_cast(
+string_cast(EXPR)~Wandelt EXPR ungeachtet eventueller Rechenoperationen in eine Zeichenkette um~zeichenketten umwandeln transformation conversion convert wert # \" string_cast() strings~string_cast(
 strlen(STR)~Gibt die Länge der Zeichenkette STR zurück~zeichenketten strings # \" laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Sucht das erste Auftreten eines Zeichens aus S1 in der Zeichenkette S2 ab dem Zeichen P~zeichenketten strings  # \" find strmatch()~strmatch(
 strrfnd(STR1,STR2,P)~Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
@@ -309,21 +309,21 @@ taylor~Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n~reihenentwick
 textparse(sToParse,sPattern,nPos1,nPos2)~Zerlegt sToParse anhand des Schemas sPattern in einzelne Bausteine unterschiedlicher Variablentypen~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
 time()~Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück~zeit sekunden dauer date() to_time() timeformat()~time()
-timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
-to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette # \" character ascii to_char()~to_char(
+timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string # \" character ascii to_char()~to_char(
 to_cmd(STR)~Wandelt die enthaltene Zeichenkette STR in ein Kommandoausdruck um~zeichenkette # \" command kommando to_cmd()~to_cmd(
 to_lowercase(STR)~Wandelt die Großbuchstaben in STR in Kleinbuchstaben um~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
-to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche um~zeichenkette wert # \" to_string()~to_string(
-to_time(STR1,STR2)~Wandelt die Zeit in STR2 gemäß dem Schema STR1 in einen Zeitwert um~transformieren zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
-to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Großbuchstaben um~string zeichenkette wert # \" to_value()~to_uppercase(
-to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_value(
+to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche um~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
+to_time(STR1,STR2)~Wandelt die Zeit in STR2 gemäß dem Schema STR1 in einen Zeitwert um~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
+to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Großbuchstaben um~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
+to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(
 trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
 # U
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() matrix matrices matrizen~unique(
 # V
-valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren valtostr()~valtostr(
+valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()

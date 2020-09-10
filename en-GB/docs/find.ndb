@@ -35,7 +35,7 @@ Answer~The answer to life, the universe and everything: 42~answer ergebnis resul
 append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
-ascii(STR)~Returns the ASCII-Values of the characters in STR~ascii() zeichenkette code string~ascii(
+ascii(STR)~Returns the ASCII values of the characters in STR~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
 audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
@@ -289,7 +289,7 @@ str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
 strfnd(STR1,STR2,P)~Returns the position of the first occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings  # \" find strfnd()~strfnd(
 string(i)~String object with access to the string "i"~zeichenketten # \" \n \t string()~help string()
-string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten wert # \" string_cast() strings~string_cast(
+string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten umwandeln transformation conversion convert wert # \" string_cast() strings~string_cast(
 strlen(STR)~Returns the length of the string STR~zeichenketten strings # \" laenge l‰nge strlen()~strlen(
 strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the string S2 going from position P~zeichenketten strings  # \" find strmatch()~strmatch(
 strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
@@ -310,21 +310,21 @@ taylor~Expands the passed expression in a taylor polynomial of the order n~reihe
 textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sph‰rische theta()~theta(
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
-timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
-to_char(x,y,z,...)~Interprets x,y,z,... as ASCII-Values and returns their corresponding characters as one string~zeichenkette # \" character ascii to_char()~to_char(
+timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string # \" character ascii to_char()~to_char(
 to_cmd(STR)~Transforms the passed string STR to a command expression~zeichenkette # \" command kommando to_cmd()~to_cmd(
 to_lowercase(STR)~Transforms the uppercase letters in STR to lowercase~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
-to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette wert # \" to_string()~to_string(
-to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
+to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
+to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert # \" to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben~to_uppercase(
-to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert # \" to_value()~to_value(
+to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(
 trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 # U
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() matrix matrices matrizen~unique(
 # V
-valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert zur # \" zeichenkette formatieren valtostr()~valtostr(
+valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
