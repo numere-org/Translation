@@ -74,7 +74,7 @@ dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial
 Debugger~Sammelt zusätzliche Informationen bei Fehlern in Prozeduren, siehe "help debugger"~fehlersuche debugging bugs throw error~help debugger
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Gradwert von x [Radiant]~todegree gradwert rad2deg() umrechnen degree()~degree(
-delete~Entfernt Einträge/Spalten/Untertabellen aus dem Cache, siehe "help delete"~loeschen löschen entfernen remove erase~help delete
+delete~Entfernt Einträge/Spalten/Untertabellen aus einer Tabelle, siehe "help delete"~loeschen löschen entfernen remove erase~help delete
 dens~Erzeugt einen Dichte-Plot~density dichte~help dens
 dens3d~Erzeugt einen 3D-Dichte-Plot~density3d dichte dreidimensional~help dens3d
 det(MAT)~Berechnet die Determinante einer quadratischen Matrix MAT, siehe "help matop"~det() matrix~det(
@@ -201,7 +201,7 @@ move~Verschiebt je nach Ausdruck Einträge/Spalten/Untertabellen in Tabellen oder
 # N
 ncols~Enthält die Zahl der Spalten beim aktuellen Datenzugriff~columns dataaccess end number~ncols
 neumann(n,x)~Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
-new~Erzeugt neue Ordner, Scripte, Prozeduren, Dateien und Caches~ordner scripts procedures erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
+new~Erzeugt neue Ordner, Scripte, Prozeduren, Dateien und Tabellen~ordner scripts procedures erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
 nlen~Enthält die Zahl der Elemente beim aktuellen Zugriff auf ein Cluster~rows clusteraccess dataaccess end number~nlen
 nlines~Enthält die Zahl der Zeilen beim aktuellen Datenzugriff~rows dataaccess end number~nlines
 norm(x,y,z,...)~Berechnet die euklidische Norm eines Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm vector euklidian norm()~norm(
@@ -266,7 +266,7 @@ sleep(nMilliSeconds)~Wartet die angegebenen nMilliSeconds und gibt diesen Wert a
 smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung~noise reduction rauschen reduzieren verringern glaetten glätten smoothing gaussian filter kernel savitzkygolay~help smooth
 sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()~sneumann(
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus~solve(
-sort~Sortiert einen Datensatz, siehe "help data" oder "help cache"~ordnen order sortieren aufsteigend absteigend ascending descending~help sort
+sort~Sortiert einen Datensatz, siehe "help data" oder "help table"~ordnen order sortieren aufsteigend absteigend ascending descending~help sort
 spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion~help spline
 split(STR,CHAR)~Teilt die Zeichenkette STR an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens~split(
 sqrt(x)~Wurzel von x~wurzel root sqrt()~sqrt(

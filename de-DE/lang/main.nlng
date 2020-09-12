@@ -421,8 +421,8 @@ PARSERFUNCS_LISTFUNC_FUNC_RECT_[NUM_DISTRIB]=				rect(x,x0,x1)                  
 PARSERFUNCS_LISTFUNC_FUNC_REPEAT_[STRING]=					repeat(sStr,nTimes)                          STR      - Gibt nTimes Kopien von sStr zurück
 PARSERFUNCS_LISTFUNC_FUNC_REPLACE_[STRING]=					replace(sToRep,nPos,nLetters,sRep)           STR      - Ersetzt nLetters Zeichen ab der Stelle nPos in der Zeichenkette sToRep mit der Zeichenkette sRep
 PARSERFUNCS_LISTFUNC_FUNC_REPLACEALL_[STRING]=				replaceall(sToRep,sToFind,sRep,nPos1,nPos2)  STR      - Ersetzt alle Vorkommnisse der zweiten Zeichenkette sToFind in der ersten Zeichenkette sToRep mit der dritten Zeichenkette sRep. Die Variablen nPos1 und nPos2 sind optional und geben Anfangs- (nPos1) und Endpunkt (nPos2) der Ersetzung vor
-PARSERFUNCS_LISTFUNC_FUNC_RESHAPE_[MAT]=					reshape(MAT,n,m)                             MAT      - Formt die Matrix MAT zu einer (n x m)-Matrix um. Die Zahl der Elemente in der alten und der neuen Matrix muss dabei identisch sein. Die Umformung geschieht zeilenweise
 PARSERFUNCS_LISTFUNC_FUNC_REPMAT_[MAT]=						repmat(MAT,n,m)                              MAT      - Wiederholt die Matrix MAT (n x m)-mal
+PARSERFUNCS_LISTFUNC_FUNC_RESHAPE_[MAT]=					reshape(MAT,n,m)                             MAT      - Formt die Matrix MAT zu einer (n x m)-Matrix um. Die Zahl der Elemente in der alten und der neuen Matrix muss dabei identisch sein. Die Umformung geschieht zeilenweise
 PARSERFUNCS_LISTFUNC_FUNC_RESIZE_[MAT]=						resize(MAT,n,m)                              MAT      - Ändert die Größe der Matrix MAT auf (n x m). Fehlende Zeilen und Spalten werden durch 0 ersetzt
 PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                                      VAL      - x auf eine Ganzzahl runden
 PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                                      VAL      - rundet x auf die nächsthöhere Ganzzahl auf
@@ -1123,6 +1123,9 @@ GUI_SEARCH_FILES=Dateien suchen ...
 GUI_SEARCH_SYMBOLS=Symbole suchen ...
 GUI_SEARCH_DOCUMENTATION=Artikel suchen ...
 GUI_SEARCH_TELLME=Was möchtest du tun?
+GUI_SEARCH_CALLTIP_TREE=Doppelklicken zum Auswählen
+GUI_SEARCH_CALLTIP_TOOLBAR=Klicken und ziehen oder mit Doppelklick Dokumentation anzeigen
+GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Klicken und ziehen oder mit Doppelklick direkt in den Editor einfügen
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche

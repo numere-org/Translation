@@ -197,11 +197,11 @@ mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional~help mesh3d
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
 minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
-move~Moves (depending on the actual expression) entries/columns/subtables in caches or complete files~verschieben tabellen dateien files~help move
+move~Moves (depending on the actual expression) entries/columns/subtables in tables or complete files~verschieben tabellen dateien files~help move
 # N
 ncols~Contains the number of columns for the current data access~columns dataaccess end number~ncols
 neumann(n,x)~Neumann function (Bessel function of the second kind) with the order n at the position x~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
-new~Generates new directories, scripts, procedures, files and caches~ordner scripte prozeduren erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
+new~Generates new directories, scripts, procedures, files and tables~ordner scripte prozeduren erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
 nlen~Contains the number of elements for the current cluster access~rows clusteraccess dataaccess end number~nlen
 nlines~Contains the number of lines for the current data access~rows dataaccess end number~nlines
 norm(x,y,z,...)~Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm vector euklidian norm()~norm(

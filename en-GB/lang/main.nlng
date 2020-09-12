@@ -421,9 +421,9 @@ PARSERFUNCS_LISTFUNC_FUNC_RECT_[NUM_DISTRIB]=				rect(x,x0,x1)                  
 PARSERFUNCS_LISTFUNC_FUNC_REPEAT_[STRING]=					repeat(sStr,nTimes)                          STR      - Returns nTimes copies of sStr
 PARSERFUNCS_LISTFUNC_FUNC_REPLACE_[STRING]=					replace(sToRep,nPos,nLetters,sRep)           STR      - Replaces nLetters letters starting with the position nPos in string sToRep with the string sRep
 PARSERFUNCS_LISTFUNC_FUNC_REPLACEALL_[STRING]=				replaceall(sToRep,sToFind,sRep,nPos1,nPos2)  STR      - Replaces all occurrences of the second string sToFind in the first string sToRep with the third string sRep. The variables nPos1 and nPos2 are optional values limiting the action to start (nPos1) and end position (nPos2) in sToRep
+PARSERFUNCS_LISTFUNC_FUNC_REPMAT_[MAT]=						repmat(MAT,n,m)                              MAT      - Repeats the matrix MAT (n x m) times
 PARSERFUNCS_LISTFUNC_FUNC_RESHAPE_[MAT]=					reshape(MAT,n,m)                             MAT      - Changes the shape of the matrix MAT to a (n x m) matrix. The number of elements in the old and the new matrix must match for this function. Reshaping is done linewise
 PARSERFUNCS_LISTFUNC_FUNC_RESIZE_[MAT]=						resize(MAT,n,m)                              MAT      - Changes the size of the matrix MAT to (n x m). Missing lines and rows are appended using zeros
-PARSERFUNCS_LISTFUNC_FUNC_REPMAT_[MAT]=						repmat(MAT,n,m)                              MAT      - Repeats the matrix MAT (n x m) times
 PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                                      VAL      - Rounds x to the nearest integral value
 PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                                      VAL      - Rounds x to the nearest and larger integral number
 PARSERFUNCS_LISTFUNC_FUNC_ROUND_[NUM]=						round(x,n)                                   VAL      - Rounds x to n decimals
@@ -1123,6 +1123,9 @@ GUI_SEARCH_FILES=Search files ...
 GUI_SEARCH_SYMBOLS=Search symbols ...
 GUI_SEARCH_DOCUMENTATION=Search articles ...
 GUI_SEARCH_TELLME=Tell me, what you want to do ...
+GUI_SEARCH_CALLTIP_TREE=Select with double click
+GUI_SEARCH_CALLTIP_TOOLBAR=Click and drag or show documentation with a double click
+GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Click and drag or directly insert into the editor with a double click
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=User interface
