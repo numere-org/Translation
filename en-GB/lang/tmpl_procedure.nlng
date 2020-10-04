@@ -4,12 +4,12 @@
  * Generated: %%2%% *#
 
 procedure $%%1%%()
-	## Insert your commands and expressions here.
+	##~ Insert your commands and expressions here.
 	|
 	return true;
 endprocedure
 
-## Create more local procedures here
+##~ Create more local procedures here
 
 
 #**End of file

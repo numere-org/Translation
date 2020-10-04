@@ -4,12 +4,12 @@
  * Hinzugefügt: %%2%% *#
 
 procedure $%%1%%()
-	## Füge hier deine Kommandos und Ausdrücke ein.
+	##~ Füge hier deine Kommandos und Ausdrücke ein.
 	|
 	return true;
 endprocedure
 
-## Ergänze hier weitere lokale Prozeduren
+##~ Ergänze hier weitere lokale Prozeduren
 
 
 #**Ende der Datei

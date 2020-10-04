@@ -1,0 +1,100 @@
+% Header file for NumeRe documentations
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{etoolbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{scrlayer-scrpage}
+\usepackage{fontspec,unicode-math}
+\setmainfont{Palatino Linotype}
+\setmathfont{Cambria Math}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+
+% Define the language contents
+\lstdefinelanguage{nscr}
+{
+    keywordsprefix=$,
+    alsoletter={~\#},
+    keywords=[1]{},
+    keywords=[2]{NSCRCOMMANDS},
+    keywords=[3]{NSCRFUNCTIONS},
+    keywords=[4]{NSCRCONSTANTS},
+    keywords=[5]{NSCROPTIONS},
+    keywords=[6]{NSCRMETHODS},
+    keywords=[7]{NSCRSPECIALVALS},
+    sensitive=true,
+    morecomment=[s]{\#*}{*\#},
+    morecomment=[l][commentstyle]{\#\#},
+    string=[b]"
+}
+
+\renewcommand\arraystretch{1.5}
+\newcommand\realnumberstyle[1]{\tiny}
+\newcommand\oprts[1]{\textcolor{red}{\upshape{#1}}}
+\newcommand\procsec[2]{\section[#1]{#1\\*[.4ex]\textup{\hphantom{\thesection\enskip}}\normalsize#2}}
+\newcommand\procedure[2]{\procsec{Procedure \$#1()}{Full qualified procedure name: \lstinline`#2`}}
+\newcommand\depends[1]{\begin{flushleft}\textsf{\textbf{This procedure calls:}} #1\end{flushleft}}
+\newcommand\parameters{\subsection*{Parameters for this procedure}}
+
+% Apply a patch for the closing parenthesis
+\makeatletter
+\patchcmd{\lsthk@SelectCharTable}{`)}{``}{}{}
+\makeatother
+
+% Define the colors needed for the language
+\definecolor{ProcedureStyle}{RGB}{128,0,0}
+\definecolor{CommandStyle}{RGB}{0,128,255}
+\definecolor{StringStyle}{RGB}{128,128,255}
+\definecolor{BGColorTwo}{RGB}{245,245,245}
+\definecolor{BGColorOne}{RGB}{230,230,230}
+\definecolor{CommentStyle}{RGB}{0,128,0}
+\definecolor{ConstantStyle}{RGB}{255,0,128}
+\definecolor{MethodStyle}{RGB}{0,180,50}
+\definecolor{OptionStyle}{RGB}{0,128,100}
+
+% Activate the language
+\lstset{
+    language=nscr,
+    basicstyle={\footnotesize\ttfamily\itshape},
+    extendedchars=true,
+    tabsize=4,
+    columns=fixed,
+    keepspaces=false,
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle={\color{CommentStyle}\upshape},
+    keywordstyle=[1]{\color{ProcedureStyle}\bfseries\upshape},
+    keywordstyle=[2]{\color{CommandStyle}\bfseries\upshape\underbar},
+    keywordstyle=[3]{\color{blue}\bfseries\upshape},
+    keywordstyle=[4]{\color{ConstantStyle}\bfseries\upshape},
+    keywordstyle=[5]{\color{OptionStyle}\upshape},
+    keywordstyle=[6]{\color{MethodStyle}\bfseries\upshape},
+    keywordstyle=[7]{\bfseries\upshape},
+    stringstyle={\color{StringStyle}\upshape},
+    backgroundcolor=\color{BGColorTwo},
+    literate=*{(}{{\oprts{(}}}1
+        {)}{{\oprts{)}}}1
+        {[}{{\oprts{[}}}1
+        {]}{{\oprts{]}}}1
+        {\{}{{\oprts{\{}}}1
+        {\}}{{\oprts{\}}}}1
+        {+}{{\oprts{+}}}1
+        {-}{{\oprts{-}}}1
+        {*}{{\oprts{*}}}1
+        {/}{{\oprts{/}}}1
+        {\^}{{\oprts{\^{}}}}1
+        {\%}{{\oprts{\%}}}1
+        {=}{{\oprts{=}}}1
+        {!}{{\oprts{!}}}1
+        {?}{{\oprts{?}}}1
+        {>}{{\oprts{>}}}1
+        {<}{{\oprts{<}}}1
+        {\&}{{\oprts{\&}}}1
+        {|}{{\oprts{|}}}1
+        {;}{{\oprts{;}}}1
+        {,}{{\oprts{,}}}1
+        {:}{{\oprts{:}}}1
+}

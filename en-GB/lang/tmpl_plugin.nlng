@@ -27,13 +27,13 @@
 		 * If your plugin shall call other procedures, copy them including their namespace in this install routine. *#
 		namespace plugins~%%1%% ## Standard namespace. You may use "this" as well.
 		|
-		## If you want to return a value, you should switch the type to "TYPE_PLUGIN_WITH_RETURN_VALUE".
+		##~ If you want to return a value, you should switch the type to "TYPE_PLUGIN_WITH_RETURN_VALUE".
 		return void
 	endprocedure
 
-	## You may include further procedures at this place.
+	##~ You may include further procedures at this place.
 
-	## The following lines give you the ability, to add your own entry to the NumeRe documentation.
+	##~ The following lines give you the ability, to add your own entry to the NumeRe documentation.
 	<helpindex>
 		<article id="plgn_%%1%%">
 			<title string="%%1%%" idxkey="%%1%%" />
