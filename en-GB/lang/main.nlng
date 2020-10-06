@@ -1461,6 +1461,7 @@ GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start here
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Click right to search its definition
 GUI_EDITOR_CALLTIP_PROC_PARAMS=Parameters for this procedure
+GUI_EDITOR_CALLTIP_PROC_REMARK=Remark
 GUI_EDITOR_CALLTIP_...=		...         - Allows an arbitrary number of arguments
 GUI_EDITOR_CALLTIP_ANS=		ans         - Contains the result of the last calculation
 GUI_EDITOR_CALLTIP_TABLE=	table()  {} - Standard table object. Its contents may be modified

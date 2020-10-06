@@ -1461,6 +1461,7 @@ GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start
 GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
 GUI_EDITOR_CALLTIP_PROC2=Klicke rechts, um die Definition zu suchen
 GUI_EDITOR_CALLTIP_PROC_PARAMS=Parameter dieser Prozedur
+GUI_EDITOR_CALLTIP_PROC_REMARK=Anmerkung
 GUI_EDITOR_CALLTIP_...=		...         - Ermöglicht eine beliebige Zahl an Argumenten
 GUI_EDITOR_CALLTIP_ANS=		ans         - Enthält das Ergebnis der letzten Berechnung
 GUI_EDITOR_CALLTIP_TABLE=	table()  {} - Standard-Tabellen-Objekt. Der Inhalt kann modifiziert werden
