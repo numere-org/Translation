@@ -1248,6 +1248,7 @@ GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc 
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
+GUI_TREE_PUP_LOADTOTABLE=Load file to new table
 GUI_TREE_PUP_START=Start script
 GUI_TREE_PUP_RUN=Execute procedure
 GUI_TREE_PUP_EDIT=Edit
