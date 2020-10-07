@@ -41,15 +41,13 @@
 	</list>
 	It is possible to append <code>-ignore</code> to <code>clear</code> and <code>delete</code> to suppress the required confirmation.
 	<h>Methods for working with tables</h>
-	Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1. MODIFIER2</codeblock>Methods are <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> and <code>norm</code>. They correspond to the standard functions of the same name and are executed on all elements of the selected table. The following methods are additionally defined:
+	Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methods are <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> and <code>norm</code>. They correspond to the standard functions of the same name and are executed on all elements of the selected table. The following methods are additionally defined:
 	<list>
 		<item node="TABLE().name">Returns the name of the table as string, which shortens constructs like <code>to_string(TABLE())</code>
 		<item node="TABLE().size">Returns the size of the table in rows and columns</item>
 		<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 		<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 	</list>
-
-Translated with www.DeepL.com/Translator (free version)
 	The following are defined as modifiers:
 	<list>
 		<item node=".lines">Applies the corresponding method line by line and returns a corresponding number of results</item>
