@@ -112,8 +112,8 @@ MAIN_LOADING_COLORTHEME=Aktiviere Color-Theme
 MAIN_LOADING_COLORTHEME_ERROR=FEHLER: Konnte Color-Theme nicht laden.
 MAIN_ABOUT_NBR=Über: siehe "about"
 MAIN_BYE_NBR=Bis zum nächsten Mal!
-MAIN_UNSAVED_CACHE=Es sind ungesicherte Daten im Cache vorhanden. Sollen sie gespeichert werden? (%%COMMON_YES_NO%%)
-MAIN_CACHE_SAVED=Cache wurde erfolgreich gespeichert.
+MAIN_UNSAVED_CACHE=Es sind ungesicherte Daten im Speicher vorhanden. Sollen sie gespeichert werden? (%%COMMON_YES_NO%%)
+MAIN_CACHE_SAVED=Inhalt des Speichers wurde erfolgreich gesichert.
 MAIN_QUIT=NumeRe v %%1%% wurde erfolgreich beendet.
 # BUILTIN:
 # =================================
@@ -702,7 +702,7 @@ PARSERFUNCS_LISTCMD_CMD_SMOOTH_[EVAL]=					smooth       OB -PAR                -
 PARSERFUNCS_LISTCMD_CMD_SORT_[DATACTRL]=				sort         OB [-PAR]  -> {VAL}    - Sortiert den Datensatz OB. Die zu verwendenden Indexspalten, die Sortierrichtung und die Rückgabe eines Sortiervektors kann mittels Parameter ausgewählt werden
 PARSERFUNCS_LISTCMD_CMD_SPLINE_[EVAL]=					spline       OB                     - Berechnet kubische Splines für die gegebenen Datenpunkte OB und definiert sie als Funktion
 PARSERFUNCS_LISTCMD_CMD_START_[MISC]=					start        NM                     - Startet das Script NM
-PARSERFUNCS_LISTCMD_CMD_STATS_[EVAL]=					stats        OB [-PAR]              - Berechnet die Statistiken des Datensatzes OB. Diese können auch gleich in eine Datei exportiert werden, wenn der entsprechende Parameter übergeben wird
+PARSERFUNCS_LISTCMD_CMD_STATS_[EVAL]=					stats        OB [-PAR]  -> {STR}    - Berechnet die Statistiken des Datensatzes OB. Diese können in einer Tabelle gespeichert (das Kommando gibt in diesem Fall die Bezeichnung der Zeilen zurück) oder gleich in eine Datei exportiert werden, wenn der entsprechende Parameter übergeben wird
 PARSERFUNCS_LISTCMD_CMD_STFA_[EVAL]=					stfa         OB [-PAR]              - Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes OB und speichert sie als neues Datengitter. Parameter erlauben die Änderung der Fensterbreite und die Anpassung der Zieltabelle
 PARSERFUNCS_LISTCMD_CMD_STR_[PROC]=						str          EX                     - Definiert den lokalen Zeichenkettenvariablensatz in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_SUBPLOT_[PLOTTING]=				subplot      [EX -set PAR]          - Startet einen neuen Unterplot im multiplot-Modus von compose. Parameter erlauben die Vergrößerung des Unterplots über mehrere Spalten und Zeilen des angelegten Gitters
@@ -969,7 +969,7 @@ HIST_SAVED_AT=Gespeichert unter "%%1%%"
 # RANDOM
 # ================================
 RANDOM_RESERVING_MEM=Reserviere Speicher
-RANDOM_SUCCESS=Es wurde(n) %%1%% %%2%% Zufallszahlen erfolgreich in die Tabelle "cache()" geschrieben.
+RANDOM_SUCCESS=Es wurde(n) %%1%% %%2%% Zufallszahlen erfolgreich in die Tabelle "%%3%%" geschrieben.
 RANDOM_DISTRIB_TYPE_GAUSS=normalverteilte
 RANDOM_DISTRIB_TYPE_POISSON=poisson-verteilte
 RANDOM_DISTRIB_TYPE_GAMMA=gamma-verteilte
@@ -1992,7 +1992,7 @@ GUI_ANALYZER_RETURN_ALWAYSTRUE=Dies Anweisung wird immer true zurückgeben.
 GUI_ANALYZER_NOTALLOWED=Diese Anweisung kann hier nicht verwendet werden.
 GUI_ANALYZER_ASSIGNTOVARIABLE=Übergebe das Ergebnis von "%%1%%" an eine Variable, um damit weiterzurechnen.
 GUI_ANALYZER_APPENDIGNORE=Füge den Parameter "-ignore" an, um die Bestätigung zu unterdrücken.
-GUI_ANALYZER_CANNOTREMOVEPREDEFS="data()", "cache()" und "string()" können nicht entfernt werden.
+GUI_ANALYZER_CANNOTREMOVEPREDEFS="data()", "table()" und "string()" können nicht entfernt werden.
 GUI_ANALYZER_EMPTYEXPRESSION=Ein Ausdruck oder Parameter fehlt.
 GUI_ANALYZER_USEINLINEIF=Die einzeilige if-Bedingung (WENN ? DANN : SONST) kann signifikante Geschwindigkeitsvorteile bringen.
 GUI_ANALYZER_CONSTEXPR=Diese Zeile ist konstant und benötigt unnötig Laufzeit.

@@ -19,8 +19,7 @@
 <article id="random">
 	<title string="Zufallszahlengenerator" />
 	Der NumeRe-Zufallszahlengenerator <code>random</code> generiert eine oder mehrere Datenreihen beliebiger Länge, die mit Zufallszahlen einer gewählten Verteilung folgend gefüllt sind. Dabei können alle nötigen Parameter der gewählten Verteilung bestimmt werden.
-	Die Datenreihen werden in den Cache geschrieben. Datenreihen, die zuvor vorhanden waren, werden dabei a priori nicht überschrieben; die neuen Datenreihen werden stattdessen "rechts" davon angehängt.
-	Wird der Parameter <code>-o</code> an das Kommando <code>random</code> übergeben, so werden die Einträge im Cache überschrieben. (Allerdings auch nur die für <code>random</code> benötigten).
+	Die Datenreihen werden in eine Tabelle geschrieben. Die Zieltabelle kann mit der Option <code>target=TABLE()</code> definiert werden, standardmäßig wird <code>table()</code> verwendet.
 	<code>random</code> besitzt des Weiteren folgende Optionen, die direkt übergeben werden können:
 	<list>
 		<item node="lines=ZEILEN">[l=] Zahl der mit den Zufallszahlen zu füllenden Zeilen festlegen</item>
@@ -43,7 +42,7 @@
 		<item node="gamma"><code>distrib=gamma shape=1.0 scale=1.0</code></item>
 		<item node="uniform"><code>distrib=uniform mean=0.0 width=1.0</code></item>
 	</list>
-	<example desc="Erzeugen von 2 Spalten mit je 256 normalverteilten Zufallszahlen um den Mittelwert von 0.5 und mit der Breite von 0.75:">
+	<example desc="Erzeugen von 2 Spalten in <code>table()</code> mit je 256 normalverteilten Zufallszahlen um den Mittelwert von 0.5 und mit der Breite von 0.75:">
 		random -lines=256 cols=2 mean=0.5 width=0.75 distrib=gauss
 	</example>
 	<em>Tipp:</em> Die gewünschten Optionen können auch nur durch die in eckigen Klammern angegebenen Abkürzungen übergeben werden, also beispielsweise:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>

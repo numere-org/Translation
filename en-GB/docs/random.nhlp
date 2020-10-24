@@ -19,8 +19,7 @@
 <article id="random">
 	<title string="Random number generator" />
 	NumeRe's random number generator <code>random</code> creates one or more data rows with arbitrary length, which are filled with random numbers of a chosen distribution. All necessary parameters for the desired distribution may be defined in advance.
-	The data rows may be written to the cache. Data rows, which were already present, won't be overwritten. The new data rows will be appended in new columns right of the already existing ones.
-	If the parameter <code>-o</code> was passed to <code>random</code>, then the entries in the cache will be overwritten (but only the for <code>random</code> needed ones).
+	The data rows may be written to a table. The target table may defined using the option <code>target=TABLE()</code> and defaults to <code>table()</code>.
 	In addition, <code>random</code> knows the following options, which may passed directly:
 	<list>
 		<item node="lines=LINES">[l=] Number of lines, which shall be filled with random numbers, i.e. the length of the data rows</item>
@@ -43,7 +42,7 @@
 		<item node="gamma"><code>distrib=gamma shape=1.0 scale=1.0</code></item>
 		<item node="uniform"><code>distrib=uniform mean=0.0 width=1.0</code></item>
 	</list>
-	<example desc="Creating of two columns with 256 gaussian distributed random numbers each, where the average of the random numbers is 0.5 and the width is 0.75:">
+	<example desc="Creating two columns in <code>table()</code> with 256 gaussian distributed random numbers each, where the average of the random numbers is 0.5 and the width is 0.75:">
 		random -lines=256 cols=2 mean=0.5 width=0.75 distrib=gauss
 	</example>
 	<em>Tip:</em> The desired options may be passed with the abbreviations shown in brackets, e.g.:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>

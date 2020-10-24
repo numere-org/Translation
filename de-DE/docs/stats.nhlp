@@ -18,8 +18,12 @@
 
 <article id="stats">
 	<title string="Statistiken" />
-	Das Kommando <code>stats</code> ermöglicht die vollautomatische Datenanalyse von mehreren Datenreihen zugleich. Die analysierten Datenreihen können dann zusammen mit den Analysen in eine neue Datei gespeichert werden.
-	<code>stats</code> benötigt natürlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Art übergeben werden können:<codeblock>stats DATENOBJEKT(I1:I2,J1:J2) -set OPTIONEN</codeblock>
+	Das Kommando <code>stats</code> ermöglicht die vollautomatische Datenanalyse von mehreren Datenreihen zugleich. Die analysierten Datenreihen können dann in eine Tabelle oder zusammen mit den Analysen in eine neue Datei gespeichert werden.
+	<code>stats</code> benötigt natürlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Art übergeben werden können, wobei die zweite Variante das Ergebnis in <code>TABLE()</code> ablegt und die Namen der Zeilen in der entsprechenden Reihenfolge als Vektor zurückgibt:
+	<codeblock>
+		stats DATENOBJEKT(I1:I2,J1:J2) -set OPTIONEN
+		{ZEILENNAMEN} = stats DATENOBJEKT(I1:I2,J1:J2) -set target=TABLE()
+	</codeblock>
 	Diesem Kommando kann mit der Option <code>export=DATEINAME</code> direkt der gewünschte Ausgabe-Dateiname angegeben werden. Dateinamen, die Leerzeichen enthalten sollen, müssen dabei mit Anführungszeichen umschlossen werden. (Mit der Endung *.tex wird eine TeX-Datei erzeugt) Wird kein Dateiname festgelegt (sondern nur <code>-export</code> übergeben), so wird automatisch ein Dateiname generiert.
 	<code>stats</code> generiert die folgenden Statistikwerte:
 	<list>
