@@ -23,37 +23,32 @@
 	Geänderte Einstellungen werden zum Programmende gespeichert und sind bei einem Neustart wieder verfügbar.
 	Parameter für das Kommando <code>set</code> sind die folgenden:
 	<list>
-		<item node="-autosave=WERT">Speicherintervall [in sec]</item>
-		<item node="-buffersize=WERT">Buffergröße einstellen</item>
-		<item node="-colortheme=WERT">Farben des NumeRe-Fensters einstellen (siehe <code>set -colortheme</code> für die aktuelle Liste)</item>
-		<item node="-compact=WERT">Kompakte Tabellenanzeige</item>
-		<item node="-defcontrol=WERT">Automatisches Laden/Speichern der selbst definierten Funktionen (de-)aktivieren</item>
-		<item node="-draftmode=WERT">Entwurfsmodus (für Plots) (de-)aktivieren</item>
-		<item node="-extendedfileinfo=WERT">Erweiterte Dateiinformationen (de-)aktivieren</item>
-		<item node="-externaldocwindow=WERT">Anzeigen der NumeRe-Hilfe in einem externen Fenster (de-)aktivieren</item>
-		<item node="-faststart=WERT">Schnellerer Start von NumeRe (ohne Prüfung)</item>
-		<item node="-greeting=WERT">Begrüßung (de-)aktivieren</item>
-		<item node="-hints=WERT">Tip-des-Tages (de-)aktivieren</item>
-		<item node="-loademptycols=WERT">Laden leerer Spalten (de-)aktivieren (Standardmäßig werden leere Spalten während des Ladens ignoriert, um Speicherplatz zu sparen)</item>
-		<item node="-loadpath=PFAD">Standard-Importordner ändern</item>
-		<item node="-logfile=WERT">Protokollierung der Eingaben (de-)aktivieren</item>
-		<item node="-plotfont=FONT">Standardschriftart für Plots einstellen</item>
-		<item node="-plotpath=PFAD">Standard-Plot-Speicherordner ändern</item>
-		<item node="-precision=WERT">Präzision ändern</item>
-		<item node="-procpath=PFAD">Pfad zu den NumeRe-Prozeduren ändern</item>
-		<item node="-save">Konfiguration zusätzlich manuell speichern</item>
-		<item node="-savepath=PFAD">Standard-Speicherordner ändern</item>
-		<item node="-scriptpath=PFAD">Pfad zu den NumeRe-Scripts einstellen</item>
-		<item node="-usecustomlang=WERT">Verwendung einer benutzerdefinierten Sprache (de-)aktivieren</item>
-		<item node="-useescinscripts=WERT">Verwendung der <code>ESC</code>-Taste in Scripts (de-)aktivieren</item>
-		<item node="-viewer=PFAD">Pfad zum Imageviewer einstellen</item>
-		<item node="-windowsize <x=X> <y=Y>">Fenstergröße (x und y-Werte) einstellen. Die Reihenfolge der Werte ist nicht von Belang und es kann auch nur ein Wert gesetzt werden</item>
-		<item node="-workpath=PFAD">Das aktuelle Arbeitsverzeichnis einstellen. Schneller geht das mit dem Kommando <code>workpath PFAD</code></item>
+		<item node="autosave=WERT">Speicherintervall [in sec]</item>
+		<item node="compact=WERT">Kompakte Tabellenanzeige</item>
+		<item node="debugger=WERT">Den NumeRe-Debugger (de-)aktivieren</item>
+		<item node="defcontrol=WERT">Automatisches Laden/Speichern der selbst definierten Funktionen (de-)aktivieren</item>
+		<item node="draftmode=WERT">Entwurfsmodus (für Plots) (de-)aktivieren</item>
+		<item node="extendedfileinfo=WERT">Erweiterte Dateiinformationen (de-)aktivieren</item>
+		<item node="externaldocwindow=WERT">Anzeigen der NumeRe-Hilfe in einem externen Fenster (de-)aktivieren</item>
+		<item node="greeting=WERT">Begrüßung (de-)aktivieren</item>
+		<item node="hints=WERT">Tip-des-Tages (de-)aktivieren</item>
+		<item node="loademptycols=WERT">Laden leerer Spalten (de-)aktivieren (Standardmäßig werden leere Spalten während des Ladens ignoriert, um Speicherplatz zu sparen)</item>
+		<item node="loadpath=PFAD">Standard-Importordner ändern</item>
+		<item node="logfile=WERT">Protokollierung der Eingaben (de-)aktivieren</item>
+		<item node="plotfont=FONT">Standardschriftart für Plots einstellen</item>
+		<item node="plotpath=PFAD">Standard-Plot-Speicherordner ändern</item>
+		<item node="precision=WERT">Präzision ändern</item>
+		<item node="procpath=PFAD">Pfad zu den NumeRe-Prozeduren ändern</item>
+		<item node="save">Konfiguration zusätzlich manuell speichern</item>
+		<item node="savepath=PFAD">Standard-Speicherordner ändern</item>
+		<item node="scriptpath=PFAD">Pfad zu den NumeRe-Scripts einstellen</item>
+		<item node="usecustomlang=WERT">Verwendung einer benutzerdefinierten Sprache (de-)aktivieren</item>
+		<item node="useescinscripts=WERT">Verwendung der <code>ESC</code>-Taste in Scripts (de-)aktivieren</item>
+		<item node="workpath=PFAD">Das aktuelle Arbeitsverzeichnis einstellen. Schneller geht das mit dem Kommando <code>workpath PFAD</code></item>
 	</list>
 	<example desc="Einstellen des Importordners auf den Ordner 'data/import' im NumeRe-Verzeichnis:">
-		set -loadpath=data/import
-		Dateipfad erfolgreich aktualisiert.
+		set loadpath=data/import
+		LOADPATH: &EXEPATH&/data/import
 	</example>
-	<em>Siehe auch:</em> <a href="nhlp://get?frame=self">help get</a>, <a href="nhlp://editor?frame=self">help editor</a> und <a href="nhlp://viewer?frame=self">help viewer</a>
-	<em>Tipp:</em> Verwende <code>list -settings</code> um alle Einstellungen in einer übersichtlichen Liste anzeigen zu lassen.
+	<em>Siehe auch:</em> <a href="nhlp://get?frame=self">help get</a> und <a href="nhlp://debugger?frame=self">help debugger</a>
 </article>

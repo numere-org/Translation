@@ -914,6 +914,7 @@
 			<keyword>plotfont</keyword>
 			<keyword>plotpath</keyword>
 			<keyword>precision</keyword>
+			<keyword>exepath</keyword>
 			<keyword>procpath</keyword>
 			<keyword>savepath</keyword>
 			<keyword>scriptpath</keyword>
