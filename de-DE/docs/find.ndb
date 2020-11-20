@@ -236,6 +236,7 @@ read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files str
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
 redefine~Überschreibt eine bestehende Funktionendefinition, siehe "help define"~funktion ueberschreiben überschreiben definieren neue definition~help redefine
+regex(sRegEx,sStr,nPos,nLen)~Wendet den regulären Ausdruck sRegEx auf die Zeichenkette sStr an und gibt die Position und Länge der ersten Übereinstimmung zurück~regex() regular expressions ausdrücke~regex(
 regularize~Regularisiert Datenreihen mit unregelmäßig verteilen x-Werten, siehe "help regularize"~interpolieren interpolate äquidistant aequidistant gleichverteilen resampling~help regularize
 Rekursion~War "Rekursion" gemeint?~rekursion recursion~{x,y} = {y,x+y}
 remove~Entfernt Tabellen oder die angegeben Datei unwiderbringlich von diesem Computer, siehe "help remove"~entfernen loeschen löschen delete file datei~help remove

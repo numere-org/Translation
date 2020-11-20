@@ -237,6 +237,7 @@ readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input pro
 rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(
 Recursion~Did you mean "Recursion"?~rekursion recursion~{x,y} = {y,x+y}
 redefine~Redefines an already existing, custom defined function~funktion ueberschreiben überschreiben definieren neue definition~help redefine
+regex(sRegEx,sStr,nPos,nLen)~Applies the regular expression sRegEx on the string sStr and returns position and length of the first match~regex() reguläre ausdrücke~regex(
 regularize~Regularizes data rows with arbitrary distributed x values~interpolieren interpolate äquidistant aequidistant gleichverteilen resampling~help regularize
 remove~Removes tables or the passed files from this computer irreversibly~entfernen loeschen löschen delete file datei~help remove
 rename~Renames an already available table~umbenennen name ändern aendern neuer~help rename
