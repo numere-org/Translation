@@ -19,7 +19,8 @@
 <article id="imread">
 	<title string="Load and display image data" />
 	NumeRe may read images using the <code>imread</code> command as <a href="nhlp://datagrid?frame=new">datagrids</a> into memory. The usual image formats are supported: JPEG, BMP, GIF, TIFF, ... To load the image, one calls the command together with the image's filename. This command will return the indices of the image in the target table:<codeblock>{i1, i2, j1, j2} = imread PATH/TO/FILE.png</codeblock>
-	Very large images probably may not be loaded to memory. A Workaround in this case might be to clear the cache completely using <code>clear</code>.
+	Very large images probably may not be loaded to memory. A Workaround in this case might be to clear the cache completely using <code>clear -memory</code>.
 	As default the image is loaded to the cache <code>image()</code>, which is created automatically if it's not present. Using the option <code>target=CACHE()</code> one may select another cache as target for the command.
+	Images are loaded in grayscale by default. Other color channels can be specified as strings with the option <code>channels=CHANNELS</code>. Here <code>CHANNELS</code> can contain the characters <code>"rgb"</code> in any order. The corresponding channels are loaded in this order and stored side by side in the target table.
 	Using the command <code>implot</code> one may display the data set as an image. In this case, NumeRe expects a data interval of <expr>[0,255]</expr>:<codeblock>implot image() -set OPTIONS</codeblock>Options, which may be used with this command, correspond to the options listed at <a href="nhlp://dens?frame=new">help dens</a> and <a href="nhlp://plotoptions?frame=new">help plotoptions</a>.
 </article>

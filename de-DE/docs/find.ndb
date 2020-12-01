@@ -144,7 +144,7 @@ idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index in
 if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung COND aus, siehe "help if"~condition bedingung else elseif() if() endif wenn falls verzweigung loop command sequence flow control~help if () ... endif
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren conditional define~help ifndefined
 implot~Erzeugt eine Darstellung des Ausdrucks oder Datensatzes als Bild, wobei automatisch ein Datenpunktintervall von [0,255] angenommen wird~images bilder imageplot imagesc()~help implot
-imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp~help imread
+imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp channels~help imread
 imY(l,m,theta,phi)~Imaginärteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] unter den Winkeln theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
