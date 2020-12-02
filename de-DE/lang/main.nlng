@@ -618,6 +618,7 @@ PARSERFUNCS_LISTCMD_CMD_AUDIO_[LOADSAVE]=				audio        OB [-PAR]             
 PARSERFUNCS_LISTCMD_CMD_BREAK_[FLOWCTRL]=				break                               - Bricht die aktuelle Schleife ab oder verlässt den aktuellen case eines switch-Blocks und springt im Programmfluss eine Ebene höher
 PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR  -> {VAL}         - Optionen auf dem Cache. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
 PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]              - Entfernt alle Elemente im gewählten Objekt unwiderbringlich von diesem Rechner. Der Parameter kann genutzt werden, um die Bestätigung zu unterdrücken (-ignore) oder alle Tabellen zugleich zu löschen (-memory)
+PARSERFUNCS_LISTCMD_CMD_CLOSE_[MAINCTRL]=				close        -PAR                   - Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden: -graphs schließt alle Graphen, -docs alle Hilfe-Fenster, -tables alle Tabellen, -images alle ImageViewer und -all alle Fenster aus dieser Liste
 PARSERFUNCS_LISTCMD_CMD_COMPOSE_[PLOTTING]=				compose                             - Startet die Komposition mehrerer Plotstile, so dass ein kombinierter Plot aus den berechneten Plots dieser Umgebung erzeugt werden kann. Hiermit können auch mehrere Plots neben- oder übereinander in einem gemeinsamen Fenster angeordnet werden
 PARSERFUNCS_LISTCMD_CMD_CONT_[PLOTTING]=				cont         EX [-set PAR]          - Erzeugt einen Konturlinien-Plot aus dem Ausdruck oder den Daten in EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
 PARSERFUNCS_LISTCMD_CMD_CONT3D_[PLOTTING]=				cont3d       EX [-set PAR]          - Erzeugt einen 3D-Konturlinien-Plot aus dem Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
@@ -1568,6 +1569,7 @@ GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
 GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_DOCS=docs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_DOWN=down [Zeroes mode]
 GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
@@ -1597,6 +1599,7 @@ GUI_EDITOR_CALLTIP_OPT_FX0=fx0=[STARTVALS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFO
 GUI_EDITOR_CALLTIP_OPT_GAMMA=distrib=gamma [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_GAUSS=distrib=gauss [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_GAUSSIAN=type=gaussian [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth]
+GUI_EDITOR_CALLTIP_OPT_GRAPHS=graphs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_GRID=grid[=TYPE]
@@ -1614,6 +1617,7 @@ GUI_EDITOR_CALLTIP_OPT_HTML=html
 GUI_EDITOR_CALLTIP_OPT_ICON=icon=ICON [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
 GUI_EDITOR_CALLTIP_OPT_IGNORECASE=ignorecase [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
+GUI_EDITOR_CALLTIP_OPT_IMAGES=images [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_INDEX=index [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
 GUI_EDITOR_CALLTIP_OPT_INFOICON=icon=infoicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1788,6 +1792,7 @@ GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTI
 GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SUM=sum [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_TABLES=tables [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
 GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_TEXTENTRY=type=textentry [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]

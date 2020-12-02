@@ -51,6 +51,7 @@ break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbre
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
 Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
 clock()~Returns the number of processor clicks since the start-up of NumeRe~time clicks zeit millisekunden milliseconds~clock()
+close~Closes previously opened windows that are selected by parameters~graphs schlieﬂen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings~cnt() z‰hlen zaehlen zahl nummer number enumerate zeichenketten strings count~cnt(
 compose~Starts the composition of multiple plotting styles~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose

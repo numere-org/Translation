@@ -23,5 +23,6 @@
 		<item node="about">Dieses Kommando (und die Synonyme <code>credits</code> und <code>info</code>) zeigen rechtliche Informationen zu NumeRe und zur Version an.</item>
 		<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
 		<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
+		<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
 	</list>
 </article>
