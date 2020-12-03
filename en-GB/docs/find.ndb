@@ -292,6 +292,7 @@ str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string
 strfnd(STR1,STR2,P)~Returns the position of the first occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings  # \" find strfnd()~strfnd(
 string(i)~String object with access to the string "i"~zeichenketten # \" \n \t string()~help string()
 string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten umwandeln transformation conversion convert wert # \" string_cast() strings~string_cast(
+strip(sStr,sPref,sSuff,nStripAll)~Removes the prefix sPref and the suffix sSuff from the string sStr, if they have a non-zero length~stripping prefixes suffixes startswith endswith~strip(
 strlen(STR)~Returns the length of the string STR~zeichenketten strings # \" laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the string S2 going from position P~zeichenketten strings  # \" find strmatch()~strmatch(
 strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(

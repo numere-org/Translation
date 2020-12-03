@@ -291,6 +291,7 @@ str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichen
 strfnd(STR1,STR2,P)~Gibt die Position des ersten Auftretens der Zeichenkette STR1 in STR2 ab dem Zeichen P zurück~zeichenketten strings  # \" find strfnd()~strfnd(
 string(i)~Zeichenketten-Objekt mit Zugriff auf Zeichenkette "i", siehe "help string"~zeichenketten # \" \n \t string()~help string()
 string_cast(EXPR)~Wandelt EXPR ungeachtet eventueller Rechenoperationen in eine Zeichenkette um~zeichenketten umwandeln transformation conversion convert wert # \" string_cast() strings~string_cast(
+strip(sStr,sPref,sSuff,nStripAll)~Entfernt den Präfix sPref und den Suffix sSuff von der Zeichenkette sStr, wenn sie nicht-leer sind~stripping prefixes suffixes startswith endswith~strip(
 strlen(STR)~Gibt die Länge der Zeichenkette STR zurück~zeichenketten strings # \" laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Sucht das erste Auftreten eines Zeichens aus S1 in der Zeichenkette S2 ab dem Zeichen P~zeichenketten strings  # \" find strmatch()~strmatch(
 strrfnd(STR1,STR2,P)~Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
