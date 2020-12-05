@@ -41,6 +41,7 @@ atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh(
 audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 # B
+basetodec(sBase,sBaseVal)~Converts the number sBaseVal from base sBase to decimal and returns it as a numeric value~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen~bessel(
 beta(x,y)~Calculates the value of the beta function of x and y~beta() betafunction~beta(
 betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()~betheweizsaecker(
@@ -72,6 +73,7 @@ datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
 Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error bugs throw~help debugger
+dectobase(sBase,nDecVal)~Converts the number nDecVal from the decimal system to the base and returns the result as a string~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Degree value of x [rad]~todegree gradwert umrechnen rad2deg() degree()~degree(
 delete~Removes elements from a table~loeschen löschen entfernen remove erase~help delete

@@ -330,6 +330,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(sToParse)                   
 PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                                      VAL      - Arkustangens von x. Definiert auf ganz R (Synonym: "arctan(x)")
 PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)                                     VAL      - Areatangens Hyperbolicus von x. Definiert im Bereich (-1,1) (Synonym: "artanh(x)")
 PARSERFUNCS_LISTFUNC_FUNC_AVG_[STATS]=						avg(x,y,z,...)                               VAL      - Mittelwert aus x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_BASETODEC_[STRING]=				basetodec(sBase,sBaseVal)                    VAL      - Konvertiert die Zahl sBaseVal (als Zeichenkette angegeben) aus der Basis sBase ins Dezimalsystem und gibt diese als numerischen Wert zurück. Als Werte für die Basis existieren "hex" für hexadezimal, "oct" für Oktal und "bin" für binär
 PARSERFUNCS_LISTFUNC_FUNC_BESSEL_[NUM_PHYSICS]=				bessel(n,x)                                  VAL      - Besselfunktion erster Gattung der Ordnung n am Ort x. Definiert für ganz R
 PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)                        VAL      - Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel. Definiert für N, Z > 0
 PARSERFUNCS_LISTFUNC_FUNC_BI_[NUM_PHYSICS]=					Bi(x)                                        VAL      - Airyfunktion Bi(x). Definiert auf ganz R
@@ -346,6 +347,7 @@ PARSERFUNCS_LISTFUNC_FUNC_CORREL_[MAT]=						correl(MAT,MAT)                    
 PARSERFUNCS_LISTFUNC_FUNC_CROSS_[MAT]=						cross(MAT)                                   VEC      - Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden.
 PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(nTimeVal,nType)                         VAL      - Formatiert nTimeVal gemäß nType: nType = 0 gibt YYYYMMDDhhmmss, nType = 1...6 geben YYYY ... ss, nType = -1 gibt YYYYMMDD und nType = -2 gibt hhmmss zurück
 PARSERFUNCS_LISTFUNC_FUNC_DBLFACT_[NUM]=					dblfact(n)                                   VAL      - Doppelfakultät der natürlichen Zahl n [n!! = n*(n-2)*(n-4)*...]. Definiert für natürliche Zahlen >= 0
+PARSERFUNCS_LISTFUNC_FUNC_DECTOBASE_[STRING]=				dectobase(sBase,nDecVal)                     STR      - Konvertiert die Zahl nDecVal aus dem Dezimalsystem in die Basis und gibt das Ergebnis als Zeichenkette zurück. Als Werte für die Basis existieren "hex" für hexadezimal, "oct" für Oktal und "bin" für binär
 PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[ANGULAR]=					degree(x)                                    VAL      - Gradwert von x [rad]. Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_DET_[MAT]=						det(MAT)                                     VAL      - Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.
 PARSERFUNCS_LISTFUNC_FUNC_DIAG_[MAT]=						diag(x,y,z,...)                              MAT      - Erzeugt eine Diagonalmatrix mit den Elementen x,y,z,... auf der Hauptdiagonalen.

@@ -41,6 +41,7 @@ atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atan
 audio~Erzeugt eine WAVE-Datei aus einem Datensatz, siehe "help audio"~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 avg(x,y,z,...)~Mittelwert von x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 # B
+basetodec(sBase,sBaseVal)~Konvertiert die Zahl sBaseVal aus der Basis sBase ins Dezimalsystem und gibt diese als numerischen Wert zurück~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Besselfunktion erster Gattung der Ordnung n~bessel() first kind erster art besselfunktionen~bessel(
 beta(x,y)~Berechnet den Wert der Betafunktion an den Stellen x und y~beta() betafunction~beta(
 betheweizsaecker(N,Z)~Berechnet die Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker() nuclear binding energy~betheweizsaecker(
@@ -73,6 +74,7 @@ date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit format
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Sammelt zusätzliche Informationen bei Fehlern in Prozeduren, siehe "help debugger"~fehlersuche debugging bugs throw error~help debugger
+dectobase(sBase,nDecVal)~Konvertiert die Zahl nDecVal aus dem Dezimalsystem in die Basis und gibt das Ergebnis als Zeichenkette zurück~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Gradwert von x [Radiant]~todegree gradwert rad2deg() umrechnen degree()~degree(
 delete~Entfernt Einträge/Spalten/Untertabellen aus einer Tabelle, siehe "help delete"~loeschen löschen entfernen remove erase~help delete
