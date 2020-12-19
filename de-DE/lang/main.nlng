@@ -206,6 +206,7 @@ BUILTIN_CHECKKEYWORD_DEF_EMPTY=Es wurden keine Funktionen gespeichert.
 BUILTIN_CHECKKEYWORD_DELETE_SUCCESS=Element(e) wurde(n) erfolgreich gelöscht.
 BUILTIN_CHECKKEYWORD_DELETE_CONFIRM=Ein oder mehrere Elemente werden dadurch unwiderruflich gelöscht.$Sicher? (%%COMMON_YES_NO%%)
 BUILTIN_CHECKKEYWORD_DATAGRID_SUCCESS=Das Datengitter wurde erfolgreich in "%%1%%()" erzeugt.
+BUILTIN_CHECKKEYWORD_DETECT_SUCCESS=Die erkannten Strukturen wurden in "%%1%%()" gespeichert.
 BUILTIN_AUTOSAVE=Automatische Speicherung
 BUILTIN_REMOVEFILE_CONFIRM=Die Datei "%%1%%" wird unwiderbringlich gelöscht - dies kann nicht rückgängig gemacht werden.$Sicher? (%%COMMON_YES_NO%%)
 # Layout des Settings-Dialoges
@@ -634,6 +635,7 @@ PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - 
 PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]              - Entfernt Einträge aus der Tabelle/dem string()-Objekt in OB. Der Parameter kann genutzt werden, um die Bestätigung zu unterdrücken
 PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]          - Erzeugt einen Dichte-Plot aus dem Ausdruck oder den Daten in EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
 PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]          - Erzeugt einen 3D-Dichte-Plot aus dem Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
+PARSERFUNCS_LISTCMD_CMD_DETECT_[EVAL]=					detect       OB [-set PAR]          - Erkennt Strukturen in einem 2D-Datengitter und speichert selbige in der Form (x,y) in der Zieltabelle, wobei unterschiedliche Strukturen durch Leerzeilen getrennt werden. Es ist möglich, eine Schwelle, eine minimale Länge und den maximalen Abstand von Punkten einer einzigen Struktur anzugeben.
 PARSERFUNCS_LISTCMD_CMD_DIALOG_[MAINCTRL_MISC]=			dialog       STR -set PAR  -> {STR} - Erzeugt ein Dialogfenster zur Interaktion mit dem Benutzer. Der Typ des Dialogs wird durch die Parameter angegeben. Außerdem können Titel, eine Nachricht, das Icon und Schaltflächen der Messagebox geändert werden. Die Auswahl des Nutzers oder der Wert der geklickten Schaltfläche wird als Zeichenkette zurückgegeben
 PARSERFUNCS_LISTCMD_CMD_DIFF_[EVAL]=					diff         EX -set PAR  -> {VAL}  - Differenziert den Ausdruck oder die Daten in EX numerisch. Die Position bzw. das Intervall, die Genauigkeit sowie die Zahl der Stützstellen kann durch Parameter angegeben werden
 PARSERFUNCS_LISTCMD_CMD_DRAW_[PLOTTING]=				draw         EX [-set PAR]          - Erzeugt eine Zeichnung aus den Zeichnungsfunktionen im Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
@@ -1511,6 +1513,7 @@ GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
 GUI_EDITOR_CALLTIP_OPT_ASVAL=asval[={VARSET}] [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
+GUI_EDITOR_CALLTIP_OPT_ATTRACT=attract={VAL,VAL} [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
 GUI_EDITOR_CALLTIP_OPT_AUTOSAVE=autosave [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_AVG=avg [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_AXIS=axis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1659,7 +1662,9 @@ GUI_EDITOR_CALLTIP_OPT_MEMORY=memory [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% cl
 GUI_EDITOR_CALLTIP_OPT_MESSAGEBOX=type=messagebox [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
 GUI_EDITOR_CALLTIP_OPT_MIN=min
+GUI_EDITOR_CALLTIP_OPT_MINLEN=minlen=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
 GUI_EDITOR_CALLTIP_OPT_MINLINE=minline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MINVAL=minval=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
 GUI_EDITOR_CALLTIP_OPT_MODE=mode=MODE
 GUI_EDITOR_CALLTIP_OPT_MOY=colorscheme=moy [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MSG=msg=MESSAGE

@@ -81,6 +81,7 @@ delete~Entfernt Einträge/Spalten/Untertabellen aus einer Tabelle, siehe "help de
 dens~Erzeugt einen Dichte-Plot~density dichte~help dens
 dens3d~Erzeugt einen 3D-Dichte-Plot~density3d dichte dreidimensional~help dens3d
 det(MAT)~Berechnet die Determinante einer quadratischen Matrix MAT, siehe "help matop"~det() matrix~det(
+detect~Erkennt Strukturen in einem 2D-Datengitter und speichert selbige in der Form (x,y) in der Zieltabelle~strukturerkennung bonedetection structures structuredetection bones~help detect
 diag(x,y,z,...)~Erzeugt eine Diagonalmatrix mit x,y,z,... als Hauptdiagonale, siehe "help matop"~diag() matrix diagonal~diag(
 diagonalize(MAT)~Diagonalisiert die quadratische Matrix MAT, siehe "help matop"~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
 dialog~Erzeugt ein Dialogfenster zur Interaktion mit dem Benutzer~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog

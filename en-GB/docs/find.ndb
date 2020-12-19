@@ -80,6 +80,7 @@ delete~Removes elements from a table~loeschen löschen entfernen remove erase~hel
 dens~Generates a density plot~density dichte~help dens
 dens3d~Generates a 3D density plot~density3d dichte dreidimensional~help dens3d
 det(MAT)~Calculates the determinant of a quadratic matrix MAT~det() matrix~det(
+detect~Detects structures in a 2D datagrid and stores them as (x,y) in the target table~strukturerkennung bonedetection structures structuredetection bones~help detect
 diag(x,y,z,...)~Generates a diagonal matrix with x,y,z,... on its main diagonal~diag() matrix diagonal~diag(
 diagonalize(MAT)~Diagonalizes the quadratic matrix MAT~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
 dialog~Creates a dialog window to interact with the user~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog

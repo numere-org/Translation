@@ -1270,5 +1270,15 @@
 			<keyword>revision</keyword>
 			<keyword>versions</keyword>
 		</keywords>
-	</article>	
+	</article>
+	<article id="detect">
+		<file path="<>/docs/detect.nhlp" />
+		<title string="Strukturerkennung" idxkey="detect" />
+		<keywords>
+			<keyword>detect</keyword>
+			<keyword>attract</keyword>
+			<keyword>minval</keyword>
+			<keyword>minlen</keyword>
+		</keywords>
+	</article>
 </helpindex>
