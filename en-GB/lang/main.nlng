@@ -414,6 +414,7 @@ PARSERFUNCS_LISTFUNC_FUNC_NUM_[STATS_STRING]=				num(x,y,z,...)                 
 PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                                     MAT      - Creates a n x m matrix, which is filled with ones. If only one argument was passend, then a square matrix will be created.
 PARSERFUNCS_LISTFUNC_FUNC_OR_[LOGIC]=						or(x,y,z,...)                                LOG      - Connects its arguments with the "||" operator
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[STATS]=						pct(x,y,z,...,p)                             VAL      - p-th percentile of x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_PERLIN_[NUM_RANDOM_DISTRIB]=		perlin(x,y,z,seed,freq,oct,pers)             VAL      - Calculates the coherent Perlin noise at the position {x,y=0,z=0} with the random seed=0, the frequency freq=1 [1..16], the number of octaves oct=6 [1..6] and a persistency of pers=0.5 [0..1]. If fewer than all 7 arguments are passed, then the mentioned default values are used
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[ANGULAR_COORDS]=				phi(x,y)                                     VAL      - Calculates the angle between the x axis and the vector (x,y). Defined everywhere in R
 PARSERFUNCS_LISTFUNC_FUNC_POLYNOMIAL_[NUM_POLYNOMIAL]=		polynomial(x,a0,a1,a2,...)                   VAL      - Calculates the value of the polynomial a0+a1*x+a2*x^2+... at the position x
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)                               VAL      - Returns the product of the arguments x,y,z,...

@@ -218,12 +218,13 @@ one(n,m)~Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist, siehe "help mato
 or(x,y,z,...)~Verknüpft die Argumente mit "||"~logik logic oder~or(
 # P
 pct(x,y,z,...,p)~p-tes Perzentil der Werte x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
+perlin(x,y,z,seed,freq,oct,pers)~Berechnet Perlin-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~perlin(
 phi(x,y)~Berechnet den Azimuthwinkel phi~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
 plot~Erstellen eines Graphen~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
 plot3d~Erstellen eines 3D-Graphen~plotten graphisch dreidimensional plot()~help plot3d
 prd(x,y,z,...)~Berechnet das Produkt der Argumente x,y,z,...~produkt product multiplizieren multiply prd()~prd(
 procedure~Definiert eine NumeRe-Prozedur, siehe "help procedure"~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
-Programmierer~Wenn du ihn nicht persönlich kennst: probier's mal mit "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:numere.developer@gmail.com"
+Programmierer~Wenn du ihn nicht persönlich kennst: probier's mal mit "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:dev@numere.org"
 progress~Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet~prozedur $ programmierung plugins balken warten waitbar() progressbar~help progress
 Protokolldatei~Die Protokolldatei findest du unter "<>/numere.log"~numerelog logfile~edit <>/numere.log
 psi(x)~Berechnet den Wert der Digammafunktion an der Stelle x~psi() digammafunction polygammafunction trigammafunction~psi(

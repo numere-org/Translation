@@ -414,6 +414,7 @@ PARSERFUNCS_LISTFUNC_FUNC_NUM_[STATS_STRING]=				num(x,y,z,...)                 
 PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                                     MAT      - Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 PARSERFUNCS_LISTFUNC_FUNC_OR_[LOGIC]=						or(x,y,z,...)                                LOG      - Verknüpft die Argumente mit einem "||"-Operator
 PARSERFUNCS_LISTFUNC_FUNC_PCT_[STATS]=						pct(x,y,z,...,p)                             VAL      - p-tes Perzentil aus x,y,z,...
+PARSERFUNCS_LISTFUNC_FUNC_PERLIN_[NUM_RANDOM_DISTRIB]=		perlin(x,y,z,seed,freq,oct,pers)             VAL      - Berechnet den köhärenten Perlin-Noise an der Stelle {x,y=0,z=0} mit einem Random seed=0, der Frequenz freq=1 [1..16], der Zahl der Oktaven oct=6 [1..6] und einer Persistenz von pers=0.5 [0..1]. Wenn weniger als alle 7 Argumente angegeben werden, werden die angegebenen Standardwerte verwendet
 PARSERFUNCS_LISTFUNC_FUNC_PHI_[ANGULAR_COORDS]=				phi(x,y)                                     VAL      - Berechnet den Winkel zwischen der x-Achse und dem Vektor (x,y). Definiert auf ganz R
 PARSERFUNCS_LISTFUNC_FUNC_POLYNOMIAL_[NUM_POLYNOMIAL]=		polynomial(x,a0,a1,a2,...)                   VAL      - Berechnet den Wert des Polynoms a0+a1*x+a2*x^2+... an der Stelle x
 PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)                               VAL      - Produkt der Argumente x,y,z,...
