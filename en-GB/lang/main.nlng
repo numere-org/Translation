@@ -48,6 +48,7 @@ COMMON_FILETYPE_NOEXT=File
 COMMON_FILETYPE_DAT=Data file
 COMMON_FILETYPE_NSCR=NumeRe script
 COMMON_FILETYPE_NHLP=NumeRe help file
+COMMON_FILETYPE_NLYT=NumeRe layout file
 COMMON_FILETYPE_NLNG=NumeRe language file
 COMMON_FILETYPE_HLPIDX=Documentation index
 COMMON_FILETYPE_LABX=CASSYLab file
@@ -613,6 +614,7 @@ PARSERFUNCS_LISTCMD_TYPE_LOADSAVE=Loading and saving
 PARSERFUNCS_LISTCMD_TYPE_DEF=Definitions
 PARSERFUNCS_LISTCMD_TYPE_DATACTRL=Data control
 PARSERFUNCS_LISTCMD_TYPE_MAINCTRL=Control
+PARSERFUNCS_LISTCMD_TYPE_GUI=Graphical user interface
 PARSERFUNCS_LISTCMD_TYPE_MISC=Miscellaneous
 PARSERFUNCS_LISTCMD_TYPE_PLUGINS=Plugins
 PARSERFUNCS_LISTCMD_TABLEHEAD=							Command:     Syntax and result:     Function:
@@ -637,7 +639,7 @@ PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]     
 PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]          - Creates a density plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]          - Creates a 3D density plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_DETECT_[EVAL]=					detect       OB [-set PAR]          - Detects structures in a 2D datagrid and stores them as (x,y) in the target table, where different structures are separated by an empty row. It's possible to define a threshold, a minimal length and a maximal distance between points of a single structure.
-PARSERFUNCS_LISTCMD_CMD_DIALOG_[MAINCTRL_MISC]=			dialog       STR -set PAR  -> {STR} - Creates a dialog window to interact with the user. The type of the dialog is selected using the parameters. Additionally, the title, a message, the icon and the buttons of the message box may be changed. The selection of the user or the value of the clicked button is returned as string
+PARSERFUNCS_LISTCMD_CMD_DIALOG_[MAINCTRL_GUI]=			dialog       STR -set PAR  -> {STR} - Creates a dialog window to interact with the user. The type of the dialog is selected using the parameters. Additionally, the title, a message, the icon and the buttons of the message box may be changed. The selection of the user or the value of the clicked button is returned as string
 PARSERFUNCS_LISTCMD_CMD_DIFF_[EVAL]=					diff         EX -set PAR  -> {VAL}  - Differentiates the expression or the data in EX numerically. The position or the interval, the precision and the number of samples may be set using parameters
 PARSERFUNCS_LISTCMD_CMD_DRAW_[PLOTTING]=				draw         EX [-set PAR]          - Creates a drawing from the drawing functions in the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_DRAW3D_[PLOTTING]=				draw3d       EX [-set PAR]          - Creates a 3D drawing from the drawing functions in the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
@@ -734,6 +736,23 @@ PARSERFUNCS_LISTCMD_CMD_SWITCH_[FLOWCTRL]=				switch      (EX)                  
 PARSERFUNCS_LISTCMD_CMD_CASE_[FLOWCTRL]=				case         EX:                    - Defines a case in a switch fork. The expression EX has to be a numerical value or a string
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                            - Defines the "otherwise" case in a switch fork
 PARSERFUNCS_LISTCMD_CMD_ENDSWITCH_[FLOWCTRL]=			endswitch                           - Finalizes a switch fork
+PARSERFUNCS_LISTCMD_CMD_WINDOW_[MAINCTRL_GUI]=			window       EX [-set PAR]  -> {ARG}- Allows the creation of an interactive window and the interaction with it. With "window ID -get PAR" values and parameters of the window with the ID can be read and with "window ID -set PAR=VAL" they can also be modified
+PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                 - Starts the definition of a window layout that can be used to create an interactive window
+PARSERFUNCS_LISTCMD_CMD_ENDLAYOUT_[GUI]=				endlayout                           - Ends the definition of a previously started window layout
+PARSERFUNCS_LISTCMD_CMD_GROUP_[GUI]=					group        [-PAR]                 - Starts the definition of a grouping box for a window layout. The box can be labeled and aligned in a defined way
+PARSERFUNCS_LISTCMD_CMD_ENDGROUP_[GUI]=					endgroup                            - Ends the definition of a previously started grouping box
+PARSERFUNCS_LISTCMD_CMD_BUTTON_[GUI]=					button       EX [-set PAR]          - Inserts a labelable button into a window layout. The event handling is configurable
+PARSERFUNCS_LISTCMD_CMD_RADIO_[GUI]=					radio        EX [-set PAR]          - Inserts a radio group into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_TEXT_[GUI]=						text         EX [-set PAR]          - Inserts a static text into a window layout
+PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]          - Inserts a text field into a window layout. Event handling, multiline and start value are configurable
+PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]             - Inserts a tree list into a window layout. Event handling, the number of columns and the number of elements are configurable
+PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]          - Inserts a checkbox into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_DROPDOWN_[GUI]=					dropdown     EX [-set PAR]          - Inserts a dropdown list into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_SPINBUT_[GUI]=					spinbut      [-set PAR]             - Inserts a spin button object into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_GAUGE_[GUI]=					gauge        [-set PAR]             - Inserts a progress bar (a gauge) into a window layout. The starting value and the orientation are configurable
+PARSERFUNCS_LISTCMD_CMD_TABLEGRID_[GUI]=				tablegrid    [-set PAR]             - Inserts a table grid into a window layout. The event handling and the size in rows and columns are configurable
+PARSERFUNCS_LISTCMD_CMD_IMAGE_[GUI]=					image        EX [-set PAR]          - Inserts an image, where the filename is passed via EX into a window layout
+PARSERFUNCS_LISTCMD_CMD_GRAPHER_[GUI]=					grapher      [-set PAR]             - Inserts a graph object into a window layout. The event handling and the size of the object are configurable. Filling of this object has to be done via a plotting command using the "streamto={WINID,ITEMID}" option
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=The syntax is given in schematic manner: EX = expression, PAR = parameter, OB = (data) object, STR = string, CMD = command und NM = name. Syntax elements in brackets are optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SEE ALSO: There exists an entry in the documentation for each of the listed commands. It can be accessed via "help COMMAND".
@@ -1068,6 +1087,9 @@ GUI_DLG_NEWNSCR_DFLT=new_script
 GUI_DLG_NEWNPRC=NumeRe: New procedure
 GUI_DLG_NEWNPRC_QUESTION=Please enter the desired name of the procedure:
 GUI_DLG_NEWNPRC_DFLT=new_procedure
+GUI_DLG_NEWNLYT=NumeRe: New window layout
+GUI_DLG_NEWNLYT_QUESTION=Please enter the desired name of the window layout:
+GUI_DLG_NEWNLYT_DFLT=new_window
 GUI_DLG_NEWPLUGIN=NumeRe: New plugin
 GUI_DLG_NEWPLUGIN_QUESTION=Please enter the desired plugin command:
 GUI_DLG_NEWPLUGIN_DFLT=newcommand
@@ -1254,7 +1276,7 @@ GUI_TREE_COMMANDS=Commands
 GUI_TREE_FUNCTIONS=Functions
 GUI_TREE_CONSTANTS=Constants
 GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw define
-GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl misc plugins
+GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
@@ -1291,7 +1313,7 @@ GUI_FILTER_DATAFILES=%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_TXT
 GUI_FILTER_IMAGEFILES=Image files
 GUI_FILTER_TEXSOURCE=TeX-Source
 GUI_FILTER_NONSOURCE=%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_LOG%% (*.log)|*.log|%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv
-GUI_FILTER_ALLSUPPORTEDFILES=All supported Files|*.nscr;*.nprc;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex;*.m;*.cpp;*.cxx;*.c;*.hpp;*.hxx;*.h
+GUI_FILTER_ALLSUPPORTEDFILES=All supported Files|*.nscr;*.nprc;*.nlyt;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex;*.m;*.cpp;*.cxx;*.c;*.hpp;*.hxx;*.h
 
 GUI_NEWFILE_UNTITLED=<Unnamed>
 GUI_SAVE_QUESTION=NumeRe: Save?
@@ -1311,6 +1333,7 @@ GUI_STATUSBAR_JCM=%%COMMON_FILETYPE_JDX%%
 GUI_STATUSBAR_LOG=%%COMMON_FILETYPE_LOG%%
 GUI_STATUSBAR_INI=%%COMMON_FILETYPE_INI%%
 GUI_STATUSBAR_NHLP=%%COMMON_FILETYPE_NHLP%%
+GUI_STATUSBAR_NLYT=%%COMMON_FILETYPE_NLYT%%
 GUI_STATUSBAR_NDB=%%COMMON_FILETYPE_NDB%%
 GUI_STATUSBAR_M=%%COMMON_FILETYPE_M%%
 GUI_STATUSBAR_CPP=%%COMMON_FILETYPE_CPP%%
@@ -1343,6 +1366,8 @@ GUI_MENU_NEW_NPRC=NumeRe &Procedure%%TAB%%Ctrl-Shift-P
 GUI_MENU_NEW_NPRC_TTP=Create a template for a new procedure (requires a name)
 GUI_MENU_NEW_PLUGIN=NumeRe P&lugin%%TAB%%Ctrl-Shift-L
 GUI_MENU_NEW_PLUGIN_TTP=Creates a template for a new plugin (requires its command)
+GUI_MENU_NEW_LAYOUT=NumeRe &Window Layout
+GUI_MENU_NEW_LAYOUT_TTP=Creates a template for a new window layout
 GUI_MENU_OPENFILE=&Open ...
 GUI_MENU_OPENFILE_TTP=Open an existing file
 GUI_MENU_CLOSEFILE=&Close file
@@ -1493,6 +1518,7 @@ GUI_EDITOR_CALLTIP_NLEN=	nlen        - Contains the number of elements in the cu
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Conversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plot option
+GUI_EDITOR_CALLTIP_COMMON_GUI=Option for graphical interfaces
 GUI_EDITOR_CALLTIP_COMMON_FONTTYPE=Font face
 GUI_EDITOR_CALLTIP_COMMON_FILEWRITE=File writing mode
 GUI_EDITOR_CALLTIP_COMMON_FILEREAD=File reading mode
@@ -1541,6 +1567,7 @@ GUI_EDITOR_CALLTIP_OPT_CBSPLINE=type=cbspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIO
 GUI_EDITOR_CALLTIP_OPT_CDAUBECHIES=type=cdaubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_CHAAR=type=chaar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_CHANNELS=channels=CHANNELS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% imread]
+GUI_EDITOR_CALLTIP_OPT_CHECKMARK=type=checkmark [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_CHIMAP=chimap=CHIMAP() [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
 GUI_EDITOR_CALLTIP_OPT_CHORUS=chorus [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CLOG=clog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1550,6 +1577,7 @@ GUI_EDITOR_CALLTIP_OPT_CNT=cnt [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_COARSE=grid=coarse [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COAST=colorscheme=coast [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLD=colorscheme=cold [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_COLORBAR=colorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORMASK=colormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORRANGE=colorrange=MIN:MAX [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1578,16 +1606,19 @@ GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTIN
 GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
 GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_DOCS=docs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_DOWN=down [Zeroes mode]
 GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_ENABLED=state=enabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_EPS=eps=PRECISION
 GUI_EDITOR_CALLTIP_OPT_ERRORBARS=errorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ERRORICON=icon=erroricon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_EVERY=every=FIRST,INCREMENT
 GUI_EDITOR_CALLTIP_OPT_EXEPATH=exepath [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EXPAND=expand [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_EXPRVAR=exprvar
 GUI_EDITOR_CALLTIP_OPT_EXTENDEDFILEINFO=extendedfileinfo [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_EXTERNALDOCWINDOW=externaldocwindow [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
@@ -1600,7 +1631,7 @@ GUI_EDITOR_CALLTIP_OPT_FINE=grid=fine [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_FIRST=first=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
 GUI_EDITOR_CALLTIP_OPT_FLENGTH=flength [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_FLOW=flow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_FONT=font=FONTTYPE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FONT=font=FONTTYPE
 GUI_EDITOR_CALLTIP_OPT_FREE=free [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
 GUI_EDITOR_CALLTIP_OPT_FREEDMAN=method=freedman [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
 GUI_EDITOR_CALLTIP_OPT_FREEDOMS=freedoms=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
@@ -1609,6 +1640,7 @@ GUI_EDITOR_CALLTIP_OPT_FX0=fx0=[STARTVALS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFO
 GUI_EDITOR_CALLTIP_OPT_GAMMA=distrib=gamma [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_GAUSS=distrib=gauss [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_GAUSSIAN=type=gaussian [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth]
+GUI_EDITOR_CALLTIP_OPT_GETITEMS=getitems=ITEMCOMMAND [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_GRAPHS=graphs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1619,12 +1651,15 @@ GUI_EDITOR_CALLTIP_OPT_HBARS=hbars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_HEAD=head=LINENUMBER
 GUI_EDITOR_CALLTIP_OPT_HEROS=heros [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_HEROSCN=heroscn [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_HIDDEN=state=hidden [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_HINTS=hints [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_HIRES=hires[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_HLINES=hlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HORIZONTAL=type=horizontal [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_HOT=colorscheme=hot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_HTML=html
-GUI_EDITOR_CALLTIP_OPT_ICON=icon=ICON [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_ICON=icon=ICON
+GUI_EDITOR_CALLTIP_OPT_ID=id=ID [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
 GUI_EDITOR_CALLTIP_OPT_IGNORECASE=ignorecase [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
 GUI_EDITOR_CALLTIP_OPT_IMAGES=images [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
@@ -1632,8 +1667,10 @@ GUI_EDITOR_CALLTIP_OPT_INDEX=index [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort
 GUI_EDITOR_CALLTIP_OPT_INFOICON=icon=infoicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft/fwt]
+GUI_EDITOR_CALLTIP_OPT_ITEM=item=ITEMID [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_ITER=iter=VAL
 GUI_EDITOR_CALLTIP_OPT_KEEPDIM=keepdim [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_LABEL=label[=LABELSTRING] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_LAST=last=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
 GUI_EDITOR_CALLTIP_OPT_LBORDER=lborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LCONT=lcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1654,7 +1691,7 @@ GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
 GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MASK=mask
-GUI_EDITOR_CALLTIP_OPT_MAX=max
+GUI_EDITOR_CALLTIP_OPT_MAX=max[=VAL]
 GUI_EDITOR_CALLTIP_OPT_MAXLINE=maxline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MEAN=mean=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_MED=med [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
@@ -1662,7 +1699,7 @@ GUI_EDITOR_CALLTIP_OPT_MEDIUM=hires=medium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_MEMORY=memory [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% clear]
 GUI_EDITOR_CALLTIP_OPT_MESSAGEBOX=type=messagebox [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
-GUI_EDITOR_CALLTIP_OPT_MIN=min
+GUI_EDITOR_CALLTIP_OPT_MIN=min[=VAL]
 GUI_EDITOR_CALLTIP_OPT_MINLEN=minlen=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
 GUI_EDITOR_CALLTIP_OPT_MINLINE=minline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MINVAL=minval=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
@@ -1722,6 +1759,8 @@ GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%
 GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OK=buttons=ok [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_OKCANCEL=buttons=okcancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_ONCHANGE=onchange=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_ONCLICK=onclick=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_ONLYCOLORS=legendstyle=onlycolors [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ONLYSTYLES=legendstyle=onlystyles [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OPEN=open [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1791,6 +1830,7 @@ GUI_EDITOR_CALLTIP_OPT_SHAPE=shape=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% 
 GUI_EDITOR_CALLTIP_OPT_SILENT=silent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SIMPSON=method=simpson [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
 GUI_EDITOR_CALLTIP_OPT_SINGLE=single
+GUI_EDITOR_CALLTIP_OPT_SIZE=size={x,y} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
 GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
@@ -1798,8 +1838,10 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_P
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
+GUI_EDITOR_CALLTIP_OPT_STREAMTO=streamto={WINID,ITEMID} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SUM=sum [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
@@ -1813,10 +1855,10 @@ GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
 GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
 GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
-GUI_EDITOR_CALLTIP_OPT_TOTABLE=totable[=TABLE()]
 GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
 GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_TOPRIGHT=legend=topright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TOTABLE=totable[=TABLE()]
 GUI_EDITOR_CALLTIP_OPT_TRANSPOSE=transpose
 GUI_EDITOR_CALLTIP_OPT_TRAPEZOIDAL=method=trapezoidal [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
 GUI_EDITOR_CALLTIP_OPT_TRUNC=mode=trunc [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
@@ -1828,7 +1870,9 @@ GUI_EDITOR_CALLTIP_OPT_UNITS=units
 GUI_EDITOR_CALLTIP_OPT_UP=up [Zeroes mode]
 GUI_EDITOR_CALLTIP_OPT_USECUSTOMLANG=usecustomlang [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_USEESCINSCRIPTS=useescinscripts [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_VALUE=value[=VALUE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_VAR=var
+GUI_EDITOR_CALLTIP_OPT_VERTICAL=type=vertical [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_VIEWER=viewer[=PATH/TO/VIEWER] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_VIRIDIS=colorscheme=viridis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_VLINES=vlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

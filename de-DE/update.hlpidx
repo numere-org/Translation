@@ -1281,4 +1281,45 @@
 			<keyword>minlen</keyword>
 		</keywords>
 	</article>
+	<article id="window">
+		<file path="<>/docs/window.nhlp" />
+		<title string="Graphische Benutzeroberflächen" idxkey="window, layout" />
+		<keywords>
+			<keyword>window</keyword>
+			<keyword>layout</keyword>
+			<keyword>endlayout</keyword>
+			<keyword>group</keyword>
+			<keyword>endgroup</keyword>
+			<keyword>button</keyword>
+			<keyword>radio</keyword>
+			<keyword>text</keyword>
+			<keyword>textfield</keyword>
+			<keyword>treelist</keyword>
+			<keyword>checkbox</keyword>
+			<keyword>dropdown</keyword>
+			<keyword>spinbut</keyword>
+			<keyword>gauge</keyword>
+			<keyword>tablegrid</keyword>
+			<keyword>image</keyword>
+			<keyword>grapher</keyword>
+			<keyword>size</keyword>
+			<keyword>color</keyword>
+			<keyword>id</keyword>
+			<keyword>item</keyword>
+			<keyword>getitems</keyword>
+			<keyword>value</keyword>
+			<keyword>vertical</keyword>
+			<keyword>horizontal</keyword>
+			<keyword>multiline</keyword>
+			<keyword>checkmark</keyword>
+			<keyword>expand</keyword>
+			<keyword>onclick</keyword>
+			<keyword>onchange</keyword>
+			<keyword>label</keyword>
+			<keyword>state</keyword>
+			<keyword>enabled</keyword>
+			<keyword>disabled</keyword>
+			<keyword>hidden</keyword>
+		</keywords>
+	</article>
 </helpindex>

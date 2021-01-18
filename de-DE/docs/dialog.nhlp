@@ -47,4 +47,5 @@
 		sOption = dialog "Quadrat", "Ring", "Linie" -set type=listdialog title="Auswahl der Geometrie" msg="Bitte wähle die aktuelle Geometrie aus:"
 	</example>
 	<img src="<>/docs/dialog.png" />
+	<em>Siehe auch:</em> <a href="nhlp://window?frame=self">help window</a>
 </article>
