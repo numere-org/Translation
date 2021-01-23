@@ -97,6 +97,10 @@ ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gausssche gaußsche komplementär fehlerfunktion errorfunction erfc()~erfc(
 eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace~help eval
+evt_changestate(nId,sState)~GUI event handler: changes the state of the element with the ID nId to the new state sState~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_changestate(
+evt_close()~GUI event handler: closes the current window~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_close()
+evt_copyvalues(nFromId,nToId1,...)~GUI event handler: copies the values from the elements with the ID nFromId into the elements with the IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
+evt_sendvaltoitem(nToId1,...)~GUI event handler: copies the values from the event-firing element into the elements with the IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
 execute~Executes a command using the windows shell~command bash programm wait run ausführen cmd.exe~help execute
 exp(x)~Exponential function of x~exponentialfunktion eulersche zahl exp()~exp(
 explicit~Deactivates all plugins for the current command~plugins deaktivieren überschreiben ueberschreiben~help explicit
@@ -194,6 +198,7 @@ matop~Matrix based evaluation of the expression~matrix matrizenrechnungen matric
 max(x,y,z,...)~Returns the maximal value of x,y,z,... Can be applied to strings and uses then string logic~maximum zeichenketten strings max()~max(
 maxpos(x,y,z,...)~Index of the maximal value of x,y,z,...~maximum position max() maxpos()~maxpos(
 med(x,y,z,...)~Returns the median of x,y,z,...~zentralwert median untermedian obermedian med()~med(
+menuitem~Defines an entry in a menu for a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional~help mesh3d
 mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
@@ -220,6 +225,7 @@ prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product mu
 procedure~Defines a NumeRe procedure~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
 Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:numere.developer@gmail.com"
 progress~Shows the state of a progress. Only suitable for scripts and procedures~prozedur $ programmierung plugins balken warten waitbar() progressbar~help progress
+prop~Genereates one ore more internal variables for the current window layout, which may be filled with information~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog property eigenschaften properties~help window
 psi(x)~Calculates the value of the digamma function at the position x~psi() digammafunction polygammafunction trigammafunction~psi(
 psi_n(n,x)~Calculates the value of the polygamma function of the order n at the position x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
 pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
@@ -252,6 +258,7 @@ roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganz
 round(x,n)~Rounds x to n decimals~runden round round()~round(
 save~Saves the passed object~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Shows the content of the passend data object~data() cache() table() auflisten~help show
 shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random shuffle()~shuffle(
@@ -261,6 +268,7 @@ sinc(x)~Cardinal sine of x~sinus cardinalis trigonometrische funktionen trigonom
 sinh(x)~Hyperbolic sine of x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic sinh()~sinh(
 size(MAT)~Returns the number of lines and columns of the matrix MAT~lines columns rows size() nlines ncols~size(
 sleep(nMilliSeconds)~Waits for the passed nMilliSeconds and returns this value after it~sleep() pause() waiting time zeit dauer warten~sleep(
+slider~Inserts a slider into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 smooth~Smoothes the passed data set by linearizing depending on the requested order~noise reduction rauschen reduzieren verringern glaetten glätten smoothing gaussian filter kernel savitzkygolay~help smooth
 sneumann(n,x)~Spherical Neumann function of the order n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()~sneumann(
 Solution~What do you want from me? I can calculate numerical values - but I'm not clairvoyant!~solution lösen solver~solution = nan
@@ -340,4 +348,3 @@ Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix~zero(
 zeroes~Calls the function for numerical calculation of the intersection with zero of functions and data sets~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannian riemannsche~zeta(
-

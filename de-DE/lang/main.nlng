@@ -319,6 +319,7 @@ PARSERFUNCS_LISTFUNC_TYPE_LOGARITHMIC=Logarithmen
 PARSERFUNCS_LISTFUNC_TYPE_COORDS=Koordinaten
 PARSERFUNCS_LISTFUNC_TYPE_DRAW=Zeichnungen
 PARSERFUNCS_LISTFUNC_TYPE_DEFINE=Eigene Definitionen
+PARSERFUNCS_LISTFUNC_TYPE_GUI=Graphische Oberflächen
 # Funktionentabelle
 PARSERFUNCS_LISTFUNC_TABLEHEAD=								Funktion:                                    Typ:     Ausgabe:
 PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                                       VAL      - Betrag von x
@@ -523,6 +524,10 @@ PARSERFUNCS_LISTFUNC_FUNC_IS_PUNCT_[STRING_LOGIC]=			is_punct(sToParse)         
 PARSERFUNCS_LISTFUNC_FUNC_IS_SPACE_[STRING_LOGIC]=			is_space(sToParse)                          {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein Leerzeichen handelt oder nicht
 PARSERFUNCS_LISTFUNC_FUNC_IS_UPPER_[STRING_LOGIC]=			is_upper(sToParse)                          {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein Großbuchstaben handelt oder nicht.
 PARSERFUNCS_LISTFUNC_FUNC_IS_XDIGIT_[STRING_LOGIC]=			is_xdigit(sToParse)                         {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein Zeichen für das Hexadezimalsystem handelt oder nicht
+PARSERFUNCS_LISTFUNC_FUNC_EVT_CLOSE_[GUI]=					evt_close()                                  {}       - GUI-Event-Handler: Schließt das aktuelle Fenster. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden
+PARSERFUNCS_LISTFUNC_FUNC_EVT_COPYVALUES_[GUI]=				evt_copyvalues(nFromId,nToId1,...)           {}       - GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
+PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                  {}       - GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
+PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                {}       - GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=Der Schlüssel %%1%% konnte von der Funktion getkeyval() nicht in der angegeben Liste gefunden werden.
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt; leere Klammern indizieren, dass die Funktion keinen Wert zurückgibt.
@@ -739,20 +744,24 @@ PARSERFUNCS_LISTCMD_CMD_ENDSWITCH_[FLOWCTRL]=			endswitch                       
 PARSERFUNCS_LISTCMD_CMD_WINDOW_[MAINCTRL_GUI]=			window       EX [-set PAR]  -> {ARG}- Erlaubt die Erzeugung eines interaktiven Fensters und die Interaktion mit selbigem. Mit "window ID -get PAR" können Werte und Parameter des Fensters mit der ID gelesen und mit "window ID -set PAR=VAL" können diese auch modifiziert werden
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                 - Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann
 PARSERFUNCS_LISTCMD_CMD_ENDLAYOUT_[GUI]=				endlayout                           - Beendet die Definition eines zuvor begonnenen Window-Layouts
-PARSERFUNCS_LISTCMD_CMD_GROUP_[GUI]=					group        [-PAR]                 - Startet die Definition einer Gruppierungsbox für ein Window-Layout. Die Box kann beschriftet und definiert ausgerichtet werden
+PARSERFUNCS_LISTCMD_CMD_GROUP_[GUI]=					group        [-PAR]                 - Startet die Definition einer Gruppierungsbox für ein Window-Layout. Die Box kann beschriftet und definiert ausgerichtet werden. Mit den Parametern sind auch weitere Styles wie Registerkarten oder Menüs möglich
 PARSERFUNCS_LISTCMD_CMD_ENDGROUP_[GUI]=					endgroup                            - Beendet die Definition eines zuvor begonnenen Gruppierungsbox
 PARSERFUNCS_LISTCMD_CMD_BUTTON_[GUI]=					button       EX [-set PAR]          - Fügt eine beschriftbare Schaltfläche ein. Das Eventhandling ist konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_RADIO_[GUI]=					radio        EX [-set PAR]          - Fügt eine Radio-Group in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TEXT_[GUI]=						text         EX [-set PAR]          - Fügt einen statischen Text in ein Window-Layout ein
 PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]          - Fügt ein Textfeld in ein Window-Layout ein. Das Eventhandling, die Mehrzeiligkeit und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]             - Fügt eine Treelist in ein Window-Layout ein. Das Eventhandling, die Zahl der Spalten und die Zahl der Elemente sind konfigurierbar
-PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]          - Fügt eine Checkbox in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
+PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]          - Fügt eine Checkbox in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar. Bei Verwendung in einem Menü wird dies in einen Menüeintrag mit einer Checkbox umgewandelt
 PARSERFUNCS_LISTCMD_CMD_DROPDOWN_[GUI]=					dropdown     EX [-set PAR]          - Fügt eine Dropdown-Liste in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_SPINBUT_[GUI]=					spinbut      [-set PAR]             - Fügt ein Spin-Button-Objekt in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
+PARSERFUNCS_LISTCMD_CMD_SLIDER_[GUI]=					slider       [-set PAR]             - Fügt ein Schieberegler in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_GAUGE_[GUI]=					gauge        [-set PAR]             - Fügt einen Fortschrittsbalken in ein Window-Layout ein. Der Startwert und die Ausrichtung sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TABLEGRID_[GUI]=				tablegrid    [-set PAR]             - Fügt ein Tabellengitter in ein Window-Layout ein. Das Eventhandling und die Startgröße in Zeilen und Spalten sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_IMAGE_[GUI]=					image        EX [-set PAR]          - Fügt ein Bild, dessen Dateiname über EX angegeben wurde, in ein Window-Layout ein
 PARSERFUNCS_LISTCMD_CMD_GRAPHER_[GUI]=					grapher      [-set PAR]             - Fügt ein Graph-Objekt in ein Window-Layout ein. Das Eventhandling und die Größe des Objekts sind konfigurierbar. Das Befüllen dieses Objekts muss über ein Plotting-Kommando mit der "streamto={WINID,ITEMID}"-Option erfolgen
+PARSERFUNCS_LISTCMD_CMD_SEPARATOR_[GUI]=				separator    EX [-set PAR]          - Fügt ein Separator-Objekt in ein Window-Layout ein. Der Separator kann entweder eine vertikale oder horizontale Linie oder ein Leerraum sein. Bei Verwendung in Menüs ist der Separator immer eine horizontale Linie
+PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     EX [-set PAR]          - Definiert ein Eintrag in einem Menü für ein Window-Layout. Das Eventhandling und das Vorhandensein einer Checkbox sind konfigurierbar
+PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop     EX                         - Generiert eine oder mehrere neue interne Variablen für das aktuelle Window-Layout, die mit Informationen befüllt werden können. Die Variablen sind intrinsisch typlos und können sowohl numerische Werte als auch Zeichenketten enthalten
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=Die Syntax ist schematisch angegeben: EX = Ausdruck, PAR = Parameter, OB = (Daten-)Objekt, STR = Zeichenkette, CMD = Kommando und NM = Name. Syntaxelemente in eckigen Klammern sind optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SIEHE AUCH: Zu jedem der gelisteten Befehle existiert ein Hilfeeintrag, der durch "help BEFEHL" aufgerufen werden kann.
@@ -1275,7 +1284,7 @@ GUI_TREE_PLOTS=Plots
 GUI_TREE_COMMANDS=Kommandos
 GUI_TREE_FUNCTIONS=Funktionen
 GUI_TREE_CONSTANTS=Konstanten
-GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw define
+GUI_TREE_FUNC_KEYLIST=num mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro
 # tree pop-up menu
@@ -1529,6 +1538,7 @@ GUI_EDITOR_CALLTIP_COMMON_METHODFOR=Methode für
 GUI_EDITOR_CALLTIP_OPT_ADDXAXIS=addxaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ADDYAXIS=addyaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ADVENTOR=adventor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_ALIGN=align=ALIGNSTRING [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_ALL=all
 GUI_EDITOR_CALLTIP_OPT_ALLMEDIUM=hires=allmedium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ALPHA=alpha[=VAL]
@@ -1697,6 +1707,7 @@ GUI_EDITOR_CALLTIP_OPT_MEAN=mean=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% ra
 GUI_EDITOR_CALLTIP_OPT_MED=med [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_MEDIUM=hires=medium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MEMORY=memory [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% clear]
+GUI_EDITOR_CALLTIP_OPT_MENU=style=menu [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_MESSAGEBOX=type=messagebox [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
 GUI_EDITOR_CALLTIP_OPT_MIN=min[=VAL]
@@ -1763,6 +1774,7 @@ GUI_EDITOR_CALLTIP_OPT_ONCHANGE=onchange=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMM
 GUI_EDITOR_CALLTIP_OPT_ONCLICK=onclick=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_ONLYCOLORS=legendstyle=onlycolors [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ONLYSTYLES=legendstyle=onlystyles [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ONOPEN=onopen=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_OPEN=open [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OPNG=opng=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OR=or [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
@@ -1834,6 +1846,7 @@ GUI_EDITOR_CALLTIP_OPT_SIZE=size={x,y} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
 GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_SPACE=type=space [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1843,10 +1856,12 @@ GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STREAMTO=streamto={WINID,ITEMID} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_STYLE=style=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SUM=sum [%%GUI_EDITOR_CALLTIP_COMMON_MAF%%]
 GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
 GUI_EDITOR_CALLTIP_OPT_TABLES=tables [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
+GUI_EDITOR_CALLTIP_OPT_TABS=style=tabs [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
 GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_TEXTENTRY=type=textentry [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]

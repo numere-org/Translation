@@ -1299,10 +1299,14 @@
 			<keyword>checkbox</keyword>
 			<keyword>dropdown</keyword>
 			<keyword>spinbut</keyword>
+			<keyword>slider</keyword>
 			<keyword>gauge</keyword>
 			<keyword>tablegrid</keyword>
 			<keyword>image</keyword>
 			<keyword>grapher</keyword>
+			<keyword>menu</keyword>
+			<keyword>separator</keyword>
+			<keyword>prop</keyword>
 			<keyword>size</keyword>
 			<keyword>color</keyword>
 			<keyword>id</keyword>
@@ -1316,8 +1320,12 @@
 			<keyword>expand</keyword>
 			<keyword>onclick</keyword>
 			<keyword>onchange</keyword>
+			<keyword>onopen</keyword>
 			<keyword>label</keyword>
 			<keyword>state</keyword>
+			<keyword>style</keyword>
+			<keyword>tabs</keyword>
+			<keyword>align</keyword>
 			<keyword>enabled</keyword>
 			<keyword>disabled</keyword>
 			<keyword>hidden</keyword>

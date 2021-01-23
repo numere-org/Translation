@@ -98,6 +98,10 @@ ellipticPi(x,n,k)~Wert des elliptischen Integrals Pi(x,n,k)~elliptisches integra
 erf(x)~Wert der gauß'schen Fehlerfunktion an der Stelle x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x~gausssche complementary gaußsche fehlerfunktion errorfunction erfc()~erfc(
 eval~Berechnet Funktionswerte eines gegebenen Ausdrucks~funktionswerte ausdruck stuetzstellen stützstellen samples linspace~help eval
+evt_changestate(nId,sState)~GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_changestate(
+evt_close()~GUI-Event-Handler: Schließt das aktuelle Fenster~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_close()
+evt_copyvalues(nFromId,nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
+evt_sendvaltoitem(nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
 execute~Führt ein Kommando mithilfe der Windows-Shell aus~command bash programm wait ausführen run cmd.exe~help execute
 exp(x)~Exponentialfunktion von x~exponentialfunktion eulersche zahl exp()~exp(
 explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren überschreiben ueberschreiben~help explicit
@@ -194,6 +198,7 @@ matop~Matrixevaluation des gegebenen Ausdrucks~matrix matrizenrechnungen matrice
 max(x,y,z,...)~Maximum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~maximum zeichenketten strings max() maximal value~max(
 maxpos(x,y,z,...)~Index des Maximums der Werte x,y,z,...~maximum position max() maxpos() maximal value~maxpos(
 med(x,y,z,...)~Median der Werte x,y,z,...~zentralwert median untermedian obermedian med()~med(
+menuitem~Definiert ein Eintrag in einem Menü für ein Window-Layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 mesh3d~Erstellen eines 3D-Gitterplots~meshgrid3d gitterplot dreidimensional~help mesh3d
 mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
@@ -220,6 +225,7 @@ prd(x,y,z,...)~Berechnet das Produkt der Argumente x,y,z,...~produkt product mul
 procedure~Definiert eine NumeRe-Prozedur, siehe "help procedure"~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
 Programmierer~Wenn du ihn nicht persönlich kennst: probier's mal mit "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:dev@numere.org"
 progress~Gibt einen Fortschrittsstatus aus. Nur für Scripte und Prozeduren geeignet~prozedur $ programmierung plugins balken warten waitbar() progressbar~help progress
+prop~Generiert eine oder mehrere neue interne Variablen für das aktuelle Window-Layout, die mit Informationen befüllt werden können~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog property eigenschaften properties~help window
 Protokolldatei~Die Protokolldatei findest du unter "<>/numere.log"~numerelog logfile~edit <>/numere.log
 psi(x)~Berechnet den Wert der Digammafunktion an der Stelle x~psi() digammafunction polygammafunction trigammafunction~psi(
 psi_n(n,x)~Berechnet den Wert der Polygammafunktion der Ordnung n and der Stelle x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
@@ -252,6 +258,7 @@ roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen 
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
 save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+separator~Fügt ein Separator-Objekt in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 set -OPTION~Die Option OPTION ändern, siehe "help set"~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Den Inhalt eines Datensatzes anzeigen~data() cache() table() auflisten~help show
 shuffle(n,m)~Gibt n zufällig ausgewählte und eindeutige Werte aus einem 1:m array zurück~mischen zufällig random shuffle()~shuffle(
@@ -261,6 +268,7 @@ sinc(x)~Sinus cardinalis von x~sinus cardinalis trigonometrische funktionen trig
 sinh(x)~Sinus hyperbolicus von x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic sinh()~sinh(
 size(MAT)~Gibt die Zahl der Zeilen und Spalten der Matrix MAT zurück~lines columns rows size() nlines ncols~size(
 sleep(nMilliSeconds)~Wartet die angegebenen nMilliSeconds und gibt diesen Wert anschließend zurück~sleep() pause() waiting time zeit dauer warten~sleep(
+slider~Fügt einen Schieberegler in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung~noise reduction rauschen reduzieren verringern glaetten glätten smoothing gaussian filter kernel savitzkygolay~help smooth
 sneumann(n,x)~Sphärische Neumannfunktion der Ordnung n~neumannfunktionen besselfunktionen zweiter art sphaerische sphärische sneumann() sbessel()~sneumann(
 solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus, siehe "help matop"~lösen loesen solve() lineares gleichungssystem linear equation gauss algorithmus~solve(
@@ -340,4 +348,3 @@ Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix~zero(
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Berechnet den Wert der Riemann'schen Zetafunktion an der Stelle x~zeta() zetafunction riemannian riemannsche~zeta(
-
