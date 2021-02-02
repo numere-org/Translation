@@ -45,6 +45,7 @@ beta(x,y)~Berechnet den Wert der Betafunktion an den Stellen x und y~beta() beta
 betheweizsaecker(N,Z)~Berechnet die Kernbindungsenergie eines Nuklids (N,Z) in MeV aus der Bethe-Weizsäcker-Massenformel~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker() nuclear binding energy~betheweizsaecker(
 Bi(x)~Airy-Funktion Bi(x)~optik potentialtopf Bi() optics airyfunction~Bi(
 binom(n,k)~Berechnet Binomialkoeffizient der natürlichen Zahlen n und k~binomialcoefficient binom()~binom(
+bitmap~Fügt ein Bild in ein Window-Layout ein~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 break~Bricht eine Schleife an der aktuellen Stelle ab oder beendet ein CASE-Statement~abbruch abbrechen abort cancel for while switch~help break
 button~Fügt eine beschriftbare Schaltfläche in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
@@ -137,6 +138,7 @@ global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein w
 grad3d~Erstellen eines 3D-Gradienten-Plots~gradienten feldlinien dreidimensional field lines force kraft three-dimensional~help grad3d
 grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
 grapher~Fügt ein Graph-Objekt in ein Window-Layout ein~plotting windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+gridrot~Rotiert das angegebene Datengitter um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help gridrot
 group~Startet die Definition einer Gruppierungsbox für ein Window-Layout~endgroup windowsystem layout interaction gui graphical user interface graphisch fenster dialog~help window
 heaviside(x)~Heaviside-(Theta-)Funktion~thetafunktion function heavisidefunktion heaviside() stufenfunktion distribution~heaviside(
 help THEMA~Ruft die NumeRe-Hilfe zum gewählten Thema THEMA auf. Wird kein Thema angegeben, so wird die NumeRe-Hilfe-Übersicht aufgerufen~hilfe manual documentation dokumentation~help
@@ -148,9 +150,9 @@ identity(n)~Erzeugt eine n-Dimensionale Einheitsmatrix, siehe "help matop"~ident
 idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index indices transformieren~idxtolog(
 if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung COND aus, siehe "help if"~condition bedingung else elseif() if() endif wenn falls verzweigung loop command sequence flow control~help if () ... endif
 ifndefined~Definiert eine Funktion, wenn sie nicht bereits definiert ist, siehe "help define"~wenn falls funktion neue definition definieren conditional define~help ifndefined
-image~Fügt ein Bild in ein Window-Layout ein~bitmap windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 implot~Erzeugt eine Darstellung des Ausdrucks oder Datensatzes als Bild, wobei automatisch ein Datenpunktintervall von [0,255] angenommen wird~images bilder imageplot imagesc()~help implot
 imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp channels~help imread
+imrot~Rotiert den angegebenen Bilddatensatz um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help imrot
 imY(l,m,theta,phi)~Imaginärteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] unter den Winkeln theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
@@ -311,6 +313,7 @@ swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austausch
 switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TABLE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help table"~zwischenspeicher save cache() table() sortieren swap rename~help table()
 tablegrid~Fügt ein Tabellengitter in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+tabrot~Rotiert die angegebene Tabelle um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help tabrot
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
 tanh(x)~Tangens hyperbolicus von x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
 taylor~Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor

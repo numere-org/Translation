@@ -1,0 +1,24 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2021  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="rotate">
+	<title string="Rotating a data set" />
+	NumeRe can rotate tables, image data and data grids by an angle <expr>alpha</expr> (in degrees) using one of the three commands <code>tabrot</code>, <code>imrot</code> or <code>gridrot</code>. In doing so, <code>tabrot</code> rotates an entire table without regard to the axes. <code>imrot</code> and <code>gridrot</code> rotate the dataset and on the other hand transform the associated axes automatically (or create new ones).
+	The syntax is identical for all commands:<codeblock>tabrot TABLE() -set alpha=ANGLE\nimrot IMAGE() -set alpha=ANGLE\ngridrot GRID() -set alpha=ANGLE</codeblock>The result of the rotation is created in the <code>rotdata()</code> table. This target can be customized with the <code>target=TARGET()</code> option.
+	<em>Note:</em> All datasets are internally rotated based on their row and column dimensions. Any axis scaling is not taken into account here. For example, a square dataset whose axes are scaled differently will not preserve this very scaling.
+</article>

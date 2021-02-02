@@ -208,6 +208,8 @@ BUILTIN_CHECKKEYWORD_DELETE_SUCCESS=Element(s) were deleted successfully.
 BUILTIN_CHECKKEYWORD_DELETE_CONFIRM=One or more elements will be deleted irreversibly.$Are you sure? (%%COMMON_YES_NO%%)
 BUILTIN_CHECKKEYWORD_DATAGRID_SUCCESS=The datagrid was successfully created in "%%1%%()".
 BUILTIN_CHECKKEYWORD_DETECT_SUCCESS=The detected structures were stored in "%%1%%()".
+BUILTIN_CHECKKEYWORD_ROTATETABLE_WARN_AXES_NOT_PRESERVED=The ratio of the axes to that of their respective intervals does not match. It is possible that the axes are not preserved or calculated erroneously during rotation.
+BUILTIN_CHECKKEYWORD_ROTATETABLE_SUCCESS=The rotated data was stored in "%%1%%()".
 BUILTIN_AUTOSAVE=Automatic backup
 BUILTIN_REMOVEFILE_CONFIRM=The file "%%1%%" will be deleted irreversibly - this cannot be undone.$Are you sure? (%%COMMON_YES_NO%%)
 # Layout des Settings-Dialoges
@@ -757,11 +759,14 @@ PARSERFUNCS_LISTCMD_CMD_SPINBUT_[GUI]=					spinbut      [-set PAR]             -
 PARSERFUNCS_LISTCMD_CMD_SLIDER_[GUI]=					slider       [-set PAR]             - Inserts a slider into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_GAUGE_[GUI]=					gauge        [-set PAR]             - Inserts a progress bar (a gauge) into a window layout. The starting value and the orientation are configurable
 PARSERFUNCS_LISTCMD_CMD_TABLEGRID_[GUI]=				tablegrid    [-set PAR]             - Inserts a table grid into a window layout. The event handling and the size in rows and columns are configurable
-PARSERFUNCS_LISTCMD_CMD_IMAGE_[GUI]=					image        EX [-set PAR]          - Inserts an image, where the filename is passed via EX into a window layout
+PARSERFUNCS_LISTCMD_CMD_BITMAP_[GUI]=					bitmap       EX [-set PAR]          - Inserts an image, where the filename is passed via EX into a window layout
 PARSERFUNCS_LISTCMD_CMD_GRAPHER_[GUI]=					grapher      [-set PAR]             - Inserts a graph object into a window layout. The event handling and the size of the object are configurable. Filling of this object has to be done via a plotting command using the "streamto={WINID,ITEMID}" option
 PARSERFUNCS_LISTCMD_CMD_SEPARATOR_[GUI]=				separator    EX [-set PAR]          - Inserts a separator object into a window layout. The separator may be either a vertical or a horizontal line or a simple space. If used in menues, the separator is always a horizontal line
 PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     EX [-set PAR]          - Defines an entry in a menu for a window layout. The event handling and the presence of a checkbox are configurable
-PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop     EX                         - Genereates one ore more internal variables for the current window layout, which may be filled with information. The variables are intrinsical type less and may contain numerical values as well as strings
+PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop         EX                     - Genereates one ore more internal variables for the current window layout, which may be filled with information. The variables are intrinsical type less and may contain numerical values as well as strings
+PARSERFUNCS_LISTCMD_CMD_TABROT_[EVAL]=					tabrot       OB -set PAR            - Rotates the passed table around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_GRIDROT_[EVAL]=					gridrot      OB -set PAR            - Rotates the passed data grid around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR            - Rotates the passed image data set around the defined angle and saves the result in the chosen target table
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=The syntax is given in schematic manner: EX = expression, PAR = parameter, OB = (data) object, STR = string, CMD = command und NM = name. Syntax elements in brackets are optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SEE ALSO: There exists an entry in the documentation for each of the listed commands. It can be accessed via "help COMMAND".

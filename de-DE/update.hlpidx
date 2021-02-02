@@ -1301,7 +1301,7 @@
 			<keyword>slider</keyword>
 			<keyword>gauge</keyword>
 			<keyword>tablegrid</keyword>
-			<keyword>image</keyword>
+			<keyword>bitmap</keyword>
 			<keyword>grapher</keyword>
 			<keyword>menu</keyword>
 			<keyword>separator</keyword>
@@ -1328,6 +1328,16 @@
 			<keyword>enabled</keyword>
 			<keyword>disabled</keyword>
 			<keyword>hidden</keyword>
+		</keywords>
+	</article>
+	<article id="rotate">
+		<file path="<>/docs/rotate.nhlp" />
+		<title string="Rotieren eines Datensatzes" idxkey="tabrot,gridrot,imrot" />
+		<keywords>
+			<keyword>rotate</keyword>
+			<keyword>tabrot</keyword>
+			<keyword>gridrot</keyword>
+			<keyword>imrot</keyword>
 		</keywords>
 	</article>
 </helpindex>

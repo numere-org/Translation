@@ -1,0 +1,24 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2021  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="rotate">
+	<title string="Rotieren eines Datensatzes" />
+	NumeRe kann Tabellen, Bilddaten und Datengitter um einen Winkel <expr>alpha</expr> (in Grad) rotieren, indem eines der drei Kommandos <code>tabrot</code>, <code>imrot</code> oder <code>gridrot</code> verwendet wird. Dabei rotiert <code>tabrot</code> eine ganze Tabelle ohne die Achsen zu beachten. <code>imrot</code> und <code>gridrot</code> rotieren den Datensatz und transformieren dagegen die zugehörigen Achsen automatisch (bzw. legen neue an).
+	Die Syntax ist für alle Kommandos identisch:<codeblock>tabrot TABLE() -set alpha=ANGLE\nimrot IMAGE() -set alpha=ANGLE\ngridrot GRID() -set alpha=ANGLE</codeblock>Das Ergebnis der Rotation wird in der Tabelle <code>rotdata()</code> angelegt. Dieses Ziel kann mit der Option <code>target=TARGET()</code> angepasst werden.
+	<em>Hinweis:</em> Alle Datensätze werden intern anhand ihrer Zeilen- und Spaltendimensionen rotiert. Eventuelle Achsenskalierungen werden hierbei nicht berücksichtigt. So bleibt zum Beispiel bei einem quadratischen Datensatz, dessen Achsen unterschiedlich skaliert sind, ebendiese Skalierung nicht erhalten.
+</article>
