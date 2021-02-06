@@ -230,6 +230,7 @@ progress~Shows the state of a progress. Only suitable for scripts and procedures
 prop~Genereates one ore more internal variables for the current window layout, which may be filled with information~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog property eigenschaften properties~help window
 psi(x)~Calculates the value of the digamma function at the position x~psi() digammafunction polygammafunction trigammafunction~psi(
 psi_n(n,x)~Calculates the value of the polygamma function of the order n at the position x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
+pso~Uses a particle swarm optimizer to locate the global minimum in the expression~partikelschwarmoptimierer minimal extremal extremum optimum optimal optimieren~help pso
 pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 Question~Is it me, who asks the questions, or is it you?~question~"Nice try, my friend ..."
 quit~Exits NumeRe~schliessen close exit beenden~quit

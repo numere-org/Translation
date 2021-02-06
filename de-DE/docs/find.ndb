@@ -231,6 +231,7 @@ prop~Generiert eine oder mehrere neue interne Variablen für das aktuelle Window-
 Protokolldatei~Die Protokolldatei findest du unter "<>/numere.log"~numerelog logfile~edit <>/numere.log
 psi(x)~Berechnet den Wert der Digammafunktion an der Stelle x~psi() digammafunction polygammafunction trigammafunction~psi(
 psi_n(n,x)~Berechnet den Wert der Polygammafunktion der Ordnung n and der Stelle x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
+pso~Verwendet einen Partikelschwarm-Optimierer, um das globale Minimum im Ausdruck zu finden~particle swarm optimizer partikelschwarmoptimierer minimal extremal extremum optimum optimal optimieren~help pso
 pulse~Bestimmt die Pulseigenschaften des übergebenen Datensatzes~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 quit~Beendet NumeRe~schliessen close exit beenden~quit
 radian(a)~Bogenmaßwert von Winkel a [Grad]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(

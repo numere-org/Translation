@@ -767,6 +767,7 @@ PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop         EX                     - G
 PARSERFUNCS_LISTCMD_CMD_TABROT_[EVAL]=					tabrot       OB -set PAR            - Rotates the passed table around the defined angle and saves the result in the chosen target table
 PARSERFUNCS_LISTCMD_CMD_GRIDROT_[EVAL]=					gridrot      OB -set PAR            - Rotates the passed data grid around the defined angle and saves the result in the chosen target table
 PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR            - Rotates the passed image data set around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_PSO_[EVAL]=						pso          EX [-set PAR]  -> {VAL}- Uses a particle swarm optimizer to locate the global minimum in the expression. The expression can be up to fourdimensional, as long as all intervals are defined
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=The syntax is given in schematic manner: EX = expression, PAR = parameter, OB = (data) object, STR = string, CMD = command und NM = name. Syntax elements in brackets are optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SEE ALSO: There exists an entry in the documentation for each of the listed commands. It can be accessed via "help COMMAND".
@@ -1793,6 +1794,7 @@ GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEW
 GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
+GUI_EDITOR_CALLTIP_OPT_PARTICLES=particles=PARTICLES [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pso]
 GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN
 GUI_EDITOR_CALLTIP_OPT_PCONT=pcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_PEEK=peek

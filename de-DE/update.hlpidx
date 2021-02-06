@@ -1340,4 +1340,14 @@
 			<keyword>imrot</keyword>
 		</keywords>
 	</article>
+	<article id="pso">
+		<file path="<>/docs/pso.nhlp" />
+		<title string="Partikelschwarm-Optimierer" idxkey="pso" />
+		<keywords>
+			<keyword>pso</keyword>
+			<keyword>particle</keyword>
+			<keyword>partikelschwarm</keyword>
+			<keyword>swarm</keyword>
+		</keywords>
+	</article>
 </helpindex>

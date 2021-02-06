@@ -1,0 +1,31 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2021  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="pso">
+	<title string="Particle swarm optimizer" />
+	The particle swarm optimizer can be used to search for the global minimum of an up to four-dimensional scalar function (<expr>phi = f(x,y,z,t)</expr>). For this, the optimizer needs the corresponding number of intervals:<codeblock>{VAL} = pso f(x,y,z,t) -set [x0:x1,y0:y1,z0:z1,t0:t1]</codeblock>If fewer intervals are specified, the function is considered correspondingly less dimensional. If no interval is specified at all, <code>[x0:x1] = [-10:10]</code> is assumed.
+	The optimizer thereby returns the position <expr>r0 = (x0,y0,z0,t0)</expr> at which the function <expr>f(x,y,z,t)</expr> becomes minimal in the specified intervals (if this applies to multiple positions, only one of them is returned).
+	However, it should be taken into account that a particle swarm optimizer is inherently <em>random</em>. Therefore, the particular position <expr>r0</expr> is only determined to some uncertainty <expr>r0 +/- delta_r</expr> on the order of the largest interval divided by twice the number of particles. (Thus, for 100 particles and an interval width of 10, an uncertainty of <expr>delta_r approx 0.05</expr> is to be expected).
+	Additionally, the number of iterations (default 100) and the number of particles (default 100) can be modified:<codeblock>{VAL} = pso f(x,...) -set [x0:x1,...] iter=ITERATIONS particles=PARTICLES</codeblock>.
+	<em>Note:</em> The particle swarm optimizer cannot be applied to tables and datasets. Use the <code>TABLE().minpos</code>-<a href="nhlp://table?frame=new">table method</a> for this purpose.
+	<example desc="Using the particle swarm optimizer to search for the global minimum of <expr>sin(x)+cos(y)</expr> in the interval <expr>[-pi,pi; -pi,pi]</expr> (this function is symmetric about the <expr>x</expr> axis, so a positive result for <expr>y</expr> can also be returned):">
+		pso sin(x)+cos(y) -set [-_pi:_pi,-_pi:_pi]
+		ans = { -1.570247, -3.141593}
+	</example>
+	<em>See also:</em> <a href="nhlp://extrema?frame=self">help extrema</a> and <a href="nhlp://zeroes?frame=self">help zeroes</a>
+</article>
