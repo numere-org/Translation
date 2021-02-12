@@ -57,6 +57,7 @@
 		\tGUI-ELEMENTE ODER group ... endgroup
 		endlayout
 	</codeblock>
+	<em>Hinweis:</em> Im Falle der Einbettung eines Window-Layouts in ein <a href="nhlp://package?frame=new">Package</a> muss zwischen <code>layout</code> und dessen Parametern zusätzlich der Zieldateiname und -pfad angegeben werden, z.B. <code>layout "&lt;procpath&gt;/myapp/appmain.nlyt" -title="My App" ...</code> Bei Verwendung des Package-Creators im Werkzeuge-Menü wird das automatisch eingefügt.
 	<h>Eigenschafts-Optionen für die Kommandos in Layout-Scripten</h>
 	Die GUI-Elemente der oberen Liste können durch die folgenden Eigenschafts-Optionen weiter modifiziert werden. Dabei unterstützen nicht alle Kommandos dieselben Eigenschafts-Optionen.
 	<list>

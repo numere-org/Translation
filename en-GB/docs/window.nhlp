@@ -57,6 +57,7 @@
 		\tGUI-ELEMENTS OR group ... endgroup
 		endlayout
 	</codeblock>
+	<em>Note:</em> In case of embedding a window layout into a <a href="nhlp://package?frame=new">package</a> the target filename and path must be additionally specified between <code>layout</code> and its parameters, e.g. <code>layout "&lt;procpath&gt;/myapp/appmain.nlyt" -title="My App" ...</code> When using the package creator in the tools menu this will be inserted automatically.
 	<h>Property options for the commands in layout scripts</h>.
 	The GUI elements in the upper list can be further modified by the following property options. However, not all commands support the same property options.
 	<list>
