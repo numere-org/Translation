@@ -18,6 +18,7 @@
 
 <article id="documentation">
 	<title string="Documentation" />
+	<em>Note:</em> This article is about the help articles of the NumeRe documentation. For questions about procedure documentation (i.e. comment style), please refer to the <a href="nhlp://procedure?frame=new">help procedure</a> and <a href="nhlp://latex?frame=new">help LaTeX</a> articles.
 	All entries of the NumeRe documentation are present in external NumeRe help files (*.nhlp) in the subdirectory "./docs". These are in principle simple XML files, which may be modified using a sinple text editor. But note that the default help files will be <em>overwritten</em> during an update.
 	Plugins may add their help files during their install to the already present set of available documentation entries. Their help files will be stored in the separate subdirectory "./docs/plugins" to prevent the possible overwriting during an update.
 	To add help files during an install, the <code>&lt;install&gt;...&lt;endinstall&gt;</code> block must contain two additional blocks: a <code>&lt;helpindex&gt;...&lt;/helpindex&gt;</code> and a <code>&lt;helpfile&gt;...-&lt;/helpfile&gt;</code> block. The first one must contain the index information about the documentation article; the latter one shall contain the actual documentation article. To add a comment, which shall not displayed, you may use the XML comment syntax:<codeblock>&lt;!-- YOUR COMMENT GOES HERE --&gt;</codeblock>Also, you may use <code>&lt;example&gt;</code>, <code>&lt;list&gt;</code> or other environments in this article:

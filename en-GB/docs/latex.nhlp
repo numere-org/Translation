@@ -40,5 +40,6 @@
 		Text
 	</codeblock>
 	If some code shall be displayed in the usual text, then this section has to be surrounded with doubled exclamation marks: <code>!!CODE IN THE TEXT!!</code>
+	<a href="nhlp://procedure?frame=new">Procedure documentation</a> (also known as "procedure headers") are based on the Doxygen standard and define some signal words for this purpose, which are explained in this very article. These signal words are converted to special elements such as parameter tables when converting to a PDF.
 	Comments, which are prefixed with <code>##~</code> or located inside of <code>#** ... *#</code> are ignored completely and won't be displayed in the documentation. (Can be used to hide commented-out code.)
 </article>

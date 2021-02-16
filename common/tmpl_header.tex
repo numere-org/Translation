@@ -33,10 +33,12 @@
 \renewcommand\arraystretch{1.5}
 \newcommand\realnumberstyle[1]{\tiny}
 \newcommand\oprts[1]{\textcolor{red}{\upshape{#1}}}
+\newcommand\layout[1]{\section{Window layout #1}}
 \newcommand\procsec[2]{\section[#1]{#1\\*[.4ex]\textup{\hphantom{\thesection\enskip}}\normalsize#2}}
 \newcommand\procedure[2]{\procsec{Procedure \$#1()}{Full qualified procedure name: \lstinline`#2`}}
 \newcommand\depends[1]{\begin{flushleft}\textsf{\textbf{This procedure calls:}} #1\end{flushleft}}
 \newcommand\parameters{\subsection*{Parameters for this procedure}}
+\newcommand\returns{\subsection*{This procedure returns}}
 \newcommand\remark{\paragraph{Remark}}
 
 % Apply a patch for the closing parenthesis
