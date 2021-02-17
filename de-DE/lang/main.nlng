@@ -884,7 +884,9 @@ LOOP_LINE_NOT_EXISTENT=Diese Zeile existiert nicht.
 # =============================
 SCRIPT_START_INSTALL=Starte Installation
 SCRIPT_INSTALL_SUCCESS=Installation erfolgreich abgeschlossen.
+SCRIPT_INSTALL_ABORT=Installation abgebrochen.
 SCRIPT_INSTALLING_PROC=Installiere "%%1%%" ...
+SCRIPT_INSTALL_LICENSE_AGREEMENT=Der Inhalt des zu installierenden Packages oder Plugins "%%1%%" ist unter der Lizenz "%%2%%" lizensiert. Diese Lizenz definiert, wie der Inhalt des Packages oder des Plugins verwendet werden darf und was dabei zu beachten ist (z.B. Copyleft). Um das Package oder Plugin zu installieren und verwenden zu können, müssen die Lizenzbedingungen zur Kenntnis genommen und akzeptiert werden.$Akzeptieren und Fortfahren? (%%COMMON_YES_NO%%)
 # DEFINE
 # =============================
 DEFINE_SUCCESS=Die Funktionsdefinitionen wurden erfolgreich aktualisiert.
@@ -914,58 +916,6 @@ DOC_SEARCHFCT_TABLEHEAD=Relevanz:   Suchergebnis:
 DOC_SEARCHFCT_RESULT=Die NumeRe-Suche ergab %%1%% Treffer.
 DOC_SEARCHFCT_NO_RESULTS=Leider kein Ergebnis für "%%1%%" gefunden. Womöglich führt eine andere Schreibweise oder ein Synonym des Begriffs zum Erfolg. Möglicherweise hat sich aber auch ein Tippfehler eingeschlichen.
 DOC_TIPOFTHEDAY_HEADLINE=NUMERE: SCHON GEWUSST?  [Nr. %%1%%/%%2%%]
-DOC_FIRSTSTART_HEADLINE_PREFIX=NumeRe: Erster Start [%%1%% -- Seite %%2%%/%%3%%]
-DOC_FIRSTSTART_NEXTPAGE=ENTER ZUM FORTFAHREN / 0+ENTER ZUM ABBRECHEN
-# Firststart-DB
-DOC_FIRSTSTART_PAGE_1_HEAD=Einstieg
-DOC_FIRSTSTART_PAGE_1_LINE_1=HALLO UND WILLKOMMEN!$Ich bin NumeRe v %%1%%, Framework für Numerische Rechnungen, und freue mich, dich zum ersten Mal zu begrüßen!
-DOC_FIRSTSTART_PAGE_1_LINE_2=Ich bin ausgelegt als eine Tabellenkalkulation, die rein auf der Konsole basiert, allerdings bin ich für die (Natur-)Wissenschaftliche Arbeit optimiert. So verfüge ich über die Möglichkeit, durch Scripte vordefinierte Abläufe zu automatisieren, graphische Plots in vielerlei Varianten zu erzeugen, oder einige andere Dinge.
-DOC_FIRSTSTART_PAGE_1_LINE_3=Diese Einführung werde ich nur dieses eine Mal automatisch anzeigen. Falls du sie später noch mal sehen willst, gebe einfach "firststart" in die Konsole ein. Außerdem gibt es die Möglichkeit, zu allen Themen eine Hilfe zu erhalten: gib einfach "help THEMA" ein, um meine Hilfe zum THEMA aufzurufen, oder lass' THEMA weg, um die Hilfeübersicht anzuzeigen. (Beispiel: "help data")
-DOC_FIRSTSTART_PAGE_1_LINE_4=Solltest du einmal ein Kommando oder eine Funktion nicht finden können, kannst du meine Stichwortsuche verwenden: "find BEGRIFFE". Wie durch BEGRIFFE angedeutet, kannst du hier auch mehrere Begriffe angeben, die durch Leerzeichen getrennt sein müssen. (Beispiel: "find funktionen definieren")
-DOC_FIRSTSTART_PAGE_1_LINE_5=HINWEIS: Dies ist nur eine knappe Einführung, in der für alle Feinheiten meiner Syntax kein Platz ist. Sieh dir einfach die Hilfeartikel an, die ich im Folgenden angeben werde, falls du irgendwo nicht weiterkommst, oder schau in die NumeRe-Onlinereferenz: <https://sites.google.com/site/numereframework/onlinereferenz>
-DOC_FIRSTSTART_PAGE_1_LINE_6=TIPP: Da dies mein erster Start auf deinem Rechner zu sein scheint, wirst du eben beobachtet haben, wie ich einen ausführlichen Test durchgeführt habe. Wenn du nicht möchtest, dass ich das nochmal mache, gib nach dieser Einführung (oder auch später) "set -faststart=1" ein.
-# ------------------------
-DOC_FIRSTSTART_PAGE_2_HEAD=Ein- & Ausgabe
-DOC_FIRSTSTART_PAGE_2_LINE_1=Als Framework für Numerische Rechnungen kann ich natürlich vor allem eines: eingegebene Ausdrücke numerisch auswerten. Dazu kannst du den Ausdruck, den ich dir auswerten soll, im Prinzip eingeben, wie du ihn in einen beliebigen Taschenrechner eintippen würdest. Der Unterschied liegt lediglich darin, dass ich mit Variablen umgehen kann und Leerstellen natürlich bedeutungslos sind. (Beispiel: "5*23*x + 2*x^2 - 15*cos(2)")
-DOC_FIRSTSTART_PAGE_2_LINE_2=Diese Variablen musst du nicht zuvor deklarieren. Ich erkenne auch Variablen, die mit einem Ausdruck eingegeben werden, als solche und werde sie entsprechend in meinem Speicher ablegen. Du brauchst dir also darüber keine Sorgen machen. (Allerdings solltest du beachten, dass neue Variablen stets den Wert 0 haben.)
-DOC_FIRSTSTART_PAGE_2_LINE_3=Deine Variablen können aus Buchstaben, Unterstrichen und Zahlen bestehen, jedoch dürfen sie niemals mit einer Ziffer beginnen. (Z.B.: "x", "x0", "_var_Wert", ...)
-DOC_FIRSTSTART_PAGE_2_LINE_4=Den numerischen Wert, den ich ausrechne, werde ich in der nächsten Zeile als "ans = WERT" ausgeben. Dabei werde ich diesen Wert eben auch der speziellen Variable "ans" zuweisen, so dass du beim nächsten Ausdruck damit weiterrechnen kannst.
-DOC_FIRSTSTART_PAGE_2_LINE_5=Ich kann auch numerisch Differenzieren und Integrieren, sowie Extrema und Nullstellen suchen. Die dazu nötigen Kommandos sowie eine komplette Liste aller anderen findest du unter "list -cmd".
-DOC_FIRSTSTART_PAGE_2_LINE_6=TIPP: Weiterführende Infos findest du unter "help expression", "help var", "help integrate", "help diff", "help extrema" und "help zeroes"
-# ------------------------
-DOC_FIRSTSTART_PAGE_3_HEAD=NumeRe einrichten & verbessern
-DOC_FIRSTSTART_PAGE_3_LINE_1=Zwar wurde ich von meinem Entwickler schon mit vernünftigen Standardeinstellungen versehen, doch möglicherweise hast du einen anderen Workflow und möchtest deswegen etwas an meinen Einstellungen ändern. Dazu gibt es das Kommando "set":$set -EINSTELLUNG=WERT$(Manche Einstellungen haben nur die Werte 1 oder 0, andere explizit numerische Werte und einige auch Zeichenketten. Die Bezeichnungen der Einstellungswerte findest du im entsprechenden Hilfeartikel.)
-DOC_FIRSTSTART_PAGE_3_LINE_2=Um meine Einstellungen zu lesen, verwendest du das Kommando "get" (get -EINSTELLUNG) und um sie in einer kompakten Liste anzeigen zu lassen "list -settings".
-DOC_FIRSTSTART_PAGE_3_LINE_3=Vielleicht findest du, dass bei mir etwas nicht so ganz stimmt, oder dass mir noch was ganz wichtiges fehlt. Sollte dem so sein, dann freut sich mein Entwickler über deine Nachricht. Schreibe ihm entweder per Mail <numere.developer@gmail.com>, oder trage deinen Wunsch/Fehler im Ticketsystem ein: <https://sourceforge.net/p/numere/tickets/>
-DOC_FIRSTSTART_PAGE_3_LINE_4=TIPP: Weiterführende Infos findest du unter "help set", "help get" und "about"
-# ------------------------
-DOC_FIRSTSTART_PAGE_4_HEAD=Datenfiles
-DOC_FIRSTSTART_PAGE_4_LINE_1=Ich hatte eben einige Features angedeutet, die ich dir in den folgenden Zeilen vorstellen werde. Beginnen wir dabei zunächst mit der Arbeit mit Datensätzen:
-DOC_FIRSTSTART_PAGE_4_LINE_2=Ich fasse jeden Datensatz als eine Tabelle auf. Tabellen als Textdatei als *.dat oder *.txt kannst du mittels des Kommandos "load DATEI", wobei DATEI der Dateiname des Datensatzes ist, in meinen Arbeitsspeicher laden. Kommentare müssen dabei durch ein "#" am Anfang der Zeile auskommentiert werden, Dezimaltrennzeichen kann der Punkt oder das Komma (oder beides) sein und die einzelnen Spalten müssen durch mindestens ein Leerzeichen oder einen Tabulator getrennt sein. (Beispiel: "load samples/data")
-DOC_FIRSTSTART_PAGE_4_LINE_3=Ich kann des Weiteren auch die Tabelle aus einer CASSY(R)-LABX-Datei extrahieren, sie auswerten und ggf. in eine *.dat-Datei exportieren. Außerdem verstehe ich Comma Separated Value-Datafiles (*.csv), JCAMP-DX-Files (*.dx), IGOR Binary Waves (*.ibw), OpenDocument-Spreadsheets (*.ods) und Excel(R)-Mappen (*.xls und *.xlsx). Das zusätzliche "NumeRe-Datafile"-Format (*.ndat) verwende ich standardmäßig zum Speichern, allerdings handelt es sich dabei um ein binäres Format, das nur von mir gelesen werden kann. Ich kann die Daten aber auch in eine Text-, eine TeXdatei oder eine Excel(R)-Mappe exportieren, wenn das gewünscht ist.
-DOC_FIRSTSTART_PAGE_4_LINE_4=Die geladenen Daten kann ich rasch analysieren. Wenn du "stats data()" eingibst, berechne ich dir die Statistiken der Datensätze, und bei "hist data()" berechne ich dir ein Histogramm der Daten. Tiefergehendere oder ausführlichere Auswertungen kann ich dir machen, wenn du die dazu nötigen Gleichungen direkt eingibst, wobei die Daten in meinem Arbeitsspeicher durch "data(ZEILE,SPALTE)" repräsentiert sind. (Beispiel: "7*exp(data(12,3)^2)")
-DOC_FIRSTSTART_PAGE_4_LINE_5=TIPP: Weiterführende Infos findest du unter "help data", "help load", "help stats" und "help hist"
-# ------------------------
-DOC_FIRSTSTART_PAGE_5_HEAD=Plotten
-DOC_FIRSTSTART_PAGE_5_LINE_1=Daneben verfüge ich über einen vielseitigen Plotalgorithmus, der dir eine graphische Darstellung von Funktionen oder Datensätzen in vielen Varianten ermöglicht.
-DOC_FIRSTSTART_PAGE_5_LINE_2=Einfache 1D-Plots (z.B. von f(x) = sin(x)) mache ich dir durch die Eingabe von "plot FUNKTION -set OPTIONEN". Dabei ist FUNKTION durch den Funktionsausdruck und OPTIONEN durch die gewünschten Plotoptionen zu ersetzen. Statt eines Funktionsausdrucks kann hierbei auch ein Datensatz angegeben werden. (Beispiel: "plot sin(x) -set [-_pi:_pi]" oder "plot data(:,1:3) -set yerrorbars")
-DOC_FIRSTSTART_PAGE_5_LINE_3=2D-Plots von Funktionen der Form z = f(x,y) bekommst du durch "mesh", "surf", "dens" oder "cont", je nach gewünschter Darstellungsmethode. (z.B. "surf exp(-norm(x,y)^2/5) -set [-5:5,-5:5] light")
-DOC_FIRSTSTART_PAGE_5_LINE_4=3D-Plots von Trajektorien oder Skalarfeldern (Phi = Phi(x,y,z)) erzeuge ich durch das zusätzliche Anhängen von "3d" an ein Kommando (z.B. "surf3d").
-DOC_FIRSTSTART_PAGE_5_LINE_5=Vektorfelder kann ich dir durch "vect" bzw. "vect3d" darstellen. (Beispiel: "vect -y, x -set [-5:5,-5:5]")
-DOC_FIRSTSTART_PAGE_5_LINE_6=Meine Plots haben verschiedene Qualitätsstufen: standardmäßig mache ich alle Plots in der mittleren Stufe, da dies Rechenzeit spart. Willst du eine hohe Qualität, so gib die Option "hires" an. Du kannst auch den Entwurfsmodus verwenden. Gib dafür "set -draftmode=1" ein.
-DOC_FIRSTSTART_PAGE_5_LINE_7=TIPP: Weiterführende Infos findest du unter "help plot", "help plotoptions", "help plot3d", "help mesh", "help mesh3d", "help vect" und "help vect3d"
-# ------------------------
-DOC_FIRSTSTART_PAGE_6_HEAD=Automatisieren, Scripte & Prozeduren
-DOC_FIRSTSTART_PAGE_6_LINE_1=Wie ich zuvor erwähnte, kann ich vordefinierte Abläufe automatisieren. Dazu stehen dir einfache Programmierfunktionen zur Verfügung, die du während der Laufzeit direkt eingeben, oder aber in ein sogenanntes "NumeRe-Script" (*.nscr) auslagern kannst.
-DOC_FIRSTSTART_PAGE_6_LINE_2=Als Funktionen stehen dir die Zählschleife (FOR-Schleife), die bedingte Schleife (WHILE-Schleife) und die bedingte Verzweigung (IF-Verzweigung) zur Verfügung, die im Wesentlichen über dieselben Fähigkeiten wie die entsprechenden Varianten aus C/C++ verfügen.
-DOC_FIRSTSTART_PAGE_6_LINE_3=Scripte kannst du durch das Kommando "start SCRIPT", wobei SCRIPT durch den Dateinamen des Scripts zu ersetzen ist, starten. Wenn ein Script gestartet wurde, werde ich alle Ausdrücke zeilenweise abarbeiten, die ich in deinem Script finde. In meinem Unterverzeichnis "samples" sollten ein paar Beispielscripte zu finden sein, sofern du sie bei Installation nicht abgewählt hast. Teste einfach mal "start samples/sample"
-DOC_FIRSTSTART_PAGE_6_LINE_4=Die größtmögliche Flexibilität bietet dir mein integrierter Interpreter, der in der Lage ist, komplexe Automatismen, "NumeRe-Prozeduren" (*.nprc) genannt, auszuführen. Diese Prozeduren kannst du verwenden, um deine eigenen Unterprogramme in meinem Framework zu entwickeln. Auch wenn die Vielfalt der Funktionen dieser Prozeduren vielleicht noch eingeschränkt erscheinen mag, so wird sie doch stetig erweitert.
-DOC_FIRSTSTART_PAGE_6_LINE_5=TIPP: Weiterführende Infos findest du unter "help for", "help while", "help if", "help script" und "help procedure"
-# ------------------------
-DOC_FIRSTSTART_PAGE_7_HEAD=Funktionen
-DOC_FIRSTSTART_PAGE_7_LINE_1=Außerdem besitze ich einen großen Satz vordefinierter Funktionen, Konstanten und Einheitenumrechnungen. Ich kann sie dir auflisten, wenn du "list -func" für die Funktionen, "list -const" für die Konstanten und "list -units" für die Einheitenumrechnungen eingibst.
-DOC_FIRSTSTART_PAGE_7_LINE_2=Zusätzlich kannst du auch noch eigene Funktionen definieren, mit denen du dann genauso wie mit meinen vordefinierten umgehen kannst. Dazu musst du mir aber erklären, was deine Funktion können soll. Die dazu nötige Definition machst du dabei durch das Schema "define FUNKTIONSNAME(ARGUMENTE) := FUNKTIONSAUSDRUCK(ARGUMENTE)", z.B. durch "define f(x,y) := cos(x)+sin(y)"
-DOC_FIRSTSTART_PAGE_7_LINE_3=TIPP: Weiterführende Infos erhältst du unter "help func" und "help define"
 # DOCHELPER
 # =================================
 DOCHELPER_KEYWORDS_AND_ARTICLES=Schlüsselwörter und verknüpfte Artikel dieser Dokumentation
@@ -2172,6 +2122,7 @@ GUI_PKGDLG_VERSION=Version
 GUI_PKGDLG_PLUGINCOMMAND=Plugin-Kommando
 GUI_PKGDLG_FLAGS=Installationseinstellungen
 GUI_PKGDLG_TYPE=Package-Typ
+GUI_PKGDLG_LICENSE=Package-Lizenz
 GUI_PKGDLG_PLUGINMAIN=Plugin-Hauptprozedur
 GUI_PKGDLG_PLUGINDESC=Beschreibung
 GUI_PKGDLG_INCLUDEDOCUMENTATION=Ergänze Dokumentationstemplate

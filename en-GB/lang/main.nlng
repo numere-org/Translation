@@ -884,7 +884,9 @@ LOOP_LINE_NOT_EXISTENT=This line does not exist.
 # =============================
 SCRIPT_START_INSTALL=Starting installation
 SCRIPT_INSTALL_SUCCESS=Installation was terminated successfully.
+SCRIPT_INSTALL_ABORT=Installation aborted.
 SCRIPT_INSTALLING_PROC=Installing "%%1%%" ...
+SCRIPT_INSTALL_LICENSE_AGREEMENT=The content of the package or plugin "%%1%%" to be installed is licensed under the "%%2%%" license. This license defines how the content of the package or plugin may be used and what must be respected (e.g. copyleft). To install and use the package or plugin, the license terms must be acknowledged and accepted.$Accept and Continue? (%%COMMON_YES_NO%%)
 # DEFINE
 # =============================
 DEFINE_SUCCESS=The function definitions were updated successfully.
@@ -914,58 +916,6 @@ DOC_SEARCHFCT_TABLEHEAD=Relevance:  Search result:
 DOC_SEARCHFCT_RESULT=The NumeRe keyword search returned %%1%% hits.
 DOC_SEARCHFCT_NO_RESULTS=There was no result for your query "%%1%%". Maybe a synonym can help you out, or it is simply a typographic error, which distorted the search algorithm.
 DOC_TIPOFTHEDAY_HEADLINE=NUMERE: DID YOU KNOW?  [No. %%1%%/%%2%%]
-DOC_FIRSTSTART_HEADLINE_PREFIX=NumeRe: First Start [%%1%% -- Page %%2%%/%%3%%]
-DOC_FIRSTSTART_NEXTPAGE=PRESS ENTER TO RESUME / 0+ENTER TO ABORT
-# Firststart-DB
-DOC_FIRSTSTART_PAGE_1_HEAD=Prelude
-DOC_FIRSTSTART_PAGE_1_LINE_1=HELLO AND WELCOME!$I am NumeRe v %%1%%, Framework für Numerische Rechnungen (meaning: framework for numerical calculations), and I'm joyful that I can greet you for the first time!
-DOC_FIRSTSTART_PAGE_1_LINE_2=I was designed as a table calculation based purely on the console, but I am optimized for the scientific work. I'm featuring the possibilities to automate predefined processes, generate graphical plots in many different styles and many other things.
-DOC_FIRSTSTART_PAGE_1_LINE_3=I will show this introduction only once. If you like to look into it in the future, you can invoke the command "firststart". Apart from this, there is another way to get help: simply enter "help TOPIC", to open my internal documentation about the TOPIC. Leave TOPIC away and you'll get the overview. (Example: "help data")
-DOC_FIRSTSTART_PAGE_1_LINE_4=If you cannot find a command or a function, you may use my keyword search: "find TERMS". You may enter multiple terms at once, if you separate them with whitespaces. (Example: "find define function")
-DOC_FIRSTSTART_PAGE_1_LINE_5=NOTE: This is only a brief introduction and there is no room for all the subtleties of my syntax. Just look into the documentation articles, which I will name in the following if you got stuck somewhere, or look into the online reference: <https://sites.google.com/site/numereframework/onlinereferenz>
-DOC_FIRSTSTART_PAGE_1_LINE_6=HINT: It seems that this my first start onto your system. Therefore you may have noticed that I passed an extensive selftest. If you don't like this, enter "set -faststart" after this introduction (or at any later time).
-# ------------------------
-DOC_FIRSTSTART_PAGE_2_HEAD=Input & output
-DOC_FIRSTSTART_PAGE_2_LINE_1=Because I'm a framework for numerical calculations, I'm especially good at the evaluation of numerical expressions. You can enter the expressions, which I shall evaluate, exactly the way you would enter them into a pocket calculator. The only difference is that I'm capable of using variables and that whitespaces are not of great interest. (Example: "5*23*x + 2*x^2 - 15*cos(2)")
-DOC_FIRSTSTART_PAGE_2_LINE_2=You don't need to declare these variables in advance. I'll recognize variables just in the moment, in which they are passed, and will store them in my memory. Although you don't need to care about this, you should keep in mind that new variables always contain the value 0.
-DOC_FIRSTSTART_PAGE_2_LINE_3=Your variable names may contain letters, underscores and numbers, but they must not begin with a number. (E.g.: "x", "x0", "_var_value", ...)
-DOC_FIRSTSTART_PAGE_2_LINE_4=The numerical value, which I calculate, will be printed in the next line as "ans = VALUE". This value will be stored in the special variable "ans" as well so that you can directly resume your calculations with this value.
-DOC_FIRSTSTART_PAGE_2_LINE_5=I'm capable of numerical differentation and integration, as well as searching for extrema or intersections with 0. You'll find the necessary commands at "list -cmd".
-DOC_FIRSTSTART_PAGE_2_LINE_6=HINT: You'll find further information at "help expression", "help var", "help integrate", "help diff", "help extrema" and "help zeroes"
-# ------------------------
-DOC_FIRSTSTART_PAGE_3_HEAD=Customize & improve NumeRe
-DOC_FIRSTSTART_PAGE_3_LINE_1=My default settings were of course chosen quite reasonable, but you may have some other work flow and therefore you would like to change my settings. You can use the command "set":$set -SETTING=VALUE$to customize my settings. (Some settings only have the values 1 or 0, others have explicit values and the last group contains strings. You'll find the names of the settings in the corresponding documentation article.)
-DOC_FIRSTSTART_PAGE_3_LINE_2=To read my settings, you can invoke the command "get" (get -SETTING) and, to list all settings at once, just enter "list -settings".
-DOC_FIRSTSTART_PAGE_3_LINE_3=Probably you may think that I have some issue or that I'm missing some great feature. If this is the case, then don't hesitate. My developer is always thankful for detected bugs, change requests and other ideas. Either write him an email at <numere.developer@gmail.com> or enter your request in the ticket system: <https://sourceforge.net/p/numere/tickets/>
-DOC_FIRSTSTART_PAGE_3_LINE_4=HINT: You'll find further information at "help set", "help get" and "about"
-# ------------------------
-DOC_FIRSTSTART_PAGE_4_HEAD=Data files
-DOC_FIRSTSTART_PAGE_4_LINE_1=Previously I mentioned some features, which I'd like to present in the following lines. We'll begin with the actions that can be applied to data files:
-DOC_FIRSTSTART_PAGE_4_LINE_2=Every data set, which I will process, will be interpreted as a table. Tables in textual files, such as *.dat or *.txt files, can be loaded to memory with the command "load FILE", in which FILE is the filename of the data set. If there are some comments in the file, these must be escaped with an "#" at the beginning of their lines. Either dots or commas can be used as decimal separators (even both in the same file) and the columns have to be separated by either at least a whitespace or a tabulator sign. (Example: "load samples/data")
-DOC_FIRSTSTART_PAGE_4_LINE_3=Additionally I can extract the table from a CASSY(R)-LABX file, evaluate its data and export it into a *.dat file. I understand also Comma Separated Value files (*.csv), JCAMP-DX files (*.dx), IGOR Binary Waves (*.ibw), OpenDocument Spreadsheets (*.ods) and Excel(R) Workbooks (*.xls and *.xlsx). I use the additional "NumeRe data file" file format (*.ndat) as the default saving file type, although this file is a binary file type and can only be read by me. If you like to, then I can export the data to a text file, a TeX file or an Excel(R) Workbook, too.
-DOC_FIRSTSTART_PAGE_4_LINE_4=I can apply a straightforward and fast analysis of the loaded data set. If you type "stats data()", then I'll calculate the statistics of the data, and if you enter "hist data()", then I'll calculate a histogram of the data, each based on the columns of the table. Custom or more extensive evaluations can be done, if you enter the equations directly. The data points can be accessed by the syntax "data(LINE,COLUMN)". (Example: "7*exp(data(12,3)^2)")
-DOC_FIRSTSTART_PAGE_4_LINE_5=HINT: You'll find further information at "help data", "help load", "help stats" and "help hist"
-# ------------------------
-DOC_FIRSTSTART_PAGE_5_HEAD=Plotting
-DOC_FIRSTSTART_PAGE_5_LINE_1=I have a versatile plotting algorithm, which allows creating a graphical representation of functions and datasets in many different variants.
-DOC_FIRSTSTART_PAGE_5_LINE_2=I can create simple 1D plots (e.g. of f(x) = sin(x)), if you enter "plot FUNCTION -set OPTIONS". Herein you have to replace FUNCTION with the function expression and OPTIONS with the desired plot options. Instead of a function expression you may pass a data set. (Example: "plot sin(x) -set [-_pi:_pi]" or "plot data(:,1:3) -set yerrorbars")
-DOC_FIRSTSTART_PAGE_5_LINE_3=You can obtain 2D plots of functions according z = f(x,y) or data grids through the commands "mesh", "surf", "dens" or "cont". (E.g. "surf exp(-norm(x,y)^2/5) -set [-5:5,-5:5] light")
-DOC_FIRSTSTART_PAGE_5_LINE_4=I can create 3D plots of trajectories or scalar fields (Phi = Phi(x,y,z)), if you append "3d" to the current command (e.g. "surf3d").
-DOC_FIRSTSTART_PAGE_5_LINE_5=Vector fields can be obtained with "vect" and "vect3d", respectively. (Example: "vect -y, x -set [-5:5,-5:5]")
-DOC_FIRSTSTART_PAGE_5_LINE_6=The plots I create can have different levels of quality: as default I choose the middle level, which is a good compromise between speed and quality. If you like to have high quality, then pass the option "hires". The lower level (called "draft mode") has to be activated via settings. Enter "set -draftmode=1", if you want to use it.
-DOC_FIRSTSTART_PAGE_5_LINE_7=HINT: You'll find further information at "help plot", "help plotoptions", "help plot3d", "help mesh", "help mesh3d", "help vect" and "help vect3d"
-# ------------------------
-DOC_FIRSTSTART_PAGE_6_HEAD=Automating, scripts & procedures
-DOC_FIRSTSTART_PAGE_6_LINE_1=As I mentioned before, I can automate predefined sequences of commands and expressions. To achieve this, I grant you simple programming functions, which you may use at running time or you can outsource them in a so-called "NumeRe script" (*.nscr).
-DOC_FIRSTSTART_PAGE_6_LINE_2=These functions (flow controls) are the counting (FOR) loop, the conditioned (WHILE) loop and the conditioned fork (IF construct). These controls own similar features like their pendants in usual programming languages such as C/C++.
-DOC_FIRSTSTART_PAGE_6_LINE_3=Scripts can be startet by invoking the command "start SCRIPT", in which SCRIPT has to be replaced by the filename of the corresponding script. If a script has been started, I'll separately execute every line that I find in this file. You should find some example scripts in my subdirectory "samples", if you have chosen this option during installation. If you like, you may test "start samples/sample" afterwards.
-DOC_FIRSTSTART_PAGE_6_LINE_4=You can obtain the greatest possible flexibility by using my integrated interpreter, which is capable of executing complex automatisms, so-called "NumeRe procedures" (*.nprc). You can use these procedures, to develop a whole subprogram running in my framework. Although the varity of the executable functions in these procedures may appear quite limited, they will be extended constantly.
-DOC_FIRSTSTART_PAGE_6_LINE_5=HINT: You'll find further information at "help for", "help while", "help if", "help script" and "help procedure"
-# ------------------------
-DOC_FIRSTSTART_PAGE_7_HEAD=Functions
-DOC_FIRSTSTART_PAGE_7_LINE_1=In addition, I own a great number of predefined functions, constants and unit coversions. I can list them for you, if you enter "list -func" for the functions, "list -const" for the constants and "list -units" for unit conversions.
-DOC_FIRSTSTART_PAGE_7_LINE_2=You may define your own functions, which are useable just like the predefined functions. In advance you have to declare, what your functions shall do. The necessary function definition is done by invoking "define FUNCTIONNAME(ARGUMENTS) := FUNCTIONEXPRESSION(ARGUMENTS)", e.g. through "define f(x,y) := cos(x)+sin(y)"
-DOC_FIRSTSTART_PAGE_7_LINE_3=HINT: You'll find further information at "help func" and "help define"
 # DOCHELPER
 # =================================
 DOCHELPER_KEYWORDS_AND_ARTICLES=Keywords and linked articles in this documentation
@@ -2172,6 +2122,7 @@ GUI_PKGDLG_VERSION=Version
 GUI_PKGDLG_PLUGINCOMMAND=Plugin command
 GUI_PKGDLG_FLAGS=Installation flags
 GUI_PKGDLG_TYPE=Package type
+GUI_PKGDLG_LICENSE=Package license
 GUI_PKGDLG_PLUGINMAIN=Plugin main procedure
 GUI_PKGDLG_PLUGINDESC=Description
 GUI_PKGDLG_INCLUDEDOCUMENTATION=Include documentation template
