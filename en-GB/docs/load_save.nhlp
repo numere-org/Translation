@@ -25,7 +25,7 @@
 	<list>
 		<item node="-all">Appending of this parameter and using a filename, which contains <em>at least one wildcard</em>, will result in loading all files matching to this filename</item>
 		<item node="append FILE">With this command you may append single files successively to already present data in memory. This command supports the parameter <code>-all</code> as well</item>
-		<item node="-totable">This parameter creates a table with the corresponding filename and copies the contents of the data file directly to this table. This parameter supports the additional parameter <code>-all</code> and creates multiple caches in this case</item>
+		<item node="-totable[=TABLE()]">This parameter creates a table with the corresponding filename or uses the optionally passed target table <code>TABLE()</code> and copies the contents of the data file directly to this table. This parameter supports the additional parameter <code>-all</code> as well. All necessary tables are created automatically</item>
 	</list>
 	If you don't pass a filename during saving, then NumeRe will choose a fitting filename and the corresponding storage location by itself.
 	You may pass the parameter <code>-ignore</code> to the command <code>load</code> to suppress a probable confirmation and to automatically free the needed memory, if applicable. Additionally, you may pass the number of the line in the comments, in which the column headings are located, if you pass <code>-head=LINE</code>. You'll only need this in the rare case that NumeRe is not capable of identifying them by its own.
