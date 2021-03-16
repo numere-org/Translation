@@ -33,6 +33,7 @@ ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
+assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(

@@ -43,6 +43,7 @@
 		<item node="mask">Eine mit <code>mask</code> geflagte Prozedur unterdrückt alle Systemausgaben während ihrer eigenen Ausführung und der aller von ihr aufgerufenen Prozeduren.</item>
 		<item node="template">Der <code>template</code>-Flag erlaubt die Verwendung dieser Prozeduren mit verschiedenen Variablentypen als Argumente. Anderenfalls kann die Prozedur nur mit dem Typ verwendet werden, mit dem sie aufgerufen wurde.</item>
 		<item node="macro">Deaktiviert das Kopieren der Argumentwerte in interne Variablen und kopiert stattdessen die kompletten Argumente in den Code (<em>Veraltet und wird ggf. in Zukunft entfernt</em>).</item>
+		<item node="test">Markiert die aktuelle Prozedur als ein Software-Test. Syntaxfehler, Ausdrucksfehler und fehlerhafte Ausdrücke mit <code>assert</code> werden hier nicht als Fehler sondern nur als Warnung angezeigt, so dass der Code trotz eines Fehlerfalls weiter ausgeführt werden kann. Dieser Flag sollte nicht für produktiven Code verwendet werden.</item>
 		<item node="event">Der <code>event</code>-Flag optimiert die Prozedur zur Verwendung mit GUI-Events (<a href="nhlp://window?frame=new"><code>window</code></a>). Zusätzlich wird automatisch <code>mask</code> verwendet. Dieser Flag stellt auch sicher, dass Events auch in neueren Versionen mit eigentlich längeren Prozedursignaturen lauffähig bleibem.</item>
 	</list>
 	<h>Eine Prozedur aufrufen</h>

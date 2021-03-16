@@ -29,7 +29,7 @@
 	</article>
 	<article id="additionalcommands">
 		<file path="<>/docs/additionalcommands.nhlp" />
-		<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close" />
+		<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert" />
 		<keywords>
 			<keyword>about</keyword>
 			<keyword>hline</keyword>
@@ -38,6 +38,7 @@
 			<keyword>single</keyword>
 			<keyword>warn</keyword>
 			<keyword>close</keyword>
+			<keyword>assert</keyword>
 		</keywords>
 	</article>
 	<article id="main">

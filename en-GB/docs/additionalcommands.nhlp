@@ -24,5 +24,6 @@
 		<item node="hline">This command draws a horizontal double line in the console. If the parameter <code>-single</code> is appended, this command will draw a single line.</item>
 		<item node="warn">This command will display the passed string as a warning in the console. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
 		<item node="close">This command closes previously opened windows, which are selected by parameters using <code>close -PAR</code>: <code>-graphs</code> closes all graphs, <code>-docs</code> all documentation windows, <code>-tables</code> all tables, <code>-images</code> all ImageViewers and <code>-all</code> all windows from this list.</item>
+		<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the procedure flag <code>test</code>, extensive software tests may be implemented.</item>
 	</list>
 </article>

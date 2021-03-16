@@ -33,6 +33,7 @@ Answer~The answer to life, the universe and everything: 42~answer ergebnis resul
 ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result~ans{}
 append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 ascii(STR)~Returns the ASCII values of the characters in STR~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
+assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(

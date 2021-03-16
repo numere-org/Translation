@@ -24,5 +24,6 @@
 		<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
 		<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
 		<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
+		<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
 	</list>
 </article>
