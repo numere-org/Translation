@@ -1213,6 +1213,7 @@ GUI_OPTIONS_KEEP_BACKUP_FILES=Keep revisions of the file
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Show text on the toolbar
 GUI_OPTIONS_SHOW_FILEPATHS=Show relative file paths as editor tab labels
 GUI_OPTIONS_USE_TABS=Use tabs instead of whitespaces for indentation
+GUI_OPTIONS_HOME_END_CANCELS=HOME/END cancel the autocompletion%%LINEBREAK%%Instead they jump to their respective positions
 GUI_OPTIONS_HISTORY_LINES=Buffersize of the NumeRe console
 GUI_OPTIONS_CARET_BLINK_TIME=[msec] Caret blinking time
 GUI_OPTIONS_PRECISION=Precision (Decimals int the console)

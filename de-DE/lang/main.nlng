@@ -1213,6 +1213,7 @@ GUI_OPTIONS_KEEP_BACKUP_FILES=Versionsverlauf der Datei beibehalten
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
 GUI_OPTIONS_SHOW_FILEPATHS=Relative Dateipfade als Editor-Registerkartennamen verwenden
 GUI_OPTIONS_USE_TABS=Verwende TAB statt Leerräumen zum Einrücken
+GUI_OPTIONS_HOME_END_CANCELS=POS1/ENDE brechen die Autovervollständigung ab%%LINEBREAK%%Stattdessen springen sie an ihre jeweilige Position
 GUI_OPTIONS_HISTORY_LINES=Puffergröße der NumeRe-Konsole
 GUI_OPTIONS_CARET_BLINK_TIME=[msec] Blinkdauer des Cursors
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
