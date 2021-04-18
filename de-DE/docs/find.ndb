@@ -188,6 +188,7 @@ list -OBJEKT~Listet alle Objekte zu OBJEKT, siehe "help list"~all functions funk
 ln(x)~natürlicher Logarithmus von x~logarithmus naturalis ln()~ln(
 load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data files dateien einlesen read importieren daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xls opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel mappe workbook~help load
 locate({STR},STR,N)~Sucht nach dem Auftreten der zweiten Zeichenkette in dem Zeichenkettenarray des ersten Arguments und gibt die zugehörigen Indices zurück~locate() find string cluster position index array~locate(
+log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 log10(x)~Logarithmus zur Basis 10 von x~logarithmus base 10 log10() log()~log10(
 log2(x)~Logarithmus zur Basis 2 von x~logarithmus base 2 log2()~log2(
 logtoidx(MAT)~Wandelt Logikwerte in einer Matrix in Indexwerte um~logic index indices boolean position transformieren~logtoidx(

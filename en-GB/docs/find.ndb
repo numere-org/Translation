@@ -189,6 +189,7 @@ ln(x)~Natural logarithm of x~logarithmus naturalis ln()~ln(
 load~Loads the data of a file~laden load data files dateien einlesen read importieren daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help load
 locate({STR},STR,N)~Searches for any occurences of the second string in the string array of the first argument and returns the corresponding indices~locate() find string cluster position index array~locate(
 Log file~You'll find the log file at "<>/numere.log"~numerelog logfile~edit <>/numere.log
+log_b(b,x)~Logarithm with base b of x~logarithmus basis arbitrary log_b() logb()~log_b(
 log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()~log10(
 log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()~log2(
 logtoidx(MAT)~Transforms logical values to indices~logic index indices boolean position transformieren~logtoidx(
