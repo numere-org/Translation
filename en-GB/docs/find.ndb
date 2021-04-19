@@ -33,9 +33,9 @@ Answer~The answer to life, the universe and everything: 42~answer ergebnis resul
 ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result~ans{}
 append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 ascii(STR)~Returns the ASCII values of the characters in STR~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
-assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
 audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
@@ -49,6 +49,8 @@ binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()~binom(
 bitmap~Inserts an image into a window layout~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbrechen cancel for while switch~help break
 button~Inserts a labelable button into a window layout~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+carttocyl(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
+carttopol(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to polar coordinates (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
 checkbox~Inserts a checkbox into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
@@ -68,6 +70,8 @@ cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonom
 covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz~covar(
 credits~Legal information about NumeRe~info about versionsinformationen~credits
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt~cross(
+cyltocart(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
+cyltopol(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
 datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
@@ -189,10 +193,10 @@ ln(x)~Natural logarithm of x~logarithmus naturalis ln()~ln(
 load~Loads the data of a file~laden load data files dateien einlesen read importieren daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help load
 locate({STR},STR,N)~Searches for any occurences of the second string in the string array of the first argument and returns the corresponding indices~locate() find string cluster position index array~locate(
 Log file~You'll find the log file at "<>/numere.log"~numerelog logfile~edit <>/numere.log
-log_b(b,x)~Logarithm with base b of x~logarithmus basis arbitrary log_b() logb()~log_b(
 log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()~log10(
 log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()~log2(
 logtoidx(MAT)~Transforms logical values to indices~logic index indices boolean position transformieren~logtoidx(
+log_b(b,x)~Logarithm with base b of x~logarithmus basis arbitrary log_b() logb()~log_b(
 matfc(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,...~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
 matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the missing elements are added logically~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
 matfl(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,...~matfl() create erzeugen erschaffen zusammensetzen combine~matfl(
@@ -225,6 +229,8 @@ perlin(x,y,z,seed,freq,oct,pers)~Calculates the Perlin noise at the position {x,
 phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
 plot3d~Graphical plotting of three dimensional data sets and trajectories~plotten graphisch dreidimensional plot()~help plot3d
 plot~Graphical plotting of functions and data sets~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
+poltocart(MAT)~Converts the columns of the matrix MAT from polar (rho,phi,theta) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocart(
+poltocyl(MAT)~Converts the columns of the matrix MAT from polar (rho,phi,theta) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocyl(
 prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product multiplizieren multiply prd()~prd(
 procedure~Defines a NumeRe procedure~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
 Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:numere.developer@gmail.com"

@@ -33,9 +33,9 @@ ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
-assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
 audio~Erzeugt eine WAVE-Datei aus einem Datensatz, siehe "help audio"~audiofile pcm audiodatei sound wavefile wavedatei~help audio
@@ -49,6 +49,8 @@ binom(n,k)~Berechnet Binomialkoeffizient der natürlichen Zahlen n und k~binomial
 bitmap~Fügt ein Bild in ein Window-Layout ein~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 break~Bricht eine Schleife an der aktuellen Stelle ab oder beendet ein CASE-Statement~abbruch abbrechen abort cancel for while switch~help break
 button~Fügt eine beschriftbare Schaltfläche in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+carttocyl(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
+carttopol(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
 checkbox~Fügt eine Checkbox in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunction~Cl2(
@@ -68,6 +70,8 @@ cot(x)~Kotangens von x~cot() cotangens ctg() trigonometrische funktionen trigono
 covar(MAT,MAT)~Berechnet die Kovarianz der beiden Argumente~covariance covar()~covar(
 credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about versionsinformationen~credits
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
+cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
+cyltopol(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel sheet mappe workbook~help data()
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time~date(
@@ -188,10 +192,10 @@ list -OBJEKT~Listet alle Objekte zu OBJEKT, siehe "help list"~all functions funk
 ln(x)~natürlicher Logarithmus von x~logarithmus naturalis ln()~ln(
 load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data files dateien einlesen read importieren daten *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xls opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel mappe workbook~help load
 locate({STR},STR,N)~Sucht nach dem Auftreten der zweiten Zeichenkette in dem Zeichenkettenarray des ersten Arguments und gibt die zugehörigen Indices zurück~locate() find string cluster position index array~locate(
-log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 log10(x)~Logarithmus zur Basis 10 von x~logarithmus base 10 log10() log()~log10(
 log2(x)~Logarithmus zur Basis 2 von x~logarithmus base 2 log2()~log2(
 logtoidx(MAT)~Wandelt Logikwerte in einer Matrix in Indexwerte um~logic index indices boolean position transformieren~logtoidx(
+log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 Lösung~Was soll das denn? Ich kann numerisch rechnen - und nicht etwa hellsehen!~solution lösen solver~solution = nan
 matfc(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., siehe "help matop"~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
 matfcf(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., wobei fehlende Elemente logisch ergänzt werden, siehe "help matop"~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
@@ -225,6 +229,8 @@ perlin(x,y,z,seed,freq,oct,pers)~Berechnet Perlin-Noise an der Stelle {x,y=0,z=0
 phi(x,y)~Berechnet den Azimuthwinkel phi~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
 plot3d~Erstellen eines 3D-Graphen~plotten graphisch dreidimensional plot()~help plot3d
 plot~Erstellen eines Graphen~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
+poltocart(MAT)~Konvertiert die Spalten der Matrix MAT von polaren (rho,phi,theta) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocart(
+poltocyl(MAT)~Konvertiert die Spalten der Matrix MAT von polaren (rho,phi,theta) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocyl(
 prd(x,y,z,...)~Berechnet das Produkt der Argumente x,y,z,...~produkt product multiplizieren multiply prd()~prd(
 procedure~Definiert eine NumeRe-Prozedur, siehe "help procedure"~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
 Programmierer~Wenn du ihn nicht persönlich kennst: probier's mal mit "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:dev@numere.org"
