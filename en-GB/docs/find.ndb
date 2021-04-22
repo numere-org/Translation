@@ -360,3 +360,5 @@ Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix~zero(
 zeroes~Calls the function for numerical calculation of the intersection with zero of functions and data sets~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannian riemannsche~zeta(
+coordstogrid(MAT,MAT)~Maps the one or two columns of the second matrix into the grid coordinates of the first matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren~coordstogrid(
+interpolate(MAT,MAT)~Interpolates values from the first matrix bilinearly using the row and column values of the second matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly~interpolate(
