@@ -62,6 +62,7 @@ compose~Erlaubt die Komposition mehrerer Plotstile und mehrerer Plots in einer A
 cont3d~Erstellen eines 3D-Konturlinienplots~contour3d kontur niveau dreidimensional~help cont3d
 continue~Überspringt die restlichen Befehle einer FOR- oder WHILE-Schleife und setzt die Auswertung mit dem nächsten Durchlauf fort~ueberspringen überspringen for fortsetzen while~help continue
 cont~Erstellen eines Konturlinienplots~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
+coordstogrid(MAT,MAT)~Bildet die ein oder zwei Spalten der zweiten Matrix in den Gitterkoordinaten der ersten Matrix ab~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren coordstogrid()~coordstogrid(
 copy~Kopiert je nach Ausdruck Einträge/Spalten/Untertabellen zwischen Datenobjekten oder Dateien, siehe "help copy"~kopieren  tabellen dateien files~help copy
 correl(MAT,MAT)~Berechnet die Korrelationsmatrix aus den beiden Argumenten~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl() mustererkennung pattern recognition~correl(
 cos(x)~Kosinus von x~cos() cosinus kosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~cos(
@@ -161,6 +162,7 @@ imrot~Rotiert den angegebenen Bilddatensatz um einen definierten Winkel und spei
 imY(l,m,theta,phi)~Imaginärteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] unter den Winkeln theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
+interpolate(MAT,MAT)~Interpoliert Werte aus der ersten Matrix bilinear unter Verwendung der Zeilen- und Spaltenwerte der zweiten Matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
 invert(MAT)~Invertiert die Matrix MAT, siehe "help matop"~invert() matrix invertieren~invert(
 is_alnum(STR)~Prüft für jedes Zeichen in STR, ob es alphanumerisch ist~is_alnum() character type representation zeichen~is_alnum(
 is_alpha(STR)~Prüft für jedes Zeichen in STR, ob es rein alphabetisch ist~is_alpha() character type representation zeichen~is_alpha(
@@ -303,11 +305,13 @@ STR.rmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens aus STR in der Zeic
 STR.splt(CHAR)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten # \" unterteilen tokenizer zerlegen splt() tokens~.splt(
 STR.sub(POS,LEN)~Gibt LEN Zeichen ab dem Zeichen POS aus der Zeichenkette als neue Zeichenkette zurück~methode strings zeichenketten # \" ausschnitt ausschneiden sub()~.sub(
 strfnd(STR1,STR2,P)~Gibt die Position des ersten Auftretens der Zeichenkette STR1 in STR2 ab dem Zeichen P zurück~zeichenketten strings  # \" find strfnd()~strfnd(
+strfndall(STR1,STR2,P,P)~Gibt alle Positionen, an denen STR1 in STR2 zwischen beiden Positionen auftritt, zurück~zeichenketten strings finden alle # \" find strfnd() strfndall()~strfndall(
 string(i)~Zeichenketten-Objekt mit Zugriff auf Zeichenkette "i", siehe "help string"~zeichenketten # \" \n \t string()~help string()
 string_cast(EXPR)~Wandelt EXPR ungeachtet eventueller Rechenoperationen in eine Zeichenkette um~zeichenketten umwandeln transformation conversion convert wert # \" string_cast() strings~string_cast(
 strip(sStr,sPref,sSuff,nStripAll)~Entfernt den Präfix sPref und den Suffix sSuff von der Zeichenkette sStr, wenn sie nicht-leer sind~stripping prefixes suffixes startswith endswith~strip(
 strlen(STR)~Gibt die Länge der Zeichenkette STR zurück~zeichenketten strings # \" laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Sucht das erste Auftreten eines Zeichens aus S1 in der Zeichenkette S2 ab dem Zeichen P~zeichenketten strings  # \" find strmatch()~strmatch(
+strmatchall(STR1,STR2,P,P)~Sucht die ersten Auftreten aller Zeichen aus STR1 in der Zeichenkette STR2 zwischen beiden Positionen~zeichenketten strings finden alle # \" find strmatch() strmatchall()~strmatchall(
 strrfnd(STR1,STR2,P)~Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
 strrmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens aus S1 in der Zeichenkette S2 bis zum Zeichen P~zeichenketten strings  # \" find last strrmatch()~strrmatch(
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings  # \" find str_not_match()~str_not_match(
@@ -360,5 +364,3 @@ Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix~zero(
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Berechnet den Wert der Riemann'schen Zetafunktion an der Stelle x~zeta() zetafunction riemannian riemannsche~zeta(
-coordstogrid(MAT,MAT)~Bildet die ein oder zwei Spalten der zweiten Matrix in den Gitterkoordinaten der ersten Matrix ab~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren~coordstogrid(
-interpolate(MAT,MAT)~Interpoliert Werte aus der ersten Matrix bilinear unter Verwendung der Zeilen- und Spaltenwerte der zweiten Matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly~interpolate(
