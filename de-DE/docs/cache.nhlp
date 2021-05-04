@@ -45,6 +45,7 @@
 	<list>
 		<item node="TABLE().name">Gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt</item>
 		<item node="TABLE().size">Gibt die Größe der Tabelle in Zeilen und Spalten zurück</item>
+		<item node="TABLE().aliasof(sTable)">Wandelt die aktuelle Tabelle in einen Alias der Tabelle um, deren Name als Zeichenkette <code>sTable</code> übergeben wurde. Die aktuelle Tabelle wird dabei maskiert, so dass währenddessen nicht mehr auf sie zugegriffen werden kann. Wird eine leere Zeichenkette übergeben, wird die Dereferenzierung aufgehoben und der Bezug auf die aktuelle Tabelle wiederhergestellt. Der Name der referenzierten Tabelle wird als Zeichenkette zurückgegeben</item>
 		<item node="TABLE().minpos">Bestimmt die Position des Minimums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
 		<item node="TABLE().maxpos">Bestimmt die Position des Maximums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
 	</list>

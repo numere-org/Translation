@@ -45,6 +45,7 @@
 	<list>
 		<item node="TABLE().name">Returns the name of the table as string, which shortens constructs like <code>to_string(TABLE())</code>
 		<item node="TABLE().size">Returns the size of the table in rows and columns</item>
+		<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
 		<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 		<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 	</list>
