@@ -1284,6 +1284,7 @@ GUI_HISTORY_COPYLINE=Copy this line
 # Filter strings for the file dialog
 GUI_FILTER_SCRIPTS=NumeRe scripts
 GUI_FILTER_PROCEDURES=NumeRe procedures
+GUI_FILTER_LAYOUTS=NumeRe layout files
 GUI_FILTER_NUMEREFILES=NumeRe files
 GUI_FILTER_ALLFILES=All files
 GUI_FILTER_EXECUTABLES=Executable foles
