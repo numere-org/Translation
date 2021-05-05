@@ -1295,7 +1295,6 @@ GUI_FILTER_IMAGEFILES=Bilddateien
 GUI_FILTER_TEXSOURCE=TeX-Source
 GUI_FILTER_NONSOURCE=%%COMMON_FILETYPE_TXT%% (*.txt)|*.txt|%%COMMON_FILETYPE_LOG%% (*.log)|*.log|%%COMMON_FILETYPE_DAT%% (*.dat)|*.dat|%%COMMON_FILETYPE_CSV%% (*.csv)|*.csv
 GUI_FILTER_ALLSUPPORTEDFILES=Alle unterstützten Dateien|*.nscr;*.nprc;*.nlyt;*.ndat;*.dat;*.txt;*.jdx;*.dx;*.jcm;*.log;*.csv;*.xls;*.xlsx;*.ods;*.png;*.jpg;*.jpeg;*.eps;*.svg;*.gif;*.tex;*.m;*.cpp;*.cxx;*.c;*.hpp;*.hxx;*.h
-
 GUI_NEWFILE_UNTITLED=<Unbenannt>
 GUI_SAVE_QUESTION=NumeRe: Speichern?
 GUI_UNSAVEDFILE=Die Datei "%%1%%" wurde geändert und nicht gespeichert.
