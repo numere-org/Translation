@@ -2161,6 +2161,8 @@ GUI_PKGDLG_CREATE_PACKAGE=Package erzeugen
 GUI_PKGDLG_MISSING_MAINPROCEDURE=Die Hauptprozedur der aktuellen Datei fehlt oder ist nicht an erster Position. Die Prozedur "%%1%%" wird dem Namensraum "unknownfile~" zugeordnet.
 GUI_PKGDLG_MISSING_MAINPROCEDURE_HEAD=NumeRe: Hauptprozedur fehlt
 GUI_PKGDLG_INSTALLERWARNING=Dies ist ein Installations-Script. Um die enthaltenen Prozeduren zu installieren, muss es mit 'install \"<this>/%%1%%\"' ausgeführt werden.
+GUI_PKGDLG_NOTALLFILESFOUND=Es konnte nicht alle im Projekt hinterlegten Dateien gefunden werden. Bitte überprüfe die markierten Dateien.
+GUI_PKGDLG_NOTALLFILESFOUND_HEAD=NumeRe: Nicht alle Dateien gefunden
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Prozedur-Abhängigkeiten [%%1%%]
 GUI_DEPDLG_TREE=Abhängigkeitsbaum der Hauptprozedur in der aktuellen Datei

@@ -2161,6 +2161,8 @@ GUI_PKGDLG_CREATE_PACKAGE=Create project
 GUI_PKGDLG_MISSING_MAINPROCEDURE=The main procedure of the current file is missing or not the first one. The procedure "%%1%%" is assigned to the "unknownfile~" namespace.
 GUI_PKGDLG_MISSING_MAINPROCEDURE_HEAD=NumeRe: Missing main procedure
 GUI_PKGDLG_INSTALLERWARNING=This is an installer script. To install the contained procedures, execute it using 'install \"<this>/%%1%%\"'.
+GUI_PKGDLG_NOTALLFILESFOUND=Not all files referenced by the project could be found. Please check the marked files.
+GUI_PKGDLG_NOTALLFILESFOUND_HEAD=NumeRe: Nicht all files found
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Procedure dependencies [%%1%%]
 GUI_DEPDLG_TREE=Dependency tree of the main procedure of the current file
