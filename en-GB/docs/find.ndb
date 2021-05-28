@@ -271,6 +271,7 @@ roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganz
 round(x,n)~Rounds x to n decimals~runden round round()~round(
 save~Saves the passed object~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+select(MAT,MAT,MAT)~Extracts values from the first matrix MAT using the indices from the second and third matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Shows the content of the passend data object~data() cache() table() auflisten~help show

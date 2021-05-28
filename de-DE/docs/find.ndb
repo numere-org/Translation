@@ -271,6 +271,7 @@ roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen 
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
 save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+select(MAT,MAT,MAT)~Extrahiert Werte aus der ersten Matrix MAT mit Indices aus zweiter und dritter Matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Fügt ein Separator-Objekt in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 set -OPTION~Die Option OPTION ändern, siehe "help set"~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Den Inhalt eines Datensatzes anzeigen~data() cache() table() auflisten~help show

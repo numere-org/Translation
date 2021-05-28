@@ -26,12 +26,15 @@
 	Installations are always logged in the <code>install.log</code> file in the NumeRe root directory, so that it can be seen which procedures were installed and where to look for errors, if any.
 	Installations can be provided with further information. This can be done within a <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block a <code>&lt;info&gt; ... &lt;endinfo&gt;</code> block can be used:<codeblock>&lt;install&gt;\n\t&lt;info&gt;\n\t\tINSTALLINFO\n\t&lt;endinfo&gt;\n\tPROZEDUREN\n&lt;endinstall&gt;</codeblock>The <code>INSTALLINFO</code> section can contain the following values:
 	<list>
-		<item node="-author=AUTHOR">The author of the plugin. Must be specified in quotes</item>.
-		<item node="-flags=SWITCH">Switch values to be used for the installation. Available here are <code>ENABLE_FULL_LOGGING</code>, <code>DISABLE_SCREEN_OUTPUT</code> and <code>ENABLE_DEFAULTS</code>, the latter being used by default</item>.
-		<item node="-type=TYP">Installation type. By default, <code>TYPE_UNSPECIFIED</code> is used here. If a plugin is to be installed, <code>TYPE_PLUGIN</code> or <code>TYPE_PLUGIN_WITH_RETURN_VALUE</code> must be specified here</item>.
-		<item node="-name=NAME">Name of the installation/plugin. Must be specified in quotes</item>.
-		<item node="-requireversion=VERSION">Checks if the version of NumeRe is sufficient for the VERSION requested by the procedures to be installed. This field is only interpreted as of v1.0.9 and must be specified in quotes.</item>.
-		<item node="-requirepackages=PACKAGELIST">Automatically installs the specified comma-separated packages. (Packages are procedures embedded in <code>&lt;install&gt;</code> tags) This field is only interpreted as of v1.0.9 and must be specified in quotes.</item>.
+		<item node="-name=NAME">Name of the installation/plugin. Must be specified in quotes</item>
+		<item node="-author=AUTHOR">The author of the plugin. Must be specified in quotes</item>
+		<item node="-flags=SWITCH">Switch values to be used for the installation. Available here are <code>ENABLE_FULL_LOGGING</code>, <code>DISABLE_SCREEN_OUTPUT</code> and <code>ENABLE_DEFAULTS</code>, the latter being used by default</item>
+		<item node="-type=TYP">Installation type. By default, <code>TYPE_PACKAGE</code> is used here. If a plugin is to be installed, <code>TYPE_PLUGIN</code> or <code>TYPE_PLUGIN_WITH_RETURN_VALUE</code> must be specified here. If a plugin, which binds into the graphical user interface, shall be installed, then the type is <code>TYPE_GUI_PLUGIN</code></item>
+		<item node="-desc=DESCRIPTION">A description of the functionalities, which may be found in this package or plugin. Has to be passed in quotation marks</item>
+		<item node="-licence=LICENSE">The license, to which the user has to agree to. Can be any string passed in quotation marks</item>
+		<item node="-version=VERSION">Defines the version of the package or plugin. This value will be incremented automatically, if it is not defined. Has to be passed inside of quotation marks</item>
+		<item node="-requireversion=VERSION">Checks if the version of NumeRe is sufficient for the VERSION requested by the procedures to be installed. This field is only interpreted as of v1.0.9 and must be specified in quotes. (The Package-Creator sets this field automatically to the currently used version)</item>
+		<item node="-requirepackages=PACKAGELIST">Automatically installs the specified comma-separated packages (file names not package names). (Packages are procedures embedded in <code>&lt;install&gt;</code> tags) This field is only interpreted as of v1.0.9 and must be specified in quotes.</item>
 	</list>
 	The switch values for the installation have different meanings: <code>ENABLE_FULL_LOGGING</code> enables logging of every evaluated line instead of just every procedure name, <code>DISABLE_SCREEN_OUTPUT</code> disables logging to the NumeRe console, and <code>ENABLE_DEFAULTS</code> reverses the previous switches.
 	During plugin installation, additional entries can be added to the NumeRe help. To do this, the necessary information must also be added to the <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block. More information is available at <a href="nhlp://documentation?frame=new">help documentation</a>.
