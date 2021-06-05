@@ -17,12 +17,18 @@
 -->
 
 <article id="audio">
-	<title string="Audiodateien erzeugen" />
-	NumeRe kann aus Datensätzen Audiodateien im PCM-Waveformat generieren, die in jedem beliebigen Audioplayer abgespielt werden können. Hierzu kann das Kommando <code>audio</code> verwendet werden. NumeRe kann die Audiodateien entweder als Mono oder als Stereodatei erzeugen, je nachdem, ob 1 oder 2 Spalten an das Kommando übergeben werden:<codeblock>audio DATA(I1:I2,J1:J2)</codeblock>Es ist <em>nicht</em> möglich, <expr>x</expr>-Werte bzw. die Zeitachse der Audiodatei vorzugeben; die Stützstellen der Audiodatei müssen stets äquidistant sein. Verwende das Kommando <code>regularize</code> um äquidistante Stützstellen aus nicht-äquidistanten Datensätzen berechnen zu lassen.
+	<title string="Audiodateien erzeugen und einlesen" />
+	NumeRe kann aus Datensätzen Audiodateien im PCM-Waveformat generieren, die in jedem beliebigen Audioplayer abgespielt werden können. Hierzu kann das Kommando <code>audio</code> verwendet werden. NumeRe kann die Audiodateien entweder als Mono- oder als Stereodatei erzeugen, je nachdem, ob 1 oder 2 Spalten an das Kommando übergeben werden:<codeblock>audio DATA(I1:I2,J1:J2)</codeblock>Es ist <em>nicht</em> möglich, <expr>x</expr>-Werte bzw. die Zeitachse der Audiodatei vorzugeben; die Samples der Audiodatei müssen stets äquidistant sein. Verwende das Kommando <code>regularize</code> um äquidistante Samples aus nicht-äquidistanten Datensätzen berechnen zu lassen. Samples sind dabei als eine Gruppe von einer Stützstelle je Kanal zu verstehen.
 	Die erzeugte Audiodatei ist automatisch auf den maximalen Wert des Datensatzes normiert.
 	Standardmäßig werden die Audiodateien mit einer Samplerate von 44,1 kHz erzeugt. Sollte dies nicht gewünscht werden, kann dem Kommando der Parameter <code>samples=SAMPLERATE</code> mit der gewünschten SAMPLERATE als natürliche Zahl übergeben werden.
 	Als Ausgabedatei verwendet NumeRe standardmäßig <code>&lt;savepath&gt;/audiofile.wav</code>. Mittels des Parameters <code>file=FILENAME</code> kann dies geändert werden.
+	Um Audiodateien einzulesen, kann das Kommando <code>audioread</code> mit dem Dateinamen als Ausdruck verwendet werden. Wird zusätzlich noch eine Zieltabelle mit <code>target=TABLE()</code> angegeben, wird NumeRe versuchen, die gesamte Datei in den Speicher zu laden. Anderenfalls werden nur die Metadaten der Datei (Zahl der Samples, Kanäle, Samplerate und Dauer in Sekunden) geladen:
+	<codeblock>
+		{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
+		{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()
+	</codeblock>
 	<em>Wichtig</em>: Audiodaten können eine große Zahl an Datenpunkten benötigen. Es ist möglich, dass die Zahl der Samples nicht von NumeRe verarbeitet werden kann.
+	Bei sehr großen Dateien kann es besser sein, nur Ausschnitte aus diesen Dateien einzulesen. Mit dem Kommando <code>seek</code> kann ein Ausschnitt ab einer Position POSITION und der Länge in Samples LENGTH gelesen werden, wobei die Zahl der gelesenen Samples zurückgegeben wird:<codeblock>nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()</codeblock>Die Zieltabelle ist standardmäßig <code>audiodata()</code>, wenn sie nicht angegeben wird.
 	<example desc="Erzeugen der Audiodatei 'sin.wav' mit 16 kHz Samplerate und nur einem Channel, wobei die Samples in Spalte 2 in 'cache()' vorliegen:">
 		audio cache(:,2) -set samples=16'k file=sin.wav
 	</example>

@@ -19,7 +19,7 @@
 <helpindex>
 	<article id="audio">
 		<file path="<>/docs/audio.nhlp" />
-		<title string="Creating audio files" idxkey="audio" />
+		<title string="Creating and reading audio files" idxkey="audio, audioread, seek" />
 		<keywords>
 			<keyword>audio</keyword>
 			<keyword>wav</keyword>

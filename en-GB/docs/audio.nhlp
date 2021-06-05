@@ -17,12 +17,18 @@
 -->
 
 <article id="audio">
-	<title string="Creating of audio files" />
-	NumeRe may create audio files in the PCM wave format out of data sets, which may be played in an arbitrary audio player. This can be achieved by invoking the command <code>audio</code>. NumeRe will create the files either as mono or as stereo channel file depending on whether one or two columns were passed to this command:<codeblock>audio DATA(I1:I2,J1:J2)</codeblock>It is <em>not</em> possible, to pass predefined <expr>x</expr> values (an actual time axis); the samples of the audio file have to be distributed equidistantly. Use the command <code>regularize</code> to create equidistant distributed samples out of arbitrary ones.
-	The created audio file is automatically normalized to the maximal value of the data set.
-	The sample rate of the created audio file will be 44.1 kHz per default. This may be modified by adding the parameter <code>sample=SAMPLERATE</code> with the desired sample rate.
-	As default, the output target file will be <code>&lt;savepath&gt;/audiofile.wav</code>. You may modify this target with the parameter <code>file=FILENAME</code>.
-	<em>Important:</em> Audio files may need a large number of data points. It's possible that NumeRe cannot process such a large number of data points.
+	<title string="Creating and reading audio files" />
+	NumeRe can generate audio files in PCM wave format from data sets, which can be played in any audio player. The <code>audio</code> command can be used for this purpose. NumeRe can generate the audio files as either mono or stereo, depending on whether 1 or 2 columns are passed to the command:<codeblock>audio DATA(I1:I2,J1:J2)</codeblock>It is <em>not</em> possible to specify <expr>x</expr> values or the time axis of the audio file; the samples of the audio file must always be equidistant. Use the <code>regularize</code> command to calculate equidistant samples from non-equidistant data sets. Samples are to be understood as a group of one data point per channel.
+	The generated audio file is automatically normalized to the maximum value of the data set.
+	By default, the audio files are generated with a sample rate of 44.1 kHz. If this is not desired, the parameter <code>samples=SAMPLERATE</code> can be passed to the command with the desired SAMPLERATE as a natural number.
+	As output file NumeRe uses <code>&lt;savepath&gt;/audiofile.wav</code> by default. By means of the parameter <code>file=FILENAME</code> this can be changed.
+	To read audio files, the command <code>audioread</code> can be used with the file name as expression. If a target table is also specified with <code>target=TABLE()</code>, NumeRe will attempt to load the entire file into memory. Otherwise, only the file's metadata (number of samples, channels, sample rate, and duration in seconds) will be loaded:
+	<codeblock>
+		{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
+		{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()
+	</codeblock>
+	<em>Important</em>: audio data may require a large number of data points. It is possible that the number of samples cannot be handled by NumeRe.
+	For very large files, it may be better to read in only sections of these files. The <code>seek</code> command can be used to read a section starting at a position POSITION and length in samples LENGTH, returning the number of samples read:<codeblock>nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()</codeblock>The target table defaults to <code>audiodata()</code> if not specified.
 	<example desc="Creating of the audio file 'sin.wav' with a sample rate of 16 kHz and only one channel using the data out of column 2 in 'cache()':">
 		audio cache(:,2) -set samples=16'k file=sin.wav
 	</example>

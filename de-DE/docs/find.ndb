@@ -38,7 +38,8 @@ asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh(
 assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
-audio~Erzeugt eine WAVE-Datei aus einem Datensatz, siehe "help audio"~audiofile pcm audiodatei sound wavefile wavedatei~help audio
+audio~Erzeugt eine WAVE-Datei aus einem Datensatz~audiofile pcm audiodatei sound wavefile wavedatei~help audio
+audioread~Liest die Metadaten einer WAVE-Datei oder die gesamte Datei~audiofile pcm audiodatei sound wavefile wavedatei~help audioread
 avg(x,y,z,...)~Mittelwert von x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 basetodec(sBase,sBaseVal)~Konvertiert die Zahl sBaseVal aus der Basis sBase ins Dezimalsystem und gibt diese als numerischen Wert zurück~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Besselfunktion erster Gattung der Ordnung n~bessel() first kind erster art besselfunktionen~bessel(
@@ -273,6 +274,7 @@ save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving d
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 select(MAT,MAT,MAT)~Extrahiert Werte aus der ersten Matrix MAT mit Indices aus zweiter und dritter Matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Fügt ein Separator-Objekt in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+seek~Liest ein Abschnitt einer WAVE-Datei~streamable streamen streaming seeking suchen audiodatei file~help seek
 set -OPTION~Die Option OPTION ändern, siehe "help set"~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Den Inhalt eines Datensatzes anzeigen~data() cache() table() auflisten~help show
 shuffle(n,m)~Gibt n zufällig ausgewählte und eindeutige Werte aus einem 1:m array zurück~mischen zufällig random shuffle()~shuffle(

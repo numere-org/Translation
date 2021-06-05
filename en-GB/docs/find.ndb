@@ -39,6 +39,7 @@ assert~Checks the passed expression for trueness and returns it. Throws an error
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
 audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
+audioread~Reads the meta data of a WAVE audio file or the whole file~audiofile pcm audiodatei sound wavefile wavedatei~help audioread
 avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 basetodec(sBase,sBaseVal)~Converts the number sBaseVal from base sBase to decimal and returns it as a numeric value~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen~bessel(
@@ -273,6 +274,7 @@ save~Saves the passed object~saving daten datei file data functions settings opt
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 select(MAT,MAT,MAT)~Extracts values from the first matrix MAT using the indices from the second and third matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+seek~Reads a section of a WAVE audio file~streamable streamen streaming seeking suchen audiodatei file~help seek
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Shows the content of the passend data object~data() cache() table() auflisten~help show
 shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random shuffle()~shuffle(

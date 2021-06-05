@@ -19,7 +19,7 @@
 <helpindex>
 	<article id="audio">
 		<file path="<>/docs/audio.nhlp" />
-		<title string="Audiodateien erzeugen" idxkey="audio" />
+		<title string="Audiodateien erzeugen und einlesen" idxkey="audio, audioread, seek" />
 		<keywords>
 			<keyword>audio</keyword>
 			<keyword>wav</keyword>
