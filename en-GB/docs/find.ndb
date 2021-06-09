@@ -295,6 +295,7 @@ spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfun
 split(STR,CHAR)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
+statictext~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
 std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz variance stats statistiken std()~std(
 stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
@@ -336,7 +337,6 @@ tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen
 taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
 textfield~Inserts a text field into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
-text~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(

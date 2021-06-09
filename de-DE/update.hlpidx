@@ -1293,7 +1293,7 @@
 			<keyword>endgroup</keyword>
 			<keyword>button</keyword>
 			<keyword>radio</keyword>
-			<keyword>text</keyword>
+			<keyword>statictext</keyword>
 			<keyword>textfield</keyword>
 			<keyword>treelist</keyword>
 			<keyword>checkbox</keyword>
