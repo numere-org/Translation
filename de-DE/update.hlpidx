@@ -1351,4 +1351,14 @@
 			<keyword>swarm</keyword>
 		</keywords>
 	</article>
+	<article id="url">
+		<file path="<>/docs/url.nhlp" />
+		<title string="Internet-Transferprotokolle (HTTP und FTP)" idxkey="url" />
+		<keywords>
+			<keyword>url</keyword>
+			<keyword>http</keyword>
+			<keyword>ftp</keyword>
+			<keyword>sftp</keyword>
+		</keywords>
+	</article>
 </helpindex>

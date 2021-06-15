@@ -788,6 +788,7 @@ PARSERFUNCS_LISTCMD_CMD_TABROT_[EVAL]=					tabrot       OB -set PAR            -
 PARSERFUNCS_LISTCMD_CMD_GRIDROT_[EVAL]=					gridrot      OB -set PAR            - Rotiert das angegebene Datengitter um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle
 PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR            - Rotiert den angegebenen Bilddatensatz um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle
 PARSERFUNCS_LISTCMD_CMD_PSO_[EVAL]=						pso          EX [-set PAR]  -> {VAL}- Verwendet einen Partikelschwarm-Optimierer, um das globale Minimum im Ausdruck zu finden. Der Ausdruck kann bis zu vierdimensional sein, sofern dafür Intervalle vorgegeben wurden
+PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> ARG     - Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle. JavaScript wird dabei nicht interpretiert. Es können auch Dateien heruntergeladen werden, wenn über den Parameter "file" eine Zieldatei vorgegeben wird. Hinweis: Zertifikate werden nicht validiert, daher eignet sich dieses Kommando nicht zum Austausch sensibler Informationen
 # Ende der Kommandotabelle
 PARSERFUNCS_LISTCMD_FOOTNOTE1=Die Syntax ist schematisch angegeben: EX = Ausdruck, PAR = Parameter, OB = (Daten-)Objekt, STR = Zeichenkette, CMD = Kommando und NM = Name. Syntaxelemente in eckigen Klammern sind optional.
 PARSERFUNCS_LISTCMD_FOOTNOTE2=SIEHE AUCH: Zu jedem der gelisteten Befehle existiert ein Hilfeeintrag, der durch "help BEFEHL" aufgerufen werden kann.
@@ -1604,7 +1605,7 @@ GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPT
 GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_DOCS=docs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
-GUI_EDITOR_CALLTIP_OPT_DOWN=down [Zeroes mode]
+GUI_EDITOR_CALLTIP_OPT_DOWN=down [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes]
 GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_ENABLED=state=enabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -1798,6 +1799,7 @@ GUI_EDITOR_CALLTIP_OPT_PRECISION=precision=VAL
 GUI_EDITOR_CALLTIP_OPT_PROB=prob=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_PROC=proc=PROCNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
 GUI_EDITOR_CALLTIP_OPT_PROCPATH=procpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PWD=pwd=PASSWORD [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
 GUI_EDITOR_CALLTIP_OPT_QUESTIONICON=icon=questionicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RBORDER=rborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1868,9 +1870,10 @@ GUI_EDITOR_CALLTIP_OPT_UBOUND=ubound=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%
 GUI_EDITOR_CALLTIP_OPT_UNIFORM=distrib=uniform [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_UNIQUE=unique
 GUI_EDITOR_CALLTIP_OPT_UNITS=units
-GUI_EDITOR_CALLTIP_OPT_UP=up [Zeroes mode]
+GUI_EDITOR_CALLTIP_OPT_UP=up [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes, url]
 GUI_EDITOR_CALLTIP_OPT_USECUSTOMLANG=usecustomlang [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_USEESCINSCRIPTS=useescinscripts [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_USR=usr=USERNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
 GUI_EDITOR_CALLTIP_OPT_VALUE=value[=VALUE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_VAR=var
 GUI_EDITOR_CALLTIP_OPT_VERTICAL=type=vertical [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]

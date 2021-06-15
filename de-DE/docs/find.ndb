@@ -351,6 +351,7 @@ transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matri
 treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() matrix matrices matrizen~unique(
+url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect

@@ -1,0 +1,34 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2021  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="url">
+	<title string="Internet transfer protocols (HTTP and FTP)" />
+	For accessing online resources, NumeRe provides the <code>url</code> command, which can be used to download web pages and files from the net. The downloaded files are returned as strings unless a destination file is specified using <code>file=TARGETFILE</code>. If the <code>up</code> parameter is specified in combination with <code>file=SOURCEFILE</code>, this file can be uploaded to an FTP server. In the latter two cases, the number of bytes downloaded or uploaded is returned:
+	<codeblock>
+		sFILECONTENTS = url sURL
+		nBYTES = url sURL -file=TARGETFILE
+		nBYTES = url sURL -file=SOURCEFILE up
+	</codeblock>
+	The URL <code>sURL</code> must be specified as a string. The URL can be an ordinary web address; the protocol must be <code>http</code>, <code>https</code>, <code>ftp</code> or <code>sftp</code>. When uploading to an FTP server, the destination file must be included in the URL: <code>ftp://ftp.server.url/filename.ext</code>
+	NumeRe uses TLS as encryption, however the transmitted certificates are <em>not</em> validated. Therefore, this command is not suitable for transmitting sensitive information.
+	If JavaScript is used on the accessed web page, this code is <em>not</em> interpreted. As a result, highly dynamic web pages can only be downloaded incompletely.
+	A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
+	<example desc="Access the 'macros' subfolder of the CTAN FTP:">
+		url "ftp://ftp.fau.de/ctan/macros/"
+	</example>
+</article>
