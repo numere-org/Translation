@@ -17,9 +17,16 @@
 -->
 
 <article id="filetree">
-	<title string="Dateibaum" />
-	Der Dateibaum bietet einen Überblick über die Dateistruktur von NumeRe, die durch die Standardpfade beschrieben wird:<codeblock>&lt;loadpath&gt;, &lt;savepath&gt;, &lt;scriptpath&gt;, &lt;procpath&gt; und &lt;plotpath&gt;</codeblock>Diese sind die entsprechenden Ordner in der Struktur.
-	Dateien können von diesem Baum aus geladen, kopiert, gelöscht, umbenannt, bearbeitet oder ausgeführt werden. Ein <em>Doppelklick</em> löst die jeweilige Standardaktion aus, ein <em>Rechtsklick</em> zeigt ein Kontextmenü an, in welchem die sekundären Aktionen ausgewählt werden können.
-	Bilddateien werden mit dem integrierten ImageViewer angezeigt.
-	Der Dateibaum kann, um dem Editor etwas mehr Platz zur Verfügung zu stellen, mit einem Druck auf <code>[F3]</code> aus- und auch wieder eingeblendet werden.
+	<title string="Dateibaum" idxkey="filetree" />
+	<keywords>
+		<keyword>filetr</keyword>
+		<keyword>dateib</keyword>
+		<keyword>brows</keyword>
+	</keywords>
+	<contents>
+		Der Dateibaum bietet einen Überblick über die Dateistruktur von NumeRe, die durch die Standardpfade beschrieben wird:<codeblock>&lt;loadpath&gt;, &lt;savepath&gt;, &lt;scriptpath&gt;, &lt;procpath&gt; und &lt;plotpath&gt;</codeblock>Diese sind die entsprechenden Ordner in der Struktur.
+		Dateien können von diesem Baum aus geladen, kopiert, gelöscht, umbenannt, bearbeitet oder ausgeführt werden. Ein <em>Doppelklick</em> löst die jeweilige Standardaktion aus, ein <em>Rechtsklick</em> zeigt ein Kontextmenü an, in welchem die sekundären Aktionen ausgewählt werden können.
+		Bilddateien werden mit dem integrierten ImageViewer angezeigt.
+		Der Dateibaum kann, um dem Editor etwas mehr Platz zur Verfügung zu stellen, mit einem Druck auf <code>[F3]</code> aus- und auch wieder eingeblendet werden.
+	</contents>
 </article>

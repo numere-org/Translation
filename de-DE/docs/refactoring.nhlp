@@ -17,10 +17,16 @@
 -->
 
 <article id="refactoring">
-	<title string="Code Refactoring" />
-	NumeRe kann beim Überarbeiten von Code-Abschnitten unterstützen. Dazu stellt NumeRe neben dem <a href="nhlp://analyzer?frame=new">Code-Analyzer</a> die folgenden Funktionen über das Kontextmenü des Editors zur Verfügung:
-	<list>
-		<item node="Symbole umbenennen">Diese Funktion erlaubt es, jedes Auftreten des aktuellen Symbols mit einem neuen Namen umzubenennen. Dabei wird der Wirkungsbereich (der sogenannte <em>Scope</em>) des Symbols berücksichtigt und das Symbol nur innerhalb dieses Wirkungsbereiches umbenannt.</item>
-		<item node="Abschnitte extrahieren">Hiermit kann ein markierter Code-Abschnitt in eine eigene Prozedur extrahiert werden. NumeRe wird dabei ein neues Fenster öffnen, in dem die neue Prozedur angezeigt wird und weiter bearbeitet werden kann. Es muss beachtet werden, dass die bestimmten Prozedur-Interfaces auf Basis einer Heuristik extrahiert werden. Es kann dabei zu Fehlern kommen.</item>
-	</list>
+	<title string="Code Refactoring" idxkey="refactoring" />
+	<keywords>
+		<keyword>refactor</keyword>
+		<keyword>rename</keyword>
+	</keywords>
+	<contents>
+		NumeRe kann beim Überarbeiten von Code-Abschnitten unterstützen. Dazu stellt NumeRe neben dem <a href="nhlp://analyzer?frame=new">Code-Analyzer</a> die folgenden Funktionen über das Kontextmenü des Editors zur Verfügung:
+		<list>
+			<item node="Symbole umbenennen">Diese Funktion erlaubt es, jedes Auftreten des aktuellen Symbols mit einem neuen Namen umzubenennen. Dabei wird der Wirkungsbereich (der sogenannte <em>Scope</em>) des Symbols berücksichtigt und das Symbol nur innerhalb dieses Wirkungsbereiches umbenannt.</item>
+			<item node="Abschnitte extrahieren">Hiermit kann ein markierter Code-Abschnitt in eine eigene Prozedur extrahiert werden. NumeRe wird dabei ein neues Fenster öffnen, in dem die neue Prozedur angezeigt wird und weiter bearbeitet werden kann. Es muss beachtet werden, dass die bestimmten Prozedur-Interfaces auf Basis einer Heuristik extrahiert werden. Es kann dabei zu Fehlern kommen.</item>
+		</list>
+	</contents>
 </article>

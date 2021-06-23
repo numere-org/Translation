@@ -17,19 +17,31 @@
 -->
 
 <article id="datamodification">
-	<title string="Modifikation von Datensätzen" />
-	NumeRe kann die Daten aus ein oder mehreren Datenreihen zur einfacheren Analyse modifizieren. Hierzu stehen die Kommandos <code>smooth</code>, <code>resample</code> und <code>retouch</code> zur Verfügung. <code>smooth</code> glättet die Datensätze, um etwaiges Rauschen zu reduzieren, <code>resample</code> erhöht oder verringert die Anzahl an Datenpunkten, wobei ein Lanczos-Filter angewandt wird, und <code>retouch</code> entfernt ungültige Werte aus Datensätzen durch lineare Interpolation. Diese Kommandos können nur auf Datensätze in einer Tabelle angewendet werden.
-	<h>Daten glätten</h>
-	Das Kommando <code>smooth</code> benötigt den Datenbereich, auf den es angewendet werden soll, die Ordnung, die Filterbezeichnung, sowie ggf. die Form des Filters:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDNUNG type=FILTER alpha=FORM</codeblock>Die Ordnung <code>ORDNUNG</code> bestimmt die Größe des Datenausschnitts, über die eine gemeinsame Filterung erfolgt. Die folgenden Filter stehen zur Verfügung:
-	<list>
-		<item node="weightedlinear">Dieser Filter wird standardmäßig verwendet und glättet die Daten durch Annäherung an eine gleitende und gewichtete, lineare Ausgleichsfunktion über <expr>2timesORDNUNG+1</expr> Stützstellen. Dieser Filter wird mit größeren Ordnungen stärker. Die Form des Filters <code>alpha=FORM</code> hat hier keine Auswirkungen. Dieser Filter verringert die Datenbereichsbreite ohne die hochfrequenzigen Anteile zu entfernen.</item>
-		<item node="gaussian">Dieser Filter faltet die Daten im Fensterbereich mit einer normierten Gaussglocke. Die Form der Gaussglocke wird durch die dimensionslose Größe <code>alpha=FORM</code> bestimmt, dabei wird der Filter mit größeren Werten von <code>alpha</code> schwächer. Dieser Filter wird vor allem bei der Bildverarbeitung zur Anpassung der Schärfe verwendet.</item>
-		<item node="savitzkygolay">Dieser Filter verwendet die Methode von <em>Savitzky und Golay</em>, eine polynomische Ausgleichsfunktion über die Bereich <expr>2timesORDNUNG+1</expr> zu bestimmen und die Daten damit auszugleichen. Dieser Filter wird ebenfalls mit größeren Ordnungen stärker. Die Form <code>alpha=FORM</code> hat auch hier keine Auswirkungen. Dieser Filter zeigt gute Glättungseigenschaften ohne die hochfrequenzigen Anteile komplett zu entfernen. Bei zweidimensionaler Anwendung dieses Filters stehen nur ausgewählte Fenstergrößen zwischen <expr>5times5</expr> (<code>order=2</code>) bis <expr>63times63</expr> (<code>order=31</code>) zur Verfügung. Sollte die gewünschte Filtergröße nicht vorhanden sein, wird automatisch die nächste vorhandene Größe verwendet.</item>
-	</list>
-	<h>Resampling: Datenrate ändern</h>
-	<code>resample</code> benötigt ebenso einen Datenbereich, auf den dieses Kommando angewendet werden soll, sowie die neue Zahl der Stützstellen/Datenpunkte, die verwendet werden sollen:<codeblock>resample TABLE(I1:I2, J1:J2) -samples=STÜTZSTELLEN</codeblock>Wenn die neue Zahl der Stützstellen größer als die bisherige ist, geht beim Resampeln keine Information verloren. Wenn sie jedoch kleiner ist, müssen die Werte der neuen Stützstellen aus den bisherigen interpoliert werden, wobei es zwangsläufig zu Informationsverlust kommt.
-	<h>Retuschieren: Fehlende Datenpunkte ergänzen</h>
-	<code>retouch</code> muss bloß der Datensatz, welcher retuschiert werden soll, vorgegeben werden:<codeblock>retouch TABLE(I1:I2,J1:J2)</codeblock>
-	<em>Wichtig:</em> Standardmäßig wendet NumeRe diese drei Kommandos auf einen 2D-Datensatz an, sofern dies Sinn macht. Um dieses Verhalten auf spalten- oder zeilenweise Anwendung umzuschalten, muss der entsprechende zusätzliche Parameter <code>cols</code> bzw. <code>lines</code> an das gewünschte Kommando angehängt werden. Um eines dieser Kommandos direkt auf ein Datengitter anzuwenden, kann der Parameter <code>grid</code> verwendet werden. Die Reihenfolge der <expr>x</expr>- oder <expr>y</expr>-Punkte wird dabei jedoch nicht beachtet (NumeRe geht davon aus, dass die <expr>x</expr>-<expr>y</expr>-Werte bereits geordnet sind). Im Falle zweidimensionaler Glättung wird NumeRe zuvor intern <code>retouch</code> aufrufen, um die nicht interpolierbaren und ungültigen Datenpunkte zu entfernen.
-	<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://cache?frame=self">help cache</a>
+	<title string="Modifikation von Datensätzen" idxkey="resample, smooth, retouch" />
+	<keywords>
+		<keyword>modifi</keyword>
+		<keyword>resamp</keyword>
+		<keyword>retou</keyword>
+		<keyword>retoq</keyword>
+		<keyword>smooth</keyword>
+		<keyword>weightedlin</keyword>
+		<keyword>gaussian</keyword>
+		<keyword>savitzkygol</keyword>
+	</keywords>
+	<contents>
+		NumeRe kann die Daten aus ein oder mehreren Datenreihen zur einfacheren Analyse modifizieren. Hierzu stehen die Kommandos <code>smooth</code>, <code>resample</code> und <code>retouch</code> zur Verfügung. <code>smooth</code> glättet die Datensätze, um etwaiges Rauschen zu reduzieren, <code>resample</code> erhöht oder verringert die Anzahl an Datenpunkten, wobei ein Lanczos-Filter angewandt wird, und <code>retouch</code> entfernt ungültige Werte aus Datensätzen durch lineare Interpolation. Diese Kommandos können nur auf Datensätze in einer Tabelle angewendet werden.
+		<h>Daten glätten</h>
+		Das Kommando <code>smooth</code> benötigt den Datenbereich, auf den es angewendet werden soll, die Ordnung, die Filterbezeichnung, sowie ggf. die Form des Filters:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDNUNG type=FILTER alpha=FORM</codeblock>Die Ordnung <code>ORDNUNG</code> bestimmt die Größe des Datenausschnitts, über die eine gemeinsame Filterung erfolgt. Die folgenden Filter stehen zur Verfügung:
+		<list>
+			<item node="weightedlinear">Dieser Filter wird standardmäßig verwendet und glättet die Daten durch Annäherung an eine gleitende und gewichtete, lineare Ausgleichsfunktion über <expr>2timesORDNUNG+1</expr> Stützstellen. Dieser Filter wird mit größeren Ordnungen stärker. Die Form des Filters <code>alpha=FORM</code> hat hier keine Auswirkungen. Dieser Filter verringert die Datenbereichsbreite ohne die hochfrequenzigen Anteile zu entfernen.</item>
+			<item node="gaussian">Dieser Filter faltet die Daten im Fensterbereich mit einer normierten Gaussglocke. Die Form der Gaussglocke wird durch die dimensionslose Größe <code>alpha=FORM</code> bestimmt, dabei wird der Filter mit größeren Werten von <code>alpha</code> schwächer. Dieser Filter wird vor allem bei der Bildverarbeitung zur Anpassung der Schärfe verwendet.</item>
+			<item node="savitzkygolay">Dieser Filter verwendet die Methode von <em>Savitzky und Golay</em>, eine polynomische Ausgleichsfunktion über die Bereich <expr>2timesORDNUNG+1</expr> zu bestimmen und die Daten damit auszugleichen. Dieser Filter wird ebenfalls mit größeren Ordnungen stärker. Die Form <code>alpha=FORM</code> hat auch hier keine Auswirkungen. Dieser Filter zeigt gute Glättungseigenschaften ohne die hochfrequenzigen Anteile komplett zu entfernen. Bei zweidimensionaler Anwendung dieses Filters stehen nur ausgewählte Fenstergrößen zwischen <expr>5times5</expr> (<code>order=2</code>) bis <expr>63times63</expr> (<code>order=31</code>) zur Verfügung. Sollte die gewünschte Filtergröße nicht vorhanden sein, wird automatisch die nächste vorhandene Größe verwendet.</item>
+		</list>
+		<h>Resampling: Datenrate ändern</h>
+		<code>resample</code> benötigt ebenso einen Datenbereich, auf den dieses Kommando angewendet werden soll, sowie die neue Zahl der Stützstellen/Datenpunkte, die verwendet werden sollen:<codeblock>resample TABLE(I1:I2, J1:J2) -samples=STÜTZSTELLEN</codeblock>Wenn die neue Zahl der Stützstellen größer als die bisherige ist, geht beim Resampeln keine Information verloren. Wenn sie jedoch kleiner ist, müssen die Werte der neuen Stützstellen aus den bisherigen interpoliert werden, wobei es zwangsläufig zu Informationsverlust kommt.
+		<h>Retuschieren: Fehlende Datenpunkte ergänzen</h>
+		<code>retouch</code> muss bloß der Datensatz, welcher retuschiert werden soll, vorgegeben werden:<codeblock>retouch TABLE(I1:I2,J1:J2)</codeblock>
+		<em>Wichtig:</em> Standardmäßig wendet NumeRe diese drei Kommandos auf einen 2D-Datensatz an, sofern dies Sinn macht. Um dieses Verhalten auf spalten- oder zeilenweise Anwendung umzuschalten, muss der entsprechende zusätzliche Parameter <code>cols</code> bzw. <code>lines</code> an das gewünschte Kommando angehängt werden. Um eines dieser Kommandos direkt auf ein Datengitter anzuwenden, kann der Parameter <code>grid</code> verwendet werden. Die Reihenfolge der <expr>x</expr>- oder <expr>y</expr>-Punkte wird dabei jedoch nicht beachtet (NumeRe geht davon aus, dass die <expr>x</expr>-<expr>y</expr>-Werte bereits geordnet sind). Im Falle zweidimensionaler Glättung wird NumeRe zuvor intern <code>retouch</code> aufrufen, um die nicht interpolierbaren und ungültigen Datenpunkte zu entfernen.
+		<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://cache?frame=self">help cache</a>
+	</contents>
 </article>

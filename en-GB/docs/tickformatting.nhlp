@@ -17,26 +17,35 @@
 -->
 
 <article id="tickformatting">
-	<title string="Formatting of the labels of the axis ticks" />
-	The tick labels of the axes may be modified by the usage of the additional plot options <code>xticks</code>, <code>yticks</code>, <code>zticks</code> and <code>cticks</code>. The first three influence the labeling of the <expr>x</expr>, <expr>y</expr> or <expr>z</expr> axis; the last one corresponds to the tick labels of the color bar, which is displayed for many plot styles (like <code>mesh</code> or <code>surf3d</code>) right next to the actual plot.
-	The format of the tick labels has to be passed inside of quotation marks and has to follow the C scheme of the <code>printf()</code> function. Here, all characters, which are passed right before of <code>%</code>, will be regarded as normal letters and all characters after <code>%</code> will be used as formatting information for the number, which shall be displayed at this position.
-	The actual difficulty of these formatting options is based on the scheme, which has to be used and which contains many possibilities:<codeblock>%[FLG].[PRC][TYP]</codeblock>
-	<list>
-		<item node="FLG">These are flags, which will modify the whole display: <code>-</code> (align left), <code>+</code> (add '+' in front of positive numbers), <code>#</code> (always show a decimal sign) and <code> </code> (Add a whitespace in front of positive numbers)</item>
-		<item node="PRC">This object references either the count of numbers or the count of decimals, depending on the chosen type TYP.</item>
-		<item node="TYP">This determines the type of display of the number. Mostly the types <code>g</code> or <code>G</code>, which will switch between decimal and exponential representation automatically, are recommended, but all other variants are supported as well. For instance these are among others <code>E</code>, <code>e</code> and <code>f</code>.</item>
-	</list>
-	<example desc="Display of the value '392.65' in different types and with different flags:" type="verbatim">
-		|   %f   --&gt; 392.65
-		|   %g   --&gt; 392.65
-		|   %e   --&gt; 3.9265e+2
-		|   %E   --&gt; 3.9265E+2
-		|   %+g  --&gt; +392.65
-		|   %.1f --&gt; 392.7
-		|   %.2e --&gt; 3.93e+2
-	</example>
-	<example desc="Exemplary modification of the <expr>y</expr> axis:">
-		plot [...] -set yticks="y = %#.2g"
-	</example>
-	<em>See also:</em> "http://www.cplusplus.com/reference/cstdio/printf"
+	<title string="Formatting of the labels of the axis ticks" idxkey="ticks" />
+	<keywords>
+		<keyword>achse</keyword>
+		<keyword>axis</keyword>
+		<keyword>scale</keyword>
+		<keyword>skal</keyword>
+		<keyword>tick</keyword>
+	</keywords>
+	<contents>
+		The tick labels of the axes may be modified by the usage of the additional plot options <code>xticks</code>, <code>yticks</code>, <code>zticks</code> and <code>cticks</code>. The first three influence the labeling of the <expr>x</expr>, <expr>y</expr> or <expr>z</expr> axis; the last one corresponds to the tick labels of the color bar, which is displayed for many plot styles (like <code>mesh</code> or <code>surf3d</code>) right next to the actual plot.
+		The format of the tick labels has to be passed inside of quotation marks and has to follow the C scheme of the <code>printf()</code> function. Here, all characters, which are passed right before of <code>%</code>, will be regarded as normal letters and all characters after <code>%</code> will be used as formatting information for the number, which shall be displayed at this position.
+		The actual difficulty of these formatting options is based on the scheme, which has to be used and which contains many possibilities:<codeblock>%[FLG].[PRC][TYP]</codeblock>
+		<list>
+			<item node="FLG">These are flags, which will modify the whole display: <code>-</code> (align left), <code>+</code> (add '+' in front of positive numbers), <code>#</code> (always show a decimal sign) and <code> </code> (Add a whitespace in front of positive numbers)</item>
+			<item node="PRC">This object references either the count of numbers or the count of decimals, depending on the chosen type TYP.</item>
+			<item node="TYP">This determines the type of display of the number. Mostly the types <code>g</code> or <code>G</code>, which will switch between decimal and exponential representation automatically, are recommended, but all other variants are supported as well. For instance these are among others <code>E</code>, <code>e</code> and <code>f</code>.</item>
+		</list>
+		<example desc="Display of the value '392.65' in different types and with different flags:" type="verbatim">
+			|   %f   --&gt; 392.65
+			|   %g   --&gt; 392.65
+			|   %e   --&gt; 3.9265e+2
+			|   %E   --&gt; 3.9265E+2
+			|   %+g  --&gt; +392.65
+			|   %.1f --&gt; 392.7
+			|   %.2e --&gt; 3.93e+2
+		</example>
+		<example desc="Exemplary modification of the <expr>y</expr> axis:">
+			plot [...] -set yticks="y = %#.2g"
+		</example>
+		<em>See also:</em> "http://www.cplusplus.com/reference/cstdio/printf"
+	</contents>
 </article>

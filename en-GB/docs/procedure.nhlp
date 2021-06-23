@@ -17,85 +17,113 @@
 -->
 
 <article id="procedure">
-	<title string="NumeRe Procedures" />
-	Beside of the possibility to execute <a href="nhlp://script?frame=new">scripts</a>, NumeRe contains the powerful ability to execute <em>complex</em> procedures. These procedures can be compared to functions in the usual programming with C/C++ or other programming languages. This means that complex tasks may be solved with procedures, because they may call themselves recursively.
-	<h>Syntax</h>
-	Procedure definitions are started with the keyword <code>procedure</code> and closed with <code>endprocedure</code>. Appended to the keyword <code>procedure</code> the name of the procedure initialized by a <code>$</code> and their argument list must follow. Directly after the argument list and <code>::</code> it's possible to append additional <em>optional flags</em>, which influence the procedure as a whole. Between <code>procedure</code> and <code>endprocedure</code> the body of the procedure follows, in which the actual expressions and commands are evaluated:
-	<codeblock>
-		procedure $PROCEDURENAME(ARGLIST) :: FLAGS    ## Procedure head
-		\tPROCEDURE BODY                           ## Expressions and commands
-		endprocedure                                 ## Prozedure tail
-	</codeblock>
-	<h>Arguments and references</h>
-	The argument list has to be separated using commas. One can define a default value for each argument, which will be used, if no value for this argument was passed to the procedure: <code>ARG1 = DEFAULTVALUE1, ARG2, ARG3 = DEFAULTVALUE2, ...</code> If one argument has to be a table, then it has to be declared using parentheses (<code>TABLE() = DEFAULTTABLE(), ...</code>). If it shall be a cluster, then curly braces are required (<code>CLUSTER{}</code>, in this case one can either define a global default cluster or a list of default values via <code>CLUSTER{} = {VAL1, VAL2, ...}</code>).
-	If the procedure is called first, it will be parsed internally to speed up all following calls to that procedure. The type of the procedure is considered in this case and the procedure is optimized correspondingly. A call to the procedure using different variable types may lead to an error. In this case, the procedure has to be flagged as <code>template</code>.
-	Except for tables, the contents of the arguments are always copied to internal variables. Any modification of an argument value within a procedure therefore has no effect on the value of the source variable. If it is desired that the contents of the source variable can be modified within the procedure, the corresponding argument must be declared as <em>reference</em>. This is achieved by appending an additional ampersand symbol (<code>&amp;</code>) to the argument:<codeblock>procedure $PROCEDURENAME(ARG&)</codeblock>Tables are <em>always</em> passed as references. It is also not possible to pass literal constants as references. Only variables can be referenced. The <a href="nhlp://debugger?frame=new">NumeRe debugger</a> will mark references correspondingly.
-	<em>Note:</em> In older versions of NumeRe, arguments were copied directly into the code and were thus automatically references. However, this also applied to literal constants, which could cause surprises since they cannot be directly overridden. For this very reason and for easier readability and maintainability, the references to be declared (<code>&amp;</code>) were inserted. However, the old behavior can be restored if the procedure is flagged as <code>macro</code>.
-	<h>File Structure</h>
-	Procedures must be available as single "NumeRe procedure files" (*.nprc) in the default procedure path, where the name of the file must match the name of the procedure. If you want to be sure, then you may enter the procedure(s) to a NumeRe script in a <code>&lt;install&gt;...&lt;endinstall&gt;</code> block and run the script by <code>install SCRIPT</code>. NumeRe will create the corresponding procedure files by itself in the matching location. (NumeRe may load procedures out of other files, if the relative or absolute file path in <em>single</em> quotation marks is entered: <code>$'PATH_TO_THE_PROCEDURE'(VARLIST)</code>. Because it's likely that such long file name have errors, it's not recommended to use this feature.)
-	It's possible to gather multiple procedures in a single file, as long as one of them carries the name of the file. The other procedures may be called from the naming procedure with the special syntax <code>$thisfile~...</code> (see below).
-	<h>Flags</h>
-	The following flags are available:
-	<list>
-		<item node="private">A procedure with this flag may <em>only</em> be called by a procedure in the same namespace. Such a declaration makes sense, if the procedure has some dependencies, which have to be fulfilled by other procedures first.  (Procedures, which are called by <code>$thisfile~...</code> (see below) and are not the naming procedure of the file, are implicit <code>private</code>)</item>
-		<item node="explicit">This flag prevents the procedure from calling plugins. This may be an advantage if the procedure has to be executed very fast, or to prevent the procedure from creating an endless loop, if it is part of an overwriting plugin.</item>
-		<item node="inline">A procedure, which was flagged as <code>inline</code>, can be executed faster inside of a loop. But note that an "inline procedure" mustn't contain loops, procedures or plugins. This flag is only a recommendation for NumeRe. NumeRe will try to copy the procedure's contents into the surrounding loop, if this is possible. If it's not possible then the resulting runtime advantages are only small. The following commands prohibit the inlining process: <code>cst, tab, namespace, ifndefined, define, lclfunc, redefine, undefine</code></item>
-		<item node="mask">A procedure flagged with <code>mask</code> suppresses all system outputs during its own execution and during all procedures, which were called by this procedure.</item>
-		<item node="template">The <code>template</code> flag allows calling the procedure with different variable types as arguments. Otherwise the procedure may only be called with the type, it was called first.</item>
-		<item node="macro">Disables copying the argument values to internal variables and copies the complete arguments to the code instead (<em>Deprecated and may be removed in the future</em>).</item>
-		<item node="test">Marks the current procedure as a software test, Syntax, expression and assertion errors (erroneous <code>assert</code> expressions) won't raise an error but will be displayed as a warning. Code will therefore be executed although an error occured. This flag should not be ued in productive code.</item>
-		<item node="event">The <code>event</code> flag optimizes the procedure for handling GUI events (<a href="nhlp://window?frame=new"><code>window</code></a>). Additionally, the flag <code>mask</code> is activated automatically. This flag ensures as well that events may be compatible with newer versions requiring longer procedure signatures.</item>
-	</list>
-	<h>Calling a Procedure</h>
-	Procedures may be called with a <code>$</code> followed by the procedure's name and the variable list. This may be done directly from the NumeRe console, as well as out of loop or a script. NumeRe will interrupt the current programm flow and execute the desired procedure. If the procedure contains a return value (signalized with the command <code>return</code>), then it may be assigned to a variable or entered in a calculation.
-	<h>Namespaces</h>
-	NumeRe contains namespaces similar as C++, which may be used to avoid naming conflicts with other procedures or to structurize whole projects. The syntax, to call a procedure out of an explicit namespace, is <codeblock>$NAMESPACE~PROCEDURE(ARGUMENTS)</codeblock>These namespaces are represented by subdirectories in the default procedure path, which are named according the current namespace (and not through <code>procedure $NAMESPACE~PROCEDURE(ARGLIST) ...</code>). The namespace <code>main</code> is the global namespace (equal to the default procedure path); the namespace <code>this</code> is the namespace of the current procedure. An exception is the namespace <code>thisfile</code>: this namespace is restricted to the current file. All procedures in this file,  which don't carry the name of the file, automatically are <code>private</code>.
-	Using the command <code>namespace NSP</code> the namespace NSP may be activated for the following procedures to avoid entering the namespace for each procedure. However, procedures of other namespaces may be called by explicitely naming the namespace. This command will only be evaluated inside of a procedure.
-	If a procedure shall be created within a script or directly through the console, and if it shall be located in another namespace than <code>main</code>, this namespace has to be named in the procedure's head through <codeblock>procedure $NAMESPACE~PROCEDURE(ARGLIST)\n\t...\nendprocedure</codeblock>(This is only used for identifying the namespace and won't be written to the procedure file.)
-	<h>Documentation</h>
-	In order to document procedures and later convert the information into a <a href="nhlp://latex?frame=new">PDF</a> (thereby documenting the entire dependency tree into a single file), NumeRe follows the <em>Doxygen</em> standard and defines two special character sequences to set documentation apart from the usual comments: <code>##! ...</code> introduces a line documentation comment and <code>#*! ... *#</code> encloses a documentation comment block.
-	Documentation comments written directly above or below the procedure header are also used by NumeRe as tooltip help for that procedure. In this case, comments that are <em>above</em> the header take precedence over those below the procedure header.
-	Additionally, the following signal words can be used in documentation comments to make the reference clearer. They will also be converted to special text elements in the later PDF.
-	<list>
-		<item node="\procedure PROCNAME">(PDF only) Defines the new PROCNAME section for the current procedure and also displays the directly called procedures</item>
-		<item node="\param NAME (DEF) DESC">Defines the parameter NAME with the optional default value DEF and the description DESC. Generates a table in the PDF and is displayed as a list in the tooltip</item>
-		<item node="\return TYPE DESC">Defines the return value of type TYPE and description DESC. Generates a table in the PDF and is displayed in the tooltip as <code>$PROCNAME(PARAM) :: FLAGS -> TYPE</code>. Multiple return values can be defined, which can then be seen as <code>-> {TYPE1,TYPE2,...}</code> in the tooltip. TYPE can also be enclosed in curly braces to express the vectorial character. As a convention, <code>VAL</code> is used for a numeric value, <code>STR</code> for a string, <code>CST</code> for a cluster, and <code>ARG</code> for a return value that depends on the argument types</item>
-		<item node="\remark REM">Provide the documentation with an appropriate REM remark</item>
-	</list>
-	When the cursor dwells on a procedure header, the corresponding function in the Tools menu or [CTRL-ALT-B] can be used to automatically generate a mask for the documentation block for the current procedure, where only the actual description of the corresponding elements needs to be inserted. However, this function can <em>not</em> detect return values due to their diversity.
-	<h>Further Information</h>
-	You may load part of scripts to procedures by the usage of the syntax <code>@SCRIPT</code>. This is equal to the similar expression inside of a script. The parameters <code>@SCRIPT: globals</code> and <code>@SCRIPT: defines</code> are available as well.
-	In addition to the usual path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> may be used, which points to the directory of the current executed procedure.
-	<em>Important:</em> Beside of the usual commands and expressions, the body of a procedure may contain special commands with procedure specific meaning. They are listed at <a href="nhlp://proccmd?frame=new">help proccmd</a>.
-	<em>Important:</em> It is not possible to call procedures arbitrarily deep, because the call stack memory is limited. Depending on the computer's architecture and the calculating effort of the procedure up to 1800 recursions are possible. NumeRe will abort with an error beyond this value.
-	The evaluation may be aborted using the <code>ESC</code> key, if it takes too much time.
-	Procedures may be used to extend the functionality of NumeRe with the use of plugins (which may be called using a command). The declaration of such a plugin may only be done inside of an <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block in a NumeRe script. (See <a href="nhlp://plugin?frame=new">help plugin</a> for further information)
-	<example desc="A procedure, which automates a data analysis (will be called in NumeRe with <code>$analyse_data(DATAFILENAME)</code>):" type="verbatim">
-        |   procedure $analyse_data(datafile)
-        |       if (!data())
-        |           load to_string(datafile)
-        |       else
-        |           return false
-        |       endif
-        |       stats data() -export="stats_" + to_string(datafile)
-        |       hist data() -export="hist_" + to_string(datafile) bins=32
-        |       return true;
-        |   endprocedure	
-	</example>
-	<em>See also:</em> <a href="nhlp://plugin?frame=self">help plugin</a>, <a href="nhlp://install?frame=self">help install</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://script?frame=self">help script</a>
+	<title string="NumeRe Procedures" idxkey="procedure" />
+	<keywords>
+		<keyword>$</keyword>
+		<keyword>proced</keyword>
+		<keyword>endproced</keyword>
+		<keyword>program</keyword>
+		<keyword>prozed</keyword>
+	</keywords>
+	<contents>
+		Beside of the possibility to execute <a href="nhlp://script?frame=new">scripts</a>, NumeRe contains the powerful ability to execute <em>complex</em> procedures. These procedures can be compared to functions in the usual programming with C/C++ or other programming languages. This means that complex tasks may be solved with procedures, because they may call themselves recursively.
+		<h>Syntax</h>
+		Procedure definitions are started with the keyword <code>procedure</code> and closed with <code>endprocedure</code>. Appended to the keyword <code>procedure</code> the name of the procedure initialized by a <code>$</code> and their argument list must follow. Directly after the argument list and <code>::</code> it's possible to append additional <em>optional flags</em>, which influence the procedure as a whole. Between <code>procedure</code> and <code>endprocedure</code> the body of the procedure follows, in which the actual expressions and commands are evaluated:
+		<codeblock>
+			procedure $PROCEDURENAME(ARGLIST) :: FLAGS    ## Procedure head
+			\tPROCEDURE BODY                           ## Expressions and commands
+			endprocedure                                 ## Prozedure tail
+		</codeblock>
+		<h>Arguments and references</h>
+		The argument list has to be separated using commas. One can define a default value for each argument, which will be used, if no value for this argument was passed to the procedure: <code>ARG1 = DEFAULTVALUE1, ARG2, ARG3 = DEFAULTVALUE2, ...</code> If one argument has to be a table, then it has to be declared using parentheses (<code>TABLE() = DEFAULTTABLE(), ...</code>). If it shall be a cluster, then curly braces are required (<code>CLUSTER{}</code>, in this case one can either define a global default cluster or a list of default values via <code>CLUSTER{} = {VAL1, VAL2, ...}</code>).
+		If the procedure is called first, it will be parsed internally to speed up all following calls to that procedure. The type of the procedure is considered in this case and the procedure is optimized correspondingly. A call to the procedure using different variable types may lead to an error. In this case, the procedure has to be flagged as <code>template</code>.
+		Except for tables, the contents of the arguments are always copied to internal variables. Any modification of an argument value within a procedure therefore has no effect on the value of the source variable. If it is desired that the contents of the source variable can be modified within the procedure, the corresponding argument must be declared as <em>reference</em>. This is achieved by appending an additional ampersand symbol (<code>&amp;</code>) to the argument:<codeblock>procedure $PROCEDURENAME(ARG&)</codeblock>Tables are <em>always</em> passed as references. It is also not possible to pass literal constants as references. Only variables can be referenced. The <a href="nhlp://debugger?frame=new">NumeRe debugger</a> will mark references correspondingly.
+		<em>Note:</em> In older versions of NumeRe, arguments were copied directly into the code and were thus automatically references. However, this also applied to literal constants, which could cause surprises since they cannot be directly overridden. For this very reason and for easier readability and maintainability, the references to be declared (<code>&amp;</code>) were inserted. However, the old behavior can be restored if the procedure is flagged as <code>macro</code>.
+		<h>File Structure</h>
+		Procedures must be available as single "NumeRe procedure files" (*.nprc) in the default procedure path, where the name of the file must match the name of the procedure. If you want to be sure, then you may enter the procedure(s) to a NumeRe script in a <code>&lt;install&gt;...&lt;endinstall&gt;</code> block and run the script by <code>install SCRIPT</code>. NumeRe will create the corresponding procedure files by itself in the matching location. (NumeRe may load procedures out of other files, if the relative or absolute file path in <em>single</em> quotation marks is entered: <code>$'PATH_TO_THE_PROCEDURE'(VARLIST)</code>. Because it's likely that such long file name have errors, it's not recommended to use this feature.)
+		It's possible to gather multiple procedures in a single file, as long as one of them carries the name of the file. The other procedures may be called from the naming procedure with the special syntax <code>$thisfile~...</code> (see below).
+		<h>Flags</h>
+		The following flags are available:
+		<list>
+			<item node="private">A procedure with this flag may <em>only</em> be called by a procedure in the same namespace. Such a declaration makes sense, if the procedure has some dependencies, which have to be fulfilled by other procedures first.  (Procedures, which are called by <code>$thisfile~...</code> (see below) and are not the naming procedure of the file, are implicit <code>private</code>)</item>
+			<item node="explicit">This flag prevents the procedure from calling plugins. This may be an advantage if the procedure has to be executed very fast, or to prevent the procedure from creating an endless loop, if it is part of an overwriting plugin.</item>
+			<item node="inline">A procedure, which was flagged as <code>inline</code>, can be executed faster inside of a loop. But note that an "inline procedure" mustn't contain loops, procedures or plugins. This flag is only a recommendation for NumeRe. NumeRe will try to copy the procedure's contents into the surrounding loop, if this is possible. If it's not possible then the resulting runtime advantages are only small. The following commands prohibit the inlining process: <code>cst, tab, namespace, ifndefined, define, lclfunc, redefine, undefine</code></item>
+			<item node="mask">A procedure flagged with <code>mask</code> suppresses all system outputs during its own execution and during all procedures, which were called by this procedure.</item>
+			<item node="template">The <code>template</code> flag allows calling the procedure with different variable types as arguments. Otherwise the procedure may only be called with the type, it was called first.</item>
+			<item node="macro">Disables copying the argument values to internal variables and copies the complete arguments to the code instead (<em>Deprecated and may be removed in the future</em>).</item>
+			<item node="test">Marks the current procedure as a software test, Syntax, expression and assertion errors (erroneous <code>assert</code> expressions) won't raise an error but will be displayed as a warning. Code will therefore be executed although an error occured. This flag should not be ued in productive code.</item>
+			<item node="event">The <code>event</code> flag optimizes the procedure for handling GUI events (<a href="nhlp://window?frame=new"><code>window</code></a>). Additionally, the flag <code>mask</code> is activated automatically. This flag ensures as well that events may be compatible with newer versions requiring longer procedure signatures.</item>
+		</list>
+		<h>Calling a Procedure</h>
+		Procedures may be called with a <code>$</code> followed by the procedure's name and the variable list. This may be done directly from the NumeRe console, as well as out of loop or a script. NumeRe will interrupt the current programm flow and execute the desired procedure. If the procedure contains a return value (signalized with the command <code>return</code>), then it may be assigned to a variable or entered in a calculation.
+		<h>Namespaces</h>
+		NumeRe contains namespaces similar as C++, which may be used to avoid naming conflicts with other procedures or to structurize whole projects. The syntax, to call a procedure out of an explicit namespace, is <codeblock>$NAMESPACE~PROCEDURE(ARGUMENTS)</codeblock>These namespaces are represented by subdirectories in the default procedure path, which are named according the current namespace (and not through <code>procedure $NAMESPACE~PROCEDURE(ARGLIST) ...</code>). The namespace <code>main</code> is the global namespace (equal to the default procedure path); the namespace <code>this</code> is the namespace of the current procedure. An exception is the namespace <code>thisfile</code>: this namespace is restricted to the current file. All procedures in this file,  which don't carry the name of the file, automatically are <code>private</code>.
+		Using the command <code>namespace NSP</code> the namespace NSP may be activated for the following procedures to avoid entering the namespace for each procedure. However, procedures of other namespaces may be called by explicitely naming the namespace. This command will only be evaluated inside of a procedure.
+		If a procedure shall be created within a script or directly through the console, and if it shall be located in another namespace than <code>main</code>, this namespace has to be named in the procedure's head through <codeblock>procedure $NAMESPACE~PROCEDURE(ARGLIST)\n\t...\nendprocedure</codeblock>(This is only used for identifying the namespace and won't be written to the procedure file.)
+		<h>Documentation</h>
+		In order to document procedures and later convert the information into a <a href="nhlp://latex?frame=new">PDF</a> (thereby documenting the entire dependency tree into a single file), NumeRe follows the <em>Doxygen</em> standard and defines two special character sequences to set documentation apart from the usual comments: <code>##! ...</code> introduces a line documentation comment and <code>#*! ... *#</code> encloses a documentation comment block.
+		Documentation comments written directly above or below the procedure header are also used by NumeRe as tooltip help for that procedure. In this case, comments that are <em>above</em> the header take precedence over those below the procedure header.
+		Additionally, the following signal words can be used in documentation comments to make the reference clearer. They will also be converted to special text elements in the later PDF.
+		<list>
+			<item node="\procedure PROCNAME">(PDF only) Defines the new PROCNAME section for the current procedure and also displays the directly called procedures</item>
+			<item node="\param NAME (DEF) DESC">Defines the parameter NAME with the optional default value DEF and the description DESC. Generates a table in the PDF and is displayed as a list in the tooltip</item>
+			<item node="\return TYPE DESC">Defines the return value of type TYPE and description DESC. Generates a table in the PDF and is displayed in the tooltip as <code>$PROCNAME(PARAM) :: FLAGS -> TYPE</code>. Multiple return values can be defined, which can then be seen as <code>-> {TYPE1,TYPE2,...}</code> in the tooltip. TYPE can also be enclosed in curly braces to express the vectorial character. As a convention, <code>VAL</code> is used for a numeric value, <code>STR</code> for a string, <code>CST</code> for a cluster, and <code>ARG</code> for a return value that depends on the argument types</item>
+			<item node="\remark REM">Provide the documentation with an appropriate REM remark</item>
+		</list>
+		When the cursor dwells on a procedure header, the corresponding function in the Tools menu or [CTRL-ALT-B] can be used to automatically generate a mask for the documentation block for the current procedure, where only the actual description of the corresponding elements needs to be inserted. However, this function can <em>not</em> detect return values due to their diversity.
+		<h>Further Information</h>
+		You may load part of scripts to procedures by the usage of the syntax <code>@SCRIPT</code>. This is equal to the similar expression inside of a script. The parameters <code>@SCRIPT: globals</code> and <code>@SCRIPT: defines</code> are available as well.
+		In addition to the usual path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> may be used, which points to the directory of the current executed procedure.
+		<em>Important:</em> Beside of the usual commands and expressions, the body of a procedure may contain special commands with procedure specific meaning. They are listed at <a href="nhlp://proccmd?frame=new">help proccmd</a>.
+		<em>Important:</em> It is not possible to call procedures arbitrarily deep, because the call stack memory is limited. Depending on the computer's architecture and the calculating effort of the procedure up to 1800 recursions are possible. NumeRe will abort with an error beyond this value.
+		The evaluation may be aborted using the <code>ESC</code> key, if it takes too much time.
+		Procedures may be used to extend the functionality of NumeRe with the use of plugins (which may be called using a command). The declaration of such a plugin may only be done inside of an <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block in a NumeRe script. (See <a href="nhlp://plugin?frame=new">help plugin</a> for further information)
+		<example desc="A procedure, which automates a data analysis (will be called in NumeRe with <code>$analyse_data(DATAFILENAME)</code>):" type="verbatim">
+			|   procedure $analyse_data(datafile)
+			|       if (!data())
+			|           load to_string(datafile)
+			|       else
+			|           return false
+			|       endif
+			|       stats data() -export="stats_" + to_string(datafile)
+			|       hist data() -export="hist_" + to_string(datafile) bins=32
+			|       return true;
+			|   endprocedure	
+		</example>
+		<em>See also:</em> <a href="nhlp://plugin?frame=self">help plugin</a>, <a href="nhlp://install?frame=self">help install</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://script?frame=self">help script</a>
+	</contents>
 </article>
 
 <article id="procedure_commands">
-	<title string="Procedure commands" />
-	The body of a procedure may contain the usual commands and expressions, which may be entered directly to the console. In addition there are some special commands with procedure specific meaning:
-	<list>
-		<item node="var VARIABLES">This declares internal (local) variables, which may only be used inside of the current procedure (they are even unique, if the procedure recursively calls itself). You may simultaneously pass initial values through <code>var VAR1 = VALUE1, VAR2 = VALUE2, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
-		<item node="str STRINGVARS">This declares internal (local) string variables, which may only be used inside of the current procedure. You may simultaneously define initial values through <code>str SVAR1 = STRING1, SVAR2 = STRING2, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
-		<item node="tab TABLES">This declares internal (local) tables, which may only be used inside of the current procedure. In contrast to <code>var</code> or <code>str</code> you may not simultaneously define initial values in this case. This command may only be used once in each procedure. All further occurences will be ignored.</item>
-		<item node="cst CLUSTER">This declares internal (local) clusters, which may only be used inside of the current procedure. You may simultaneously define initial values through <code>cst CST1{} = {VALUES}, CST2{} = {VALUES}, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
-		<item node="return VALUE">If NumeRe mets this command during the evaluation, then it will leave the current procedure (No matter, if this is the last command or not. Commands, which appear in the following lines, won't be executed.). <code>return</code> may be used multiple times in a procedure, e.g. if the return value depends on a condition. It is not even necessary to use this command; procedures return the value <code>true</code> as default, if no <code>return</code> or a <code>return</code> without value was found. In addition to numerical values, the VALUE may be a string or a mixture of both types. A special value is <code>void</code>. This defines that the procedure explicitely doesn't have a return value.</item>
-		<item node="readline">This gives you the possibility to read an formatted input (in contrast to <code>??</code>). Parameters are <code>-asstr</code> (transforms the input into a string), <code>-msg=MESSAGE</code> (writes MESSAGE at the beginning of the line, e.g. as an explanation) and <code>-dflt=DEFAULTVALUE</code> (defines a default value). The input may be written directly to a variable through <code>VAR = readline</code> or to a string through <code>STRING = readline -asstr</code>.</item>
-		<item node="namespace NSP">Switches at this point to the namespace NSP. If NSP is <code>main</code> or nothing, then NumeRe will switch to the global namespace; if NSP is <code>this</code>, then NumeRe switches to the namespace of the current procedure. <code>thisfile</code> restricts the namespace to the current file.</item>
-		<item node="throw">If an event happens, which is not covered by the current procedure (e.g. a senseless value), and the further evaluation cannot be done without errors, then this command may be used to jump out of all procedures. Its effect is similar to an exception in C++ (and will evaluated internally just like this). You may append your own error message as a string through <code>throw "ERRORMESSAGE"</code>.</item>
-	</list>
+	<title string="Procedure commands" idxkey="proccmd" />
+	<keywords>
+		<keyword>proccmd</keyword>
+		<keyword>proccomman</keyword>
+		<keyword>readli</keyword>
+		<keyword>return</keyword>
+		<keyword>readli</keyword>
+		<keyword>namesp</keyword>
+		<keyword>localvars</keyword>
+		<keyword>throw</keyword>
+		<keyword>var</keyword>
+		<keyword>str</keyword>
+		<keyword>tab</keyword>
+		<keyword>cst</keyword>
+		<keyword>this</keyword>
+		<keyword>msg</keyword>
+		<keyword>main</keyword>
+	</keywords>
+	<contents>
+		The body of a procedure may contain the usual commands and expressions, which may be entered directly to the console. In addition there are some special commands with procedure specific meaning:
+		<list>
+			<item node="var VARIABLES">This declares internal (local) variables, which may only be used inside of the current procedure (they are even unique, if the procedure recursively calls itself). You may simultaneously pass initial values through <code>var VAR1 = VALUE1, VAR2 = VALUE2, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
+			<item node="str STRINGVARS">This declares internal (local) string variables, which may only be used inside of the current procedure. You may simultaneously define initial values through <code>str SVAR1 = STRING1, SVAR2 = STRING2, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
+			<item node="tab TABLES">This declares internal (local) tables, which may only be used inside of the current procedure. In contrast to <code>var</code> or <code>str</code> you may not simultaneously define initial values in this case. This command may only be used once in each procedure. All further occurences will be ignored.</item>
+			<item node="cst CLUSTER">This declares internal (local) clusters, which may only be used inside of the current procedure. You may simultaneously define initial values through <code>cst CST1{} = {VALUES}, CST2{} = {VALUES}, ...</code>. This command may only be used once in each procedure. All further occurences will be ignored.</item>
+			<item node="return VALUE">If NumeRe mets this command during the evaluation, then it will leave the current procedure (No matter, if this is the last command or not. Commands, which appear in the following lines, won't be executed.). <code>return</code> may be used multiple times in a procedure, e.g. if the return value depends on a condition. It is not even necessary to use this command; procedures return the value <code>true</code> as default, if no <code>return</code> or a <code>return</code> without value was found. In addition to numerical values, the VALUE may be a string or a mixture of both types. A special value is <code>void</code>. This defines that the procedure explicitely doesn't have a return value.</item>
+			<item node="readline">This gives you the possibility to read an formatted input (in contrast to <code>??</code>). Parameters are <code>-asstr</code> (transforms the input into a string), <code>-msg=MESSAGE</code> (writes MESSAGE at the beginning of the line, e.g. as an explanation) and <code>-dflt=DEFAULTVALUE</code> (defines a default value). The input may be written directly to a variable through <code>VAR = readline</code> or to a string through <code>STRING = readline -asstr</code>.</item>
+			<item node="namespace NSP">Switches at this point to the namespace NSP. If NSP is <code>main</code> or nothing, then NumeRe will switch to the global namespace; if NSP is <code>this</code>, then NumeRe switches to the namespace of the current procedure. <code>thisfile</code> restricts the namespace to the current file.</item>
+			<item node="throw">If an event happens, which is not covered by the current procedure (e.g. a senseless value), and the further evaluation cannot be done without errors, then this command may be used to jump out of all procedures. Its effect is similar to an exception in C++ (and will evaluated internally just like this). You may append your own error message as a string through <code>throw "ERRORMESSAGE"</code>.</item>
+		</list>
+	</contents>
 </article>

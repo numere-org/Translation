@@ -17,18 +17,26 @@
 -->
 
 <article id="url">
-	<title string="Internet-Transferprotokolle (HTTP und FTP)" />
-	Für den Zugriff auf Online-Ressourcen stellt NumeRe das Kommando <code>url</code> bereit, mit dem Webseiten und Dateien aus dem Netz heruntergeladen werden können. Die heruntergeladenen Dateien werden dabei als Zeichenketten zurückgegeben, sofern keine Zieldatei mittels <code>file=TARGETFILE</code> angegeben wird. Wenn der Parameter <code>up</code> in Kombination mit <code>file=SOURCEFILE</code> angegeben wird, kann diese Datei auf einen FTP-Server hochgeladen werden. In den letzteren beiden Fällen wird die Zahl der herunter- bzw. hochgeladenen Bytes zurückgegeben:
-	<codeblock>
-		sFILECONTENTS = url sURL
-		nBYTES = url sURL -file=TARGETFILE
-		nBYTES = url sURL -file=SOURCEFILE up
-	</codeblock>
-	Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>ftp://ftp.server.url/filename.ext</code>
-	NumeRe verwendet TLS als Verschlüsselung, allerdings werden die übermittelten Zertifikate <em>nicht</em> validiert. Dieses Kommando eignet sich daher nicht zur Übermittlung sensibler Informationen.
-	Wenn auf der zugegriffenen Webseite JavaScript verwendet wird, so wird dieser Code <em>nicht</em> interpretiert. Hochdynamische Webseiten können demzufolge nur unvollständig heruntergeladen werden.
-	Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
-	<example desc="Zugriff auf den 'macros'-Unterordner des CTAN FTPs:">
-		url "ftp://ftp.fau.de/ctan/macros/"
-	</example>
+	<title string="Internet-Transferprotokolle (HTTP und FTP)" idxkey="url" />
+	<keywords>
+		<keyword>url</keyword>
+		<keyword>http</keyword>
+		<keyword>ftp</keyword>
+		<keyword>sftp</keyword>
+	</keywords>
+	<contents>
+		Für den Zugriff auf Online-Ressourcen stellt NumeRe das Kommando <code>url</code> bereit, mit dem Webseiten und Dateien aus dem Netz heruntergeladen werden können. Die heruntergeladenen Dateien werden dabei als Zeichenketten zurückgegeben, sofern keine Zieldatei mittels <code>file=TARGETFILE</code> angegeben wird. Wenn der Parameter <code>up</code> in Kombination mit <code>file=SOURCEFILE</code> angegeben wird, kann diese Datei auf einen FTP-Server hochgeladen werden. In den letzteren beiden Fällen wird die Zahl der herunter- bzw. hochgeladenen Bytes zurückgegeben:
+		<codeblock>
+			sFILECONTENTS = url sURL
+			nBYTES = url sURL -file=TARGETFILE
+			nBYTES = url sURL -file=SOURCEFILE up
+		</codeblock>
+		Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>ftp://ftp.server.url/filename.ext</code>
+		NumeRe verwendet TLS als Verschlüsselung, allerdings werden die übermittelten Zertifikate <em>nicht</em> validiert. Dieses Kommando eignet sich daher nicht zur Übermittlung sensibler Informationen.
+		Wenn auf der zugegriffenen Webseite JavaScript verwendet wird, so wird dieser Code <em>nicht</em> interpretiert. Hochdynamische Webseiten können demzufolge nur unvollständig heruntergeladen werden.
+		Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
+		<example desc="Zugriff auf den 'macros'-Unterordner des CTAN FTPs:">
+			url "ftp://ftp.fau.de/ctan/macros/"
+		</example>
+	</contents>
 </article>

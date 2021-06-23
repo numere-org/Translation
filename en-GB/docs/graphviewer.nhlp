@@ -17,11 +17,17 @@
 -->
 
 <article id="graphviewer">
-	<title string="NumeRe graph viewer" />
-	The graph viewer will be startet automatically, when a plot was calculated and its display was not suppressed. The graph viewer visualizes the image, which is present in memory, and allows simple modifications of the created image.
-	The image, which is displayed by the graph viewer, may be exported to a file or copied to the clipboard. These functions are located in the first section of the toolbar.
-	The graph may be rotated or sections of the graph may be zoomed. A function for resetting displays the graph in its original layout. These functions are present in the second part of the toolbar.
-	For graphs, which contain the data for an animation (i.e. containing multiple frames), the frames may be switched manually or automatically by starting the animation. These tools may be found in the third part of the toolbar.
-	In addition, lines, rectangles or circles as well as text may be added to the graph. The style of these objects or the text may be set by the style information in <a href="nhlp://linestyles?frame=new">help linestyles</a> and the colors in <a href="nhlp://colors?frame=new">help colors</a>. These functions are located in the last section of the toolbar.
-	<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a> and <a href="nhlp://plotoptions?frame=self">help plotoptions</a>	
+	<title string="NumeRe graph viewer" idxkey="graphviewer" />
+	<keywords>
+		<keyword>viewer</keyword>
+		<keyword>graphviewer</keyword>
+	</keywords>
+	<contents>
+		The graph viewer will be startet automatically, when a plot was calculated and its display was not suppressed. The graph viewer visualizes the image, which is present in memory, and allows simple modifications of the created image.
+		The image, which is displayed by the graph viewer, may be exported to a file or copied to the clipboard. These functions are located in the first section of the toolbar.
+		The graph may be rotated or sections of the graph may be zoomed. A function for resetting displays the graph in its original layout. These functions are present in the second part of the toolbar.
+		For graphs, which contain the data for an animation (i.e. containing multiple frames), the frames may be switched manually or automatically by starting the animation. These tools may be found in the third part of the toolbar.
+		In addition, lines, rectangles or circles as well as text may be added to the graph. The style of these objects or the text may be set by the style information in <a href="nhlp://linestyles?frame=new">help linestyles</a> and the colors in <a href="nhlp://colors?frame=new">help colors</a>. These functions are located in the last section of the toolbar.
+		<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a> and <a href="nhlp://plotoptions?frame=self">help plotoptions</a>	
+	</contents>
 </article>

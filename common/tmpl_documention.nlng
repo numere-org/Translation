@@ -1,0 +1,11 @@
+	<helpfile>
+		<article id="%%IDENTIFIER%%">
+			<title string="%%PACKAGENAME%%" idxkey="%%IDXKEY%%" />
+			<keywords>
+				<keyword>%%KEYWORD%%</keyword>
+			</keywords>
+			<contents>
+				(...)
+			</contents>
+		</article>
+	</helpfile>

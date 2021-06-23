@@ -17,14 +17,21 @@
 -->
 
 <article id="find">
-	<title string="Stichwortsuche" />
-	Das Kommando <code>find</code> erlaubt es, nach einer Funktion oder einem anderen Kommando innerhalb dieses Programms zu suchen. Der (oder die) Begriff(e) müssen diesem Kommando dabei als Parameter übergeben werden. Das Kommando <code>search</code> ist ein Synonym zum Kommando <code>find</code>.
-	Soll ein ganzer Ausdruck mit Leerzeichen gesucht werden, so muss dieser in Anführungszeichen übergeben werden.
-	Werden mehrere Begriffe angegeben, ordnet NumeRe die Ergebnisse der Suche absteigend nach ihrer Relevanz. Diese berechnet NumeRe aus der Zahl der Suchbegriffe, die mit dem Ergebnis übereinstimmen, und einer zusätzlichen, internen Gewichtung, welche bestimmt, wie gut die einzelnen Suchbegriffe jeweils mit dem Treffer übereinstimmen.
-	<example desc="Suche der Begriffe 'cos hyp cosh':" type="verbatim">
-		|&lt;- find cos hyp cosh
-		[...]
-		|-&gt; [100%]   acosh(x) -- [...]
-		[...]
-	</example>
+	<title string="Stichwortsuche" idxkey="find" />
+	<keywords>
+		<keyword>find</keyword>
+		<keyword>search</keyword>
+		<keyword>suche</keyword>
+	</keywords>
+	<contents>
+		Das Kommando <code>find</code> erlaubt es, nach einer Funktion oder einem anderen Kommando innerhalb dieses Programms zu suchen. Der (oder die) Begriff(e) müssen diesem Kommando dabei als Parameter übergeben werden. Das Kommando <code>search</code> ist ein Synonym zum Kommando <code>find</code>.
+		Soll ein ganzer Ausdruck mit Leerzeichen gesucht werden, so muss dieser in Anführungszeichen übergeben werden.
+		Werden mehrere Begriffe angegeben, ordnet NumeRe die Ergebnisse der Suche absteigend nach ihrer Relevanz. Diese berechnet NumeRe aus der Zahl der Suchbegriffe, die mit dem Ergebnis übereinstimmen, und einer zusätzlichen, internen Gewichtung, welche bestimmt, wie gut die einzelnen Suchbegriffe jeweils mit dem Treffer übereinstimmen.
+		<example desc="Suche der Begriffe 'cos hyp cosh':" type="verbatim">
+			|&lt;- find cos hyp cosh
+			[...]
+			|-&gt; [100%]   acosh(x) -- [...]
+			[...]
+		</example>
+	</contents>
 </article>

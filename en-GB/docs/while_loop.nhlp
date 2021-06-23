@@ -17,29 +17,36 @@
 -->
 
 <article id="while_loop">
-	<title string="WHILE loops" />
-	A WHILE loop executes repeatedly the same <expr>N</expr> expressions similar to FOR loops. The central difference is that a WHILE loop doesn't need a loop index and therefore there's no predefined number of loop iterations. The abortion of a WHILE loops is either determined by the mandatory condition in the declaration or by an additional <code>break</code> in a part of the loop.
-	The declaration of a WHILE loops needs a logical fulfillable condition, which has to passed inside of parentheses:<codeblock>while (CONDITION)\n\tEXPRESSIONS\nendwhile</codeblock>The CONDITION will be checked at the beginning of each loop repetition and the loop will be continued, if the CONDITION will be evaluated to TRUE, or it will be aborted, if the result is FALSE.
-	A WHILE loop will be closed with the command <code>endwhile</code>. This command is needed for each opened WHILE loop. If the outermost loop was closed, all loops will be evaluated instantly. During closing a loop (doesn't matter, which) one can append the following parameters:
-	<list>
-		<item node="sv">Displays all steps of the evaluation (<em>This parameter is deprecated.</em>)</item>
-		<item node="mask">Suppresses the progress display. The usage of this parameter as default may be activated in the settings</item>
-		<item node="sp">Displays the progress display even if <code>mask</code> is used as default</item>
-		<item node="lnumctrl[=WERT]">Canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code></item>
-	</list>
-	A WHILE loop may contain an arbitrary number of FOR loops, other WHILE loops, SWITCH conditions and IF forks.
-	The declaration of a loop may be canceled with the command <code>abort</code> without executing all already entered expressions. This is in contrast to the command <code>break</code>, which will evaluated at runtime.
-	The two commands <code>break</code> and <code>continue</code> grant further control over a WHILE loop. These commands may be placed inside of an IF fork (which is part of the WHILE loop itself) and influence the evaluation from there:
-	<list>
-		<item node="break">Canceles the evaluation of the current WHILE loop at this point and jumps in the next surrounding FOR/WHILE loop/IF fork. If this was already the outermost loop, all loops will be canceled</item>
-		<item node="continue">Canceles the evaluation of the current loop repetition at this point and continues with the next repetition</item>
-	</list>
-	The evaluation may be canceled with the <code>ESC</code> key, if it takes too much time.
-	For simple corrections you may use the command <code>replaceline</code>. See <a href="nhlp://replaceline?frame=new">help replaceline</a> for further information.
-	<example desc="A WHILE loop, which will be executed, until a file name to a loadable data set was entered:" type="verbatim">
-		|&lt;- while (!data())
-		|WHL&gt; load ??
-		|WHL&gt; endwhile
-	</example>
-	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://operator?frame=self">help operator</a>
+	<title string="WHILE loops" idxkey="while" />
+	<keywords>
+		<keyword>endwhile</keyword>
+		<keyword>while</keyword>
+		<keyword>lnumctrl</keyword>
+	</keywords>
+	<contents>
+		A WHILE loop executes repeatedly the same <expr>N</expr> expressions similar to FOR loops. The central difference is that a WHILE loop doesn't need a loop index and therefore there's no predefined number of loop iterations. The abortion of a WHILE loops is either determined by the mandatory condition in the declaration or by an additional <code>break</code> in a part of the loop.
+		The declaration of a WHILE loops needs a logical fulfillable condition, which has to passed inside of parentheses:<codeblock>while (CONDITION)\n\tEXPRESSIONS\nendwhile</codeblock>The CONDITION will be checked at the beginning of each loop repetition and the loop will be continued, if the CONDITION will be evaluated to TRUE, or it will be aborted, if the result is FALSE.
+		A WHILE loop will be closed with the command <code>endwhile</code>. This command is needed for each opened WHILE loop. If the outermost loop was closed, all loops will be evaluated instantly. During closing a loop (doesn't matter, which) one can append the following parameters:
+		<list>
+			<item node="sv">Displays all steps of the evaluation (<em>This parameter is deprecated.</em>)</item>
+			<item node="mask">Suppresses the progress display. The usage of this parameter as default may be activated in the settings</item>
+			<item node="sp">Displays the progress display even if <code>mask</code> is used as default</item>
+			<item node="lnumctrl[=WERT]">Canceles all loops after a maximum number of 1000 iterations. This number can be modified with <code>-lnumctrl=VALUE</code></item>
+		</list>
+		A WHILE loop may contain an arbitrary number of FOR loops, other WHILE loops, SWITCH conditions and IF forks.
+		The declaration of a loop may be canceled with the command <code>abort</code> without executing all already entered expressions. This is in contrast to the command <code>break</code>, which will evaluated at runtime.
+		The two commands <code>break</code> and <code>continue</code> grant further control over a WHILE loop. These commands may be placed inside of an IF fork (which is part of the WHILE loop itself) and influence the evaluation from there:
+		<list>
+			<item node="break">Canceles the evaluation of the current WHILE loop at this point and jumps in the next surrounding FOR/WHILE loop/IF fork. If this was already the outermost loop, all loops will be canceled</item>
+			<item node="continue">Canceles the evaluation of the current loop repetition at this point and continues with the next repetition</item>
+		</list>
+		The evaluation may be canceled with the <code>ESC</code> key, if it takes too much time.
+		For simple corrections you may use the command <code>replaceline</code>. See <a href="nhlp://replaceline?frame=new">help replaceline</a> for further information.
+		<example desc="A WHILE loop, which will be executed, until a file name to a loadable data set was entered:" type="verbatim">
+			|&lt;- while (!data())
+			|WHL&gt; load ??
+			|WHL&gt; endwhile
+		</example>
+		<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://switch?frame=self">help switch</a>, <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> and <a href="nhlp://operator?frame=self">help operator</a>
+	</contents>
 </article>

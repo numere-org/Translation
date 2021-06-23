@@ -17,10 +17,16 @@
 -->
 
 <article id="syntax">
-	<title string="Kommandosyntax" />
-	Die NumeRe-Kommandosyntax orientiert sich weitestgehend an einem grundlegenden Schema. Dieses gliedert alle Schlüsselwörter in drei Kategorien ein: Kommandos, Parameter und Optionen. (Allerdings ist diese Zuordnung nur in den wenigsten Fällen wirklich festgeschrieben.)
-	Das allgemeine Schema lautet:<codeblock>KOMMANDO [AUSDRUCK] [-PARAMETER[=WERT] [OPTIONEN]]</codeblock>Dabei sind Angaben in eckigen Klammern optionale Werte, die nicht in jedem Fall erforderlich sind. Außerdem können aus Gründen der Fehlertoleranz manche Parameter auch als Kommandos (und umgekehrt) verwendet werden und auch die Reihenfolge der Optionen und des Parameters ist nicht festgeschrieben, so lange sie von dem vorangestellten Minuszeichen vom Kommando abgetrennt sind. (<code>data -load=DATEI</code> und <code>load -data=DATEI</code> erzielen beispielsweise dasselbe Ergebnis)
-	Ausnahmen sind dabei Kommandos, die einen Ausdruck (wie z.B. <code>plot</code> oder <code>integrate</code>) enthalten. Hier müssen die Optionen durch den vorangestellten Parameter <code>-set</code> übergeben werden. Daneben können bei ihnen wie auch bei den Einstellungs- und Auflistungs-Befehle (<code>set -PARAMETER=WERT</code> bzw. <code>list -PARAMETER</code>) die Kommando-Parameter-Reihenfolge nicht umgekehrt werden.
-	Bei Kommandos wird Groß- und Kleinschreibung beachtet, bei Parametern und Optionen jedoch nicht. Im Allgemeinen wird jedoch jeder NumeRe-Befehl grundsätzlich kleingeschrieben.
-	NumeRe kann trotz sorgfältiger Programmierung noch nicht hellsehen. Aber trotzdem wird bei einem Kommando, das mit zu wenigen oder falschen Parametern übergeben wird, automatisch die NumeRe-Hilfe aufgerufen oder zumindest ein entsprechender Hinweis eingeblendet, dass die Eingabe fehlerhaft war.
+	<title string="Kommandosyntax" idxkey="syntax" />
+	<keywords>
+		<keyword>command</keyword>
+		<keyword>syntax</keyword>
+	</keywords>
+	<contents>
+		Die NumeRe-Kommandosyntax orientiert sich weitestgehend an einem grundlegenden Schema. Dieses gliedert alle Schlüsselwörter in drei Kategorien ein: Kommandos, Parameter und Optionen. (Allerdings ist diese Zuordnung nur in den wenigsten Fällen wirklich festgeschrieben.)
+		Das allgemeine Schema lautet:<codeblock>KOMMANDO [AUSDRUCK] [-PARAMETER[=WERT] [OPTIONEN]]</codeblock>Dabei sind Angaben in eckigen Klammern optionale Werte, die nicht in jedem Fall erforderlich sind. Außerdem können aus Gründen der Fehlertoleranz manche Parameter auch als Kommandos (und umgekehrt) verwendet werden und auch die Reihenfolge der Optionen und des Parameters ist nicht festgeschrieben, so lange sie von dem vorangestellten Minuszeichen vom Kommando abgetrennt sind. (<code>data -load=DATEI</code> und <code>load -data=DATEI</code> erzielen beispielsweise dasselbe Ergebnis)
+		Ausnahmen sind dabei Kommandos, die einen Ausdruck (wie z.B. <code>plot</code> oder <code>integrate</code>) enthalten. Hier müssen die Optionen durch den vorangestellten Parameter <code>-set</code> übergeben werden. Daneben können bei ihnen wie auch bei den Einstellungs- und Auflistungs-Befehle (<code>set -PARAMETER=WERT</code> bzw. <code>list -PARAMETER</code>) die Kommando-Parameter-Reihenfolge nicht umgekehrt werden.
+		Bei Kommandos wird Groß- und Kleinschreibung beachtet, bei Parametern und Optionen jedoch nicht. Im Allgemeinen wird jedoch jeder NumeRe-Befehl grundsätzlich kleingeschrieben.
+		NumeRe kann trotz sorgfältiger Programmierung noch nicht hellsehen. Aber trotzdem wird bei einem Kommando, das mit zu wenigen oder falschen Parametern übergeben wird, automatisch die NumeRe-Hilfe aufgerufen oder zumindest ein entsprechender Hinweis eingeblendet, dass die Eingabe fehlerhaft war.
+	</contents>
 </article>

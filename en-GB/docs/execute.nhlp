@@ -17,14 +17,23 @@
 -->
 
 <article id="execute">
-	<title string="Using the Windows shell" />
-	Sometimes it might be necessary to call a second program for a specific task, e.g. if one has implemented as simulation in an own program and wants to call this program automatically, or if one has created a file with NumeRe and wants to process this file in a second program. NumeRe may use the Windows shell API using the command <code>execute</code>.
-	<em>Important:</em> The command <code>execute</code> is <em>disabled</em> by default, because it is a security risk. (Bad code can directly access the Windows shell and execute arbitrary commands.) If the command is necessary, the it can be enabled using the options dialogue in the "Tools" menu.
-	To use the command <code>execute</code> one has to append the desired program as a string to the command:<codeblock>execute "PATH/TO/PROGRAM"</codeblock>Additionally, one may add further filenames or parameters if one uses the option <code>params=PARAMETER</code>:<codeblock>execute "PATH/TO/PROGRAM" -set params="PATH/TO/FILE"</codeblock>
-	The path to the program might be omitted, if the program's directory is listed in the environment variable <code>PATH</code> (One can obtain this information, if one calls <code>execute "cmd"</code> and enters <code>PATH</code> in the opened window). Typical examples are the Windows default applications like "notepad.exe", "calc.exe", "cmd.exe", ...
-	Some applications have to be started in a defined directory to make them use it as their working directory. This may be set using the option <code>wp=PATH</code>.
-	It might be necessary to wait for an external application to terminate. NumeRe waits using the option <code>wait</code> for the started external application to terminate. If this takes too much time or if the external application crashed, then one can succeed NumeRe by pressing the ESC key.
-	<example desc="Open the fit logfile using the Windows editor:">
-		execute "notepad.exe" -set params=#&lt;savepath&gt;+"/numerefit.log"
-	</example>
+	<title string="Using the Windows shell" idxkey="execute" />
+	<keywords>
+		<keyword>shell</keyword>
+		<keyword>bash</keyword>
+		<keyword>wait</keyword>
+		<keyword>execute</keyword>
+		<keyword>wp</keyword>
+	</keywords>
+	<contents>
+		Sometimes it might be necessary to call a second program for a specific task, e.g. if one has implemented as simulation in an own program and wants to call this program automatically, or if one has created a file with NumeRe and wants to process this file in a second program. NumeRe may use the Windows shell API using the command <code>execute</code>.
+		<em>Important:</em> The command <code>execute</code> is <em>disabled</em> by default, because it is a security risk. (Bad code can directly access the Windows shell and execute arbitrary commands.) If the command is necessary, the it can be enabled using the options dialogue in the "Tools" menu.
+		To use the command <code>execute</code> one has to append the desired program as a string to the command:<codeblock>execute "PATH/TO/PROGRAM"</codeblock>Additionally, one may add further filenames or parameters if one uses the option <code>params=PARAMETER</code>:<codeblock>execute "PATH/TO/PROGRAM" -set params="PATH/TO/FILE"</codeblock>
+		The path to the program might be omitted, if the program's directory is listed in the environment variable <code>PATH</code> (One can obtain this information, if one calls <code>execute "cmd"</code> and enters <code>PATH</code> in the opened window). Typical examples are the Windows default applications like "notepad.exe", "calc.exe", "cmd.exe", ...
+		Some applications have to be started in a defined directory to make them use it as their working directory. This may be set using the option <code>wp=PATH</code>.
+		It might be necessary to wait for an external application to terminate. NumeRe waits using the option <code>wait</code> for the started external application to terminate. If this takes too much time or if the external application crashed, then one can succeed NumeRe by pressing the ESC key.
+		<example desc="Open the fit logfile using the Windows editor:">
+			execute "notepad.exe" -set params=#&lt;savepath&gt;+"/numerefit.log"
+		</example>
+	</contents>
 </article>

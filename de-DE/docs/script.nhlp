@@ -17,22 +17,31 @@
 -->
 
 <article id="script">
-	<title string="NumeRe-Scripte" />
-	Komplexe Befehlsroutinen oder Berechnungen können in sogenannte "NumeRe-Scripte" ausgelagert werden, welche Textdateien mit der Endung ".nscr" sind. Der integrierte <a href="nhlp://editor?frame=new">Editor</a> unterstützt das Schreiben dieser Scripte durch farbliche Syntax-Hervorhebungen, automatische Formatierung und statischer Code-Analyse. Der Ordner, aus dem NumeRe die Scripte standardmäßig lädt, kann mittels <code>get -scriptpath</code> erhalten und durch <code>set -scriptpath=PFAD</code> oder in den Einstellungen bearbeitet werden. Der Editor schlägt den richtigen Ordner beim Speichern automatisch vor.
-	Um ein Script auszuführen, können entweder die entsprechenden Funktionen der graphischen Oberfläche [F5] oder das Kommando <code>start</code> verwendet werden:<codeblock>start SCRIPTNAME</codeblock>Der Scriptname muss in Anführungszeichen angegeben werden, wenn er Leerzeichen enthält. Außerdem ist ein vollständiger Pfad nötig, wenn sich das Script nicht im entsprechenden Standardordner befindet.
-	Die Auswertung kann mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
-	Befehle und Ausdrücke können in das Script geschrieben werden, wie sie direkt in NumeRe eingegeben werden, allerdings ist zu beachten, dass nur ein Befehl/Ausdruck je Zeile geschrieben werden darf, oder dass die Befehle/Ausdrücke durch Semikola voneinander getrennt werden:<codeblock>AUSDRUCK;KOMMANDO;KOMMANDO;AUSDRUCK...</codeblock>Hiervon ist allerdings abzuraten, da es das Script unleserlich macht.
-	Die Zeichenkette <code>##</code> kann genutzt werden, um eine Zeile auszukommentieren, oder ein Teil des Scripts zur Übersicht mit zusätzlichen Infos zu versehen. NumeRe wird den Teil der Zeile ab <code>##</code> während der Auswertung ignorieren.
-	In NumeRe-Scripten können auch ganze Blöcke auskommentiert werden: Dazu muss vor dem auszukommentierendem Teil <code>#*</code> und am Ende dieses Blocks <code>*#</code> stehen. Diese Blöcke können sich über mehrere Zeilen erstrecken. Ebenfalls können auch mehrere dieser Blockkommentare in einer Zeile auftreten. NumeRe entfernt die entsprechenden Kommentare vor der Auswertung.
-	Kommentare können außerdem, wenn sie mit einem zusätzlichen Ausrufezeichen eingeleitet werden (<code>##!</code> oder <code>#*! ... *#</code>), als <a href="nhlp://latex?frame=new">Dokumentationskommentare</a> verwendet werden.
-	Die Zeichenkette <code>\\</code> am Ende einer Zeile unterbricht die Auswertung der Zeile und hängt die darauffolgende Zeile an die vorhergehende an. Wird diese ebenfalls durch <code>\\</code> abgeschlossen, so wird dies wiederholt, bis eine Zeile ohne <code>\\</code> am Ende gefunden wird.
-	Die Syntax <code>@SCRIPT</code> lädt alle Definitionen und "globale Ausdrücke" aus dem Script SCRIPT an dieser Stelle in das auszuführende Script ein. Es werden dabei keine weiteren Befehle abgearbeitet und dementsprechend auch nicht weitere <code>@SCRIPT</code>, die in dem Script SCRIPT gefunden werden. Falls SCRIPT Leerzeichen enthalten soll, ist SCRIPT in Anführungszeichen (<code>@"SCRIPT"</code>) anzugeben.
-	Falls nur globale Ausdrücke oder nur Definitionen geladen werden sollen, lässt sich <code>@SCRIPT</code> noch weiter einschränken:<codeblock>@SCRIPT: defines   (lädt nur Definitionen)\n@SCRIPT: globals   (lädt nur globale Ausdrücke)</codeblock>
-	Globale Ausdrücke sind Ausdrücke und Kommandos, die ihrerseits von dem Kommando <code>global</code> begonnen werden:<codeblock>global AUSDRUCK</codeblock>oder<codeblock>global KOMMANDO</codeblock>Das Kommando <code>global</code> hat ansonsten keinen weiteren Einfluss auf die Auswertung.
-	In Scripten kann neben den Pfadplatzhaltern <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc. auch der spezielle Platzhalter <code>&lt;this&gt;</code> verwendet werden, der das Verzeichnis, in welchem sich das Script befindet, beinhält.
-	Wenn <a href="nhlp://procedure?frame=new">Prozeduren</a> oder ganze <a href="nhlp://plugins?frame=new">Plugins</a> <a href="nhlp://install?frame=new">installiert</a> werden sollen, verwendet man das Kommando <code>install</code> statt <code>start</code>. Es ist zu beachten, dass <code>install</code> <em>nur</em> in der Konsole verwendet werden kann.
-	<example desc="Starten des Scripts 'script.nscr':">
-		start script
-	</example>
-	<em>Siehe auch:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://install?frame=self">help install</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
+	<title string="NumeRe-Scripte" idxkey="script" />
+	<keywords>
+		<keyword>automat</keyword>
+		<keyword>global</keyword>
+		<keyword>inclu</keyword>
+		<keyword>script</keyword>
+		<keyword>start</keyword>
+	</keywords>
+	<contents>
+		Komplexe Befehlsroutinen oder Berechnungen können in sogenannte "NumeRe-Scripte" ausgelagert werden, welche Textdateien mit der Endung ".nscr" sind. Der integrierte <a href="nhlp://editor?frame=new">Editor</a> unterstützt das Schreiben dieser Scripte durch farbliche Syntax-Hervorhebungen, automatische Formatierung und statischer Code-Analyse. Der Ordner, aus dem NumeRe die Scripte standardmäßig lädt, kann mittels <code>get -scriptpath</code> erhalten und durch <code>set -scriptpath=PFAD</code> oder in den Einstellungen bearbeitet werden. Der Editor schlägt den richtigen Ordner beim Speichern automatisch vor.
+		Um ein Script auszuführen, können entweder die entsprechenden Funktionen der graphischen Oberfläche [F5] oder das Kommando <code>start</code> verwendet werden:<codeblock>start SCRIPTNAME</codeblock>Der Scriptname muss in Anführungszeichen angegeben werden, wenn er Leerzeichen enthält. Außerdem ist ein vollständiger Pfad nötig, wenn sich das Script nicht im entsprechenden Standardordner befindet.
+		Die Auswertung kann mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
+		Befehle und Ausdrücke können in das Script geschrieben werden, wie sie direkt in NumeRe eingegeben werden, allerdings ist zu beachten, dass nur ein Befehl/Ausdruck je Zeile geschrieben werden darf, oder dass die Befehle/Ausdrücke durch Semikola voneinander getrennt werden:<codeblock>AUSDRUCK;KOMMANDO;KOMMANDO;AUSDRUCK...</codeblock>Hiervon ist allerdings abzuraten, da es das Script unleserlich macht.
+		Die Zeichenkette <code>##</code> kann genutzt werden, um eine Zeile auszukommentieren, oder ein Teil des Scripts zur Übersicht mit zusätzlichen Infos zu versehen. NumeRe wird den Teil der Zeile ab <code>##</code> während der Auswertung ignorieren.
+		In NumeRe-Scripten können auch ganze Blöcke auskommentiert werden: Dazu muss vor dem auszukommentierendem Teil <code>#*</code> und am Ende dieses Blocks <code>*#</code> stehen. Diese Blöcke können sich über mehrere Zeilen erstrecken. Ebenfalls können auch mehrere dieser Blockkommentare in einer Zeile auftreten. NumeRe entfernt die entsprechenden Kommentare vor der Auswertung.
+		Kommentare können außerdem, wenn sie mit einem zusätzlichen Ausrufezeichen eingeleitet werden (<code>##!</code> oder <code>#*! ... *#</code>), als <a href="nhlp://latex?frame=new">Dokumentationskommentare</a> verwendet werden.
+		Die Zeichenkette <code>\\</code> am Ende einer Zeile unterbricht die Auswertung der Zeile und hängt die darauffolgende Zeile an die vorhergehende an. Wird diese ebenfalls durch <code>\\</code> abgeschlossen, so wird dies wiederholt, bis eine Zeile ohne <code>\\</code> am Ende gefunden wird.
+		Die Syntax <code>@SCRIPT</code> lädt alle Definitionen und "globale Ausdrücke" aus dem Script SCRIPT an dieser Stelle in das auszuführende Script ein. Es werden dabei keine weiteren Befehle abgearbeitet und dementsprechend auch nicht weitere <code>@SCRIPT</code>, die in dem Script SCRIPT gefunden werden. Falls SCRIPT Leerzeichen enthalten soll, ist SCRIPT in Anführungszeichen (<code>@"SCRIPT"</code>) anzugeben.
+		Falls nur globale Ausdrücke oder nur Definitionen geladen werden sollen, lässt sich <code>@SCRIPT</code> noch weiter einschränken:<codeblock>@SCRIPT: defines   (lädt nur Definitionen)\n@SCRIPT: globals   (lädt nur globale Ausdrücke)</codeblock>
+		Globale Ausdrücke sind Ausdrücke und Kommandos, die ihrerseits von dem Kommando <code>global</code> begonnen werden:<codeblock>global AUSDRUCK</codeblock>oder<codeblock>global KOMMANDO</codeblock>Das Kommando <code>global</code> hat ansonsten keinen weiteren Einfluss auf die Auswertung.
+		In Scripten kann neben den Pfadplatzhaltern <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc. auch der spezielle Platzhalter <code>&lt;this&gt;</code> verwendet werden, der das Verzeichnis, in welchem sich das Script befindet, beinhält.
+		Wenn <a href="nhlp://procedure?frame=new">Prozeduren</a> oder ganze <a href="nhlp://plugins?frame=new">Plugins</a> <a href="nhlp://install?frame=new">installiert</a> werden sollen, verwendet man das Kommando <code>install</code> statt <code>start</code>. Es ist zu beachten, dass <code>install</code> <em>nur</em> in der Konsole verwendet werden kann.
+		<example desc="Starten des Scripts 'script.nscr':">
+			start script
+		</example>
+		<em>Siehe auch:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://install?frame=self">help install</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
+	</contents>
 </article>

@@ -17,8 +17,16 @@
 -->
 
 <article id="rotate">
-	<title string="Rotating a data set" />
-	NumeRe can rotate tables, image data and data grids by an angle <expr>alpha</expr> (in degrees) using one of the three commands <code>tabrot</code>, <code>imrot</code> or <code>gridrot</code>. In doing so, <code>tabrot</code> rotates an entire table without regard to the axes. <code>imrot</code> and <code>gridrot</code> rotate the dataset and on the other hand transform the associated axes automatically (or create new ones).
-	The syntax is identical for all commands:<codeblock>tabrot TABLE() -set alpha=ANGLE\nimrot IMAGE() -set alpha=ANGLE\ngridrot GRID() -set alpha=ANGLE</codeblock>The result of the rotation is created in the <code>rotdata()</code> table. This target can be customized with the <code>target=TARGET()</code> option.
-	<em>Note:</em> All datasets are internally rotated based on their row and column dimensions. Any axis scaling is not taken into account here. For example, a square dataset whose axes are scaled differently will not preserve this very scaling.
+	<title string="Rotating data sets" idxkey="tabrot,gridrot,imrot" />
+	<keywords>
+		<keyword>rotate</keyword>
+		<keyword>tabrot</keyword>
+		<keyword>gridrot</keyword>
+		<keyword>imrot</keyword>
+	</keywords>
+	<contents>
+		NumeRe can rotate tables, image data and data grids by an angle <expr>alpha</expr> (in degrees) using one of the three commands <code>tabrot</code>, <code>imrot</code> or <code>gridrot</code>. In doing so, <code>tabrot</code> rotates an entire table without regard to the axes. <code>imrot</code> and <code>gridrot</code> rotate the dataset and on the other hand transform the associated axes automatically (or create new ones).
+		The syntax is identical for all commands:<codeblock>tabrot TABLE() -set alpha=ANGLE\nimrot IMAGE() -set alpha=ANGLE\ngridrot GRID() -set alpha=ANGLE</codeblock>The result of the rotation is created in the <code>rotdata()</code> table. This target can be customized with the <code>target=TARGET()</code> option.
+		<em>Note:</em> All datasets are internally rotated based on their row and column dimensions. Any axis scaling is not taken into account here. For example, a square dataset whose axes are scaled differently will not preserve this very scaling.
+	</contents>
 </article>

@@ -17,9 +17,16 @@
 -->
 
 <article id="filetree">
-	<title string="Filetree" />
-	The file tree gives an overview on the file structure of NumeRe, which is determined by the default paths:<codeblock>&lt;loadpath&gt;, &lt;savepath&gt;, &lt;scriptpath&gt;, &lt;procpath&gt; and &lt;plotpath&gt;</codeblock>These are the corresponding folders in the file structure.
-	Files may be loaded, copied, deleted, renamed, edited or executed out of this tree. A <em>double click</em> triggers the default action, whereas a <em>right click</em> shows a context menu containing all available secondary actions.
-	Images will be displayed with the integrated ImageViewer.
-	The file tree may be hidden and shown again by pressing repeatedly on <code>[F3]</code> to grant the editor some more display space.
+	<title string="Filetree" idxkey="filetree" />
+	<keywords>
+		<keyword>filetr</keyword>
+		<keyword>dateib</keyword>
+		<keyword>brows</keyword>
+	</keywords>
+	<contents>
+		The file tree gives an overview on the file structure of NumeRe, which is determined by the default paths:<codeblock>&lt;loadpath&gt;, &lt;savepath&gt;, &lt;scriptpath&gt;, &lt;procpath&gt; and &lt;plotpath&gt;</codeblock>These are the corresponding folders in the file structure.
+		Files may be loaded, copied, deleted, renamed, edited or executed out of this tree. A <em>double click</em> triggers the default action, whereas a <em>right click</em> shows a context menu containing all available secondary actions.
+		Images will be displayed with the integrated ImageViewer.
+		The file tree may be hidden and shown again by pressing repeatedly on <code>[F3]</code> to grant the editor some more display space.
+	</contents>
 </article>

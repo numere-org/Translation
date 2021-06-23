@@ -17,42 +17,50 @@
 -->
 
 <article id="switch">
-	<title string="Switch conditions" />
-	A switch condition is composed out of at least three commands: <code>switch (EX)</code>, <code>case VAL:</code> and <code>endswitch</code>. You can use an arbitrary number of <code>case</code> statements. Additionally, one can use a <code>default:</code> after the last <code>case</code>, to represent the "otherwise case". <code>EX</code> is a evaluatable expression, which will return either a numerical value or a string. Similar, <code>VAL</code> is a numerical value or a string, too.
-	NumeRe will evaluate the expression <code>EX</code>, compare the return value with the <code>VAL</code> of the <code>case</code> statements and jump into the first <code>case</code>, whose <code>VAL</code> matches the return value. If none is matching the return value, the optional <code>default</code> block is used. NumeRe will evaluate all succeeding expression (even those of the following <code>case</code> and <code>default</code> statements), until either the end of the switch condition is reached or the command <code>break</code> appears.
-	<codeblock>
-		switch (EX)
-		case VAL1:
-		\tExpressions
-		\t[break]
-		case VAL2:
-		\tExpressions
-		\t[break]
-		[...]
-		default:
-		\tExpressions
-		endswitch
-	</codeblock>
-	A switch condition has to contain at least one <code>case</code> statement. All further <code>case</code> or <code>default</code> statements are optional.
-	The switch condition may contain further <code>if</code>, <code>for</code> or <code>while</code> blocks and even further switch conditions. One has to keep in mind that the command <code>break</code> <em>won't</em> be propagated into surrounding loops, because it will be evaluated in <code>switch</code> directly. The command <code>continue</code> is propagated normally.
-	Compared to the <code>if</code> block, which resembles a similar functionality using multiple <code>elseif</code> sections, the runtime of the switch condition to find the correct case is constant. Therefore, the order of the cases is not important. In contrast, the <code>if</code> block will take a linear amount of time for each <code>elseif</code>, which was evaluted to FALSE.
-	The declaration may be canceled using the command <code>abort</code>. All entered commands for the current IF construct will be deleted. This is in contrast to the command <code>break</code>, which will be evaluated at runtime.
-	<example desc="A switch condition, which will select work days an weekends:" type="verbatim">
-		|   switch (x)
-		|   case 1:
-		|   case 2:
-		|   case 3:
-		|   case 4:
-		|   case 5:
-		|       print "Working day"
-		|       break;
-		|   case 6:
-		|   case 7:
-		|       print "Weekend"
-		|       break;
-		|   default:
-		|       print "This is not a day of the week."
-		|   endswitch
-	</example>
-	<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a> and <a href="nhlp://while?frame=self">help while</a>
+	<title string="Switch conditions" idxkey="switch, case" />
+	<keywords>
+		<keyword>switch</keyword>
+		<keyword>case</keyword>
+		<keyword>default</keyword>
+		<keyword>endswitch</keyword>
+	</keywords>
+	<contents>
+		A switch condition is composed out of at least three commands: <code>switch (EX)</code>, <code>case VAL:</code> and <code>endswitch</code>. You can use an arbitrary number of <code>case</code> statements. Additionally, one can use a <code>default:</code> after the last <code>case</code>, to represent the "otherwise case". <code>EX</code> is a evaluatable expression, which will return either a numerical value or a string. Similar, <code>VAL</code> is a numerical value or a string, too.
+		NumeRe will evaluate the expression <code>EX</code>, compare the return value with the <code>VAL</code> of the <code>case</code> statements and jump into the first <code>case</code>, whose <code>VAL</code> matches the return value. If none is matching the return value, the optional <code>default</code> block is used. NumeRe will evaluate all succeeding expression (even those of the following <code>case</code> and <code>default</code> statements), until either the end of the switch condition is reached or the command <code>break</code> appears.
+		<codeblock>
+			switch (EX)
+			case VAL1:
+			\tExpressions
+			\t[break]
+			case VAL2:
+			\tExpressions
+			\t[break]
+			[...]
+			default:
+			\tExpressions
+			endswitch
+		</codeblock>
+		A switch condition has to contain at least one <code>case</code> statement. All further <code>case</code> or <code>default</code> statements are optional.
+		The switch condition may contain further <code>if</code>, <code>for</code> or <code>while</code> blocks and even further switch conditions. One has to keep in mind that the command <code>break</code> <em>won't</em> be propagated into surrounding loops, because it will be evaluated in <code>switch</code> directly. The command <code>continue</code> is propagated normally.
+		Compared to the <code>if</code> block, which resembles a similar functionality using multiple <code>elseif</code> sections, the runtime of the switch condition to find the correct case is constant. Therefore, the order of the cases is not important. In contrast, the <code>if</code> block will take a linear amount of time for each <code>elseif</code>, which was evaluted to FALSE.
+		The declaration may be canceled using the command <code>abort</code>. All entered commands for the current IF construct will be deleted. This is in contrast to the command <code>break</code>, which will be evaluated at runtime.
+		<example desc="A switch condition, which will select work days an weekends:" type="verbatim">
+			|   switch (x)
+			|   case 1:
+			|   case 2:
+			|   case 3:
+			|   case 4:
+			|   case 5:
+			|       print "Working day"
+			|       break;
+			|   case 6:
+			|   case 7:
+			|       print "Weekend"
+			|       break;
+			|   default:
+			|       print "This is not a day of the week."
+			|   endswitch
+		</example>
+		<em>See also:</em> <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a> and <a href="nhlp://while?frame=self">help while</a>
+	</contents>
 </article>

@@ -17,18 +17,27 @@
 -->
 
 <article id="history">
-	<title string="List browser" />
-	The list browser is located at the bottom right of NumeRe's main window. Multiple functions are gathered in this common section: the history, the list of defined variables and the list of local procedures in the current editor window.
-	The list browser may be hidden and shown again by repeatedly pressing <code>[F4]</code>.
-	<h>History</h>
-	All inputs, which were performed in the <a href="nhlp://console?frame=new">console</a> by either the user or through a NumeRe function, are logged in the entry history. The history supports the same syntax highlighting as the editor does for NumeRe scripts.
-	If one clicks on a line and holds the mouse down, then the whole line will be selected and may be dragged into the <a href="nhlp://editor?frame=new">editor</a>. A double click copies the current line into the console and executes it simultaneously.
-	<em>Note:</em> The entry history will only once protocol identical expressions or commands, which are successively passed multiple times.
-	The context menu of the entry history allows deleting single lines of the history.
-	<h>List of defined variables</h>
-	This list displays all defined variables sorted according their type and including their current values. A context menu is available for tables, which provides further functionalities. Additionally, the content of a table may be displayed by double clicking on the table's name.
-	This window will be updated after each calculation or at the end of a script.
-	<h>List of local procedures</h>
-	If the current viewed editor window displays a procedure file, then the signatures of all local procedures in this file including their flags are listed here. The current main procedure will be highlighted differently. By double clicking on a procedure signature, NumeRe will jump to its definition.
-	This window will be updated during each save process.
+	<title string="List browser" idxkey="history,listbrowser" />
+	<keywords>
+		<keyword>histor</keyword>
+		<keyword>eingabe</keyword>
+		<keyword>entry</keyword>
+		<keyword>listbr</keyword>
+		<keyword>chronik</keyword>
+	</keywords>
+	<contents>
+		The list browser is located at the bottom right of NumeRe's main window. Multiple functions are gathered in this common section: the history, the list of defined variables and the list of local procedures in the current editor window.
+		The list browser may be hidden and shown again by repeatedly pressing <code>[F4]</code>.
+		<h>History</h>
+		All inputs, which were performed in the <a href="nhlp://console?frame=new">console</a> by either the user or through a NumeRe function, are logged in the entry history. The history supports the same syntax highlighting as the editor does for NumeRe scripts.
+		If one clicks on a line and holds the mouse down, then the whole line will be selected and may be dragged into the <a href="nhlp://editor?frame=new">editor</a>. A double click copies the current line into the console and executes it simultaneously.
+		<em>Note:</em> The entry history will only once protocol identical expressions or commands, which are successively passed multiple times.
+		The context menu of the entry history allows deleting single lines of the history.
+		<h>List of defined variables</h>
+		This list displays all defined variables sorted according their type and including their current values. A context menu is available for tables, which provides further functionalities. Additionally, the content of a table may be displayed by double clicking on the table's name.
+		This window will be updated after each calculation or at the end of a script.
+		<h>List of local procedures</h>
+		If the current viewed editor window displays a procedure file, then the signatures of all local procedures in this file including their flags are listed here. The current main procedure will be highlighted differently. By double clicking on a procedure signature, NumeRe will jump to its definition.
+		This window will be updated during each save process.
+	</contents>
 </article>

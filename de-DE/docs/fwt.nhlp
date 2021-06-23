@@ -17,21 +17,33 @@
 -->
 
 <article id="fwt">
-	<title string="Wavelet-Transformation von Datensätzen" />
-	NumeRe ist mit einem Algorithmus zu schnellen Wavelet-Transformation (<em>fast wavelet transformation; fwt</em>) ausgestattet, der Datensätze zur Analyse in die Zeit- und Skalenteile der verwendeten Wavelets zerlegen kann. Dieser Algorithmus wird mit dem Kommando <code>fwt</code> und den zu übergebenden Datenreihen aufgerufen:<codeblock>fwt DATENOBJEKT(I1:I2,J1:J2)</codeblock>
-	NumeRe erwartet bei einer Wavelet-Transformation zwei Spalten: Achsenwerte und Amplitude.
-	Standardmäßig werden <em>Daubechies-4</em> Wavelets zur Transformation verwendet. Dies kann mit der Option <code>type=TYP</code> und <code>k=STUFE</code> geändert werden. Die STUFE hängt dabei direkt mit dem TYP zusammen. Es sind nur bestimmte Werte vorhanden:
-	<table>
-		<tr><td><em>Typ</em></td><td><em>Optionswerte</em> <code>type</code></td><td><em>Stufen</em> <code>k</code></td></tr>
-		<tr><td>Haar</td><td><code>haar</code> oder <code>chaar</code></td><td>2</td></tr>
-		<tr><td>Daubechies</td><td><code>daubechies</code> oder <code>cdaubechies</code></td><td>(2), 4, 6, 8, 10, 12, 14, 16, 18, 20</td></tr>
-		<tr><td>B-Spline</td><td><code>bspline</code> oder <code>cbspline</code></td><td>103, 105, 202, 204, 206, 208, 301, 303, 305 307, 309</td></tr>
-	</table>
-	<em>Hinweis:</em> Das Daubechies-2-Wavelet entspricht dem Haar-Wavelet. Die Optionen, die mit <code>c*</code> beginnen, verwenden zentrierte Wavelets, die die Koeffzienten ihrer Subbänder an den Enden ausrichten. Eine Visualisierung kann hiermit einfacher zu verstehen sein.
-	Das Ergebnis der Wavelet-Transformation wird in Form zweier neuer Datenreihen im Cache <code>fwtdata()</code> (wird ggf. automatisch erzeugt) gespeichert. Das Ziel der Transformation kann aber auch mittels der Option <code>target=TARGETCACHE()</code> angepasst werden. Die erste Spalte enthält die Nummer der Koeffzienten und die zweite Spalte die entsprechenden Amplituden. Wird die Option <code>grid</code> übergeben, dann übersetzt NumeRe diese Datenreihen in ein Datengitter ähnlich einer <em>Kurzzeit-Fourier-Analyse</em>, das zur Analyse z.B. mittels <code>dens</code> geplottet werden kann. 
-	NumeRe kann auch eine inverse Transformation ausführen. Dazu muss die zusätzliche Option <code>-inverse</code> übergeben werden. Das ggf. mit <code>grid</code> erzeugte Datengitter kann <em>nicht</em> invertiert werden.
-	<example desc="Wavelet-Transformation der Spalten 1 und 2 in <code>data()</code>, wobei Daubechies-10-Wavelets verwendet werden sollen:">
-		fwt data(:,1:2) -type=daubechies k=10
-	</example>
-	<em>Siehe auch:</em> <a href="nhlp://dens?frame=self">help dens</a>, <a href="nhlp://fft?frame=self">help fft</a> und <a href="nhlp://stfa?frame=self">help stfa</a>
+	<title string="Wavelet-Transformation von Datensätzen" idxkey="fwt" />
+	<keywords>
+		<keyword>fwt</keyword>
+		<keyword>wavelet</keyword>
+		<keyword>daubechies</keyword>
+		<keyword>cdaubechies</keyword>
+		<keyword>haar</keyword>
+		<keyword>chaar</keyword>
+		<keyword>bspline</keyword>
+		<keyword>cbspline</keyword>
+	</keywords>
+	<contents>
+		NumeRe ist mit einem Algorithmus zu schnellen Wavelet-Transformation (<em>fast wavelet transformation; fwt</em>) ausgestattet, der Datensätze zur Analyse in die Zeit- und Skalenteile der verwendeten Wavelets zerlegen kann. Dieser Algorithmus wird mit dem Kommando <code>fwt</code> und den zu übergebenden Datenreihen aufgerufen:<codeblock>fwt DATENOBJEKT(I1:I2,J1:J2)</codeblock>
+		NumeRe erwartet bei einer Wavelet-Transformation zwei Spalten: Achsenwerte und Amplitude.
+		Standardmäßig werden <em>Daubechies-4</em> Wavelets zur Transformation verwendet. Dies kann mit der Option <code>type=TYP</code> und <code>k=STUFE</code> geändert werden. Die STUFE hängt dabei direkt mit dem TYP zusammen. Es sind nur bestimmte Werte vorhanden:
+		<table>
+			<tr><td><em>Typ</em></td><td><em>Optionswerte</em> <code>type</code></td><td><em>Stufen</em> <code>k</code></td></tr>
+			<tr><td>Haar</td><td><code>haar</code> oder <code>chaar</code></td><td>2</td></tr>
+			<tr><td>Daubechies</td><td><code>daubechies</code> oder <code>cdaubechies</code></td><td>(2), 4, 6, 8, 10, 12, 14, 16, 18, 20</td></tr>
+			<tr><td>B-Spline</td><td><code>bspline</code> oder <code>cbspline</code></td><td>103, 105, 202, 204, 206, 208, 301, 303, 305 307, 309</td></tr>
+		</table>
+		<em>Hinweis:</em> Das Daubechies-2-Wavelet entspricht dem Haar-Wavelet. Die Optionen, die mit <code>c*</code> beginnen, verwenden zentrierte Wavelets, die die Koeffzienten ihrer Subbänder an den Enden ausrichten. Eine Visualisierung kann hiermit einfacher zu verstehen sein.
+		Das Ergebnis der Wavelet-Transformation wird in Form zweier neuer Datenreihen im Cache <code>fwtdata()</code> (wird ggf. automatisch erzeugt) gespeichert. Das Ziel der Transformation kann aber auch mittels der Option <code>target=TARGETCACHE()</code> angepasst werden. Die erste Spalte enthält die Nummer der Koeffzienten und die zweite Spalte die entsprechenden Amplituden. Wird die Option <code>grid</code> übergeben, dann übersetzt NumeRe diese Datenreihen in ein Datengitter ähnlich einer <em>Kurzzeit-Fourier-Analyse</em>, das zur Analyse z.B. mittels <code>dens</code> geplottet werden kann. 
+		NumeRe kann auch eine inverse Transformation ausführen. Dazu muss die zusätzliche Option <code>-inverse</code> übergeben werden. Das ggf. mit <code>grid</code> erzeugte Datengitter kann <em>nicht</em> invertiert werden.
+		<example desc="Wavelet-Transformation der Spalten 1 und 2 in <code>data()</code>, wobei Daubechies-10-Wavelets verwendet werden sollen:">
+			fwt data(:,1:2) -type=daubechies k=10
+		</example>
+		<em>Siehe auch:</em> <a href="nhlp://dens?frame=self">help dens</a>, <a href="nhlp://fft?frame=self">help fft</a> und <a href="nhlp://stfa?frame=self">help stfa</a>
+	</contents>
 </article>

@@ -17,20 +17,28 @@
 -->
 
 <article id="detect">
-	<title string="Structure detection" />
-	The <code>detect</code> command can be used to detect structures in a 2D data grid. The structures are created in a table in columns for <expr>x</expr> and <expr>y</expr>, with different structures separated by blank lines (all structures are located below each other in the same two columns). The command has the following syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>where <code>TABLE()</code> must contain a <a href="nhlp://datagrid?frame=new">2D data grid</a>.
-	The options have the following meaning:
-	<list>
-		<item node="minval=VAL">Defines the lower threshold <expr>VAL</expr> above which structures are detected. Structures below this value will be ignored. By default, this is identical to the minimum of the data grid</item>
-		<item node="minlen=LENGTH">Defines the minimum length of points a structure must have. Shorter structures will be ignored. This is identical to 0 by default</item>
-		<item node="attract={x,y}">Defines the number of data points in <expr>x</expr> and <expr>y</expr> that structures can skip and still count as a single structure. By default, this is identical to <expr>(x,y) = (0,1)</expr>. <em>Note:</em> If only one value is passed, it will be used for<expr>y</expr></item>
-		<item node="target=TRGT()">Defines the target table where the structures will be stored. By default, this is identical to <code>detectdat()</code></item>
-	</list>
-	<example desc="Structure detection of a 2D map calculated from:<br><expr>exp(-30*(y - 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(y + 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(x + y)^2 - rnd(0,1)/10)</expr>, where <expr>rnd(0,1)</expr> returns uniformly distributed random numbers between 0 and 1">
-		detect grid() -set minval=1.5 attract={5,2} minlen=5
-		The detected structures were stored in "detectdat()".
-		compose; dens grid(); plot detectdat() -set box connect; endcompose
-	</example>
-	<img src="<>/docs/detect.png" />
-	<em>See  also:</em> <a href="nhlp://compose?frame=self">help compose</a>
+	<title string="Structure detection" idxkey="detect" />
+	<keywords>
+		<keyword>detect</keyword>
+		<keyword>attract</keyword>
+		<keyword>minval</keyword>
+		<keyword>minlen</keyword>
+	</keywords>
+	<contents>
+		The <code>detect</code> command can be used to detect structures in a 2D data grid. The structures are created in a table in columns for <expr>x</expr> and <expr>y</expr>, with different structures separated by blank lines (all structures are located below each other in the same two columns). The command has the following syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>where <code>TABLE()</code> must contain a <a href="nhlp://datagrid?frame=new">2D data grid</a>.
+		The options have the following meaning:
+		<list>
+			<item node="minval=VAL">Defines the lower threshold <expr>VAL</expr> above which structures are detected. Structures below this value will be ignored. By default, this is identical to the minimum of the data grid</item>
+			<item node="minlen=LENGTH">Defines the minimum length of points a structure must have. Shorter structures will be ignored. This is identical to 0 by default</item>
+			<item node="attract={x,y}">Defines the number of data points in <expr>x</expr> and <expr>y</expr> that structures can skip and still count as a single structure. By default, this is identical to <expr>(x,y) = (0,1)</expr>. <em>Note:</em> If only one value is passed, it will be used for<expr>y</expr></item>
+			<item node="target=TRGT()">Defines the target table where the structures will be stored. By default, this is identical to <code>detectdat()</code></item>
+		</list>
+		<example desc="Structure detection of a 2D map calculated from:<br/><expr>exp(-30*(y - 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(y + 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(x + y)^2 - rnd(0,1)/10)</expr>, where <expr>rnd(0,1)</expr> returns uniformly distributed random numbers between 0 and 1">
+			detect grid() -set minval=1.5 attract={5,2} minlen=5
+			The detected structures were stored in "detectdat()".
+			compose; dens grid(); plot detectdat() -set box connect; endcompose
+		</example>
+		<img src="<>/docs/detect.png" />
+		<em>See  also:</em> <a href="nhlp://compose?frame=self">help compose</a>
+	</contents>
 </article>

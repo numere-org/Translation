@@ -17,17 +17,31 @@
 -->
 
 <article id="read_write">
-	<title string="Lesen aus und Schreiben in Dateien" />
-	NumeRe kann (abgesehen von Datenfiles) auch <em>direkt</em> auf den Inhalt von Dateien zugreifen und diesen ändern. Dies kann z.B. genutzt werden, um eine Art Logbuch zu schreiben oder Einstellungen für Prozeduren oder Plugins zu speichern.
-	Inhalte aus Dateien können mittels des Kommandos <code>read DATEI</code> gelesen werden. Dabei liest dieses Kommando die gesamte Datei zeilenweise ein und gibt diese Zeilen als einzelne Zeichenketten zurück. Leerzeilen werden dabei standardmäßig ignoriert. Die eingelesenen Zeichenketten können direkt an das <code>string()</code>-Objekt zugewiesen werden:<codeblock>string() = read DATEI</codeblock>
-	Wenn die Datei Kommentare enthält, die ignoriert werden sollen und durch eine bestimmte Zeichensequenz markiert sind, dann kann diese mittels der Option <code>comments=ZEICHENSEQUENZ</code> übergeben werden.
-	Um Inhalte in Dateien zu schreiben, muss das Kommando <code>write</code> verwendet werden:<codeblock>write INHALT -set file=DATEI</codeblock>Besteht INHALT aus mehreren Zeichenketten, so werden diese als einzelne Zeilen in die Datei DATEI geschrieben. Als Zieldateien werden die NumeRe-eigenen Dateitypen (NumeRe-Script, NumeRe-Prozedur und NumeRe-Datenfile) aus Sicherheitsgründen unterdrückt.
-	Wird der optionale Parameter <code>-noquotes</code> (bzw. <code>-nq</code>) verwendet, werden die Anführungszeichen in der Ausgabedatei unterdrückt. 
-	Sowohl <code>read</code> als auch <code>write</code> können Leerzeilen beibehalten, wenn der Parameter <code>-keepdim</code> (oder <code>-k</code>) verwendet wird. Außerdem kann <code>write</code> mit dem optionalen Parameter <code>-mode=MODE</code> versehen werden, der bestimmt, wie INHALT in die Datei geschrieben wird:
-	<list>
-		<item node="app">hängt INHALT an die vorhandenen Inhalte an</item>
-		<item node="overwrite">überschreibt die Datei zeichenweise</item>
-		<item node="trunc">entfernt zunächst alle Inhalte der Datei</item>
-	</list>
-	Per Default ist <code>trunc</code> aktiviert.
+	<title string="Lesen aus und Schreiben in Dateien" idxkey="read, write" />
+	<keywords>
+		<keyword>lesen</keyword>
+		<keyword>read</keyword>
+		<keyword>schreib</keyword>
+		<keyword>write</keyword>
+		<keyword>app</keyword>
+		<keyword>comments</keyword>
+		<keyword>overwrite</keyword>
+		<keyword>override</keyword>
+		<keyword>trunc</keyword>
+		<keyword>mode</keyword>
+	</keywords>
+	<contents>
+		NumeRe kann (abgesehen von Datenfiles) auch <em>direkt</em> auf den Inhalt von Dateien zugreifen und diesen ändern. Dies kann z.B. genutzt werden, um eine Art Logbuch zu schreiben oder Einstellungen für Prozeduren oder Plugins zu speichern.
+		Inhalte aus Dateien können mittels des Kommandos <code>read DATEI</code> gelesen werden. Dabei liest dieses Kommando die gesamte Datei zeilenweise ein und gibt diese Zeilen als einzelne Zeichenketten zurück. Leerzeilen werden dabei standardmäßig ignoriert. Die eingelesenen Zeichenketten können direkt an das <code>string()</code>-Objekt zugewiesen werden:<codeblock>string() = read DATEI</codeblock>
+		Wenn die Datei Kommentare enthält, die ignoriert werden sollen und durch eine bestimmte Zeichensequenz markiert sind, dann kann diese mittels der Option <code>comments=ZEICHENSEQUENZ</code> übergeben werden.
+		Um Inhalte in Dateien zu schreiben, muss das Kommando <code>write</code> verwendet werden:<codeblock>write INHALT -set file=DATEI</codeblock>Besteht INHALT aus mehreren Zeichenketten, so werden diese als einzelne Zeilen in die Datei DATEI geschrieben. Als Zieldateien werden die NumeRe-eigenen Dateitypen (NumeRe-Script, NumeRe-Prozedur und NumeRe-Datenfile) aus Sicherheitsgründen unterdrückt.
+		Wird der optionale Parameter <code>-noquotes</code> (bzw. <code>-nq</code>) verwendet, werden die Anführungszeichen in der Ausgabedatei unterdrückt. 
+		Sowohl <code>read</code> als auch <code>write</code> können Leerzeilen beibehalten, wenn der Parameter <code>-keepdim</code> (oder <code>-k</code>) verwendet wird. Außerdem kann <code>write</code> mit dem optionalen Parameter <code>-mode=MODE</code> versehen werden, der bestimmt, wie INHALT in die Datei geschrieben wird:
+		<list>
+			<item node="app">hängt INHALT an die vorhandenen Inhalte an</item>
+			<item node="overwrite">überschreibt die Datei zeichenweise</item>
+			<item node="trunc">entfernt zunächst alle Inhalte der Datei</item>
+		</list>
+		Per Default ist <code>trunc</code> aktiviert.
+	</contents>
 </article>

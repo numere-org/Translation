@@ -17,10 +17,16 @@
 -->
 
 <article id="refactoring">
-	<title string="Code refactoring" />
-	NumeRe supports during the refactoring of code sections. In addition to the <a href="nhlp://analyzer?frame=new">code analyzer</a> NumeRe provides the following functions via the context menu of the editor:
-	<list>
-		<item node="Rename symbols">This function provides the possibility to rename each occurence of the current symbol with a new name. The scope of the symbol is considered in this case, therefore only symbols in the current scope are renamed.</item>
-		<item node="Extract sections">A marked section of code may be extracted into a new procedure with this function. NumeRe will open the procedure in a new window, where it may be modified further. One has to keep in mind that the procedure interfaces are created based upon a heuristic. Therefore errors are possible.</item>
-	</list>
+	<title string="Code refactoring" idxkey="refactoring" />
+	<keywords>
+		<keyword>refactor</keyword>
+		<keyword>rename</keyword>
+	</keywords>
+	<contents>
+		NumeRe supports during the refactoring of code sections. In addition to the <a href="nhlp://analyzer?frame=new">code analyzer</a> NumeRe provides the following functions via the context menu of the editor:
+		<list>
+			<item node="Rename symbols">This function provides the possibility to rename each occurence of the current symbol with a new name. The scope of the symbol is considered in this case, therefore only symbols in the current scope are renamed.</item>
+			<item node="Extract sections">A marked section of code may be extracted into a new procedure with this function. NumeRe will open the procedure in a new window, where it may be modified further. One has to keep in mind that the procedure interfaces are created based upon a heuristic. Therefore errors are possible.</item>
+		</list>
+	</contents>
 </article>

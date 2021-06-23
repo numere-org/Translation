@@ -17,35 +17,55 @@
 -->
 
 <article id="dialog">
-	<title string="Create and use dialogs" />
-	NumeRe may create different types of dialogs, which may be used to interact graphically with the user. A dialog is created with the command <code>dialog</code>. The default values and a set of options are following this command. The generic syntax of this command is as follows:<codeblock>dialog DEFAULTVALUES -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>The selection of the user or the value of the clicked button is returned as one or multiple strings. An empty string equals the click on the "cancel" button.
-	<em>Important:</em> a dialogs always interrupts the evaluation process of NumeRe. NumeRe will not continue until the user closed the dialog. Therefore a dialog is not reasonable to display the status of an evaluation or a similiar use case.
-	The type of the dialog is selected via <code>type=TYPE</code>. The following values are possible:
-	<list>
-		<item node="messagebox">Displays a message box (Standard). This may be used to inform the user about something or to require a yes/no decision. The message box does not need a default value. Additionally, the displayed icon and the buttins may be modified (see below). The return value of this type of dialog depends on the used buttons.</item>
-		<item node="textentry">Displays a window with the possibility for a text entry. The default value is displayed in the corresponding line.</item>
-		<item node="filedialog">Opens a file selection window where a file can be selected whose file path is then available as return value. For the default value up to three strings can be specified, where the first string defines the start directory, the second the default file name and the third a file type mask. The mask is composed of a description and the corresponding filter: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> The filter can contain wildcards and multiple filter expressions at the same time, e.g. <code>"Text files|*.txt|Project files|*.xml;*.txt;*.ini"</code>. If the user cancels this dialog, an empty string is returned.</item>
-		<item node="dirdialog">Opens a directory picker dialog, in which a folder may be chosen, whose path will be the return value of this dialog. The default value is used as starting path. If the user cancels, an empty string is returned.</item>
-		<item node="listdialog">Display a set of strings, out of which the user may be choose one. The strings have to be passed as default values. If the user cancels, an emptym string is returned.</item>
-		<item node="selectiondialog">Display a set of strings, out of which the user may be choose one or more, which will be returned as a string vector. The strings have to be passed as default values. If the user cancels, an empty string is returned.</item>
-	</list>
-	The option value <code>msg=STRING</code> displays STRING as an informative message in the opened dialog. However, <code>filedialog</code> and <code>dirdialog</code> do not support this feature. Using <code>title=STRING</code> one may modify the window title of the dialog.
-	The displayed icon and the used buttons may be modified for the dialog type <code>messagebox</code>. The following values are available for <code>icon=ICON</code>:
-	<list>
-		<item node="infoicon">Displays a usual exclamation mark icon (Standard)</item>
-		<item node="questionicon">Displays a question mark icon</item>
-		<item node="warnicon">Displays a yellow warning sign icon</item>
-		<item node="erroricon">Displays a red error icon</item>
-	</list>
-	The following values may be set for <code>buttons=BUTTONS</code>:
-	<list>
-		<item node="ok">Displays an "OK" button (Standard). This button has the value <code>"ok"</code> in a message box</item>
-		<item node="okcancel">Displays an "OK" and a "Cancel" button. These buttons have the values <code>"ok"</code> and <code>"cancel"</code> in a message box</item>
-		<item node="yesno">Displays a "Yes" and a "No" button. These buttins have the values <code>"yes"</code> and <code>"no"</code> in a message box</item>
-	</list>
-	<example desc="Displaying a listdialog with chooseable options:">
-		sOption = dialog "Square", "Ring", "Line" -set type=listdialog title="Geometry selection" msg="Please choose the current geometry:"
-	</example>
-	<img src="<>/docs/dialog.png" />
-	<em>See also:</em> <a href="nhlp://window?frame=self">help window</a>
+	<title string="Create and use dialogs" idxkey="dialog" />
+	<keywords>
+		<keyword>dialog</keyword>
+		<keyword>messagebox</keyword>
+		<keyword>textentry</keyword>
+		<keyword>dirdialog</keyword>
+		<keyword>filedialog</keyword>
+		<keyword>listdialog</keyword>
+		<keyword>selectiondialog</keyword>
+		<keyword>icon</keyword>
+		<keyword>erroricon</keyword>
+		<keyword>warnicon</keyword>
+		<keyword>infoicon</keyword>
+		<keyword>questionicon</keyword>
+		<keyword>buttons</keyword>
+		<keyword>ok</keyword>
+		<keyword>okcancel</keyword>
+		<keyword>yesno</keyword>
+	</keywords>
+	<contents>
+		NumeRe may create different types of dialogs, which may be used to interact graphically with the user. A dialog is created with the command <code>dialog</code>. The default values and a set of options are following this command. The generic syntax of this command is as follows:<codeblock>dialog DEFAULTVALUES -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>The selection of the user or the value of the clicked button is returned as one or multiple strings. An empty string equals the click on the "cancel" button.
+		<em>Important:</em> a dialogs always interrupts the evaluation process of NumeRe. NumeRe will not continue until the user closed the dialog. Therefore a dialog is not reasonable to display the status of an evaluation or a similiar use case.
+		The type of the dialog is selected via <code>type=TYPE</code>. The following values are possible:
+		<list>
+			<item node="messagebox">Displays a message box (Standard). This may be used to inform the user about something or to require a yes/no decision. The message box does not need a default value. Additionally, the displayed icon and the buttins may be modified (see below). The return value of this type of dialog depends on the used buttons.</item>
+			<item node="textentry">Displays a window with the possibility for a text entry. The default value is displayed in the corresponding line.</item>
+			<item node="filedialog">Opens a file selection window where a file can be selected whose file path is then available as return value. For the default value up to three strings can be specified, where the first string defines the start directory, the second the default file name and the third a file type mask. The mask is composed of a description and the corresponding filter: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> The filter can contain wildcards and multiple filter expressions at the same time, e.g. <code>"Text files|*.txt|Project files|*.xml;*.txt;*.ini"</code>. If the user cancels this dialog, an empty string is returned.</item>
+			<item node="dirdialog">Opens a directory picker dialog, in which a folder may be chosen, whose path will be the return value of this dialog. The default value is used as starting path. If the user cancels, an empty string is returned.</item>
+			<item node="listdialog">Display a set of strings, out of which the user may be choose one. The strings have to be passed as default values. If the user cancels, an emptym string is returned.</item>
+			<item node="selectiondialog">Display a set of strings, out of which the user may be choose one or more, which will be returned as a string vector. The strings have to be passed as default values. If the user cancels, an empty string is returned.</item>
+		</list>
+		The option value <code>msg=STRING</code> displays STRING as an informative message in the opened dialog. However, <code>filedialog</code> and <code>dirdialog</code> do not support this feature. Using <code>title=STRING</code> one may modify the window title of the dialog.
+		The displayed icon and the used buttons may be modified for the dialog type <code>messagebox</code>. The following values are available for <code>icon=ICON</code>:
+		<list>
+			<item node="infoicon">Displays a usual exclamation mark icon (Standard)</item>
+			<item node="questionicon">Displays a question mark icon</item>
+			<item node="warnicon">Displays a yellow warning sign icon</item>
+			<item node="erroricon">Displays a red error icon</item>
+		</list>
+		The following values may be set for <code>buttons=BUTTONS</code>:
+		<list>
+			<item node="ok">Displays an "OK" button (Standard). This button has the value <code>"ok"</code> in a message box</item>
+			<item node="okcancel">Displays an "OK" and a "Cancel" button. These buttons have the values <code>"ok"</code> and <code>"cancel"</code> in a message box</item>
+			<item node="yesno">Displays a "Yes" and a "No" button. These buttins have the values <code>"yes"</code> and <code>"no"</code> in a message box</item>
+		</list>
+		<example desc="Displaying a listdialog with chooseable options:">
+			sOption = dialog "Square", "Ring", "Line" -set type=listdialog title="Geometry selection" msg="Please choose the current geometry:"
+		</example>
+		<img src="<>/docs/dialog.png" />
+		<em>See also:</em> <a href="nhlp://window?frame=self">help window</a>
+	</contents>
 </article>

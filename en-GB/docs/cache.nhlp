@@ -17,50 +17,65 @@
 -->
 
 <article id="cache">
-	<title string="Tables (Caches)" />
-	Tables are active storages in NumeRe that can cache tabular data so that it can be processed further.
-	By default the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
-	Individual elements of a table can be read using the syntax <code>TABLE(LINE, COLUMN)</code>. Values can also be written to the table using this syntax. Tables are to be treated like normal variables. The indexing is carried out by natural numbers <em>greater</em> zero: 1,2,3,...
-	Ranges of elements can be obtained using the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
-	When a table is accessed, the special variables <code>nlines</code> contain the number of rows and <code>ncols</code> contain the number of columns of the current table if they are used in its argument parentheses. This also applies if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>
-	The column headings can be read and edited in a similar way: <code>TABLE(#, COLUMN)</code> or <code>TABLE(#, COLUMN) = HEAD</code>
-	<h>Commands in combination with tables</h>
-	Special commands are available in connection with tables:
-	<list>
-		<item node="new TABLE1(), TABLE2(), ...">Create the tables <code>TABLE1(), TABLE2(), ...</code>
-		<item node="clear TABLE()">Delete the contents of the table <code>TABLE()</code></item>
-		<item node="clear -memory">Delete all tables and the automatic backup</item>
-		<item node="show TABLE()">Display data from the corresponding table</item>
-		<item node="showf TABLE()">Display complete record (only has influence if no external viewer is used)</item>
-		<item node="rename TABLE(), NEWNAME()">Rename the table <code>TABLE</code> to <code>NEWNAME</code>. This cannot be applied to <code>table</code>!</item>
-		<item node="swap TABLE1(), TABLE2()">Swap the contents of the table <code>TABLE1</code> with the contents of <code>TABLE2</code>
-		<item node="save TABLE()">Save data from the selected table to a file with an automatically generated name. With <code>save TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must be enclosed by quotation marks</item>
-		<item node="export TABLE()">Export data from the selected table to a text file with automatically generated file name. With <code>export TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must also be enclosed in quotation marks. (With the extension *.tex a TeX file is created, with *.csv a CSV file and with *.xls an Excel(R) workbook is created)</item>
-		<item node="delete TABLE(i1:i2,j1:j2)">All entries from line <expr>i1</expr> to <expr>i2</expr> and from column <expr>j1</expr> to <expr>j2</expr> are irreversibly deleted. Of course, you can also select only a single element</item>
-		<item node="remove TABLE1(), TABLE2(), ...">Removes the tables <code>TABLE1(), TABLE2(), ...</code> completely
-	</list>
-	It is possible to append <code>-ignore</code> to <code>clear</code> and <code>delete</code> to suppress the required confirmation.
-	<h>Methods for working with tables</h>
-	Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methods are <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> and <code>norm</code>. They correspond to the standard functions of the same name and are executed on all elements of the selected table. The following methods are additionally defined:
-	<list>
-		<item node="TABLE().name">Returns the name of the table as string, which shortens constructs like <code>to_string(TABLE())</code>
-		<item node="TABLE().size">Returns the size of the table in rows and columns</item>
-		<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
-		<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
-		<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
-	</list>
-	The following are defined as modifiers:
-	<list>
-		<item node=".lines">Applies the corresponding method line by line and returns a corresponding number of results</item>
-		<item node=".cols">Applies the corresponding method column by column and returns a corresponding number of results</item>
-		<item node=".grid">Declares the current table as a data grid so that the first two columns are ignored for the calculation</item>
-		<item node=".every(nFirst,nIncr)">Use with <code>lines</code> or <code>cols</code> to specify the first column/row (nFirst) and the increment (each => nIncr=1, each second => nIncr=2, etc.). If only one value is specified, it is used for both values. Columns/rows can also be specifically selected if a vector for nFirst (<code>.every({1:10})</code>) is passed</item>
-	</list>
-	<example desc="Display data in the table 'table()', then sort columns 3-6 in ascending order by column 1 and calculate the sum of every second column:">
-		show table()
-		[...]
-		sort table() cols=1[3:6]
-		table().sum.cols.every(2,2)
-	</example>
-	<em>See also</em> <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://remove?frame=self">help remove</a>, <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://save?frame=self">help save</a>, <a href="nhlp://string?frame=self">help string</a>, <a href="nhlp://cluster?frame=self">help cluster</a> and <a href="nhlp://delete?frame=self">help delete</a>
+	<title string="Tables (Caches)" idxkey="cache, table" />
+	<keywords>
+		<keyword>cache</keyword>
+		<keyword>rename</keyword>
+		<keyword>table</keyword>
+		<keyword>tabell</keyword>
+		<keyword>swap</keyword>
+		<keyword>desc</keyword>
+		<keyword>lines</keyword>
+		<keyword>nlines</keyword>
+		<keyword>cols</keyword>
+		<keyword>ncols</keyword>
+		<keyword>every</keyword>
+	</keywords>
+	<contents>
+		Tables are active storages in NumeRe that can cache tabular data so that it can be processed further.
+		By default the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
+		Individual elements of a table can be read using the syntax <code>TABLE(LINE, COLUMN)</code>. Values can also be written to the table using this syntax. Tables are to be treated like normal variables. The indexing is carried out by natural numbers <em>greater</em> zero: 1,2,3,...
+		Ranges of elements can be obtained using the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
+		When a table is accessed, the special variables <code>nlines</code> contain the number of rows and <code>ncols</code> contain the number of columns of the current table if they are used in its argument parentheses. This also applies if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>
+		The column headings can be read and edited in a similar way: <code>TABLE(#, COLUMN)</code> or <code>TABLE(#, COLUMN) = HEAD</code>
+		<h>Commands in combination with tables</h>
+		Special commands are available in connection with tables:
+		<list>
+			<item node="new TABLE1(), TABLE2(), ...">Create the tables <code>TABLE1(), TABLE2(), ...</code>
+			<item node="clear TABLE()">Delete the contents of the table <code>TABLE()</code></item>
+			<item node="clear -memory">Delete all tables and the automatic backup</item>
+			<item node="show TABLE()">Display data from the corresponding table</item>
+			<item node="showf TABLE()">Display complete record (only has influence if no external viewer is used)</item>
+			<item node="rename TABLE(), NEWNAME()">Rename the table <code>TABLE</code> to <code>NEWNAME</code>. This cannot be applied to <code>table</code>!</item>
+			<item node="swap TABLE1(), TABLE2()">Swap the contents of the table <code>TABLE1</code> with the contents of <code>TABLE2</code>
+			<item node="save TABLE()">Save data from the selected table to a file with an automatically generated name. With <code>save TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must be enclosed by quotation marks</item>
+			<item node="export TABLE()">Export data from the selected table to a text file with automatically generated file name. With <code>export TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must also be enclosed in quotation marks. (With the extension *.tex a TeX file is created, with *.csv a CSV file and with *.xls an Excel(R) workbook is created)</item>
+			<item node="delete TABLE(i1:i2,j1:j2)">All entries from line <expr>i1</expr> to <expr>i2</expr> and from column <expr>j1</expr> to <expr>j2</expr> are irreversibly deleted. Of course, you can also select only a single element</item>
+			<item node="remove TABLE1(), TABLE2(), ...">Removes the tables <code>TABLE1(), TABLE2(), ...</code> completely
+		</list>
+		It is possible to append <code>-ignore</code> to <code>clear</code> and <code>delete</code> to suppress the required confirmation.
+		<h>Methods for working with tables</h>
+		Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methods are <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> and <code>norm</code>. They correspond to the standard functions of the same name and are executed on all elements of the selected table. The following methods are additionally defined:
+		<list>
+			<item node="TABLE().name">Returns the name of the table as string, which shortens constructs like <code>to_string(TABLE())</code>
+			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
+			<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
+			<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
+			<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
+		</list>
+		The following are defined as modifiers:
+		<list>
+			<item node=".lines">Applies the corresponding method line by line and returns a corresponding number of results</item>
+			<item node=".cols">Applies the corresponding method column by column and returns a corresponding number of results</item>
+			<item node=".grid">Declares the current table as a data grid so that the first two columns are ignored for the calculation</item>
+			<item node=".every(nFirst,nIncr)">Use with <code>lines</code> or <code>cols</code> to specify the first column/row (nFirst) and the increment (each => nIncr=1, each second => nIncr=2, etc.). If only one value is specified, it is used for both values. Columns/rows can also be specifically selected if a vector for nFirst (<code>.every({1:10})</code>) is passed</item>
+		</list>
+		<example desc="Display data in the table 'table()', then sort columns 3-6 in ascending order by column 1 and calculate the sum of every second column:">
+			show table()
+			[...]
+			sort table() cols=1[3:6]
+			table().sum.cols.every(2,2)
+		</example>
+		<em>See also</em> <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://remove?frame=self">help remove</a>, <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://save?frame=self">help save</a>, <a href="nhlp://string?frame=self">help string</a>, <a href="nhlp://cluster?frame=self">help cluster</a> and <a href="nhlp://delete?frame=self">help delete</a>
+	</contents>
 </article>

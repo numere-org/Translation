@@ -17,8 +17,14 @@
 -->
 
 <article id="symboltree">
-	<title string="Symboltree" />
-	The symboltree lists commands, functions and constants including their description, which may be inserted directly from here into the editor and the console. The different symbols are classified according their attributes. Because e.g. a function may have multiple attributes, it may occur multiple times in the symboltree.
-	The installed <a href="nhlp://plugin?frame=new">plugins</a> and the <a href="nhlp://define?frame=new">custom defined functions</a> are listed as well.
-	The symbols may be copied either via drag'n'drop or via double click into the <a href="nhlp://editor?frame=new">editor</a> or via the context menu into the <a href="nhlp://console?frame=new">console</a>.
+	<title string="Symboltree" idxkey="symboltree" />
+	<keywords>
+		<keyword>symboltr</keyword>
+		<keyword>symbolb</keyword>
+	</keywords>
+	<contents>
+		The symboltree lists commands, functions and constants including their description, which may be inserted directly from here into the editor and the console. The different symbols are classified according their attributes. Because e.g. a function may have multiple attributes, it may occur multiple times in the symboltree.
+		The installed <a href="nhlp://plugin?frame=new">plugins</a> and the <a href="nhlp://define?frame=new">custom defined functions</a> are listed as well.
+		The symbols may be copied either via drag'n'drop or via double click into the <a href="nhlp://editor?frame=new">editor</a> or via the context menu into the <a href="nhlp://console?frame=new">console</a>.
+	</contents>
 </article>

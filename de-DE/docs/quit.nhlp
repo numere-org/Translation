@@ -17,8 +17,14 @@
 -->
 
 <article id="quit">
-	<title string="NumeRe beenden" />
-	Das Kommando <code>quit</code> beendet NumeRe und löscht dabei sämtliche Einträge im Speicher. Falls noch ungesicherte Daten im Cache vorhanden sein sollten, wird NumeRe fragen, ob diese gespeichert werden sollen.
-	Der zusätzliche Parameter <code>-as</code> legt ggf. eine automatische Speicherung an, die beim nächsten Start von NumeRe wieder in den Speicher geladen wird, um damit weiterarbeiten zu können.
-	Der Parameter <code>-i</code> wird stattdessen NumeRe beenden, ohne dass auf etwaige vorhandene Daten Rücksicht genommen wird.
+	<title string="NumeRe beenden" idxkey="quit" />
+	<keywords>
+		<keyword>ende</keyword>
+		<keyword>quit</keyword>
+	</keywords>
+	<contents>
+		Das Kommando <code>quit</code> beendet NumeRe und löscht dabei sämtliche Einträge im Speicher. Falls noch ungesicherte Daten im Cache vorhanden sein sollten, wird NumeRe fragen, ob diese gespeichert werden sollen.
+		Der zusätzliche Parameter <code>-as</code> legt ggf. eine automatische Speicherung an, die beim nächsten Start von NumeRe wieder in den Speicher geladen wird, um damit weiterarbeiten zu können.
+		Der Parameter <code>-i</code> wird stattdessen NumeRe beenden, ohne dass auf etwaige vorhandene Daten Rücksicht genommen wird.
+	</contents>
 </article>

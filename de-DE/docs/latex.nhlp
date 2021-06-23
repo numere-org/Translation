@@ -17,29 +17,36 @@
 -->
 
 <article id="latex">
-	<title string="LaTeX-Dokumentation und LaTeX-Compiler" />
-	Wenn eine LaTeX-Distribution (z.B. <em>MikTeX</em> oder <em>TeXLive</em>) auf dem Computer installiert ist, so kann diese in den Optionen mit NumeRe verknüpft werden. NumeRe kann diese Distribution dann verwenden, um Dokumentationen von Scripts oder Prozeduren zu erzeugen, oder um bereits erzeugte TeX-Dateien in PDFs zu kompilieren.
-	Im "Werkzeuge"-Menü finden sich unter dem Punkt "LaTeX-Generator" die Möglichkeiten, eine Dokumentation eines Scripts oder einer Prozedur im TeX-Format zu erzeugen, dieses auch gleich in ein PDF zu kompilieren (hier werden entsprechend Hauptdatei und Header automatisch erzeugt) oder den LaTeX-Compiler für eine bereits vorhandene TeX-Datei auszuführen. Es wird dabei stets der XeLaTeX-Compiler verwendet.
-	<em>Hinweis:</em> Dokumentationen, die als einzelne LaTeX-Dateien erzeugt wurden, können nicht direkt kompiliert werden. Es muss eine LaTeX-Hauptdatei verfügbar sein und die Syntaxhervorhebung muss entsprechend definiert werden. Ein kompletter Satz wird bei der direkten Kompilierung erzeugt.
-	Wenn eine Dokumentation erzeugt wird, wird der Code der Prozedur oder des Scriptes in ein sogenanntes <em>Listing</em> kopiert, in dem die Syntax entsprechend mit Farben und Fettdruck hervorgehoben wird.
-	Bestimmte Kommentare können dabei in Text übersetzt werden, wenn sie entweder hinter <code>##!</code> stehen oder sich zwischen <code>#*! ... *#</code> befinden. Dabei werden auch Spiegelstriche der Form
-	<codeblock>
-		#*! Text
-		- Spiegelstrich
-		- Spiegelstrich
-		Text
-		*#
-	</codeblock>
-	in die entsprechende LaTeX-Umgebung übersetzt:
-	<codeblock>
-		Text
-		\begin{itemize}
-		\item Spiegelstrich
-		\item Spiegelstrich
-		\end{itemize}
-		Text
-	</codeblock>
-	Wenn Code im normalen Text gezeigt werden soll, so muss dieser Abschnitt durch doppelte Ausrufezeichen umgegeben sein: <code>!!CODE IN EINEM TEXT!!</code>
-	<a href="nhlp://procedure?frame=new">Prozedur-Dokumentationen</a> (auch als "Prozedur-Header" bekannt) orientieren sich am Doxygen-Standard und definieren dazu einige Signalwörter, die in ebendiesem Artikel erläuert werden. Diese Signalwörter werden beim Konvertieren in ein PDF in spezielle Elemente wie z.B. Parametertabellen umgewandelt.
-	Kommentare, die hinter <code>##~</code> stehen oder sich zwischen <code>#** ... *#</code> befinden, werden vollkommen ignoriert und nicht in der Dokumentation angezeigt. (Dies kann verwendet werden, um auskommentierten Code zu verstecken.)
+	<title string="LaTeX-Dokumentation und LaTeX-Compiler" idxkey="latex" />
+	<keywords>
+		<keyword>latex</keyword>
+		<keyword>tex</keyword>
+		<keyword>doxygen</keyword>
+	</keywords>
+	<contents>
+		Wenn eine LaTeX-Distribution (z.B. <em>MikTeX</em> oder <em>TeXLive</em>) auf dem Computer installiert ist, so kann diese in den Optionen mit NumeRe verknüpft werden. NumeRe kann diese Distribution dann verwenden, um Dokumentationen von Scripts oder Prozeduren zu erzeugen, oder um bereits erzeugte TeX-Dateien in PDFs zu kompilieren.
+		Im "Werkzeuge"-Menü finden sich unter dem Punkt "LaTeX-Generator" die Möglichkeiten, eine Dokumentation eines Scripts oder einer Prozedur im TeX-Format zu erzeugen, dieses auch gleich in ein PDF zu kompilieren (hier werden entsprechend Hauptdatei und Header automatisch erzeugt) oder den LaTeX-Compiler für eine bereits vorhandene TeX-Datei auszuführen. Es wird dabei stets der XeLaTeX-Compiler verwendet.
+		<em>Hinweis:</em> Dokumentationen, die als einzelne LaTeX-Dateien erzeugt wurden, können nicht direkt kompiliert werden. Es muss eine LaTeX-Hauptdatei verfügbar sein und die Syntaxhervorhebung muss entsprechend definiert werden. Ein kompletter Satz wird bei der direkten Kompilierung erzeugt.
+		Wenn eine Dokumentation erzeugt wird, wird der Code der Prozedur oder des Scriptes in ein sogenanntes <em>Listing</em> kopiert, in dem die Syntax entsprechend mit Farben und Fettdruck hervorgehoben wird.
+		Bestimmte Kommentare können dabei in Text übersetzt werden, wenn sie entweder hinter <code>##!</code> stehen oder sich zwischen <code>#*! ... *#</code> befinden. Dabei werden auch Spiegelstriche der Form
+		<codeblock>
+			#*! Text
+			- Spiegelstrich
+			- Spiegelstrich
+			Text
+			*#
+		</codeblock>
+		in die entsprechende LaTeX-Umgebung übersetzt:
+		<codeblock>
+			Text
+			\begin{itemize}
+			\item Spiegelstrich
+			\item Spiegelstrich
+			\end{itemize}
+			Text
+		</codeblock>
+		Wenn Code im normalen Text gezeigt werden soll, so muss dieser Abschnitt durch doppelte Ausrufezeichen umgegeben sein: <code>!!CODE IN EINEM TEXT!!</code>
+		<a href="nhlp://procedure?frame=new">Prozedur-Dokumentationen</a> (auch als "Prozedur-Header" bekannt) orientieren sich am Doxygen-Standard und definieren dazu einige Signalwörter, die in ebendiesem Artikel erläuert werden. Diese Signalwörter werden beim Konvertieren in ein PDF in spezielle Elemente wie z.B. Parametertabellen umgewandelt.
+		Kommentare, die hinter <code>##~</code> stehen oder sich zwischen <code>#** ... *#</code> befinden, werden vollkommen ignoriert und nicht in der Dokumentation angezeigt. (Dies kann verwendet werden, um auskommentierten Code zu verstecken.)
+	</contents>
 </article>
