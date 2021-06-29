@@ -80,6 +80,7 @@ date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit format
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Sammelt zusätzliche Informationen bei Fehlern in Prozeduren, siehe "help debugger"~fehlersuche debugging bugs throw error~help debugger
+declare~Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei~define macro makro filestatic constant konstante~help declare
 dectobase(sBase,nDecVal)~Konvertiert die Zahl nDecVal aus dem Dezimalsystem in die Basis und gibt das Ergebnis als Zeichenkette zurück~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Gradwert von x [Radiant]~todegree gradwert rad2deg() umrechnen degree()~degree(

@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Additional commands" idxkey="about, hline, warn, close, assert" />
+	<title string="Additional commands" idxkey="about, hline, warn, close, assert, declare" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -27,6 +27,7 @@
 		<keyword>warn</keyword>
 		<keyword>close</keyword>
 		<keyword>assert</keyword>
+		<keyword>declare</keyword>
 	</keywords>
 	<contents>
 		Beside of the more evaluation-oriented commands knows NumeRe some additional commands, which can be assigned to the pure user interface. These are for example the commands <a href="nhlp://help?frame=new"><code>help</code></a> and <a href="nhlp://find?frame=new"><code>find</code></a>, as well as the following ones:
@@ -36,6 +37,7 @@
 			<item node="warn">This command will display the passed string as a warning in the console. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
 			<item node="close">This command closes previously opened windows, which are selected by parameters using <code>close -PAR</code>: <code>-graphs</code> closes all graphs, <code>-docs</code> all documentation windows, <code>-tables</code> all tables, <code>-images</code> all ImageViewers and <code>-all</code> all windows from this list.</item>
 			<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the procedure flag <code>test</code>, extensive software tests may be implemented.</item>
+			<item node="declare">This command declares one or more file-specific constants for the current script or procedure file. The syntax is <code>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</code>, where numeric values as well as strings or whole expressions can be used for the values. These replace the constants used at the time the file is read. In a procedure file this command can appear at any place (also outside procedures) and is valid from its occurrence for the following lines. Using constants can make code much more readable, as when using explicit literal constants.</item>
 		</list>
 	</contents>
 </article>
