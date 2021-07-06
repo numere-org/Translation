@@ -27,6 +27,13 @@
 		Procedures and window layouts must be placed in a <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block that is part of a <a href="nhlp://script?frame=new">NumeRe script</a> and is skipped during ordinary execution of a script:<codeblock>&lt;install&gt;\n\tPROZEDURES AND WINDOW-LAYOUTS\n&lt;endinstall&gt;</codeblock>Procedures found outside such a block will produce an error message and will abort the script.
 		NumeRe provides with the <em>Package-Creator</em> (found in the Tools menu) a very convenient function to fulfill this and the following conditions. In addition, the Package-Creator can automatically detect dependencies of procedures, so that a complete software package can always be delivered. However, it is not possible for the Package-Creator to find the associated window layouts. These must be selected manually.
 		Documentation comments (<code>##! ...</code> and <code>#*! ... *#</code>) that are inside the procedures or directly in front of them are also copied during an installation, general comments and all comments outside are ignored.
+		To copy whole files, the <code>&lt;file&gt; ... &lt;endfile&gt;</code> block can be used, where the <code>name</code> tag must contain the relative or absolute path to the file (<code>"&lt;procpath&gt;/example.nprc"</code> or <code>"C:/Software/MyApp/file.ext"</code>):
+		<codeblock>
+			&lt;file name="PATH/TO/FILE.EXT"&gt;
+			\tCONTENTS OF FILE
+			&lt;endfile&gt;
+		</codeblock>
+		The Package-Creator automatically uses this method to copy procedures and layouts completely. However, line indentation might only be copied somewhat incomplete.
 		To copy all <code>&lt;install&gt; ... &lt;endinstall&gt;</code> blocks in a script, the script must be started from the NumeRe console (and only from there) with the <code>install SCRIPT</code> command.
 		Installations are always logged in the <code>install.log</code> file in the NumeRe root directory, so that it can be seen which procedures were installed and where to look for errors, if any.
 		Installations can be provided with further information. This can be done within a <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block a <code>&lt;info&gt; ... &lt;endinfo&gt;</code> block can be used:<codeblock>&lt;install&gt;\n\t&lt;info&gt;\n\t\tINSTALLINFO\n\t&lt;endinfo&gt;\n\tPROZEDUREN\n&lt;endinstall&gt;</codeblock>The <code>INSTALLINFO</code> section can contain the following values:
