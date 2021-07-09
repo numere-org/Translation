@@ -322,6 +322,7 @@ strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2
 strrmatch(S1,S2,P)~Searches for the last occurrence of a char of S1 in the string S2 up to position P~zeichenketten strings  # \" find last strrmatch()~strrmatch(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings  # \" find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
+strunique({STR},N)~Sorts and returns only unique elements from the strings STR~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor~student_t(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
@@ -352,7 +353,7 @@ trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix haupt
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 treelist~Inserts a tree list into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
-unique(MAT,nDim)~Sorts and returns only unique elements~unique() matrix matrices matrizen~unique(
+unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d

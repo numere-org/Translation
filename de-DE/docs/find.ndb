@@ -321,6 +321,7 @@ strrfnd(STR1,STR2,P)~Gibt die Position des letzten Auftretens von STR1 in STR2 b
 strrmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens aus S1 in der Zeichenkette S2 bis zum Zeichen P~zeichenketten strings  # \" find last strrmatch()~strrmatch(
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings  # \" find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
+strunique({STR},N)~Sortiert und gibt nur eindeutige Elemente aus den Zeichenketten STR zurück~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 student_t(n,c)~Berechnet den Student-Faktor t für n Messungen mit dem Konfidenzintervall 0 < c < 1~student_t() studentfaktor~student_t(
 subplot~Leitet einen neuen Unterplot in Verbindung mit dem "compose"-Modus ein~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Gibt l Zeichen ab dem Zeichen n aus der Zeichenkette STR als neue Zeichenkette zurück~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
@@ -351,7 +352,7 @@ trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~t
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
 treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
-unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() matrix matrices matrizen~unique(
+unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
