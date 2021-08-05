@@ -38,8 +38,8 @@ asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() a
 assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
-audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 audioread~Reads the meta data of a WAVE audio file or the whole file~audiofile pcm audiodatei sound wavefile wavedatei~help audioread
+audio~Generates a WAVE audio file from a given data set~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 avg(x,y,z,...)~Returns the average of x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 basetodec(sBase,sBaseVal)~Converts the number sBaseVal from base sBase to decimal and returns it as a numeric value~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Bessel function of the first kind with the order n at the point x~bessel() first kind erster art besselfunktionen~bessel(
@@ -59,7 +59,9 @@ clock()~Returns the number of processor clicks since the start-up of NumeRe~time
 close~Closes previously opened windows that are selected by parameters~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count~cnt(
+complex(re,im)~Creates a complex number out of the passed real re and imaginary parts im~komplexe zahlen complex numbers~complex(
 compose~Starts the composition of multiple plotting styles~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose
+conj(z)~Returns the complex conjugated number of the passed complex number z~conjugate complex numbers komplexe zahlen~conj(
 cont3d~Generates a 3D contour line plot~contour3d kontur niveau dreidimensional~help cont3d
 continue~Jumps over the following commands of the current loop execution and starts the next execution~ueberspringen überspringen for fortsetzen while~help continue
 cont~Generates a contour line plot~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
@@ -157,6 +159,7 @@ identity(n)~Generates a n-dimensional identity matrix~identity() matrix identitä
 idxtolog(MAT)~Transforms indices in to logical values~logic index indices transformieren~idxtolog(
 if (COND)~Starts the definition of an IF clause~condition bedingung else elseif() if() endif wenn falls verzweigung loop command sequence flow control~help if () ... endif
 ifndefined~Checks before the actual definition, if the current function is not already defined~wenn falls funktion neue definition definieren condional define~help ifndefined
+imag(z)~Returns the imaginary part of the passed complex number z~imaginary part imaginärteil complex numbers komplexe zahlen~imag(
 implot~Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]~images bilder imageplot imagesc()~help implot
 imread~Reads an image file as data grid into a table~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp channels~help imread
 imrot~Rotates the passed image data set around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help imrot
@@ -253,6 +256,7 @@ random~Random number generator with freely choosable distributions~zufallszahlen
 range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()~range(
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten~help read
+real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(
 Recursion~Did you mean "Recursion"?~rekursion recursion~{x,y} = {y,x+y}
 redefine~Redefines an already existing, custom defined function~funktion ueberschreiben überschreiben definieren neue definition~help redefine
@@ -273,9 +277,9 @@ roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganz
 round(x,n)~Rounds x to n decimals~runden round round()~round(
 save~Saves the passed object~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+seek~Reads a section of a WAVE audio file~streamable streamen streaming seeking suchen audiodatei file~help seek
 select(MAT,MAT,MAT)~Extracts values from the first matrix MAT using the indices from the second and third matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-seek~Reads a section of a WAVE audio file~streamable streamen streaming seeking suchen audiodatei file~help seek
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
 show~Shows the content of the passend data object~data() cache() table() auflisten~help show
 shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random shuffle()~shuffle(
@@ -320,9 +324,9 @@ strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the strin
 strmatchall(STR1,STR2,P,P)~Searches for the first occurrences of each character of STR1 in STR2 between both positions~zeichenketten strings finden alle # \" find strmatch() strmatchall()~strmatchall(
 strrfnd(STR1,STR2,P)~Returns the position of the last occurrence of STR1 in STR2, with the search starting from the position P~zeichenketten strings # \" find rfind last strrfnd()~strrfnd(
 strrmatch(S1,S2,P)~Searches for the last occurrence of a char of S1 in the string S2 up to position P~zeichenketten strings  # \" find last strrmatch()~strrmatch(
+strunique({STR},N)~Sorts and returns only unique elements from the strings STR~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings  # \" find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
-strunique({STR},N)~Sorts and returns only unique elements from the strings STR~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor~student_t(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
@@ -345,6 +349,8 @@ timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwan
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string # \" character ascii to_char()~to_char(
 to_cmd(STR)~Transforms the passed string STR to a command expression~zeichenkette # \" command kommando to_cmd()~to_cmd(
 to_lowercase(STR)~Transforms the uppercase letters in STR to lowercase~zeichenkette # \" command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
+to_polar(z)~Converts a cartesian representation of the complex number z into the polar representation~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
+to_rect(z)~Converts a polar representation of the complex number z into the cartesian representation~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
 to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
 to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
