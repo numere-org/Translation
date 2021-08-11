@@ -187,6 +187,7 @@ is_upper(STR)~Determines for each character in STR, whether it is a uppercase ch
 is_xdigit(STR)~Determines for each character in STR, whether it is a hexadecimal character type, or not~is_xdigit() character type representation zeichen~is_xdigit(
 ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()~ivl(
 Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke~"It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!"
+justify(STR,N)~Modifies the strings in a vector of strings according to the chosen mode to be left aligned (mode=-1), centered (mode=0) or right aligned (mode=1).~justifiy(
 laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome polynomial laguerre()~laguerre(
 laguerre_a(n,k,x)~Numerical value of the associated Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
 layout~Starts the definition of a window layout that can be used to create an interactive window~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window

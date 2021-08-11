@@ -187,6 +187,7 @@ is_table(STR)~Gibt true zurück, wenn STR eine Tabelle ist, sonst false~is_table(
 is_upper(STR)~Prüft für jedes Zeichen in STR, ob es ein Großbuchstabe ist~is_upper() character type representation zeichen~is_upper(
 is_xdigit(STR)~Prüft für jedes Zeichen in STR, ob es Teil eines Hexadezimalwertes sein kann~is_xdigit() character type representation zeichen~is_xdigit(
 ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()~ivl(
+justify(STR,N)~Richtet Strings in einem Vektor von Strings je nach gewähltem Modus links(modus -1), mittig (modus 0) oder rechts (modus 1) aus~justifiy(
 laguerre(n,x)~Berechnet den numerischen Wert der Laguerre-Polynome der Ordnung n an der Stelle x~laguerrepolynome polynomial laguerre()~laguerre(
 laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polynome der Ordnung n mit k = [0,n] an der Stelle x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
 layout~Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
