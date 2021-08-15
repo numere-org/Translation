@@ -30,7 +30,7 @@
 	<contents>
 		Invoking the command <code>list -files</code> will tell NumeRe to start the integrated file explorer. If the command is passed without any parameters, then the file explorer will list all files in the default directories (see <code>list -settings</code> for the corresponding list).
 		This list may be restricted further: if the additional option <code>dir</code> is passed, then only the found subdirectories will be listed. In addition you may restrict the explorer to a specific directory, if the parameter <code>-files</code> gets the path as a value according to <code>-files=PATH</code>. It will only list files and folders found at the specified directory.
-		You may pass the PATH as an absolute or a relative path (out of the default directories). It doesn't make any difference, if the directories in PATH are separated with <code>/</code> or <Code>\</code>. If the PATH shall contain whitespaces, then the whole PATH has to be surrounded by quotation marks.
+		You may pass the PATH as an absolute or a relative path (out of the default directories). It doesn't make any difference, if the directories in PATH are separated with <code>/</code> or <code>\</code>. If the PATH shall contain whitespaces, then the whole PATH has to be surrounded by quotation marks.
 		The NumeRe default folders are represented using the following path placeholders:
 		<list>
 			<item node="&lt;&gt;">NumeRe root directory (the numere.exe is located at this directory--In the NumeRe console, <code>&lt;this&gt;</code> will be interpreted as a synonym of this placeholder)</item>

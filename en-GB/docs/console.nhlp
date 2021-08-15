@@ -53,6 +53,6 @@
 		</list>
 		For every listed command you'll find a corresponding article in the NumeRe documentation. Enter <code>help COMMAND</code>, to show this article. The articles contain information about parameters and options, which may be applied to the COMMAND.
 		<em>Important:</em> If you like to pass values to parameters or options via the equal sign <code>=</code>, you should not use additional whitespaces (although it's possible), because they are used to separate parameters and options.
-		<em>Tip:</em> A complete list of all commands can be obtained by invoking <code>list -cmd</code> (although it doesn't list plugin commands). To see a list of all documentation topics, enter </code>help index</code>.
+		<em>Tip:</em> A complete list of all commands can be obtained by invoking <code>list -cmd</code> (although it doesn't list plugin commands). To see a list of all documentation topics, enter <code>help index</code>.
 	</contents>
 </article>

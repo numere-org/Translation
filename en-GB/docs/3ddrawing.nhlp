@@ -24,7 +24,7 @@
 	</keywords>
 	<contents>
 		You may create three dimensional drawings with annotations inside of NumeRe. The needed command is <code>draw3d</code>; it's mostly similar to its two dimensional pendant <code>draw</code>.
-		The following functions may be used in an arbitrary order and combination inside of the drawing mode, as long as they are separated through commas. The description of the abbreviations can be found at <a href="nhlp://draw?frame=new">help draw</a> with the exception that all coordinate sets of <code>PNT</code> or <cod>DIR</code> are represented through 4 numbers <expr>(x,y,z)</expr> instead of two <expr>(x,y)</expr>.
+		The following functions may be used in an arbitrary order and combination inside of the drawing mode, as long as they are separated through commas. The description of the abbreviations can be found at <a href="nhlp://draw?frame=new">help draw</a> with the exception that all coordinate sets of <code>PNT</code> or <code>DIR</code> are represented through 4 numbers <expr>(x,y,z)</expr> instead of two <expr>(x,y)</expr>.
 		<list>
 			<item node="point(PNT,STL)">Draws a point at the position PNT using the style STL. The shape of the point an its color may be modified using STL.</item>
 			<item node="line(PNT,PNT,STL)<br/>linev(PNT,DIR,STL)">Draws a straight line from PNT to PNT or PNT to PNT+DIR, respectively. If only one point is passed, then the second will be located at the origin. Color, shape and line endings may be modified using STL.</item>
