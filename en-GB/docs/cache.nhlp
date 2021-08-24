@@ -32,12 +32,13 @@
 		<keyword>every</keyword>
 	</keywords>
 	<contents>
-		Tables are active storages in NumeRe that can cache tabular data so that it can be processed further.
-		By default the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
-		Individual elements of a table can be read using the syntax <code>TABLE(LINE, COLUMN)</code>. Values can also be written to the table using this syntax. Tables are to be treated like normal variables. The indexing is carried out by natural numbers <em>greater</em> zero: 1,2,3,...
-		Ranges of elements can be obtained using the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
-		When a table is accessed, the special variables <code>nlines</code> contain the number of rows and <code>ncols</code> contain the number of columns of the current table if they are used in its argument parentheses. This also applies if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>
-		The column headings can be read and edited in a similar way: <code>TABLE(#, COLUMN)</code> or <code>TABLE(#, COLUMN) = HEAD</code>
+		Tables are active storages in NumeRe that can cache tabular data so that it can be further processed. Tabular data is characterised by the fact that the data is organised in columns. Columns in NumeRe tables can contain either numeric values or <a href="nhlp://string?frame=new">strings</a>. If numeric values are written to string columns, they are automatically converted to strings. Writing strings to numeric columns, on the other hand, is <em>not</em> possible.
+		By default, the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
+		Individual elements of a table can be read out with the syntax <code>TABLE(ROW, COLUMN)</code>. Likewise, values can also be written into the table with it. Tables are to be treated like ordinary variables. The indexing is done by natural numbers <em>greater than</em> zero: 1,2,3,...
+		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
+		If an entire column is overwritten in the form <code>TABLE(:,j) = VALUES</code>, the type of the column <code>j</code> can also be changed from numeric to string or vice versa. The column heading is retained; any data previously contained in the <code>j</code> column is <em>completely</em> removed.
+		When accessing a table, the special variables <code>nlines</code> contain the number of rows and <code>ncols</code> the number of columns of the current table when used in its argument brackets. This is also true if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>.
+		The column headings can be read and edited similarly: <code>TABLE(#,COLUMN)</code> bzw. <code>TABLE(#,COLUMN) = HEAD</code>
 		<h>Commands in combination with tables</h>
 		Special commands are available in connection with tables:
 		<list>
