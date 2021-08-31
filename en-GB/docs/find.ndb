@@ -119,6 +119,7 @@ export~Textual export of the passed data set~exportieren textdatei data csvdatei
 extrema~Calls the function for the numerical determination of the extrema of the passed expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
 factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fakultät faculty() factorial()~factorial(
 fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
+fft2d~2D Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben~help explorer
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
