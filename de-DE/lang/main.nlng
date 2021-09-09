@@ -718,7 +718,7 @@ PARSERFUNCS_LISTCMD_CMD_IMPLOT_[PLOTTING]=				implot       EX [-set PAR]        
 PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM  -> {VAL}           - Liest die Bildatei NM als Datengitter in die Tabelle "image()". Die Zieltabelle kann mittels Optionen geändert werden. Gibt die Indices des Bildes in der Zieltabelle zurück
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
-PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                     - Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei, wobei die Konstante als NAME := AUSDRUCK angegeben werden muss. Die Konstante wird am Ende des aktuellen Datei automatisch entfernt
+PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                     - Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei, wobei die Konstante als NAME := AUSDRUCK angegeben werden muss. Die Konstante wird am Ende der aktuellen Datei automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]          - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Erzeugt eine Auflistung der Werte, die zum gewählten Parameter vorhanden sind. Die möglichen Parameter sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}    - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
@@ -1118,6 +1118,8 @@ GUI_DLG_FILEMODIFIED=NumeRe: Aktualisieren
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%Diese Datei wurde außerhalb von NumeRe oder durch ein Script/eine Prozedur geändert. Soll sie neu geladen werden?%%LINEBREAK%%%%LINEBREAK%%(Deine Änderungen gehen dadurch verloren.)
 GUI_DLG_PROC_NEXISTS_CREATE=Die Prozedur %%1%%() scheint nicht zu existieren. Soll sie neu erzeugt werden?
 GUI_DLG_PROC_NEXISTS_CREATE_HEADLINE=NumeRe: Prozedur existiert nicht
+GUI_DLG_PROC_INVALIDCHARS=Der Name der Prozedur %%1%%() enthält ungültige Zeichen. Nur alphanumerische Zeichen und Unterstriche sind erlaubt.
+GUI_DLG_PROC_INVALIDCHARS_HEADLINE=NumeRe: Ungültige Zeichen in Prozedurname
 GUI_DLG_SCRIPT_NEXISTS_CREATE=Das Script %%1%% scheint nicht zu existieren. Soll es neu erzeugt werden?
 GUI_DLG_SCRIPT_NEXISTS_CREATE_HEADLINE=NumeRe: Script existiert nicht
 GUI_DLG_DRAWTEXT=NumeRe: Text hinzufügen
@@ -2074,6 +2076,7 @@ GUI_ANALYZER_EMPTYEXPRESSION=Ein Ausdruck oder Parameter fehlt.
 GUI_ANALYZER_USEINLINEIF=Die einzeilige if-Bedingung (WENN ? DANN : SONST) kann signifikante Geschwindigkeitsvorteile bringen.
 GUI_ANALYZER_CONSTEXPR=Diese Zeile ist konstant und benötigt unnötig Laufzeit.
 GUI_ANALYZER_INLINING=Der Aufruf dieser Prozedur geht im Vergleich zum Nutzen überproportional auf die Performance.
+GUI_ANALYZER_PROCEDUREINVALIDCHARS=Der Name der Prozedur "%%1%%" enthält ungültige Zeichen (Nur alphanumerische Zeichen und Unterstriche sind erlaubt).
 GUI_ANALYZER_PROCEDURENOTFOUND=Die Prozedur "%%1%%" konnte nicht gefunden werden.
 GUI_ANALYZER_VARNAMETOOSHORT=Der Variablenname "%%1%%" ist sehr kurz.
 GUI_ANALYZER_VARNOTTYPEORIENTED=Der Variablenname "%%1%%" ist nicht Typ-orientiert (z.B. "nVar" bzw. "sVar").
