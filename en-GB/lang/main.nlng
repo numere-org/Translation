@@ -1244,6 +1244,7 @@ GUI_OPTIONS_DEBUGGER_SHOW_MODULES=Show module in stack trace
 GUI_OPTIONS_DEBUGGER_SHOW_ARGUMENTS=Show procedure arguments
 GUI_OPTIONS_DEBUGGER_SHOW_GLOBALS=Show global variables
 GUI_OPTIONS_DEBUGGER_DECODE_ARGUMENTS=Try to decode the procedure arguments
+GUI_OPTIONS_DEBUGGER_FLASH_TASKBAR=Flashing taskbar icon, if the code is interrupted by the debugger
 GUI_OPTIONS_DEBUGGER=Debugger
 GUI_OPTIONS_PRINT_LINENUMBERS=Print linenumbers
 GUI_OPTIONS_SAVE_SESSION=Session recovery%%LINEBREAK%%(Only saved changes are recoverable)

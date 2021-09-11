@@ -1244,6 +1244,7 @@ GUI_OPTIONS_DEBUGGER_SHOW_MODULES=Zeige Module in der Stack Trace
 GUI_OPTIONS_DEBUGGER_SHOW_ARGUMENTS=Zeige Prozedurargumente
 GUI_OPTIONS_DEBUGGER_SHOW_GLOBALS=Zeige globale Variablen
 GUI_OPTIONS_DEBUGGER_DECODE_ARGUMENTS=Versuche die Prozedurargumente zu dekodieren
+GUI_OPTIONS_DEBUGGER_FLASH_TASKBAR=Blinkendes Taskbaricon, wenn der Code vom Debugger unterbrochen wurde
 GUI_OPTIONS_DEBUGGER=Debugger
 GUI_OPTIONS_PRINT_LINENUMBERS=Zeilennummern drucken
 GUI_OPTIONS_SAVE_SESSION=Sitzungswiederherstellung%%LINEBREAK%%(Nur gesicherte Änderungen können wiederhergestellt werden)
