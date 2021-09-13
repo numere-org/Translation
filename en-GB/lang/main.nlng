@@ -2092,6 +2092,7 @@ GUI_ANALYZER_MANYLINES=This module contains many lines (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=Only very few comments were found in this module (Comment density %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=This module contains a high number of comments (Comment density %%1%% %).
 GUI_ANALYZER_NONAMINGPROCEDURE=This procedure file does not contain a naming procedure.
+GUI_ANALYZER_DECLAREOVERWRITES=The symbol "%%1%%" will be overwritten by a declaration with the same name.
 GUI_ANALYZER_THISFILEPROCEDURE=This procedure is member of the "thisfile" namespace.
 GUI_ANALYZER_MAGICNUMBER=This numerical literal should be replaced by a variable to make the code comprehensible.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Terminate this statement with a semicolon ";", to suppress the display of the result.

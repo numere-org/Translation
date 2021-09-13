@@ -2092,6 +2092,7 @@ GUI_ANALYZER_MANYLINES=Dieses Modul besteht aus sehr vielen Zeilen (%%1%%).
 GUI_ANALYZER_LOWCOMMENTDENSITY=In diesem Modul wurden nur sehr wenig Kommentare gefunden (Kommentardichte %%1%% %).
 GUI_ANALYZER_HIGHCOMMENTDENSITY=In diesem Modul wurden sehr viele Kommentare gefunden (Kommentardichte %%1%% %).
 GUI_ANALYZER_NONAMINGPROCEDURE=Diese Prozedurdatei enthält keine namensgebende Prozedur.
+GUI_ANALYZER_DECLAREOVERWRITES=Das Symbol "%%1%%" wird von einer gleichnamigen Deklaration überschrieben.
 GUI_ANALYZER_THISFILEPROCEDURE=Diese Prozedur befindet sich im "thisfile" Namensraum.
 GUI_ANALYZER_MAGICNUMBER=Dieser numerische Literal sollte durch eine Variable ersetzt werden, um das Verständnis zu erleichtern.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Beende diesen Ausdruck mit einem Semikolon ";", um die Anzeige des Ergebnisses zu unterdrücken.
