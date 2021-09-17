@@ -2097,6 +2097,9 @@ GUI_ANALYZER_THISFILEPROCEDURE=This procedure is member of the "thisfile" namesp
 GUI_ANALYZER_MAGICNUMBER=This numerical literal should be replaced by a variable to make the code comprehensible.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Terminate this statement with a semicolon ";", to suppress the display of the result.
 GUI_ANALYZER_GLOBALVARIABLE=The variable "%%1%%" seems to be a global one. It's good practice to use no or only very few global variables.
+GUI_ANALYZER_MATOPFUNCTION=The function "%%1%%" may only be used within matrix mode ("matop").
+GUI_ANALYZER_DRAWFUNCTION=The function "%%1%%" may only be used within a drawing mode ("draw" or "draw3d").
+GUI_ANALYZER_STRINGFUNCTION=The string function "%%1%%" cannot be used within matrix mode ("matop"). This mode does not support strings.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code duplicates
 GUI_DUPCODE_MATCH=Lines

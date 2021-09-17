@@ -2097,6 +2097,9 @@ GUI_ANALYZER_THISFILEPROCEDURE=Diese Prozedur befindet sich im "thisfile" Namens
 GUI_ANALYZER_MAGICNUMBER=Dieser numerische Literal sollte durch eine Variable ersetzt werden, um das Verständnis zu erleichtern.
 GUI_ANALYZER_SUPPRESS_OUTPUT=Beende diesen Ausdruck mit einem Semikolon ";", um die Anzeige des Ergebnisses zu unterdrücken.
 GUI_ANALYZER_GLOBALVARIABLE=Die Variable "%%1%%" scheint global zu sein. Es ist guter Stil, keine oder nur sehr wenig globale Variablen zu verwenden.
+GUI_ANALYZER_MATOPFUNCTION=Die Funktion "%%1%%" kann nur im Matrixmodus ("matop") verwendet werden.
+GUI_ANALYZER_DRAWFUNCTION=Die Funktion "%%1%%" kann nur im Zeichenmodus ("draw" oder "draw3d") verwendet werden.
+GUI_ANALYZER_STRINGFUNCTION=Die Zeichenkettenfunktion "%%1%%" kann nicht im Matrixmodus ("matop") verwendet werden. Dieser Modus unterstützt keine Zeichenketten.
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code-Duplikate
 GUI_DUPCODE_MATCH=Zeilen
