@@ -74,6 +74,7 @@ cot(x)~Kotangens von x~cot() cotangens ctg() trigonometrische funktionen trigono
 covar(MAT,MAT)~Berechnet die Kovarianz der beiden Argumente~covariance covar()~covar(
 credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about versionsinformationen~credits
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
+cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
 cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel sheet mappe workbook~help data()
@@ -119,8 +120,8 @@ explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren 
 export~Export eines Datensatzes als ANSI-Text-, CSV- oder TeX-Datei~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
 extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Siehe "help extrema"~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
 factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()~factorial(
-fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 fft2d~Schnelle 2D-Fourier-Transformation eines Datengitters~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
+fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurück, deren Spaltenüberschrift mit STR2 übereinstimmen~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
 findparam(PAR,STR,C)~Gibt die Position zurück, an der Parameter PAR in der Zeichenkette STR enthalten ist, und 0, falls er nicht gefunden werden kann. C ist ein optionales Argument, das das darauffolgende Zeichen bestimmt~parameter positionen optionen options positions commandline findparam()~findparam(
@@ -221,6 +222,7 @@ mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
 minpos(x,y,z,...)~Index des Minimums der Werte x,y,z,...~minimum position min() minpos() minimal value~minpos(
 move~Verschiebt je nach Ausdruck Einträge/Spalten/Untertabellen in Tabellen oder Dateien, siehe "help move"~verschieben tabellen dateien files~help move
+namespace~Wechselt den Namensraum in Prozeduren~procedure namespaces folders modules ordner~help namespace
 ncols~Enthält die Zahl der Spalten beim aktuellen Datenzugriff~columns dataaccess end number~ncols
 neumann(n,x)~Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
 new~Erzeugt neue Ordner, Scripte, Prozeduren, Dateien und Tabellen~ordner scripts procedures erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
@@ -274,6 +276,7 @@ resample~Ermöglicht die Erhöhung oder Verringerung der Zahl der Datenpunkten, wo
 reshape(MAT,n,m)~Formt die Matrix MAT zu einer (n x m)-Matrix um~umformen umgestalten reshape()~reshape
 resize(MAT,n,m)~Ändert die Größe der Matrix MAT zu (n x m)~vergrößern verkleinern larger smaller resize()~resize(
 retouch~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
+return~Deklariert den Rückgabewert der Prozedur und kann verwendet werden, um ein Script sofort zu verlassen~procedure script returning leave returnvalue~help return
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()~rint(
 roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen ceil() integral number~roof(
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
@@ -328,6 +331,7 @@ strrmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens aus S1 in der Zeich
 strunique({STR},N)~Sortiert und gibt nur eindeutige Elemente aus den Zeichenketten STR zurück~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings  # \" find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
+str~Definiert den lokalen Zeichenkettenvariablensatz einer Prozedur~procedure local strings~help str
 student_t(n,c)~Berechnet den Student-Faktor t für n Messungen mit dem Konfidenzintervall 0 < c < 1~student_t() studentfaktor~student_t(
 subplot~Leitet einen neuen Unterplot in Verbindung mit dem "compose"-Modus ein~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Gibt l Zeichen ab dem Zeichen n aus der Zeichenkette STR als neue Zeichenkette zurück~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
@@ -339,12 +343,14 @@ switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch
 TABLE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help table"~zwischenspeicher save cache() table() sortieren swap rename~help table()
 tablegrid~Fügt ein Tabellengitter in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotiert die angegebene Tabelle um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help tabrot
+tab~Definiert die lokalen Tabellen einer Prozedur~procedure local tables~help str
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
 tanh(x)~Tangens hyperbolicus von x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
 taylor~Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
 textfield~Fügt ein Textfeld in ein Window-Layout ein~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 textparse(sToParse,sPattern,nPos1,nPos2)~Zerlegt sToParse anhand des Schemas sPattern in einzelne Bausteine unterschiedlicher Variablentypen~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
+throw~Bricht die Auswertung einer Prozedur ab und gibt eine Fehlermeldung aus~procedure throw try catch error exception~help throw
 time()~Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
 to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string # \" character ascii to_char()~to_char(
@@ -363,6 +369,7 @@ undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funk
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
+var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables~help var
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()

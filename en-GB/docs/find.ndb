@@ -74,6 +74,7 @@ cot(x)~Cotangent of x~cot() cotangens ctg() trigonometrische funktionen trigonom
 covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz~covar(
 credits~Legal information about NumeRe~info about versionsinformationen~credits
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt~cross(
+cst~Defines the local clusters in a procedure~procedure local clusters~help cst
 cyltocart(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
@@ -118,8 +119,8 @@ explicit~Deactivates all plugins for the current command~plugins deaktivieren üb
 export~Textual export of the passed data set~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
 extrema~Calls the function for the numerical determination of the extrema of the passed expression or data set~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
 factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fakultät faculty() factorial()~factorial(
-fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 fft2d~2D Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
+fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben~help explorer
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
@@ -221,6 +222,7 @@ mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
 minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
 move~Moves (depending on the actual expression) entries/columns/subtables in tables or complete files~verschieben tabellen dateien files~help move
+namespace~Changes the current namespace in procedures~procedure namespaces folders modules ordner~help namespace
 ncols~Contains the number of columns for the current data access~columns dataaccess end number~ncols
 neumann(n,x)~Neumann function (Bessel function of the second kind) with the order n at the position x~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
 new~Generates new directories, scripts, procedures, files and tables~ordner scripte prozeduren erzeugen generieren create mkdir erschaffen verzeichnisse directory files~help new
@@ -274,6 +276,7 @@ resample~Resamples data sets (changes the sampling frequency)~resampling samples
 reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten reshape()~reshape(
 resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller resize()~resize(
 retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
+return~Declares the return value of the procedure and can be used to leave a script at the current line~procedure script returning leave returnvalue~help return
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()~rint(
 roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen ceil()~roof(
 round(x,n)~Rounds x to n decimals~runden round round()~round(
@@ -329,6 +332,7 @@ strrmatch(S1,S2,P)~Searches for the last occurrence of a char of S1 in the strin
 strunique({STR},N)~Sorts and returns only unique elements from the strings STR~unique() strunique() zeichenketten strings # \" eindeutig einmalig single once~strunique(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings  # \" find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
+str~Defines the local string variables in a procedure~procedure local strings~help str
 student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor~student_t(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
@@ -340,12 +344,14 @@ switch (EX)~Starts the definition of a switch condition, see "help switch"~cases
 TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename~help table()
 tablegrid~Inserts a table grid into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotates the passed table around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help tabrot
+tab~Defines the local tables in a procedure~procedure local tables~help str
 tan(x)~Tangent of x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
 tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
 taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
 textfield~Inserts a text field into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
+throw~Aborts the procedure execution and displays an error message~procedure throw try catch error exception~help throw
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string # \" character ascii to_char()~to_char(
@@ -364,6 +370,7 @@ undefine~Removes a custom function definition~funktion entfernen loeschen delete
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
+var~Defines the local numerical variables in a procedure~procedure local variables~help var
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
