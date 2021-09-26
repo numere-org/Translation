@@ -31,14 +31,27 @@
 	<contents>
 		NumeRe may modify the data from one or more data sets to simplify the analysis if you use one of the commands <code>smooth</code>, <code>resample</code> and <code>retouch</code>. The command <code>smooth</code> smoothes the data suppressing noise peaks, <code>resample</code> increases or decreases the number of data points by the usage of a Lanczos filter, and <code>retouch</code> removes invalid values from data sets using linear interpolation. These commands can only be applied to data sets in a cache.
 		<h>Smoothing data</h>
-		The command <code>smooth</code> requires the data area to which it is to be applied, the filter order, the filter name, and, if necessary, the shape of the filter:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDER type=FILTER alpha=FORM</codeblock>The order <code>ORDER</code> determines the size of the data section over which common filtering is performed. The following filters are available:
+		The command <code>smooth</code> requires the data area to which it is to be applied, the filter order, the filter name, and, if necessary, the shape of the filter:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDER method=FILTER alpha=FORM</codeblock>The order <code>ORDER</code> determines the size of the data section over which common filtering is performed. The following filters are available as <code>method</code>:
 		<list>
 			<item node="weightedlinear">This filter is used by default and smoothes the data by approximating a sliding and weighted linear compensation function using <expr>2timesORDER+1</expr> interpolation points. This filter becomes stronger with larger orders. The shape of the filter <code>alpha=FORM</code> has no effect here. This filter reduces the data range width without removing the high-frequency components.</item>.
 			<item node="gaussian">This filter folds the data in the window area with a normalized gaussian bell. The shape of the gaussian bell is determined by the dimensionless quantity <code>alpha=FORM</code>. The filter becomes weaker with larger values of <code>alpha</code>. This filter is mainly used in image processing to adjust the sharpness.</item>.
 			<item node="savitzkygolay">This filter uses the method of <em>Savitzky and Golay</em> to determine a polynomial equalization function over the range <expr>2timesORDER+1</expr> and thus equalize the data. This filter becomes stronger with larger orders as well. The form <code>alpha=FORM</code> has no effect here either. This filter shows good smoothing properties without completely removing the high frequency parts. When using this filter in two dimensions, only selected window sizes between <expr>5times5</expr> (<code>order=2</code>) and <expr>63times63</expr> (<code>order=31</code>) are available. If the desired filter size is not available, the next available size is automatically used.</item>.
 		</list>
 		<h>Resampling data</h>
-		<code>resample</code> needs as well a data range, to apply this function, and a new number of samples, which shall be used:<codeblock>resample CACHE(I1:I2,J1:J2) -samples=SAMPLES</codeblock>If the new number of samples is larger than the current number, then there won't be a loss of information, whereas there's a loss, if the number is smaller.
+		<code>resample</code> also requires a range of data to which this command is to be applied and the new number of data points to be used. In addition, the filter to be used can be selected:<codeblock>resample TABLE(I1:I2, J1:J2) -samples=SAMPLES method=FILTER</codeblock>For <code>samples</code> up to two values can be specified as rows and columns. If only one is specified, it will be used for both dimensions if necessary. The following are available as filters for <code>method</code>, by default <code>lanczos3</code> is used:
+		<list>
+			<item node="box">A simple rectangle filter</item>.
+			<item node="tent">A simple triangular filter; a convolution of the rectangular filter with itself</item>.
+			<item node="bell">An inverted parabola as a filter; a convolution of the triangle filter with a rectangle filter</item>
+			<item node="bspline">Basic splines as a filter function</item>.
+			<item node="mitchell">Filter according to D. Mitchell and A. Netravali</item>
+			<item node="lanczos*">The Lanczos filter is based on a sine cardinalis with a variable frequency. Available as <code>lanczos3</code>, <code>lanczos4</code>, <code>lanczos6</code> and <code>lanczos12</code></item>.
+			<item node="blackman">The Blackman filter is based on a sum of cosines function as a window function</item>.
+			<item node="kaiser">The Kaiser filter uses the zeroth-order Bessel function as a window</item>.
+			<item node="gaussian">The Gaussian filter uses a Gaussian bell as a window function</item>.
+			<item node="catmullrom">A variation of the Mitchell filter</item>.
+		</list>
+		<em>Note:</em> A resampling operation is never non-destructive. New grid points must always be interpolated from the old grid points, inevitably resulting in artefacts and rounding errors.
 		<h>Retouching data</h>
 		<code>retouch</code> simply needs the data set, which shall be retouched:<codeblock>retouch CACHE(I1:I2,J1:J2)</codeblock>
 		<em>Important:</em> as default NumeRe applies these commands to two dimensional data sets, if it's applicable. To switch this behavior to column- or lineweise application, the corresponding additional parameter <code>cols</code> or <code>lines</code>, respectively, has to be passed to the command. If the commands shall be restricted to the <expr>z</expr> values of a data grid, the optional parameter <code>grid</code> may be passed. The order of the <expr>x</expr> or <expr>y</expr> won't be considered in this case (NumeRe expects that the <expr>x</expr>-<expr>y</expr> values are already ordered). In the case of two dimensional smoothening NumeRe will call <code>retouch</code> internally, to remove the invalid and non-interpolationable data points.
