@@ -1,0 +1,256 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2021  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<article id="flow_ctrl">
+	<title string="Program control flow (Control flow statements)" idxkey="flowctrl" />
+	<keywords>
+		<keyword>flowctrl</keyword>
+		<keyword>flusskontr</keyword>
+		<keyword>ablauf</keyword>
+		<keyword>kontrollfluss</keyword>
+		<keyword>controlflow</keyword>
+		<keyword>flowcontrol</keyword>
+	</keywords>
+	<contents>
+		Control flow statements are logical blocks in code that identify related segments. These can be loops like <a href="nhlp://for?frame=new"><code>for...endfor</code></a> and <a href="nhlp://while?frame=new"><code>while...endwhile</code></a> or branches like <a href="nhlp://if? frame=new"><code>if...elseif...else...endif</code></a> and <a href="nhlp://switch?frame=new"><code>switch...case...default...endswitch</code></a>. However, error handling using <a href="nhlp://try?frame=new"><code>try...catch...endtry</code></a> also counts as a control flow statement.
+		Control flow statements always consist of <em>at least</em> the start command (e.g. <code>switch</code>) and their end command (e.g. <code>endswitch</code>). Only complete statements of this form will be evaluated.
+		Control flow statements may be used to execute the contained code multiple tomes (loops) or conditioned (branches). Control flow statements can also be used nested within each other as often as desired, as long as they do not cross each other. Nested blocks must be completely contained in their parent block. Permitted is e.g.
+		<codeblock>
+			for (...)
+			\twhile (...)
+			\t\t...
+			\tendwhile
+			endfor
+		</codeblock>
+		But not an arrangement like this:
+		<codeblock>
+			for (...)
+			\tswitch (...)
+			\t\t...
+			\tendfor
+			endswitch
+		</codeblock>
+		When control flow statements are used interactively in the NumeRe console, the console switches to a special mode, which is made clear by a keyword at the beginning of the line. All expressions now entered are used as part of the control flow statement. As soon as the outermost control flow statement is complete (i.e. closed by the end command), the evaluation is started automatically. On the other hand, to leave this mode without executing the statement, the command <code>abort</code> can be used.
+		The commands <code>break</code> and <code>continue</code> are special commands for control flow statements. They have a special meaning depending on the surrounding parent block. See the article on the corresponding block.
+		If NumeRe needs too much time to evaluate a control flow statement, the execution can be aborted with the <code>ESC</code> key or the corresponding function of the toolbar.
+	</contents>
+</article>
+
+
+<article id="for_loop">
+	<title string="FOR loops (Counting loops)" idxkey="for" />
+	<keywords>
+		<keyword>endfor</keyword>
+		<keyword>for</keyword>
+		<keyword>break</keyword>
+		<keyword>continue</keyword>
+		<keyword>sv</keyword>
+		<keyword>sp</keyword>
+	</keywords>
+	<contents>
+		FOR loops are <a href="nhlp://flowctrl?frame=new">control flow statements</a> and perform repeated calls of the same <expr>N</expr> expressions. Here, the expressions can also refer to the results of the previous call. To uniquely identify a loop pass, the loop index is used, which is to be declared together with its bounds directly following <code>for</code> in the form<codeblock>for (INDEX = a:b)</codeblock>. This index can of course be dealt with in the same way as normal variables.
+		For the bounds, <code>a</code> denotes the initial and <code>b</code> the final value of the index. The values for the indices must be integers. Should <expr>b &lt; a</expr> be chosen, NumeRe will count backwards in this loop.
+		<codeblock>
+			for (INDEX = a:b)
+			\texpressions
+			endfor
+		</codeblock>
+		The following parameters can be passed when closing a loop (any loop):
+		<list>
+			<item node="sv">Displays all steps of the evaluation (<em>This parameter is deprecated.</em>)</item>.
+			<item node="mask">Suppresses the progress indicator. This can also be activated by default in the settings</item>.
+			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
+			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
+		</list>
+		Extended control over the counting loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an IF condition (which is itself part of the counting loop) and influence the evaluation from there:
+		<list>
+			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost one, the evaluation continues after this loop</item>.
+			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
+		</list>
+		<example desc="FOR loop counting from 1 to 10:" type="verbatim">
+			|&lt;- for (i = 1:10)
+			|FOR&gt; i
+			|FOR&gt; endfor
+		</example>
+		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://try?frame=self">help try</a>
+	</contents>
+</article>
+
+
+<article id="if_cond">
+	<title string="Conditions (Branches)" idxkey="if" />
+	<keywords>
+		<keyword>beding</keyword>
+		<keyword>cond</keyword>
+		<keyword>else</keyword>
+		<keyword>endif</keyword>
+		<keyword>if</keyword>
+	</keywords>
+	<contents>
+		With the <a href="nhlp://flowctrl?frame=new">control flow statement</a> <code>if (COND)</code> the evaluation of a branch (<code>if...elseif...else...endif</code>) is started in NumeRe. Thereby <code>COND</code> stands for a logical expression, which is evaluated before the further course of the branch. A branch consists of at least one <code>if</code> and one <code>endif</code>. In between, any number of <code>elseif</code> and one <code>else</code> (only in this order) can be used.
+		NumeRe will evaluate in an IF branch only the part whose condition is met. If <code>if</code> evaluates to <code>false</code>, all other <code>elseif</code> conditions that occur will be checked in sequence. The ELSE branch is executed when the IF and all previously occurring ELSEIF branches have been evaluated to <code>false</code>.
+		<codeblock>
+			if (COND1)
+			\tExpressions
+			elseif (COND2)
+			\tExpressions
+			[...]
+			else
+			\tExpressions
+			endif
+		</codeblock>
+		A similar functionality is provided by the <a href="nhlp://switch?frame=self">selection branch</a>.
+		A branch does not have to have an ELSE branch or an ELSEIF branch. In this case, if the condition for the IF branch is not met, simply no expression is evaluated in the branch.
+		With <code>if (TABLE())</code> it can be checked whether data is present in the <code>TABLE</code> table. This can be used, for example, in scripts that may need an empty table. <em>Caution:</em> if <code>TABLE()</code> does not exist, this is evaluated as a global error and the evaluation is aborted.
+		IF conditions within loops can influence their calling loop through the <code>break</code> and <code>continue</code> commands (See <a href="nhlp://for?frame=new">help for</a> and <a href="nhlp://while?frame=new">help while</a> for info on these commands). These commands have the same effect within an IF condition as <code>endif</code> (i.e. they abort the evaluation of the current condition at this point) and are passed on to the surrounding control flow statement until this is either a loop or the last statement has been exited, so that the entire block is aborted.
+		<example desc="A simple branch simulating the max() function:" type="verbatim">
+			|&lt;- if (a &gt; b)
+			|IF-&gt; ans = a
+			|IF-&gt; else
+			|ELSE&gt; ans = b
+			|ELSE&gt; endif
+		</example>
+		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://try?frame=self">help try</a>
+	</contents>
+</article>
+
+
+<article id="while_loop">
+	<title string="WHILE loops (Conditional loops)" idxkey="while" />
+	<keywords>
+		<keyword>endwhile</keyword>
+		<keyword>while</keyword>
+		<keyword>lnumctrl</keyword>
+	</keywords>
+	<contents>
+		Similar to a FOR loop, a WHILE loop is also a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and repeatedly processes the same <expr>N</expr> expressions. The key difference, however, is that a WHILE loop does not require a counting index and accordingly has no predetermined number of runs. The termination of a WHILE loop is determined either directly by the condition specified in the declaration or by an additional <code>break</code> in a part of the loop.
+		The declaration of a WHILE loop requires a logically evaluable condition, which must be specified in parentheses:<codeblock>while (CONDITION)\n\tExpressions\nendwhile</codeblock>The CONDITION is checked at the beginning of each loop pass and, if the CONDITION has the logical value TRUE, the loop is continued, or, if it is FALSE, exited at that point.
+		The following parameters can be passed when closing a loop (regardless of which loop):
+		<list>
+			<item node="sv">Displays all steps of the evaluation (<em>This parameter is obsolete.</em>)</item>.
+			<item node="mask">Suppresses the progress indicator. This can also be activated by default in the settings</item>.
+			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
+			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
+		</list>
+		Extended control over the WHILE loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an IF condition (which is itself part of the WHILE loop) and influence the evaluation from there:
+		<list>
+			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost statement, evaluation continues after this loop</item>.
+			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
+		</list>
+		<example desc="A WHILE loop, which is executed until a filename to a loadable dataset is entered:" type="verbatim">
+			|&lt;- while (!data())
+			|WHL&gt; load ??
+			|WHL&gt; endwhile
+		</example>
+		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://try?frame=self">help try</a>
+	</contents>
+</article>
+
+
+<article id="switch">
+	<title string="Selection branches (switch-case)" idxkey="switch, case" />
+	<keywords>
+		<keyword>switch</keyword>
+		<keyword>case</keyword>
+		<keyword>default</keyword>
+		<keyword>endswitch</keyword>
+	</keywords>
+	<contents>
+		A selection branch is a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and consists of at least three commands: <code>switch (EX)</code>, <code>case VAL:</code> and <code>endswitch</code>. Any number of <code>case</code> statements can be used. In addition, <code>default:</code> can be used after the last <code>case</code> to cover the "otherwise case". <code>EX</code> is an evaluable expression that returns either a numeric value or a string. <code>VAL</code> are also numeric values or strings.
+		NumeRe will evaluate the <code>EX</code> expression and compare it with the <code>VAL</code> of the <code>case</code> statements and jump to the first <code>case</code> whose value matches the result of <code>EX</code>. If none matches, the optional <code>default</code> block is used. After that, NumeRe will evaluate all subsequent expressions (including those of the following <code>case</code> and <code>default</code> statements) until it either reaches the end of the selection branch or encounters the <code>break</code> command.
+		<codeblock>
+			switch (EX).
+			case VAL1:
+			\tExpressions
+			\t[break]
+			case VAL2:
+			\tExpressions
+			\t[break]
+			[...]
+			default:
+			\tExpressions
+			endswitch
+		</codeblock>
+		A selection branch must contain at least one <code>case</code> statement. Additional <code>case</code> or <code>default</code> statements are optional.
+		It must be noted that the <code>break</code> command is <em>not</em> passed on to surrounding loops, as it is evaluated in <code>switch</code> itself. The <code>continue</code> command is passed on normally.
+		Unlike the <code>if</code> block, which provides similar functionality through multiple <code>elseif</code> sections, the runtime of a selection branch is constant for selecting the correct case. The order of the cases in the selection branch is therefore irrelevant. In contrast, <code>if</code> requires linearly more time for each <code>elseif</code> that is evaluated as FALSE.
+		<example desc="A selection branch selecting for working day and weekend:" type="verbatim">
+			|   switch (x)
+			|   case 1:
+			|   case 2:
+			|   case 3:
+			|   case 4:
+			|   case 5:
+			|       print "Working day"
+			|       break;
+			|   case 6:
+			|   case 7:
+			|       print "Weekend"
+			|       break;
+			|   default:
+			|       print "This day of the week does not exist."
+			|   endswitch
+		</example>
+		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://for?frame=self">help for</a> and <a href="nhlp://try?frame=self">help try</a>
+	</contents>
+</article>
+
+
+<article id="try_catch">
+	<title string="Error handling (Try-catch)" idxkey="try, catch" />
+	<keywords>
+		<keyword>try</keyword>
+		<keyword>catch</keyword>
+		<keyword>endtry</keyword>
+		<keyword>error</keyword>
+		<keyword>assertion</keyword>
+		<keyword>thrown</keyword>
+	</keywords>
+	<contents>
+		Error handling using <code>try...catch...endtry</code> is a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and can be used to fix unexpected problems already during runtime without having to accept a complete abort. The syntax is as follows
+		<codeblock>
+			try
+			\tUNSURE CODE
+			catch ERROR TYPE:
+			\tERROR HANDLING.
+			endtry
+		</codeblock>
+		Error handling in this context can be, for example, deleting files, writing a logging message or reopening <a href="nhlp://window?frame=new">windows</a>.
+		The <code>catch</code> statement can be used multiple times with different error types. There are four main error types:
+		<list>
+			<item node="expression">Errors in mathematical expressions</item>.
+			<item node="thrown">Errors generated manually by a user using <a href="nhlp://throw?frame=new"><code>throw</code></a></item>.
+			<item node="assertion">Failed assertions (caused by a failed <code>assert</code>)</item>
+			<item node="error">Any other errors that may occur when using NumeRe</item>.
+		</list>
+		Particularly critical errors cannot be caught by <code>catch</code>. They always lead to an abort. On the other hand, if the error type is completely absent (i.e. <code>catch:</code>), then all errors not already processed are simply caught in this block:
+		<codeblock>
+			[...]
+			catch expression:
+			\t## error type "expression".
+			catch:
+			\t## All other errors
+			endtry
+		</codeblock>
+		To access the error type and message the function <code>getlasterror()</code> can be used. This returns <code>{type, message}</code> of the last error handled in a <code>catch</code> statement as a vector.
+		Once error handling is complete, the code simply continues after <code>endtry</code>. If instead further errors occur in a <code>catch</code> statement, this leads to an abort (or passing on to a surrounding <code>try...catch</code> block). If the current error is to be passed on to a surrounding block, the <code>rethrow</code> command (without further arguments or expressions) can be used.
+		<em>Note:</em> Error handling is always an inefficient form of programming. If there is a solution with regular control flow statements, this should be used in preference.
+		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://for?frame=self">help for</a>
+	</contents>
+</article>

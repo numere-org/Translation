@@ -144,6 +144,7 @@ getfileparts(sFilePath)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Da
 getfolderlist(STR,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
 getindices(STR,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
 getkeyval({STR},STR,ARG,LOG)~Gibt den Wert zum zugehörigen Schlüssel aus der zweiten Zeichenkette aus der Schlüssel-Wert-Liste des ersten Zeichenkettenarrays zurück~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyval(
+getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler zurück~try catch throw error exception handling~getlasterror()
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
@@ -275,6 +276,7 @@ repmat(MAT,n,m)~Wiederholt die Matrix MAT (n x m)-mal~wiederholen repeat vergröß
 resample~Ermöglicht die Erhöhung oder Verringerung der Zahl der Datenpunkten, wobei ein Lanczos-Filter angewandt wird~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern upsampling downsampling~help resample
 reshape(MAT,n,m)~Formt die Matrix MAT zu einer (n x m)-Matrix um~umformen umgestalten reshape()~reshape
 resize(MAT,n,m)~Ändert die Größe der Matrix MAT zu (n x m)~vergrößern verkleinern larger smaller resize()~resize(
+rethrow~Reicht den Fehler, der im aktuellen catch-Block verarbeitet wird, weiter~try catch throw exception handling error~help rethrow
 retouch~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
 return~Deklariert den Rückgabewert der Prozedur und kann verwendet werden, um ein Script sofort zu verlassen~procedure script returning leave returnvalue~help return
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()~rint(
@@ -365,6 +367,7 @@ to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~s
 trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
 treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+try~Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können~try catch endtry error exception handling throw~help try
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip~help url

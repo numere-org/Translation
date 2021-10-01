@@ -143,6 +143,7 @@ getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name an
 getfolderlist(STR,T)~Returns a list of strings containing all directories matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
 getindices(STR,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
 getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyal(
+getlasterror()~Returns the last error processed by a try-catch block~try catch throw error exception handling~getlasterror()
 getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
 global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global
@@ -275,6 +276,7 @@ repmat(MAT,n,m)~Repeats the matrix MAT (n x m) times~wiederholen repeat vergröße
 resample~Resamples data sets (changes the sampling frequency)~resampling samples stuetzstellen stützstellen erhoehen erhöhen verringern upsampling downsampling~help resample
 reshape(MAT,n,m)~Changes the shape of the matrix MAT to a (n x m) matrix~umformen umgestalten reshape()~reshape(
 resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkleinern larger smaller resize()~resize(
+rethrow~Passes the error that is being processed in the current catch block on~try catch throw exception handling error~help rethrow
 retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
 return~Declares the return value of the procedure and can be used to leave a script at the current line~procedure script returning leave returnvalue~help return
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()~rint(
@@ -366,6 +368,7 @@ to_value(STR)~Evaluates the string STR and transforms it to a numerical value af
 trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 treelist~Inserts a tree list into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+try~Starts a try-catch block in which errors can be caught and handled~try catch endtry exception handling error throw~help try
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip~help url
