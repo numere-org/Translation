@@ -32,7 +32,16 @@
 		<keyword>every</keyword>
 	</keywords>
 	<contents>
-		Tabellen sind aktive Speicher in NumeRe, die tabellare Daten zwischenspeichern können, damit selbige weiterverarbeitet werden können. Tabellarische Daten zeichnen sich dadurch aus, dass die Daten spaltenweise organisiert sind. Spalten in NumeRe-Tabellen können entweder numerische Werte oder <a href="nhlp://string?frame=new">Zeichenketten</a> enthalten. Werden numerische Werte in Zeichenketten-Spalten geschrieben, werden sie automatisch in Zeichenketten konvertiert. Schreiben von Zeichenketten in numerische Spalten ist dagegen <em>nicht</em> möglich.
+		Tabellen sind aktive Speicher in NumeRe, die tabellare Daten zwischenspeichern können, damit selbige weiterverarbeitet werden können. Tabellarische Daten zeichnen sich dadurch aus, dass die Daten spaltenweise organisiert sind. Spalten in NumeRe-Tabellen können entweder numerische Werte, Zeit-Datumswerte oder <a href="nhlp://string?frame=new">Zeichenketten</a> enthalten. Werden numerische Werte in Zeichenketten-Spalten geschrieben, werden sie automatisch in Zeichenketten konvertiert. Schreiben von Zeichenketten in numerische Spalten ist dagegen <em>nur</em> möglich, wenn die Zeichenketten numerisch interpretiert werden können.
+		Zeit-Datumswerte werden in Sekunden seit dem 1.1.1970 (UTC) mit Mikrosekunden-Präzision gespeichert. Derartige Werte werden von speziellen Funktionen (wie z.B. <code>time()</code> oder <code>timeformat()</code>) generiert und verarbeitet. Zeit-Datumswerte können auch als Zeichenketten in die entsprechenden Spalten geschrieben werden, wenn sie einem der folgenden Schemata oder einer Datums-Zeitkombination davon entsprechen:
+		<codeblock>
+			DD.MM.YY(YY)
+			YY(YY)-MM-DD
+			YY(YY)/MM/DD
+			hh:mm
+			hh:mm:ss
+			hh:mm:ss.iii
+		</codeblock>
 		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
 		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
 		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden.
@@ -61,6 +70,8 @@
 			<item node="TABLE().name">Gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt</item>
 			<item node="TABLE().size">Gibt die Größe der Tabelle in Zeilen und Spalten zurück</item>
 			<item node="TABLE().aliasof(sTable)">Wandelt die aktuelle Tabelle in einen Alias der Tabelle um, deren Name als Zeichenkette <code>sTable</code> übergeben wurde. Die aktuelle Tabelle wird dabei maskiert, so dass währenddessen nicht mehr auf sie zugegriffen werden kann. Wird eine leere Zeichenkette übergeben, wird die Dereferenzierung aufgehoben und der Bezug auf die aktuelle Tabelle wiederhergestellt. Der Name der referenzierten Tabelle wird als Zeichenkette zurückgegeben</item>
+			<item node="TABLE().convert({nCols},sType)">Wandelt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten in den Typ <code>sType</code> um. Der neue Typ kann dabei entweder als <code>"value"</code>, <code>"string"</code> oder <code>"datetime"</code> angegeben werden. Ist die Konvertierung erfolgreich, wird der neue Typ als Zeichenkette zurückgegeben, anderenfalls ist die Zeichenkette leer. Eine Konvertierung ist nur möglich, wenn die in der jeweiligen Spalte verwendeten Daten auch in dem neuen Typ interpretierbar sind</item>
+			<item node="TABLE().typeof({nCols})">Gibt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei entweder als <code>"value"</code>, <code>"string"</code> oder <code>"datetime"</code> angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ <code>"none"</code></item>
 			<item node="TABLE().minpos">Bestimmt die Position des Minimums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
 			<item node="TABLE().maxpos">Bestimmt die Position des Maximums der Tabelle und gibt die in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
 		</list>
