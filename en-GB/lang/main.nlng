@@ -1,17 +1,17 @@
 #
 # NumeRe: Framework für Numerische Rechnungen
 # Copyright (C) 2018  Erik Haenel et al.
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ========================================================================
@@ -848,8 +848,12 @@ PARSERFUNCS_LISTUNITS_UNIT_YARD=(Yard)
 PARSERFUNCS_LISTUNITS_FOOTNOTE=The dimensions of the units are given with the abbreviations L, M, T, ... The symbol L corresponds to "length", M to "mass", T to "time", N to "quantity" and Theta to "temperature".
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installed Packages
 PARSERFUNCS_LISTPLUGINS_EMPTY=No packages were installed.
-PARSERFUNCS_LISTPLUGINS_TABLEHEAD=Command:           Description:
-PARSERFUNCS_LISTPLUGINS_PLUGININFO=- [%%1%%] (v %%2%%) -- by %%3%%
+PARSERFUNCS_LISTPLUGINS_PACKAGENAME=Package Name:
+PARSERFUNCS_LISTPLUGINS_VERSION=Version:  
+PARSERFUNCS_LISTPLUGINS_COMMAND=Command:
+PARSERFUNCS_LISTPLUGINS_DESCRIPTION=Description:
+PARSERFUNCS_LISTPLUGINS_AUTHOR=Author:
+PARSERFUNCS_LISTPLUGINS_LICENSE=License:
 PARSERFUNCS_TAYLOR_MISSINGPARAMS=ERROR: Not all necessary parameters were passed.$See "help taylor" for further information.
 PARSERFUNCS_TAYLOR_CONSTEXPR=ERROR: The expression is constant in terms of the variable "%%1%%". It cannot be expanded into a Taylor polynomial.
 PARSERFUNCS_TAYLOR_DEFINESTRING=-set comment="Taylor expansion of the expression '%%1%%' at the position %%2%%=%%3%% with the order %%4%%"
@@ -1477,7 +1481,7 @@ GUI_MENU_AUTOINDENT=Adjust &indentations%%TAB%%Ctrl-Shift-I
 GUI_MENU_AUTOINDENT_TTP=Adjusts the indentation of the lines to the current block
 GUI_MENU_INDENTONTYPE=&Adjust during input
 GUI_MENU_INDENTONTYPE_TTP=Adjusts the indentation of the lines during input to the current block
-GUI_MENU_AUTOFORMAT=NumeRe &default format%%TAB%%Ctrl-Shift-F 
+GUI_MENU_AUTOFORMAT=NumeRe &default format%%TAB%%Ctrl-Shift-F
 GUI_MENU_AUTOFORMAT_TTP=Adjusts the format of the file to the NumeRe default by inserting whitespaces and line breaks and enhances readability
 GUI_MENU_EXECUTE=%%GUI_TB_RUN%%%%TAB%%F5
 GUI_MENU_EXECUTE_TTP=%%GUI_TB_RUN_TTP%%

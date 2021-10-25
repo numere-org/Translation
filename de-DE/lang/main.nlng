@@ -1,17 +1,17 @@
 #
 # NumeRe: Framework für Numerische Rechnungen
 # Copyright (C) 2018  Erik Haenel et al.
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ========================================================================
@@ -848,8 +848,12 @@ PARSERFUNCS_LISTUNITS_UNIT_YARD=(Yard)
 PARSERFUNCS_LISTUNITS_FOOTNOTE=Die Dimensionen der Einheiten sind durch die Abkürzungen L, M, T, ... gegeben. Dabei steht L für "Länge", M für "Masse", T für "Zeit", N für "Menge" und Theta für "Temperatur".
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installierte Packages
 PARSERFUNCS_LISTPLUGINS_EMPTY=Keine Packages installiert.
-PARSERFUNCS_LISTPLUGINS_TABLEHEAD=Befehl:            Beschreibung:
-PARSERFUNCS_LISTPLUGINS_PLUGININFO=- [%%1%%] (v %%2%%) -- von %%3%%
+PARSERFUNCS_LISTPLUGINS_PACKAGENAME=Package Name:
+PARSERFUNCS_LISTPLUGINS_VERSION=Version:  
+PARSERFUNCS_LISTPLUGINS_COMMAND=Befehl:
+PARSERFUNCS_LISTPLUGINS_DESCRIPTION=Beschreibung:
+PARSERFUNCS_LISTPLUGINS_AUTHOR=Autor:
+PARSERFUNCS_LISTPLUGINS_LICENSE=Lizenz:
 PARSERFUNCS_TAYLOR_MISSINGPARAMS=FEHLER: Es wurden nicht die nötigen Parameter übergeben.$Siehe "help taylor" für weitere Details.
 PARSERFUNCS_TAYLOR_CONSTEXPR=FEHLER: Bezüglich der Variablen "%%1%%" ist der Ausdruck konstant und kann nicht in ein Taylorpolynom entwickelt werden.
 PARSERFUNCS_TAYLOR_DEFINESTRING=-set comment="Taylorentwicklung des Ausdrucks '%%1%%' an der Stelle %%2%%=%%3%% bis zur Ordnung %%4%%"
@@ -1477,7 +1481,7 @@ GUI_MENU_AUTOINDENT=&Einzüge ausrichten%%TAB%%Ctrl-Shift-I
 GUI_MENU_AUTOINDENT_TTP=Passt den Einzug der Zeilen dem aktuellen Block an
 GUI_MENU_INDENTONTYPE=&Während der Eingabe ausrichten
 GUI_MENU_INDENTONTYPE_TTP=Passt den Einzug der Zeilen bereits während der Eingabe dem aktuellen Block an
-GUI_MENU_AUTOFORMAT=NumeRe-&Standardformat%%TAB%%Ctrl-Shift-F 
+GUI_MENU_AUTOFORMAT=NumeRe-&Standardformat%%TAB%%Ctrl-Shift-F
 GUI_MENU_AUTOFORMAT_TTP=Ändert die Formatierung der Datei zum NumeRe-Standard durch Einfügen von Leerzeichen und Zeilenumbrüchen und erhöht die Lesbarkeit
 GUI_MENU_EXECUTE=%%GUI_TB_RUN%%%%TAB%%F5
 GUI_MENU_EXECUTE_TTP=%%GUI_TB_RUN_TTP%%
