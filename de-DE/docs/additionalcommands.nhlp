@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, declare" />
+	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, declare, clc" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -28,6 +28,7 @@
 		<keyword>close</keyword>
 		<keyword>assert</keyword>
 		<keyword>declare</keyword>
+		<keyword>clc</keyword>
 	</keywords>
 	<contents>
 		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden können. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
@@ -38,6 +39,7 @@
 			<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
 			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
 			<item node="declare">Dieses Kommando deklariert eine oder mehrere Datei-spezifische Konstanten für das aktuelle Script oder die aktuelle Prozedurdatei. Die Syntax ist dabei <code>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</code>, wobei für die Werte sowohl numerische Werte als auch Zeichenketten oder ganze Ausdrücke verwendet werden können. Diese ersetzen zum Zeitpunkt des Einlesens der Datei die verwendeten Konstanten. In einer Prozedurdatei kann dieses Kommando an jeder Stelle erscheinen (auch außerhalb von Prozeduren) und gilt ab seinem Auftreten für die darauffolgenden Zeilen. Durch die Verwendung von Konstanten kann ein Code sehr viel lesbarer werden, wie bei der Verwendung expliziert Literalkonstanten.</item>
+			<item node="clc">Dieses Kommando bereinigt das Terminal und setzt es auf den Anfangs-Zustand zurück.</item>
 		</list>
 	</contents>
 </article>

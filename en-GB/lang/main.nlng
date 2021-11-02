@@ -673,6 +673,7 @@ PARSERFUNCS_LISTCMD_CMD_BUTTON_[GUI]=					button       EX [-set PAR]          - 
 PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR  -> {VAL}         - Options applied to the elements in a cache. The parameters allow multiple operations, just like applying multi-argument functions
 PARSERFUNCS_LISTCMD_CMD_CASE_[FLOWCTRL]=				case         EX:                    - Defines a case in a switch fork. The expression EX has to be a numerical value or a string
 PARSERFUNCS_LISTCMD_CMD_CATCH_[FLOWCTRL]=				catch        EX:                    - Starts error handling for error type EX
+PARSERFUNCS_LISTCMD_CMD_CLC_[MAINCTRL]=					clc			 						- Clears the content of the terminal
 PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]          - Inserts a checkbox into a window layout. The event handling and the start value are configurable. If used inside a menu, this is converted into a menu item with a checkbox
 PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]              - Irreversibly removes all elements in the selected object from this computer. The parameter may be used to suppress the confirmation (-ignore) or to remove all tables at once (-memory)
 PARSERFUNCS_LISTCMD_CMD_CLOSE_[MAINCTRL]=				close        -PAR                   - Closes previously opened windows that are selected by parameters: -graphs closes all graphs, -docs all documentation windows, -tables all tables, -images all ImageViewers and -all closes all windows from this list

@@ -55,6 +55,7 @@ carttopol(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) z
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
 checkbox~Fügt eine Checkbox in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunction~Cl2(
+clc~Bereinige das Terminal und setze den Inhalt auf den Startzustand zurück~clc clear terminal clean~help clc
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds~clock()
 close~Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement~cmp(
