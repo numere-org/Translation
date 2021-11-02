@@ -23,7 +23,7 @@
 		<keyword>diff</keyword>
 	</keywords>
 	<contents>
-		NumeRe kann einen oder mehrere Ausdrücke zur ersten Ordnung numerisch differenzieren. Dabei wird die lokale Steigung dieses Ausdrucks bezüglich einer zu spezifizierenden Variable an einer gegebenen Stelle berechnet. NumeRe wird nur den numerischen Wert und kein analytisches Ergebnis bestimmen!
+		NumeRe kann einen oder mehrere Ausdrücke zur ersten Ordnung unter Verwendung der Methode von Savitzky und Golay numerisch differenzieren. Dabei wird die lokale Steigung dieses Ausdrucks bezüglich einer zu spezifizierenden Variable an einer gegebenen Stelle berechnet. Dabei wird nur der numerischen Wert und kein analytisches Ergebnis bestimmt.
 		Das Schlüsselwort <code>diff</code> gefolgt von den zu differenzierenden Funktionen startet die numerische Differentiation. An die gegebene Funktion müssen dabei die folgenden Optionen durch <code>-set</code> angehängt werden:
 		<list>
 			<item node="VAR=POS">Die Position POS, an welcher der Ausdruck bezüglich der Variablen VAR differenziert werden soll, angeben. Wenn POS in Form eines Intervalls angegeben wird, bestimmt NumeRe die Ableitung in diesem Intervall für die Zahl der Stützstellen</item>
@@ -31,12 +31,12 @@
 			<item node="samples=STÜTZSTELLEN">Die Zahl der Stützstellen für Intervalldifferentiation angeben, standardmäßig sind dies 100</item>
 		</list>
 		Des Weiteren kann NumeRe Datensätze numerisch differenzieren. Dazu muss <code>diff</code> gefolgt vom gewünschten Datensatz angegeben werden:<codeblock>diff DATENSATZ(i1:i2,j1:j2)</codeblock>
-		Der Datensatz sollte <expr>x</expr>- und <expr>y</expr>-Werte in den Spalten enthalten um korrekte Ableitungen zu erhalten, anderenfalls werden Ableitungen zwischen Stützstellen der Breite 1 berechnet. Der Rückgabedatensatz ist zusätzlich um einen Punkt kürzer als der übergebene Datensatz. Da NumeRe standardmäßig die <expr>y</expr>-Werte berechnet, kann die Option <code>xvals</code> übergeben werden. Damit werden die entsprechenden <expr>x</expr>-Werte zurückgegeben.
+		Der Datensatz sollte <expr>x</expr>- und <expr>y</expr>-Werte in den Spalten enthalten um korrekte Ableitungen zu erhalten, anderenfalls werden Ableitungen zwischen Stützstellen der Breite 1 berechnet. Der Datensatz muss zusätzlich mindesten 5 Punkte umfassen, um eine Ableitung zu erhalten. Außerdem sind die ersten zwei und die letzten zwei Datenpunkte des Ergebnisses nicht sinnvoll bestimmt und sind nur Kopien des darauffolgenden bzw. vorausgehenden Wertes.
 		<example desc="Numerische Differentiation der Funktion <expr>f(x) = x^2</expr> um die Stelle <expr>x = 1</expr> mit der Genauigkeit <expr>10^(-6)</expr> und numerische Differentiation eines Datensatzes:">
 			diff x^2 -set x=1 eps=1e-6
 			ans = 2
 			diff data(:,1:2)
-			ans = [0.99830036,  0.98812332,  0.96787298, ...]
+			ans = {0.99830036,  0.98812332,  0.96787298, ...}
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://taylor?frame=self">help taylor</a>
 	</contents>
