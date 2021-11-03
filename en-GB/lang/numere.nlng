@@ -1,5 +1,5 @@
 #
-# NumeRe: Framework fÃ¼r Numerische Rechnungen
+# NumeRe: Framework für Numerische Rechnungen
 # Copyright (C) 2018  Erik Haenel et al.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -62,7 +62,7 @@ PARSERFUNCS_LISTFUNC_FUNC_BASETODEC_[STRING]=				basetodec(sBase,sBaseVal)      
 PARSERFUNCS_LISTFUNC_FUNC_JUSTIFY_[STRING]=					justify({sToJustify},nMode) 				{STR} 	  - Aligns the strings in the string vector sToJustify by adding spaces on one or both sides according to the mode nMode. nMode is optional and by default -1 (left-aligned). nMode = 0 centers the strings and nMode = 1 aligns them to the right. Existing enclosing spaces are removed before the alignment.
 PARSERFUNCS_LISTFUNC_FUNC_BESSEL_[NUM_PHYSICS]=				bessel(n,x)                                  VAL      - Bessel function of the first kind with the order n at the point x. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_BETA_[NUM]=					    beta(x,y)                                    VAL      - Calculates the value of the beta function of x and y with x,y from R \ {-n}
-PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)                        VAL      - Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-WeizsÃ¤cker mass formula. %%DEFINED_NATURAL%% N, Z > 0
+PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)                        VAL      - Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula. %%DEFINED_NATURAL%% N, Z > 0
 PARSERFUNCS_LISTFUNC_FUNC_BINOM_[NUM]=						binom(n,k)                                   VAL      - Binomial coefficient of n and k. %%DEFINED_NATURAL%% >= 0
 PARSERFUNCS_LISTFUNC_FUNC_BI_[NUM_PHYSICS]=					Bi(x)                                        VAL      - Airy function Bi(x). %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_CARTTOCYL_[MAT_COORDS]=			carttocyl(MAT)                               MAT      - Converts the two or three columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z). Requires the matop mode
