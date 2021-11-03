@@ -1,0 +1,981 @@
+#
+# NumeRe: Framework für Numerische Rechnungen
+# Copyright (C) 2018  Erik Haenel et al.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# ========================================================================
+# LANGUAGE FILE: numere.nlng
+# LANGUAGE: en-GB
+#
+# PARSERFUNCS:
+#======================================
+PARSERFUNCS_LISTFUNC_HEADLINE=Predefined functions
+PARSERFUNCS_LISTFUNC_TYPE_NUM=Numerics
+PARSERFUNCS_LISTFUNC_TYPE_MAT=Matrix and vector
+PARSERFUNCS_LISTFUNC_TYPE_TRIGONOMETRIC=Trigonometry
+PARSERFUNCS_LISTFUNC_TYPE_HYPERBOLIC=Hyperbolic functions
+PARSERFUNCS_LISTFUNC_TYPE_POLYNOMIAL=Polynomials
+PARSERFUNCS_LISTFUNC_TYPE_STATS=Statistics
+PARSERFUNCS_LISTFUNC_TYPE_STRING=String
+PARSERFUNCS_LISTFUNC_TYPE_LOGIC=Logic
+PARSERFUNCS_LISTFUNC_TYPE_TIME=Time
+PARSERFUNCS_LISTFUNC_TYPE_RANDOM=Random
+PARSERFUNCS_LISTFUNC_TYPE_PHYSICS=Physics
+PARSERFUNCS_LISTFUNC_TYPE_ANGULAR=Angles
+PARSERFUNCS_LISTFUNC_TYPE_DISTRIB=Distributions
+PARSERFUNCS_LISTFUNC_TYPE_LOGARITHMIC=Logarithms
+PARSERFUNCS_LISTFUNC_TYPE_COORDS=Coordinates
+PARSERFUNCS_LISTFUNC_TYPE_DRAW=Drawings
+PARSERFUNCS_LISTFUNC_TYPE_DEFINE=Custom Definitions
+PARSERFUNCS_LISTFUNC_TYPE_GUI=Graphical user interfaces
+PARSERFUNCS_LISTFUNC_TYPE_CMPLX=Complex numbers
+# Funktionentabelle
+DEFINED_FOR_ALL=Defined for all real and complex numbers
+DEFINED_FOR_ALL_C_RANGE_R=Defined for all complex numbers or for the real ones in the range
+DEFINED_REAL=Defined for all real numbers
+DEFINED_NATURAL=Defined for natural numbers
+PARSERFUNCS_LISTFUNC_FUNC_ABS_[NUM]=						abs(x)                                       VAL      - Absolute value of the real or complex number x
+PARSERFUNCS_LISTFUNC_FUNC_ACOSH_[NUM_HYPERBOLIC]=			acosh(x)                                     VAL      - Inverse hyperbolic cosine of x. %%DEFINED_FOR_ALL_C_RANGE_R%% [1,inf) (Synonym: "arcosh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ACOS_[NUM_TRIGONOMETRIC]=			acos(x)                                      VAL      - Inverse cosine of x. %%DEFINED_FOR_ALL_C_RANGE_R%% [-1,1] (Synonym: "arccos(x)")
+PARSERFUNCS_LISTFUNC_FUNC_AI_[NUM_PHYSICS]=					Ai(x)                                        VAL      - Airy function Ai(x). %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_AND_[LOGIC]=						and(x,y,z,...)                               LOG      - Connects its arguments using the "&&" operator
+PARSERFUNCS_LISTFUNC_FUNC_ARCV_[DRAW]=						arcv(P,[D,]D,a,STYLE)                        {}       - Draws an arc with the angle a around the point P starting from point P+D. The optional direction D defines the normal vector, the default is the z axis. The orientation of the arc is counter-clockwise. The style of the arc may be modified with STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_ARC_[DRAW]=						arc(P,[D,]P,a,STYLE)                         {}       - Draws an arc with the angle a around the point P starting from point P. The optional direction D defines the normal vector, the default is the z axis. The orientation of the arc is counter-clockwise. The style of the arc may be modified with STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_ASCII_[STRING]=					ascii(sToParse)                             {VAL}     - Returns the ASCII values of the characters in sToParse
+PARSERFUNCS_LISTFUNC_FUNC_ASINH_[NUM_HYPERBOLIC]=			asinh(x)                                     VAL      - Inverse hyperbolic sine of x. %%DEFINED_FOR_ALL%% (Synonym: "arsinh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ASIN_[NUM_TRIGONOMETRIC]=			asin(x)                                      VAL      - Inverse sine of x. %%DEFINED_FOR_ALL_C_RANGE_R%% [-1,1] (Synonym: "arcsin(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ATANH_[NUM_HYPERBOLIC]=			atanh(x)                                     VAL      - Inverse hyperbolic tangent of x. %%DEFINED_FOR_ALL_C_RANGE_R%% (-1,1) (Synonym: "artanh(x)")
+PARSERFUNCS_LISTFUNC_FUNC_ATAN_[NUM_TRIGONOMETRIC]=			atan(x)                                      VAL      - Inverse tangent of x. %%DEFINED_FOR_ALL%% (Synonym: "arctan(x)")
+PARSERFUNCS_LISTFUNC_FUNC_AVG_[STATS]=						avg(x,y,z,...)                               VAL      - Returns the average of x,y,z,... %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_BASETODEC_[STRING]=				basetodec(sBase,sBaseVal)                    VAL      - Converts the number sBaseVal (given as a string) from base sBase to decimal and returns it as a numeric value. As values for the base exist "hex" for hexadecimal, "oct" for octal and "bin" for binary
+PARSERFUNCS_LISTFUNC_FUNC_JUSTIFY_[STRING]=					justify({sToJustify},nMode) 				{STR} 	  - Aligns the strings in the string vector sToJustify by adding spaces on one or both sides according to the mode nMode. nMode is optional and by default -1 (left-aligned). nMode = 0 centers the strings and nMode = 1 aligns them to the right. Existing enclosing spaces are removed before the alignment.
+PARSERFUNCS_LISTFUNC_FUNC_BESSEL_[NUM_PHYSICS]=				bessel(n,x)                                  VAL      - Bessel function of the first kind with the order n at the point x. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_BETA_[NUM]=					    beta(x,y)                                    VAL      - Calculates the value of the beta function of x and y with x,y from R \ {-n}
+PARSERFUNCS_LISTFUNC_FUNC_BETHEWEIZSAECKER_[PHYSICS]=		betheweizsaecker(N,Z)                        VAL      - Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula. %%DEFINED_NATURAL%% N, Z > 0
+PARSERFUNCS_LISTFUNC_FUNC_BINOM_[NUM]=						binom(n,k)                                   VAL      - Binomial coefficient of n and k. %%DEFINED_NATURAL%% >= 0
+PARSERFUNCS_LISTFUNC_FUNC_BI_[NUM_PHYSICS]=					Bi(x)                                        VAL      - Airy function Bi(x). %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_CARTTOCYL_[MAT_COORDS]=			carttocyl(MAT)                               MAT      - Converts the two or three columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_CARTTOPOL_[MAT_COORDS]=			carttopol(MAT)                               MAT      - Converts the two or three columns of the matrix MAT from cartesian (x,y,z) to polar coordinates (rho,phi,theta). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_CHAR_[STRING]=					char(sStr,nPos)                              STR      - Return the character at the position nPos in sStr
+PARSERFUNCS_LISTFUNC_FUNC_CIRCLE_[DRAW]=					circle(P,r,STYLE)                            {}       - Draws a circle around the point P with the radius r. The filling and the style of the circle may be modified using STYLE. polygon() with n >= 30 generates similar results and allows "tilting" of the circle.
+PARSERFUNCS_LISTFUNC_FUNC_CL2_[NUM]=					    Cl2(x)                                       VAL      - Calculates the value of the Clausen function at the location x. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_CLOCK_[TIME]=						clock()                                      VAL      - Returns the number of processor clicks since the startu-up of NumeRe. The duration of a click depends on the hardware, mostly it's a milli second
+PARSERFUNCS_LISTFUNC_FUNC_CMP_[STATS]=						cmp(x,y,z,...,CMP,T)                         VAL      - Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}: T = 0 returns the index of the element, which is equal to CMP. T = -1 returns the index of the largest element, which is smaller than or equal to CMP, T = 1 returns the index of smallest one being larger than or equal to CMP. T = -2 and 2 returns the corresponding values instead of the indices. T = -3 or T = 3 returns the indices and T = -4 and T = 4 returns the values for the first element, which is smaller-equal or larger-equal, respectively. If no element is found, the function returns "nan". Defined everywhere in R
+PARSERFUNCS_LISTFUNC_FUNC_CNT_[STATS_STRING]=				cnt(x,y,z,...)                               VAL      - Returns the number of elements in its argument (even the invalid ones). May be applied to strings, but returns at least 1 in this case.
+PARSERFUNCS_LISTFUNC_FUNC_COMPLEX_[NUM_CMPLX]=				complex(re,im)                               VAL      - Creates a complex number out of the passed real re and imaginary parts im. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_CONEV_[DRAW]=						conev(P,D,r,r,STYLE)                         {}       - Draws a cone shell with the radius r going from P to P+D. Using the second radius r will truncate the cone. Top and bottom faces will be displayed by passing @to STYLE. Passing 4, 6 or 8 to STYLE will draw a 4, 6 or 8 sided (truncated) pyramid instead of the cone.
+PARSERFUNCS_LISTFUNC_FUNC_CONE_[DRAW]=						cone(P,P,r,r,STYLE)                          {}       - Draws a cone shell with the radius r going from P to P. Using the second radius r will truncate the cone. Top and bottom faces will be displayed by passing @to STYLE. Passing 4, 6 or 8 to STYLE will draw a 4, 6 or 8 sided (truncated) pyramid instead of the cone.
+PARSERFUNCS_LISTFUNC_FUNC_CONJ_[NUM_CMPLX]=					conj(z)                                      VAL      - Returns the complex conjugated number of the passed complex number z. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_COORDSTOGRID_[MAT_COORDS]=		coordstogrid(MAT,MAT)                        MAT      - Maps the one or two columns of the second matrix into the grid coordinates of the first matrix: x -> idx or (x,y) -> (row,col), where the calculated grid coordinates are also floating point values. This can be used to interpolate values from the associated data grid, e.g. with 'interpolate(grid,coords)'. Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_CORREL_[MAT]=						correl(MAT,MAT)                              MAT      - Calculates the correlation matrix of the both arguments. If the arguments do not have equal dimensions, their rows and columns are padded with zeros. If both arguments are equal, the auto-correlation matrix is calculated. The resulting matrix does have the dimensions 2n-1 x 2m-1, whereas the element MAT(n,m) corresponds to the zero-shift correlation
+PARSERFUNCS_LISTFUNC_FUNC_COSH_[NUM_HYPERBOLIC]=			cosh(x)                                      VAL      - Hyperbolic cosine of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_COS_[NUM_TRIGONOMETRIC]=			cos(x)                                       VAL      - Cosine of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_COT_[NUM_TRIGONOMETRIC]=			cot(x)                                       VAL      - Cotangent of x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {n*PI}. n is an integral value.
+PARSERFUNCS_LISTFUNC_FUNC_COVAR_[MAT]=						covar(MAT,MAT)                               VAL      - Calculates the covariance of the both arguments. The arguments must have equal dimensions
+PARSERFUNCS_LISTFUNC_FUNC_CROSS_[MAT]=						cross(MAT)                                   VEC      - Calculates the n dimensional cross product (vector product) of the vectors, which form the n-1 columns of the matrix MAT.
+PARSERFUNCS_LISTFUNC_FUNC_CUBOID_[DRAW]=					cuboid(P,D,D,D,STYLE)                        {}       - This function allows the display of a parallelepiped: displays a cube with the lower left edge at P, which marks the origin of the body-owned coordinate system. The direction D defines the x direction of the body. The y direction will be chosen orthogonal, leaving the z coordinate as it was. The z direction will be calculated out of the other two. If a second direction was passed, then this defines the y direction of the body and the z direction will be calculated. You'll obtain a real parallelepiped, if you define all three directions.
+PARSERFUNCS_LISTFUNC_FUNC_CURVE_[DRAW]=						curve(P,D,P,D,STYLE)                         {}       - Draws a "bezier" line from P to P. The direction vectors D determine the corresponding curvature of the curve. Please note that the coordinate system at the second point will be rotated by 180 degrees (additional signs are probably needed for the second direction vector). Color, shape and line endings may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_CYLTOCART_[MAT_COORDS]=			cyltocart(MAT)                               MAT      - Converts the two or three columns of the matrix MAT from cylindrical (rho,phi,z) to cartesian coordinates (x,y,z). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_CYLTOPOL_[MAT_COORDS]=			cyltopol(MAT)                                MAT      - Converts the two or three columns of the matrix MAT from cylindrical (rho,phi,z) to cylindrical coordinates (rho,phi,z). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_DATE_[TIME]=						date(nTimeVal,nType)                         VAL      - Formats nTimeVal corresponding to nType: nType = 0 returns YYYYMMDDhhmmss, nType = 1...6 returns YYYY ... ss, nType = -1 returns YYYYMMDD and nType = -2 returns only hhmmss. The time is always in UTC
+PARSERFUNCS_LISTFUNC_FUNC_DBLFACT_[NUM]=					dblfact(n)                                   VAL      - Calculates the double factorial of the integral number n [n!! = n*(n-2)*(n-4)*...]. %%DEFINED_NATURAL%% >= 0
+PARSERFUNCS_LISTFUNC_FUNC_DECTOBASE_[STRING]=				dectobase(sBase,nDecVal)                     STR      - Converts the number nDecVal from the decimal system to the base and returns the result as a string. As values for the base exist "hex" for hexadecimal, "oct" for octal and "bin" for binary
+PARSERFUNCS_LISTFUNC_FUNC_DEGREE_[ANGULAR]=					degree(x)                                    VAL      - Degree value of x [rad]. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_DET_[MAT]=						det(MAT)                                     VAL      - Calculates the determinant of the matrix MAT, if MAT is a square matrix.
+PARSERFUNCS_LISTFUNC_FUNC_DIAGONALIZE_[MAT]=				diagonalize(MAT)                             MAT      - Diagonalizes the square matrix MAT, where its eigenvalues might be complex
+PARSERFUNCS_LISTFUNC_FUNC_DIAG_[MAT]=						diag(x,y,z,...)                              MAT      - Creates a diagonal matrix with the elements x,y,z,... as main diagonal.
+PARSERFUNCS_LISTFUNC_FUNC_DROP_[DRAW]=						drop(P,D,s,a,STYLE)                          {}       - Draws a three dimensional drop at the point P, which is tilted in the direction D. The optional parameters s and a may be used, to modify the shape of the drop. The color may be modified with STYLE and the plot option light makes the 3D effect visible.
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVALS_[MAT]=					eigenvals(MAT)                               MAT      - Calculates the eigenvalues of the square matrix MAT and returns them in the shape of a vector. The eigenvalues might be complex even if the original matrix was completely real
+PARSERFUNCS_LISTFUNC_FUNC_EIGENVECTS_[MAT]=					eigenvects(MAT)                              MAT      - Calculates the eigenvectors of the square matrix MAT and returns them in the shape of a matrix, where each column is one eigenvector. The eigenvectors might be complex even if the original matrix was completely real
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPSEV_[DRAW]=					ellipsev(P,D,r,STYLE)                        {}       - Generates an ellipse with the focus points P and P+D and the ellipse radius r. The filling and the style of the ellipse may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPSE_[DRAW]=					ellipse(P,P,r,STYLE)                         {}       - Generates an ellipse with the focus points P and P and the ellipse radius r. The filling and the style of the ellipse may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,n,k)                             VAL      - Value of the elliptic integral D(x,n,k) at the position x with 0 <= k < 1. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)                               VAL      - Value of the elliptic integral E(x,k) at the position x with 0 <= k < 1. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)                               VAL      - Value of the elliptic integral F(x,k) at the position x with 0 <= k < 1. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)                            VAL      - Value of the elliptic integral Pi(x,n,k) at the position x with 0 <= k < 1. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ERFC_[NUM_DISTRIB]=				erfc(x)                                      VAL      - Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ERF_[NUM_DISTRIB]=				erf(x)                                       VAL      - Value of the gaussian error function at the position x. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                  {}       - GUI event handler: changes the state of the element with the ID nId to the new state sState. GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
+PARSERFUNCS_LISTFUNC_FUNC_EVT_CLOSE_[GUI]=					evt_close()                                  {}       - GUI event handler: closes the current window. GUI-Event-Handler may only be used directly in a Layout-Script
+PARSERFUNCS_LISTFUNC_FUNC_EVT_COPYVALUES_[GUI]=				evt_copyvalues(nFromId,nToId1,...)           {}       - GUI event handler: copies the values from the elements with the ID nFromId into the elements with the IDs nToId1, ... . GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
+PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                {}       - GUI event handler: copies the values from the event-firing element into the elements with the IDs nToId1, ... . GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
+PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                                       VAL      - Exponential function of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,STYLE)                         {}       - Draws a quadrangle. You may pass from two to four edges. If you pass two, NumeRe will draw an square, passing three edges will result in a parallelogram and all four edges will draw a custom quadrangle. The first two vectors are the lower and the left border and the last is the diagonal opposite one. The filling of the quadrangle may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_FACE_[DRAW]=						face(P,P,P,P,STYLE)                          {}       - Draws a quadrangle. You may pass from two to four edges. If you pass two, NumeRe will draw an square, passing three edges will result in a parallelogram and all four edges will draw a custom quadrangle. The edges are numbered going from lower left in counter-clockwise order. The filling of the quadrangle may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_FACTORIAL_[NUM]=					factorial(n)                                 VAL      - Calculates the factorial of the integral number n [n! = n*(n-1)*(n-2)*...*1]. %%DEFINED_NATURAL%% >= 0
+PARSERFUNCS_LISTFUNC_FUNC_FINDCOLUMN_[STRING]=				findcolumn(sTable,sHeadline)                {VAL}     - Returns all indices of the columns of the table in sTable (as string, e.g. via TABLE().name), whose column headings are matching to sHeadline
+PARSERFUNCS_LISTFUNC_FUNC_FINDFILE_[STRING_LOGIC]=			findfile(sFile,sPath)                        LOG      - Returns true, if the file sFile exists, false otherwise. The file must be passed as a string. sPath is an optional standard search path, which defaults to the NumeRe root path
+PARSERFUNCS_LISTFUNC_FUNC_FINDPARAM_[STRING]=				findparam(sPar,sLine,C)                      VAL      - Returns the position, where the parameter sPar in the string sLine was found, and 0, if sPar was not found. If sPar shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise. If C is passed, the position will be shifted right corresponding to the number of whitespaces between sPar and C.
+PARSERFUNCS_LISTFUNC_FUNC_FINDTOKEN_[STRING]=				findtoken(sString,sToken,sSep)               VAL      - Returns the position, where the token sToken is found in the string sString, 0 otherwise. sSep is an optional string, which will describe the separator characters. Its default value is the white space and the tabulator character.
+PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)                                     VAL      - Rounds x to the nearest lower integral value. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)                                     VAL      - Value of the gamma function at the position x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {-n, 0}, where n is an integral number > 0.
+PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,x1)                                 VAL      - Creates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1
+PARSERFUNCS_LISTFUNC_FUNC_GCD_[NUM]=						gcd(n,k)                                     VAL      - Calculates the greatest common divisor of the integral numbers n and k
+PARSERFUNCS_LISTFUNC_FUNC_GETENVVAR_[STRING]=				getenvvar(sVarName)                          STR      - Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist
+PARSERFUNCS_LISTFUNC_FUNC_GETFILELIST_[STRING]=				getfilelist(sScheme,T)                      {STR}     - Returns a list of strings containing all files matching to the naming scheme sScheme. sScheme may contain additional placeholders (? or *) or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the filenames and the extensions of the files without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
+PARSERFUNCS_LISTFUNC_FUNC_GETFILEPARTS_[STRING]=			getfileparts(sFilePath)                     {STR}     - Splits the sFilePath into drive letter, file path, file name and extension. If the path is a network path, the drive letter will be empty. If it is a folder, then the extension and the name will be empty
+PARSERFUNCS_LISTFUNC_FUNC_GETFOLDERLIST_[STRING]=			getfolderlist(sScheme,T)                    {STR}     - Returns a list of strings containing all directories matching to the naming scheme sScheme. sScheme may contain additional placeholders (? or *) or with "|" linked "choose tokens" ("<CHOOSE|TOKEN>"). The function only returns the directory names without their paths. T is a optional parameter and returns the corresponding paths if set to 1.
+PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(sTable,T)                        {VAL}     - Returns the indices of the data object access, which was passed as a string, in the format I1,I2,J1,J2. T is an optional parameter and determines, how the access shall be interpreted: matrix-like (T=0), column- (T=1) or linewise (T=2). Passing T=-1 returns uninterpreted indices: 0 for non-existing and -1 for open interval boundaries. E.g.: getindices("data(5:,3)",-1) = 5,-1,3,0
+PARSERFUNCS_LISTFUNC_FUNC_GETKEYVAL_[STRING]=				getkeyval({sKeyVals},sKey,sDef,strict)       ARG      - Returns the value of the corresponding key sKey from the key-value list sKeyVals. sDef is the default value, if the key could not be found. If strict is true and the key was not found, then a warning is issued. sDef is a optional value and defaults to false
+PARSERFUNCS_LISTFUNC_FUNC_GETLASTERROR_[STRING]=			getlasterror()                              {STR}     - Returns the last error processed by a try-catch block in the form {TYPE, MESSAGE}, where TYPE always corresponds to one of the known error types of try-catch as a string
+PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(sLine)                     VAL      - Returns the position of the closing parenthesis matching to the first open parenthesis in the string sLine. Note that this applies to brackets and braces as well.
+PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(sLine,nPos)                           STR      - Returns the value of a parameter in the string sLine with the value's first character at position nPos (e.g. after "=") as a string. Note that all whitespaces between nPos and the actual position of the value will be ignored.
+PARSERFUNCS_LISTFUNC_FUNC_HEAVISIDE_[NUM_DISTRIB]=			heaviside(x)                                 VAL      - Heaviside (or Theta) function. 0 for x < 0, 1 otherwise. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_HERMITE_[NUM_POLYNOMIAL]=			hermite(n,x)                                 VAL      - Numerical value of the Hermite polynomial with the order n >= 0 at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_IDENTITY_[MAT]=					identity(n)                                  MAT      - Creates a n dimensional identity matrix
+PARSERFUNCS_LISTFUNC_FUNC_IDXTOLOG_[MAT]=					idxtolog(MAT)                                MAT      - Transforms indices in to logical values. If a vector is passed, then the function will return a vector with true in those lines, to which the indices are pointing. If a matrix with two columns is passed, then the function will return a matrix with those elements equal to true, to which the line indices of the first and the column indices of the second column are pointing
+PARSERFUNCS_LISTFUNC_FUNC_IMAG_[NUM_CMPLX]=					imag(z)                                      VAL      - Returns the imaginary part of the passed complex number z. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_IMY_[NUM_POLYNOMIAL]=				imY(l,m,theta,phi)                           VAL      - Imaginary part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_INTERPOLATE_[MAT_COORDS]=			interpolate(MAT,MAT)                         MAT      - Interpolates values from the first matrix bilinearly using the row and column values of the second matrix, or interpolates values of the first vector linearly from the index values of the second vector. The row and column or index values can be floating point values. If the second matrix has more than two columns, the first column is interpreted as row values and all further ones as column values. A matrix of size (row x col) is then created. Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_INVERT_[MAT]=						invert(MAT)                                  MAT      - Inverts the matrix MAT, if an inverse matrix exists. invert() checks in advance, if MAT is a square matrix.
+PARSERFUNCS_LISTFUNC_FUNC_IS_ALNUM_[STRING_LOGIC]=			is_alnum(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a alphanumeric character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_ALPHA_[STRING_LOGIC]=			is_alpha(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a alphabetic character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_BLANK_[STRING_LOGIC]=			is_blank(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a blank character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_CLUSTER_[STRING_LOGIC]=		is_cluster(sObject)                          LOG      - Returns true, if sObject is a cluster, false otherwise
+PARSERFUNCS_LISTFUNC_FUNC_IS_CNTRL_[STRING_LOGIC]=			is_cntrl(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a control character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(sObject)                             LOG      - Returns true, if sObject is a data object (a table or a cluster), false otherwise
+PARSERFUNCS_LISTFUNC_FUNC_IS_DIGIT_[STRING_LOGIC]=			is_digit(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a decimal character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_GRAPH_[STRING_LOGIC]=			is_graph(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a graphical character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_LOWER_[STRING_LOGIC]=			is_lower(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a lowercase character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[LOGIC]=					is_nan(x)                                    LOG      - Returns true, if x has the value nan, false otherwise
+PARSERFUNCS_LISTFUNC_FUNC_IS_PRINT_[STRING_LOGIC]=			is_print(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a printable character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_PUNCT_[STRING_LOGIC]=			is_punct(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a punctuation character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_SPACE_[STRING_LOGIC]=			is_space(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a white-space character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_STRING_[STRING_LOGIC]=			is_string(EXPR)                              LOG      - Returns true, if EXPR contains strings, false otherwise
+PARSERFUNCS_LISTFUNC_FUNC_IS_TABLE_[STRING_LOGIC]=			is_table(sObject)                            LOG      - Returns true, if sObject is a table, false otherwise
+PARSERFUNCS_LISTFUNC_FUNC_IS_UPPER_[STRING_LOGIC]=			is_upper(sToParse)                          {LOG}     - Determines for each character in sToParse, whether it is a uppercase character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IS_XDIGIT_[STRING_LOGIC]=			is_xdigit(sToParse)                         {LOG}     - Determines for each character in sToParse, whether it is a hexadecimal character type, or not
+PARSERFUNCS_LISTFUNC_FUNC_IVL_[NUM_DISTRIB]=				ivl(x,x0,x1,l,r)                             VAL      - Interval function: defines an interval from x0 to x1 with arbitrary border types l and r: 0 ignores the border, 1 is a closed and 2 an open interval border. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_A_[NUM_POLYNOMIAL]=		laguerre_a(n,k,x)                            VAL      - Numerical value of the associate Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_LAGUERRE_[NUM_POLYNOMIAL]=		laguerre(n,x)                                VAL      - Numerical value of the Laguerre polynomial with the order n >= 0 at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_LCM_[NUM]=						lcm(n,k)                                     VAL      - Calculates the least common multiple of the integral numbers n and k
+PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_A_[NUM_POLYNOMIAL]=		legendre_a(l,m,x)                            VAL      - Numerical value of the associate Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_LEGENDRE_[NUM_POLYNOMIAL]=		legendre(n,x)                                VAL      - Numerical value of the Legendre polynomial with the order n >= 0 at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_LI2_[NUM]=					    Li2(x)                                       VAL      - Calculates the dilogarithm of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_LINEV_[DRAW]=						linev(P,D,STYLE)                             {}       - Draws a straight line from P to P+D. If only one point is passed, then the second will be located at the origin. Color, shape and line endings may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_LINE_[DRAW]=						line(P,P,STYLE)                              {}       - Draws a straight line from P to P. If only one point is passed, then the second will be located at the origin. Color, shape and line endings may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_LN_[NUM_LOGARITHMIC]=				ln(x)                                        VAL      - Natural logarithm of x. %%DEFINED_FOR_ALL_C_RANGE_R%% (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOCATE_[STRING]=					locate({sWhere},sToFind,nTolerance)         {VAL}     - Returns the indices of the cluster's components of sWhere, in which sToFind may be found according nTolerance. If nTolerance = 0, then only components are returned, which match completely to sToFind. The algorithm ignores surrounding whitespaces, if nTolerance = 1 and only examines the first (for nTolerance = 2) or the last (for nTolerance = 3) non-whitespace characters of each single component. If nTolerance = 4, then sToFind may only be a part of each component and nTolerance = 5 switches towards using the single characters of sToFind just like in strmatch(). If nothing is found, this function simply returns false
+PARSERFUNCS_LISTFUNC_FUNC_LOG10_[NUM_LOGARITHMIC]=			log10(x)                                     VAL      - Logarithm with base 10 of x. Can be passed as 'log(x)'. %%DEFINED_FOR_ALL_C_RANGE_R%% (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOG2_[NUM_LOGARITHMIC]=			log2(x)                                      VAL      - Logarithm with base 2 of x. %%DEFINED_FOR_ALL_C_RANGE_R%% (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOGTOIDX_[MAT]=					logtoidx(MAT)                                MAT      - Transforms logical values to indices. If a vector is passed, then the function will return a vector with the indices to the elements, which were true. If a matrix is passed, then the function returns a two-column matrix, with the line indices in the first and the column indices in the second column
+PARSERFUNCS_LISTFUNC_FUNC_LOG_B_[NUM_LOGARITHMIC]=			log_b(b,x)                                   VAL      - Logarithm with base b of x. %%DEFINED_FOR_ALL_C_RANGE_R%% (0,inf) and b in (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_LOG_[NUM_LOGARITHMIC]=			log(x)                                       VAL      - Logarithm with base 10 of x. Alias for 'log10(x)'. %%DEFINED_FOR_ALL_C_RANGE_R%% (0,inf)
+PARSERFUNCS_LISTFUNC_FUNC_MATFCF_[MAT]=						matfcf(X,Y,Z,...)                            MAT      - Creates a matrix out of the columns X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be logically generated out of the already present ones.
+PARSERFUNCS_LISTFUNC_FUNC_MATFC_[MAT]=						matfc(X,Y,Z,...)                             MAT      - Creates a matrix out of the columns X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be replaced by 0.
+PARSERFUNCS_LISTFUNC_FUNC_MATFLF_[MAT]=						matflf(X,Y,Z,...)                            MAT      - Creates a matrix out of the lines X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be logically generated out of the already present ones.
+PARSERFUNCS_LISTFUNC_FUNC_MATFL_[MAT]=						matfl(X,Y,Z,...)                             MAT      - Creates a matrix out of the lines X,Y,Z,... If the number of elements is not sufficient for the maximal dimension, the missing ones will be replaced by 0.
+PARSERFUNCS_LISTFUNC_FUNC_MAXPOS_[STATS]=					maxpos(x,y,z,...)                            VAL      - Index of the maximal value of x,y,z,... %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_MAX_[STATS_STRING]=				max(x,y,z,...)                               ARG      - Returns the maximal value of x,y,z,... %%DEFINED_REAL%%. Can be applied to strings, where it will use string logic
+PARSERFUNCS_LISTFUNC_FUNC_MED_[STATS]=						med(x,y,z,...)                               VAL      - Returns the median of x,y,z,... %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_MINPOS_[STATS]=					minpos(x,y,z,...)                            VAL      - Index of the minimal value of x,y,z,... %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_MIN_[STATS_STRING]=				min(x,y,z,...)                               ARG      - Returns the minimal value of x,y,z,... %%DEFINED_REAL%%. Can be applied to strings, where it will use string logic
+PARSERFUNCS_LISTFUNC_FUNC_NEUMANN_[NUM_PHYSICS]=			neumann(n,x)                                 VAL      - Neumann function (Bessel function of the second kind) with the order n at the position x. %%DEFINED_REAL%% R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_NORMALIZE_[MAT]=					normalize(MAT)                               MAT      - Normalizes the values in the matrix MAT to the range [-1,1] (the values in the matrix are divided through their absolute maximal value)
+PARSERFUNCS_LISTFUNC_FUNC_NORM_[NUM_STATS_COORDS]=			norm(x,y,z,...)                              VAL      - Calculates the euklidian vector norm: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...). %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_NUM_[STATS_STRING]=				num(x,y,z,...)                               VAL      - returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string
+PARSERFUNCS_LISTFUNC_FUNC_ONE_[MAT]=						one(n,m)                                     MAT      - Creates a n x m matrix, which is filled with ones. If only one argument was passend, then a square matrix will be created.
+PARSERFUNCS_LISTFUNC_FUNC_OR_[LOGIC]=						or(x,y,z,...)                                LOG      - Connects its arguments with the "||" operator
+PARSERFUNCS_LISTFUNC_FUNC_PCT_[STATS]=						pct(x,y,z,...,p)                             VAL      - p-th percentile of x,y,z,... %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_PERLIN_[NUM_RANDOM_DISTRIB]=		perlin(x,y,z,seed,freq,oct,pers)             VAL      - Calculates the coherent Perlin noise at the position {x,y=0,z=0} with the random seed=0, the frequency freq=1 [1..16], the number of octaves oct=6 [1..6] and a persistency of pers=0.5 [0..1]. If fewer than all 7 arguments are passed, then the mentioned default values are used. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_PHI_[ANGULAR_COORDS]=				phi(x,y)                                     VAL      - Calculates the angle between the x axis and the vector (x,y). %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_POINT_[DRAW]=						point(P,STYLE)                               {}       - Draws a point at the position P. The shape of the point an its color may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_POLTOCART_[MAT_COORDS]=			poltocart(MAT)                               MAT      - Converts the two or three columns of the matrix MAT from polar (rho,phi,theta) to cartesian coordinates (x,y,z). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_POLTOCYL_[MAT_COORDS]=			poltocyl(MAT)                                MAT      - Converts the two or three columns of the matrix MAT from polar (rho,phi,theta) to cylindrical coordinates (rho,phi,z). Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_POLYGONV_[DRAW]=					polygonv(P,D,n,STYLE)                        {}       - Draws a regular n-edged polygon around the point P going from point P+D. The filling of the polygon may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_POLYGON_[DRAW]=					polygon(P,P,n,STYLE)                         {}       - Draws a regular n-edged polygon around the point P going from point P. The filling of the polygon may be modified using STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_POLYLENGTH_[MAT]=					polylength(MAT)                              VAL      - Calculates the length of the polygon path defined by the rows of the matrix MAT, where each row represents a vertex and each column represents a 2 to n-D vector component. The polygon course is assumed to be open. To calculate the perimeter of a closed polygon, the first vertex must be duplicated in the last row. Requires the matop mode
+PARSERFUNCS_LISTFUNC_FUNC_POLYNOMIAL_[NUM_POLYNOMIAL]=		polynomial(x,a0,a1,a2,...)                   VAL      - Calculates the value of the polynomial a0+a1*x+a2*x^2+... at the position x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_PRD_[NUM_STATS]=					prd(x,y,z,...)                               VAL      - Returns the product of the arguments x,y,z,... %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_PSI_N_[NUM]=					    psi_n(n,x)                                   VAL      - Calculates the value of the polygamma function of the order n >= 0 at the location x. %%DEFINED_REAL%% x > 0
+PARSERFUNCS_LISTFUNC_FUNC_PSI_[NUM]=					    psi(x)                                       VAL      - Calculates the value of the digamma function at the location x. %%DEFINED_REAL%% R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_RADIAN_[ANGULAR]=					radian(alpha)                                VAL      - Calculates the radians of the angle alpha [Degree]. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_RAND_[NUM_RANDOM_DISTRIB]=		rand(x0,x1)                                  VAL      - Creates a (real and uniform distributed) random number in the interval [x0,x1). %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_RANGE_[NUM]=						range(x,LFT,RGHT)                            VAL      - Restricts x to the interval [LFT,RGHT]. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_REAL_[NUM_CMPLX]=					real(z)                                      VAL      - Returns the real part of the passed complex number z. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_RECT_[NUM_DISTRIB]=				rect(x,x0,x1)                                VAL      - Rectangular function: 1 for x in [x0,x1]; 0 otherwise. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_REGEX_[STRING]=					regex(sRegEx,sStr,nPos,nLen)                {VAL}     - Applies the regular expression sRegEx (ECMAScript syntax) on the string sStr and returns position and length of the first match. The variables nPos and nLen are optional and define the starting point and the length of the substring to search in
+PARSERFUNCS_LISTFUNC_FUNC_REPEAT_[STRING]=					repeat(sStr,nTimes)                          STR      - Returns nTimes copies of sStr
+PARSERFUNCS_LISTFUNC_FUNC_REPLACEALL_[STRING]=				replaceall(sToRep,sToFind,sRep,nPos1,nPos2)  STR      - Replaces all occurrences of the second string sToFind in the first string sToRep with the third string sRep. The variables nPos1 and nPos2 are optional values limiting the action to start (nPos1) and end position (nPos2) in sToRep
+PARSERFUNCS_LISTFUNC_FUNC_REPLACE_[STRING]=					replace(sToRep,nPos,nLetters,sRep)           STR      - Replaces nLetters letters starting with the position nPos in string sToRep with the string sRep
+PARSERFUNCS_LISTFUNC_FUNC_REPMAT_[MAT]=						repmat(MAT,n,m)                              MAT      - Repeats the matrix MAT (n x m) times
+PARSERFUNCS_LISTFUNC_FUNC_RESHAPE_[MAT]=					reshape(MAT,n,m)                             MAT      - Changes the shape of the matrix MAT to a (n x m) matrix. The number of elements in the old and the new matrix must match for this function. Reshaping is done linewise
+PARSERFUNCS_LISTFUNC_FUNC_RESIZE_[MAT]=						resize(MAT,n,m)                              MAT      - Changes the size of the matrix MAT to (n x m). Missing lines and rows are appended using zeros
+PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                                      VAL      - Rounds x to the nearest integral value. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                                      VAL      - Rounds x to the nearest and larger integral number. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_ROUND_[NUM]=						round(x,n)                                   VAL      - Rounds x to n decimals. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_SBESSEL_[NUM_POLYNOMIAL_PHYSICS]=	sbessel(n,x)                                 VAL      - Spherical Bessel function of the order n. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_SELECT_[MAT]=						select(MAT,MAT,MAT)                          MAT      - Extracts values from the first matrix MAT. The row indices are taken from the second matrix and the column indices from the third matrix simultaneously. Second and third matrix must have identical dimensions or be scalars. If these are vectors, the function also returns a vector.
+PARSERFUNCS_LISTFUNC_FUNC_SHUFFLE_[MAT]=					shuffle(sel,val)                             MAT      - Returns sel randomly selected and unique values out of a 1:val array. val is an optional value, which defaults to sel.
+PARSERFUNCS_LISTFUNC_FUNC_SIGN_[NUM]=						sign(x)                                      VAL      - Returns the sign of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_SINC_[NUM_TRIGONOMETRIC]=			sinc(x)                                      VAL      - Cardinal sine of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_SINH_[NUM_HYPERBOLIC]=			sinh(x)                                      VAL      - Hyperbolic sine of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_SIN_[NUM_TRIGONOMETRIC]=			sin(x)                                       VAL      - Sine of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_SIZE_[MAT]=						size(MAT)                                    VEC      - Returns the number of lines and columns of the matrix MAT as a vector
+PARSERFUNCS_LISTFUNC_FUNC_SLEEP_[TIME]=						sleep(nMilliSeconds)                         VAL      - Waits for the passed nMilliSeconds and returns this value after it
+PARSERFUNCS_LISTFUNC_FUNC_SNEUMANN_[NUM_POLYNOMIAL_PHYSICS]=sneumann(n,x)                                VAL      - Spherical Neumann function of the order n. %%DEFINED_REAL%% R \ {0}
+PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(MAT)                                   VEC      - Solves the system of linear equations, which is described by the matrix MAT, with the Gaussian algorithm.
+PARSERFUNCS_LISTFUNC_FUNC_SPHERE_[DRAW]=					sphere(P,r,STYLE)                            {}       - Draws a sphere with the radius r at the coordinates P. The color may be modified using STYLE. The plot option light makes the 3d effect visible.
+PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(sToSplit,cSep)                        {STR}     - Splits the string sToSplit at the characters cSep in separate strings
+PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                                      VAL      - Square root of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_STD_[STATS]=						std(x,y,z,...)                               VAL      - Returns the standard deviation of x,y,z,... %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_STRFNDALL_[STRING]=				strfndall(sToFind,sWhere,nPos1,nPos2)       {VAL}     - Returns all occurrences of sToFind in sWhere, with the search starting from the position nPos1 and ending at nPos2. nPos1 and nPos2 are optional values with the default values nPos1 = 1 and nPos2 = strlen(sWhere). The function returns false, if sToFind is not found.
+PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(sToFind,sWhere,nPos)                  VAL      - Returns the position of the first occurrence of sToFind in sWhere, with the search starting from the position nPos. nPos is an optional value with the default value 1. The function returns false, if sToFind is not found.
+PARSERFUNCS_LISTFUNC_FUNC_STRING_CAST_[STRING]=				string_cast(EXPR)                            STR      - Transforms EXPR directly to a string and ignores possible string expressions (#(EXPR) would calculate the numerical value of EXPR first)
+PARSERFUNCS_LISTFUNC_FUNC_STRIP_[STRING]=					strip(sStr,sPref,sSuff,nStripAll)            STR      - Removes the prefix sPref and the suffix sSuff from the string sStr, if they have a non-zero length. nStripAll is an optional value and removes repeating pre- and suffixes if nStripAll = 1.
+PARSERFUNCS_LISTFUNC_FUNC_STRLEN_[STRING]=					strlen(sStr)                                 VAL      - Returns the length of the string sStr
+PARSERFUNCS_LISTFUNC_FUNC_STRMATCHALL_[STRING]=				strmatchall(sChars,sWhere,nPos1,nPos2)      {VAL}     - Searches for the first occurrences of each character of sChars in the string sWhere going from position nPos1 to nPos2. nPos1 and nPos2 are optional values and default to nPos1 = 1 and nPos2 = strlen(sWhere). If nothing was found, this function will return 0 for each character
+PARSERFUNCS_LISTFUNC_FUNC_STRMATCH_[STRING]=				strmatch(sChars,sWhere,nPos)                 VAL      - Searches for the first occurrence of a character of sChars in the string sWhere going from position nPos. nPos is an optional value and defaults to nPos = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STRRFND_[STRING]=					strrfnd(sToFind,sWhere,nPos)                 VAL      - Returns the position of the last occurrence of sToFind in sWhere, with the search starting from the position nPos. nPos is an optional value with the default value nPos = strlen(sWhere). The function returns false, if sToFind is not found.
+PARSERFUNCS_LISTFUNC_FUNC_STRRMATCH_[STRING]=				strrmatch(sChars,sWhere,nPos)                VAL      - Searches for the last occurrence of a character of sChars in the string sWhere up to position nPos. nPos is an optional value and defaults to nPos = strlen(sWhere). If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STRUNIQUE_[STRING]=				strunique({sStrings},nMode)                 {STR}     - Sorts and returns only unique elements from the strings sStrings. nMode is optional and defaults to 0. In this case, all unique strings from sStrings are returned. If nMode is 1 or only one string is specified, the function returns one vector component per string in sStrings with the respective unique characters
+PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_MATCH_[STRING]=			str_not_match(sChars,sWhere,nPos)            VAL      - Searches for the first occurrence of a character in the string sWhere going from position nPos, which doesn't appear in sChars. nPos is an optional value and defaults to nPos = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STR_NOT_RMATCH_[STRING]=			str_not_rmatch(sChars,sWhere,nPos)           VAL      - Searches for the last occurrence of a character in the string sWhere up to position nPos, which doesn't appear in sChars. nPos is an optional value and defaults to nPos = strlen(sWhere). If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_FUNC_STUDENT_T_[DISTRIB_STATS]=		student_t(n,c)                               VAL      - Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1
+PARSERFUNCS_LISTFUNC_FUNC_SUBSTR_[STRING]=					substr(sStr,nPos,nLen)                       STR      - Returns nLen characters starting with the nPos-th letter from sStr as a new string
+PARSERFUNCS_LISTFUNC_FUNC_SUM_[NUM_STATS_STRING]=			sum(x,y,z,...)                               ARG      - Sums x,y,z,... %%DEFINED_FOR_ALL%%. Can be applied to strings and will concatenate them
+PARSERFUNCS_LISTFUNC_FUNC_TANH_[NUM_HYPERBOLIC]=			tanh(x)                                      VAL      - Hyperbolic tangent of x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_TAN_[NUM_TRIGONOMETRIC]=			tan(x)                                       VAL      - Tangent of x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {-n*PI/2, n*PI/2}. n is an integral number > 0.
+PARSERFUNCS_LISTFUNC_FUNC_TEXTPARSE_[STRING]=               textparse(sToParse,sPattern,nPos1,nPos2)    {ARG}     - Splits sToParse up into single tokens of different variable types using the scheme sPattern. The variable types are defined using the identifiers "%s" (string), "%f" (float) and "%a" (any, will be ignored and can be used to jump over sections of text) in sPattern. nPos1 and nPos2 are optional values and define the starting and ending points
+PARSERFUNCS_LISTFUNC_FUNC_TEXT_[DRAW]=						text(P,P,TEXT,STYLE)                         {}       - Prints the text TEXT at the position P. The justification and the color may be modified, in which justification and shape have to be separated with : from the color information. The justification is represented using LRC (Left-Right-Centered) and the shape with rib (roman-italic-bold). The second coordinate pair may be used, if the text shall not printed horizontally.
+PARSERFUNCS_LISTFUNC_FUNC_THETA_[ANGULAR_COORDS]=			theta(x,y,z)                                 VAL      - Calculates the angle between the z axis and the vector (x,y,z). %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_TIMEFORMAT_[TIME_STRING]=			timeformat(sFormat,fTimeVal)                 STR      - Formats the time fTimeVal according to the pattern sFormat. The characters "YMDdHhmsiu" (Year, month, day (date), day (duration), hour (UTC), hour (current timezone), minute, second, millisecond, microsecond) in sFormat will be replaced according their length by the corresponding time value
+PARSERFUNCS_LISTFUNC_FUNC_TIME_[TIME]=						time()                                       VAL      - Returns the number of seconds since 1.1.1970 as UTC. The precision is up to microseconds
+PARSERFUNCS_LISTFUNC_FUNC_TO_CHAR_[STRING]=					to_char(x,y,z,...)                           STR      - Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string
+PARSERFUNCS_LISTFUNC_FUNC_TO_CMD_[STRING]=					to_cmd(sStr)                                 CMD      - Transforms the passed string sStr to a command expression
+PARSERFUNCS_LISTFUNC_FUNC_TO_LOWERCASE_[STRING]=			to_lowercase(sUpper)                         STR      - Transforms the uppercase letters in sUpper to lowercase
+PARSERFUNCS_LISTFUNC_FUNC_TO_POLAR_[NUM_CMPLX]=				to_polar(z)                                  VAL      - Converts a cartesian representation (re+i*im) of the complex number z into the polar representation (rho*exp(i*phi)). The return value will however be pseudo-cartesian as rho+i*phi. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_TO_RECT_[NUM_CMPLX]=				to_rect(z)                                   VAL      - Converts a polar representation (rho*exp(i*phi) or pseudo-cartesian as rho+i*phi) of the complex number z into the cartesian representation re+i*im. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_TO_STRING_[STRING]=				to_string(EXPR)                              STR      - Transforms EXPR to a string, if it is not already one (#(EXPR) would calculate the numerical value of EXPR first)
+PARSERFUNCS_LISTFUNC_FUNC_TO_TIME_[TIME_STRING]=			to_time(sPattern,sTime)                      VAL      - Transforms the time in sTime according to the pattern in sPattern into a time value. The characters "YMDHhmsiu" (Year, month, day, hour (UTC), hour (current timezone), minute, second, millisecond, microsecond) in sPattern are used to identify the time values in sTime
+PARSERFUNCS_LISTFUNC_FUNC_TO_UPPERCASE_[STRING]=			to_uppercase(sLower)                         STR      - Transforms the lowercase letters in sLower to uppercase
+PARSERFUNCS_LISTFUNC_FUNC_TO_VALUE_[STRING]=				to_value(sToEval)                            VAL      - Evaluates the string sToEval and transforms it to a numerical value afterwards
+PARSERFUNCS_LISTFUNC_FUNC_TRACE_[MAT]=						trace(MAT)                                   VAL      - Calculates the trace of the square matrix MAT.
+PARSERFUNCS_LISTFUNC_FUNC_TRANSPOSE_[MAT]=					transpose(MAT)                               MAT      - Transposes the matrix MAT (column and line indices will be exchanged)
+PARSERFUNCS_LISTFUNC_FUNC_TRIANGLEV_[DRAW]=					trianglev(P,D,D,STYLE)                       {}       - Draws a triangle. You may pass either two or three edges. If you pass two edges, NumeRe will draw an equal-sided triangle, if you pass all three, then it will be a custom one. The edges are numbered going from lower left in counter-clockwise order. The filling of the triangle may be modified with STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_TRIANGLE_[DRAW]=					triangle(P,P,P,STYLE)                        {}       - Draws a triangle. You may pass either two or three edges. If you pass two edges, NumeRe will draw an equal-sided triangle, if you pass all three, then it will be a custom one. The edges are numbered going from lower left in counter-clockwise order. The filling of the triangle may be modified with STYLE.
+PARSERFUNCS_LISTFUNC_FUNC_UNIQUE_[MAT]=                     unique(MAT,nDim)                             MAT      - Sorts and returns only unique elements. If MAT is a vector, then the function will return a vector. If MAT is a matrix, then MAT will be rolled out and a vector is returned. nDim is an optional value, will only be used, if MAT is a matrix, and is 0 as default. If nDim is equal to 1, then the function will return a matrix with unique elements along its rows. If nDim is 2, then the unique elements are determined along the columns
+PARSERFUNCS_LISTFUNC_FUNC_VALTOSTR_[STRING]=				valtostr(x,C,n)                              STR      - Evaluates x and transforms it to a string. C is an optional character, inserted before x, to fill it to n characters
+PARSERFUNCS_LISTFUNC_FUNC_VERSION_[TIME]=					version()                                    VAL      - Returns the version number of NumeRe as a number in the following format: Mmr.YYMM, where vM.m.r, YY is the year and MM the month. The decimals may be used to distinguish release candidates and hotfixes. Example: 113.2107
+PARSERFUNCS_LISTFUNC_FUNC_XOR_[LOGIC]=						xor(x,y,z,...)                               LOG      - Connects its arguments with the "|||" operator
+PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)                             VAL      - Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m)                                    MAT      - Creates a n x m matrix, which is filled with zeroes. If only one argument was passend, then a square matrix will be created.
+PARSERFUNCS_LISTFUNC_FUNC_ZETA_[NUM]=					    zeta(x)                                      VAL      - Calculates the value of the Riemann zeta function at the location x. %%DEFINED_REAL%% R \ {1}
+PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)                               VAL      - Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position rho in the interval [0,1] at the angle phi in the interval [0,2*PI)
+PARSERFUNCS_LISTFUNC_TABLEHEAD=								Function:                                    Type:    Result:
+# Ende Funktionentabelle
+PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=The key %%1%% could not be found in the passed list by the function getkeyval().
+PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values; empty braces indicate no return value.
+PARSERFUNCS_LISTFUNC_FOOTNOTE2=Further information concerning the predefined mathematical functions can be found in the NumeRe documentation at "help function".
+# Methoden
+PARSERFUNCS_LISTFUNC_METHOD_LEN_[STRING]=					len                    VAL      - Length of the string
+PARSERFUNCS_LISTFUNC_METHOD_SUB_[STRING]=					sub(nPos,nLen)         STR      - Returns nLen characters starting with the letter nPos from the string as a new string
+PARSERFUNCS_LISTFUNC_METHOD_FND_[STRING]=					fnd(sToFind,nPos)      VAL      - Returns the position of the first occurrence of sToFind in the string, with the search starting from the position nPos. nPos is an optional value with the default value 1. The function returns false, if sToFind was not found
+PARSERFUNCS_LISTFUNC_METHOD_RFND_[STRING]=					rfnd(sToFind,nPos)     VAL      - Returns the position of the last occurrence of sToFind in the string, with the search starting from the position nPos. nPos is an optional value with the default value nPos = STRINGVAR.len. The function returns false, if sToFind was not found
+PARSERFUNCS_LISTFUNC_METHOD_AT_[STRING]=					at(nPos)               STR      - Return the character at the position nPos in the string
+PARSERFUNCS_LISTFUNC_METHOD_SPLT_[STRING]=					splt(cSep)            {STR}     - Splits the string at the characters cSep in separate strings
+PARSERFUNCS_LISTFUNC_METHOD_MTCH_[STRING]=					mtch(sChars,nPos)      VAL      - Searches for the first occurrence of a char of sChars in the string going from position nPos. nPos is an optional value and defaults to nPos = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_RMTCH_[STRING]=					rmtch(sChars,nPos)     VAL      - Searches for the last occurrence of a char of sChars in the string up to position nPos. nPos is an optional value and defaults to nPos = STRINGVAR.len. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_NMTCH_[STRING]=					nmtch(sChars,nPos)     VAL      - Searches for the first occurrence of a char in the string going from position nPos, which doesn't appear in sChars. nPos is an optional value and defaults to nPos = 1. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_NRMTCH_[STRING]=				nrmtch(sChars,nPos)    VAL      - Searches for the last occurrence of a char in the string up to position nPos, which doesn't appear in sChars. nPos is an optional value and defaults to nPos = STRINGVAR.len. If nothing was found, this function will return false
+PARSERFUNCS_LISTFUNC_METHOD_COLS_[DATA]=			        cols                   {}       - Modifies the operation of the multi-argument function to columnwise application
+PARSERFUNCS_LISTFUNC_METHOD_LINES_[DATA]=			        lines                  {}       - Modifies the operation of the multi-argument function to linewise application
+PARSERFUNCS_LISTFUNC_METHOD_GRID_[DATA]=			        grid                   {}       - Modifies the operation of the multi-argument function, so that the data set will be interpreted as data grid
+PARSERFUNCS_LISTFUNC_METHOD_EVERY_[DATA]=				    every(nFirst,nIncr)    {}       - This method chooses in combination with .cols or .lines the first (nFirst) column/line, on which the multi-argument function will be applied. With the argument nIncr one may choose whether only each nIncr-th column/line shall be selected. If only nFirst is passed, then nIncr will be identical to nFirst. Columns/lines may also be selected directly, if a vector is passed for nFirst: every({VEC})
+PARSERFUNCS_LISTFUNC_METHOD_NAME_[DATA]=				    name                   STR      - Returns the table name as string e.g. to be used together with "findcolumn()"
+PARSERFUNCS_LISTFUNC_METHOD_ALIASOF_[DATA]=				    aliasof(sTable)        STR      - Converts the current table into an alias to the table whose name was passed by the string sTable. The current table is masked and cannot be used during this process. An empty string deactivates the alias again. This method returns the name of the referenced table
+PARSERFUNCS_LISTFUNC_METHOD_CONVERT_[DATA]=				    convert({nCols},sType) STR      - Converts the columns with the indices {nCols} to the new column type sType. sType is a string and can be either "value", "string" or "datetime". If the conversion is successful, the new type is returned as a string, otherwise the string is empty
+PARSERFUNCS_LISTFUNC_METHOD_TYPEOF_[DATA]=				    typeof({nCols})       {STR}     - Returns the column type of the columns indexed with {nCols} as strings. The type can be specified either as "value", "string" or "datetime". Empty or non-existent columns have the type "none".
+PARSERFUNCS_LISTFUNC_METHOD_MIN_[DATA]=				        min                   {VAL}     - Applies the multi-argument function "min()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_MAX_[DATA]=				        max                   {VAL}     - Applies the multi-argument function "max()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_SUM_[DATA]=				        sum                   {VAL}     - Applies the multi-argument function "sum()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_AVG_[DATA]=				        avg                   {VAL}     - Applies the multi-argument function "avg()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_STD_[DATA]=				        std                   {VAL}     - Applies the multi-argument function "std()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_PRD_[DATA]=				        prd                   {VAL}     - Applies the multi-argument function "prd()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_MED_[DATA]=				        med                   {VAL}     - Applies the multi-argument function "med()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_NUM_[DATA]=				        num                   {VAL}     - Applies the multi-argument function "num()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_CNT_[DATA]=				        cnt                   {VAL}     - Applies the multi-argument function "cnt()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_NORM_[DATA]=				    norm                  {VAL}     - Applies the multi-argument function "norm()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_AND_[DATA]=				        and                   {LOG}     - Applies the multi-argument function "and()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_OR_[DATA]=				        or                    {LOG}     - Applies the multi-argument function "or()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_XOR_[DATA]=				        xor                   {LOG}     - Applies the multi-argument function "xor()" on the data set. Using the modificators .cols, .lines, .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_SIZE_[DATA]=				    size                  {VAL}     - Returns the size of the table in rows and columns. Using the modificators .cols (length of columns), .lines (length of rows), .grid and .every(), the function may be restricted further
+PARSERFUNCS_LISTFUNC_METHOD_MINPOS_[DATA]=				    minpos                {VAL}     - Returns the position of the minimal value of the table in rows and columns. Using the modificators .cols (minimal values of columns), .lines (minimal values of rows), .grid and .every(), the function may be restricted further. In case of multiple occurences of the same value, only the first found occurence is returned
+PARSERFUNCS_LISTFUNC_METHOD_MAXPOS_[DATA]=				    maxpos                {VAL}     - Returns the position of the maximal value of the table in rows and columns. Using the modificators .cols (maximal values of columns), .lines (maximal values of rows), .grid and .every(), the function may be restricted further. In case of multiple occurences of the same value, only the first found occurence is returned
+# Kommandotabelle
+PARSERFUNCS_LISTCMD_HEADLINE=command set
+PARSERFUNCS_LISTCMD_TYPE_EVAL=Evaluation
+PARSERFUNCS_LISTCMD_TYPE_PLOTTING=Plotting
+PARSERFUNCS_LISTCMD_TYPE_FLOWCTRL=Control flow
+PARSERFUNCS_LISTCMD_TYPE_PROC=Procedures
+PARSERFUNCS_LISTCMD_TYPE_DATACREATION=Data creation
+PARSERFUNCS_LISTCMD_TYPE_LOADSAVE=Loading and saving
+PARSERFUNCS_LISTCMD_TYPE_DEF=Definitions
+PARSERFUNCS_LISTCMD_TYPE_DATACTRL=Data control
+PARSERFUNCS_LISTCMD_TYPE_MAINCTRL=Control
+PARSERFUNCS_LISTCMD_TYPE_MISC=Miscellaneous
+PARSERFUNCS_LISTCMD_TYPE_GUI=Graphical user interface
+PARSERFUNCS_LISTCMD_TYPE_PLUGINS=Plugins
+PARSERFUNCS_LISTCMD_TABLEHEAD=							Command:     Syntax and result:     Function:
+PARSERFUNCS_LISTCMD_CMD_ABORT_[FLOWCTRL]=				abort                               - Aborts the interactive declaration of the current loop, fork or plot composition in the console, so that the console can be used again normally
+PARSERFUNCS_LISTCMD_CMD_ABOUT_[MAINCTRL]=				about                               - Displays legal information about NumeRe in the console
+PARSERFUNCS_LISTCMD_CMD_APPEND_[LOADSAVE]=				append       NM [-PAR]  -> {VAL}    - Appends the data of the file NM to already loaded data in memory. The parameter allows appending of multiple files at once. Returns the indices of the appended data in the target table
+PARSERFUNCS_LISTCMD_CMD_ASSERT_[MAINCTRL]=				assert       EX  -> {ARG}           - Checks the passed expression for trueness and returns it. If it is not true the command throws an error. This command is intended for use in a software test
+PARSERFUNCS_LISTCMD_CMD_AUDIOREAD_[LOADSAVE]=			audioread    NM [-PAR]  -> {VAL}    - Reads the meta data of a WAVE audio file or the whole file, if a target table was specified
+PARSERFUNCS_LISTCMD_CMD_AUDIO_[LOADSAVE]=				audio        OB [-PAR]              - Creates a WAVE audio file from the given data set in OB. Using parameters one can change the sample rate and the target file name
+PARSERFUNCS_LISTCMD_CMD_BITMAP_[GUI]=					bitmap       EX [-set PAR]          - Inserts an image, where the filename is passed via EX into a window layout
+PARSERFUNCS_LISTCMD_CMD_BREAK_[FLOWCTRL]=				break                               - Aborts the execution of the current loop or leaves the current case of a switch block and jumps one level up in the control flow
+PARSERFUNCS_LISTCMD_CMD_BUTTON_[GUI]=					button       EX [-set PAR]          - Inserts a labelable button into a window layout. The event handling is configurable
+PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR  -> {VAL}         - Options applied to the elements in a cache. The parameters allow multiple operations, just like applying multi-argument functions
+PARSERFUNCS_LISTCMD_CMD_CASE_[FLOWCTRL]=				case         EX:                    - Defines a case in a switch fork. The expression EX has to be a numerical value or a string
+PARSERFUNCS_LISTCMD_CMD_CATCH_[FLOWCTRL]=				catch        EX:                    - Starts error handling for error type EX
+PARSERFUNCS_LISTCMD_CMD_CLC_[MAINCTRL]=					clc			 						- Clears the content of the terminal
+PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]          - Inserts a checkbox into a window layout. The event handling and the start value are configurable. If used inside a menu, this is converted into a menu item with a checkbox
+PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]              - Irreversibly removes all elements in the selected object from this computer. The parameter may be used to suppress the confirmation (-ignore) or to remove all tables at once (-memory)
+PARSERFUNCS_LISTCMD_CMD_CLOSE_[MAINCTRL]=				close        -PAR                   - Closes previously opened windows that are selected by parameters: -graphs closes all graphs, -docs all documentation windows, -tables all tables, -images all ImageViewers and -all closes all windows from this list
+PARSERFUNCS_LISTCMD_CMD_COMPOSE_[PLOTTING]=				compose                             - Starts the composition of multiple plotting styles, so that one combined plot may be created out of the calculated plots of this environment. One can also use this environment to align mulitple plots together in a single window
+PARSERFUNCS_LISTCMD_CMD_CONT3D_[PLOTTING]=				cont3d       EX [-set PAR]          - Creates a 3D contour line plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_CONTINUE_[FLOWCTRL]=			continue                            - Jumps over the following commands of the current loop execution and starts the next execution
+PARSERFUNCS_LISTCMD_CMD_CONT_[PLOTTING]=				cont         EX [-set PAR]          - Creates a contour line plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              - Copies (depending on the actual expression OB) entries/columns/subtables between data objects or complete files. Using parameters one can specify the target table or file or transpose the data if needed or select multiple files
+PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                     - Defines the local clusters in the current procedure using the expression EX
+PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target table can be passed via parameters
+PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}         - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
+PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                     - Declares a file-specific constant in EX for use in the current file, where the constant must be specified as NAME := EXPRESSION. The constant is automatically removed at the end of the current file
+PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                            - Defines the "otherwise" case in a switch fork
+PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]          - Defines the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_DELETE_[DATACTRL_MAINCTRL]=		delete       OB [-PAR]              - Removes elements from a table/from the string() object in OB. The parameter may be used to suppress the confirmation
+PARSERFUNCS_LISTCMD_CMD_DENS3D_[PLOTTING]=				dens3d       EX [-set PAR]          - Creates a 3D density plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_DENS_[PLOTTING]=				dens         EX [-set PAR]          - Creates a density plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_DETECT_[EVAL]=					detect       OB [-set PAR]          - Detects structures in a 2D datagrid and stores them as (x,y) in the target table, where different structures are separated by an empty row. It's possible to define a threshold, a minimal length and a maximal distance between points of a single structure.
+PARSERFUNCS_LISTCMD_CMD_DIALOG_[MAINCTRL_GUI]=			dialog       STR -set PAR  -> {STR} - Creates a dialog window to interact with the user. The type of the dialog is selected using the parameters. Additionally, the title, a message, the icon and the buttons of the message box may be changed. The selection of the user or the value of the clicked button is returned as string
+PARSERFUNCS_LISTCMD_CMD_DIFF_[EVAL]=					diff         EX -set PAR  -> {VAL}  - Differentiates the expression or the data in EX numerically. The position or the interval, the precision and the number of samples may be set using parameters
+PARSERFUNCS_LISTCMD_CMD_DRAW3D_[PLOTTING]=				draw3d       EX [-set PAR]          - Creates a 3D drawing from the drawing functions in the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_DRAW_[PLOTTING]=				draw         EX [-set PAR]          - Creates a drawing from the drawing functions in the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_DROPDOWN_[GUI]=					dropdown     EX [-set PAR]          - Inserts a dropdown list into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_EDIT_[MAINCTRL]=				edit         OB                     - Opens a table, a file or a directory for editing its contents
+PARSERFUNCS_LISTCMD_CMD_ELSEIF_[FLOWCTRL]=				elseif       (EX)                   - Starts the definition of expressions and commands, which shall be executed, if the previous "if" and "elseif" forks fail. The expression EX must have a logical meaning
+PARSERFUNCS_LISTCMD_CMD_ELSE_[FLOWCTRL]=				else                                - Starts the definition of expressions and commands, which shall be executed, if all "if" and "elseif" forks fail
+PARSERFUNCS_LISTCMD_CMD_ENDCOMPOSE_[PLOTTING]=			endcompose                          - Finalizes the definition of the previous initiated plot composition
+PARSERFUNCS_LISTCMD_CMD_ENDFOR_[FLOWCTRL]=				endfor       [-PAR]                 - Finalizes the definition of a previous initiated FOR loop. The parameter may be used for suppressing the status messages and to forcefully abort the loop after a defined number of iterations
+PARSERFUNCS_LISTCMD_CMD_ENDGROUP_[GUI]=					endgroup                            - Ends the definition of a previously started grouping box
+PARSERFUNCS_LISTCMD_CMD_ENDIF_[FLOWCTRL]=				endif                               - Finalizes the definition of a previous initiated IF construct
+PARSERFUNCS_LISTCMD_CMD_ENDLAYOUT_[GUI]=				endlayout                           - Ends the definition of a previously started window layout
+PARSERFUNCS_LISTCMD_CMD_ENDPROCEDURE_[FLOWCTRL_PROC]=	endprocedure                        - Finalizes the definition of a previous initiated NumeRe procedure
+PARSERFUNCS_LISTCMD_CMD_ENDSWITCH_[FLOWCTRL]=			endswitch                           - Finalizes a switch fork
+PARSERFUNCS_LISTCMD_CMD_ENDTRY_[FLOWCTRL]=				endtry                              - Ends a try-catch block
+PARSERFUNCS_LISTCMD_CMD_ENDWHILE_[FLOWCTRL]=			endwhile     [-PAR]                 - Finalizes the definition of a previous initiated WHILE loop. The parameter may be used for suppressing the status messages and to forcefully abort the loop after a defined number of iterations
+PARSERFUNCS_LISTCMD_CMD_EVAL_[DATACREATION]=			eval         EX -set PAR  -> {VAL}  - Calculates function values of the passed expression EX at distinct points (samples). The interval has to be passed through a parameter. Additionally, one can change the number of samples and switch to a logarithmic distribution using parameters
+PARSERFUNCS_LISTCMD_CMD_EXECUTE_[MAINCTRL]=				execute      STR [-set PAR]         - Executes the command in STR using the Windows shell. The parameter may be used to append command line parameters to the command, to wait for the opened application to terminate or to define the working directory for the application
+PARSERFUNCS_LISTCMD_CMD_EXPLICIT_[MAINCTRL]=			explicit     CMD                    - Deactivates all plugins for the command expression CMD
+PARSERFUNCS_LISTCMD_CMD_EXPORT_[LOADSAVE]=				export       OB [-PAR]              - Exports the data in OB into the via the file extension defined file format. The file name has to be passed via the parameter
+PARSERFUNCS_LISTCMD_CMD_EXTREMA_[EVAL]=					extrema      EX -set PAR  -> {VAL}  - Determines the extrema of the expression or the data in EX numerically. The interval has to be passed through a parameter. Additionally, one can change the number of samples and restrict the results to minima and maxima using parameters
+PARSERFUNCS_LISTCMD_CMD_FFT2D_[EVAL]=					fft2d        OB [-PAR]              - Calculates the 2D Fourier transform of the passed data grid OB. Using the parameters one can switch to complex representation or inverse transformation. Additionally one can define the target tabele using the parameter
+PARSERFUNCS_LISTCMD_CMD_FFT_[EVAL]=						fft          OB [-PAR]              - Calculates the Fourier transform of the passed data set OB. Using the parameters one can switch to complex representation or inverse transformation. Additionally one can define the target tabele using the parameter
+PARSERFUNCS_LISTCMD_CMD_FIND_[MAINCTRL]=				find         NM                     - Executes a keyword search for the term NM in NumeRe
+PARSERFUNCS_LISTCMD_CMD_FITW_[EVAL]=					fitw         OB -PAR                - Fits a function to the data in OB, whose error values (weighting factors) are considered, using a variation of the parameters. The function and the parameters for fitting can be passed using parameters. Additionally one can set restrictions for the fitting parameters and generate a Chi-Map
+PARSERFUNCS_LISTCMD_CMD_FIT_[EVAL]=						fit          OB -PAR                - Fits a function to the data in OB using a variation of the parameters. The function and the parameters for fitting can be passed using parameters. Additionally one can set restrictions for the fitting parameters and generate a Chi-Map
+PARSERFUNCS_LISTCMD_CMD_FOR_[FLOWCTRL]=					for          (EX)                   - Starts the definition of a FOR loop. The index of the loop has to be passed in the shape INDEX = START:END in the expression EX
+PARSERFUNCS_LISTCMD_CMD_FWT_[EVAL]=						fwt          OB -PAR                - Calculates the wavelet transform of the passed data set OB. The type and degree of the base wavelet may be set using parameters. Additionally one can switch to inverse transformation or creation of a data grid. The target table may also be defined in advance
+PARSERFUNCS_LISTCMD_CMD_GAUGE_[GUI]=					gauge        [-set PAR]             - Inserts a progress bar (a gauge) into a window layout. The starting value and the orientation are configurable
+PARSERFUNCS_LISTCMD_CMD_GET_[MAINCTRL]=					get          -PAR  -> {ARG}         - Returns the value of the queried setting. The type of the return value can be selected using the parameter
+PARSERFUNCS_LISTCMD_CMD_GLOBAL_[MISC]=					global       EX/CMD                 - Declares the expression EX or the command CMD as global
+PARSERFUNCS_LISTCMD_CMD_GRAD3D_[PLOTTING]=				grad3d       EX [-set PAR]          - Creates a 3D gradient plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_GRAD_[PLOTTING]=				grad         EX [-set PAR]          - Creates a gradient plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_GRAPHER_[GUI]=					grapher      [-set PAR]             - Inserts a graph object into a window layout. The event handling and the size of the object are configurable. Filling of this object has to be done via a plotting command using the "streamto={WINID,ITEMID}" option
+PARSERFUNCS_LISTCMD_CMD_GRIDROT_[EVAL]=					gridrot      OB -set PAR            - Rotates the passed data grid around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_GROUP_[GUI]=					group        [-PAR]                 - Starts the definition of a grouping box for a window layout. The box can be labeled and aligned in a defined way. Using the parameters even further styles are available like tabbed boxes or menues
+PARSERFUNCS_LISTCMD_CMD_HELP_[MAINCTRL]=				help         [NM]                   - Opens the article of the NumeRe documentation concerning the topic NM
+PARSERFUNCS_LISTCMD_CMD_HIST2D_[EVAL]=					hist2d       OB [-PAR]              - Creates a 2D histogram from a (x,y,z) data set. Expects either a data grid or (x,y,z) tupels in OB. The histogram may be modified in multiple ways. See "help hist" for details
+PARSERFUNCS_LISTCMD_CMD_HIST_[EVAL]=					hist         OB [-PAR]              - Creates a histogram from the data in OB. The histogram may be modified in multiple ways. See "help hist" for details
+PARSERFUNCS_LISTCMD_CMD_HLINE_[MISC]=					hline        [-PAR]                 - Draws a double horizontal line. Using the parameter "-single", this command will draw only one single line
+PARSERFUNCS_LISTCMD_CMD_IFNDEFINED_[DEF]=				ifndefined   EX [-set PAR]          - Checks before the actual definition, if the current function in EX is not already defined, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_IF_[FLOWCTRL]=					if           (EX)                   - Starts the definition of an IF construct. The expression EX must have a logical meaning
+PARSERFUNCS_LISTCMD_CMD_IMPLOT_[PLOTTING]=				implot       EX [-set PAR]          - Creates a visual representation of the expression or the data set as an image. The data interval is automatically assumed as [0,255]. May be combined with other plotting styles
+PARSERFUNCS_LISTCMD_CMD_IMREAD_[LOADSAVE]=				imread       NM  -> {VAL}           - Reads the image file NM as data grid into the table "image()". The target table may be changed using the options. The indices of the image in the table are returned
+PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR            - Rotates the passed image data set around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                     - Executes the install routines in the script NM. May only be used directly in the console
+PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}  - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
+PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                 - Starts the definition of a window layout that can be used to create an interactive window
+PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]         - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
+PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                   - Creates a list of the values, which are available for the passed parameter. The possible parameters are available at "help list"
+PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}    - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
+PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                     - Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym)
+PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     EX [-set PAR]          - Defines an entry in a menu for a window layout. The event handling and the presence of a checkbox are configurable
+PARSERFUNCS_LISTCMD_CMD_MESH3D_[PLOTTING]=				mesh3d       EX [-set PAR]          - Creates a 3D meshgrid plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_MESH_[PLOTTING]=				mesh         EX [-set PAR]          - Creates a meshgrid plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_MOVE_[MAINCTRL]=				move         OB -PAR                - Moves (depending on the actual expression in OB) entries/columns/subtables in tables or complete files. Using parameters one can specify the target table or file or transpose the data if needed or select multiple files
+PARSERFUNCS_LISTCMD_CMD_NAMESPACE_[PROC]=				namespace    [NM]                   - Changes the current namespace in procedures to the namespace NM
+PARSERFUNCS_LISTCMD_CMD_NEW_[MAINCTRL]=					new          EX                     - Creates depending on the expression EX new directories, scripts, procedures, files or tables
+PARSERFUNCS_LISTCMD_CMD_ODESOLVE_[EVAL]=				odesolve     EX -set PAR            - Numerically solves the ordinary differential equations, which were passed as expression EX. The integration interval as well as the initial values have to be passed as parameters. In addition, one can modify the method, the number of integration steps, the target table, the algorithm's tolerances and calculate the Lyapunov exponent
+PARSERFUNCS_LISTCMD_CMD_PLOT3D_[PLOTTING]=				plot3d       EX [-set PAR]          - Creates a three-dimensional, graphical plot of the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_PLOT_[PLOTTING]=				plot         EX [-set PAR]          - Creates a graphical plot of the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_PRINT_[MISC_MAINCTRL]=			print        STR                    - Prints the passed string STR without the quotation marks as message on the screen
+PARSERFUNCS_LISTCMD_CMD_PROCEDURE_[FLOWCTRL_PROC]=		procedure    \$NM(ARGS)              - Defines the name NM and the argument list ARGS of the NumeRe procedure
+PARSERFUNCS_LISTCMD_CMD_PROGRESS_[MISC_FLOWCTRL]=		progress     EX [-set PAR]          - Shows a the status EX of a progress. Only suitable for scripts and procedures. The first and last value as well as the type of the status display may be set via parameters
+PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop         EX                     - Genereates one ore more internal variables for the current window layout, which may be filled with information. The variables are intrinsical type less and may contain numerical values as well as strings
+PARSERFUNCS_LISTCMD_CMD_PSO_[EVAL]=						pso          EX [-set PAR]  -> {VAL}- Uses a particle swarm optimizer to locate the global minimum in the expression. The expression can be up to fourdimensional, as long as all intervals are defined
+PARSERFUNCS_LISTCMD_CMD_PULSE_[EVAL]=					pulse        OB  -> {VAL}           - Determines the pulse properties of the passed data set OB
+PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]                 - Exits NumeRe. The parameter influences the creation of an auto save file
+PARSERFUNCS_LISTCMD_CMD_RADIO_[GUI]=					radio        EX [-set PAR]          - Inserts a radio group into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_RANDOM_[DATACREATION]=			random       -PAR                   - Creates a set of random numbers depending on the chosen distribution and its parameters. The list of parameters is available at "help random"
+PARSERFUNCS_LISTCMD_CMD_READLINE_[PROC]=				readline     [-PAR]  -> {ARG}       - Allows a formatted prompt for a value and the directly conversion to a numerical value or a string. The parameter set contains the printing of a message, defining a default value and conversion flags
+PARSERFUNCS_LISTCMD_CMD_READ_[LOADSAVE]=				read         NM [-PAR]  -> {STR}    - Reads the content of the file NM and returns its lines as separate strings. Using a parameter one can define a comment sign. Binary files cannot be read with this command
+PARSERFUNCS_LISTCMD_CMD_REDEFINE_[DEF]=					redefine     EX [-set PAR]          - Redefines an already existing, custom defined function using the expression EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function, recursive defining and conversion of variables into their values
+PARSERFUNCS_LISTCMD_CMD_REGULARIZE_[EVAL]=				regularize   OB [-PAR]              - Regularizes data rows in OB. Arbitrary distributed x values will be regularly distributed afterwards. The number of x values may be changed using the parameter
+PARSERFUNCS_LISTCMD_CMD_RELOAD_[LOADSAVE]=				reload       [NM -PAR]  -> {VAL}    - Updates the data in memory, e.g. if the data file was modified externally. Corresponds to the command "load NM [-PAR] -ignore", where NM is replaced by the name of the already loaded file, if applicable
+PARSERFUNCS_LISTCMD_CMD_REMOVE_[MAINCTRL]=				remove       OB [-PAR]              - Irreversibly removes the table or the passed files in OB from this computer. One can suppress the eventually needed confirmation or select multiple files using the parameters
+PARSERFUNCS_LISTCMD_CMD_RENAME_[DATACTRL]=				rename       OB, NM                 - Renames an already available table
+PARSERFUNCS_LISTCMD_CMD_RESAMPLE_[EVAL]=				resample     OB -PAR                - Changes the sampling frequency of the data in OB. The new number of samples and the application of the command to only specific directions of the table may be set using parameters
+PARSERFUNCS_LISTCMD_CMD_RETHROW_[FLOWCTRL_PROC]=		rethrow                             - Passes the error that is being processed in the current catch block on to surrounding try-catch blocks or finally to the terminal
+PARSERFUNCS_LISTCMD_CMD_RETOUCH_[EVAL]=					retouch      OB [-PAR]              - Removes invalid values from the data set OB. The application of the command to only specific directions of the table may be set using a parameter
+PARSERFUNCS_LISTCMD_CMD_RETURN_[FLOWCTRL_PROC]=			return       [EX]                   - Declares the return value of the procedure using the expression EX. Can also be used to leave a script at the current line
+PARSERFUNCS_LISTCMD_CMD_SAVE_[LOADSAVE]=				save         OB [-PAR]              - Saves the passed object OB using the chosen file name. The file name has to be passed using the parameter
+PARSERFUNCS_LISTCMD_CMD_SCRIPT_[MISC_MAINCTRL]=			script       -PAR                   - Loads and starts scripts
+PARSERFUNCS_LISTCMD_CMD_SEEK_[LOADSAVE]=				seek         EX -PAR  -> VAL        - Reads a section of a WAVE audio file, where the start position and the number of elements are specified via the expression
+PARSERFUNCS_LISTCMD_CMD_SEPARATOR_[GUI]=				separator    EX [-set PAR]          - Inserts a separator object into a window layout. The separator may be either a vertical or a horizontal line or a simple space. If used in menues, the separator is always a horizontal line
+PARSERFUNCS_LISTCMD_CMD_SET_[MAINCTRL]=					set          -PAR                   - Changes the value of the chosen setting or introduces the options list of the current command. A list of all possible program settings is available at "help set"
+PARSERFUNCS_LISTCMD_CMD_SHOW_[DATACTRL]=				show         OB                     - Shows the content of the passed data object OB
+PARSERFUNCS_LISTCMD_CMD_SLIDER_[GUI]=					slider       [-set PAR]             - Inserts a slider into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_SMOOTH_[EVAL]=					smooth       OB -PAR                - Smoothes out the noise on the passed data OB by linearizing depending on the requested order. The order of linearisation and the application of the command to only specific directions of the table may be set using parameters
+PARSERFUNCS_LISTCMD_CMD_SORT_[DATACTRL]=				sort         OB [-PAR]  -> {VAL}    - Sorts the data set OB. The choice of index columns, the sorting direction and returning an sorting index vector may be set using the parameter
+PARSERFUNCS_LISTCMD_CMD_SPINBUT_[GUI]=					spinbut      [-set PAR]             - Inserts a spin button object into a window layout. The event handling and the start value are configurable
+PARSERFUNCS_LISTCMD_CMD_SPLINE_[EVAL]=					spline       OB                     - Calculates cubic splines for the passed data points OB and defines them as function
+PARSERFUNCS_LISTCMD_CMD_START_[MISC]=					start        NM                     - Starts the script NM
+PARSERFUNCS_LISTCMD_CMD_STATICTEXT_[GUI]=				statictext   EX [-set PAR]          - Inserts a static text into a window layout
+PARSERFUNCS_LISTCMD_CMD_STATS_[EVAL]=					stats        OB [-PAR]  -> {STR}    - Calculates the statistics of the passed data set OB. These values may be stored in a table (the command will return the row labels in this case) or exported directly into a file, if the corresponding parameter was passed
+PARSERFUNCS_LISTCMD_CMD_STFA_[EVAL]=					stfa         OB [-PAR]              - Calculates a short-time Fourier analysis of the passed data set OB and stores it as a new data grid. Parameters allow to change the windowsize and the target table
+PARSERFUNCS_LISTCMD_CMD_STR_[PROC]=						str          EX                     - Defines the local string variables in the current procedure through the expression EX
+PARSERFUNCS_LISTCMD_CMD_SUBPLOT_[PLOTTING]=				subplot      [EX -set PAR]          - Starts a new subplot in the multiplot mode of compose. The parameters allow to enlarge the subplot over multiple rows and columns of the created grid
+PARSERFUNCS_LISTCMD_CMD_SURF3D_[PLOTTING]=				surf3d       EX [-set PAR]          - Creates a 3D surface plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_SURF_[PLOTTING]=				surf         EX [-set PAR]          - Creates a surface plot from the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_SWAP_[DATACTRL]=				swap         OB1, OB2               - Swaps the contents of two tables
+PARSERFUNCS_LISTCMD_CMD_SWITCH_[FLOWCTRL]=				switch      (EX)                    - Starts a switch fork, which has to contain at least one 'case'. The expression EX has to be numerical or a string expression
+PARSERFUNCS_LISTCMD_CMD_TABLEGRID_[GUI]=				tablegrid    [-set PAR]             - Inserts a table grid into a window layout. The event handling and the size in rows and columns are configurable
+PARSERFUNCS_LISTCMD_CMD_TABROT_[EVAL]=					tabrot       OB -set PAR            - Rotates the passed table around the defined angle and saves the result in the chosen target table
+PARSERFUNCS_LISTCMD_CMD_TAB_[PROC]=						tab          EX                     - Defines the local tables in the current procedure using the expression EX
+PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR            - Expands the passed expression EX into a taylor polynomial of the order n. The variable and the position of the expansion have to be passed as parameters. Additionally, one can choose the order of the expansion
+PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]          - Inserts a text field into a window layout. Event handling, multiline and start value are configurable
+PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]                  - Aborts the procedure execution in case of an error and displays the error message STR in the console
+PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]             - Inserts a tree list into a window layout. Event handling, the number of columns and the number of elements are configurable
+PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                 - Starts a try-catch block in which errors can be caught and handled
+PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                     - Removes the custom function definition, which corresponds to the expression EX
+PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                     - Removes the plugin NM. May only be used directly in the console
+PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> ARG     - Allows access to online resources via the HTTP(S) and (S)FTP protocols. JavaScript is not interpreted in this case. Files can also be downloaded if a target file is specified via the "file" parameter. Note: Certificates are not validated, so this command is not suitable for exchanging sensible information
+PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                     - Defines the local numerical variables in the current procedure using the expression EX
+PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]          - Creates a 3D vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]          - Creates a vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
+PARSERFUNCS_LISTCMD_CMD_WARN_[MAINCTRL]=				warn         STR                    - Displays the string STR as warning in the console
+PARSERFUNCS_LISTCMD_CMD_WHILE_[FLOWCTRL]=				while        (EX)                   - Starts the definition of a WHILE loop. The expression EX must have a logical meaning
+PARSERFUNCS_LISTCMD_CMD_WINDOW_[MAINCTRL_GUI]=			window       EX [-set PAR]  -> {ARG}- Allows the creation of an interactive window and the interaction with it. With "window ID -get PAR" values and parameters of the window with the ID can be read and with "window ID -set PAR=VAL" they can also be modified
+PARSERFUNCS_LISTCMD_CMD_WORKPATH_[MISC_MAINCTRL]=		workpath     NM                     - Changes the current working directory for this session to the directory NM
+PARSERFUNCS_LISTCMD_CMD_WRITE_[LOADSAVE]=				write        STR -set PAR           - Writes the passed strings STR into the chosen file. The file name has to be defined using the parameter set. In addition, one can suppress the surrounding quotation marks and choose the writing mode
+PARSERFUNCS_LISTCMD_CMD_ZEROES_[EVAL]=					zeroes       EX -set PAR  -> {VAL}  - Determines the roots (intersections with zero) of the expression or the data in EX numerically. The interval has to be passed through a parameter. Additionally, one can change the number of samples and restrict the results to up- or downward oriented roots using parameters
+# Ende der Kommandotabelle
+PARSERFUNCS_LISTCMD_FOOTNOTE1=The syntax is given in schematic manner: EX = expression, PAR = parameter, OB = (data) object, STR = string, CMD = command und NM = name. Syntax elements in brackets are optional.
+PARSERFUNCS_LISTCMD_FOOTNOTE2=SEE ALSO: There exists an entry in the documentation for each of the listed commands. It can be accessed via "help COMMAND".
+# List units
+PARSERFUNCS_LISTUNITS_HEADLINE=Unit conversion
+PARSERFUNCS_LISTUNITS_SYMBOL=Symbol
+PARSERFUNCS_LISTUNITS_DESCRIPTION=Description
+PARSERFUNCS_LISTUNITS_DIMENSION=Dimension
+PARSERFUNCS_LISTUNITS_UNIT=Conversion     Unit
+PARSERFUNCS_LISTUNITS_UNIT_ANGSTROEM=(Angstroem)
+PARSERFUNCS_LISTUNITS_UNIT_ASTRO_UNIT=(Astronom. Unit)
+PARSERFUNCS_LISTUNITS_UNIT_BARN=(barn)
+PARSERFUNCS_LISTUNITS_UNIT_CALORY=(Calory)
+PARSERFUNCS_LISTUNITS_UNIT_CURIE=(Curie)
+PARSERFUNCS_LISTUNITS_UNIT_ELECTRONVOLT=(Elektronvolts)
+PARSERFUNCS_LISTUNITS_UNIT_FERMI=(Fermi)
+PARSERFUNCS_LISTUNITS_UNIT_FOOT=(Foot)
+PARSERFUNCS_LISTUNITS_UNIT_GAUSS=(Gauss)
+PARSERFUNCS_LISTUNITS_UNIT_INCH=(inch)
+PARSERFUNCS_LISTUNITS_UNIT_VELOCITY=(Velocity)
+PARSERFUNCS_LISTUNITS_UNIT_KNOTS=(Knots)
+PARSERFUNCS_LISTUNITS_UNIT_LITERS=(Litres)
+PARSERFUNCS_LISTUNITS_UNIT_LIGHTYEAR=(Lightyear)
+PARSERFUNCS_LISTUNITS_UNIT_MILE=(Mile)
+PARSERFUNCS_LISTUNITS_UNIT_MOL=(mol. quantity)
+PARSERFUNCS_LISTUNITS_UNIT_POISE=(Poise)
+PARSERFUNCS_LISTUNITS_UNIT_PARSEC=(Parsec)
+PARSERFUNCS_LISTUNITS_UNIT_PSI=(Pounds/inch^2)
+PARSERFUNCS_LISTUNITS_UNIT_CELSIUS=(Celsius)
+PARSERFUNCS_LISTUNITS_UNIT_FAHRENHEIT=(Fahrenheit)
+PARSERFUNCS_LISTUNITS_UNIT_TORR=(mmHg)
+PARSERFUNCS_LISTUNITS_UNIT_YARD=(Yard)
+PARSERFUNCS_LISTUNITS_FOOTNOTE=The dimensions of the units are given with the abbreviations L, M, T, ... The symbol L corresponds to "length", M to "mass", T to "time", N to "quantity" and Theta to "temperature".
+# Tooltips
+GUI_EDITOR_CALLTIP_PROC1=%%COMMON_FILETYPE_NPRC%%:
+GUI_EDITOR_CALLTIP_PROC2=Click right to search its definition
+GUI_EDITOR_CALLTIP_PROC_PARAMS=Parameters for this procedure
+GUI_EDITOR_CALLTIP_PROC_REMARK=Remark
+GUI_EDITOR_CALLTIP_...=		...         - Allows an arbitrary number of arguments
+GUI_EDITOR_CALLTIP_ANS=		ans         - Contains the result of the last calculation
+GUI_EDITOR_CALLTIP_TABLE=	table()  {} - Standard table object. Its contents may be modified
+GUI_EDITOR_CALLTIP_DATA=	data()   {} - Dedicated data table object. Contains all loaded data
+GUI_EDITOR_CALLTIP_FALSE=	false       - Constant for 0
+GUI_EDITOR_CALLTIP_I=		I           - Constant for the imaginary value 1i
+GUI_EDITOR_CALLTIP_INF=		inf         - Constant for the symbolic value infinity
+GUI_EDITOR_CALLTIP_NAN=		nan         - Constant for an invalid value
+GUI_EDITOR_CALLTIP_STRING=	string() {} - String object. May contain an arbitrary number of strings
+GUI_EDITOR_CALLTIP_TRUE=	true        - Constant for 1
+GUI_EDITOR_CALLTIP_VOID=	void        - Constant for an empty value. Will sometimes be interpreted as "nan"
+GUI_EDITOR_CALLTIP_NLINES=	nlines      - Contains the number of lines for the current data access
+GUI_EDITOR_CALLTIP_NCOLS=	ncols       - Contains the number of columns for the current data access
+GUI_EDITOR_CALLTIP_NLEN=	nlen        - Contains the number of elements in the currently accessed cluster
+GUI_EDITOR_CALLTIP_THROWN=	thrown      - Error type, which is generated through "throw"
+GUI_EDITOR_CALLTIP_ERROR=	error       - Error type for syntax errors
+GUI_EDITOR_CALLTIP_ASSERTION=	assertion   - Error types for failed assertions using "assert"
+GUI_EDITOR_CALLTIP_EXPRESSION=	expression  - Error type for errors in mathematical expressions
+# Option tooltips
+GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Conversion
+GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plot option
+GUI_EDITOR_CALLTIP_COMMON_GUI=Option for graphical interfaces
+GUI_EDITOR_CALLTIP_COMMON_FONTTYPE=Font face
+GUI_EDITOR_CALLTIP_COMMON_FILEWRITE=File writing mode
+GUI_EDITOR_CALLTIP_COMMON_FILEREAD=File reading mode
+GUI_EDITOR_CALLTIP_COMMON_SETTING=Setting
+GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR=Option for
+GUI_EDITOR_CALLTIP_COMMON_METHODFOR=Method for
+GUI_EDITOR_CALLTIP_OPT_ADDXAXIS=addxaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ADDYAXIS=addyaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ADVENTOR=adventor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_ALIGN=align=ALIGNSTRING [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_ALL=all
+GUI_EDITOR_CALLTIP_OPT_ALLMEDIUM=hires=allmedium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ALPHA=alpha[=VAL]
+GUI_EDITOR_CALLTIP_OPT_ALPHAMASK=alphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ANIMATE=animate[=FRAMES] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_APP=mode=app [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
+GUI_EDITOR_CALLTIP_OPT_ASVAL=asval[={VARSET}] [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
+GUI_EDITOR_CALLTIP_OPT_ATTRACT=attract={VAL,VAL} [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
+GUI_EDITOR_CALLTIP_OPT_AUTOSAVE=autosave [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_AXIS=axis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_AXISBIND=axisbind="rltb" [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_AXISSHIFT=axisshift [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
+GUI_EDITOR_CALLTIP_OPT_BACKGROUND=background=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BAR=type=bar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_BARS=bars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BCANCEL=type=bcancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_BELL=method=bell [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_BGCOLORSCHEME=bgcolorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BINLABEL=binlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_BINOMIAL=distrib=binomial [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_BINS=bins=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_BLACKMAN=method=blackman [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_BONUM=bonum [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_BOTTOMLEFT=legend=bottomleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BOTTOMRIGHT=legend=bottomright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BOX=box
+GUI_EDITOR_CALLTIP_OPT_BOXPLOT=boxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_BSPLINE=method=bspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt/resample]
+GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_BUTTONS=buttons=BUTTONS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CATMULLROM=method=catmullrom [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_CBSPLINE=method=cbspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_CDAUBECHIES=method=cdaubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_CHAAR=method=chaar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_CHANNELS=channels=CHANNELS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% imread]
+GUI_EDITOR_CALLTIP_OPT_CHECKMARK=type=checkmark [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_CHIMAP=chimap=CHIMAP() [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_CHORUS=chorus [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_CLOG=clog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CLOUDPLOT=cloudplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CMD=cmd
+GUI_EDITOR_CALLTIP_OPT_COARSE=grid=coarse [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COAST=colorscheme=coast [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLD=colorscheme=cold [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_COLORBAR=colorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORMASK=colormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORRANGE=colorrange=MIN:MAX [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORSCHEME=colorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLORTHEME=colortheme [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_COLS=cols[=VAL]
+GUI_EDITOR_CALLTIP_OPT_COMMENT=comment=COMMENT
+GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTSIGN
+GUI_EDITOR_CALLTIP_OPT_COMPACT=compact [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_COMPLETE=complete [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_COMPLEX=complex [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
+GUI_EDITOR_CALLTIP_OPT_CONNECT=connect [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CONST=const
+GUI_EDITOR_CALLTIP_OPT_COORDS=coords=COORDINATESET [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COPPER=colorscheme=copper [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_COUNTLABEL=countlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_CRUST=crust [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% plot3d]
+GUI_EDITOR_CALLTIP_OPT_CSCALE=cscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=method=daubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_DEBUGGER=debugger [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
+GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
+GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_DOCS=docs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
+GUI_EDITOR_CALLTIP_OPT_DOWN=down [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes]
+GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_ENABLED=state=enabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_EPS=eps=PRECISION
+GUI_EDITOR_CALLTIP_OPT_ERRORBARS=errorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ERRORICON=icon=erroricon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_EXEPATH=exepath [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EXPAND=expand [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_EXPRVAR=exprvar
+GUI_EDITOR_CALLTIP_OPT_EXTENDEDFILEINFO=extendedfileinfo [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_EXTERNALDOCWINDOW=externaldocwindow [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_FASTSTART=faststart [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_FCONT=fcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FILE=file=FILENAME
+GUI_EDITOR_CALLTIP_OPT_FILEDIALOG=type=filedialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_FILES=files[=FILEPATH]
+GUI_EDITOR_CALLTIP_OPT_FINE=grid=fine [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FIRST=first=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_FLENGTH=flength [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FLOW=flow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_FONT=font=FONTTYPE
+GUI_EDITOR_CALLTIP_OPT_FREE=free [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_FREEDMAN=method=freedman [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_FREEDOMS=freedoms=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_FUNC=func[=TYPE]
+GUI_EDITOR_CALLTIP_OPT_FX0=fx0=[STARTVALS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_GAMMA=distrib=gamma [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_GAUSS=distrib=gauss [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_GAUSSIAN=method=gaussian [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth/resample]
+GUI_EDITOR_CALLTIP_OPT_GETITEMS=getitems=ITEMCOMMAND [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_GRAPHS=graphs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
+GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_GRID=grid[=TYPE]
+GUI_EDITOR_CALLTIP_OPT_GRIDSTYLE=gridstyle=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HAAR=method=haar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
+GUI_EDITOR_CALLTIP_OPT_HBARS=hbars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HEAD=head=LINENUMBER
+GUI_EDITOR_CALLTIP_OPT_HEROS=heros [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_HEROSCN=heroscn [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_HIDDEN=state=hidden [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_HINTS=hints [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_HIRES=hires[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HLINES=hlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HORIZONTAL=type=horizontal [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_HOT=colorscheme=hot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_HTML=html
+GUI_EDITOR_CALLTIP_OPT_ICON=icon=ICON
+GUI_EDITOR_CALLTIP_OPT_ID=id=ID [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_IGNORE=ignore
+GUI_EDITOR_CALLTIP_OPT_IGNORECASE=ignorecase [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
+GUI_EDITOR_CALLTIP_OPT_IMAGES=images [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
+GUI_EDITOR_CALLTIP_OPT_INDEX=index [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% sort]
+GUI_EDITOR_CALLTIP_OPT_INFOICON=icon=infoicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_INTERPOLATE=interpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_INVERSE=inverse [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft/fwt]
+GUI_EDITOR_CALLTIP_OPT_ITEM=item=ITEMID [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_ITER=iter=VAL
+GUI_EDITOR_CALLTIP_OPT_KAISER=method=kaiser [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_KEEPDIM=keepdim [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_LABEL=label[=LABELSTRING] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_LANCZOS12=method=lanczos12 [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_LANCZOS3=method=lanczos3 [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_LANCZOS4=method=lanczos4 [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_LANCZOS6=method=lanczos6 [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_LAST=last=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_LBORDER=lborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LCONT=lcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEGEND=legend=POSITION [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEGENDSTYLE=legendstyle=LEGENDSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LIGHT=light[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LINES=lines[=VAL]
+GUI_EDITOR_CALLTIP_OPT_LINESIZES=linesizes=VALS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LINESTYLES=linestyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LISTDIALOG=type=listdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_LNUMCTRL=lnumctrl[=VAL]
+GUI_EDITOR_CALLTIP_OPT_LOADEMPTYCOLS=loademptycols [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_LOADPATH=loadpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_LOGIC=logic
+GUI_EDITOR_CALLTIP_OPT_LOGSCALE=logscale
+GUI_EDITOR_CALLTIP_OPT_LYAPUNOV=lyapunov [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
+GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MASK=mask
+GUI_EDITOR_CALLTIP_OPT_MAX=max[=VAL]
+GUI_EDITOR_CALLTIP_OPT_MAXLINE=maxline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MEAN=mean=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_MEDIUM=hires=medium [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MEMORY=memory [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% clear]
+GUI_EDITOR_CALLTIP_OPT_MENU=style=menu [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_MESSAGEBOX=type=messagebox [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_METHOD=method=METHOD
+GUI_EDITOR_CALLTIP_OPT_MIN=min[=VAL]
+GUI_EDITOR_CALLTIP_OPT_MINLEN=minlen=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
+GUI_EDITOR_CALLTIP_OPT_MINLINE=minline=STRING [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MINVAL=minval=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% detect]
+GUI_EDITOR_CALLTIP_OPT_MITCHELL=method=mitchell [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_MODE=mode=MODE
+GUI_EDITOR_CALLTIP_OPT_MOY=colorscheme=moy [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MSG=msg=MESSAGE
+GUI_EDITOR_CALLTIP_OPT_MULTIPLOT=multiplot=LINES,COLS
+GUI_EDITOR_CALLTIP_OPT_NOALPHA=noalpha [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOALPHAMASK=noalphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOANIMATE=noanimate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOAREA=noarea [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOAXIS=noaxis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBACKGROUND=nobackground [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBARS=nobars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBOX=nobox [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOBOXPLOT=noboxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCLOG=noclog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCLOUDPLOT=nocloudplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCOLORBAR=nocolorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCOLORMASK=nocolormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCONNECT=noconnect [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCRUST=nocrust [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% plot3d]
+GUI_EDITOR_CALLTIP_OPT_NOCUT=nocut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOERRORBARS=noerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFCONT=nofcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFLENGTH=noflength [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOFLOW=noflow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOGRID=nogrid [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOHBARS=nohbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOHIRES=nohires [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOINTERPOLATE=nointerpolate [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLCONT=nolcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLIGHT=nolight [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOLOGSCALE=nologscale [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOMARKS=nomarks [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOOPEN=noopen [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOORTHOPROJECT=noorthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPCONT=nopcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPIPE=nopipe [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOPOINTS=nopoints [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOQUOTES=noquotes
+GUI_EDITOR_CALLTIP_OPT_NOREFRESH=norefresh [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% edit]
+GUI_EDITOR_CALLTIP_OPT_NOREGION=noregion [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NORMAL=distrib=normal [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_NOSCHEMATIC=noschematic [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOSILENT=nosilent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOSTEPS=nosteps [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOXLOG=noxlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOYERRORBARS=noyerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOZLOG=nozlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NQ=nq
+GUI_EDITOR_CALLTIP_OPT_OBPS=obps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%
+GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OK=buttons=ok [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_OKCANCEL=buttons=okcancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_ONCHANGE=onchange=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_ONCLICK=onclick=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_ONLYCOLORS=legendstyle=onlycolors [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ONLYSTYLES=legendstyle=onlystyles [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ONOPEN=onopen=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_OPEN=open [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OPNG=opng=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ORDER=order=VAL
+GUI_EDITOR_CALLTIP_OPT_ORIGIN=origin=TYPE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ORTHOPROJECT=orthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OSVG=osvg=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OTEX=otex=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OTIF=otif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
+GUI_EDITOR_CALLTIP_OPT_PARTICLES=particles=PARTICLES [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pso]
+GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN
+GUI_EDITOR_CALLTIP_OPT_PCONT=pcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PEEK=peek
+GUI_EDITOR_CALLTIP_OPT_PERSPECTIVE=perspective=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PIPE=pipe [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLASMA=colorscheme=plasma [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTCOLORS=plotcolors=COLORS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTFONT=plotfont=FONTTYPE [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLOTPARAMS=plotparams
+GUI_EDITOR_CALLTIP_OPT_PLOTPATH=plotpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PLUGIN=plugin=PLUGINCOMMAND [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_PLUGINS=plugins
+GUI_EDITOR_CALLTIP_OPT_POINTS=points[=VAL]
+GUI_EDITOR_CALLTIP_OPT_POINTSTYLES=pointstyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POISSON=distrib=poisson [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_POLAR=coords=polar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_PZ=coords=polar_pz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_RP=coords=polar_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLAR_RZ=coords=polar_rz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PRECISION=precision=VAL
+GUI_EDITOR_CALLTIP_OPT_PROB=prob=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_PROC=proc=PROCNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
+GUI_EDITOR_CALLTIP_OPT_PROCPATH=procpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_PWD=pwd=PASSWORD [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
+GUI_EDITOR_CALLTIP_OPT_QUESTIONICON=icon=questionicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RBORDER=rborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_REAL=bgcolorscheme=real [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RECURSIVE=recursive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% define]
+GUI_EDITOR_CALLTIP_OPT_REFRESH=refresh [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% edit]
+GUI_EDITOR_CALLTIP_OPT_REGION=region [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RESET=reset [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RESTRICT=restrict=[RESTRICTIONS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_RK2=method=rk2 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RK4=method=rk4 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RK8PD=method=rk8pd [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RKCK=method=rkck [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_RKF45=method=rkf45 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
+GUI_EDITOR_CALLTIP_OPT_ROTATE=rotate=THETA,PHI [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SAMPLES=samples=VAL
+GUI_EDITOR_CALLTIP_OPT_SAVEPATH=savepath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_SAVERR=saverr [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_SAVITZKYGOLAY=method=savitzkygolay [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth]
+GUI_EDITOR_CALLTIP_OPT_SCALE=scale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_SCHEMATIC=schematic [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SCHOLA=schola [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_SCOTT=method=scott [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_SCRIPTPATH=scriptpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_SELECTIONDIALOG=type=selectiondialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_SETTINGS=settings
+GUI_EDITOR_CALLTIP_OPT_SHAPE=shape=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_SILENT=silent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SIMPSON=method=simpson [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
+GUI_EDITOR_CALLTIP_OPT_SINGLE=single
+GUI_EDITOR_CALLTIP_OPT_SIZE=size={x,y} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
+GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_SPACE=type=space [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STD=std
+GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
+GUI_EDITOR_CALLTIP_OPT_STREAMTO=streamto={WINID,ITEMID} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_STYLE=style=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_TABLES=tables [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
+GUI_EDITOR_CALLTIP_OPT_TABS=style=tabs [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
+GUI_EDITOR_CALLTIP_OPT_TENT=method=tent [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
+GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_TEXTENTRY=type=textentry [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
+GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
+GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
+GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
+GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TOPRIGHT=legend=topright [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TOTABLE=totable[=TABLE()]
+GUI_EDITOR_CALLTIP_OPT_TRANSPOSE=transpose
+GUI_EDITOR_CALLTIP_OPT_TRAPEZOIDAL=method=trapezoidal [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]
+GUI_EDITOR_CALLTIP_OPT_TRUNC=mode=trunc [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_TYPE=type=TYPE
+GUI_EDITOR_CALLTIP_OPT_UBOUND=ubound=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_UNIFORM=distrib=uniform [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_UNIQUE=unique
+GUI_EDITOR_CALLTIP_OPT_UNITS=units
+GUI_EDITOR_CALLTIP_OPT_UP=up [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes, url]
+GUI_EDITOR_CALLTIP_OPT_USECUSTOMLANG=usecustomlang [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_USEESCINSCRIPTS=useescinscripts [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_USR=usr=USERNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
+GUI_EDITOR_CALLTIP_OPT_VALUE=value[=VALUE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_VAR=var
+GUI_EDITOR_CALLTIP_OPT_VERTICAL=type=vertical [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_VIEWER=viewer[=PATH/TO/VIEWER] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_VIRIDIS=colorscheme=viridis [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_VLINES=vlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_WAIT=wait [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
+GUI_EDITOR_CALLTIP_OPT_WARNICON=icon=warnicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_WEIGHTEDLINEAR=method=weightedlinear [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth]
+GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_WINDOWSIZE=windowsize [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_WITH=with=FUNCTION(x,PARAMS) [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
+GUI_EDITOR_CALLTIP_OPT_WP=wp=PATH [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
+GUI_EDITOR_CALLTIP_OPT_XERRORBARS=xerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XLABEL=xlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XLOG=xlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XSCALE=xscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XTICKLABELS=xticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XTICKS=xticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_XVALS=xvals
+GUI_EDITOR_CALLTIP_OPT_XY=slices=xy [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_XZ=slices=xz [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
+GUI_EDITOR_CALLTIP_OPT_YERRORBARS=yerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YESNO=buttons=yesno [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_YLABEL=ylabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YLOG=ylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YSCALE=yscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YTICKLABELS=yticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_YTICKS=yticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZLABEL=zlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZLOG=zlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZSCALE=zscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZTICKLABELS=zticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZTICKS=zticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+# Constants tooltips
+GUI_EDITOR_CALLTIP_CONST_G_[ASTRO]=_g = 9.80665 [m/s^2]
+GUI_EDITOR_CALLTIP_CONST_C_[FIELDTHEORY]=_c = 299792458 [m/s]
+GUI_EDITOR_CALLTIP_CONST_ELEK_FELDKONST_[FIELDTHEORY]=_elek_feldkonst = 8.8541878e-12 [A s/(V m)]
+GUI_EDITOR_CALLTIP_CONST_N_AVOGADRO_[CHEMICAL]=_n_avogadro = 6.02214129e23 [1/mol]
+GUI_EDITOR_CALLTIP_CONST_K_BOLTZ_[THERMO]=_k_boltz = 1.3806488e-23 [J/K]
+GUI_EDITOR_CALLTIP_CONST_ELEM_LADUNG_[FIELDTHEORY]=_elem_ladung = 1.602176565e-19 [A s]
+GUI_EDITOR_CALLTIP_CONST_H_[ATOMIC]=_h = 6.62606957e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_HBAR_[ATOMIC]=_hbar = 1.05457173e-34 [J s]
+GUI_EDITOR_CALLTIP_CONST_M_ELEKTRON_[PARTICLE]=_m_elektron = 9.10938291e-31 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_PROTON_[PARTICLE]=_m_proton = 1.67262178e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_NEUTRON_[PARTICLE]=_m_neutron = 1.67492735e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_MUON_[PARTICLE]=_m_muon = 1.88353148e-28 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_TAU_[PARTICLE]=_m_tau = 3.16747e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_MAGN_FELDKONST_[FIELDTHEORY]=_magn_feldkonst = 1.25663706e-6 [V s/(A m)]
+GUI_EDITOR_CALLTIP_CONST_M_ERDE_[ASTRO]=_m_erde = 5.9726e24 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_SONNE_[ASTRO]=_m_sonne = 1.9885e30 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_ERDE_[ASTRO]=_r_erde = 6.378137e6 [m]
+GUI_EDITOR_CALLTIP_CONST_R_SONNE_[ASTRO]=_r_sonne = 6.9551e8 [m]
+GUI_EDITOR_CALLTIP_CONST_THETA_WEINBERG_[PARTICLE]=_theta_weinberg = 0.490976214
+GUI_EDITOR_CALLTIP_CONST_2PI_[MATHEMATICAL]=_2pi = 6.28318531
+GUI_EDITOR_CALLTIP_CONST_PI_[MATHEMATICAL]=_pi = 3.14159265
+GUI_EDITOR_CALLTIP_CONST_R_[THERMO]=_R = 8.3144622 [J/(mol K)]
+GUI_EDITOR_CALLTIP_CONST_ALPHA_FS_[ATOMIC]=_alpha_fs = 7.29735257e-3
+GUI_EDITOR_CALLTIP_CONST_MU_BOHR_[ATOMIC]=_mu_bohr = 9.27400968e-24 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_KERN_[ATOMIC]=_mu_kern = 5.05078353e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_M_AMU_[CHEMICAL]=_m_amu = 1.66053892e-27 [kg]
+GUI_EDITOR_CALLTIP_CONST_R_BOHR_[ATOMIC]=_r_bohr = 5.29177211e-11 [m]
+GUI_EDITOR_CALLTIP_CONST_GRAV_[ASTRO]=_G = 6.67384e-11 [m^3/(kg s^2)]
+GUI_EDITOR_CALLTIP_CONST_COUL_NORM_[FIELDTHEORY]=_coul_norm = 8.98755179e9 [V m/(A s)]
+GUI_EDITOR_CALLTIP_CONST_MU_E_[PARTICLE]=_mu_e = -9.284764620e-24 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_P_[PARTICLE]=_mu_p = 1.4106067873e8 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_N_[PARTICLE]=_mu_n = -9.662365e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_STEFAN_BOLTZMANN_[THERMO]=_stefan_boltzmann = 5.670367e-8 [J/(m^2 s K^4)]
+GUI_EDITOR_CALLTIP_CONST_WIEN_[THERMO]=_wien = 2.8977729e-3 [m K]
+GUI_EDITOR_CALLTIP_CONST_RYDBERG_[ATOMIC]=_rydberg = 1.0973731568508e7 [1/m]
+GUI_EDITOR_CALLTIP_CONST_HARTREE_[ATOMIC]=_hartree = 4.35974465e-18 [J]
+GUI_EDITOR_CALLTIP_CONST_GAMMA_P_[PARTICLE]=_gamma_p = 2.6752219e8 [1/(T s)]
+GUI_EDITOR_CALLTIP_CONST_GAMMA_N_[PARTICLE]=_gamma_n = 1.83247172e8 [1/(T s)]
+GUI_EDITOR_CALLTIP_CONST_GAMMA_E_[PARTICLE]=_gamma_e = 1.760859644e11 [1/(T s)]
+GUI_EDITOR_CALLTIP_CONST_LANDE_E_[PARTICLE]=_lande_e = -2.00231930436182
+GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_DELTA_[MATHEMATICAL]=_feigenbaum_delta = 4.6692016091
+GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_ALPHA_[MATHEMATICAL]=_feigenbaum_alpha = 2.5029078751
