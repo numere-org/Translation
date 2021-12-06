@@ -32,21 +32,43 @@
 		<keyword>plasma</keyword>
 		<keyword>rainbow</keyword>
 		<keyword>viridis</keyword>
+		<keyword>coolwarm</keyword>
+		<keyword>hue</keyword>
+		<keyword>polarity</keyword>
+		<keyword>ryg</keyword>
+		<keyword>spectral</keyword>
 	</keywords>
 	<contents>
 		The coloring schemes, which NumeRe uses in its 2D and 3D plots, can be customized--as well as the line colors in usual plots and 3D trajectories. While plotting, simply pass the option <code>colorscheme=SCHEME</code> or <code>plotcolors=COLORS</code>, repectively.
-		There exists some predefined schemes for 2D and 3D plots. The default coloring scheme is called <code>viridis</code>:
+		There exists some predefined schemes for 2D and 3D plots. The default coloring scheme is called <code>viridis</code>.
+		<h>Linear schemes</h>
 		<list>
-			<item node="coast">Caribbean coast: going from dark blue through cyan and yellow to white</item>
-			<item node="cold">A cold color gradient from black through dar blue and cyan to white</item>
-			<item node="copper">Going from black through shades of copper to white</item>
-			<item node="grey">A simple grey scale coloring scheme</item>
-			<item node="hot">A warm color gradient from black through red and yellow to white</item>
-			<item node="map">The typical color gradient of a physical map: going from violet and dark blue through green/yellow and orange to red and finally grey</item>
-			<item node="moy">"Magenta-Orange-Yellow": going from black through magenta, orange and yellow to white</item>
-			<item node="plasma">A color gradient going from dark blue through violet to light yellow</item>
-			<item node="rainbow">The well-known rainbow coloring scheme going from dark blue through green/yellow to dark red</item>
-			<item node="viridis">Similar to <code>coast</code>, but slightly more green and blue and a more uniform brightness. Default coloring scheme</item>
+			<item node="coast">Caribbean coast: from dark blue to cyan to yellow</item>
+			<item node="cold">A cold gradient from dark blue to blue to cyan</item>
+			<item node="copper">"copper": from dark to light copper tones</item>
+			<item node="grey">A simple grey scale scheme</item>
+			<item node="hot">A warm color gradient from black to red to yellow</item>
+			<item node="moy">"magenta-orange-yellow": from black through magenta, orange and yellow to white</item>
+			<item node="plasma">A color gradient from dark blue to purple to bright yellow</item>
+			<item node="viridis">Similar to <code>coast</code>, but more green and blue (default)</item>
+		</list>
+		<h>Diverging schemes</h>
+		<list>
+			<item node="coolwarm">Two-way gradient from blue to light purple to red</item>
+			<item node="polarity">Two-way and cyclic gradient from white to blue and dark purple to red and white again</item>
+			<item node="ryg">Two-way gradient from red-brown to yellow to green</item>
+			<item node="spectral">Two-way gradient from reddish brown to orange, yellow and green to blue</item>
+		</list>
+		<h>Cyclic schemes</h>
+		<list>
+			<item node="hue">Cyclic gradient from red through all colors of the color wheel to red</item>
+			<item node="polarity">Two-way and cyclic gradient from white to blue and dark purple to red and white again</item>
+		</list>
+		<h>Special schemes</h>
+		<list>
+			<item node="hue">Cyclic gradient from red through all colors of the color wheel to red</item>
+			<item node="map">A typical color gradient of a physical map: from purple and dark blue to green/yellow and orange to red and finally gray</item>
+			<item node="rainbow">The well-known rainbow scheme from dark blue to green/yellow to deep red</item>
 		</list>
 		The schemes <code>rainbow</code> and <code>map</code> should not be used, if the resulting plot probably may be printed in greyscales, because the brightest point is not at the upper end of the scale.
 		Apart from this, custom coloring schemes can be defined. The colors, which shall be used and which are represented by single characters, have to appended in the corresponding order and passed in additional quotation marks as SCHEME to the <code>colorscheme</code> option:<codeblock>colorscheme="BbcyrR"    (color set of the rainbow coloring scheme)</codeblock>The colors will be interpolated linearly for the final gradient.

@@ -32,21 +32,43 @@
 		<keyword>plasma</keyword>
 		<keyword>rainbow</keyword>
 		<keyword>viridis</keyword>
+		<keyword>coolwarm</keyword>
+		<keyword>hue</keyword>
+		<keyword>polarity</keyword>
+		<keyword>ryg</keyword>
+		<keyword>spectral</keyword>
 	</keywords>
 	<contents>
 		Die Farbschemata, die NumeRe in 2D- und 3D-Plots verwendet, können - ebenso wie die Linienfarben in gewöhnlichen Plots und 3D-Trajektorien - angepasst werden. Dabei muss die Option <code>colorscheme=SCHEMA</code> bzw. <code>plotcolors=FARBEN</code> beim Plotten übergeben werden.
-		Für 2D- und 3D-Plots existieren folgende vordefinierte Schemata, von denen <code>viridis</code> voreingestellt ist:
+		Für 2D- und 3D-Plots existieren vordefinierte Schemata, von denen <code>viridis</code> voreingestellt ist.
+		<h>Lineare Schemata</h>
 		<list>
-			<item node="coast">Karibik-Küste: von dunkelblau über cyan und gelb nach weiß</item>
-			<item node="cold">Ein kalter Farbverlauf von schwarz über dunkelblau und cyan nach weiß</item>
-			<item node="copper">"Kupfer": von schwarz über Kupfertöne nach weiß</item>
+			<item node="coast">Karibik-Küste: von dunkelblau über cyan nach gelb</item>
+			<item node="cold">Ein kalter Farbverlauf von dunkelblau über blau nach cyan</item>
+			<item node="copper">"Kupfer": von dunklen nach hellen Kupfertönen</item>
 			<item node="grey">Ein einfaches Grauskalen-Schema</item>
-			<item node="hot">Ein warmer Farbverlauf von schwarz über rot und gelb nach weiß</item>
-			<item node="map">Ein typischer Farbverlauf einer physischen Karte: von violett und dunklem Blau über grün/gelb und orange nach rot und schließlich grau</item>
+			<item node="hot">Ein warmer Farbverlauf von schwarz über rot nach gelb</item>
 			<item node="moy">"Magenta-Orange-Yellow": von schwarz über magenta, orange und gelb nach weiß</item>
 			<item node="plasma">Ein Farbverlauf von dunklem blau über violett nach hellem gelb</item>
+			<item node="viridis">Ähnlich wie <code>coast</code>, jedoch mehr grün und blau (Standard)</item>
+		</list>
+		<h>Divergierende Schemata</h>
+		<list>
+			<item node="coolwarm">Zweiseitiger Farbverlauf von blau über leichtes violett nach rot</item>
+			<item node="polarity">Zweiseitiger und zyklischer Farbverlauf von weiß über blau und dunklem violett zu rot und wieder weiß</item>
+			<item node="ryg">Zweiseitiger Farbverlauf von rotbraun über gelb nach grün</item>
+			<item node="spectral">Zweiseitiger Farbverlauf von rotbraun über orange, gelb und grün nach blau</item>
+		</list>
+		<h>Zyklische Schemata</h>
+		<list>
+			<item node="hue">Zyklischer Farbverlauf von rot über alle Farben des Farbenrades nach rot</item>
+			<item node="polarity">Zweiseitiger und zyklischer Farbverlauf von weiß über blau und dunklem violett zu rot und wieder weiß</item>
+		</list>
+		<h>Spezielle Schemata</h>
+		<list>
+			<item node="hue">Zyklischer Farbverlauf von rot über alle Farben des Farbenrades nach rot</item>
+			<item node="map">Ein typischer Farbverlauf einer physischen Karte: von violett und dunklem Blau über grün/gelb und orange nach rot und schließlich grau</item>
 			<item node="rainbow">Das bekannte Regenbogenschema von dunklem blau über grün/gelb nach tiefem rot</item>
-			<item node="viridis">Ähnlich wie <code>coast</code>, jedoch mehr grün und blau und eher uniforme Helligkeit (standard)</item>
 		</list>
 		Die Schemata <code>rainbow</code> und <code>map</code> sollten nicht verwendet werden, wenn der ausgegebene Plot unter Umständen in Grauskalen gedruckt werden sollte, da hier die Helligkeitsmaxima nicht am oberen Ende der Skala liegen.
 		Daneben können aber auch noch eigene Schemata bestimmt werden. Dazu müssen die Farben, die durch einzelne Buchstaben repräsentiert werden, in der gewünschten Reihenfolge aneinandergehängt werden und in zusätzlichen Anführungszeichen als SCHEMA übergeben werden:<codeblock>colorscheme="BbcyrR"   (Farbsatz des rainbow-Schemas)</codeblock>Die Farben werden dabei für die nötigen Farbverläufe automatisch interpoliert.

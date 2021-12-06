@@ -37,16 +37,17 @@
 		<keyword>boxplot</keyword>
 		<keyword>chorus</keyword>
 		<keyword>coarse</keyword>
+		<keyword>complexmode</keyword>
 		<keyword>connect</keyword>
 		<keyword>cursor</keyword>
 		<keyword>errorb</keyword>
 		<keyword>fine</keyword>
 		<keyword>font</keyword>
 		<keyword>grid</keyword>
-		<keyword>hlines</keyword>
 		<keyword>hbars</keyword>
 		<keyword>heros</keyword>
 		<keyword>hires</keyword>
+		<keyword>hlines</keyword>
 		<keyword>interpol</keyword>
 		<keyword>koord</keyword>
 		<keyword>label</keyword>
@@ -75,6 +76,7 @@
 		<keyword>nointerpol</keyword>
 		<keyword>nologscale</keyword>
 		<keyword>nomarks</keyword>
+		<keyword>none</keyword>
 		<keyword>noopen</keyword>			
 		<keyword>nopoint</keyword>
 		<keyword>noregion</keyword>
@@ -86,25 +88,27 @@
 		<keyword>noyerrorb</keyword>
 		<keyword>noylog</keyword>
 		<keyword>nozlog</keyword>
+		<keyword>obps</keyword>
 		<keyword>oeps</keyword>
 		<keyword>ogif</keyword>
 		<keyword>onlycol</keyword>
 		<keyword>onlystyl</keyword>
 		<keyword>open</keyword>
 		<keyword>opng</keyword>
-		<keyword>obps</keyword>
 		<keyword>origin</keyword>
 		<keyword>osvg</keyword>
 		<keyword>otex</keyword>
 		<keyword>otif</keyword>
 		<keyword>pagella</keyword>
 		<keyword>perspec</keyword>
+		<keyword>plane</keyword>
 		<keyword>plotopt</keyword>
 		<keyword>plotpar</keyword>
 		<keyword>point</keyword>
 		<keyword>rborder</keyword>
 		<keyword>real</keyword>
 		<keyword>region</keyword>
+		<keyword>reim</keyword>
 		<keyword>reset</keyword>
 		<keyword>samples</keyword>
 		<keyword>schematic</keyword>
@@ -151,6 +155,7 @@
 			<item node="bgcolorscheme=SCHEMA">Das Farbschema SCHEMA für den Hintergrund wählen. Einige vordefinierte Schemata sind <code>real</code>, <code>rainbow</code>, <code>viridis</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> und <code>map</code>. Siehe <a href="nhlp://colorscheme?frame=new">help colorscheme</a> für weitere Schemata</item>
 			<item node="box/nobox">Umfassende Box ein-/ausschalten (beeinflusst die Darstellung der Achsen)</item>
 			<item node="boxplot/<br/>  noboxplot">Boxplot-Modus (de-)aktivieren (Minimum, Maximum &amp; Quartile). Jede Datenreihe (es werden nur <expr>y</expr>-Werte verwendet) erzeugt einen einzelnen Boxplot-Marker im endgültigen Plot. Wird der gesamte Datensatz verwendet, wird von jeder Spalte ein Boxplot erzeugt. Mit einem Indexvektor können auch einzelne Spalten herausgegriffen werden.</item>
+			<item node="complexmode=MODE">Modus zur Darstellung komplexwertiger Daten bzw. Funktionen auswählen. Zur Wahl stehen <code>complexmode=none</code> (nur den Realteil darstellen; Standard), <code>complexmode=reim</code> (Real- und Imaginärteil als getrennte Funktionen im gleichen Graphen darstellen) und <code>complexmode=plane</code> (nur <code>plot</code>, <code>dens</code> und <code>surf</code>; verwendet <expr>x</expr> und <expr>y</expr> als Real- und Imaginärteil der Ergebnisfunktion bei <code>plot</code>. Bei <code>dens</code> bzw. <code>surf</code> wird die Phase der Ergebnisfunktion farbcodiert und der <expr>z</expr>-Wert gibt ihren Betrag an)</item>
 			<item node="connect/<br/>  noconnect">Verbindungen zwischen Datenpunkten ein-/ausschalten</item>
 			<item node="coords=KOORDINATEN">Den Koordinatensatz KOORDINATEN auswählen. Zur Verfügung stehen <code>cartesian</code> (kartesisch), <code>polar</code> (polar/zylindrisch) und <code>spherical</code> (sphärisch). Je nach gewähltem Plotstil sind die Koordinatenzuordnungen unterschiedlich. Siehe <a href="nhlp://coords?frame=new">help coords</a> für weitere Details.</item>
 			<item node="crust/nocrust">Rekonstruiert eine 2D-Oberfläche aus beliebig verteilten <expr>(x,y,z)</expr>-Punkten. Es wird das aktuelle Farbschema verwendet</item>
