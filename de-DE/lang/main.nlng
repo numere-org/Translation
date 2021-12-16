@@ -1113,6 +1113,9 @@ GUI_REMOVE_TABLE_CELL=Zelle entfernen
 GUI_COPY_TABLE_CONTENTS=Kopieren
 GUI_PASTE_TABLE_CONTENTS=Einfügen
 GUI_PASTE_TABLE_CONTENTS_HERE=Hier einfügen
+GUI_TABLEPANEL_DESCRIPTION=Beschreibung dieses Datensatzes
+GUI_TABLEPANEL_SOURCE=Quelldatei(en) dieses Datensatzes
+GUI_TABLEPANEL_LASTSAVE=Letzte automatische Sicherung: %%1%%
 # Code Analyzer strings
 GUI_ANALYZER_TEMPLATE=%%2%%: %%3%%   <%%1%%>
 GUI_ANALYZER_NOTE=Hinweis
