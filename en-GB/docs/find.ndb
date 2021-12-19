@@ -53,9 +53,9 @@ button~Inserts a labelable button into a window layout~pushbutton windowsystem l
 carttocyl(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sph‰rische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
 carttopol(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to polar coordinates (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sph‰rische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
-clc~Clear the content of the terminal window and reset it to the startup content~clc clear terminal clean~help clc
 checkbox~Inserts a checkbox into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
+clc~Clear the content of the terminal window and reset it to the startup content~clc clear terminal clean~help clc
 clock()~Returns the number of processor clicks since the start-up of NumeRe~time clicks zeit millisekunden milliseconds~clock()
 close~Closes previously opened windows that are selected by parameters~graphs schlieﬂen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
@@ -223,7 +223,16 @@ mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional~help m
 mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
 minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
+movavg(MAT,n,m)~Moves a window along the matrix and calculates the average~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Moves (depending on the actual expression) entries/columns/subtables in tables or complete files~verschieben tabellen dateien files~help move
+movmax(MAT,n,m)~Moves a window along the matrix and determines the maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(
+movmed(MAT,n,m)~Moves a window along the matrix and determines the median~movmed() moving gleitender sliding median window~movmed(
+movmin(MAT,n,m)~Moves a window along the matrix and determines the minimum~movmin() moving gleitendes sliding minimum minimal window~movmin(
+movnorm(MAT,n,m)~Moves a window along the matrix and calculates the vector norm~movnorm() moving gleitende sliding vector norm window~movnorm(
+movnum(MAT,n,m)~Moves a window along the matrix and counts the valid values~movnum() moving gleitendes sliding window~movnum(
+movprd(MAT,n,m)~Moves a window along the matrix and multiplies it~movprd() moving gleitendes sliding produkt multiplikation multiply window~movprd(
+movstd(MAT,n,m)~Moves a window along the matrix and calculates the standard deviation~movstd() moving gleitende sliding varianz variance standard deviation window~movstd(
+movsum(MAT,n,m)~Moves a window along the matrix and sums it~movsum() moving gleitende sliding summe window~movsum(
 namespace~Changes the current namespace in procedures~procedure namespaces folders modules ordner~help namespace
 ncols~Contains the number of columns for the current data access~columns dataaccess end number~ncols
 neumann(n,x)~Neumann function (Bessel function of the second kind) with the order n at the position x~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(

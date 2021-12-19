@@ -223,7 +223,16 @@ mesh3d~Erstellen eines 3D-Gitterplots~meshgrid3d gitterplot dreidimensional~help
 mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
 minpos(x,y,z,...)~Index des Minimums der Werte x,y,z,...~minimum position min() minpos() minimal value~minpos(
+movavg(MAT,n,m)~Schiebt ein Fenster über die Matrix und berechnet den Mittelwert~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Verschiebt je nach Ausdruck Einträge/Spalten/Untertabellen in Tabellen oder Dateien, siehe "help move"~verschieben tabellen dateien files~help move
+movmax(MAT,n,m)~Schiebt ein Fenster über die Matrix und bestimmt das Maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(
+movmed(MAT,n,m)~Schiebt ein Fenster über die Matrix und bestimmt den Median~movmed() moving gleitender sliding median window~movmed(
+movmin(MAT,n,m)~Schiebt ein Fenster über die Matrix und bestimmt das Minimum~movmin() moving gleitendes sliding minimum minimal window~movmin(
+movnorm(MAT,n,m)~Schiebt ein Fenster der über die Matrix und berechnet die Vektornorm~movnorm() moving gleitende sliding vector norm window~movnorm(
+movnum(MAT,n,m)~Schiebt ein Fenster über die Matrix und zählt die gültigen Zahlen~movnum() moving gleitendes sliding window~movnum(
+movprd(MAT,n,m)~Schiebt ein Fenster über die Matrix und multipliziert sie~movprd() moving gleitendes sliding produkt multiplikation multiply window~movprd(
+movstd(MAT,n,m)~Schiebt ein Fenster über die Matrix und berechnet die Standardabweichung~movstd() moving gleitende sliding varianz variance standard deviation window~movstd(
+movsum(MAT,n,m)~Schiebt ein Fenster über die Matrix und summiert sie~movsum() moving gleitende sliding summe window~movsum(
 namespace~Wechselt den Namensraum in Prozeduren~procedure namespaces folders modules ordner~help namespace
 ncols~Enthält die Zahl der Spalten beim aktuellen Datenzugriff~columns dataaccess end number~ncols
 neumann(n,x)~Neumannfunktion (Besselfunktion zweiter Gattung) der Ordnung n~neumann() bessel() besselfunktionen neumannfunktionen function second kind zweiter art~neumann(
