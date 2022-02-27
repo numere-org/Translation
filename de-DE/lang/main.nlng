@@ -573,7 +573,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automa
 DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tabellen, die nicht als Referenz (TAB()&) markiert sind, werden ab v1.1.5 standardmäßig kopiert. Dieses Verhalten kann bereits jetzt durch 'set enablefuture=true' aktiviert werden.
+PROCEDURE_WARN_TABLE_REFERENCE=Tabellen, die nicht als Referenz (TAB()&) markiert sind, werden ab v1.1.5 standardmäßig kopiert. Dieses Verhalten kann bereits jetzt durch 'set enablefuture=true' aktiviert werden. Diese Warnung wird dabei unterdrückt.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Abbrechen

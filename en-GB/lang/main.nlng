@@ -573,7 +573,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Please enter the headings. Whitespaces will be auto
 DATA_OPENFILE_HEADFORCOLUMN=Table heading for column %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the file "%%1%%". Shall the exisiting data be overwritten? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tables which are not marked as reference (TAB()&) are copied by default from v1.1.5. This behavior can already be enabled by 'set enablefuture=true'. 
+PROCEDURE_WARN_TABLE_REFERENCE=Tables which are not marked as reference (TAB()&) are copied by default from v1.1.5. This behavior can already be enabled by 'set enablefuture=true'. This warning will then be suppressed.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Cancel
