@@ -572,6 +572,8 @@ DATA_OPENFILE_ENTER_HEADINGS=Möchten Sie Tabellenköpfe eingeben? (%%COMMON_YES_N
 DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automatisch durch "_" ersetzt.
 DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
+# PROCEDURE
+PROCEDURE_WARN_TABLE_REFERENCE=Tabellen, die nicht als Referenz (TAB()&) markiert sind, werden ab v1.1.5 standardmäßig kopiert. Dieses Verhalten kann bereits jetzt durch 'set enablefuture=true' aktiviert werden.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Abbrechen
@@ -1038,8 +1040,8 @@ GUI_EDITOR_TAB_CLOSEOTHERS=Alle anderen schließen
 GUI_EDITOR_TAB_OPENFOLDER=Ordner öffnen
 GUI_EDITOR_TAB_UNSPLIT=Zweite Ansicht entfernen
 GUI_EDITOR_TAB_SPLITTING=Ansicht klonen ...
-GUI_EDITOR_TAB_SPLIT_H=Vertikal klonen
-GUI_EDITOR_TAB_SPLIT_V=Horizontal klonen
+GUI_EDITOR_TAB_SPLIT_H=Vertikal anordnen
+GUI_EDITOR_TAB_SPLIT_V=Horizontal anordnen
 GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start
 # Editor pop-up menu
 GUI_MENU_EDITOR_CUT=Ausschneiden
@@ -1177,6 +1179,7 @@ GUI_ANALYZER_GLOBALVARIABLE=Die Variable "%%1%%" scheint global zu sein. Es ist 
 GUI_ANALYZER_MATOPFUNCTION=Die Funktion "%%1%%" kann nur im Matrixmodus ("matop") verwendet werden.
 GUI_ANALYZER_DRAWFUNCTION=Die Funktion "%%1%%" kann nur im Zeichenmodus ("draw" oder "draw3d") verwendet werden.
 GUI_ANALYZER_STRINGFUNCTION=Die Zeichenkettenfunktion "%%1%%" kann nicht im Matrixmodus ("matop") verwendet werden. Dieser Modus unterstützt keine Zeichenketten.
+GUI_ANALYZER_WARN_TABLE_REFERENCE=%%PROCEDURE_WARN_TABLE_REFERENCE%%
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code-Duplikate
 GUI_DUPCODE_MATCH=Zeilen

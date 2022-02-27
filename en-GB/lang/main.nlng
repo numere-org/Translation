@@ -572,6 +572,8 @@ DATA_OPENFILE_ENTER_HEADINGS=Do you want to enter table headings? (%%COMMON_YES_
 DATA_OPENFILE_ENTERYOURHEADS=Please enter the headings. Whitespaces will be automatically replaced with "_".
 DATA_OPENFILE_HEADFORCOLUMN=Table heading for column %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the file "%%1%%". Shall the exisiting data be overwritten? (%%COMMON_YES_NO%%)
+# PROCEDURE
+PROCEDURE_WARN_TABLE_REFERENCE=Tables which are not marked as reference (TAB()&) are copied by default from v1.1.5. This behavior can already be enabled by 'set enablefuture=true'. 
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Cancel
@@ -1038,8 +1040,8 @@ GUI_EDITOR_TAB_CLOSEOTHERS=Close all other tabs
 GUI_EDITOR_TAB_OPENFOLDER=Open containing folder
 GUI_EDITOR_TAB_UNSPLIT=Remove secondary view
 GUI_EDITOR_TAB_SPLITTING=Clone view ...
-GUI_EDITOR_TAB_SPLIT_H=Clone vertically
-GUI_EDITOR_TAB_SPLIT_V=Clone horizontally
+GUI_EDITOR_TAB_SPLIT_H=Arrange vertically
+GUI_EDITOR_TAB_SPLIT_V=Arrange horizontally
 GUI_EDITOR_TAB_WELCOMEPAGE=NumeRe: Start here
 # Editor pop-up menu
 GUI_MENU_EDITOR_CUT=Cut
@@ -1177,6 +1179,7 @@ GUI_ANALYZER_GLOBALVARIABLE=The variable "%%1%%" seems to be a global one. It's 
 GUI_ANALYZER_MATOPFUNCTION=The function "%%1%%" may only be used within matrix mode ("matop").
 GUI_ANALYZER_DRAWFUNCTION=The function "%%1%%" may only be used within a drawing mode ("draw" or "draw3d").
 GUI_ANALYZER_STRINGFUNCTION=The string function "%%1%%" cannot be used within matrix mode ("matop"). This mode does not support strings.
+GUI_ANALYZER_WARN_TABLE_REFERENCE=%%PROCEDURE_WARN_TABLE_REFERENCE%%
 # Duplicate Code Analyzer strings
 GUI_DUPCODE_TITLE=Code duplicates
 GUI_DUPCODE_MATCH=Lines
