@@ -35,6 +35,7 @@ append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~la
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+assemble(MAT,MAT,MAT)~Erstellt eine neue Matrix aus den Werten der dritten Matrix MAT mit den Zielindices aus der ersten und zweiten Matrix~assemble() gather zusammensetzen zusammenbauen kombinieren~assemble(
 assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(

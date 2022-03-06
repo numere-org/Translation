@@ -35,6 +35,7 @@ append~Append data files to data already loaded to memory~laden daten dateien sp
 ascii(STR)~Returns the ASCII values of the characters in STR~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+assemble(MAT,MAT,MAT)~Creates a new matrix from the values of the third matrix MAT with the target indices from the first and the second matrix~assemble gather zusammensetzen zusammenbauen kombinieren~assemble( 
 assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Inverse hyperbolic tangent of x. artanh(x) is a synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
