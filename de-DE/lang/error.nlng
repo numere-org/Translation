@@ -252,6 +252,8 @@ ERR_NR_1600_0_INCOMPLETE_VECTOR_SYNTAX=Die Vektorsyntax wurde nicht korrekt verw
 ERR_NR_1600_1_INCOMPLETE_VECTOR_SYNTAX=%%ERR_SEEALSO%%: "help multiresult"
 ERR_NR_1700_0_INLINE_PROCEDURE_IS_NOT_INLINE=Eine als "inline" geflagte Prozedur enthält weitere Prozeduren, Verzweigungen oder Schleifen.$("inline"-geflagte Prozeduren dürfen keine weiteren Prozeduren, Schleifen oder Verzweigungen enthalten)
 ERR_NR_1700_1_INLINE_PROCEDURE_IS_NOT_INLINE=%%ERR_SEEALSO%%: "help procedure"
+ERR_NR_1701_0_INLINE_PROCEDURE_NEEDS_TABLE_REFERENCES=Eine als "inline" geflagte Prozedur kann Tabellen nur als Referenzen übergeben bekommen. Verwende Cluster, um einzelne Zeilen oder Spalten zu übergeben.
+ERR_NR_1701_1_INLINE_PROCEDURE_NEEDS_TABLE_REFERENCES=%%ERR_SEEALSO%%: "help procedure"
 ERR_NR_1800_0_INSTALL_CMD_FOUND=Es wurde das Kommando "install SCRIPT" (oder der Alias "script -start=SCRIPT install") in einer Prozedur oder einen Script verwendet.
 ERR_NR_1800_1_INSTALL_CMD_FOUND=%%ERR_SEEALSO%%: "help install"
 ERR_NR_1900_0_INSUFFICIENT_NUMERE_VERSION=Diese Datei oder die zu installierenden Prozeduren (bzw. das Plugin) erfordern eine höhere Version von NumeRe, als du zur Zeit verwendest. Installiere bitte die aktuellste Version, um auf die aktuellen Features zugreifen zu können.
