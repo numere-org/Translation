@@ -154,6 +154,7 @@ grad~Generates a gradient plot~gradienten feldlinien field lines force kraft~hel
 grapher~Inserts a graph object into a window layout~plotting windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 gridrot~Rotates the passed data grid around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help gridrot
 group~Starts the definition of a grouping box for a window layout~endgroup windowsystem layout interaction gui graphical user interface graphisch fenster dialog~help window
+hcat(MAT,MAT)~Horizontally concatenates tow matrices that have the same number of rows~hcat() concat concatenate horizontal verketten verknüpfen anhängen~hcat(
 heaviside(x)~Heaviside (or Theta) function~thetafunktion function heavisidefunktion heaviside() stufenfunktion distribution~heaviside(
 help TOPIC~NumeRe documentation concerning the TOPIC~hilfe manual documentation dokumentation~help
 hermite(n,x)~Numerical value of the Hermite polynomial with the order n >= 0 at the position x~hermitepolynome hermite()~hermite(
@@ -386,6 +387,7 @@ unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() mat
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
 var~Defines the local numerical variables in a procedure~procedure local variables~help var
+vcat(MAT,MAT)~Vertically concatenates tow matrices that have the same number of columns~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()

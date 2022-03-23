@@ -155,6 +155,7 @@ grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kr
 grapher~Fügt ein Graph-Objekt in ein Window-Layout ein~plotting windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 gridrot~Rotiert das angegebene Datengitter um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help gridrot
 group~Startet die Definition einer Gruppierungsbox für ein Window-Layout~endgroup windowsystem layout interaction gui graphical user interface graphisch fenster dialog~help window
+hcat(MAT,MAT)~Horizontale Verkettung von zwei Matrizen, die die gleiche Anzahl von Zeilen haben~hcat() concat concatenate horizontal verketten verknüpfen anhängen~hcat(
 heaviside(x)~Heaviside-(Theta-)Funktion~thetafunktion function heavisidefunktion heaviside() stufenfunktion distribution~heaviside(
 help THEMA~Ruft die NumeRe-Hilfe zum gewählten Thema THEMA auf. Wird kein Thema angegeben, so wird die NumeRe-Hilfe-Übersicht aufgerufen~hilfe manual documentation dokumentation~help
 hermite(n,x)~Berechnet den numerischen Wert der Hermite-Polynome der Ordnung n an der Stelle x~hermitepolynome hermite()~hermite(
@@ -385,6 +386,7 @@ unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strun
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip~help url
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables~help var
+vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von Spalten haben~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
