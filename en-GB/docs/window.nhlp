@@ -31,6 +31,7 @@
 		<keyword>treelist</keyword>
 		<keyword>checkbox</keyword>
 		<keyword>dropdown</keyword>
+		<keyword>combobox</keyword>
 		<keyword>spinbut</keyword>
 		<keyword>slider</keyword>
 		<keyword>gauge</keyword>
@@ -87,6 +88,7 @@
 			<item node="treelist [-set PAR]">Generates a treelist which can additionally be equipped with checkboxes. The number of columns and elements can be specified by <code>size={row, col}</code> or directly by specifying values using <code>label={LABEL1, ...}</code> and <code>value={VAL1, ...}</code>. <code>value={VAL1, ...}</code> specifies the elements row by row, where the columns must be separated by tabs (<code>\t</code>) (e.g.: <code>value={"COL1\tCOL2\tCOL3\t...", "...}</code>). If additional checkboxes are used, the first value (<code>1</code> or <code>0</code>) defines the status of these checkboxes (e.g.: <code>value={"1\tCOL1\t...", "0\t...}</code>).</item>
 			<item node="checkbox EX [-set PAR]">Generates a clickable checkbox labeled with <code>EX</code>.</item>.
 			<item node="dropdown EX [-set PAR]">Generates a dropdown list whose values are taken from <code>EX</code> in the form of a list of strings.</item>.
+			<item node="combobox EX [-set PAR]">Generates a combo box (a modifiable dropdown list) whose values are taken from <code>EX</code> in the form of a list of strings.</item>.
 			<item node="spinbut [-set PAR]">Generates a spin button that can be labeled with <code>label=LABEL</code>. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>.
 			<item node="slider [-set PAR]">Generates a slider. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>
 			<item node="gauge [-set PAR]">Creates a progress bar that can be oriented either horizontally or vertically.</item>
