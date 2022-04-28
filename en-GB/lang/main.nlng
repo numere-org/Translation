@@ -573,7 +573,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Please enter the headings. Whitespaces will be auto
 DATA_OPENFILE_HEADFORCOLUMN=Table heading for column %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the file "%%1%%". Shall the exisiting data be overwritten? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tables which are not marked as reference (TAB()&) are copied by default from v1.1.5. This behavior can already be enabled by 'set enablefuture=true'. This warning will then be suppressed.
+PROCEDURE_WARN_TABLE_REFERENCE=Tables are always passed by reference, even without the corresponding syntax (TAB()&). This is not recommended. To copy them instead, disable the corresponding setting in the options. This warning will be suppressed.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Cancel
@@ -710,6 +710,7 @@ GUI_OPTIONS_HINTS=Show the "Tip of the day" at start-up
 GUI_OPTIONS_CUSTOMLANG=Custom defined language (requires a restart)%%LINEBREAK%%See also "help language"
 GUI_OPTIONS_EXTERNALVIEWER=Use external windows for "show" and "help"
 GUI_OPTIONS_EXECUTECOMMAND=Allow the command "execute"%%LINEBREAK%%Security risk! See also "help execute"
+GUI_OPTIONS_ALWAYSREFERENCETABLES=Tables are always passed by reference%%LINEBREAK%%This is deprecated and not recommened
 GUI_OPTIONS_RESETHIGHLIGHT=Reset
 GUI_OPTIONS_DEFAULTBACKGROUND=Default background
 GUI_OPTIONS_BOLD=Bold

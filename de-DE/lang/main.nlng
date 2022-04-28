@@ -573,7 +573,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automa
 DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tabellen, die nicht als Referenz (TAB()&) markiert sind, werden ab v1.1.5 standardmäßig kopiert. Dieses Verhalten kann bereits jetzt durch 'set enablefuture=true' aktiviert werden. Diese Warnung wird dabei unterdrückt.
+PROCEDURE_WARN_TABLE_REFERENCE=Tabellen werden immer als Referenz übergeben, auch ohne die entsprechende Syntax (TAB()&). Dies wird nicht empfohlen. Um sie stattdessen zu kopieren, deaktiviere die entsprechende Einstellung in den Optionen. Diese Warnung wird dabei unterdrückt.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Abbrechen
@@ -710,6 +710,7 @@ GUI_OPTIONS_HINTS=Tipps und Tricks beim Start anzeigen
 GUI_OPTIONS_CUSTOMLANG=Benutzerdefinierte Sprache (Benötigt einen Neustart)%%LINEBREAK%%Siehe auch "help language"
 GUI_OPTIONS_EXTERNALVIEWER=Verwende externe Fenster für "show" und "help"
 GUI_OPTIONS_EXECUTECOMMAND=Erlaube das Kommando "execute"%%LINEBREAK%%Sicherheitsrisiko! Siehe auch "help execute"
+GUI_OPTIONS_ALWAYSREFERENCETABLES=Tabellen werden immer als Referenz übergeben%%LINEBREAK%%Dies ist veraltet und nicht empfohlen
 GUI_OPTIONS_RESETHIGHLIGHT=Zurücksetzen
 GUI_OPTIONS_DEFAULTBACKGROUND=Standardhintergrund
 GUI_OPTIONS_BOLD=Fett
