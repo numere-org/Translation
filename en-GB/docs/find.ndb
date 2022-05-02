@@ -146,6 +146,7 @@ getfolderlist(STR,T)~Returns a list of strings containing all directories matchi
 getindices(STR,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
 getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyal(
 getlasterror()~Returns the last error processed by a try-catch block~try catch throw error exception handling~getlasterror()
+getversioninfo()~Returns information about the current NumeRe version~version release candidate date datum build~getversioninfo()
 getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
 global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global

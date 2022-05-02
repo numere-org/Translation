@@ -91,7 +91,7 @@
 			<item node="combobox EX [-set PAR]">Generates a combo box (a modifiable dropdown list) whose values are taken from <code>EX</code> in the form of a list of strings.</item>.
 			<item node="spinbut [-set PAR]">Generates a spin button that can be labeled with <code>label=LABEL</code>. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>.
 			<item node="slider [-set PAR]">Generates a slider. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>
-			<item node="gauge [-set PAR]">Creates a progress bar that can be oriented either horizontally or vertically.</item>
+			<item node="gauge [-set PAR]">Creates a progress bar that can be oriented either horizontally or vertically. The bar can have values from 0 to 100 (<code>value=VAL</code>). The special value -1 switches to the pulsation mode of the progress bar.</item>
 			<item node="tablegrid [-set PAR]">Creates a table grid with a defined number of rows and columns (<code>size={row, col}</code>), but at least one row and one column. Values of the table can be modified by <code>window ID -set value=TABLEDATA() item=ITEMID</code> and read by <code>window ID -get value item=ITEMID target=TARGETTABLE()</code>. In the absence of the <code>target=TARGETTABLE()</code> option, <code>valtable()</code> is used as default.</item>.
 			<item node="bitmap EX [-set PAR]">Displays the image from the <code>EX</code> file.</item>
 			<item node="grapher [-set PAR]">Generates a graph object with configurable size (<code>size={x,y}</code>, by default <expr>640times480</expr>). The graph object can only be populated by a plotting command using the <code>streamto={WINID,ITEMID}</code> option.</item>.
