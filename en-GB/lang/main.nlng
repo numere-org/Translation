@@ -716,7 +716,7 @@ GUI_OPTIONS_DEFAULTBACKGROUND=Default background
 GUI_OPTIONS_BOLD=Bold
 GUI_OPTIONS_ITALICS=Italics
 GUI_OPTIONS_UNDERLINE=Underline
-GUI_OPTIONS_HIGHLIGHTLOCALVARIABLES=Further highlight local variables in their definitions
+GUI_OPTIONS_HIGHLIGHTLOCALVARIABLES=Further highlight local variables
 GUI_OPTIONS_CONFIG=Configuration
 GUI_OPTIONS_LOADPATH=Loading path | <loadpath> =
 GUI_OPTIONS_SAVEPATH=Saving path | <savepath> =
@@ -785,6 +785,7 @@ GUI_OPTIONS_AUTOCOMPLETION=Autocompletion
 GUI_OPTIONS_BRACE_AUTOCOMP=Braces
 GUI_OPTIONS_BLOCK_AUTOCOMP=Control flow blocks
 GUI_OPTIONS_QUOTE_AUTOCOMP=Quotation marks
+GUI_OPTIONS_SMARTSENSE_AUTOCOMP=SmartSense (Context-based autocompletion)
 GUI_OPTIONS_PRECISION=Precision (Decimals int the console)
 GUI_OPTIONS_LATEXPATH=Path to the binaries of your LaTeX distribution%%LINEBREAK%%(The subdirectory "bin" or "bin/x64" in the LaTeX distribution)
 GUI_OPTIONS_MISC=Miscellaneous

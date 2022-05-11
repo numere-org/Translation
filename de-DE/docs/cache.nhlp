@@ -46,7 +46,7 @@
 		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
 		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden.
 		Wird eine gesamte Spalte in der Form <code>TABLE(:,j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt.
-		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nlines</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden. Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nlines-10, 1), ncols-4)</codeblock>
+		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nrows</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden (<code>nlines</code> ist ein Alias). Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
 		Die Spaltenüberschriften können ähnlich gelesen und bearbeitet werden: <code>TABLE(#,SPALTE)</code> bzw. <code>TABLE(#,SPALTE) = KOPF</code>
 		<h>Kommandos in Zusammenhang mit Tabellen</h>
 		In Zusammenhang mit Tabellen sind spezielle Kommandos verfügbar:
@@ -79,10 +79,10 @@
 		</list>
 		Als Modifizierer sind die folgenden definiert:
 		<list>
-			<item node=".lines">Wendet die entsprechende Methode zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
+			<item node=".rows">Wendet die entsprechende Methode zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück (<code>.lines</code> ist ein Alias)</item>
 			<item node=".cols">Wendet die entsprechende Methode spaltenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
 			<item node=".grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
-			<item node=".every(nFirst,nIncr)">Ermöglicht es mit <code>lines</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
+			<item node=".every(nFirst,nIncr)">Ermöglicht es mit <code>rows</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
 		</list>
 		<example desc="Daten in der Tabelle 'table()' anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
 			show table()

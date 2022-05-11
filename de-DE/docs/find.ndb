@@ -244,6 +244,7 @@ nlen~Enthält die Zahl der Elemente beim aktuellen Zugriff auf ein Cluster~rows c
 nlines~Enthält die Zahl der Zeilen beim aktuellen Datenzugriff~rows dataaccess end number~nlines
 norm(x,y,z,...)~Berechnet die euklidische Norm eines Vektors: ||(x,y,z,...)|| := sqrt(x^2+y^2+z^2+...)~vektorbetrag vektornorm vector euklidian norm()~norm(
 normalize(MAT)~Normiert die Werte der Matrix MAT auf den Bereich [-1,1]~normieren normalize()~normalize(
+nrows~Enthält die Zahl der Zeilen beim aktuellen Datenzugriff~rows dataaccess end number~nrows
 num(x,y,z,...)~Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()~num(
 NumeRe v $$$~Deine NumeRe-Distribution befindet sich hier: $$$~numere programm dateipfad filepath version~"NumeRe v"+#version()+" is located at "+#<>
 odesolve~Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch, siehe "help odesolve"~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
