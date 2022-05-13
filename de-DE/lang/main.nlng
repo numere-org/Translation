@@ -776,6 +776,7 @@ GUI_OPTIONS_KEEP_BACKUP_FILES=Versionsverlauf der Datei beibehalten
 GUI_OPTIONS_AUTOSAVE_BEFORE_EXEC=Vor Ausführung alle Dateien automatisch speichern
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Text auf der Werkzeugleiste anzeigen
 GUI_OPTIONS_SHOW_FILEPATHS=Relative Dateipfade als Editor-Registerkartennamen verwenden
+GUI_OPTIONS_SHOW_ICONS_ON_TABS=Datei-Icons auf den Editor-Registerkarten anzeigen
 GUI_OPTIONS_USE_TABS=TAB statt Leerräumen zum Einrücken verwenden
 GUI_OPTIONS_SHOW_LINE_LENGTH_INDICATOR=Indikator für eine Zeilenlänge von 100 Zeichen anzeigen
 GUI_OPTIONS_HOME_END_CANCELS=POS1/ENDE brechen die Autovervollständigung ab%%LINEBREAK%%Stattdessen springen sie an ihre jeweilige Position

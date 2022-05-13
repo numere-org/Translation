@@ -776,6 +776,7 @@ GUI_OPTIONS_KEEP_BACKUP_FILES=Keep revisions of the file
 GUI_OPTIONS_AUTOSAVE_BEFORE_EXEC=Autosave all files before execution
 GUI_OPTIONS_SHOW_TOOLBARTEXT=Show text on the toolbar
 GUI_OPTIONS_SHOW_FILEPATHS=Show relative file paths as editor tab labels
+GUI_OPTIONS_SHOW_ICONS_ON_TABS=Show file icons on the editor tabs
 GUI_OPTIONS_USE_TABS=Use tabs instead of whitespaces for indentation
 GUI_OPTIONS_SHOW_LINE_LENGTH_INDICATOR=Show an indicator for a line length of 100 characters
 GUI_OPTIONS_HOME_END_CANCELS=HOME/END cancel the autocompletion%%LINEBREAK%%Instead they jump to their respective positions
