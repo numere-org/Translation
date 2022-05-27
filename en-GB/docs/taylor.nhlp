@@ -36,10 +36,11 @@
 		</list>
 		The expanded polynomial will be automatically defined as a function in the function definition set using the function <code>polynomial(x,a0,a1,a2,...)</code>. Commonly, the function will be called <code>Taylor(x)</code>, but if the option <code>unique</code> was passed, the function name will be quite more complex.
 		<em>Attention:</em> Functions with the same name, which are already present, will be overwritten.
+		The command <code>taylor</code> will also return the calculated coefficients to publish them for further modifications.
 		<example desc="Taylor expansion of the function <expr>f(x) = cos(x)*exp(-x/2)</expr> at the position <expr>x = 1</expr> up to the order of 4:" type="verbatim">
 			|&lt;- taylor cos(x)*exp(-x/2) -set x=1 n=4
-			|-&gt; Taylor(x) := polynomial(x-1,0.3277099,-0.6742329,0.1315407,0.0964941,-0.03757564)
 			|-&gt; Function "Taylor" was defined successfully.
+			|-&gt; ans = { 0.3277099, -0.6742329, 0.1322977, 0.09636598, -0.0378725}
 		</example>
 	</contents>
 </article>
