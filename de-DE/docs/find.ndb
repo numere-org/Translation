@@ -183,6 +183,8 @@ is_cluster(STR)~Gibt true zurück, wenn STR ein Cluster ist, sonst false~is_clust
 is_cntrl(STR)~Prüft für jedes Zeichen in STR, ob es ein Steuerzeichen ist~is_cntrl() character type representation zeichen~is_cntrl(
 is_data(STR)~Gibt true zurück, wenn STR ein Datenobjekt (eine Tabelle oder ein Cluster) ist, sonst false~is_data() datafile cache cluster table variablen type detection erkennung~is_data(
 is_digit(STR)~Prüft für jedes Zeichen in STR, ob es numerisch ist~is_digit() character type representation zeichen~is_digit(
+is_dir(STR)~Gibt true wenn es sich um einen validen Ordnerpfad handelt und false wenn nicht~is_dir() directory valid pfad path ordner folder~is_dir(
+is_file(STR)~Gibt true wenn es sich um einen validen Dateipfad handelt und false wenn nicht~is_file() directory valid pfad path ordner folder~is_file(
 is_graph(STR)~Prüft für jedes Zeichen in STR, ob es eine graphische Repräsentierung hat~is_graph() character type representation zeichen~is_graph(
 is_lower(STR)~Prüft für jedes Zeichen in STR, ob es ein Kleinbuchstabe ist~is_lower() character type representation zeichen~is_lower(
 is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number~is_nan(

@@ -182,6 +182,8 @@ is_cluster(STR)~Returns true, if STR is a cluster, false otherwise~is_cluster() 
 is_cntrl(STR)~Determines for each character in STR, whether it is a control  character type, or not~is_cntrl() character type representation zeichen~is_cntrl(
 is_data(STR)~Returns true, if STR is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster variablen type detection erkennung~is_data(
 is_digit(STR)~Determines for each character in STR, whether it is a decimal character type, or not~is_digit() character type representation zeichen~is_digit(
+is_dir(STR)~Returns true if string is a valid directory name and false if not~is_dir() directory valid pfad path ordner folder~is_dir(
+is_file(STR)~Returns true if string is a valid file directory and name and false if not~is_file() directory valid pfad path ordner folder~is_file(
 is_graph(STR)~Determines for each character in STR, whether it is a graphical character type, or not~is_graph() character type representation zeichen~is_graph(
 is_lower(STR)~Determines for each character in STR, whether it is a lowercase character type, or nott~is_lower() character type representation zeichen~is_lower(
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number~is_nan(
