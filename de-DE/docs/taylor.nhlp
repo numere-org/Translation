@@ -36,7 +36,7 @@
 		</list>
 		Das entwickelte Polynom wird unter Verwendung der Funktion <code>polynomial(x,a0,a1,a2,...)</code> automatisch als eine Funktion im Funktionenspeicher definiert. Im Allgemeinen wird als Funktionsname <code>Taylor(x)</code> gewählt, wenn allerdings die Option <code>unique</code> übergeben wurde, ist der Funktionsname deutlich komplexer.
 		<em>Achtung:</em> Funktionen, die mit demselben Namen im Funktionsspeicher vorhanden sind, werden dabei überschrieben!
-		Das Kommando <code>taylor</code> wird die berechneten Koeffizienten zugleich zurückgeben, um sie für weitere Verarbeitung verfügbar zu machen.
+		Das Kommando <code>taylor</code> wird die berechneten Koeffizienten zugleich in aufsteigender Reihenfolge zurückgeben, um sie für weitere Verarbeitung verfügbar zu machen.
 		<example desc="Taylorentwicklung der Funktion <expr>f(x) = cos(x)*exp(-x/2)</expr> an der Stelle <expr>x = 1</expr> bis zur Ordnung 4:" type="verbatim">
 			|&lt;- taylor cos(x)*exp(-x/2) -set x=1 n=4
 			|-&gt; Funktion "Taylor" wurde erfolgreich definiert!
