@@ -172,6 +172,7 @@ implot~Erzeugt eine Darstellung des Ausdrucks oder Datensatzes als Bild, wobei a
 imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp channels~help imread
 imrot~Rotiert den angegebenen Bilddatensatz um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help imrot
 imY(l,m,theta,phi)~Imaginärteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] unter den Winkeln theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
+include~Bindet Informationen aus einer Datei in die aktuelle ausführbare Datei ein~including embedding importing einbinden einbetten file~help include
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpoliert Werte aus der ersten Matrix bilinear unter Verwendung der Zeilen- und Spaltenwerte der zweiten Matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(

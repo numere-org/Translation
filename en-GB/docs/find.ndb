@@ -171,6 +171,7 @@ implot~Creates a visual representation of the expression or the data set as an i
 imread~Reads an image file as data grid into a table~imageread images load bilder *.tiff *.jpg *.jpeg *.png *.bmp channels~help imread
 imrot~Rotates the passed image data set around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help imrot
 imY(l,m,theta,phi)~Imaginary part of the spherical harmonics with the orders l and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
+include~Includes information from another file into the current executable file~including embedding importing einbinden einbetten file~help include
 install~Installs a plugin or a package~procedure installieren aktualisieren update~help install
 integrate~Integrates a function f(x) or f(x,y) numerically~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpolates values from the first matrix bilinearly using the row and column values of the second matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
