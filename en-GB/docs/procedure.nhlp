@@ -75,7 +75,7 @@
 		</list>
 		When the cursor dwells on a procedure header, the corresponding function in the Tools menu or [CTRL-ALT-B] can be used to automatically generate a mask for the documentation block for the current procedure, where only the actual description of the corresponding elements needs to be inserted. However, this function can <em>not</em> detect return values due to their diversity.
 		<h>Further Information</h>
-		You may load part of scripts to procedures by the usage of the syntax <code>@SCRIPT</code>. This is equal to the similar expression inside of a script. The parameters <code>@SCRIPT: globals</code> and <code>@SCRIPT: defines</code> are available as well.
+		You may load part of other files to procedures by the usage of the syntax <a href="nhlp://include?frame=new"><code>include FILE</code></a>. This is equal to the similar expression inside of a script.
 		In addition to the usual path placeholders <code>&lt;loadpath&gt;</code>, <code>&lt;scriptpath&gt;</code>, etc., the special placeholder <code>&lt;this&gt;</code> may be used, which points to the directory of the current executed procedure.
 		<em>Important:</em> Beside of the usual commands and expressions, the body of a procedure may contain special commands with procedure specific meaning. They are listed at <a href="nhlp://proccmd?frame=new">help proccmd</a>.
 		<em>Important:</em> It is not possible to call procedures arbitrarily deep, because the call stack memory is limited. Depending on the computer's architecture and the calculating effort of the procedure up to 1800 recursions are possible. NumeRe will abort with an error beyond this value.
