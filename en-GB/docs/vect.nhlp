@@ -31,7 +31,8 @@
 	</keywords>
 	<contents>
 		The command <code>vect</code> allows the visualization of two dimensional vector fields <expr>A(x,y) := A_x(x,y) e_x + A_y(x,y) e_y</expr> in the two spatial directions <expr>x</expr> and <expr>y</expr>. In each plot only one vector field may be displayed.
-		The vector field <expr>A(x,y)</expr> has to be passed in the form <code>Ax(x,y), Ay(x,y)</code>. Here are <expr>A_x</expr> and <expr>A_y</expr> functions of the spatial directions <expr>x</expr> and <expr>y</expr>.
+		The vector field <expr>A(x,y)</expr> has to be passed in the form <code>{Ax(x,y), Ay(x,y)}</code>. Here are <expr>A_x</expr> and <expr>A_y</expr> functions of the spatial directions <expr>x</expr> and <expr>y</expr>. A vector field can also be defined via an expression, e.g. <code>{x,y-2} - {x,y+2}</code>. It is possible, to pass multiple vector fields at once.
+		<em>Important:</em> an expression like <code>vect x, y</code> will be interpreted as two vector fields with the representations <code>vect {x, 0}, {y, 0}</code>.
 		<code>vect</code> knows three additional options:
 		<list>
 			<item node="flength/noflength">The length of the vector field arrows will be calculated according to the field amplitude by default. This option dis-/enables this functionality</item>
@@ -40,7 +41,7 @@
 		</list>
 		The colorscheme used for vector plots is identical to the one used for two and three dimensional plots. You may modify this with the option <code>colorscheme=COLORSCHEME</code>.
 		<example desc="2D rotational vector field with the option <code>flength</code>:">
-			vect -y,x -set flength
+			vect {-y, x} -set flength
 		</example>
 		<img src="<>/docs/vect.png" />
 		<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://colorscheme?frame=self">help colorscheme</a> and <a href="nhlp://vect3d?frame=self">help vect3d</a>
