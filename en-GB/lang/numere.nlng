@@ -429,7 +429,7 @@ PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                  
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Starts the definition of a window layout that can be used to create an interactive window
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]             - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
-PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                       - Creates a list of the values, which are available for the passed parameter. The possible parameters are available at "help list"
+PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Creates a list of the values, which are available for the passed argument NM. The possible arguments are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym)
 PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     EX [-set PAR]              - Defines an entry in a menu for a window layout. The event handling and the presence of a checkbox are configurable
@@ -630,7 +630,7 @@ GUI_EDITOR_CALLTIP_OPT_COLORSCHEME=colorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP
 GUI_EDITOR_CALLTIP_OPT_COLORTHEME=colortheme [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLS=cols[=VAL]
 GUI_EDITOR_CALLTIP_OPT_COMMENT=comment=COMMENT
-GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTSIGN
+GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTCHARACTERSEQUENCE(S)
 GUI_EDITOR_CALLTIP_OPT_COMPACT=compact [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_COMPLETE=complete [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
 GUI_EDITOR_CALLTIP_OPT_COMPLEX=complex [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
@@ -827,6 +827,7 @@ GUI_EDITOR_CALLTIP_OPT_OTIF=otif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%
 GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_PARAMETRIC=coords=parametric [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
 GUI_EDITOR_CALLTIP_OPT_PARTICLES=particles=PARTICLES [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pso]
 GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN

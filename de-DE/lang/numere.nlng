@@ -429,7 +429,7 @@ PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                  
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]              - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
-PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         -PAR                       - Erzeugt eine Auflistung der Werte, die zum gewählten Parameter vorhanden sind. Die möglichen Parameter sind unter "help list" aufgelistet
+PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Erzeugt eine Auflistung der Werte, die zum gewählten Argument NM vorhanden sind. Die möglichen Argumente sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Wertet den Ausdruck EX mit dem Matrixmodus aus. ("mtrxop" ist ein Synonym)
 PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     EX [-set PAR]              - Definiert ein Eintrag in einem Menü für ein Window-Layout. Das Eventhandling und das Vorhandensein einer Checkbox sind konfigurierbar
@@ -630,7 +630,7 @@ GUI_EDITOR_CALLTIP_OPT_COLORSCHEME=colorscheme=COLORSCHEME [%%GUI_EDITOR_CALLTIP
 GUI_EDITOR_CALLTIP_OPT_COLORTHEME=colortheme [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLS=cols[=VAL]
 GUI_EDITOR_CALLTIP_OPT_COMMENT=comment=COMMENT
-GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTSIGN
+GUI_EDITOR_CALLTIP_OPT_COMMENTS=comments=COMMENTCHARACTERSEQUENCE(S)
 GUI_EDITOR_CALLTIP_OPT_COMPACT=compact [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_COMPLETE=complete [%%GUI_EDITOR_CALLTIP_COMMON_FILEREAD%%]
 GUI_EDITOR_CALLTIP_OPT_COMPLEX=complex [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fft]
@@ -827,6 +827,7 @@ GUI_EDITOR_CALLTIP_OPT_OTIF=otif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%
 GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
+GUI_EDITOR_CALLTIP_OPT_PARAMETRIC=coords=parametric [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
 GUI_EDITOR_CALLTIP_OPT_PARTICLES=particles=PARTICLES [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pso]
 GUI_EDITOR_CALLTIP_OPT_PATTERN=pattern=FILEPATTERN

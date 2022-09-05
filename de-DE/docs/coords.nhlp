@@ -27,17 +27,30 @@
 		<keyword>cylind</keyword>
 		<keyword>cartesi</keyword>
 		<keyword>kartesi</keyword>
+		<keyword>parametric</keyword>
 	</keywords>
 	<contents>
 		NumeRe ist mit drei wesentlichen Koordinatensätzen ausgestattet: kartesisch <expr>(x,y,z)</expr>, polar/zylindrisch <expr>(rho,phi[,z])</expr> und sphärisch <expr>(r,phi,theta)</expr>. Diese Koordinatensätze können beim Plotten mit der Option <code>coords=KOORDINATEN</code> ausgewählt werden.
-		Die Art der Koordinaten wird durch die folgenden Optionen bestimmt. Für Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>) sind <code>polar</code> und <code>spherical</code> die einzigen Optionen.
+		<h>Parametrische Koordinatentransformation</h>
+		Teilweise können Koordinatentransformationen direkt parametrisch angegeben werden. Dabei verwendet NumeRe zusätzliche Funktionen oder Datengitter als Abbildungen für die jeweiligen <expr>x</expr>- bzw. <expr>y</expr>-Koordinaten. Diese Variante kann aktiviert werden durch Verwendung von <code>coords=parametric</code> oder <code>coords=KOORDINATEN-parametric</code> (bei Kombination mit einer weiteren Standard-Koordinatentransformation) und bleibt nur für den aktuellen Plot aktiv. Mit diesem Modus können Plots auch wie bei MATLAB(R) angegeben werden, beispielsweise:
+		<codeblock>
+			plot xFUNC(x), yFUNC(x) -set coords=parametric
+			plot xDAT(), yDAT() -set coords=parametric
+			surf xDAT(), yDAT(), zDAT() -set coords=parametric ## xDAT(), yDAT(), zDAT() sind Datengitter
+		</codeblock>
+		<example desc="Plotten eines Meshgrids einer Kugel mit parametrischen Koordinaten:">
+			mesh sin(_pi*x)*sin(_pi*(y+1)/2), cos(_pi*x)*sin(_pi*(y+1)/2), cos(_pi*(y+1)/2) -set [-1:1,-1:1,-1:1] coords=parametric
+		</example>
+		<img src="<>/docs/parametricsphere.png" />
+		<h>Standard-Koordinatentransformationen</h>
+		Die Art der standardmäßig definierten Koordinaten wird durch die folgenden Optionen bestimmt. Für Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>) sind <code>polar</code> (entspricht <code>polar_rp</code>) und <code>spherical</code> (entspricht <code>spherical_rp</code>) die einzigen Optionen.
 		<list>
 			<item node="cartesian">kartesische <expr>(x,y,z)</expr>-Koordinaten</item>
 			<item node="polar">Polare/zylindrische <expr>(rho,phi,z)</expr>-Koordinaten. Wird als <code>polar_pz</code> interpretiert oder als <code>polar_rp</code>, wenn der Plotstil ein "3d" im Namen enthält oder ein Vektorplot ist</item>
 			<item node="polar_pz">Polare/zylindrische Koordinaten mit <expr>x = phi, y = z, z = rho</expr></item>
 			<item node="polar_rp">Polare/zylindrische Koordinaten mit <expr>x = rho, y = phi, z = z</expr></item>
 			<item node="polar_rz">Polare/zylindrische Koordinaten mit <expr>x = rho, y = z, z = phi</expr></item>
-			<item node="spherical">Sphärische <expr>(rho,phi,theta)</expr>-Koordinaten. Wird als <code>spherical_pt</code> interpretiert oder als <code>spherical_rp</code>, wenn der Plotstil ein "3d" im Namen enthält oder ein Vektorplot ist</item>
+			<item node="spherical">Sphärische <expr>(r,phi,theta)</expr>-Koordinaten. Wird als <code>spherical_pt</code> interpretiert oder als <code>spherical_rp</code>, wenn der Plotstil ein "3d" im Namen enthält oder ein Vektorplot ist</item>
 			<item node="spherical_pt">Sphärische Koordinaten mit <expr>x = phi, y = theta, z = r</expr></item>
 			<item node="spherical_rp">Sphärische Koordinaten mit <expr>x = r, y = phi, z = theta</expr></item>
 			<item node="spherical_rt">Sphärische Koordinaten mit <expr>x = r, y = theta, z = phi</expr></item>

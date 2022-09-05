@@ -27,10 +27,23 @@
 		<keyword>cylind</keyword>
 		<keyword>cartesi</keyword>
 		<keyword>kartesi</keyword>
+		<keyword>parametric</keyword>
 	</keywords>
 	<contents>
 		NumeRe is capable of using three main coordinate sets: cartesian <expr>(x,y,z)</expr>, polar/cylindrical <expr>(rho,phi[,z])</expr> and spherical <expr>(r,phi,theta)</expr>. These coordinate sets can be chosen while plotting with the option <code>coords=COORDINATES</code>.
-		The type of the coordinates is determined by the following options. Please note that for plotting styles with a "3d" in their name (e.g. <code>plot3d</code> or <code>mesh3d</code>) <code>polar</code> and <code>spherical</code> are the only possibilities.
+		<h>Parametrics coordinate transforms</h>
+		Sometimes, coordinate transformations can be specified directly parametrically. In this case, NumeRe uses additional functions or data grids as mappings for the respective <expr>x</expr> or <expr>y</expr> coordinates. This variant can be activated by using <code>coords=parametric</code> or <code>coords=COORDINATES-parametric</code> (when combined with another standard coordinate transformation) and remains active only for the current plot. Using this mode, plots can be defined just like within MATLAB(R), e.g.:
+		<codeblock>
+			plot xFUNC(x), yFUNC(x) -set coords=parametric
+			plot xDAT(), yDAT() -set coords=parametric
+			surf xDAT(), yDAT(), zDAT() -set coords=parametric ## xDAT(), yDAT(), zDAT() are datagrids
+		</codeblock>
+		<example desc="Plotting of a meshgrid of a sphere using parameric coordinates:">
+			mesh sin(_pi*x)*sin(_pi*(y+1)/2), cos(_pi*x)*sin(_pi*(y+1)/2), cos(_pi*(y+1)/2) -set [-1:1,-1:1,-1:1] coords=parametric
+		</example>
+		<img src="<>/docs/parametricsphere.png" />
+		<h>Standard coodinate transforms</h>
+		The type of the standard coordinate sets is determined by the following options. Please note that for plotting styles with a "3d" in their name (e.g. <code>plot3d</code> or <code>mesh3d</code>) <code>polar</code> (corresponds to <code>polar_rp</code>) and <code>spherical</code> (corresponds to <code>spherical_rp</code>) are the only possibilities.
 		<list>
 			<item node="cartesian">Cartesian <expr>(x,y,z)</expr> coordinates</item>
 			<item node="polar">Polar/cylindrical <expr>(rho,phi,z)</expr> coordinates. Will be interpreted as <code>polar_pz</code> or as <code>polar_rp</code>, if the plotting style has a "3d" in its name or is a vector plotting style</item>
