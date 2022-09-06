@@ -38,8 +38,8 @@
 		Die zusätzlichen Parameter für diese Plotstile entsprechen den Plotstilen der 2D-Varianten mit Ausnahme von <code>cloudplot/nocloudplot</code> und <code>slices={X,Y,Z}</code>. Siehe hierzu z.B. <a href="nhlp://surf?frame=new">help surf</a>
 		<code>dens3d</code> erzeugt mit der zusätzlichen Option <code>cloudplot</code> einen raumfüllenden Dichteplot (anstatt der 3 diskreten Scheiben). Wenn zusätzlich auch noch <code>alpha</code> übergeben wird, so geht die Transparenz des erzeugten "Wolkenplots" mit der Feldamplitude einher.
 		Die Option <code>slices={X,Y,Z}</code> kann bei <code>cont3d</code> und <code>dens3d</code> angewendet werden und gibt die Anzahl der dargestellten Schnitte orthogonal zur entsprechenden Raumrichtung an. Es müssen stets alle Raumrichtungen angegeben werden und die Anzahlen müssen jeweils im Bereich [0,5] liegen, z.B.:<codeblock>slices={1,4,2}</codeblock>
-		<example desc="3D-Meshgrid eines Dipols mit <expr>z1 = -4</expr> und <expr>z2 = +4</expr> mit den Optionen <code>box light opng=dipol cut pcont</code>:" type="verbatim">
-			|&lt;- mesh3d 10/sqrt(x^2+y^2+(z-4)^2)-10/sqrt(x^2+y^2+(z+4)^2) -set box light opng=dipol cut pcont
+		<example desc="3D-Meshgrid eines Dipols mit <expr>z1 = -4</expr> und <expr>z2 = +4</expr> mit den Optionen <code>box light opng=dipol cut pcont colorrange=-3.5:3.5</code>:" type="verbatim">
+			|&lt;- mesh3d 10/sqrt(x^2+y^2+(z-4)^2)-10/sqrt(x^2+y^2+(z+4)^2) -set box light opng=dipol cut pcont colorrange=-3.5:3.5
 			|-&gt; Berechne Daten für 3D-Meshgrid-Plot ...
 			|-&gt; Speichern ... Erfolg!
 			|   Gespeichert unter "&PLOTPATH&/dipol.png"
