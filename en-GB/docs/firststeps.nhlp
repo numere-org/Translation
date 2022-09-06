@@ -61,11 +61,11 @@
 		Try the following line in the console, which you will pass to the evaluating layer by pressing <code>[ENTER]</code>:<codeblock>plot sin(x)</codeblock>
 		A graphical output just like the following image should've been created:
 		<img src="<>/docs/plotsinx.png" />
-		We may refine this output by adding some options to the command line further up (for simplification the titles in the following examples may be in German language):<codeblock>plot sin(x) -set title="Sinusplot" box grid</codeblock>
+		We may refine this output by adding some options to the command line further up:<codeblock>plot sin(x) -set title="Sine plot" box grid</codeblock>
 		<em>Tip:</em> Use the <code>[UP]</code> and <code>[DOWN]</code> keys to cycle through your last inputs.
 		This should result in the following output:
 		<img src="<>/docs/plotsinxtitle.png" />
-		We see the effect of the passed options <code>title="TITLE"</code>, <code>box</code> and <code>grid</code>. Some of these options (just like <code>box</code> and <code>grid</code>) stay active for the following plots as long as they aren't reverted (with the options <code>nobox</code> or <code>nogrid</code>). Just try<codeblock>plot sin(x), cos(x) -set xlabel="Zeit t [s]" ylabel="Amplitude y [m]"</codeblock>
+		We see the effect of the passed options <code>title="TITLE"</code>, <code>box</code> and <code>grid</code>. Some of these options (just like <code>box</code> and <code>grid</code>) stay active for the following plots as long as they aren't reverted (with the options <code>nobox</code> or <code>nogrid</code>). Just try<codeblock>plot sin(x), cos(x) -set xlabel="Time t [s]" ylabel="Amplitude y [m]"</codeblock>
 		This should result in the following output, where you should consider the box and the grid, which were taken over from the last plot:
 		<img src="<>/docs/plotsinxcosx.png" />
 		Congratulations! You've just learned, how you create a plot, how you plot more than one function and how you work with options. You'll find further details, if you enter<codeblock>help plot</codeblock>into the console. In most cases, the <code>help</code> command may support you with the needed information for the current command.

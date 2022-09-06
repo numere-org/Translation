@@ -180,7 +180,7 @@
 			<item node="oeps=NAME">Creates an EPS file using vector representation instead of a PNG file with the filename NAME</item>
 			<item node="open/noopen">Show/don't show the created graphic in an external viewer (if available)</item>
 			<item node="opng=NAME">Set the filename of the created PNG file to NAME. Already present files will be overwritten. Filenames containing whitespaces have to be passed inside of quotation marks</item>
-			<item node="origin=ORIGIN">Modify the coordinate origin: <code>origin=std</code> actives the default behavior, with <code>origin=sliding</code> the axes run through at least one 0 if available, and with <code>origin=X,Y,Z</code> (where values for X,Y,Z are mandatory) the origin may be moved to the desired position (if it is available. Otherwise the behavior of <code>origin=sliding</code> will be applied).</item>
+			<item node="origin=ORIGIN">Modify the coordinate origin: <code>origin=std</code> actives the default behavior, with <code>origin=sliding</code> the axes run through at least one 0 if available, and with <code>origin={X,Y,Z}</code> (where values for X,Y,Z are mandatory) the origin may be moved to the desired position (if it is available. Otherwise the behavior of <code>origin=sliding</code> will be applied).</item>
 			<item node="osvg=NAME">Similar to <code>oeps</code>, but creates a SVG file</item>
 			<item node="otex=NAME">Similar to <code>oeps</code>, but creates a TeX file (with the use of TikZ)</item>
 			<item node="otif=NAME">Similar to <code>oeps</code>, but creates a TIFF file</item>
@@ -194,7 +194,9 @@
 			<item node="samples=VALUE">Set the number of calculated samples to VALUE</item>
 			<item node="schematic/<br/>  noschematic">Create a schematic plot. Deactivates all basic information like axis labels, axis ticks and the legend. However, if at least one of the labels through <code>xlabel</code>, <code>ylabel</code> or <code>zlabel</code> is desired, then all axis labels will be displayed again</item>
 			<item node="silent/nosilent">Supresses all displayed messages. This will as well suppress that the resulting plot will be opened in an external viewer</item>
+			<item node="size={X,Y}">Defines the number of pixels in X and Y, which a saved plot shall have as image file</item>
 			<item node="steps/nosteps">Display connected steps instead of data points</item>
+			<item node="streamto={WINID,ITEMID}">(<em>Only in combination with <a href="nhlp://layout?frame=new">graphical user interfaces</a></em>) Defines the target window ID and the contained <code>grapher</code> elements, within the plot shall be displayed</item>
 			<item node="styles=STYLES">Define color, line thickness and type, as well as point appearance in the string STYLES. For each curve you have to pass 4 characters (or corresponding whitespaces). If <code>#</code> will be found inside of the 4 characters, then NumeRe will use 5 characters for this plot object.</item>
 			<item node="textsize=SIZE">Set the text size of the whole plot to SIZE. The values (1-9) have a linear effect on the size. 5 is the standard value, which will be used for plots.</item>
 			<item node="timeaxes=(AXES,FORMAT)">Switches the selected axes to time values (UNIX time, see e.g. <code>time()</code>) and the corresponding formatting. Multiple axes may be selected using curly braces, e.g. <code>timeaxes=({"x","y"},{"DD.MM.YY","hh:mm:ss"})</code>. The formatting is optional. <code>"MM/DD/YY"</code> or <code>"hh:mm:ss"</code> are the default formats depending upon the desired time range</item>
