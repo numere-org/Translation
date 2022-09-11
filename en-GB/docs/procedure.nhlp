@@ -26,8 +26,13 @@
 		<keyword>prozed</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			procedure $PROCEDURENAME(ARGLIST) :: FLAGS
+			\t[...]
+			endprocedure
+		</syntax>
 		Beside of the possibility to execute <a href="nhlp://script?frame=new">scripts</a>, NumeRe contains the powerful ability to execute <em>complex</em> procedures. These procedures can be compared to functions in the usual programming with C/C++ or other programming languages. This means that complex tasks may be solved with procedures, because they may call themselves recursively.
-		<h>Syntax</h>
+		<h>Structure</h>
 		Procedure definitions are started with the keyword <code>procedure</code> and closed with <code>endprocedure</code>. Appended to the keyword <code>procedure</code> the name of the procedure initialized by a <code>$</code> and their argument list must follow. Directly after the argument list and <code>::</code> it's possible to append additional <em>optional flags</em>, which influence the procedure as a whole. Between <code>procedure</code> and <code>endprocedure</code> the body of the procedure follows, in which the actual expressions and commands are evaluated:
 		<codeblock>
 			procedure $PROCEDURENAME(ARGLIST) :: FLAGS    ## Procedure head
@@ -81,17 +86,17 @@
 		<em>Important:</em> It is not possible to call procedures arbitrarily deep, because the call stack memory is limited. Depending on the computer's architecture and the calculating effort of the procedure up to 1800 recursions are possible. NumeRe will abort with an error beyond this value.
 		The evaluation may be aborted using the <code>ESC</code> key, if it takes too much time.
 		Procedures may be used to extend the functionality of NumeRe with the use of plugins (which may be called using a command). The declaration of such a plugin may only be done inside of an <code>&lt;install&gt; ... &lt;endinstall&gt;</code> block in a NumeRe script. (See <a href="nhlp://plugin?frame=new">help plugin</a> for further information)
-		<example desc="A procedure, which automates a data analysis (will be called in NumeRe with <code>$analyse_data(DATAFILENAME)</code>):" type="verbatim">
-			|   procedure $analyse_data(datafile)
-			|       if (!data())
-			|           load to_string(datafile)
-			|       else
-			|           return false
-			|       endif
-			|       stats data() -export="stats_" + to_string(datafile)
-			|       hist data() -export="hist_" + to_string(datafile) bins=32
-			|       return true;
-			|   endprocedure	
+		<example desc="A procedure, which automates a data analysis (will be called in NumeRe with <code>$analyse_data(DATAFILENAME)</code>):" type="codeblock">
+			procedure $analyse_data(datafile)
+			\tif (!data())
+			\t\tload to_string(datafile)
+			\telse
+			\t\treturn false
+			\tendif
+			\tstats data() -export="stats_" + to_string(datafile)
+			\thist data() -export="hist_" + to_string(datafile) bins=32
+			\treturn true;
+			endprocedure	
 		</example>
 		<em>See also:</em> <a href="nhlp://plugin?frame=self">help plugin</a>, <a href="nhlp://install?frame=self">help install</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://script?frame=self">help script</a>
 	</contents>
@@ -117,6 +122,26 @@
 		<keyword>main</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			var VAR1 = VAL1, ...
+			str STR1 = SVAL1, ...
+			tab TABLE1() = {VAL}, ...
+			cst CLUSTER1{} = {VAL}, ...\n
+			return
+			return {VAL}
+			return TABLE()
+			return CLUSTER{}
+			return void\n
+			{VAL} = readline
+			{VAL} = readline -asstr -msg=MESSAGE ...\n
+			namespace
+			namespace main
+			namespace this
+			namespace thisfile
+			namespace NAME\n
+			throw
+			throw MESSAGE
+		</syntax>
 		The body of a procedure may contain the usual commands and expressions, which may be entered directly to the console. In addition there are some special commands with procedure specific meaning:
 		<list>
 			<item node="var VARIABLES">This declares internal (local) variables, which may only be used inside of the current procedure (they are even unique, if the procedure recursively calls itself). You may simultaneously pass initial values through <code>var VAR1 = VALUE1, VAR2 = VALUE2, ...</code>.</item>

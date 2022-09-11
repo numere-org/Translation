@@ -65,6 +65,11 @@
 		<keyword>hidden</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = window FILENAME
+			VAL = window WINID -set PROP=VAL ...
+			VAL = window WINID -get PROP ...
+		</syntax>
 		NumeRe is capable of generating and interacting with graphical user interfaces, which can be used to develop even sophisticated applications (or prototypes) with comparatively little effort. The central command for this is <code>window</code> in the form<codeblock>RES = window EX [-PAR]</codeblock>Whereby the return values <code>RES</code> of the command differ depending on the used expression <code>EX</code> and the parameters <code>PAR</code>. To create a new window, the form<codeblock>ID = window LAYOUTSCIPT</codeblock>can be used. It returns the ID of the new window created from the layout script (see later section). This ID can later be used to interact with this window and programmatically change properties (the parameters are described in more detail in the following section):<codeblock>ITEMIDS = window ID -getitems=TYPE\nVAL = window ID -get PROP\nLOG = window ID -set PROP=VAL\nLOG = window ID -close</codeblock>.
 		<h>Parameters for this command</h>
 		<list>
@@ -154,45 +159,44 @@
 		<h>Internal variables</h>.
 		In addition to the displayed GUI elements, it is often necessary to assign internal variables to a window in order to be able to uniquely assign further information to that window. <code>prop</code> can be used for this purpose: <code>prop VAR1 = VAL1, VAR2, ...</code> This command generates one or more internal variables which have no specific type, i.e. they can contain both a numeric value or a string.
 		Internal variables can be read with the command sequence <code>window ID -get value prop=VARNAME</code> and written with <code>window ID -set value=VAL prop=VARNAME</code>.
-		<example desc="A window layout, which will display an interactive preview of the result of <code>smooth</code> with a custom selectable level:" type="verbatim">
-			|   ## Window layout: A wide grapher object at the top, a row of controls below
-			|   layout -title="Smooth Preview" size={700, 300}
-			|       grapher -set id=0 size={600, 200}
-			|       group -type=horizontal
-			|           textfield #&lt;loadpath&gt; -set id=1
-			|           button "Select" -set onclick=$smoothevent()
-			|           spinbut -set min=1 max=10 value=3 label="Smoothing level" id=2
-			|           button "Smooth!" -set onclick=$smoothevent()
-			|       endgroup
-			|   endlayout
-			|
-			|
-			|   ## Procedure, which would be found at '&PROCPATH&/smoothevent.nprc'
-			|   procedure $smoothevent(_nWinID, _nItemID, _event{}) :: event
-			|       str sPath
-			|       tab dat()
-			|       var nOrder = 1
-			|       
-			|       sPath = window _nWinID -get value item=1;
-			|       clear data() -ignore
-			|       
-			|       if (getkeyval(_event{}, "value") == "Select")
-			|           ## Select a new file using a dialog and plot its contents
-			|           sPath = dialog sPath -set type=filedialog title="Select file";
-			|           window _nWinID -set value=sPath item=1;
-			|           load sPath;
-			|           plot data(:, 1:2) "" -set box streamto={_nWinID, 0} reset aspect=3 connect
-			|       else
-			|           ## Smooth the available file and plot it together with the original data
-			|           nOrder = window _nWinID -get value item=2;
-			|           load sPath;
-			|           copy data(:, 1:2) -target=dat();
-			|           smooth dat(:, 2) -order=nOrder
-			|           plot data(:, 1:2) "", dat() "" -set box streamto={_nWinID, 0} reset aspect=3 connect
-			|       endif
-			|       
-			|       return void;
-			|   endprocedure
+		<example desc="A window layout, which will display an interactive preview of the result of <code>smooth</code> with a custom selectable level:" type="codeblock">
+			## Window layout: A wide grapher object at the top, a row of controls below
+			layout -title="Smooth Preview" size={700, 300}
+			\tgrapher -set id=0 size={600, 200}
+			\tgroup -type=horizontal
+			\t\ttextfield #&lt;loadpath&gt; -set id=1
+			\t\tbutton "Select" -set onclick=$smoothevent()
+			\t\tspinbut -set min=1 max=10 value=3 label="Smoothing level" id=2
+			\t\tbutton "Smooth!" -set onclick=$smoothevent()
+			\tendgroup
+			endlayout
+			\n
+			## Procedure, which would be found at '&PROCPATH&/smoothevent.nprc'
+			procedure $smoothevent(_nWinID, _nItemID, _event{}) :: event
+			\tstr sPath
+			\ttab dat()
+			\tvar nOrder = 1
+			\t
+			\tsPath = window _nWinID -get value item=1;
+			\tclear data() -ignore
+			\t
+			\tif (getkeyval(_event{}, "value") == "Select")
+			\t\t## Select a new file using a dialog and plot its contents
+			\t\tsPath = dialog sPath -set type=filedialog title="Select file";
+			\t\twindow _nWinID -set value=sPath item=1;
+			\t\tload sPath;
+			\t\tplot data(:, 1:2) "" -set box streamto={_nWinID, 0} reset aspect=3 connect
+			\telse
+			\t\t## Smooth the available file and plot it together with the original data
+			\t\tnOrder = window _nWinID -get value item=2;
+			\t\tload sPath;
+			\t\tcopy data(:, 1:2) -target=dat();
+			\t\tsmooth dat(:, 2) -order=nOrder
+			\t\tplot data(:, 1:2) "", dat() "" -set box streamto={_nWinID, 0} reset aspect=3 connect
+			\tendif
+			\t
+			\treturn void;
+			endprocedure
 		</example>
 		<img src="<>/docs/window.png" />
 		<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://dialog?frame=self">help dialog</a> and <a href="nhlp://procedure?frame=self">help procedure</a>

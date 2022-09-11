@@ -32,6 +32,10 @@
 		<keyword>rkf45</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			odesolve f1(x,y1,...), ... -set [x1:x2]
+			odesolve f1(x,y1,...), ... -set [x1:x2] fx0=[y01,...] ...
+		</syntax>
 		Using the command <code>odesolve</code> NumeRe may numerically solve ordinary differential equation of <em>first</em> order. The differential equation <expr>ODE(x,y1,y2,...)</expr> (or the system of differential equations) will be integrated over a predefined <expr>x</expr> interval and the corresponding <expr>y</expr> values will be calculated:
 		<codeblock>
 			odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONS

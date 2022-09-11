@@ -26,6 +26,13 @@
 		<keyword>channel</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VALS} = imread FILENAME
+			{VALS} = imread FILENAME -set target=TABLE() ...
+			{VALS} = imread FILENAME -set channels="rgb" ...\n
+			implot TABLE()
+			implot TABLE() -set ...
+		</syntax>
 		NumeRe may read images using the <code>imread</code> command as <a href="nhlp://datagrid?frame=new">datagrids</a> into memory. The usual image formats are supported: JPEG, BMP, GIF, TIFF, ... To load the image, one calls the command together with the image's filename. This command will return the indices of the image in the target table:<codeblock>{i1, i2, j1, j2} = imread PATH/TO/FILE.png</codeblock>
 		Very large images probably may not be loaded to memory. A Workaround in this case might be to clear the cache completely using <code>clear -memory</code>.
 		As default the image is loaded to the cache <code>image()</code>, which is created automatically if it's not present. Using the option <code>target=CACHE()</code> one may select another cache as target for the command.

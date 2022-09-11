@@ -25,6 +25,10 @@
 		<keyword>minlen</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			detect TABLE()
+			detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TARGET()
+		</syntax>
 		Mit dem Kommando <code>detect</code> können Strukturen in einem 2D-Datengitter erkannt werden. Die Strukturen werden in einer Tabelle in Spalten für <expr>x</expr> und <expr>y</expr> angelegt, dabei sind verschiedene Strukturen durch Leerzeilen getrennt (alle Strukturen liegen untereinander in denselben beiden Spalten ab). Das Kommando hat die folgende Syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>wobei <code>TABLE()</code> ein <a href="nhlp://datagrid?frame=new">2D-Datengitter</a> enthalten muss.
 		Die Optionen haben die folgende Bedeutung:
 		<list>

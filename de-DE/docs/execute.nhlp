@@ -26,6 +26,10 @@
 		<keyword>wp</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			execute APPLICATION
+			execute APPLICATION -set params=PARAMS ...
+		</syntax>
 		Manchmal kann es nötig sein, dass ein zweites Programm für eine Aufgabe aufgerufen wird, z.B. wenn man eine Simulation in einem eigenen Programm implementiert hat und dieses Programm automatisiert aufrufen will, oder wenn man eine Datei mit NumeRe erzeugt hat und diese in einem anderen Programm weiterverarbeiten will. NumeRe kann dazu die Windows-Shell API mithilfe des Kommando <code>execute</code> nutzen.
 		<em>Wichtig:</em> Das Kommando <code>execute</code> ist standardmäßig <em>deaktiviert</em>, da es ein Sicherheitsrisiko darstellt. (Schadhafter Code kann damit direkt auf die Windows-Shell zugreifen und beliebige Kommandos ausführen.) Sollte das Kommando zwingend nötig sein, so kann es im Optionen-Dialog im "Werkzeuge"-Menü aktiviert werden.
 		Um das Kommando <code>execute</code> zu verwenden, muss man das gewünschte Programm als Zeichenkette an das Kommando übergeben:<codeblock>execute "PFAD/ZUM/PROGRAMM"</codeblock>Des Weiteren kann man dem Kommando auch noch eventuelle Parameter oder Dateipfade übergeben, wenn man die Option <code>params=PARAMETER</code> nutzt:<codeblock>execute "PFAD/ZUM/PROGRAMM" -set params="PFAD/ZUR/DATEI"</codeblock>

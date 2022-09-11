@@ -26,6 +26,10 @@
 		<keyword>unique</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = taylor f(x) -set x=x0
+			{VAL} = taylor f(x) -set x=x0 n=VAL ...
+		</syntax>
 		NumeRe kann Funktionen in Abhängigkeit von einer Variablen mittels des Taylor-Verfahrens durch ein Polynom der Ordnung <expr>n >= 0</expr> approximieren. Dieses Polynom muss allerdings (außer an der Entwicklungsstelle) nirgends mit der approximierten Funktion übereinstimmen (dies ist eine bekannte Eigenschaft der Taylorentwicklung).
 		Die Approximation geschieht rein numerisch. Dadurch kommt es zu unvermeidlichen Rundungsfehlern, die für die niedrigen Ordnungen der Entwicklung begrenzt sind. Bis <em>etwa</em> zur Ordnung <expr>n = 10</expr> kann NumeRe gute Koeffizienten bestimmen, oberhalb davon kommt es jedoch zu starken Abweichungen im Vergleich zu einer analytischen Berechnung.
 		Die Taylorentwicklung einer Funktion <code>FUNKTION(VAR)</code> wird durch das Kommando <code>taylor</code> gestartet, worauf die Funktion <code>FUNKTION(VAR)</code> folgen muss. Außerdem müssen mit dem Parameter <code>-set</code> die Variable VAR, über die, und die Stelle POS, an der die Funktion <code>FUNKTION(VAR)</code> entwickelt werden soll, angegeben werden:<codeblock>taylor FUNKTION(VAR) -set VAR=POS</codeblock>

@@ -28,6 +28,10 @@
 		<keyword>const</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			list -PAR
+			list PAR
+		</syntax>
 		The command <code>list</code> displays all objects in a clear list, which were specified with the mandatory parameter.
 		The parameter are as follows:
 		<list>

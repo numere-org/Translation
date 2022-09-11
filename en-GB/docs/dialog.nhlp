@@ -37,6 +37,15 @@
 		<keyword>yesno</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			RESULT = dialog MESSAGE
+			RESULT = dialog MESSAGE -set type=messagebox title=TITLE icon=ICON buttons=BUTTONS
+			RESULT = dialog DEFAULTVALUE -set type=textentry msg=MESSAGE title=TITLE
+			RESULT = dialog DEFAULTFILE -set type=filedialog title=TITLE
+			RESULT = dialog DEFAULTFOLDER -set type=dirdialog title=TITLE
+			RESULT = dialog {VAL} -set type=listdialog msg=MESSAGE title=TITLE
+			{RESULT} = dialog {VAL} -set type=selectiondialog msg=MESSAGE title=TITLE
+		</syntax>
 		NumeRe may create different types of dialogs, which may be used to interact graphically with the user. A dialog is created with the command <code>dialog</code>. The default values and a set of options are following this command. The generic syntax of this command is as follows:<codeblock>dialog DEFAULTVALUES -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>The selection of the user or the value of the clicked button is returned as one or multiple strings. An empty string equals the click on the "cancel" button.
 		<em>Important:</em> a dialogs always interrupts the evaluation process of NumeRe. NumeRe will not continue until the user closed the dialog. Therefore a dialog is not reasonable to display the status of an evaluation or a similiar use case.
 		The type of the dialog is selected via <code>type=TYPE</code>. The following values are possible:

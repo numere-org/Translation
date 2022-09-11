@@ -30,6 +30,10 @@
 		<keyword>type</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			progress VAL
+			progress VAL -set first=VAL last=VAL type=TYPE
+		</syntax>
 		Um den Fortschritt einer aktuell ablaufenden Berechnung in einem Script, einer Prozedur oder einem Plugin anzuzeigen, kann das Kommando <code>progress</code> verwendet werden. Der mit übergebene Wert wird entsprechend eines Start- und eines Endwertes in Prozent umgerechnet und entsprechend dargestellt:<codeblock>progress WERT</codeblock>
 		Start- und Endwerte können nach dem Parameter <code>-set</code> mittels der Optionen <code>first=WERT</code> und <code>last=WERT</code> festgelegt werden, anderenfalls werden sie als 1 und 100 angenommen. Außerdem kann die Form der Darstellung beeinflusst werden.
 		Die Optionen für <code>progress</code> lauten wie folgt:

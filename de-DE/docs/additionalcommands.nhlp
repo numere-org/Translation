@@ -32,6 +32,18 @@
 		<keyword>include</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			about\n
+			hline
+			hline -single\n
+			warn MESSAGE\n
+			close -PAR\n
+			assert EXPRESSION\n
+			declare SYMBOL := VAL, ...\n
+			clc\n
+			include FILE
+			include FILE :: TYPE
+		</syntax>
 		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden können. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
 		<list>
 			<item node="about">Dieses Kommando (und die Synonyme <code>credits</code> und <code>info</code>) zeigen rechtliche Informationen zu NumeRe und zur Version an.</item>

@@ -25,6 +25,10 @@
 		<keyword>sftp</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = url ADDRESS
+			VAL = url ADDRESS -file=FILENAME ...
+		</syntax>
 		Für den Zugriff auf Online-Ressourcen stellt NumeRe das Kommando <code>url</code> bereit, mit dem Webseiten und Dateien aus dem Netz heruntergeladen werden können. Die heruntergeladenen Dateien werden dabei als Zeichenketten zurückgegeben, sofern keine Zieldatei mittels <code>file=TARGETFILE</code> angegeben wird. Wenn der Parameter <code>up</code> in Kombination mit <code>file=SOURCEFILE</code> angegeben wird, kann diese Datei auf einen FTP-Server hochgeladen werden. In den letzteren beiden Fällen wird die Zahl der herunter- bzw. hochgeladenen Bytes zurückgegeben:
 		<codeblock>
 			sFILECONTENTS = url sURL

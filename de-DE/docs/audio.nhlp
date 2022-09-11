@@ -25,6 +25,14 @@
 		<keyword>sound</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			audio TABLE()
+			audio TABLE() -set samples=SAMPLES ...\n
+			{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
+			{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()\n
+			nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav
+			nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()
+		</syntax>
 		NumeRe kann aus Datensätzen Audiodateien im PCM-Waveformat generieren, die in jedem beliebigen Audioplayer abgespielt werden können. Hierzu kann das Kommando <code>audio</code> verwendet werden. NumeRe kann die Audiodateien entweder als Mono- oder als Stereodatei erzeugen, je nachdem, ob 1 oder 2 Spalten an das Kommando übergeben werden:<codeblock>audio DATA(I1:I2,J1:J2)</codeblock>Es ist <em>nicht</em> möglich, <expr>x</expr>-Werte bzw. die Zeitachse der Audiodatei vorzugeben; die Samples der Audiodatei müssen stets äquidistant sein. Verwende das Kommando <code>regularize</code> um äquidistante Samples aus nicht-äquidistanten Datensätzen berechnen zu lassen. Samples sind dabei als eine Gruppe von einer Stützstelle je Kanal zu verstehen.
 		Die erzeugte Audiodatei ist automatisch auf den maximalen Wert des Datensatzes normiert.
 		Standardmäßig werden die Audiodateien mit einer Samplerate von 44,1 kHz erzeugt. Sollte dies nicht gewünscht werden, kann dem Kommando der Parameter <code>samples=SAMPLERATE</code> mit der gewünschten SAMPLERATE als natürliche Zahl übergeben werden.

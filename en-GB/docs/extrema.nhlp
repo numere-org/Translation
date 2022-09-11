@@ -24,6 +24,11 @@
 		<keyword>min</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = extrema f(x) -set [x1:x2] ...
+			{VAL} = extrema TABLE() -set ...
+			{VAL} = extrema ... -set points=POINTS ...
+		</syntax>
 		The command <code>extrema</code> localizes all extrema (meaning all <expr>x</expr> values <expr>x0</expr>, where <expr>df/dx = 0</expr> is valid) of a passed expression. The values of the expression shall not oscillate too much. If such an expression shall be analyzed, then the interval should be restricted to a smaller region.
 		If no extrema are found in the current interval, then the interval borders will be examined and declared as extrema, if applicable.
 		The expression, which shall be analyzed, has to be passed to the command <code>extrema</code>. The options have to be appended with the keyword <code>-set</code>. These are:

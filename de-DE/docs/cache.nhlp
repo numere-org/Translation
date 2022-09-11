@@ -32,16 +32,33 @@
 		<keyword>every</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = TABLE(i1:i2,j1:j2)
+			TABLE(i1:i2,j1:j2) = {VAL}\n
+			{STR} = TABLE(#,j1:j2)
+			TABLE(#,j1:j2) = {STR}\n
+			new TABLE(), ...
+			remove TABLE(), ...\n
+			clear TABLE()
+			delete TABLE()\n
+			show TABLE()\n
+			save TABLE()
+			save TABLE() -set file=NAME\n
+			export TABLE()
+			export TABLE() -set file=NAME\n
+			rename TABLE(), NEWNAME()\n
+			swap TABLE1(), TABLE2()
+		</syntax>
 		Tabellen sind aktive Speicher in NumeRe, die tabellare Daten zwischenspeichern können, damit selbige weiterverarbeitet werden können. Tabellarische Daten zeichnen sich dadurch aus, dass die Daten spaltenweise organisiert sind. Spalten in NumeRe-Tabellen können entweder numerische Werte, Zeit-Datumswerte oder <a href="nhlp://string?frame=new">Zeichenketten</a> enthalten. Werden numerische Werte in Zeichenketten-Spalten geschrieben, werden sie automatisch in Zeichenketten konvertiert. Schreiben von Zeichenketten in numerische Spalten ist dagegen <em>nur</em> möglich, wenn die Zeichenketten numerisch interpretiert werden können.
 		Zeit-Datumswerte werden in Sekunden seit dem 1.1.1970 (UTC) mit Mikrosekunden-Präzision gespeichert. Derartige Werte werden von speziellen Funktionen (wie z.B. <code>time()</code> oder <code>timeformat()</code>) generiert und verarbeitet. Zeit-Datumswerte können auch als Zeichenketten in die entsprechenden Spalten geschrieben werden, wenn sie einem der folgenden Schemata oder einer Datums-Zeitkombination davon entsprechen:
-		<codeblock>
+		<verbatim>
 			DD.MM.YY(YY)
 			YY(YY)-MM-DD
 			YY(YY)/MM/DD
 			hh:mm
 			hh:mm:ss
 			hh:mm:ss.iii
-		</codeblock>
+		</verbatim>
 		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
 		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
 		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden.

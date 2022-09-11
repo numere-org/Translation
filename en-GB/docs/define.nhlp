@@ -28,6 +28,14 @@
 		<keyword>comment</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			define f() := EXPR
+			define f(x, ...) := EXPR(x, ...) -set ...\n
+			redefine f(x, ...) := NEWEXPR(x, ...) -set ...\n
+			undefine f(), ...\n
+			ifndefined f(x, ...) := EXPR(x, ...) -set ...\n
+			lclfunc f(x, ...) := EXPR(x, ...)
+		</syntax>
 		The command <code>define</code> allows you, to define your own, custom function for repeated calls in the current NumeRe session. However, the number of custom defined functions is limited to 100 definitions.
 		The definition has to begin with the function name, following the function arguments in parentheses. Currently, NumeRe supports up to ten arguments for each function or an arbitrary number of arguments with a special syntax, respectively. A function does not have to possess any arguments; empty argument parentheses are also possible. The function name must not contain any mathematical operators and its first character shall not be a number.
 		The syntax <code>:=</code> initiates the actual declaration of the expression of the function, in which you may pass additional options after the parameter <code>-set</code>:<codeblock>define FUNCTION(ARGUMENTS) := EXPRESSION(ARGUMENTS) [-set OPTIONS]</codeblock>

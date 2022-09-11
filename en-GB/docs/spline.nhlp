@@ -25,6 +25,9 @@
 		<keyword>cspline</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			spline TABLE()
+		</syntax>
 		To connect single datapoints, NumeRe may calculated cubic functions, so-called "splines". These splines are defined separately in each interval (between two datapoints), where it is ensured that they are twice constantly differentiable everywhere.
 		To calculate the splines for a dataset, one has to pass the <expr>x</expr> and <expr>y</expr> values as columns to the command <code>spline</code>:
 		<codeblock>

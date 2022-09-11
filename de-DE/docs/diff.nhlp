@@ -23,6 +23,11 @@
 		<keyword>diff</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = diff f(x) -set x=POS ...
+			{VAL} = diff f(x) set [x1:x2] ...
+			{VAL} = diff TABLE()
+		</syntax>
 		NumeRe kann einen oder mehrere Ausdrücke zur ersten Ordnung unter Verwendung der Methode von Savitzky und Golay numerisch differenzieren. Dabei wird die lokale Steigung dieses Ausdrucks bezüglich einer zu spezifizierenden Variable an einer gegebenen Stelle berechnet. Dabei wird nur der numerischen Wert und kein analytisches Ergebnis bestimmt.
 		Das Schlüsselwort <code>diff</code> gefolgt von den zu differenzierenden Funktionen startet die numerische Differentiation. An die gegebene Funktion müssen dabei die folgenden Optionen durch <code>-set</code> angehängt werden:
 		<list>

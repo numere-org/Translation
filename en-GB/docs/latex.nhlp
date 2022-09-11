@@ -29,22 +29,22 @@
 		<em>Note:</em> Documentations, which were created as single LaTeX files, cannot be compiled directly. You've to provide a LaTeX main file and to define the syntax highlighting correspondingly. A complete set is created if a file is compiled directly.
 		If a documentation is created, then the code of the procedure or the file is copied into a so-called <em>Listing</em>, where the syntax is highlighted using colours and bold font.
 		Some distinct comments may be transformed into simple text, if they are either prefixed with <code>##!</code> or located inside of <code>#*! ... *#</code>. Lists such as
-		<codeblock>
+		<verbatim>
 			#*! Text
 			- List item
 			- List item
 			Text
 			*#
-		</codeblock>
+		</verbatim>
 		are also transformed into the corresponding LaTeX environment:
-		<codeblock>
+		<verbatim>
 			Text
 			\begin{itemize}
 			\item List item
 			\item List item
 			\end{itemize}
 			Text
-		</codeblock>
+		</verbatim>
 		If some code shall be displayed in the usual text, then this section has to be surrounded with doubled exclamation marks: <code>!!CODE IN THE TEXT!!</code>
 		<a href="nhlp://procedure?frame=new">Procedure documentation</a> (also known as "procedure headers") are based on the Doxygen standard and define some signal words for this purpose, which are explained in this very article. These signal words are converted to special elements such as parameter tables when converting to a PDF.
 		Comments, which are prefixed with <code>##~</code> or located inside of <code>#** ... *#</code> are ignored completely and won't be displayed in the documentation. (Can be used to hide commented-out code.)

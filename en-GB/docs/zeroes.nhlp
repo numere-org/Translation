@@ -26,6 +26,11 @@
 		<keyword>down</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = zeroes f(x) -set x=x1:x2
+			{VAL} = zeroes f(x) -set x=x1:x2 samples=SAMPLES ...
+			{VAL} = zeroes TABLE() -set x=XTAB() ...
+		</syntax>
 		The command <code>zeroes</code> determines all zeroes (i.e. roots, which are the positions <expr>x0</expr>, where <expr>f(x0) = 0</expr>) of a passed expression in a predefined interval. The expression mustn't oscillate too strongly in the corresponding interval. If such an expression is present, then you should choose the interval much smaller.
 		The expression, which shall be examined, has to be directly passed to the command <code>zeroes</code>. After the additional parameter <code>-set</code> the options are mandatory. These are as follows:
 		<list>

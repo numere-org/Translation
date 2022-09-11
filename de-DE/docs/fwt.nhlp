@@ -29,6 +29,11 @@
 		<keyword>cbspline</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fwt TABLE()
+			fwt TABLE() -inverse ...
+			fwt TABLE() -method=METHOD k=LEVEL ...
+		</syntax>
 		NumeRe ist mit einem Algorithmus zu schnellen Wavelet-Transformation (<em>fast wavelet transformation; fwt</em>) ausgestattet, der Datensätze zur Analyse in die Zeit- und Skalenteile der verwendeten Wavelets zerlegen kann. Dieser Algorithmus wird mit dem Kommando <code>fwt</code> und den zu übergebenden Datenreihen aufgerufen:<codeblock>fwt DATENOBJEKT(I1:I2,J1:J2)</codeblock>
 		NumeRe erwartet bei einer Wavelet-Transformation zwei Spalten: Achsenwerte und Amplitude.
 		Standardmäßig werden <em>Daubechies-4</em> Wavelets zur Transformation verwendet. Dies kann mit der Option <code>method=METHODE</code> und <code>k=STUFE</code> geändert werden. Die STUFE hängt dabei direkt mit der METHODE zusammen. Es sind nur bestimmte Werte vorhanden:

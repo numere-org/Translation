@@ -22,6 +22,9 @@
 		<keyword>puls</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = pulse TABLE()
+		</syntax>
 		NumeRe may determine the properties of a pulse, if the (columnwise orientated) data set of the pulse is passed to the command <code>pulse</code>:<codeblock>pulse DATA(I1:I2,J1:J2)</codeblock>
 		The command expects 2 columns: the <expr>x</expr> in the first and the <expr>y</expr> values in the second column. In addition, NumeRe expects that the function values are sorted according their <expr>x</expr> values and that the <expr>x</expr> values are equidistantly distributed (meaning: "regularized").
 		As result of the pulse analysis (if a result can be calculated), NumeRe returns the following values:

@@ -24,6 +24,10 @@
 		<keyword>shorttime</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			stfa TABLE()
+			stfa TABLE() -samples=SAMPLES ...
+		</syntax>
 		NumeRe kann eine Kurzzeit-Fourieranalyse (short-time fourier analysis, STFA) auf Datensätze anwenden, um ein sogenanntes Spektrogramm zu erzeugen. Dabei muss der Datensatz an das Kommando <code>stfa</code> übergeben werden:<codeblock>stfa DATEN(I1:I2,J1:J2)</codeblock>Es werden zwei Spalten erwartet: <expr>x</expr>- und <expr>y</expr>-Werte.
 		NumeRe geht davon aus, dass die übergebenen Daten nach den <expr>x</expr>-Werten sortiert und außerdem regularisiert sind, d.h., dass die <expr>x</expr>-Werte äquidistant verteilt sind. Verwende <code>sort</code> und <code>regularize</code>, falls das nicht der Fall sein sollte.
 		Standardmäßig wird NumeRe die Fensterbreite der Kurzzeit-Fourieranalyse entsprechend der Zahl der Datenpunkte geteilt durch 32 bestimmen. Das Ergebnis der Analyse wird in den Cache <code>stfdat()</code> geschrieben, der erzeugt wird, falls er nicht existiert.

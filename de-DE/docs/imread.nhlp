@@ -26,6 +26,13 @@
 		<keyword>channel</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VALS} = imread FILENAME
+			{VALS} = imread FILENAME -set target=TABLE() ...
+			{VALS} = imread FILENAME -set channels="rgb" ...\n
+			implot TABLE()
+			implot TABLE() -set ...
+		</syntax>
 		NumeRe kann Bilder durch das Kommando <code>imread</code> als Datensätze in Form eines <a href="nhlp://datagrid?frame=new">Datengitters</a> einlesen. Unterstützt werden dabei die gängigsten Bildformate: JPEG, BMP, GIF, TIFF, ... Das Bild wird eingelesen, indem das Kommando mit dem Dateinamen aufgerufen wird. Dabei werden die Indices des Bildes in der Zieltabelle zurückgegeben:<codeblock>{i1, i2, j1, j2} = imread PFAD/ZUR/DATEI.png</codeblock>
 		Sehr große Bilder können unter Umständen nicht im Speicher abgebildet werden. In diesem Fall kann es helfen, den kompletten Cache mit <code>clear -memory</code> zu löschen.
 		Standardmäßig wird das Bild im Cache <code>image()</code> abgelegt, der auch erzeugt wird, sofern er nicht bereits vorhanden ist. Mit der Option <code>target=CACHE()</code> kann auch ein anderer Cache als Ziel angegeben werden.

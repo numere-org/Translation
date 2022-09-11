@@ -25,6 +25,10 @@
 		<keyword>sftp</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = url ADDRESS
+			VAL = url ADDRESS -file=FILENAME ...
+		</syntax>
 		For accessing online resources, NumeRe provides the <code>url</code> command, which can be used to download web pages and files from the net. The downloaded files are returned as strings unless a destination file is specified using <code>file=TARGETFILE</code>. If the <code>up</code> parameter is specified in combination with <code>file=SOURCEFILE</code>, this file can be uploaded to an FTP server. In the latter two cases, the number of bytes downloaded or uploaded is returned:
 		<codeblock>
 			sFILECONTENTS = url sURL

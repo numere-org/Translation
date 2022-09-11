@@ -23,6 +23,11 @@
 		<keyword>draw3d</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			draw3d FUNC(PNT, ...), ...
+			draw3d FUNC(PNT, ..., STL), ...
+			draw3d ... -set ...
+		</syntax>
 		In NumeRe können auch einfache dreidimensionale Zeichnungen mit Anmerkungen erstellt werden. Das dazu nötige Kommando ist <code>draw3d</code>. Dieses Kommando entspricht im Großen und Ganzen natürlich dem zweidimensionalem Pendant <code>draw</code>.
 		Im Zeichenmodus können die folgenden Funktionen in beliebiger Reihenfolge und Kombination verwendet werden, so lange sie durch Kommata voneinander getrennt werden. Die Erläuterungen der Abkürzungen finden sich unter <a href="nhlp://draw?frame=new">help draw</a>, mit der Ausnahme, dass alle Koordinatensätze von <code>PNT</code> oder <code>DIR</code> durch drei Zahlen <expr>(x,y,z)</expr> statt durch zwei <expr>(x,y)</expr> dargestellt werden.
 		<list>

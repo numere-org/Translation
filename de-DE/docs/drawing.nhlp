@@ -26,6 +26,11 @@
 		<keyword>zeichn</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			draw FUNC(PNT, ...), ...
+			draw FUNC(PNT, ..., STL), ...
+			draw ... -set ...
+		</syntax>
 		In NumeRe können auch einfache Zeichnungen mit Anmerkungen erstellt werden. Das dazu nötige Kommando ist <code>draw</code>, welches im Wesentlichen dieselbe Syntax wie <code>plot</code> und Konsorten verwendet. Jedes Objekt, das in diesem Modus in die Zeichenfläche (die natürlich ebenfalls ein Koordinatensystem enthält, das i.A. auch dargestellt wird) integriert werden soll, wird durch eine spezielle Funktion dargestellt.
 		Die Funktionen für den Zeichenmodus können nur im Zeichenmodus verwendet werden. Außerhalb desselben werden sie nicht als solche erkannt. Ihre Wirkungen werden im Folgenden aufgelistet. Dabei werden die folgenden Abkürzungen verwendet:
 		<list>

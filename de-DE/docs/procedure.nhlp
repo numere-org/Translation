@@ -26,8 +26,13 @@
 		<keyword>prozed</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			procedure $PROCEDURENAME(ARGLIST) :: FLAGS
+			\t[...]
+			endprocedure
+		</syntax>
 		Neben der Möglichkeit, <a href="nhlp://script?frame=new">Scripte</a> auszuführen, ist NumeRe auch mit der mächtigen Fähigkeit ausgestattet, <em>komplexe Prozeduren</em> durchzuführen. Diese Prozeduren haben in etwa den Stellenwert einer Funktion in der gewöhnlichen Programmierung mit C/C++ oder anderen Programmiersprachen. So können auch komplexe Aufgaben mithilfe von Prozeduren gelöst werden, da selbige u.A. auch rekursiv aufgerufen werden können.
-		<h>Syntax</h>
+		<h>Struktur</h>
 		Prozedurdefinitionen werden durch das Schlüsselwort <code>procedure</code> eingeleitet und durch <code>endprocedure</code> abgeschlossen. Auf das einleitende Schlüsselwort <code>procedure</code> muss der Name der Prozedur mit einem vorangestellten <code>$</code> und die Argumentliste angegeben werden. Direkt danach können nach <code>::</code> noch <em>optionale Flags</em> übergeben werden, die auf die gesamte Prozedur Einfluss haben. Zwischen den Schlüsselwörtern <code>procedure</code> und <code>endprocedure</code> befindet sich dann der Rumpf der Prozedur, in welchem die eigentlichen Befehle abgearbeitet werden:
 		<codeblock>
 			procedure $PROZEDURNAME(ARGLIST) :: FLAGS    ## Prozedurenkopf
@@ -81,17 +86,17 @@
 		<em>Wichtig:</em> Prozeduren können nicht beliebig tief rekursiv aufgerufen werden, da der Aufrufstapelspeicher begrenzt ist. Je nach Rechnerarchitektur und Rechenaufwand der Prozedur sind bis zu 1800 Rekursionen möglich. Danach bricht NumeRe mit einem entsprechenden Fehler ab.
 		Die Auswertung kann auch mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
 		Prozeduren können auch verwendet werden, um die Funktionalität von NumeRe mithilfe von Plugins (welche durch ein Kommando aufgerufen werden können) zu erweitern. Die Deklaration eines solchen Plugins kann jedoch nur innerhalb eines <code>&lt;install&gt; ... &lt;endinstall&gt;</code>-Blocks in einem NumeRe-Script geschehen. (Siehe hierzu <a href="nhlp://plugin?frame=new">help plugin</a>)
-		<example desc="Eine Prozedur, die eine Datenanalyse automatisiert (wird in NumeRe aufgerufen durch <code>$analyse_data(DATAFILENAME)</code>):" type="verbatim">
-			|   procedure $analyse_data(datafile)
-			|       if (!data())
-			|           load to_string(datafile)
-			|       else
-			|           return false
-			|       endif
-			|       stats data() -export="stats_" + to_string(datafile)
-			|       hist data() -export="hist_" + to_string(datafile) bins=32
-			|       return true;
-			|   endprocedure	
+		<example desc="Eine Prozedur, die eine Datenanalyse automatisiert (wird in NumeRe aufgerufen durch <code>$analyse_data(DATAFILENAME)</code>):" type="codeblock">
+			procedure $analyse_data(datafile)
+			\tif (!data())
+			\t\tload to_string(datafile)
+			\telse
+			\t\treturn false
+			\tendif
+			\tstats data() -export="stats_" + to_string(datafile)
+			\thist data() -export="hist_" + to_string(datafile) bins=32
+			\treturn true;
+			endprocedure	
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://plugin?frame=self">help plugin</a>, <a href="nhlp://install?frame=self">help install</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://for?frame=self">help for</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> und <a href="nhlp://script?frame=self">help script</a>
 	</contents>
@@ -117,6 +122,26 @@
 		<keyword>main</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			var VAR1 = VAL1, ...
+			str STR1 = SVAL1, ...
+			tab TABLE1() = {VAL}, ...
+			cst CLUSTER1{} = {VAL}, ...\n
+			return
+			return {VAL}
+			return TABLE()
+			return CLUSTER{}
+			return void\n
+			{VAL} = readline
+			{VAL} = readline -asstr -msg=MESSAGE ...\n
+			namespace
+			namespace main
+			namespace this
+			namespace thisfile
+			namespace NAME\n
+			throw
+			throw MESSAGE
+		</syntax>
 		Der Rumpf einer Prozedur kann die üblichen Kommandos und Ausdrücke beinhalten, die auch direkt in die Konsole eingegeben werden könnten. Zusätzlich gibt es aber noch spezielle Kommandos mit prozedurenspezifischer Bedeutung:
 		<list>
 			<item node="var VARIABLEN">Damit werden prozedureninterne Variablen deklariert, die nur innerhalb der aktuellen Prozedur verwendet werden sollen und können (sie sind auch dann eindeutig, wenn die Prozedur sich selbst rekursiv aufruft). Es können auch gleich die Initialwerte der Variablen in der Form <code>var VAR1 = WERT, VAR2 = WERT, ...</code> angegeben werden.</item>

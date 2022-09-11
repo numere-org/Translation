@@ -29,6 +29,11 @@
 		<keyword>cbspline</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fwt TABLE()
+			fwt TABLE() -inverse ...
+			fwt TABLE() -method=METHOD k=LEVEL ...
+		</syntax>
 		NumeRe contains an algorithm for fast wavelet transforming of data sets (<em>fwt</em>), which may decompose data sets into the scaling and timing components of the used wavelets. This algorithm is called with the command <code>fwt</code> and the data set, which shall be passed:<codeblock>fwt DATAOBJECT(I1:I2,J1:J2)</codeblock>
 		NumeRe expects two columns for a wavelet transformation: the axis values and the corresponding amplitude.
 		As default <em>Daubechies-4</em> wavelets are used for the transformation. This may be altered using the option <code>method=METHOD</code> and <code>k=LEVEL</code>. The LEVEL is corresponding directly with the METHOD and only some distinct values are available:

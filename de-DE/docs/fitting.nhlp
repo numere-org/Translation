@@ -28,6 +28,14 @@
 		<keyword>mask</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS)
+			fit TABLE() -with=f(x,PARAMS) params=[PARAMS] ...
+			fitw TABLE() -with=f(x,PARAMS) ...\n
+			fit TABLE() -with=f(x,y,PARAMS)
+			fit TABLE() -with=f(x,y,PARAMS) params=[PARAMS] ...
+			fitw TABLE() -with=f(x,y,PARAMS) ...
+		</syntax>
 		NumeRe ist mit einem einfachen Algorithmus zur Datenanpassung ausgestattet, der gegebene, eindimensionale Funktionen mit Hilfe von Parametern an Datenreihen mit <expr>x</expr>-<expr>y</expr>- bzw. <expr>y</expr>-Datenpunkten anpasst. Dabei wird eine Funktion <expr>y = FUNC(x,PARAMS)</expr> erwartet. Außerdem kann NumeRe auch zweidimensionale Funktionen an <expr>z(x,y)</expr>-Datenpunkte anpassen. Hierfür wird eine Funktion <expr>z = FUNC(x,y,PARAMS)</expr> erwartet. Sobald die Variable <expr>y</expr> in <expr>FUNC()</expr> gefunden wird, wird automatisch ein 2D-Fit gestartet.
 		<h>Fitten ohne Fehlerwerte</h>
 		Der einfachste Fitmodus wird mit dem Kommando <code>fit</code> gestartet. Darauf muss die Angabe zweier Spalten in <code>data()</code> oder einem Cache, bzw. eines Spaltenbereichs für einen 2D-Fit, folgen, sowie mittels des Parameters <code>-with=FUNC(x,PARAMS)</code> bzw. <code>-with=FUNC(x,y,PARAMS)</code> die zu fittende Funktion und durch <code>-params=[PARAMS=INITIALWERTE]</code> die entsprechenden, anzupassenden Parameter:<codeblock>fit DATEN(:,J1:J2) -with=FUNC(x,PARAMS) params=[PARAMS=INITIALWERTE]</codeblock>Alle anderen Variablen, die in der Funktion <expr>FUNC()</expr> auftreten und nicht Teil der Parameterliste sind, werden als Konstanten betrachtet. NumeRe wird nur Parameter der Parameterliste anpassen.
@@ -72,6 +80,12 @@
 		<keyword>Konvergenz</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS) chimap=GRID() ...
+			fitw TABLE() -with=f(x,PARAMS) chimap=GRID() ...\n
+			fit TABLE() -with=f(x,y,PARAMS) chimap=GRID() ...
+			fitw TABLE() -with=f(x,y,PARAMS) chimap=GRID() ...
+		</syntax>
 		Eine sehr hilfreiche Funktion zur Modelluntersuchung im Rahmen von Modellanpassungen ist der sogenannte "<expr>chi^2</expr>-Konvergenz-Datensatz" oder "<expr>chi^2</expr>-Map". Dabei werden die <expr>chi^2</expr>-Werte in einem Datensatz protokolliert, die erhalten werden, wenn ein oder zwei Parameter vorgegeben variiert und die restlichen an den Datensatz angepasst werden. Anhand der Form eines oder mehrerer entstandender Minima lassen sich Aussagen über die Konvergenz des Modells treffen. Um einen solchen Datensatz zu erhalten, ist die Option <code>chimap=DATAGRID()</code> erforderlich, wobei durch <code>DATAGRID()</code> die Variationen der Parameter vorgegeben werden müssen:
 		<list>
 			<item node="Spaltentitel">Die Titel der ersten Spalte(n) müssen mit den zu variierenden Parametern übereinstimmen. Stimmt nur die erste Spalte überein, wird nur dieser Parameter variiert und es wird ein 1D-Datensatz in der zweiten Spalte angelegt. Stimmen beide überein, wird ein 2D-Datensatz ab der dritten Spalte angelegt, der einem Datengitter entspricht. Die Spaltentitel dürfen jedoch nicht "x" oder "y" lauten.</item>
@@ -90,6 +104,12 @@
 		<keyword>param</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS) restrict=[RESTRICTS] ...
+			fitw TABLE() -with=f(x,PARAMS) restrict=[RESTRICTS] ...\n
+			fit TABLE() -with=f(x,y,PARAMS) restrict=[RESTRICTS] ...
+			fitw TABLE() -with=f(x,y,PARAMS) restrict=[RESTRICTS] ...
+		</syntax>
 		Falls für die Parameter bei einer Modellanpassung Einschränkungen für deren Wertebereich existieren, so können diese in Form <code>restrict=[PARAM_RESTRICTS]</code> angegeben werden. <code>PARAM_RESTRICTS</code> sind dabei durch einen oder mehrere logische Ausdrücke für die Parameter anzugeben, z.B. <code>restrict=[a&lt;1,b!=2.5]</code>. Die Reihenfolge spielt keine Rolle und logische Ausdrücke können auch mehrere Parameter zugleich umfassen. Allerdings kann die Konvergenz des Algorithmus dadurch u.U. noch stärker von den vorgegebenen Startwerten abhängen. Ein paar Beispiele für Parametereinschränkungen:
 		<list>
 			<item node="A">Parameter A darf nicht 0 sein</item>

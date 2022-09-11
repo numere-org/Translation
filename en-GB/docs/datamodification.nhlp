@@ -29,6 +29,14 @@
 		<keyword>savitzkygol</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			smooth TABLE() -order=ORDER
+			smooth TABLE() -order=ORDER method=METHOD ...\n
+			resample TABLE() -samples=SAMPLES
+			resample TABLE() -samples=SAMPLES method=METHOD ...\n
+			retouch TABLE()
+			retouch TABLE() -grid ...
+		</syntax>
 		NumeRe may modify the data from one or more data sets to simplify the analysis if you use one of the commands <code>smooth</code>, <code>resample</code> and <code>retouch</code>. The command <code>smooth</code> smoothes the data suppressing noise peaks, <code>resample</code> increases or decreases the number of data points by the usage of a Lanczos filter, and <code>retouch</code> removes invalid values from data sets using linear interpolation. These commands can only be applied to data sets in a cache.
 		<h>Smoothing data</h>
 		The command <code>smooth</code> requires the data area to which it is to be applied, the filter order, the filter name, and, if necessary, the shape of the filter:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDER method=FILTER alpha=FORM</codeblock>The order <code>ORDER</code> determines the size of the data section over which common filtering is performed. The following filters are available as <code>method</code>:

@@ -32,6 +32,16 @@
 		<keyword>slices</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			surf3d f(x,y,z)
+			surf3d f(x,y,z) -set [x1:x2,y1:y2,z1:z2] ...\n
+			mesh3d f(x,y,z)
+			mesh3d f(x,y,z) -set colorrange=c1:c2 ...\n
+			cont3d f(x,y,z)
+			cont3d f(x,y,z) -set slices={X,Y,Z} ...\n
+			dens3d f(x,y,z)
+			dens3d f(x,y,z) -set cloudplot ...
+		</syntax>
 		The commands <code>mesh3d</code>, <code>cont3d</code>, <code>dens3d</code> and <code>surf3d</code> allow visualizations of functions according <expr>Phi = Phi(x,y,z)</expr>, which are functions describing scalar fields, whose function value at each point <expr>(x,y,z)</expr> of the volume is calculated from a function of <expr>x, y</expr> and <expr>z</expr>. <code>mesh3d</code> calculates a 3D-meshgrid, <code>cont3d</code> a 3D-contour (equipotential), <code>dens3d</code> a 3D-density (colors corresponding to field amplitudes) and <code>surf3d</code> a 3D-surface plot. <code>surf3d</code> and <code>mesh3d</code> show a selection of the equipotenial faces, which are in the case of <code>cont3d</code> indicated with contour lines.
 		Plotting variables are <expr>x, y</expr> and <expr>z</expr>. All other variables are interpreted as parameters.
 		This plotting mode needs the specification of a third interval, which can be modified through the options: <code>[x1:x2,y1:y2,z1:z2]</code>.

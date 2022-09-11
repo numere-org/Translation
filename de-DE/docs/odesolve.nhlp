@@ -32,6 +32,10 @@
 		<keyword>rkf45</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			odesolve f1(x,y1,...), ... -set [x1:x2]
+			odesolve f1(x,y1,...), ... -set [x1:x2] fx0=[y01,...] ...
+		</syntax>
 		NumeRe kann mittels des Kommandos <code>odesolve</code> Differentialgleichungen <em>erster</em> Ordnungen numerisch lösen. Dazu wird die Differentialgleichung <expr>DGL(x,y1,y2,...)</expr> (oder das System aus Differentialgleichungen) über einen vorgegeben <expr>x</expr>-Bereich integriert und die entsprechenden <expr>y</expr>-Punkte berechnet:
 		<codeblock>
 			odesolve DGL(x,y1,y2,...) -set [x0:x1] OPTIONEN

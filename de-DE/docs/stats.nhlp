@@ -22,6 +22,11 @@
 		<keyword>stat</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			stats TABLE()
+			stats TABLE() -set export=FILENAME ...\n
+			{VAL} = stats TABLE() -set target=TARGET() ...
+		</syntax>
 		Das Kommando <code>stats</code> ermöglicht die vollautomatische Datenanalyse von mehreren Datenreihen zugleich. Die analysierten Datenreihen können dann in eine Tabelle oder zusammen mit den Analysen in eine neue Datei gespeichert werden.
 		<code>stats</code> benötigt natürlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Art übergeben werden können, wobei die zweite Variante das Ergebnis in <code>TABLE()</code> ablegt und die Namen der Zeilen in der entsprechenden Reihenfolge als Vektor zurückgibt:
 		<codeblock>

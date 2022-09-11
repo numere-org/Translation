@@ -25,6 +25,10 @@
 		<keyword>minlen</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			detect TABLE()
+			detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TARGET()
+		</syntax>
 		The <code>detect</code> command can be used to detect structures in a 2D data grid. The structures are created in a table in columns for <expr>x</expr> and <expr>y</expr>, with different structures separated by blank lines (all structures are located below each other in the same two columns). The command has the following syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>where <code>TABLE()</code> must contain a <a href="nhlp://datagrid?frame=new">2D data grid</a>.
 		The options have the following meaning:
 		<list>

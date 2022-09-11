@@ -28,6 +28,14 @@
 		<keyword>recursive</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			define f() := EXPR
+			define f(x, ...) := EXPR(x, ...) -set ...\n
+			redefine f(x, ...) := NEWEXPR(x, ...) -set ...\n
+			undefine f(), ...\n
+			ifndefined f(x, ...) := EXPR(x, ...) -set ...\n
+			lclfunc f(x, ...) := EXPR(x, ...)
+		</syntax>
 		Das Kommando <code>define</code> erlaubt es, eigene Funktionen für den wiederholten Aufruf in einer laufenden NumeRe-Sitzung zu definieren. Dabei sind bis zu 100 Definitionen möglich.
 		Die Definition muss mit dem Funktionsnamen, worauf die Funktionsargumente in Klammern direkt darauf angegeben werden müssen, begonnen werden. NumeRe unterstützt im Augenblick bis zu zehn Variablen je Funktion bzw. beliebig viele in Form einer speziellen Syntax. Eine Funktion muss jedoch nicht zwingend Argumente besitzen; auch leere Argumentklammern sind möglich. Der Funktionsname darf dabei keine mathematischen Operatoren enthalten und nicht mit einer Ziffer beginnen.
 		Die Syntax <code>:=</code> leitet dann die eigentliche Deklaration des Ausdrucks und der Funktion an sich ein, wobei mit dem Parameter <code>-set</code> zusätzliche Optionen angegeben werden können:<codeblock>define FUNKTION(ARGUMENTE) := AUSDRUCK(ARGUMENTE) [-set OPTIONEN]</codeblock>

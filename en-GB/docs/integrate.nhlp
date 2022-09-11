@@ -26,6 +26,11 @@
 		<keyword>eps</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VALS} = integrate f(x), ... -set [x1:x2] ...
+			{VALS} = integrate TABLE() -set ...\n
+			{VALS} = integrate f(x,y), ... -set [x1:x2,y1:y2] ...
+		</syntax>
 		NumeRe contains functions for the numerical integration of expression and data sets. The command is <code>integrate</code> and depending on the passed options (see below), NumeRe will perform either an one or a two dimensional integration. The integration variable in the one dimensional case is <expr>x</expr>; in the two dimensional integration it's <expr>y</expr> as additional variable.
 		The functions <expr>f(x)</expr> or <expr>f(x,y)</expr>, respectively, have to be passed directly to <code>integrate</code>. You may integrate multiple functions at once, if their integration intervals are matching. Used variables (except of <expr>x</expr> and <expr>y</expr>, if applicable) have to be declared in advance.
 		The boundaries, the numerical resolution of the integration and the integration method have to be passed to the command as options through the parameter <code>-set</code>. If you pass only boundaries for <expr>x</expr>, then NumeRe will perform a 1D integration. If you pass both boundaries, then it will be a 2D integration. The boundaries may be passed for each variable separately as listed below or gathered in the form <code>[x0:x1,y0:y1]</code>.

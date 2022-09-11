@@ -29,6 +29,13 @@
 		<keyword>nocrust</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			plot3d {fx(t), fy(t), fz(t)}, ...
+			plot3d {fx(t), fy(t), fz(t)} "LEGEND", ...\n
+			plot3d TABLE(), ...
+			plot3d TABLE() "LEGEND", ...\n
+			plot3d ... -set [x1:x2,y1:y2,z1:z2] t=t0:t1 ...
+		</syntax>
 		You may display three dimensional data sets and trajectories with the command <code>plot3d</code>. The <expr>(x,y,z)</expr> coordinates of the trajectories may only depend on the single parameter <expr>t</expr>, which defaults to the interval <expr>[0,1]</expr>.
 		The <expr>(x,y,z)</expr> coordinates of the trajectories have to be passed using the vector notation <code>{fx(t), fy(t), fz(t)}</code>. Missing coordinates have to be replaced by 0.
 		The syntax is identical to <code>plot</code> and there are (except of the third interval <code>[x1:x2,y1:y2,z1:z2]</code>, although not all intervals must be passed) only the following additional options:

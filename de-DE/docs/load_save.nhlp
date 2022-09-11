@@ -44,6 +44,16 @@
 		<keyword>xz</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VALS} = load FILENAME
+			{VALS} = load FILENAME -totable=TABLE() ...\n
+			{VALS} = append FILENAME
+			{VALS} = append FILENAME -all ...\n
+			save TABLE()
+			save TABLE() -filename=FILENAME\n
+			export TABLE()
+			export TABLE() -filename=FILENAME
+		</syntax>
 		Daten können in NumeRe geladen oder von NumeRe heraus in eine Datei gespeichert werden. Dazu existieren die Kommandos <code>load</code> und <code>save</code>:<codeblock>{i1, i2, j1, j2} = load DATEI</codeblock>bzw.<codeblock>save DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Beim Laden geht NumeRe standardmäßig von einer Textdatei mit der Endung "*.dat" aus (Die Endung kann jedoch zwischen "*.dat", "*.txt", "*.ndat", "*.labx", "*.jdx", "*.dx", "*.jcm", "*.ibw", "*.ods", "*.xls", "*.xlsx" und "*.csv" angepasst werden), während Datensätze vorzugsweise in das NumeRe-eigene "NumeRe-Datenfile"-Format (*.ndat) gespeichert werden, das schneller ist und die Präzision erhält. Die Indices der geladenen Daten in der Zieltabelle werden beim Laden zurückgegeben.
 		DATEI bezeichnet den Dateinamen der geladenen oder gespeicherten Datei. So lange die Datei in den eingestellen Speicherordner gespeichert, bzw. aus dem eingestellten Import-Ordner geladen werden soll, ist dabei die Angabe eines Pfades nicht nötig. Soll der Dateipfad ein oder mehrere Leerstellen enthalten, ist er mit Anführungszeichen zu umschließen.
 		Es können auch die Platzhalter für die Standardpfade sowie Wildcards (<code>*</code> und <code>?</code>) verwendet werden. Siehe <a href="nhlp://explorer?frame=new">help explorer</a> für weitere Details zu den Platzhaltern.
@@ -57,7 +67,7 @@
 		<code>load</code> kann dabei mit <code>-ignore</code> ergänzt werden, um eine etwaige Bestätigung zu unterdrücken und ggf. automatisch den Speicherplatz freizugeben. Außerdem kann <code>load</code> auch mit <code>-head=ZEILE</code> die Kommentarzeile übergeben werden, in welcher sich die Tabellenköpfe befinden, falls der Fall eintreten sollte, dass NumeRe selbige nicht automatisch identifizieren konnte.
 		Um einen Datensatz in eine Textdatei zu exportieren, steht das Kommando <code>export</code> zur Verfügung:<codeblock>export DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Wird für DATEI ein Dateiname mit der Endung "*.tex" angegeben, so wird eine Tabelle mit TeX-Syntax anstatt der gewöhnlichen Ausgabe erzeugt. Wird als Endung "*.csv" angegeben, werden die Daten im CSV-Format geschrieben. Mit "*.xls" wird eine Excel-(97-2003)-Mappe erzeugt. Zusätzlich kann die Zahl der signifikanten Ziffern durch Anhängen der Option <code>precision=ZIFFERN</code> geändert werden.
 		<example desc="Speichern der Tabelle <code>table()</code> in die Datei <code>table.ndat</code> und exportieren der ersten beiden Spalten in eine TeX-Datei:">
-			save table() -file=table		(.ndat wird automatisch ergänzt)
+			save table() -file=table    ## .ndat wird automatisch ergänzt
 			Daten wurden erfolgreich nach "&SAVEPATH&/table.ndat" gespeichert.
 			export table(:,1:2) -file=table.tex
 			Speichern abgeschlossen. Es wurde ein Tabelle mit 2088 Elementen erfolgreich in die Datei "&SAVEPATH&/table.tex" geschrieben.

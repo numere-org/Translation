@@ -32,16 +32,33 @@
 		<keyword>every</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = TABLE(i1:i2,j1:j2)
+			TABLE(i1:i2,j1:j2) = {VAL}\n
+			{STR} = TABLE(#,j1:j2)
+			TABLE(#,j1:j2) = {STR}\n
+			new TABLE(), ...
+			remove TABLE(), ...\n
+			clear TABLE()
+			delete TABLE()\n
+			show TABLE()\n
+			save TABLE()
+			save TABLE() -set file=NAME\n
+			export TABLE()
+			export TABLE() -set file=NAME\n
+			rename TABLE(), NEWNAME()\n
+			swap TABLE1(), TABLE2()
+		</syntax>
 		Tables are active storages in NumeRe that can cache tabular data so that it can be further processed. Tabular data is characterised by the fact that the data is organised in columns. Columns in NumeRe tables can contain either numeric values, date-time values or <a href="nhlp://string?frame=new">strings</a>. If numeric values are written to string columns, they are automatically converted to strings. Writing strings to numeric columns, on the other hand, is <em>only</em> possible, if the strings can be interpreted as numerical values.
 		Time-date values are stored in seconds since 1.1.1970 (UTC) with microsecond precision. Such values are generated and processed by special functions (such as <code>time()</code> or <code>timeformat()</code>). Time-date values can also be written as strings into the corresponding columns if they correspond to one of the following schemes or a date-time combination thereof:
-		<codeblock>
+		<verbatim>
 			DD.MM.YY(YY)
 			YY(YY)-MM-DD
 			YY(YY)/MM/DD
 			hh:mm
 			hh:mm:ss
 			hh:mm:ss.iii
-		</codeblock>
+		</verbatim>
 		By default, the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
 		Individual elements of a table can be read out with the syntax <code>TABLE(ROW, COLUMN)</code>. Likewise, values can also be written into the table with it. Tables are to be treated like ordinary variables. The indexing is done by natural numbers <em>greater than</em> zero: 1,2,3,...
 		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.

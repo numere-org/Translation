@@ -32,6 +32,18 @@
 		<keyword>include</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			about\n
+			hline
+			hline -single\n
+			warn MESSAGE\n
+			close -PAR\n
+			assert EXPRESSION\n
+			declare SYMBOL := VAL, ...\n
+			clc\n
+			include FILE
+			include FILE :: TYPE
+		</syntax>
 		Beside of the more evaluation-oriented commands knows NumeRe some additional commands, which can be assigned to the pure user interface. These are for example the commands <a href="nhlp://help?frame=new"><code>help</code></a> and <a href="nhlp://find?frame=new"><code>find</code></a>, as well as the following ones:
 		<list>
 			<item node="about">This command (and its synonyms <code>credits</code> and <code>info</code>) display legal and versioning information about NumeRe.</item>

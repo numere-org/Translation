@@ -28,6 +28,10 @@
 		<keyword>const</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			list -PAR
+			list PAR
+		</syntax>
 		Der Befehl <code>list</code> stellt alle Objekte, die durch den zusätzlichen Parameter spezifiziert wurden, in einer übersichtlichen Liste dar.
 		Als Parameter sind die folgenden definiert:
 		<list>

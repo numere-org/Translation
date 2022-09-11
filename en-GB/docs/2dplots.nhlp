@@ -48,6 +48,16 @@
 		<keyword>noorthopro</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			surf f(x,y), ...
+			surf f(x,y) "LEGEND", ... -set [x1:x2,y1:y2,z1:z2] ...\n
+			mesh f(x,y), ...
+			mesh f(x,y) "LEGEND", ... -set orthoproject ...\n
+			cont f(x,y), ...
+			cont f(x,y) "LEGEND", ... -set lcont=VAL ...\n
+			dens f(x,y), ...
+			dens f(x,y) "LEGEND", ... -set clog ...
+		</syntax>
 		The commands <code>mesh</code>, <code>cont</code>, <code>dens</code> or <code>surf</code>, respectively, allow the visualization of functions of the type <expr>z = f(x,y)</expr>, which are functions, whose <expr>z</expr> coordinate is obtained from a function of the coordinates <expr>x</expr> and <expr>y</expr>. <code>mesh</code> creates a meshgrid, <code>cont</code> a contour (equipotential), <code>dens</code> a density (colors correspond to <expr>z</expr> values) and <code>surf</code> a surface plot.
 		Plotting variables are <expr>x</expr> and <expr>y</expr>. All other variables will be interpreted as parameters.
 		Data sets, which shall be visualized, have to be passed as a data grid. Such a data grid can be created with the command <code>datagrid</code> out of a data set. See <a href="nhlp://datagrid?frame=new">help datagrid</a> for corresponding explanations to this function.

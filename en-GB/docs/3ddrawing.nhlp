@@ -23,6 +23,11 @@
 		<keyword>draw3d</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			draw3d FUNC(PNT, ...), ...
+			draw3d FUNC(PNT, ..., STL), ...
+			draw3d ... -set ...
+		</syntax>
 		You may create three dimensional drawings with annotations inside of NumeRe. The needed command is <code>draw3d</code>; it's mostly similar to its two dimensional pendant <code>draw</code>.
 		The following functions may be used in an arbitrary order and combination inside of the drawing mode, as long as they are separated through commas. The description of the abbreviations can be found at <a href="nhlp://draw?frame=new">help draw</a> with the exception that all coordinate sets of <code>PNT</code> or <code>DIR</code> are represented through 4 numbers <expr>(x,y,z)</expr> instead of two <expr>(x,y)</expr>.
 		<list>

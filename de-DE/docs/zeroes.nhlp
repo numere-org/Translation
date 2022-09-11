@@ -26,6 +26,11 @@
 		<keyword>down</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = zeroes f(x) -set x=x1:x2
+			{VAL} = zeroes f(x) -set x=x1:x2 samples=SAMPLES ...
+			{VAL} = zeroes TABLE() -set x=XTAB() ...
+		</syntax>
 		Das Kommando <code>zeroes</code> bestimmt alle Nullstellen (also alle Stellen <expr>x0</expr>, für die <expr>f(x0) = 0</expr>) eines gegebenen Ausdrucks in einem vorgegebenen Intervall. Der Ausdruck darf in dem Intervall dabei nicht zu stark oszillieren. Liegt ein solcher Ausdruck vor, so sollte das Intervall deutlich kleiner gewählt werden.
 		An das Kommando <code>zeroes</code> muss direkt der zu untersuchende Ausdruck folgen. Im Anschluss daran ist nach dem Schlüsselwort <code>-set</code> sind die Optionen erforderlich. Diese lauten wie folgt:
 		<list>

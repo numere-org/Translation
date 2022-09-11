@@ -25,8 +25,13 @@
 		<keyword>imrot</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			tabrot TABLE() -set alpha=ANGLE ...
+			imrot IMAGE() -set alpha=ANGLE ...
+			gridrot GRID() -set alpha=ANGLE ...
+		</syntax>
 		NumeRe kann Tabellen, Bilddaten und Datengitter um einen Winkel <expr>alpha</expr> (in Grad) rotieren, indem eines der drei Kommandos <code>tabrot</code>, <code>imrot</code> oder <code>gridrot</code> verwendet wird. Dabei rotiert <code>tabrot</code> eine ganze Tabelle ohne die Achsen zu beachten. <code>imrot</code> und <code>gridrot</code> rotieren den Datensatz und transformieren dagegen die zugehörigen Achsen automatisch (bzw. legen neue an).
-		Die Syntax ist für alle Kommandos identisch:<codeblock>tabrot TABLE() -set alpha=ANGLE\nimrot IMAGE() -set alpha=ANGLE\ngridrot GRID() -set alpha=ANGLE</codeblock>Das Ergebnis der Rotation wird in der Tabelle <code>rotdata()</code> angelegt. Dieses Ziel kann mit der Option <code>target=TARGET()</code> angepasst werden.
+		Das Ergebnis der Rotation wird in der Tabelle <code>rotdata()</code> angelegt. Dieses Ziel kann mit der Option <code>target=TARGET()</code> angepasst werden.
 		<em>Hinweis:</em> Alle Datensätze werden intern anhand ihrer Zeilen- und Spaltendimensionen rotiert. Eventuelle Achsenskalierungen werden hierbei nicht berücksichtigt. So bleibt zum Beispiel bei einem quadratischen Datensatz, dessen Achsen unterschiedlich skaliert sind, ebendiese Skalierung nicht erhalten.
 	</contents>
 </article>

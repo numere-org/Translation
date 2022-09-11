@@ -65,6 +65,11 @@
 		<keyword>hidden</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = window FILENAME
+			VAL = window WINID -set PROP=VAL ...
+			VAL = window WINID -get PROP ...
+		</syntax>
 		NumeRe ist zur Erzeugung von und Interaktion mit graphischen Benutzeroberflächen in der Lage, mit denen sich auch anspruchsvolle Applikationen (oder Prototypen) mit vergleichsweise geringem Aufwand entwickeln lassen können. Das zentrale Kommando hierfür ist <code>window</code> in der Form<codeblock>RES = window EX [-PAR]</codeblock>Dabei unterscheiden sich die Rückgabewerte <code>RES</code> des Kommandos in Abhängigkeit vom verwendeten Ausdruck <code>EX</code> und den Parametern <code>PAR</code>. Zur Erzeugung eines neuen Fensters kann die Form<codeblock>ID = window LAYOUTSCIPT</codeblock>verwendet werden. Sie gibt dabei die ID des aus dem Layout-Script (siehe späterer Abschnitt) neu erzeugten Fensters zurück. Mit dieser ID kann später mit diesem Fenster interagiert und programmatisch Eigenschaften verändet werden (die Parameter werden im folgenden Abschnitt noch genauer beschrieben):<codeblock>ITEMIDS = window ID -getitems=TYPE\nVAL = window ID -get PROP\nLOG = window ID -set PROP=VAL\nLOG = window ID -close</codeblock>
 		<h>Parameter für dieses Kommando</h>
 		<list>
@@ -154,45 +159,44 @@
 		<h>Interne Variablen</h>
 		Zusätzlich zu den angezeigten GUI-Elementen ist es häufig nötig, einem Fenster interne Variablen zuzuweisen, um weitere Informationen eindeutig diesem Fenster zuordnen zu können. Hierfür kann <code>prop</code> verwendet werden: <code>prop VAR1 = VAL1, VAR2, ...</code> Dieses Kommando generiert ein oder mehrere interne Variablen, die keinen spezifischen Typ haben, d.h. sie können sowohl einen numerischen Wert oder eine Zeichenkette enthalten.
 		Interne Variablen können mit der Kommandosequenz <code>window ID -get value prop=VARNAME</code> gelesen und mit <code>window ID -set value=VAL prop=VARNAME</code> geschrieben werden.
-		<example desc="Ein Window-Layout, das eine interaktive Vorschau des Ergebnisses von <code>smooth</code> mit einem wählbaren Level ermöglicht:" type="verbatim">
-			|   ## Window-Layout: Oben ein breites Graph-Objekt, darunter eine Zeile mit Kontrollen
-			|   layout -title="Smooth Preview" size={700, 300}
-			|       grapher -set id=0 size={600, 200}
-			|       group -type=horizontal
-			|           textfield #&lt;loadpath&gt; -set id=1
-			|           button "Select" -set onclick=$smoothevent()
-			|           spinbut -set min=1 max=10 value=3 label="Smoothing level" id=2
-			|           button "Smooth!" -set onclick=$smoothevent()
-			|       endgroup
-			|   endlayout
-			|
-			|
-			|   ## Prozedur, die in der Datei '&PROCPATH&/smoothevent.nprc' zu finden wäre
-			|   procedure $smoothevent(_nWinID, _nItemID, _event{}) :: event
-			|       str sPath
-			|       tab dat()
-			|       var nOrder = 1
-			|       
-			|       sPath = window _nWinID -get value item=1;
-			|       clear data() -ignore
-			|       
-			|       if (getkeyval(_event{}, "value") == "Select")
-			|           ## Eine neue Datei über einen Dialog auswählen und plotten
-			|           sPath = dialog sPath -set type=filedialog title="Select file";
-			|           window _nWinID -set value=sPath item=1;
-			|           load sPath;
-			|           plot data(:, 1:2) "" -set box streamto={_nWinID, 0} reset aspect=3 connect
-			|       else
-			|           ## Die vorhandene Datei glätten und zusammen mit dem Original plotten
-			|           nOrder = window _nWinID -get value item=2;
-			|           load sPath;
-			|           copy data(:, 1:2) -target=dat();
-			|           smooth dat(:, 2) -order=nOrder
-			|           plot data(:, 1:2) "", dat() "" -set box streamto={_nWinID, 0} reset aspect=3 connect
-			|       endif
-			|       
-			|       return void;
-			|   endprocedure
+		<example desc="Ein Window-Layout, das eine interaktive Vorschau des Ergebnisses von <code>smooth</code> mit einem wählbaren Level ermöglicht:" type="codeblock">
+			## Window-Layout: Oben ein breites Graph-Objekt, darunter eine Zeile mit Kontrollen
+			layout -title="Smooth Preview" size={700, 300}
+			\tgrapher -set id=0 size={600, 200}
+			\tgroup -type=horizontal
+			\t\ttextfield #&lt;loadpath&gt; -set id=1
+			\t\tbutton "Select" -set onclick=$smoothevent()
+			\t\tspinbut -set min=1 max=10 value=3 label="Smoothing level" id=2
+			\t\tbutton "Smooth!" -set onclick=$smoothevent()
+			\tendgroup
+			endlayout
+			\n
+			## Prozedur, die in der Datei '&PROCPATH&/smoothevent.nprc' zu finden wäre
+			procedure $smoothevent(_nWinID, _nItemID, _event{}) :: event
+			\tstr sPath
+			\ttab dat()
+			\tvar nOrder = 1
+			\t
+			\tsPath = window _nWinID -get value item=1;
+			\tclear data() -ignore
+			\t
+			\tif (getkeyval(_event{}, "value") == "Select")
+			\t\t## Eine neue Datei über einen Dialog auswählen und plotten
+			\t\tsPath = dialog sPath -set type=filedialog title="Select file";
+			\t\twindow _nWinID -set value=sPath item=1;
+			\t\tload sPath;
+			\t\tplot data(:, 1:2) "" -set box streamto={_nWinID, 0} reset aspect=3 connect
+			\telse
+			\t\t## Die vorhandene Datei glätten und zusammen mit dem Original plotten
+			\t\tnOrder = window _nWinID -get value item=2;
+			\t\tload sPath;
+			\t\tcopy data(:, 1:2) -target=dat();
+			\t\tsmooth dat(:, 2) -order=nOrder
+			\t\tplot data(:, 1:2) "", dat() "" -set box streamto={_nWinID, 0} reset aspect=3 connect
+			\tendif
+			\t
+			\treturn void;
+			endprocedure
 		</example>
 		<img src="<>/docs/window.png" />
 		<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://dialog?frame=self">help dialog</a> und <a href="nhlp://procedure?frame=self">help procedure</a>

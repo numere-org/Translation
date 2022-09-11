@@ -28,6 +28,14 @@
 		<keyword>mask</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS)
+			fit TABLE() -with=f(x,PARAMS) params=[PARAMS] ...
+			fitw TABLE() -with=f(x,PARAMS) ...\n
+			fit TABLE() -with=f(x,y,PARAMS)
+			fit TABLE() -with=f(x,y,PARAMS) params=[PARAMS] ...
+			fitw TABLE() -with=f(x,y,PARAMS) ...
+		</syntax>
 		NumeRe has an advanced algorithm for fitting functions, which fits passed, one dimensional functions to data sets containing <expr>x</expr>-<expr>y</expr> or <expr>y</expr> data points by varying the parameters of the corresponding function. NumeRe expects a function of the form <expr>y = FUNC(x,PARAMS)</expr>. In addition, NumeRe may fit two dimensional functions to datapoints of the form <expr>z(x,y)</expr>. In this case NumeRe expects a function with the form <expr>z = FUNC(x,y,PARAMS)</expr>. If the variable <expr>y</expr> is found in <expr>FUNC()</expr>, the algorithm will automatically switch to two dimensional fitting.
 		<h>Fitting without Error Values</h>
 		The fit algorithm in its simplest form will be started, if the command <code>fit</code> is passed. This command also needs the corresponding data set out of either <code>data()</code> or a cache. In the one dimensional case, NumeRe needs one or two columns, in the two dimensional case, NumeRe expects a whole range of columns in the shape of a data grid. In addition, the corresponding function has to be passed through the parameter <code>with=FUNC(x,PARAMS)</code> or <code>with=FUNC(x,y,PARAMS)</code>, respectively. You may pass a list of the function parameters, which shall be varied, and their initial values by using the parameter <code>params=[PARAMS=INITIALVALUES]</code>. If you specify a list of parameters, only these will be varied and all others will be constants, otherwise every variable, except of <expr>x</expr> and <expr>y</expr> will be varied starting from their current value.<codeblock>fit DATA(:,J1:J2) -with=FUNC(x,PARAMS) params=[PARAMS=INIT.]</codeblock>
@@ -72,6 +80,12 @@
 		<keyword>Konvergenz</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS) chimap=GRID() ...
+			fitw TABLE() -with=f(x,PARAMS) chimap=GRID() ...\n
+			fit TABLE() -with=f(x,y,PARAMS) chimap=GRID() ...
+			fitw TABLE() -with=f(x,y,PARAMS) chimap=GRID() ...
+		</syntax>
 		A function, which supports model examinations quite well, is the so-called "<expr>chi^2</expr> convergence data set" or "<expr>chi^2</expr> map". This data sets protocoles the <expr>chi^2</expr> values, which were obtained, if one or two parameters were predefined varied and the remaining ones were fitted to the original data set. Depending on the form of one or more obtained minima, you may evaluate the convergence of the actual model for this data set. To create this data set, you've to pass the option <code>chimap=DATAGRID()</code>, where the predefined variation of the parameters must be passed by the <code>DATAGRID()</code>: 
 		<list>
 			<item node="Column header">The header of the first column(s) have to match to the parameter names, which shall be varied. If only the first column matches, then only this parameter will be varied and a 1D data set will be created. If both matches, NumeRe will create a 2D data set going on from column 3, which is a data grid. Please note that the columns may not be called "x" or "y".</item>
@@ -90,6 +104,12 @@
 		<keyword>param</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fit TABLE() -with=f(x,PARAMS) restrict=[RESTRICTS] ...
+			fitw TABLE() -with=f(x,PARAMS) restrict=[RESTRICTS] ...\n
+			fit TABLE() -with=f(x,y,PARAMS) restrict=[RESTRICTS] ...
+			fitw TABLE() -with=f(x,y,PARAMS) restrict=[RESTRICTS] ...
+		</syntax>
 		If there are some restrictions for the fit parameters in their possible values, they may be passed in the form <code>restrict=[PARAM_RESTRICTS]</code>. <code>PARAM_RESTRICTS</code> has to contain one or more logical expressions for the parameters, e.g. <code>restrict=[a&lt;1,b!=2.5]</code>. The order of the logical expressions doesn't play any role and expressions may contain multiple parameters as well. But please note that in this case the convergence of the algorithm may depend even stronger on the starting values. For some examples for parameter restrictions see below:
 		<list>
 			<item node="A">Parameter A may not be equal to 0</item>

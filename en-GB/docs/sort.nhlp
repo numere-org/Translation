@@ -24,6 +24,13 @@
 		<keyword>descen</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			sort TABLE()
+			sort TABLE() -set cols=INDEX[COLGROUP] ...
+			sort CLUSTER{}
+			sort ... -set desc ...\n
+			{VAL} = sort ... -set index ...
+		</syntax>
 		NumeRe may sort loaded data, data in a cache, in a cluster or strings in the <code>string()</code> object using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
 		<codeblock>
 			sort DATA(I1:I2,J1:J2)

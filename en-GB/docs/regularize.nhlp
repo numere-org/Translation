@@ -23,6 +23,10 @@
 		<keyword>interpol</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			regularize TABLE()
+			regularize TABLE() -samples=SAMPLES
+		</syntax>
 		NumeRe may calculate data points with equidistantly distributed <expr>x</expr> values out of arbitrary distributed <expr>x</expr>-<expr>y</expr> data points in a cache. This process is called "regularizing". During this process two new data rows will be appended right of the already existing ones in the current cache.
 		To regularize data rows, you have to pass the desired cache to the command <code>regularize</code>:<codeblock>regularize CACHE(i1:i2,j1:j2)</codeblock>The command <code>regularize</code> acts columnwise and you always have to pass two columns, where the first one contains the <expr>x</expr>, the second the corresponding <expr>y</expr> values and both columns have to be equal in size.
 		As default, the new data rows are equal in size as the source data rows. To modify this behavior, you may pass the parameter <code>samples=SAMPLES</code>, where SAMPLES defines the new number of samples.

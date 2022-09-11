@@ -28,6 +28,12 @@
 		<keyword>scott</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			hist TABLE()
+			hist TABLE() -set bins=BINS ...\n
+			hist2d TABLE()
+			hist2d TABLE() -set sum ...
+		</syntax>
 		Das Kommando <code>hist</code> erzeugt aus einer gegebenen Datenreihe den Datensatz zur Visualisierung eines Histogramms. Dabei kann entweder die Breite oder die Anzahl der Bins festgelegt werden. Die erzeugte, neue Tabelle kann in der Folge gespeichert werden. Falls weder Binzahl noch Binbreite festgelegt wird, bestimmt NumeRe die Binzahl anhand der <em>Sturges-Regel</em> automatisch.
 		NumeRe erzeugt während der Auswertung zugleich auch noch eine graphische Darstellung des erzeugten Histogrammdatensatzes. Optionen, die für dieses Histogramm verwendet werden sollen, können zuvor mit <code>plot -set OPTIONEN</code> gesetzt werden.
 		<code>hist</code> kann auch von mehreren Datenreihen zugleich Histogramme erstellen, allerdings sind dabei die Bins für alle Reihen identisch und die Ergebnisse sind Teil einer gemeinsamer Tabelle mit mehreren Spalten. Zugleich wird auch eine graphische Darstellung der Histogramme erstellt.

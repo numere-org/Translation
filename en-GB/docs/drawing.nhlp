@@ -26,6 +26,11 @@
 		<keyword>zeichn</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			draw FUNC(PNT, ...), ...
+			draw FUNC(PNT, ..., STL), ...
+			draw ... -set ...
+		</syntax>
 		You may create simple drawings with annotations with NumeRe. The corresponding command is <code>draw</code>, which in principle has the same syntax just like <code>plot</code> and similar. Each object, which shall be integrated in this mode to the drawing plane (which has a coordinate system, too, which, in principle, will be showed as well), is representated using a special function.
 		The functions for the drawing mode may only be used in this mode. Without this mode, they won't be recognized as such. Their effect on the drawing is listed a few lines below. The following abbreviations will be used in the list:
 		<list>

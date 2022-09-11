@@ -29,6 +29,13 @@
 		<keyword>nocrust</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			plot3d {fx(t), fy(t), fz(t)}, ...
+			plot3d {fx(t), fy(t), fz(t)} "LEGEND", ...\n
+			plot3d TABLE(), ...
+			plot3d TABLE() "LEGEND", ...\n
+			plot3d ... -set [x1:x2,y1:y2,z1:z2] t=t0:t1 ...
+		</syntax>
 		Mit dem Kommando <code>plot3d</code> können dreidimensionale Datensätze und Trajektorien dargestellt werden. Die <expr>(x,y,z)</expr>-Koordinaten der Trajektorien dürfen dabei nur von dem Parameter <expr>t</expr> abhängen, der standardmäßig im Intervall <expr>[0,1]</expr> liegt.
 		Die <expr>(x,y,z)</expr>-Koordinaten der Trajektorien müssen dabei als Funktionen in der Vektornotation <code>{fx(t), fy(t), fz(t)}</code> angegeben werden. Fehlende Koordinaten müssen durch 0 ergänzt werden.
 		Die Syntax ist identisch zu <code>plot</code> und es gibt (außer des dritten Intervalls, also <code>[x1:x2,y1:y2,z1:z2]</code>, wobei auch hier nicht alle Intervalle angegeben werden müssen) nur die folgenden zusätzlichen Optionen:

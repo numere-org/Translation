@@ -26,6 +26,10 @@
 		<keyword>wp</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			execute APPLICATION
+			execute APPLICATION -set params=PARAMS ...
+		</syntax>
 		Sometimes it might be necessary to call a second program for a specific task, e.g. if one has implemented as simulation in an own program and wants to call this program automatically, or if one has created a file with NumeRe and wants to process this file in a second program. NumeRe may use the Windows shell API using the command <code>execute</code>.
 		<em>Important:</em> The command <code>execute</code> is <em>disabled</em> by default, because it is a security risk. (Bad code can directly access the Windows shell and execute arbitrary commands.) If the command is necessary, the it can be enabled using the options dialogue in the "Tools" menu.
 		To use the command <code>execute</code> one has to append the desired program as a string to the command:<codeblock>execute "PATH/TO/PROGRAM"</codeblock>Additionally, one may add further filenames or parameters if one uses the option <code>params=PARAMETER</code>:<codeblock>execute "PATH/TO/PROGRAM" -set params="PATH/TO/FILE"</codeblock>

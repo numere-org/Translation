@@ -23,6 +23,11 @@
 		<keyword>diff</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			VAL = diff f(x) -set x=POS ...
+			{VAL} = diff f(x) set [x1:x2] ...
+			{VAL} = diff TABLE()
+		</syntax>
 		NumeRe can numerically differentiate one or more expressions to the first order using the method of Savitzky and Golay. This involves calculating the local slope of this expression with respect to a variable to be specified at a given point. Only the numerical value and no analytical result is determined.
 		The keyword <code>diff</code> followed by the functions to be differentiated starts the numerical differentiation. The following options must be appended to the given function by <code>-set</code>:
 		<list>

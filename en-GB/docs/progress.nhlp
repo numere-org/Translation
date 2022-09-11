@@ -30,6 +30,10 @@
 		<keyword>type</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			progress VAL
+			progress VAL -set first=VAL last=VAL type=TYPE
+		</syntax>
 		If you like to display the progress of a currently running evaluation in a script, a procedure or a pluging, then you may use the command <code>progress</code>. The value, which is passed to this command, will be evaluated as a percentage value regarding starting and ending value and displayed accordingly:<codeblock>progress VALUE</codeblock>
 		Starting and ending value may be set after the parameter <code>-set</code> using the options <code>first=VALUE</code> and <code>last=VALUE</code>. Otherwise NumeRe will assume the default values 1 and 100. In addition the format of the progress display may be modified.
 		The options for <code>progress</code> are as follows:

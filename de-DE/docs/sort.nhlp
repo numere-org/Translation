@@ -24,6 +24,13 @@
 		<keyword>descen</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			sort TABLE()
+			sort TABLE() -set cols=INDEX[COLGROUP] ...
+			sort CLUSTER{}
+			sort ... -set desc ...\n
+			{VAL} = sort ... -set index ...
+		</syntax>
 		NumeRe kann geladene Daten, Daten in einem Cache, in einem Cluster oder Zeichenketten im <code>string()</code> Objekt mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
 		<codeblock>
 			sort DATEN(I1:I2,J1:J2)

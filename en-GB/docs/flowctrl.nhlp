@@ -190,22 +190,22 @@
 		A selection branch must contain at least one <code>case</code> statement. Additional <code>case</code> or <code>default</code> statements are optional.
 		It must be noted that the <code>break</code> command is <em>not</em> passed on to surrounding loops, as it is evaluated in <code>switch</code> itself. The <code>continue</code> command is passed on normally.
 		Unlike the <code>if</code> block, which provides similar functionality through multiple <code>elseif</code> sections, the runtime of a selection branch is constant for selecting the correct case. The order of the cases in the selection branch is therefore irrelevant. In contrast, <code>if</code> requires linearly more time for each <code>elseif</code> that is evaluated as FALSE.
-		<example desc="A selection branch selecting for working day and weekend:" type="verbatim">
-			|   switch (x)
-			|   case 1:
-			|   case 2:
-			|   case 3:
-			|   case 4:
-			|   case 5:
-			|       print "Working day"
-			|       break;
-			|   case 6:
-			|   case 7:
-			|       print "Weekend"
-			|       break;
-			|   default:
-			|       print "This day of the week does not exist."
-			|   endswitch
+		<example desc="A selection branch selecting for working day and weekend:" type="codeblock">
+			switch (x)
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			\tprint "Working day"
+			\tbreak;
+			case 6:
+			case 7:
+			\tprint "Weekend"
+			\tbreak;
+			default:
+			\tprint "This day of the week does not exist."
+			endswitch
 		</example>
 		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://for?frame=self">help for</a> and <a href="nhlp://try?frame=self">help try</a>
 	</contents>

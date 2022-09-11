@@ -24,6 +24,11 @@
 		<keyword>min</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = extrema f(x) -set [x1:x2] ...
+			{VAL} = extrema TABLE() -set ...
+			{VAL} = extrema ... -set points=POINTS ...
+		</syntax>
 		Das Kommando <code>extrema</code> bestimmt alle Extrema (also alle Stellen <expr>x0</expr>, für die <expr>df/dx = 0</expr>) eines gegebenen Ausdrucks in einem vorgegebenen Intervall. Die Werte des Ausdrucks dürfen dabei nicht zu stark oszillieren. Liegt ein solcher Ausdruck vor, so sollte das Intervall deutlich kleiner gewählt werden.
 		Werden im Intervall keine Extrema gefunden, werden die Intervallgrenzen untersucht und ggf. als Extrema deklariert.
 		An das Kommando <code>extrema</code> muss direkt der zu untersuchende Ausdruck folgen. Im Anschluss daran sind nach dem Schlüsselwort <code>-set</code> die Optionen erforderlich. Diese lauten wie folgt:

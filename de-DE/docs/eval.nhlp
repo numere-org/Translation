@@ -23,6 +23,10 @@
 		<keyword>samples</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = eval f(x) -set [x1:x2] ...
+			{VAL} = eval f(x) -set [x1:x2] samples=SAMPLES ...
+		</syntax>
 		NumeRe kann eine gewünschte Zahl an linear verteilten Stützstellen eines Ausdrucks mithilfe des Kommandos <code>eval</code> berechnen und direkt in einen Cache speichern. Dazu muss diesem Kommando der auszuwertende Ausdruck, die Variable, bezüglich welcher die Stützstellen berechnet werden sollen, deren linke und rechte Intervallgrenzen und ggf. die Zahl der Stützstellen übergeben werden:<codeblock>eval AUSDRUCK -set VAR=POS1:POS2 samples=STÜTZSTELLEN</codeblock>Wenn statt VAR=POS1:POS2 nur [POS1:POS2] angegeben wird, verwendet NumeRe automatisch <expr>x</expr> als Variable.
 		Wird keine Variable angegeben, wird der Ausdruck als Konstant angenommen und entsprechend der Zahl der Samples wiederholt zurückgegeben.
 		Wenn die Zahl der Stützstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable VAR als Ausdruck.

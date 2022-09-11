@@ -24,6 +24,10 @@
 		<keyword>shorttime</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			stfa TABLE()
+			stfa TABLE() -samples=SAMPLES ...
+		</syntax>
 		NumeRe may apply a short-time Fourier analysis (STFA) to data sets, to create a so-called spectrogram. Simply pass the data set to the command <code>stfa</code>:<codeblock>stfa DATA(I1:I2,J1:J2)</codeblock>NumeRe expects two columns: <expr>x</expr> and <expr>y</expr> values.
 		NumeRe assumes that the passed data is sorted in their <code>x</code> values and regularized as well, meaning that the <expr>x</expr> values are distributed equidistantly in their interval. Use <code>sort</code> and <code>regularize</code>, if that's not the case.
 		NumeRe will determine the window size of the short-time Fourier analysis according to the number of data points divided by 32. The result of the analysis will be written to the cache <code>stfdat()</code>, which will be created automatically, if it doesn't exist.

@@ -25,6 +25,12 @@
 		<keyword>verbind</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			compose
+			\tPLOT1 ...
+			\t[...]
+			endcompose
+		</syntax>
 		NumeRe supports the <em>combination</em> of different plotting styles to a new, custom plotting style; e.g. the linkage between a vector to a density or contour plot, to visualize a force field together with its potential.
 		To link multiple plots together, all these different plots have to be gathered in a common <code>compose...endcompose</code> block:<codeblock>compose\n\tPLOT1\n\tPLOT2\n\t[...]\nendcompose</codeblock>
 		The order of the passed plots doesn't have much influence, because internally they'll be reordered in a reasonable order (meaning that, for instance, a density plot will be shown behind a vector plot, although the vector plot was calculated first). Some plot options will be processed before the first plot will be calculated, resulting in an indifference on the actual plotting command. They will be applied automatically to all plots in the <code>compose...endcompose</code> block. These plot options are similar to <code>grid</code>, <code>box</code>, <code>coords=COORDS</code>, <code>xlabel=LABEL</code> (and others) and <code>title=TITLE</code>.

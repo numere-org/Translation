@@ -38,6 +38,11 @@
 		<keyword>width</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			random -lines=LINES cols=COLS
+			random -lines=LINES cols=COLS distrib=DISTRIBUTION ...
+			random -lines=LINES cols=COLS target=TABLE() ...
+		</syntax>
 		Der NumeRe-Zufallszahlengenerator <code>random</code> generiert eine oder mehrere Datenreihen beliebiger Länge, die mit Zufallszahlen einer gewählten Verteilung folgend gefüllt sind. Dabei können alle nötigen Parameter der gewählten Verteilung bestimmt werden.
 		Die Datenreihen werden in eine Tabelle geschrieben. Die Zieltabelle kann mit der Option <code>target=TABLE()</code> definiert werden, standardmäßig wird <code>table()</code> verwendet.
 		<code>random</code> besitzt des Weiteren folgende Optionen, die direkt übergeben werden können:

@@ -29,6 +29,14 @@
 		<keyword>savitzkygol</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			smooth TABLE() -order=ORDER
+			smooth TABLE() -order=ORDER method=METHOD ...\n
+			resample TABLE() -samples=SAMPLES
+			resample TABLE() -samples=SAMPLES method=METHOD ...\n
+			retouch TABLE()
+			retouch TABLE() -grid ...
+		</syntax>
 		NumeRe kann die Daten aus ein oder mehreren Datenreihen zur einfacheren Analyse modifizieren. Hierzu stehen die Kommandos <code>smooth</code>, <code>resample</code> und <code>retouch</code> zur Verfügung. <code>smooth</code> glättet die Datensätze, um etwaiges Rauschen zu reduzieren, <code>resample</code> erhöht oder verringert die Anzahl an Datenpunkten und <code>retouch</code> entfernt ungültige Werte aus Datensätzen durch lineare Interpolation. Diese Kommandos können nur auf Datensätze in einer Tabelle angewendet werden.
 		<h>Daten glätten</h>
 		Das Kommando <code>smooth</code> benötigt den Datenbereich, auf den es angewendet werden soll, die Ordnung, die Filterbezeichnung, sowie ggf. die Form des Filters:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDNUNG method=FILTER alpha=FORM</codeblock>Die Ordnung <code>ORDNUNG</code> bestimmt die Größe des Datenausschnitts, über die eine gemeinsame Filterung erfolgt. Die folgenden Filter stehen als <code>method</code> zur Verfügung:

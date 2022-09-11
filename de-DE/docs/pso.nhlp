@@ -25,6 +25,10 @@
 		<keyword>swarm</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = pso f(x)
+			{VAL} = pso f(x,...) -set [x0:x1,...] ...
+		</syntax>
 		Mit dem Partikelschwarm-Optimierer kann das globale Minimum einer bis zu vierdimensionalen, skalaren Funktion (<expr>phi = f(x,y,z,t)</expr>) gesucht werden. Dazu benötigt der Optimierer die entsprechende Zahl an Intervallen:<codeblock>{VAL} = pso f(x,y,z,t) -set [x0:x1,y0:y1,z0:z1,t0:t1]</codeblock>Wenn weniger Intervalle angegeben werden, wird die Funktion dementsprechend wenigerdimensional betrachtet. Wird gar kein Intervall angegeben, so wird <code>[x0:x1] = [-10:10]</code> angenommen.
 		Der Optimierer gibt dabei die Position <expr>r0 = (x0,y0,z0,t0)</expr> zurück, an der die Funktion <expr>f(x,y,z,t)</expr> in den vorgegebenen Intervallen minimal wird (trifft das auf mehrere Positionen zu, wird nur eine davon zurückgegeben).
 		Zu berücksichtigen ist dabei jedoch, dass ein Partikelschwarm-Optimierer inhärent <em>zufallsbasiert</em> ist. Daher ist die bestimmte Position <expr>r0</expr> nur bis auf eine gewisse Unsicherheit <expr>r0 +/- delta_r</expr> in der Größenordnung des größten Intervalls geteilt durch zweimal die Anzahl der Partikel bestimmt. (Bei 100 Partikeln und einer Intervallbreite von 10 ist also eine Unsicherheit von <expr>delta_r approx 0.05</expr> zu erwarten.)

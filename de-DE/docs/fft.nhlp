@@ -27,6 +27,14 @@
 		<keyword>axisshift</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			fft TABLE()
+			fft TABLE() -axisshift ...
+			fft TABLE() -inverse ...\n
+			fft2d TABLE()
+			fft2d TABLE() -axisshift ...
+			fft2d TABLE() -inverse ...
+		</syntax>
 		NumeRe ist mit einem Algorithmus zu schnellen Fourier-Transformation (<em>fast fourier transformation; fft</em>) ausgestattet, der Datensätze zur Analyse in ihre enthaltenen Frequenzen zerlegen kann. Dieser Algorithmus wird mit dem Kommando <code>fft</code> gestartet, wobei die Datenreihen zusätzlich angegeben werden müssen:<codeblock>fft DATENOBJEKT(I1:I2,J1:J2)</codeblock>
 		NumeRe erwartet bei einer Fourier-Transformation mindestens zwei Spalten: Achsenwerte (Zeit oder Frequenz) und Amplitude (Real- oder Komplexwertig). Wenn drei Spalten angegeben werden, werden diese als Achsenwerte, Amplitude und Phase, oder - falls die zusätzliche Option <code>-complex</code> übergeben wird - als Achsenwerte, Realteil und Imaginärteil der Amplitude interpretiert.
 		Im Falle eines Datengitters oder eines Bildes kann auch eine 2D-FFT mit dem Kommando <code>fft2d</code> durchgeführt werden.

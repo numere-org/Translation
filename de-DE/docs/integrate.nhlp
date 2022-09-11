@@ -26,6 +26,11 @@
 		<keyword>eps</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VALS} = integrate f(x), ... -set [x1:x2] ...
+			{VALS} = integrate TABLE() -set ...\n
+			{VALS} = integrate f(x,y), ... -set [x1:x2,y1:y2] ...
+		</syntax>
 		NumeRe ist mit Funktionen zur numerischen Integration ausgestattet. Der dazu einzugebende Befehl <code>integrate</code> ruft die entsprechende Funktion auf. Ob eine 1D- oder 2D-Integration ausgeführt wird, entscheidet NumeRe anhand der übergebenen Optionen (s. u.). Die Integrationsvariable im 1D-Fall ist <expr>x</expr>; im 2D-Fall sind es <expr>x</expr> und <expr>y</expr>.
 		Die Funktionen <expr>f(x)</expr> bzw. <expr>f(x,y)</expr> sind direkt im Anschluss von <code>integrate</code> einzugeben. Dabei können auch mehrere Funktionen zugleich integriert werden, so lange ihre Integrationsgrenzen übereinstimmen. Verwendete Variablen (mit Ausnahme von <expr>x</expr> bzw. <expr>x</expr> und <expr>y</expr>) sind zuvor zu deklarieren.
 		Die Grenzen, die numerische Auflösung der Integration und das Integrationsverfahren müssen dem Kommando mittels dem Parameter <code>-set</code> als Option übergeben werden. Werden dabei nur Grenzen für <expr>x</expr> angegeben, wird eine 1D-Integration ausgeführt. Werden hingegen die Grenzen für <expr>x</expr> und <expr>y</expr> angegeben, wird eine 2D-Integration ausgeführt. Die Grenzen können dabei einzeln wie im Folgenden oder gemeinsam durch <code>[x0:x1,y0:y1]</code> übergeben werden.

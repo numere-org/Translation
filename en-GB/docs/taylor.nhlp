@@ -26,6 +26,10 @@
 		<keyword>unique</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			{VAL} = taylor f(x) -set x=x0
+			{VAL} = taylor f(x) -set x=x0 n=VAL ...
+		</syntax>
 		NumeRe may approximate functions depending on a variable with a polynomial of the order <expr>n >= 0</expr> using a Taylor series expansion. This polynomial doesn't have to match the approximated function at any spot except of the expansion point (this a well-known property of the Taylor expansion).
 		The approximation is done numerically. This implies unrecoverable rounding deviations, which are limited for small orders of expansion. Up to <em>around</em> the order <expr>n = 10</expr> NumeRe may calculate quite fitting coefficients; the orders above instead probably contain strong deviations compared to an analytical determination.
 		The Taylor expansion of a function <code>FUNCTION(VAR)</code> will be initiated with the command <code>taylor</code> followed by the function <code>FUNCTION(VAR)</code>. In addition, the variable VAR and the position POS, which determine, where the function shall be expanded, have to be passed after the parameter <code>-set</code>:<codeblock>taylor FUNCTION(VAR) -set VAR=POS</codeblock>

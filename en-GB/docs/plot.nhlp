@@ -23,6 +23,15 @@
 		<keyword>plot</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			plot f(x), ...
+			plot f(x) "LEGEND", ...\n
+			plot TABLE(), ...
+			plot TABLE() "LEGEND", ...\n
+			plot CLUSTER{}, ...
+			plot CLUSTER{} "LEGEND", ...\n
+			plot ... -set [x1:x2,y1:y2] ...
+		</syntax>
 		The command <code>plot</code> initiates the plotting algorithm. The functions and/or data sets, which are separated with commata, have to be appended directly to this command. They will be displayed as a graphical plot in the <a href="nhlp://graphviewer?frame=new">NumeRe graph viewer</a> or saved directly to a file.
 		The plotting variable for functions is <expr>x</expr>. All other variables will be regarded as constant parameters.
 		Singularities in graphs are recognized by NumeRe, as soon as the value interval is larger than three orders of magnitude. The value interval will be correspondingly adapted in this case.
@@ -33,8 +42,8 @@
 		<em>Important:</em> You should avoid whitespaces in the values of your options, because they are used for separating the options themselves. If they are needed for <code>title=</code>, <code>*label=</code> or the filename, then the whole option value has to be passed surrounded by quotation marks.
 		Options, which were set once, will be saved for further usage and (as long as they won't be reverted) are automatically used for all further plots in the current session. Exceptions thereof are high resolution, filenames, title, plotting intervals, line styles and axis labels.
 		If the output format TeX (through <code>otex</code>) was chosen, NumeRe will create two files: a file with the desired filename and a further file, with <code>main</code> appended to the filename. This acts as TeX main file, which will include the previous file while a TeX compilation run.
-		<example desc="Plotting of the function <expr>f(x) = x^2</expr> and the columns 2 and 3 out of the cache with the options <code>box grid title='Plot of a parabola' opng=Parabola</code> and a custom legend to the cache:" type="verbatim">
-			|&lt;- plot x^2, cache(:,2:3) "Approximation" -set box grid title="Plot of a parabola" opng=Parabola
+		<example desc="Plotting of the function <expr>f(x) = x^2</expr> and the columns 2 and 3 out of a table with the options <code>box grid title='Plot of a parabola' opng=Parabola</code> and a custom legend to the table:" type="verbatim">
+			|&lt;- plot x^2, table(:,2:3) "Approximation" -set box grid title="Plot of a parabola" opng=Parabola
 			|-&gt; Calculating data for Plot ...
 			|-&gt; Saving ... Success.
 			|   Saved at: "&PLOTPATH&/Parabola.png"

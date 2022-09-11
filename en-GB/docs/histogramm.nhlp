@@ -28,6 +28,12 @@
 		<keyword>scott</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			hist TABLE()
+			hist TABLE() -set bins=BINS ...\n
+			hist2d TABLE()
+			hist2d TABLE() -set sum ...
+		</syntax>
 		The command <code>hist</code> creates the data set for visualizing a histogram out of a passed data row. Either the width or the number of bins may be set. If neither was set, NumeRe will automatically determine them according to the <em>Sturges-Rule</em>. The new created table may be saved afterwards.
 		During evaluation NumeRe creates the graphical visualisation of the histogram data set itself. Options, which shall be used for this histogram, have to be set in advance using <code>plot -set OPTIONS</code>.
 		<code>hist</code> may create multiple histograms for more than one data row at once, but the bins are in this case identical for all data rows and the results will be part of one common table with multiple columns. The graphical representation including all histograms and will be created as well.

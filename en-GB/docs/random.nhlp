@@ -38,6 +38,11 @@
 		<keyword>width</keyword>
 	</keywords>
 	<contents>
+		<syntax>
+			random -lines=LINES cols=COLS
+			random -lines=LINES cols=COLS distrib=DISTRIBUTION ...
+			random -lines=LINES cols=COLS target=TABLE() ...
+		</syntax>
 		NumeRe's random number generator <code>random</code> creates one or more data rows with arbitrary length, which are filled with random numbers of a chosen distribution. All necessary parameters for the desired distribution may be defined in advance.
 		The data rows may be written to a table. The target table may defined using the option <code>target=TABLE()</code> and defaults to <code>table()</code>.
 		In addition, <code>random</code> knows the following options, which may passed directly:

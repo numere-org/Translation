@@ -190,22 +190,22 @@
 		Eine Auswahl-Verzweigung muss mindestens ein <code>case</code> Statement enthalten. Weitere <code>case</code> oder <code>default</code> Statements sind optional.
 		Es muss beachtet werden, dass das Kommando <code>break</code> <em>nicht</em> an umfassende Schleifen weitergereicht wird, da es in <code>switch</code> selbst ausgewertet wird. Das Kommando <code>continue</code> wird normal weitergereicht.
 		Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen ähnliche Funktionalitäten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung für die Auswahl des korrekten Falls konstant. Die Ordnung der Fälle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benötigt <code>if</code> für jeden <code>elseif</code>, der als FALSCH ausgewertet wird, linear mehr Zeit.
-		<example desc="Eine Auswahl-Verzweigung, die nach Arbeitstagen und Wochenende selektiert:" type="verbatim">
-			|   switch (x)
-			|   case 1:
-			|   case 2:
-			|   case 3:
-			|   case 4:
-			|   case 5:
-			|       print "Arbeitstag"
-			|       break;
-			|   case 6:
-			|   case 7:
-			|       print "Wochenende"
-			|       break;
-			|   default:
-			|       print "Dieser Wochentag existiert nicht."
-			|   endswitch
+		<example desc="Eine Auswahl-Verzweigung, die nach Arbeitstagen und Wochenende selektiert:" type="codeblock">
+			switch (x)
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			\tprint "Arbeitstag"
+			\tbreak;
+			case 6:
+			case 7:
+			\tprint "Wochenende"
+			\tbreak;
+			default:
+			\tprint "Dieser Wochentag existiert nicht."
+			endswitch
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://for?frame=self">help for</a> und <a href="nhlp://try?frame=self">help try</a>
 	</contents>
