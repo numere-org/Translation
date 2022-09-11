@@ -77,6 +77,7 @@ covar(MAT,MAT)~Berechnet die Kovarianz der beiden Argumente~covariance covar()~c
 credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about versionsinformationen~credits
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
 cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
+cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die auﬂerhalb der definierten Grenzen liegen aus einer Matrix und ersetzt sie durch den Grenzwert~cutoff abschneiden limit threshold grenzwert~cutoff(
 cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sph‰rische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sph‰rische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel sheet mappe workbook~help data()

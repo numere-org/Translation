@@ -77,6 +77,7 @@ covar(MAT,MAT)~Calculates the covariance of the both arguments~covar() kovarianz
 credits~Legal information about NumeRe~info about versionsinformationen~credits
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt~cross(
 cst~Defines the local clusters in a procedure~procedure local clusters~help cst
+cutoff(MAT,THRESHOLD,MODE)~Removes values that are outside of the defined limits from a matrix and replaces them with the limit value~cutoff limit threshold~cutoff(
 cyltocart(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
