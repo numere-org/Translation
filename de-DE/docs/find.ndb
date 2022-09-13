@@ -380,6 +380,7 @@ to_lowercase(STR)~Wandelt die Groﬂbuchstaben in STR in Kleinbuchstaben um~zeiche
 to_polar(z)~Wandelt eine kartesische Darstellung in die Polardarstellung um~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
 to_rect(z)~Wandelt eine Polardarstellung der komplexen Zahl z in die kartesische Darstellung um~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
 to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche um~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
+to_tex(complex,precision)~Wandelt eine komplexe Zahl "complex" in einen String im TEX-Format mit der Pr‰zision "precision" um~string zeichenkette conversion konvertierung tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Wandelt die Zeit in STR2 gem‰ﬂ dem Schema STR1 in einen Zeitwert um~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Groﬂbuchstaben um~string zeichenkette wert # \" to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben~to_uppercase(
 to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(

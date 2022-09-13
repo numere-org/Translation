@@ -381,6 +381,7 @@ to_lowercase(STR)~Transforms the uppercase letters in STR to lowercase~zeichenke
 to_polar(z)~Converts a cartesian representation of the complex number z into the polar representation~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
 to_rect(z)~Converts a polar representation of the complex number z into the cartesian representation~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
 to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
+to_tex(complex,precision)~Converts a complex number "complex" into a string in TEX format with the precision "precision"~string conversion tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert # \" to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben~to_uppercase(
 to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(
