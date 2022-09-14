@@ -143,7 +143,8 @@ gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greates
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
 getfilelist(STR,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
-getfileparts(sFilePath)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
+getfileinfo(STR)~Gibt Meta-Informationen zu der angegebenen Datei in sFilePath als eine Schlüssel-Wert-Liste zurück~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
+getfileparts(STR)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
 getfolderlist(STR,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
 getindices(STR,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
 getkeyval({STR},STR,ARG,LOG)~Gibt den Wert zum zugehörigen Schlüssel aus der zweiten Zeichenkette aus der Schlüssel-Wert-Liste des ersten Zeichenkettenarrays zurück~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyval(
@@ -380,7 +381,7 @@ to_lowercase(STR)~Wandelt die Großbuchstaben in STR in Kleinbuchstaben um~zeiche
 to_polar(z)~Wandelt eine kartesische Darstellung in die Polardarstellung um~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
 to_rect(z)~Wandelt eine Polardarstellung der komplexen Zahl z in die kartesische Darstellung um~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
 to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche um~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
-to_tex(complex,precision)~Wandelt eine komplexe Zahl "complex" in einen String im TEX-Format mit der Präzision "precision" um~string zeichenkette conversion konvertierung tex latex to_tex()~to_tex(
+to_tex(VAL,VAL)~Wandelt einen numerischen Wert in einen String im TeX-Format um~string zeichenkette conversion konvertierung tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Wandelt die Zeit in STR2 gemäß dem Schema STR1 in einen Zeitwert um~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Großbuchstaben um~string zeichenkette wert # \" to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
 to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(

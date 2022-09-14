@@ -142,6 +142,7 @@ gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
 getfilelist(STR,T)~Returns a list of strings containing all files matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
+getfileinfo(STR)~Returns meta information about the specified file in sFilePath as a key-value list~file information size groesse grˆﬂe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
 getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
 getfolderlist(STR,T)~Returns a list of strings containing all directories matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
 getindices(STR,T)~Returns the indices of the as a string passed data object access~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
@@ -381,7 +382,7 @@ to_lowercase(STR)~Transforms the uppercase letters in STR to lowercase~zeichenke
 to_polar(z)~Converts a cartesian representation of the complex number z into the polar representation~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
 to_rect(z)~Converts a polar representation of the complex number z into the cartesian representation~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
 to_string(EXPR)~Transforms EXPR to a string, if it is not already one~zeichenkette umwandeln transformation conversion convert wert # \" to_string()~to_string(
-to_tex(complex,precision)~Converts a complex number "complex" into a string in TEX format with the precision "precision"~string conversion tex latex to_tex()~to_tex(
+to_tex(VAL,VAL)~Converts a numeric value into a string in TeX format~string conversion tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 into a time value~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert # \" to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben~to_uppercase(
 to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert # \" to_value()~to_value(
