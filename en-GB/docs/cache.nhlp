@@ -55,6 +55,7 @@
 			DD.MM.YY(YY)
 			YY(YY)-MM-DD
 			YY(YY)/MM/DD
+			DD/MM/YYYY or D/M/YY(YY)
 			hh:mm
 			hh:mm:ss
 			hh:mm:ss.iii
