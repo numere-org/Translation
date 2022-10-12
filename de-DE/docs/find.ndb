@@ -27,12 +27,16 @@
 abs(x)~Betrag von x~absolutwert absolute value betrag abs()~abs(
 acos(x)~Arkuskosinus von x. arccos(x) ist ein Synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acos(
 acosh(x)~Areakosinus hyperbolicus von x. arcosh(x) ist ein Synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acosh(
+acsc(x)~Arkuskosekans von x.~acsc() arkuskosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acsc(
+acsch(x)~Areakosekans hyperbolicus von x.~acsch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acsch(
 Ai(x)~Airy-Funktion Ai(x)~optik potentialtopf Ai() optics airyfunction~Ai(
 and(x,y,z,...)~Verknüpft die Argumente mit "&&"~logik logic und~and(
 ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans{}
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
+asec(x)~Arkussekans von x.~asec() arkussekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asec(
+asech(x)~Areasekans hyperbolicus von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
 assemble(MAT,MAT,MAT)~Erstellt eine neue Matrix aus den Werten der dritten Matrix MAT mit den Zielindices aus der ersten und zweiten Matrix~assemble() gather zusammensetzen zusammenbauen kombinieren~assemble(
@@ -76,6 +80,8 @@ cot(x)~Kotangens von x~cot() cotangens ctg() trigonometrische funktionen trigono
 covar(MAT,MAT)~Berechnet die Kovarianz der beiden Argumente~covariance covar()~covar(
 credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about versionsinformationen~credits
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
+csc(x)~Kosekans von x.~csc() kosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~csc(
+csch(x)~Kosekans hyperbolicus von x.~csch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~csch(
 cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
 cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die außerhalb der definierten Grenzen liegen aus einer Matrix und ersetzt sie durch den Grenzwert~cutoff abschneiden limit threshold grenzwert~cutoff(
 cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
@@ -304,6 +310,8 @@ roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen 
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
 save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
+sec(x)~ sekans von x~sec() sekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~sec(
+sech(x)~ areasekans von x~sech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~sech(
 seek~Liest ein Abschnitt einer WAVE-Datei~streamable streamen streaming seeking suchen audiodatei file~help seek
 select(MAT,MAT,MAT)~Extrahiert Werte aus der ersten Matrix MAT mit Indices aus zweiter und dritter Matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Fügt ein Separator-Objekt in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
