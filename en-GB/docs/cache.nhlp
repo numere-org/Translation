@@ -27,6 +27,8 @@
 		<keyword>desc</keyword>
 		<keyword>lines</keyword>
 		<keyword>nlines</keyword>
+		<keyword>rows</keyword>
+		<keyword>nrows</keyword>
 		<keyword>cols</keyword>
 		<keyword>ncols</keyword>
 		<keyword>every</keyword>
@@ -49,7 +51,7 @@
 			rename TABLE(), NEWNAME()\n
 			swap TABLE1(), TABLE2()
 		</syntax>
-		Tables are active storages in NumeRe that can cache tabular data so that it can be further processed. Tabular data is characterised by the fact that the data is organised in columns. Columns in NumeRe tables can contain either numeric values, date-time values or <a href="nhlp://string?frame=new">strings</a>. If numeric values are written to string columns, they are automatically converted to strings. Writing strings to numeric columns, on the other hand, is <em>only</em> possible, if the strings can be interpreted as numerical values.
+		Tables are active storages in NumeRe that can cache tabular data so that it can be further processed. Tabular data is characterised by the fact that the data is organised in columns. Columns in NumeRe tables can contain either numeric values, date-time values, logical values, categories or <a href="nhlp://string?frame=new">strings</a>. If numeric values are written to string columns, they are automatically converted to strings. Writing strings to numeric columns, on the other hand, is <em>only</em> possible, if the strings can be interpreted as numerical values.
 		Time-date values are stored in seconds since 1.1.1970 (UTC) with microsecond precision. Such values are generated and processed by special functions (such as <code>time()</code> or <code>timeformat()</code>). Time-date values can also be written as strings into the corresponding columns if they correspond to one of the following schemes or a date-time combination thereof:
 		<verbatim>
 			DD.MM.YY(YY)
@@ -90,7 +92,9 @@
 			<item node="TABLE().describe(sDesc)">Updates the description of the table or dataset to the contents of <code>sDesc</code>. The description can be used to describe the content of the dataset in words by documenting the source and the collection method</item>
 			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
 			<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
-			<item node="TABLE().convert({nCols},sType)">Converts the column type of the columns indexed with <code>{nCols}</code> into the type <code>sType</code>. The new type can be specified either as <code>"value"</code>, <code>"string"</code> or <code>"datetime"</code>. If the conversion is successful, the new type is returned as a string, otherwise the string is empty. Conversion is only possible if the data used in the respective column can also be interpreted in the new type</item>
+			<item node="TABLE().categorize({nCols},{sCategories})">Updates the categories in a categorial column (converts the column, if necessary). The number of new categories does not have to match the old number. Returns the categories of the selected categorial column(s) as a key-value list in case of success</item>
+			<item node="TABLE().categorylist({nCols})">Returns the categories of the selected categorial column(s) as a key-value list. The return value is an empty string, if the selected columns are not categorial</item>
+			<item node="TABLE().convert({nCols},sType)">Converts the column type of the columns indexed with <code>{nCols}</code> into the type <code>sType</code>. The new type can be specified either as <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. If the conversion is successful, the new type is returned as a string, otherwise the string is empty. Conversion is only possible if the data used in the respective column can also be interpreted in the new type</item>
 			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code>, <code>"string"</code> or <code>"datetime"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
 			<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 			<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>

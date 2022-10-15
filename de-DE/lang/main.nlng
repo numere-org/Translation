@@ -279,7 +279,7 @@ BUILTIN_WAITINGFOREDIT=Warte auf Bearbeitung
 # PARSER:
 #=====================================
 PARSER_FIRSTSTART_INTRO=Das war erst einmal das Wichtigste. Nun ist es an dir, dich hier einfach mal in aller Ruhe umzusehen. Versuch einfach mal, einen Ausdruck oder ein Kommando einzugeben!$Und falls mal was schief geht: Hilfe findest du unter "help THEMA" oder "find BEGRIFFE". Und wenn ich gar nicht verstehe, was du willst, werde ich auch selbst versuchen, den passenden Artikel in der Hilfe zu finden ...$(Mit "quit" beendest du mich)
-PARSER_INTRO=Einen Ausdruck oder ein Kommando eingeben ...$(Siehe "help" oder "help expression" für weitere Informationen)
+PARSER_INTRO=Hallo %%1%%! Gebe einen Ausdruck oder ein Kommando ein ...$(Siehe "help" oder "help expression" für weitere Informationen)
 PARSER_STARTINGSCRIPT=Starte Script "%%1%%" ...
 PARSER_SCRIPT_FINISHED=Die Ausführung des Scripts "%%1%%" wurde erfolgreich abgeschlossen.
 PARSER_ABORTED=Deklaration abgebrochen.

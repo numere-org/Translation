@@ -279,7 +279,7 @@ BUILTIN_WAITINGFOREDIT=Waiting for edit
 # PARSER:
 #=====================================
 PARSER_FIRSTSTART_INTRO=This is enough information, which you'll need for the first time. Now it's your turn, to get a look into everything. Don't hesitate and try a commando or an expression for yourself!$If there's something going wrong: you'll find help at "help TOPIC" or "find TERMS". And if I don't understand at all, what you want me to do, then I will try to find the matching article in the documentation by myself ...$(Type "quit" to close me)
-PARSER_INTRO=Enter an expression or a command ...$(See "help" or "help expression" for further information)
+PARSER_INTRO=Hello %%1%%! Enter an expression or a command ...$(See "help" or "help expression" for further information)
 PARSER_STARTINGSCRIPT=Starting script "%%1%%" ...
 PARSER_SCRIPT_FINISHED=The execution of the script "%%1%%" was finished successfully.
 PARSER_ABORTED=Declaration aborted.

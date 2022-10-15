@@ -401,7 +401,7 @@ treelist~Inserts a tree list into a window layout~textctrl windowsystem layout g
 try~Starts a try-catch block in which errors can be caught and handled~try catch endtry exception handling error throw~help try
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
-url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip~help url
+url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip download upload~help url
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
 var~Defines the local numerical variables in a procedure~procedure local variables~help var
 vcat(MAT,MAT)~Vertically concatenates tow matrices that have the same number of columns~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
