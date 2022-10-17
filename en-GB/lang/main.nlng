@@ -93,6 +93,7 @@ COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_H=C header file
 COMMON_FILETYPE_DOT=Graphviz DOT file
 COMMON_FILETYPE_XML=XML file
+COMMON_DATAFILE_CORRUPTED=A possible file corruption was detected in the file "%%1%%".
 COMMON_FUNCTION_DEPRECATED=%%1%%%%LINEBREAK%%This function is deprecated and will be removed in the future.
 COMMON_COMMAND_DEPRECATED=%%1%%%%LINEBREAK%%This command is deprecated and will be removed in the future.
 COMMON_SYNTAX_DEPRECATED=%%1%%%%LINEBREAK%%This syntax is deprecated and will not be supported in the future.

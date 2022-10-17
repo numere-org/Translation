@@ -317,6 +317,7 @@ seek~Reads a section of a WAVE audio file~streamable streamen streaming seeking 
 select(MAT,MAT,MAT)~Extracts values from the first matrix MAT using the indices from the second and third matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 set -OPTION~Change the current program setting~einstellungen optionen settings konfigurieren konfiguration einstellen configuration~help set
+sha256(STR,N)~Calculates the SHA-256 of the passed string~sha256() checksum secure hash algorithm md5 crc32~sha256(
 show~Shows the content of the passend data object~data() cache() table() auflisten~help show
 shuffle(n,m)~Returns n randomly selected and unique values out of a 1:m array~mischen zufällig random shuffle()~shuffle(
 sign(x)~Returns the sign of x~vorzeichen signum sign()~sign(
