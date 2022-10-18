@@ -91,6 +91,8 @@
 			<item node="TABLE().description">Returns the description of the table or dataset as a string</item>
 			<item node="TABLE().describe(sDesc)">Updates the description of the table or dataset to the contents of <code>sDesc</code>. The description can be used to describe the content of the dataset in words by documenting the source and the collection method</item>
 			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
+			<item node="TABLE().rows">Returns the number of rows of the table</item>
+			<item node="TABLE().cols">Returns the number of columns of the table</item>
 			<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
 			<item node="TABLE().categorize({nCols},{sCategories})">Updates the categories in a categorial column (converts the column, if necessary). The number of new categories does not have to match the old number. Returns the categories of the selected categorial column(s) as a key-value list in case of success</item>
 			<item node="TABLE().categorylist({nCols})">Returns the categories of the selected categorial column(s) as a key-value list. The return value is an empty string, if the selected columns are not categorial</item>
@@ -101,8 +103,8 @@
 		</list>
 		The following are defined as modifiers:
 		<list>
-			<item node=".rows">Applies the corresponding method line by line and returns a corresponding number of results (<code>.lines</code> is an alias)</item>
-			<item node=".cols">Applies the corresponding method column by column and returns a corresponding number of results</item>
+			<item node=".rows">Applies, in combination with another method, this method line by line and returns a corresponding number of results (<code>.lines</code> is an alias)</item>
+			<item node=".cols">Applies, in combination with another method, this method column by column and returns a corresponding number of results</item>
 			<item node=".grid">Declares the current table as a data grid so that the first two columns are ignored for the calculation</item>
 			<item node=".every(nFirst,nIncr)">Use with <code>rows</code> or <code>cols</code> to specify the first column/row (nFirst) and the increment (each => nIncr=1, each second => nIncr=2, etc.). If only one value is specified, it is used for both values. Columns/rows can also be specifically selected if a vector for nFirst (<code>.every({1:10})</code>) is passed</item>
 		</list>
