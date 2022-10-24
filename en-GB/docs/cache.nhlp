@@ -100,6 +100,9 @@
 			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code>, <code>"string"</code> or <code>"datetime"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
 			<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 			<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
+			<item node="TABLE().index(nCol,vals{})">Returns the indices of the elements in column <code>nCol</code> that match the values in cluster <code>vals{}</code>. Each set of indices is separated from the other sets by a NaN</item>
+			<item node="TABLE().fndcols({sNames})">Returns the indices of all columns whose headings match <code>sNames</code>. If nothing is found, NaN is returned</item>
+			<item node="TABLE().countif({nCols},vals{})">Counts the elements in columns <code>nCols</code> that match the values in cluster <code>vals{}</code>. For each column and value in <code>vals{}</code>, a sum is returned ordered by the columns</item>
 		</list>
 		The following are defined as modifiers:
 		<list>

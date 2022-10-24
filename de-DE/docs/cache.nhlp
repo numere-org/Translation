@@ -100,6 +100,9 @@
 			<item node="TABLE().typeof({nCols})">Gibt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei entweder als <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> oder <code>"category"</code> angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ <code>"none"</code></item>
 			<item node="TABLE().minpos">Bestimmt die Position des Minimums der Tabelle und gibt diese in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
 			<item node="TABLE().maxpos">Bestimmt die Position des Maximums der Tabelle und gibt diese in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
+			<item node="TABLE().index(nCol,vals{})">Gibt die Indices der Elemente in der Spalte <code>nCol</code> zurück, die mit den Werte im Cluster <code>vals{}</code> übereinstimmen. Jeder Satz von Indices ist durch ein NaN von den anderen Sätzen getrennt</item>
+			<item node="TABLE().fndcols({sNames})">Gibt die Indices aller Spalten zurück, deren Überschriften mit <code>sNames</code> übereinstimmen. Wird nichts gefunden, wird NaN zurückgegeben</item>
+			<item node="TABLE().countif({nCols},vals{})">Zählt die Elemente in den Spalten <code>nCols</code>, die mit den Werten im Cluster <code>vals{}</code> übereinstimmen. Für jede Spalte und jeden Wert in <code>vals{}</code> wird eine Summe geordnet nach den Spalten zurück gegeben</item>
 		</list>
 		Als Modifizierer sind die folgenden definiert:
 		<list>
