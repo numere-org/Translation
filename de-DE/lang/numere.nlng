@@ -307,6 +307,8 @@ PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=Der Schlüssel %%1%% konnte von der Funkti
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt; leere Klammern indizieren, dass die Funktion keinen Wert zurückgibt.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Weiterführende Informationen zu den vordefinierten mathematischen Funktionen können in der NumeRe-Hilfe mittels "help func" erhalten werden.
 # Methoden
+PARSERFUNCS_LISTFUNC_METHODS_TYPE_DATA=Tabellen
+PARSERFUNCS_LISTFUNC_METHODS_TYPE_STRING=Zeichenketten
 PARSERFUNCS_LISTFUNC_METHOD_ALIASOF_[DATA]=				    aliasof(sTable)                       STR      - Wandelt die aktuelle Tabelle in einen Alias auf die Tabelle, deren Name durch die Zeichenkette sTable übergeben wurde, um. Die aktuelle Tabelle wird dabei maskiert und kann währenddessen nicht verwendet werden. Eine leere Zeichenkette deaktiviert den Alias wieder. Diese Methode gibt den Namen der referenzierten Tabelle zurück
 PARSERFUNCS_LISTFUNC_METHOD_AND_[DATA]=				        and                                  {LOG}     - Wendet die Multi-Argumentfunktion "and()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_AT_[STRING]=					at(nPos)                              STR      - Gibt das Zeichen aus der Zeichenkette an der Stelle nPos zurück

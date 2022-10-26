@@ -307,6 +307,8 @@ PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=The key %%1%% could not be found in the p
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=The type of the return value is schematically indicated via VAL = numerical value, STR = string, LOG = logical value (true or false), MAT = matrix, VEC = vector and ARG = type of the argument(s). Return values in braces indicate that the function will return multiple values; empty braces indicate no return value.
 PARSERFUNCS_LISTFUNC_FOOTNOTE2=Further information concerning the predefined mathematical functions can be found in the NumeRe documentation at "help function".
 # Methoden
+PARSERFUNCS_LISTFUNC_METHODS_TYPE_DATA=Tables
+PARSERFUNCS_LISTFUNC_METHODS_TYPE_STRING=Strings
 PARSERFUNCS_LISTFUNC_METHOD_ALIASOF_[DATA]=				    aliasof(sTable)                       STR      - Converts the current table into an alias to the table whose name was passed by the string sTable. The current table is masked and cannot be used during this process. An empty string deactivates the alias again. This method returns the name of the referenced table
 PARSERFUNCS_LISTFUNC_METHOD_AND_[DATA]=				        and                                  {LOG}     - Applies the multi-argument function "and()" on the data set. Using the modificators .cols, .rows, .grid and .every(), the function may be restricted further
 PARSERFUNCS_LISTFUNC_METHOD_AT_[STRING]=					at(nPos)                              STR      - Return the character at the position nPos in the string

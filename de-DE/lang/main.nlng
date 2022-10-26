@@ -815,9 +815,11 @@ GUI_TREE_PLOTS=Plots
 GUI_TREE_COMMANDS=Kommandos
 GUI_TREE_FUNCTIONS=Funktionen
 GUI_TREE_CONSTANTS=Konstanten
+GUI_TREE_METHODS=Methoden
 GUI_TREE_FUNC_KEYLIST=num cmplx mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro
+GUI_TREE_METHOD_KEYLIST=data string
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Datei laden
 GUI_TREE_PUP_LOADTOTABLE=Datei in eine neue Tabelle laden
