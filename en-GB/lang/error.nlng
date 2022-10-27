@@ -108,7 +108,7 @@ ERR_MUP_MISSING_ELSE_CLAUSE=The "If-Then-Else" (A?x:y) operator has no "else" ca
 ERR_MUP_MISPLACED_COLON=Misplaced colon at position $POS$. Forgotten data object or invalid use of the "If-Then-Else" (A?x:y) operator?
 # STD-Errors
 # ====================
-ERR_STD_BADALLOC=NumeRe v %%1%% caused a critical access violation and has to be terminated. Please inform us via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/> about this issue.
+ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/> about this issue.
 ERR_STD_INTERNAL=This is a non-critical error. Please consider, informing us about this error. We're very grateful, if we receive a bug message via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/>.
 # NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ====================
