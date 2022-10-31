@@ -663,6 +663,8 @@ GUI_DLG_REVISIONDIALOG_REFRESH=Versionsverlauf aktualisieren
 GUI_DLG_REVISIONDIALOG_RESTORE=Revision wiederherstellen
 GUI_DLG_REVISIONDIALOG_PROVIDETAGCOMMENT=Kommentar für den neuen Tag:
 GUI_DLG_REVISIONDIALOG_PROVIDETAGCOMMENT_TITLE=NumeRe: Tag-Kommentar
+GUI_DLG_REVISIONDIALOG_CONFIRM_RESTORE=Soll die Revision %%1%% wiederhergestellt werden? Alle ungespeicherten Änderungen gehen dabei verloren.
+GUI_DLG_REVISIONDIALOG_CONFIRM_RESTORE_HEAD=NumeRe: Revision wiederherstellen
 GUI_DLG_REVISIONDIALOG_RESTOREFILE=NumeRe: Ziel zur Wiederherstellung auswählen
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tipps und Tricks

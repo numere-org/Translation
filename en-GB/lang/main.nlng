@@ -663,6 +663,8 @@ GUI_DLG_REVISIONDIALOG_REFRESH=Refresh revisions
 GUI_DLG_REVISIONDIALOG_RESTORE=Restore revision
 GUI_DLG_REVISIONDIALOG_PROVIDETAGCOMMENT=Comment for the new tag:
 GUI_DLG_REVISIONDIALOG_PROVIDETAGCOMMENT_TITLE=NumeRe: Tag comment
+GUI_DLG_REVISIONDIALOG_CONFIRM_RESTORE=Shall we restore the revision %%1%%? All unsaved changes will get lost.
+GUI_DLG_REVISIONDIALOG_CONFIRM_RESTORE_HEAD=NumeRe: Restore revision
 GUI_DLG_REVISIONDIALOG_RESTOREFILE=NumeRe: Choose target for restoring
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
@@ -1291,7 +1293,7 @@ GUI_PKGDLG_AUTODETECTFILES=Detect dependencies
 GUI_PKGDLG_SELECT_FILES=Select files for the package
 GUI_PKGDLG_LOAD_PROJECT=Load project
 GUI_PKGDLG_SAVE_PROJECT=Save project
-GUI_PKGDLG_CREATE_PACKAGE=Create project
+GUI_PKGDLG_CREATE_PACKAGE=Create package
 GUI_PKGDLG_MISSING_MAINPROCEDURE=The main procedure of the current file is missing or not the first one. The procedure "%%1%%" is assigned to the "unknownfile~" namespace.
 GUI_PKGDLG_MISSING_MAINPROCEDURE_HEAD=NumeRe: Missing main procedure
 GUI_PKGDLG_INSTALLERWARNING=This is an installer script. To install the contained procedures, execute it using 'install \"<this>/%%1%%\"'.
