@@ -1319,6 +1319,8 @@ GUI_PKGDLG_MISSING_MAINPROCEDURE_HEAD=NumeRe: Missing main procedure
 GUI_PKGDLG_INSTALLERWARNING=This is an installer script. To install the contained procedures, execute it using 'install \"<this>/%%1%%\"'.
 GUI_PKGDLG_NOTALLFILESFOUND=Not all files referenced by the project could be found. Please check the marked files.
 GUI_PKGDLG_NOTALLFILESFOUND_HEAD=NumeRe: Nicht all files found
+GUI_PKGDLG_UPDATEINSTALLED=The package "%%1%%" is already installed in an older version. Shall the already installed package be synchronized with the new settings?
+GUI_PKGDLG_UPDATEINSTALLED_HEAD=NumeRe: Synchronize package install
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Procedure dependencies [%%1%%]
 GUI_DEPDLG_TREE=Dependency tree of the main procedure of the current file

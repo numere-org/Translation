@@ -1319,6 +1319,8 @@ GUI_PKGDLG_MISSING_MAINPROCEDURE_HEAD=NumeRe: Hauptprozedur fehlt
 GUI_PKGDLG_INSTALLERWARNING=Dies ist ein Installations-Script. Um die enthaltenen Prozeduren zu installieren, muss es mit 'install \"<this>/%%1%%\"' ausgeführt werden.
 GUI_PKGDLG_NOTALLFILESFOUND=Es konnte nicht alle im Projekt hinterlegten Dateien gefunden werden. Bitte überprüfe die markierten Dateien.
 GUI_PKGDLG_NOTALLFILESFOUND_HEAD=NumeRe: Nicht alle Dateien gefunden
+GUI_PKGDLG_UPDATEINSTALLED=Das Package "%%1%%" ist bereits in einer älteren Version installiert. Soll das installierte Package mit den neuen Einstellungen synchronisiert werden?
+GUI_PKGDLG_UPDATEINSTALLED_HEAD=NumeRe: Package-Installation synchronisieren
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Prozedur-Abhängigkeiten [%%1%%]
 GUI_DEPDLG_TREE=Abhängigkeitsbaum der Hauptprozedur in der aktuellen Datei
