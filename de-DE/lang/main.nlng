@@ -97,6 +97,13 @@ COMMON_DATAFILE_CORRUPTED=Eine mögliche Beschädigung wurde in der Datei "%%1%%" 
 COMMON_FUNCTION_DEPRECATED=%%1%%%%LINEBREAK%%Diese Funktion ist veraltet und wird in Zukunft entfernt.
 COMMON_COMMAND_DEPRECATED=%%1%%%%LINEBREAK%%Dieses Kommando ist veraltet und wird in Zukunft entfernt.
 COMMON_SYNTAX_DEPRECATED=%%1%%%%LINEBREAK%%Diese Syntax ist veraltet und wird in Zukunft nicht mehr unterstützt.
+COMMON_WEEKDAY_1=Montag
+COMMON_WEEKDAY_2=Dienstag
+COMMON_WEEKDAY_3=Mittwoch
+COMMON_WEEKDAY_4=Donnerstag
+COMMON_WEEKDAY_5=Freitag
+COMMON_WEEKDAY_6=Samstag
+COMMON_WEEKDAY_7=Sonntag
 TYPE_VALUE=Numerisch
 TYPE_STRING=Zeichenkette
 # MAIN:

@@ -97,6 +97,13 @@ COMMON_DATAFILE_CORRUPTED=A possible file corruption was detected in the file "%
 COMMON_FUNCTION_DEPRECATED=%%1%%%%LINEBREAK%%This function is deprecated and will be removed in the future.
 COMMON_COMMAND_DEPRECATED=%%1%%%%LINEBREAK%%This command is deprecated and will be removed in the future.
 COMMON_SYNTAX_DEPRECATED=%%1%%%%LINEBREAK%%This syntax is deprecated and will not be supported in the future.
+COMMON_WEEKDAY_1=Monday
+COMMON_WEEKDAY_2=Tuesday
+COMMON_WEEKDAY_3=Wednesday
+COMMON_WEEKDAY_4=Thursday
+COMMON_WEEKDAY_5=Friday
+COMMON_WEEKDAY_6=Saturday
+COMMON_WEEKDAY_7=Sunday
 TYPE_VALUE=Numerical
 TYPE_STRING=String
 # MAIN:
