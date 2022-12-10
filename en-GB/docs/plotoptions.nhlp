@@ -41,6 +41,7 @@
 		<keyword>connect</keyword>
 		<keyword>cursor</keyword>
 		<keyword>errorb</keyword>
+		<keyword>equal</keyword>
 		<keyword>fine</keyword>
 		<keyword>font</keyword>
 		<keyword>grid</keyword>
@@ -60,6 +61,7 @@
 		<keyword>maxlin</keyword>
 		<keyword>medium</keyword>
 		<keyword>minlin</keyword>
+		<keyword>nice</keyword>
 		<keyword>noalpha</keyword>
 		<keyword>noanim</keyword>
 		<keyword>noarea</keyword>
@@ -148,7 +150,7 @@
 			<item node="animate/<br/>  noanimate">Activates the creation of a GIF animation, where <expr>t</expr> is used as time parameter. The output will always be saved to GIF. This will not influence the display in the <a href="nhlp://graphviewer?frame=new">GraphViewer</a>. With <code>animate=FRAMES</code> the number of calculated frames may be modified. The default value is 50. Note that the indexes of data sets do only accept integral numbers. Therefore the time interval has to be adapted correspondingly</item>
 			<item node="area/noarea">Fill the area between the curve and the <expr>x</expr> axis or the <expr>x</expr>-<expr>y</expr> plane with the color of the curve. NumeRe will apply a gradient to white.</item>
 			<item node="aspect=VALUE">Modify the ratio of height to width of the plot. Values smaller than 1 result in portrait, values larger than 1 in landscape images</item>
-			<item node="axis/noaxis">(De-)activates the axes</item>
+			<item node="axis[=TYPE]/noaxis">(De-)activates the axes. With <code>axis=nice</code> the intervals that are not given are set to an easy to read interval, with <code>axis=equal</code> they are chosen instead so that the axis intervals are equal to the x axis</item>
 			<item node="axisbind=AXIS">Bind functions and data sets to axes. The axes are represented with the characters <code>lbrt</code>. Each plot object is assigned to a horizontal (<code>tb</code>) and to a vertical (<code>lr</code>) axis. At <em>least</em> one object must be assigned to the left and one to the bottom axis. Needs <code>box</code>and may only be used for the command <code>plot</code>. Colors and labels of the secondary axes may be modified with <code>add*axis</code>.</item>
 			<item node="background=BG/<br/>  nobackground">Load a PNG bitmap as background of the plot. The PNG file will be scaled according to the current set axis ratio</item>
 			<item node="bars/nobars">Show vertical bars instead of points for data plots. Requires equidistant distributed <expr>x</expr> values for correct display. Using <code>bars=WIDTH</code> you may modify the percentage of the bar width; the default value is 90%. If more than two columns are selected, then they will be visualized using further bars. To specify legends for multiple data sets, one has to separate them using linebreaks characters</item>
@@ -161,7 +163,7 @@
 			<item node="crust/nocrust">Reconstructs a 2D surface out of arbitrary distributed <expr>(x,y,z)</expr> points. The current colorscheme will be used</item>
 			<item node="errorbars/<br/>  noerrorbars">(De-)activates errorbars in <expr>x</expr> and <expr>y</expr> direction. Needs 4 columns: <expr>x, y, delta_x, delta_y</expr></item>
 			<item node="font=FONT">Uses the chosen font for the following plots. The default font is <code>pagella</code>; you may choose out of <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code> &amp; <code>schola</code></item>
-			<item node="grid=TYPE/nogrid">(De-)activates a grid of the type TYPE. You may choose out of <code>coarse</code> for a coarse grid and <code>fine</code> for a grid with subintervals</item>
+			<item node="grid[=TYPE]/nogrid">(De-)activates a grid of the type TYPE. You may choose out of <code>coarse</code> for a coarse grid and <code>fine</code> for a grid with subintervals</item>
 			<item node="gridstyle=STYLE">Modify the style of the grid: the first three characters modify style, color and thickness of the standard grid, the second three characters represent the solid (coarse) lines of the fine grid as well as the grid of the vector plots</item>
 			<item node="hbars/nohbars">Show horizontal bars instead of points for data plots. Requires equidistant distributed <expr>y</expr> values for correct display. Using <code>hbars=WIDTH</code> you may modify the percentage of the bar width; the default value is 90%. If more than two columns are selected, then they will be visualized using further bars. To specify legends for multiple data sets, one has to separate them using linebreaks characters</item>
 			<item node="hires/nohires">Create an output with high resolution/quality. The setting <code>hires=all</code> activates the high resolution for all plots of this session. <code>hires=medium</code> activates a medium resolution for the current plot and <code>hires=allmedium</code> activates the medium resolution for the whole session</item>

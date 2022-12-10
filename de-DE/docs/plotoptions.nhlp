@@ -41,6 +41,7 @@
 		<keyword>connect</keyword>
 		<keyword>cursor</keyword>
 		<keyword>errorb</keyword>
+		<keyword>equal</keyword>
 		<keyword>fine</keyword>
 		<keyword>font</keyword>
 		<keyword>grid</keyword>
@@ -60,6 +61,7 @@
 		<keyword>maxlin</keyword>
 		<keyword>medium</keyword>
 		<keyword>minlin</keyword>
+		<keyword>nice</keyword>
 		<keyword>noalpha</keyword>
 		<keyword>noanim</keyword>
 		<keyword>noarea</keyword>
@@ -148,7 +150,7 @@
 			<item node="animate/<br/>  noanimate">Aktiviert die Erzeugung einer GIF-Animation, wobei <expr>t</expr> als Zeitparameter verwendet wird. Animationen werden automatisch als GIF gespeichert. Die Anzeige im <a href="nhlp://graphviewer?frame=new">GraphViewer</a> bleibt davon unbeeinflusst. Mit <code>animate=FRAMES</code> kann die Zahl der berechneten Frames bestimmt werden. Standardmäßig werden 50 verwendet. Bei Datensätzen ist darauf zu achten, dass deren Indices nur natürliche Zahlen unterstützen und das Zeitintervall dementsprechend angepasst werden muss</item>
 			<item node="area/noarea">Den Bereich zwischen der Kurve und der <expr>x</expr>-Achse bzw. der <expr>x</expr>-<expr>y</expr>-Ebene farblich ausfüllen. Es wird automatisch ein Farbverlauf angewendet.</item>
 			<item node="aspect=WERT">Das Verhältnis von Breite zu Höhe des Plots einstellen. Werte kleiner 1 ergeben hochformatige, Werte größer 1 querformatige Plots	</item>
-			<item node="axis/noaxis">Achsen ein-/ausschalten</item>
+			<item node="axis[=TYPE]/noaxis">Achsen ein-/ausschalten. Mit <code>axis=nice</code> werden die nicht vorgegeben Intervalle auf ein einfach zu lesendes Intervall eingestellt, mit <code>axis=equal</code> werden diese stattdessen so gewählt, dass die Achsenintervalle gleich zur x-Achse sind</item>
 			<item node="axisbind=AXIS">Funktionen und Datensätze mit Achsen verknüpfen. Die Achsen sind durch die Zeichen <code>lbrt</code> repräsentiert. Jedes Plotobjekt ist jeweils einer horizontalen (<code>tb</code>) und einer vertikalen Achse (<code>lr</code>) zugeordnet. Es muss <em>mindestens</em> ein Objekt an die linke und eines an die untere Achse zugewiesen werden. Benötigt <code>box</code> und kann nur bei <code>plot</code> verwendet werden. Die Farbe und Beschriftungen der zusätzlichen Achsen können mit <code>add*axis</code> beeinflusst werden.</item>
 			<item node="background=BG/<br/>  nobackground">Die PNG-Datei BG als Hintergrund für einen Plot laden. Die PNG-Datei wird entsprechend des Achsenverhältnisses skaliert</item>
 			<item node="bars/nobars">Vertikale Balken statt Punkte bei Datenplots anzeigen. Erfordert äquidistant verteilte <expr>x</expr>-Werte zur korrekten Darstellung. Mit <code>bars=BREITE</code> kann die prozentuale Breite der Balken bestimmt werden; standardmäßig werden 90% verwendet. Werden mehr als zwei Spalten verwendet, so werden diese als weitere Balken angezeigt. Um Legenden für mehrere Datensätze anzugeben, sind diese durch einen Zeilenumbruchzeichen zu trennen</item>
@@ -161,7 +163,7 @@
 			<item node="crust/nocrust">Rekonstruiert eine 2D-Oberfläche aus beliebig verteilten <expr>(x,y,z)</expr>-Punkten. Es wird das aktuelle Farbschema verwendet</item>
 			<item node="errorbars/<br/>  noerrorbars">Fehlerbalken in <expr>x</expr>- und <expr>y</expr>-Richtung anzeigen/deaktivieren. Benötigt 4 Spalten: <expr>x, y, delta_x, delta_y</expr></item>
 			<item node="font=SCHRIFTART">Verwendet die Schriftart SCHRIFTART für die Beschriftungen der folgenden Plots. Standardmäßig wird <code>pagella</code> geladen; zur Wahl stehen außerdem <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code> &amp; <code>schola</code></item>
-			<item node="grid=TYP/nogrid">Gitter des Typs TYP ein-/ausschalten. Es steht entweder <code>coarse</code> für ein grobes und <code>fine</code> für ein feines Gitter zur Verfügung</item>
+			<item node="grid[=TYPE]/nogrid">Gitter des Typs TYP ein-/ausschalten. Es steht entweder <code>coarse</code> für ein grobes und <code>fine</code> für ein feines Gitter zur Verfügung</item>
 			<item node="gridstyle=STYLE">Den Stil des Gitters ändern: die ersten drei Zeichen beeinflussen Stil, Farbe und Dicke des Standardgitters, die zweiten drei Zeichen stehen für die durchgezogenen Linien des feinen Gitters sowie das Gitter der Vektorplots</item>
 			<item node="hbars/nohbars">Horizontale Balken statt Punkte bei Datenplots anzeigen. Erfordert äquidistant verteilte <expr>y</expr>-Werte zur korrekten Darstellung. Mit <code>hbars=BREITE</code> kann die prozentuale Breite der Balken bestimmt werden; standardmäßig werden 90% verwendet. Werden mehr als zwei Spalten verwendet, so werden diese als weitere Balken angezeigt. Um Legenden für mehrere Datensätze anzugeben, sind diese durch einen Zeilenumbruchzeichen zu trennen</item>
 			<item node="hires/nohires">Ausgabe in hoher Auflösung/Qualität erzeugen. Mit der Einstellung <code>hires=all</code> wird die hohe Auflösung für diese NumeRe-Sitzung dauerhaft aktiviert. <code>hires=medium</code> aktiviert eine mittlere Auflösung für den aktuellen Plot und <code>hires=allmedium</code> aktiviert die mittlere Auflösung für die gesamte NumeRe-Sitzung</item>
