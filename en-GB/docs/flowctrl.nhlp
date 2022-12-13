@@ -54,7 +54,7 @@
 
 
 <article id="for_loop">
-	<title string="FOR loops (Counting loops)" idxkey="for" />
+	<title string="For loops (Counting loops)" idxkey="for" />
 	<keywords>
 		<keyword>endfor</keyword>
 		<keyword>for</keyword>
@@ -64,30 +64,48 @@
 		<keyword>sp</keyword>
 	</keywords>
 	<contents>
-		FOR loops are <a href="nhlp://flowctrl?frame=new">control flow statements</a> and perform repeated calls of the same <expr>N</expr> expressions. Here, the expressions can also refer to the results of the previous call. To uniquely identify a loop pass, the loop index is used, which is to be declared together with its bounds directly following <code>for</code> in the form<codeblock>for (INDEX = a:b)</codeblock>. This index can of course be dealt with in the same way as normal variables.
-		For the bounds, <code>a</code> denotes the initial and <code>b</code> the final value of the index. The values for the indices must be integers. Should <expr>b &lt; a</expr> be chosen, NumeRe will count backwards in this loop.
+		<code>for</code> loops are <a href="nhlp://flowctrl?frame=new">control flow statements</a> and perform repeated calls of the same <expr>N</expr> expressions. There are two variants of this construct: the <em>index based</em> <code>for</code> loop and the <em>range based</em> <code>for</code> loop.
+		<h>Index based loops</h>
+		This variant uses a <em>loop index</em> that uniquely identifies a loop iteration. This index can be handled like normal variables, so that the index can also be used to address not only the current but also previous or subsequent elements of a set. If the index is modified during the run (e.g. incremented), this is taken into account during the evaluation and the iterations are adjusted accordingly (e.g. fewer iterations). The loop index is to be declared together with its limits directly following <code>for</code> in the following form: <code>for (INDEX = I0:I1)</code>
+		For the bounds, <code>I0</code> denotes the initial and <code>I1</code> the final value of the index. The values for the indices must be integers. Should <expr>I0 &gt; I1</expr> be chosen, NumeRe will count backwards in this loop.
 		<codeblock>
-			for (INDEX = a:b)
-			\texpressions
+			for (INDEX = I0:I1)
+			\tExpressions
 			endfor
 		</codeblock>
+		<example desc="Index based <code>for</code> loop adding each previous element in a cluster to the current element:" type="verbatim">
+			|&lt;- for (i = 1:10)
+			|FOR&gt; clust{i} += clust{i-1};
+			|FOR&gt; endfor
+		</example>
+		<h>Range based loops</h>
+		Range-based <code>for</code> loops use so-called <em>iterators</em> instead of a loop index. During execution of the <expr>n</expr>-th iteration, these iterators contain a copy of the <expr>n</expr>-th value of the underlying range. To declare this loop form, the iterator must be specified with its range (note the <code>-&gt;</code> operator): <code>for (ITERATOR -> RANGE)</code>
+		A range can be, for example, the contents of a <a href="nhlp://cluster?frame=new">cluster</a> or a column or row from a <a href="nhlp://table?frame=new">table</a>. It is also possible to iterate over the results of functions or <a href="nhlp://procedure?frame=new">procedures</a> with multiple return values.
+		<codeblock>
+			for (ITERATOR -> RANGE) 
+			\tExpressions 
+			endfor 
+		</codeblock>
+		This variant differs from the index-based loop in that the iterator is not an index but a copy of the actual value of the currently iterated range (i.e., the <expr>n</expr>-th value in a cluster, for example). Because of this fact, a loop pass cannot refer to previous or subsequent passes; each pass must be considered in isolation. The value of the iterator can still be modified, but this is not automatically reflected in the iterated area, because it is just a copy.
+		It is also possible to specify multiple iterators for a range. In this case, the values of the range are distributed among these iterators and the number of total iterations is reduced accordingly. In the context of key-value lists, two iterators can be used to distribute the key to the first iterator and the value to the second iterator:<codeblock>for ({KEY, VALUE} -&gt; KEY_VALUE_LIST)</codeblock>
+		<example desc="Range based <code>for</code> loop listing all files in one of the default paths:" type="verbatim">
+			|&lt;- for (sFile -&gt; getfilelist("&LOADPATH&"))
+			|FOR&gt; print sFile
+			|FOR&gt; endfor
+		</example>
+		<h>Parameters</h>
 		The following parameters can be passed when closing a loop (any loop):
 		<list>
-			<item node="sv">Displays all steps of the evaluation (<em>This parameter is deprecated.</em>)</item>.
 			<item node="mask">Suppresses the progress indicator. This can also be activated by default in the settings</item>.
 			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
 			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
 		</list>
-		Extended control over the counting loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an IF condition (which is itself part of the counting loop) and influence the evaluation from there:
+		Extended control over the counting loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the counting loop) and influence the evaluation from there:
 		<list>
 			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost one, the evaluation continues after this loop</item>.
 			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
 		</list>
-		<example desc="FOR loop counting from 1 to 10:" type="verbatim">
-			|&lt;- for (i = 1:10)
-			|FOR&gt; i
-			|FOR&gt; endfor
-		</example>
+
 		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://try?frame=self">help try</a>
 	</contents>
 </article>
@@ -132,15 +150,15 @@
 
 
 <article id="while_loop">
-	<title string="WHILE loops (Conditional loops)" idxkey="while" />
+	<title string="While loops (Conditional loops)" idxkey="while" />
 	<keywords>
 		<keyword>endwhile</keyword>
 		<keyword>while</keyword>
 		<keyword>lnumctrl</keyword>
 	</keywords>
 	<contents>
-		Similar to a FOR loop, a WHILE loop is also a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and repeatedly processes the same <expr>N</expr> expressions. The key difference, however, is that a WHILE loop does not require a counting index and accordingly has no predetermined number of runs. The termination of a WHILE loop is determined either directly by the condition specified in the declaration or by an additional <code>break</code> in a part of the loop.
-		The declaration of a WHILE loop requires a logically evaluable condition, which must be specified in parentheses:<codeblock>while (CONDITION)\n\tExpressions\nendwhile</codeblock>The CONDITION is checked at the beginning of each loop pass and, if the CONDITION has the logical value TRUE, the loop is continued, or, if it is FALSE, exited at that point.
+		Similar to a <code>for</code> loop, a <code>while</code> loop is also a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and repeatedly processes the same <expr>N</expr> expressions. The key difference, however, is that a <code>while</code> loop does not require a counting index and accordingly has no predetermined number of runs. The termination of a <code>while</code> loop is determined either directly by the condition specified in the declaration or by an additional <code>break</code> in a part of the loop.
+		The declaration of a <code>while</code> loop requires a logically evaluable condition, which must be specified in parentheses:<codeblock>while (CONDITION)\n\tExpressions\nendwhile</codeblock>The CONDITION is checked at the beginning of each loop pass and, if the CONDITION has the logical value TRUE, the loop is continued, or, if it is FALSE, exited at that point.
 		The following parameters can be passed when closing a loop (regardless of which loop):
 		<list>
 			<item node="sv">Displays all steps of the evaluation (<em>This parameter is obsolete.</em>)</item>.
@@ -148,12 +166,12 @@
 			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
 			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
 		</list>
-		Extended control over the WHILE loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an IF condition (which is itself part of the WHILE loop) and influence the evaluation from there:
+		Extended control over the <code>while</code> loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the <code>while</code> loop) and influence the evaluation from there:
 		<list>
 			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost statement, evaluation continues after this loop</item>.
 			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
 		</list>
-		<example desc="A WHILE loop, which is executed until a filename to a loadable dataset is entered:" type="verbatim">
+		<example desc="A <code>while</code> loop, which is executed until a filename to a loadable dataset is entered:" type="verbatim">
 			|&lt;- while (!data())
 			|WHL&gt; load ??
 			|WHL&gt; endwhile

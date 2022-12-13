@@ -50,9 +50,9 @@
 			{VALS} = append FILENAME
 			{VALS} = append FILENAME -all ...\n
 			save TABLE()
-			save TABLE() -filename=FILENAME\n
+			save TABLE() -file=FILENAME\n
 			export TABLE()
-			export TABLE() -filename=FILENAME
+			export TABLE() -file=FILENAME
 		</syntax>
 		Daten können in NumeRe geladen oder von NumeRe heraus in eine Datei gespeichert werden. Dazu existieren die Kommandos <code>load</code> und <code>save</code>:<codeblock>{i1, i2, j1, j2} = load DATEI</codeblock>bzw.<codeblock>save DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Beim Laden geht NumeRe standardmäßig von einer Textdatei mit der Endung "<code>*.dat</code>" aus. Die Endung kann jedoch zwischen "<code>*.dat</code>", "<code>*.txt</code>", "<code>*.ndat</code>", "<code>*.labx</code>", "<code>*.jdx"</code>, "<code>*.dx</code>", "<code>*.jcm</code>", "<code>*.ibw</code>", "<code>*.ods</code>", "<code>*.xls</code>", "<code>*.xlsx</code>" und "<code>*.csv</code>" angepasst werden. Es werden auch Zygo MetroPro(R)-Dateien unterstützt, die ebenfalls auf "<code>*.dat</code>" enden. Beim Speichern von Datensätzen wird vorzugsweise in das NumeRe-eigene "NumeRe-Datenfile"-Format (<code>*.ndat</code>) gespeichert, das schneller ist und die Präzision erhält. Die Indices der geladenen Daten in der Zieltabelle werden beim Laden zurückgegeben.
 		DATEI bezeichnet den Dateinamen der geladenen oder gespeicherten Datei. So lange die Datei in den eingestellen Speicherordner gespeichert, bzw. aus dem eingestellten Import-Ordner geladen werden soll, ist dabei die Angabe eines Pfades nicht nötig. Soll der Dateipfad ein oder mehrere Leerstellen enthalten, ist er mit Anführungszeichen zu umschließen.

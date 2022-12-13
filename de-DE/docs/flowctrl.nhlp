@@ -46,7 +46,7 @@
 			\tendfor
 			endswitch
 		</codeblock>
-		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann schält die Konsole in einen speziellen Modus, der durch ein Schlüsselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen Ausdrücke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das äußerste Kontrollfluss-Statement vollständig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszuführen, kann das Kommando <code>abort</code> verwendet werden.
+		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann wechselt die Konsole in einen speziellen Modus, der durch ein Schlüsselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen Ausdrücke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das äußerste Kontrollfluss-Statement vollständig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszuführen, kann das Kommando <code>abort</code> verwendet werden.
 		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block.
 		Benötigt NumeRe zum Auswerten eines Kontrollfluss-Statements zu viel Zeit, kann die Ausführung mit der <code>ESC</code>-Taste oder der entsprechenden Funktion der Toolbar abgebrochen werden.
 	</contents>
@@ -54,7 +54,7 @@
 
 
 <article id="for_loop">
-	<title string="FOR-Schleifen (Zählschleifen)" idxkey="for" />
+	<title string="For-Schleifen (Zählschleifen)" idxkey="for" />
 	<keywords>
 		<keyword>endfor</keyword>
 		<keyword>for</keyword>
@@ -64,30 +64,47 @@
 		<keyword>sp</keyword>
 	</keywords>
 	<contents>
-		FOR-Schleifen sind <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statements</a> wiederholte Aufrufe derselben <expr>N</expr> Ausdrücke. Dabei können die Ausdrücke sich auch auf die Ergebnisse des vorherigen Aufrufs beziehen. Um einen Schleifendurchlauf eindeutig zu identifizieren, wird der Schleifenindex verwendet, der zusammen mit seinen Grenzen direkt im Anschluss an <code>for</code> in der Form<codeblock>for (INDEX = a:b)</codeblock>zu deklarieren ist. Mit diesem Index kann natürlich wie mit normalen Variablen umgegangen werden.
-		Bei den Grenzen bezeichnet <code>a</code> den initialen und <code>b</code> den finalen Wert des Indexes. Die Werte für die Indices müssen ganze Zahlen sein. Sollte <expr>b &lt; a</expr> gewählt werden, so wird NumeRe in dieser Schleife rückwärts zählen.
+		<code>for</code>-Schleifen sind <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statements</a> und führen dieselben <expr>N</expr> Ausdrücke wiederholt aus. Es gibt hierbei zwei Varianten dieses Konstruktes: die <em>indexbezogene</em> <code>for</code>-Schleife und die <em>bereichsbezogene</em> <code>for</code>-Schleife.
+		<h>Indexbezogene Schleifen</h>
+		Diese Variante verwendet einen <em>Schleifenindex</em>, der einen Schleifendurchlauf eindeutig identifiziert. Mit diesem Index kann wie mit normalen Variablen umgegangen werden, so dass der Index auch verwendet werden kann, um nicht nur das aktuelle sondern auch vorherige oder nachfolgende Elemente einer Menge zu adressieren. Wird der Index während des Durchlaufs modifiziert (z.B. inkrementiert), so wird das bei der Auswertung berücksichtigt und die Iterationen entsprechend angepasst (z.B. weniger Iterationen). Der Schleifenindex ist zusammen mit seinen Grenzen direkt im Anschluss an <code>for</code> in der folgenden Form zu deklarieren: <code>for (INDEX = I0:I1)</code>
+		Bei den Grenzen bezeichnet <code>I0</code> den initialen und <code>I1</code> den finalen Wert des Indexes. Die Werte für die Indices müssen ganze Zahlen sein. Sollte <expr>I0 &gt; I1</expr> gewählt werden, so wird NumeRe in dieser Schleife rückwärts zählen.
 		<codeblock>
-			for (INDEX = a:b)
+			for (INDEX = I0:I1)
 			\tAusdrücke
 			endfor
 		</codeblock>
+		<example desc="Indexbezogene <code>for</code>-Schleife, die das jeweils vorhergehende Element eines Clusters auf das aktuelle addiert:" type="verbatim">
+			|&lt;- for (i = 2:10)
+			|FOR&gt; clust{i} += clust{i-1};
+			|FOR&gt; endfor
+		</example>
+		<h>Bereichsbezogene Schleifen</h>
+		Bereichsbezogene <code>for</code>-Schleifen verwenden statt eines Schleifenindexes sogenannte <em>Iteratoren</em>. Diese Iteratoren enthalten während der Auswertung der <expr>n</expr>-ten Iteration eine Kopie des <expr>n</expr>-ten Wertes des zugrundeliegenden Bereichs. Um diese Schleifenform zu deklarieren, ist der Iterator mit seinem Bereich anzugeben (man beachte den <code>-&gt;</code> Operator): <code>for (ITERATOR -&gt; BEREICH)</code>
+		Ein Bereich kann dabei zum Beispiel der Inhalt eines <a href="nhlp://cluster?frame=new">Clusters</a> oder eine Spalte oder Zeile aus einer <a href="nhlp://table?frame=new">Tabelle</a> sein. Es ist auch möglich, über die Ergebnisse von Funktionen oder <a href="nhlp://procedure?frame=new">Prozeduren</a> mit mehreren Rückgabewerten zu iterieren.
+		<codeblock>
+			for (ITERATOR -&gt; BEREICH)
+			\tAusdrücke
+			endfor
+		</codeblock>
+		Diese Variante unterscheidet sich von der indexbezogenen Schleife dadurch, dass der Iterator kein Index sondern eine Kopie des tatsächlichen Wertes des derzeit iterierten Bereichs ist (also z.B. der <expr>n</expr>-te Wert in einem Cluster). Aufgrund dieser Tatsache kann in einem Schleifendurchlauf sich nicht auf vorherige oder folgende Durchläufe bezogen werden; jeder Durchlauf ist isoliert zu betrachten. Der Wert des Iterators kann trotzdem modifiziert werden, jedoch spiegelt sich dies nicht automatisch im iterierten Bereich wieder, da es sich eben um eine Kopie handelt.
+		Es ist auch möglich, mehrere Iteratoren für einen Bereich anzugeben. Dabei werden die Werte des Bereichs auf diese Iteratoren verteilt und die Zahl der Gesamtiterationen dementsprechend verringert. Im Zusammenhang mit Schlüssel-Wert-Listen können zwei Iteratoren verwendet werden, um den Schlüssel auf den ersten und den Wert auf den zweiten Iterator zu verteilen:<codeblock>for ({KEY, VALUE} -&gt; KEY_VALUE_LIST)</codeblock>
+		<example desc="Bereichsbezogene <code>for</code>-Schleife, die jede Datei in einem der Standardpfade auflistet:" type="verbatim">
+			|&lt;- for (sFile -&gt; getfilelist("&LOADPATH&"))
+			|FOR&gt; print sFile
+			|FOR&gt; endfor
+		</example>
+		<h>Parameter</h>
 		Es können beim Schließen einer (egal, welcher) Schleife folgende Parameter mit übergeben werden:
 		<list>
-			<item node="sv">Zeigt alle Schritte der Auswertung an (<em>Dieser Parameter ist veraltet.</em>)</item>
 			<item node="mask">Unterdrückt die Fortschrittsanzeige. Dies kann auch standardmäßig in den Einstellungen aktiviert werden</item>
 			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer IF-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
 		<list>
 			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste ist, wird die Auswertung nach dieser Schleife forgesetzt</item>
 			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
 		</list>
-		<example desc="FOR-Schleife, die von 1 bis 10 zählt:" type="verbatim">
-			|&lt;- for (i = 1:10)
-			|FOR&gt; i
-			|FOR&gt; endfor
-		</example>
 		<em>Siehe auch:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> und <a href="nhlp://try?frame=self">help try</a>
 	</contents>
 </article>
@@ -132,15 +149,15 @@
 
 
 <article id="while_loop">
-	<title string="WHILE-Schleifen (Bedingte Schleifen)" idxkey="while" />
+	<title string="While-Schleifen (Bedingte Schleifen)" idxkey="while" />
 	<keywords>
 		<keyword>endwhile</keyword>
 		<keyword>while</keyword>
 		<keyword>lnumctrl</keyword>
 	</keywords>
 	<contents>
-		Ähnlich wie eine FOR-Schleife ist eine WHILE-Schleife auch ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und arbeitet dieselben <expr>N</expr> Ausdrücke wiederholt ab. Der zentrale Unterschied ist jedoch, dass eine WHILE-Schleife keinen Zählindex benötigt und dementsprechend keine vorgegebene Anzahl an Durchläufen besitzt. Der Abbruch einer WHILE-Schleife wird entweder direkt durch die bei der Deklaration angegebene Bedingung oder durch ein zusätzliches <code>break</code> in einem Teil der Schleife bestimmt.
-		Die Deklaration einer WHILE-Schleife benötigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrücke\nendwhile</codeblock>Die BEDINGUNG wird zu Beginn eines jeden Schleifendurchlaufes überprüft und, falls die BEDINGUNG den logischen Wert WAHR hat, die Schleife fortgesetzt, oder, falls sie FALSCH ist, an dieser Stelle verlassen.
+		Ähnlich wie eine <code>for</code>-Schleife ist eine <code>while</code>-Schleife auch ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und arbeitet dieselben <expr>N</expr> Ausdrücke wiederholt ab. Der zentrale Unterschied ist jedoch, dass eine <code>while</code>-Schleife keinen Zählindex benötigt und dementsprechend keine vorgegebene Anzahl an Durchläufen besitzt. Der Abbruch einer <code>while</code>-Schleife wird entweder direkt durch die bei der Deklaration angegebene Bedingung oder durch ein zusätzliches <code>break</code> in einem Teil der Schleife bestimmt.
+		Die Deklaration einer <code>while</code>-Schleife benötigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrücke\nendwhile</codeblock>Die BEDINGUNG wird zu Beginn eines jeden Schleifendurchlaufes überprüft und, falls die BEDINGUNG den logischen Wert WAHR hat, die Schleife fortgesetzt, oder, falls sie FALSCH ist, an dieser Stelle verlassen.
 		Es können beim Schließen einer (egal, welcher) Schleife folgende Parameter mit übergeben werden:
 		<list>
 			<item node="sv">Zeigt alle Schritte der Auswertung an (<em>Dieser Parameter ist veraltet.</em>)</item>
@@ -148,12 +165,12 @@
 			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die WHILE-Schleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer IF-Bedingung (die selbst Teil der WHILE-Schleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle über die <code>while</code>-Schleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der <code>while</code>-Schleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
 		<list>
 			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste Statement ist, wird die Auswertung nach dieser Schleife fortgesetzt</item>
 			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
 		</list>
-		<example desc="Eine WHILE-Schleife, die so lange ausgeführt wird, bis der Dateiname zu einem ladbaren Datensatz eingegeben wurde:" type="verbatim">
+		<example desc="Eine <code>while</code>-Schleife, die so lange ausgeführt wird, bis der Dateiname zu einem ladbaren Datensatz eingegeben wurde:" type="verbatim">
 			|&lt;- while (!data())
 			|WHL&gt; load ??
 			|WHL&gt; endwhile
