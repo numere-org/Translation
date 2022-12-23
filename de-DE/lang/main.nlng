@@ -1070,6 +1070,9 @@ GUI_MENU_CREATE_PACKAGE=Erzeuge Package aus Prozedur(en) und Window-Layout(s)
 GUI_MENU_CREATE_PACKAGE_TTP=Generiert ein Package aus der aktuellen Prozedurdatei. Es können weitere Dateien zum Package hinzugefügt werden
 GUI_MENU_SHOW_PACKAGE_BROWSER=Package Repository Browser öffnen
 GUI_MENU_SHOW_PACKAGE_BROWSER_TTP=Packages und Plugins vom Online-Repository installieren und deinstallieren
+GUI_MENU_INSTALL_PACKAGE_FILE=Lokales Package installieren
+GUI_MENU_INSTALL_PACKAGE_FILE_TTP=Packages und Plugins aus einer lokalen Datei installieren
+GUI_SELECT_PACKAGE_FOR_INSTALL=NumeRe: Package zum Installieren auswählen
 GUI_MENU_NO_PLUGINS_INSTALLED=Keine GUI-Plugins installiert
 # Help menu
 GUI_MENU_SHOWHELP=&Hilfethemen%%TAB%%F1
