@@ -21,6 +21,7 @@
 	<keywords>
 		<keyword>ableit</keyword>
 		<keyword>diff</keyword>
+		<keyword>order</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -28,16 +29,18 @@
 			{VAL} = diff f(x) set [x1:x2] ...
 			{VAL} = diff TABLE()
 		</syntax>
-		NumeRe kann einen oder mehrere Ausdrücke zur ersten Ordnung unter Verwendung der Methode von Savitzky und Golay numerisch differenzieren. Dabei wird die lokale Steigung dieses Ausdrucks bezüglich einer zu spezifizierenden Variable an einer gegebenen Stelle berechnet. Dabei wird nur der numerischen Wert und kein analytisches Ergebnis bestimmt.
-		Das Schlüsselwort <code>diff</code> gefolgt von den zu differenzierenden Funktionen startet die numerische Differentiation. An die gegebene Funktion müssen dabei die folgenden Optionen durch <code>-set</code> angehängt werden:
+		NumeRe kann einen oder mehrere Ausdrücke bis zur dritten Ordnung numerisch differenzieren. Dabei wird die lokale Steigung dieses Ausdrucks bezüglich einer zu spezifizierenden Variable an einer gegebenen Stelle berechnet. Dabei wird nur der numerischen Wert und kein analytisches Ergebnis bestimmt. 
+		Das Kommando <code>diff</code> gefolgt von den zu differenzierenden Funktionen startet die numerische Differentiation. An die gegebene Funktion müssen dabei die folgenden Optionen durch <code>-set</code> angehängt werden:
 		<list>
 			<item node="VAR=POS">Die Position POS, an welcher der Ausdruck bezüglich der Variablen VAR differenziert werden soll, angeben. Wenn POS in Form eines Intervalls angegeben wird, bestimmt NumeRe die Ableitung in diesem Intervall für die Zahl der Stützstellen</item>
 			<item node="eps=GENAUIGKEIT">Die Genauigkeit, mit welcher der Ausdruck differenziert werden soll, festlegen. Diese Angabe ist <em>optional</em></item>
 			<item node="samples=STÜTZSTELLEN">Die Zahl der Stützstellen für Intervalldifferentiation angeben, standardmäßig sind dies 100</item>
+			<item node="order=ORDNUNG">Die Ordnung der Ableitung definieren, standardmäßig ist dies 1</item>
+			<item node="points=PUNKTE">Die Zahl der zu verwendenden Punkte für die Methode nach Savitzky und Golay (siehe unten) definieren, standardmäßig sind dies 5. Diese Zahl muss <em>ungerade</em> sein</item>
 		</list>
-		Des Weiteren kann NumeRe Datensätze numerisch differenzieren. Dazu muss <code>diff</code> gefolgt vom gewünschten Datensatz angegeben werden:<codeblock>diff DATENSATZ(i1:i2,j1:j2)</codeblock>
-		Der Datensatz sollte <expr>x</expr>- und <expr>y</expr>-Werte in den Spalten enthalten um korrekte Ableitungen zu erhalten, anderenfalls werden Ableitungen zwischen Stützstellen der Breite 1 berechnet. Der Datensatz muss zusätzlich mindesten 5 Punkte umfassen, um eine Ableitung zu erhalten. Außerdem sind die ersten zwei und die letzten zwei Datenpunkte des Ergebnisses nicht sinnvoll bestimmt und sind nur Kopien des darauffolgenden bzw. vorausgehenden Wertes.
-		<example desc="Numerische Differentiation der Funktion <expr>f(x) = x^2</expr> um die Stelle <expr>x = 1</expr> mit der Genauigkeit <expr>10^(-6)</expr> und numerische Differentiation eines Datensatzes:">
+		Des Weiteren kann NumeRe Datensätze unter Verwendung der Methode von Savitzky und Golay numerisch differenzieren. Dazu muss <code>diff</code> gefolgt vom gewünschten Datensatz angegeben werden:<codeblock>diff DATENSATZ(i1:i2,j1:j2)</codeblock>
+		Der Datensatz sollte <expr>x</expr>- und <expr>y</expr>-Werte in den Spalten enthalten um korrekte Ableitungen zu erhalten, anderenfalls werden Ableitungen zwischen Stützstellen der Breite 1 berechnet. Der Datensatz muss zusätzlich mindesten <code>points</code> Punkte umfassen, um eine Ableitung zu erhalten. Außerdem sind die ersten <code>points/2</code> und die letzten <code>points/2</code> Datenpunkte des Ergebnisses nicht sinnvoll bestimmt und sind nur Kopien des darauffolgenden bzw. vorausgehenden Wertes.
+		<example desc="Numerische Differentiation der Funktion <expr>f(x) = x^2</expr> um die Stelle <expr>x = 1</expr> mit der Genauigkeit <expr>epsilon = 10^(-6)</expr> und numerische Differentiation eines Datensatzes:">
 			diff x^2 -set x=1 eps=1e-6
 			ans = 2
 			diff data(:,1:2)

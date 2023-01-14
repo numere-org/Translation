@@ -65,6 +65,8 @@ COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_IBW=IGOR Binary Waves
 COMMON_FILETYPE_INI=Configuration file
 COMMON_FILETYPE_JDX=JCAMP-DX spectrum
+COMMON_FILETYPE_DX=JCAMP-DX spectrum
+COMMON_FILETYPE_JCM=JCAMP-DX spectrum
 COMMON_FILETYPE_JPEG=%%COMMON_FILETYPE_JPG%%
 COMMON_FILETYPE_JPG=JPEG image
 COMMON_FILETYPE_LABX=CASSYLab file
@@ -98,6 +100,7 @@ COMMON_DATAFILE_CORRUPTED=A possible file corruption was detected in the file "%
 COMMON_FUNCTION_DEPRECATED=%%1%%%%LINEBREAK%%This function is deprecated and will be removed in the future.
 COMMON_COMMAND_DEPRECATED=%%1%%%%LINEBREAK%%This command is deprecated and will be removed in the future.
 COMMON_SYNTAX_DEPRECATED=%%1%%%%LINEBREAK%%This syntax is deprecated and will not be supported in the future.
+COMMON_SEARCH_IGNOREWORDS=of this the a an their that
 COMMON_WEEKDAY_1=Monday
 COMMON_WEEKDAY_2=Tuesday
 COMMON_WEEKDAY_3=Wednesday
@@ -582,7 +585,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Please enter the headings. Whitespaces will be auto
 DATA_OPENFILE_HEADFORCOLUMN=Table heading for column %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the file "%%1%%". Shall the exisiting data be overwritten? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tables are always passed by reference, even without the corresponding syntax (TAB()&). This is not recommended. To copy them instead, disable the corresponding setting in the options. This warning will be suppressed.
+PROCEDURE_WARN_TABLE_REFERENCE=Tables are always passed by reference, even without the corresponding syntax (TAB()&). This behaviour is deprecated since v1.1.5 and will be removed in the future. To copy them instead, disable the corresponding setting in the options. This warning will be suppressed.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Cancel

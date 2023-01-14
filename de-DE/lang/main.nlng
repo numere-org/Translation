@@ -65,6 +65,8 @@ COMMON_FILETYPE_HXX=%%COMMON_FILETYPE_HPP%%
 COMMON_FILETYPE_IBW=IGOR-Binärwelle
 COMMON_FILETYPE_INI=Konfigurationsdatei
 COMMON_FILETYPE_JDX=JCAMP-DX-Spektrum
+COMMON_FILETYPE_DX=JCAMP-DX-Spektrum
+COMMON_FILETYPE_JCM=JCAMP-DX-Spektrum
 COMMON_FILETYPE_JPEG=%%COMMON_FILETYPE_JPG%%
 COMMON_FILETYPE_JPG=JPEG-Bild
 COMMON_FILETYPE_LABX=CASSYLab-Datei
@@ -98,6 +100,7 @@ COMMON_DATAFILE_CORRUPTED=Eine mögliche Beschädigung wurde in der Datei "%%1%%" 
 COMMON_FUNCTION_DEPRECATED=%%1%%%%LINEBREAK%%Diese Funktion ist veraltet und wird in Zukunft entfernt.
 COMMON_COMMAND_DEPRECATED=%%1%%%%LINEBREAK%%Dieses Kommando ist veraltet und wird in Zukunft entfernt.
 COMMON_SYNTAX_DEPRECATED=%%1%%%%LINEBREAK%%Diese Syntax ist veraltet und wird in Zukunft nicht mehr unterstützt.
+COMMON_SEARCH_IGNOREWORDS=of this the a an their that der die das ein des dies eine einer eines einen den
 COMMON_WEEKDAY_1=Montag
 COMMON_WEEKDAY_2=Dienstag
 COMMON_WEEKDAY_3=Mittwoch
@@ -582,7 +585,7 @@ DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automa
 DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
 DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
 # PROCEDURE
-PROCEDURE_WARN_TABLE_REFERENCE=Tabellen werden immer als Referenz übergeben, auch ohne die entsprechende Syntax (TAB()&). Dies wird nicht empfohlen. Um sie stattdessen zu kopieren, deaktiviere die entsprechende Einstellung in den Optionen. Diese Warnung wird dabei unterdrückt.
+PROCEDURE_WARN_TABLE_REFERENCE=Tabellen werden immer als Referenz übergeben, auch ohne die entsprechende Syntax (TAB()&). Seit v1.1.5 ist dieses Verhalten veraltet und wird in Zukunft entfernt. Um sie stattdessen zu kopieren, deaktiviere die entsprechende Einstellung in den Optionen. Diese Warnung wird dabei unterdrückt.
 # GUI STRINGS: All strings for the new GUI
 # ========================================
 GUI_BUTTON_CANCEL=Abbrechen
