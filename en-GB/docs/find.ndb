@@ -270,6 +270,7 @@ plot~Graphical plotting of functions and data sets~plotten graphisch plotoptions
 poltocart(MAT)~Converts the columns of the matrix MAT from polar (rho,phi,theta) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocart(
 poltocyl(MAT)~Converts the columns of the matrix MAT from polar (rho,phi,theta) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocyl(
 polylength(MAT)~Calculates the length of the polygon path defined by the rows of the matrix MAT~polygonlänge polygonlaenge umfang perimeter polygon length~polylength(
+polynomial(x,a0,a1,a2,...)~Calculates the value of the polynomial a0+a1*x+a2*x^2+... at the position x~polynomial() poly() polynom~polynomial(
 prd(x,y,z,...)~Returns the product of the arguments x,y,z,...~produkt product multiplizieren multiply prd()~prd(
 procedure~Defines a NumeRe procedure~prozedur $ programmierung plugins installation installieren programming automatisierung automation~help procedure $PROC() ... endprocedure
 Programmer~If you don't know him personally: try with "numere.developer@gmail.com"~erik entwickler bug report kontakt~"mailto:numere.developer@gmail.com"
