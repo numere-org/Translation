@@ -83,6 +83,8 @@ cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-
 csc(x)~Kosekans von x.~csc() kosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~csc(
 csch(x)~Kosekans hyperbolicus von x.~csch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~csch(
 cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
+cumprd(MAT,nDim)~Berechnet das kumulative Produkt der Elemente in der Matrix~kumulative cumulative product cumsum() cumprd()~cumprd(
+cumsum(MAT,nDim)~Berechnet die kumulative Summe der Elemente in der Matrix~kumulativ cumulative sum cumsum() cumprd()~cumsum(
 cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die außerhalb der definierten Grenzen liegen aus einer Matrix und ersetzt sie durch den Grenzwert~cutoff abschneiden limit threshold grenzwert~cutoff(
 cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
@@ -149,16 +151,16 @@ gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 d
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
-getfilelist(STR,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
 getfileinfo(STR)~Gibt Meta-Informationen zu der angegebenen Datei in sFilePath als eine Schlüssel-Wert-Liste zurück~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
+getfilelist(STR,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
 getfileparts(STR)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
 getfolderlist(STR,T)~Gibt eine Liste aller Ordner, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfolderlist(
 getindices(STR,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobjektzugriffs zurück~datenobjekt index data object lines cols zeilen spalten getindices()~getindices(
 getkeyval({STR},STR,ARG,LOG)~Gibt den Wert zum zugehörigen Schlüssel aus der zweiten Zeichenkette aus der Schlüssel-Wert-Liste des ersten Zeichenkettenarrays zurück~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyval(
 getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler zurück~try catch throw error exception handling~getlasterror()
-getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
+getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
 grad3d~Erstellen eines 3D-Gradienten-Plots~gradienten feldlinien dreidimensional field lines force kraft three-dimensional~help grad3d
 grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
