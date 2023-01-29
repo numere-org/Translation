@@ -261,7 +261,7 @@ PARSERFUNCS_LISTFUNC_FUNC_STD_[STATS]=						std(x,y,z,...)                      
 PARSERFUNCS_LISTFUNC_FUNC_STRFNDALL_[STRING]=				strfndall(sToFind,sWhere,nPos1=1,nPos2=sWhere.len)         {VAL}     - Returns all occurrences of sToFind in sWhere, with the search starting from the position nPos1 and ending at nPos2. nPos1 and nPos2 are optional values with the default values nPos1 = 1 and nPos2 = strlen(sWhere). The function returns false, if sToFind is not found.
 PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(sToFind,sWhere,nPos=1)                               VAL      - Returns the position of the first occurrence of sToFind in sWhere, with the search starting from the position nPos. nPos is an optional value with the default value 1. The function returns false, if sToFind is not found.
 PARSERFUNCS_LISTFUNC_FUNC_STRING_CAST_[STRING]=				string_cast(EXPR)                                           STR      - Transforms EXPR directly to a string and ignores possible string expressions (#(EXPR) would calculate the numerical value of EXPR first)
-PARSERFUNCS_LISTFUNC_FUNC_STRIP_[STRING]=					strip(sStr,sPref,sSuff,nStripAll=false)                     STR      - Removes the prefix sPref and the suffix sSuff from the string sStr, if they have a non-zero length. nStripAll is an optional value and removes repeating pre- and suffixes if nStripAll = true.
+PARSERFUNCS_LISTFUNC_FUNC_STRIP_[STRING]=					strip(sStr,sPref,sSuff,stripAll=false)                     STR      - Removes the prefix sPref and the suffix sSuff from the string sStr, if they have a non-zero length. stripAll is an optional value and removes repeating pre- and suffixes if stripAll = true.
 PARSERFUNCS_LISTFUNC_FUNC_STRLEN_[STRING]=					strlen(sStr)                                                VAL      - Returns the length of the string sStr
 PARSERFUNCS_LISTFUNC_FUNC_STRMATCHALL_[STRING]=				strmatchall(sChars,sWhere,nPos1=1,nPos2=sWhere.len)        {VAL}     - Searches for the first occurrences of each character of sChars in the string sWhere going from position nPos1 to nPos2. nPos1 and nPos2 are optional values and default to nPos1 = 1 and nPos2 = strlen(sWhere). If nothing was found, this function will return 0 for each character
 PARSERFUNCS_LISTFUNC_FUNC_STRMATCH_[STRING]=				strmatch(sChars,sWhere,nPos=1)                              VAL      - Searches for the first occurrence of a character of sChars in the string sWhere going from position nPos. nPos is an optional value and defaults to nPos = 1. If nothing was found, this function will return false
@@ -389,8 +389,8 @@ PARSERFUNCS_LISTCMD_CMD_BUTTON_[GUI]=					button       EX [-set PAR]            
 PARSERFUNCS_LISTCMD_CMD_CACHE_[DATACTRL]=				cache        -PAR  -> {VAL}             - Options applied to the elements in a cache. The parameters allow multiple operations, just like applying multi-argument functions
 PARSERFUNCS_LISTCMD_CMD_CASE_[FLOWCTRL]=				case         EX:                        - Defines a case in a switch fork. The expression EX has to be a numerical value or a string
 PARSERFUNCS_LISTCMD_CMD_CATCH_[FLOWCTRL]=				catch        EX:                        - Starts error handling for error type EX
-PARSERFUNCS_LISTCMD_CMD_CLC_[MAINCTRL]=					clc			 						    - Clears the content of the terminal
 PARSERFUNCS_LISTCMD_CMD_CHECKBOX_[GUI]=					checkbox     EX [-set PAR]              - Inserts a checkbox into a window layout. The event handling and the start value are configurable. If used inside a menu, this is converted into a menu item with a checkbox
+PARSERFUNCS_LISTCMD_CMD_CLC_[MAINCTRL]=					clc			 						    - Clears the content of the terminal
 PARSERFUNCS_LISTCMD_CMD_CLEAR_[DATACTRL]=				clear        OB [-PAR]                  - Irreversibly removes all elements in the selected object from this computer. The parameter may be used to suppress the confirmation (-ignore) or to remove all tables at once (-memory)
 PARSERFUNCS_LISTCMD_CMD_CLOSE_[MAINCTRL]=				close        -PAR                       - Closes previously opened windows that are selected by parameters: -graphs closes all graphs, -docs all documentation windows, -tables all tables, -images all ImageViewers and -all closes all windows from this list
 PARSERFUNCS_LISTCMD_CMD_COMBOBOX_[GUI]=					combobox     EX [-set PAR]              - Inserts a combo box into a window layout. The event handling and the start value are configurable
@@ -470,6 +470,7 @@ PARSERFUNCS_LISTCMD_CMD_MOVE_[MAINCTRL]=				move         OB -PAR                
 PARSERFUNCS_LISTCMD_CMD_NAMESPACE_[PROC]=				namespace    [NM]                       - Changes the current namespace in procedures to the namespace NM
 PARSERFUNCS_LISTCMD_CMD_NEW_[MAINCTRL]=					new          EX                         - Creates depending on the expression EX new directories, scripts, procedures, files or tables
 PARSERFUNCS_LISTCMD_CMD_ODESOLVE_[EVAL]=				odesolve     EX -set PAR                - Numerically solves the ordinary differential equations, which were passed as expression EX. The integration interval as well as the initial values have to be passed as parameters. In addition, one can modify the method, the number of integration steps, the target table, the algorithm's tolerances and calculate the Lyapunov exponent
+PARSERFUNCS_LISTCMD_CMD_PACK_[MAINCTRL]=				pack         STR -set PAR               - Packs the referenced files in STR into a common archive file. The type of the archive (ZIP, TAR, GZIP) may be passed or will be determined by the target file name
 PARSERFUNCS_LISTCMD_CMD_PLOT3D_[PLOTTING]=				plot3d       EX [-set PAR]              - Creates a three-dimensional, graphical plot of the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_PLOT_[PLOTTING]=				plot         EX [-set PAR]              - Creates a graphical plot of the expression or the data in EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_PRINT_[MISC_MAINCTRL]=			print        STR                        - Prints the passed string STR without the quotation marks as message on the screen
@@ -523,6 +524,7 @@ PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]             
 PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                     - Starts a try-catch block in which errors can be caught and handled
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Removes the custom function definition, which corresponds to the expression EX
 PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                         - Removes the plugin NM. May only be used directly in the console
+PARSERFUNCS_LISTCMD_CMD_UNPACK_[MAINCTRL]=				unpack       STR [-set PAR]  -> {STR}   - Unpacks an archive file (ZIP, TAR, GZIP), creates the contained file structure at the target location and returns a list of the created files. If no target location was specified, only a list of the contained files is returned
 PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> ARG         - Allows access to online resources via the HTTP(S) and (S)FTP protocols. JavaScript is not interpreted in this case. Files can also be downloaded if a target file is specified via the "file" parameter. Note: Certificates are not validated, so this command is not suitable for exchanging sensible information
 PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                         - Defines the local numerical variables in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]              - Creates a 3D vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
@@ -724,6 +726,7 @@ GUI_EDITOR_CALLTIP_OPT_GREETING=greeting [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_GREY=colorscheme=grey [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_GRID=grid[=TYPE]
 GUI_EDITOR_CALLTIP_OPT_GRIDSTYLE=gridstyle=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_GZARCHIVE=type=gzarchive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pack]
 GUI_EDITOR_CALLTIP_OPT_HAAR=method=haar [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_HBARS=hbars[=WIDTH] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_HEAD=head=LINENUMBER
@@ -943,6 +946,7 @@ GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTIN
 GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
 GUI_EDITOR_CALLTIP_OPT_TABLES=tables [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_TABS=style=tabs [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_TARCHIVE=type=tarchive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pack]
 GUI_EDITOR_CALLTIP_OPT_TARGET=target=TARGET
 GUI_EDITOR_CALLTIP_OPT_TENT=method=tent [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
 GUI_EDITOR_CALLTIP_OPT_TERMES=termes [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
@@ -997,6 +1001,7 @@ GUI_EDITOR_CALLTIP_OPT_YLOG=ylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_YSCALE=yscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_YTICKLABELS=yticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_YTICKS=yticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ZIPARCHIVE=type=ziparchive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pack]
 GUI_EDITOR_CALLTIP_OPT_ZLABEL=zlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZLOG=zlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ZSCALE=zscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

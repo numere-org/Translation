@@ -1,0 +1,60 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2023  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="pack">
+	<title string="Archivdateien packen und entpacken" idxkey="pack,unpack" />
+	<keywords>
+		<keyword>pack</keyword>
+		<keyword>unpack</keyword>
+		<keyword>compres</keyword>
+		<keyword>decompres</keyword>
+		<keyword>zip</keyword>
+		<keyword>tar</keyword>
+		<keyword>gzip</keyword>
+		<keyword>archive</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			pack FILES -set file=ARCHIVEFILE
+			pack FILES -set file=ARCHIVEFILE type=TYPE
+			{STR} = unpack ARCHIVEFILE
+			{STR} = unpack ARCHIVEFILE -set target=DIRECTORY
+		</syntax>
+		Die Kommandos <code>pack</code> und <code>unpack</code> ermöglichen die Interaktion mit Archivdateien wie Zipdateien oder Tarballs. <code>pack</code> erzeugt dabei eine neue Archivdatei aus einer Dateistruktur oder einer Liste an Dateien, während <code>unpack</code> eine Archivdatei entpackt und die enthaltene Dateistruktur am Zielort erzeugt.
+		<h>Ein Archiv erzeugen</h>
+		Ein Archiv kann durch <code>pack</code> aus einer Liste an Dateien oder aus ganzen Verzeichnissen (oder einer Mischung davon) erzeugt werden. Die Liste ist als ein Vektor von Zeichenketten anzugeben. Werden einzelne Dateien als Liste angegeben, werden diese gemeinsam in das Archiv kopiert. Eine relative Ordnerstruktur wird nicht beibehalten (<em>Vorsicht bei identischen Dateinamen</em>). Verzeichnisse werden hingegen mit der gesamten Ordnerstruktur (mit Ausnahme leerer Verzeichnisse) übernommen.
+		<codeblock>
+			pack {"FILE1", "FILE2", ...} -set file=ARCHIVEFILE
+			pack {"DIRECTORY1", "DIRECTORY2", ...} -set file=ARCHIVEFILE
+			pack {"FILE", "DIRECTORY", ...} -set file=ARCHIVEFILE
+		</codeblock>
+		<h>Ein Archiv entpacken</h>
+		Das Kommando <code>unpack</code> kann entweder die enthaltenen Dateien listen oder, wenn ein Zielort mittels <code>target=DIRECTORY</code> angegeben wird, sie entpacken und an diesem Zielort als Dateistruktur erzeugen. In letzterem Fall werden die Namen der dabei erzeugten Dateien zurückgegeben, d.h. es werden die Namen der enthaltenen Dateien mit dem Zielort als Wurzelverzeichnis gelistet (<code>"DIRECTORY/ARCHIVED_FILE"</code>).
+		<codeblock>
+			{"ARCHIVED_FILE1", "ARCHIVED_FILE2", ...} = unpack ARCHIVEFILE
+			{"UNPACKED_FILE1", "UNPACKED_FILE2", ...} = unpack ARCHIVEFILE -set target=DIRECTORY
+		</codeblock>
+		<h>Archivtypen</h>
+		Unterstützt werden die Archivtypen <em>Zip</em>, <em>Tar</em> und <em>GZip</em>. Diese werden beim Entpacken automatisch detektiert. Beim Packen werden sie entweder aus der Endung des Dateinamens bestimmt oder aus dem bereits vorhandenen Typ einer zu überschreibendenen Archivdatei. Sollte der Archivtyp jedoch nicht aus der gewünschten Dateierweitung bestimmt werden können, kann der Typ beim Packen auch direkt mittels <code>type=TYPE</code> angegeben werden:
+		<list>
+			<item node="type=ziparchive">Erzeugt das Archiv als Zip-Archiv (<code>*.zip</code>). Die Implementierung eines eigenen Dateiformats als Zip-Archiv ist ein sehr geläufiges Vorgehen. Das Archiv wird dabei auch komprimiert</item>
+			<item node="type=tarchive">Erzeugt das Archiv als Tape Archive (<code>*.tar</code>). Dieses Archiv ist in der Linuxwelt recht geläufig. Es wird jedoch keine Kompression angewandt</item>
+			<item node="type=gzarchive">Erzeugt das Archiv als GZip-Archiv (<code>*.gz</code>). Ein GZip-Archiv kann nur eine einzige Datei enthalten, die dabei komprimiert wird. Wird stattdessen eine Dateiliste oder ein Verzeichnis übergeben, so werden diese zunächst in ein temporäres Tape Archive gepackt und dieses anschließend in das GZip-Archiv eingebettet</item>
+		</list>
+	</contents>
+</article>

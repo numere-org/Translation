@@ -264,6 +264,7 @@ NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipf
 odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
 one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix~one(
 or(x,y,z,...)~Connects its arguments with "||"~logik logic oder~or(
+pack~Packs the referenced files into a common archive file~zipfile tarfile gzip packen archivefile tarball zippen inflate deflate compress uncompress extract~help pack
 pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
 perlin(x,y,z,seed,freq,oct,pers)~Calculates the Perlin noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~perlin(
 phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
@@ -405,6 +406,7 @@ treelist~Inserts a tree list into a window layout~textctrl windowsystem layout g
 try~Starts a try-catch block in which errors can be caught and handled~try catch endtry exception handling error throw~help try
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
+unpack~Unpacks an archive file~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip download upload~help url
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur # \" zeichenkette formatieren valtostr()~valtostr(
 var~Defines the local numerical variables in a procedure~procedure local variables~help var

@@ -264,6 +264,7 @@ NumeRe v $$$~Deine NumeRe-Distribution befindet sich hier: $$$~numere programm d
 odesolve~Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch, siehe "help odesolve"~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
 one(n,m)~Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist, siehe "help matop"~one() matrix~one(
 or(x,y,z,...)~Verknüpft die Argumente mit "||"~logik logic oder~or(
+pack~Packt die referenzierten Dateien in eine gemeinsame Archivdatei~zipfile tarfile gzip packen archivefile tarball zippen inflate deflate compress uncompress extract~help pack
 pct(x,y,z,...,p)~p-tes Perzentil der Werte x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
 perlin(x,y,z,seed,freq,oct,pers)~Berechnet Perlin-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~perlin(
 phi(x,y)~Berechnet den Azimuthwinkel phi~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
@@ -404,6 +405,7 @@ treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem lay
 try~Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können~try catch endtry error exception handling throw~help try
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
+unpack~Entpackt eine Archivdatei~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip download upload~help url
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur # \" zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables~help var

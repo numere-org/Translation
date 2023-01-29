@@ -1,0 +1,60 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2023  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="pack">
+	<title string="Packing and unpacking archive files" idxkey="pack,unpack" />
+	<keywords>
+		<keyword>pack</keyword>
+		<keyword>unpack</keyword>
+		<keyword>compres</keyword>
+		<keyword>decompres</keyword>
+		<keyword>zip</keyword>
+		<keyword>tar</keyword>
+		<keyword>gzip</keyword>
+		<keyword>archive</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			pack FILES -set file=ARCHIVEFILE
+			pack FILES -set file=ARCHIVEFILE type=TYPE
+			{STR} = unpack ARCHIVEFILE
+			{STR} = unpack ARCHIVEFILE -set target=DIRECTORY
+		</syntax>
+		The commands <code>pack</code> and <code>unpack</code> allow interaction with archive files such as zip files or tarballs. <code>pack</code> creates a new archive file from a file structure or a list of files, while <code>unpack</code> unpacks an archive file and creates the contained file structure at the destination.
+		<h>Creating an archive</h>
+		An archive can be created by <code>pack</code> from a list of files or from whole directories (or a mixture of them). The list must be specified as a vector of strings. If individual files are specified as a list, they are copied together into the archive. A relative folder structure is not maintained (<em>be careful with identical file names</em>). Directories, on the other hand, are copied with the entire folder structure (with the exception of empty directories).
+		<codeblock>
+			pack {"FILE1", "FILE2", ...} -set file=ARCHIVEFILE
+			pack {"DIRECTORY1", "DIRECTORY2", ...} -set file=ARCHIVEFILE
+			pack {"FILE", "DIRECTORY", ...} -set file=ARCHIVEFILE
+		</codeblock>
+		<h>Unpack an archive</h>
+		The <code>unpack</code> command can either list the contained files or, if a target location is specified using <code>target=DIRECTORY</code>, unpack them and create them as a file structure at this target location. In the latter case, the names of the files created in the process are returned, i.e. the names of the contained files are listed with the target location as the root directory (<code>"DIRECTORY/ARCHIVED_FILE"</code>).
+		<codeblock>
+			{"ARCHIVED_FILE1", "ARCHIVED_FILE2", ...} = unpack ARCHIVEFILE
+			{"UNPACKED_FILE1", "UNPACKED_FILE2", ...} = unpack ARCHIVEFILE -set target=DIRECTORY
+		</codeblock>
+		<h>Archive types</h>
+		The archive types <em>Zip</em>, <em>Tar</em> and <em>GZip</em> are supported. These are automatically detected during unpacking. When packing, they are determined either from the file name extension or from the existing type of an archive file to be overwritten. However, if the archive type cannot be determined from the desired file extension, the type can also be specified directly during packing using <code>type=TYPE</code>:
+		<list>
+			<item node="type=ziparchive">Creates the archive as a zip archive (<code>*.zip</code>). The implementation of an own file format as a zip archive is a very common procedure. The archive is also compressed</item>
+			<item node="type=tarchive">Creates the archive as a tape archive (<code>*.tar</code>). This archive is quite common in the Linux world. However, no compression is applied</item>
+			<item node="type=gzarchive">Creates the archive as a GZip archive (<code>*.gz</code>). A GZip archive can contain only one file, which is compressed in the process. If instead a file list or directory is passed, these are first packed into a temporary tape archive and this is then embedded into the GZip archive</item>
+		</list>
+	</contents>
+</article>
