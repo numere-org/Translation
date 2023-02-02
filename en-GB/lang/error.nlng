@@ -476,6 +476,8 @@ ERR_NR_4102_0_WRONG_PLOT_INTERVAL_FOR_LOGSCALE=If an axis or an interval shall b
 ERR_NR_4102_1_WRONG_PLOT_INTERVAL_FOR_LOGSCALE=%%ERR_SEEALSO%%: "help plot"
 ERR_NR_4103_0_WRONG_DATA_SIZE=The number of data points does not fulfill the current operation's requirements. In case of a wavelet transform, it obviously does not match to a power of 2.$(A wavelet transform may only be calculated from data with a number of data points matching to a power of 2.)
 ERR_NR_4103_1_WRONG_DATA_SIZE=%%ERR_SEEALSO%%: "help wavelet"
+ERR_NR_4104_0_WRONG_COLUMN_TYPE=On or more selected columns of the table "%%1%%()" do not contain the expected data type for the current command, i.e. a numerical value was expected but a string was provided instead or the other way around.$(Use "%%1%%().typeof()" to query the type of a column and "%%1%%().convert()" to change the type of a column in a table.)
+ERR_NR_4104_1_WRONG_COLUMN_TYPE=%%ERR_SEEALSO%%: "help table"
 ERR_NR_4200_0_ZEROES_VAR_NOT_FOUND=The variable for searching the intersections with zero wasn't found.$(Probably it wasn't initialized yet.)
 ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=%%ERR_SEEALSO%%: "help zeroes"
 # CATCHALL_ERROR

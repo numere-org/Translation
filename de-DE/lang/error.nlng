@@ -476,6 +476,8 @@ ERR_NR_4102_0_WRONG_PLOT_INTERVAL_FOR_LOGSCALE=Wenn eine Achse oder ein Interval
 ERR_NR_4102_1_WRONG_PLOT_INTERVAL_FOR_LOGSCALE=%%ERR_SEEALSO%%: "help plot"
 ERR_NR_4103_0_WRONG_DATA_SIZE=Die Zahl der Datenpunkte ist für die aktuelle Operation nicht geeignet. Im Falle einer Wavelet-Transformation entspricht sie offenbar keiner Potenz von 2.$(Eine Wavelet-Transformation kann nur von Datensätzen berechnet werden, deren Anzahl einer Potenz von 2 entspricht.)
 ERR_NR_4103_1_WRONG_DATA_SIZE=%%ERR_SEEALSO%%: "help wavelet", "help fft"
+ERR_NR_4104_0_WRONG_COLUMN_TYPE=Eine oder mehrere selektierte Spalten aus der Tabelle "%%1%%()" enthalten nicht den erwarteten Datentyp für das aktuelle Kommando, d.h. es wurde ein numerischer Wert erwartet und eine Zeichenkette übergeben oder umgekehrt.$(Verwende "%%1%%().typeof()", um den Typ einer Spalte abzufragen und "%%1%%().convert()", um den Typ einer Spalte in deiner Tabelle zu ändern.)
+ERR_NR_4104_1_WRONG_COLUMN_TYPE=%%ERR_SEEALSO%%: "help table"
 ERR_NR_4200_0_ZEROES_VAR_NOT_FOUND=Die Variable, bezüglich welcher die Nullstellen gesucht werden sollen, konnte nicht gefunden werden.$(Womöglich wurde sie noch nicht initialisiert.)
 ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=%%ERR_SEEALSO%%: "help zeroes"
 # CATCHALL_ERROR
