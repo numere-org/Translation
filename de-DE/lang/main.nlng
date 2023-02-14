@@ -944,16 +944,17 @@ GUI_STATUSBAR_WELCOMEPAGE_FILETYPE=Willkommen
 # -----------
 # File menu
 GUI_MENU_NEWFILE=&Neu ...
-GUI_MENU_NEWFILE_TTP=Erzeuge eine neue Datei
-GUI_MENU_NEW_EMPTYFILE=leere &Datei%%TAB%%Ctrl-N
+GUI_MENU_NEWFILE_DLG=Dateityp auswählen ...%%TAB%%Ctrl-N
+GUI_MENU_NEWFILE_TTP=Öffnet einen Dialog, um den Dateityp auszuwählen
+GUI_MENU_NEW_EMPTYFILE=Leere &Datei%%TAB%%Ctrl-Shift-N
 GUI_MENU_NEW_EMPTYFILE_TTP=Erzeuge eine leere Datei
 GUI_MENU_NEW_NSCR=NumeRe-&Script%%TAB%%Ctrl-Shift-S
 GUI_MENU_NEW_NSCR_TTP=Erzeuge ein Template für ein neues Script (erfordert einen Namen)
 GUI_MENU_NEW_NPRC=NumeRe-&Prozedur%%TAB%%Ctrl-Shift-P
 GUI_MENU_NEW_NPRC_TTP=Erzeuge ein Template für eine neue Prozedur (erfordert einen Namen)
-GUI_MENU_NEW_PLUGIN=NumeRe-P&lugin%%TAB%%Ctrl-Shift-L
+GUI_MENU_NEW_PLUGIN=NumeRe-P&lugin
 GUI_MENU_NEW_PLUGIN_TTP=Erzeuge ein Template für ein neues Plugin (erfordert das Kommando)
-GUI_MENU_NEW_LAYOUT=NumeRe-&Window-Layout
+GUI_MENU_NEW_LAYOUT=NumeRe-&Window-Layout%%TAB%%Ctrl-Shift-L
 GUI_MENU_NEW_LAYOUT_TTP=Erzeuge ein Template für ein neues Window-Layout
 GUI_MENU_OPENFILE=&Öffnen ...
 GUI_MENU_OPENFILE_TTP=Öffne eine bestehende Datei

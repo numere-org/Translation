@@ -944,16 +944,17 @@ GUI_STATUSBAR_WELCOMEPAGE_FILETYPE=Welcome
 # -----------
 # File menu
 GUI_MENU_NEWFILE=&New ...
-GUI_MENU_NEWFILE_TTP=Create a new file
-GUI_MENU_NEW_EMPTYFILE=empty &file%%TAB%%Ctrl-N
+GUI_MENU_NEWFILE_DLG=Select file type ...%%TAB%%Ctrl-N
+GUI_MENU_NEWFILE_TTP=Opens a dialog to select the file type from
+GUI_MENU_NEW_EMPTYFILE=Empty &file%%TAB%%Ctrl-Shift-N
 GUI_MENU_NEW_EMPTYFILE_TTP=Create an empty file
 GUI_MENU_NEW_NSCR=NumeRe &Script%%TAB%%Ctrl-Shift-S
 GUI_MENU_NEW_NSCR_TTP=Create a template for a new script (requires a name)
 GUI_MENU_NEW_NPRC=NumeRe &Procedure%%TAB%%Ctrl-Shift-P
 GUI_MENU_NEW_NPRC_TTP=Create a template for a new procedure (requires a name)
-GUI_MENU_NEW_PLUGIN=NumeRe P&lugin%%TAB%%Ctrl-Shift-L
+GUI_MENU_NEW_PLUGIN=NumeRe P&lugin
 GUI_MENU_NEW_PLUGIN_TTP=Creates a template for a new plugin (requires its command)
-GUI_MENU_NEW_LAYOUT=NumeRe &Window Layout
+GUI_MENU_NEW_LAYOUT=NumeRe &Window Layout%%TAB%%Ctrl-Shift-L
 GUI_MENU_NEW_LAYOUT_TTP=Creates a template for a new window layout
 GUI_MENU_OPENFILE=&Open ...
 GUI_MENU_OPENFILE_TTP=Open an existing file
