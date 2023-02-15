@@ -57,6 +57,11 @@ break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbre
 button~Inserts a labelable button into a window layout~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
 carttopol(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to polar coordinates (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
+cauchy_rd(a)~Returns a random number from the Cauchy distribution with scale parameter a~cauchy distribution function random distributionfunction~cauchy_rd(
+cauchy_cdf_p(x,a)~Get the value of the cumulative distribution function at x for the Cauchy distribution with scale parameter a~cauchy distribution function cumulative random number distributionfunction~cauchy_cdf_p(
+cauchy_cdf_q(x,a)~Get the value of the complementary cumulative distribution function at x for the Cauchy distribution with scale parameter a~cauchy distribution function cumulative random number distributionfunction~cauchy_cdf_q(
+cauchy_inv_p(p,a)~Returns the value of the inverse cumulative distribution function on p for the Cauchy distribution with scale parameter a~cauchy inverse distribution function random number distributionfunction~cauchy_inv_p(
+cauchy_inv_q(q,a)~returns the inverse value of the complementary cumulative distribution function at q for the Cauchy distribution with scale parameter a~cauchy inverse distribution function random number distributionfunction~cauchy_inv_q(
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
 checkbox~Inserts a checkbox into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
@@ -138,6 +143,11 @@ findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, w
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
 findparam(PAR,STR,C)~Returns the position, where the parameter PAR in the string STR was found, and 0, if PAR was not found. If PAR shall be followed by a special character (e.g. '='), you may pass this character with C, leave it away otherwise~parameter positionen optionen options positions commandline findparam()~findparam(
 findtoken(sString,sToken,sSep)~Returns the position, where the token sToken is found in the string sString, 0 otherwise~token match tokenize string zeichenkette split() findtoken()~findtoken(
+fisher_f_rd(nu1,nu2)~Returns a random number from the Fisher's F distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random~fisher_f_rd(
+fisher_f_cdf_p(x,nu1,nu2)~gives the cumulative distribution function at x of Fisher's F-distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random cumulative~fisher_f_cdf_p(
+fisher_f_cdf_q(x,nu1,nu2)~provides the complementary cumulative distribution function at x of Fisher's F-distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random number distributionfunction cumulative~fisher_f_cdf_q(
+fisher_f_inv_p(p,nu1,nu2)~provides the inverse of the cumulative distribution function at p of Fisher's F-distribution with degrees of freedom nu1 and nu2~fisher fisher-f f-distribution distribution function random number distributionfunction inverse~fisher_f_inv_p(
+fisher_f_inv_q(q,nu1,nu2)~provides the inverse of the complementary cumulative distribution function at q of Fisher's F-distribution with degrees of freedom nu1 and nu2~fisher fisher-f f-distribution distribution function random number distributionfunction inverse~fisher_f_inv_q(
 Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult~edit <savepath>/numerefit.log
 fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten fitting anpassen daten fehler errors abweichungen deviations trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fitw
 fit~Fit functions to data sets via parameters~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
@@ -211,6 +221,13 @@ Joke~It's theory, if you know, how it should work, but it doesn't. It's practice
 justify(STR,N)~Aligns the strings in the vector of strings to the left, right or center~justify() alignment justification left right center tabular layout tabular columns~justify(
 laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 at the position x~laguerrepolynome polynomial laguerre()~laguerre(
 laguerre_a(n,k,x)~Numerical value of the associated Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
+laplace_rd(a)~Returns a random number from the Laplace distribution with width a~laplace distribution function random~laplace_rd(
+laplace_cdf_p(x,a)~Returns the value of the cumulative distribution function at x for the Laplace distribution with width a~laplace distribution function random number distributionfunction cumulative~laplace_cdf_p(
+laplace_cdf_q(x,a)~returns the value of the complementary cumulative distribution function at x for the Laplace distribution with width a~laplace distribution function random number distributionfunction cumulative~laplace_cdf_q(
+laplace_inv_p(p,a)~returns the value of the inverse cumulative distribution function on p for the Laplace distribution with width a~laplace distribution function random number distributionfunction inverse~laplace_inv_p(
+laplace_inv_q(q,a)~Returns the inverse value of the complementary cumulative distribution function in q for the Laplace distribution with width a~laplace distribution function random number distributionfunction inverse~laplace_inv_q(
+landau_rd()~returns a random number of the Landau distribution~landau distribution function random number distributionfunction~landau_rd(
+levyAlphaStable_rd(c,alpha)~Returns a random number from the stable Levy alpha distribution with scale parameter c and exponent alpha~levy alpha stable distribution function random number distributionfunction~levyAlphaStable_rd(
 layout~Starts the definition of a window layout that can be used to create an interactive window~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
 lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
@@ -290,6 +307,11 @@ radio~Inserts a radio group into a window layout~radiobox windowsystem layout gr
 rand(x0,x1)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
 random~Random number generator with freely choosable distributions~zufallszahlen generator gaussverteilung gaußverteilung gaussian gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
 range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()~range(
+rayleigh_rd(sigma)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
+rayleigh_cdf_p(x,sigma)~Returns the value of the cumulative distribution function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_cdf_p(
+rayleigh_cdf_q(x,sigma)~returns the complementary value of the cumulative distribution function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction cumulative~rayleigh_cdf_q(
+rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution function on p for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random cumulative distributionfunction inverse~rayleigh_inv_p(
+rayleigh_inv_q(q,sigma)~returns the inverse of the complementary cumulative distribution function at q for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction inverse~rayleigh_inv_q(
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten~help read
 real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
@@ -370,6 +392,11 @@ str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings  # \" find last str_not_rmatch()~str_not_rmatch(
 str~Defines the local string variables in a procedure~procedure local strings~help str
 student_t(n,c)~Calculates the twosided Student factor t for n measurements and the confidence interval 0 < c < 1~student_t() studentfaktor~student_t(
+student_t_rd(nu)~Returns a random number from Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random distributionfunction~student_t_rd(
+student_t_cdf_p(x,nu)~Get the cumulative distribution function at x of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction cumulative~student_t_cdf_p(
+student_t_cdf_q(x,nu)~Get the complementary cumulative distribution function at x of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction cumulative~student_t_cdf_q(
+student_t_inv_p(p,nu)~returns the inverse of the cumulative distribution function at p of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction inverse~student_t_inv_p(
+student_t_inv_q(q,nu)~returns the inverse of the complementary cumulative distribution function at q of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction inverse~student_t_inv_q(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten # \" strings ausschnitt ausschneiden substr()~substr(
 sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings and will concatenate them~summe summieren zeichenketten # \" strings sum()~sum(
