@@ -181,7 +181,7 @@
 
 
 <article id="switch">
-	<title string="Auswahl-Verzweiungen (Switch-Case)" idxkey="switch, case" />
+	<title string="Auswahl-Verzweigungen (Switch-Case)" idxkey="switch, case" />
 	<keywords>
 		<keyword>switch</keyword>
 		<keyword>case</keyword>
