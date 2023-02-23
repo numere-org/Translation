@@ -27,6 +27,15 @@
 		<keyword>weightedlin</keyword>
 		<keyword>gaussian</keyword>
 		<keyword>savitzkygol</keyword>
+		<keyword>tent</keyword>
+		<keyword>bell</keyword>
+		<keyword>bspline</keyword>
+		<keyword>mitchell</keyword>
+		<keyword>lanczos</keyword>
+		<keyword>blackman</keyword>
+		<keyword>kaiser</keyword>
+		<keyword>gaussian</keyword>
+		<keyword>catmullrom</keyword>		
 	</keywords>
 	<contents>
 		<syntax>

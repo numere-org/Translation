@@ -150,7 +150,7 @@ BUILTIN_CLEARCACHE_EMPTY=Es sind keine Tabellen vorhanden, die gelöscht werden k
 BUILTIN_CREDITS_BUILD=Build-Datum
 BUILTIN_CREDITS_VERSIONINFO=ARTHUR HOLLY COMPTON (1892-1962) war ein US-amerikanischer Physiker und Nobelpreisträger, der den nach ihm benannten Compton-Effekt im Rahmen der Streuung von Röntgenquanten an Elektronen entdeckte. Den übertragenen Impuls konnte er in einer Nebelkammer sichtbar machen, wofür er mit seinem Kollegen C. Wilson mit dem Nobelpreis ausgezeichnet wurde.
 # BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
-BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz, oder (nach Ihrer Option) jeder späteren Version.
+BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, Version 3 der Lizenz.
 BUILTIN_CREDITS_LICENCE_2=Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
 BUILTIN_CREDITS_LICENCE_3=Sie sollten ein Exemplar der GNU GPL zusammen mit diesem Programm erhalten haben. Falls nicht, siehe http://www.gnu.org/licenses/
 BUILTIN_CREDITS_MEMBERS=Konzept/UI: Erik HÄNEL; Mathe-Parser: Ingo BERG; Plotting: Alexey BALAKIN; numerische Algorithmen: GNU Scientific Library; Tokenizer: Boost-Library; Matrix-Algorithmen: Eigen Library; BasicExcel: YAP Chun Wei; TinyXML-2: Lee THOMASON; Splines: Tino KLUGE; Testing: D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER, J. ZINßER
@@ -1167,6 +1167,7 @@ GUI_TB_DOCBROWSER_INDEX=%%DOC_HELP_INDEX%%
 GUI_TB_DOCBROWSER_BACK=%%DOC_HELP_BACK%%
 GUI_TB_DOCBROWSER_FORWARD=%%DOC_HELP_FORWARD%%
 GUI_TB_DOCBROWSER_PRINT=Drucken
+GUI_TB_DOCBROWSER_STO=Immer im Vordergrund
 # Printing dialogs
 GUI_PRINT_ERROR=Beim Drucken wurde ein Problem festgestellt.%%LINEBREAK%%Bitte die Druckereinstellungen prüfen und erneut versuchen.
 GUI_PRINT_ERROR_HEAD=NumeRe: Drucken fehlgeschlagen

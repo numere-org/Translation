@@ -150,7 +150,7 @@ BUILTIN_CLEARCACHE_EMPTY=There are no tables available, which may by deleted.
 BUILTIN_CREDITS_BUILD=Build date
 BUILTIN_CREDITS_VERSIONINFO=ARTHUR HOLLY COMPTON (1892-1962) was an American physicist and Nobel Prize winner who discovered the Compton effect, named after him, in the context of the scattering of X-ray quanta by electrons. He was able to make the transmitted impulse visible in a cloud chamber, for which he was awarded the Nobel Prize together with his colleague C. Wilson.
 # BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: a Release Candidate doesn't carry a version name. It is not guaranteed that the total current functionality from this Release Candidate will be available in the final stable release. You may influence the further process of the development through writing an e-mail to the upper address. If you find some bugs or a functionality does not possess the desired extent, do not hesitate and notify the developer.
-BUILTIN_CREDITS_LICENCE_1=This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+BUILTIN_CREDITS_LICENCE_1=This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
 BUILTIN_CREDITS_LICENCE_2=This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 BUILTIN_CREDITS_LICENCE_3=You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
 BUILTIN_CREDITS_MEMBERS=Concept/UI: Erik HÄNEL; Mathematical parser: Ingo BERG; Plotting: Alexey BALAKIN; numerical algorithms: GNU Scientific Library; Tokenizer: Boost-Library; Matrix-Algorithmen: Eigen Library; BasicExcel: YAP Chun Wei; TinyXML-2: Lee THOMASON; Splines: Tino KLUGE; Testing: D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER, J. ZINßER
@@ -1167,6 +1167,7 @@ GUI_TB_DOCBROWSER_INDEX=%%DOC_HELP_INDEX%%
 GUI_TB_DOCBROWSER_BACK=%%DOC_HELP_BACK%%
 GUI_TB_DOCBROWSER_FORWARD=%%DOC_HELP_FORWARD%%
 GUI_TB_DOCBROWSER_PRINT=Print
+GUI_TB_DOCBROWSER_STO=Always stay on top
 # Printing dialogs
 GUI_PRINT_ERROR=A problem was detected during printing.%%LINEBREAK%%Please check the printer settings and try again.
 GUI_PRINT_ERROR_HEAD=NumeRe: Printing failed
