@@ -1,0 +1,15 @@
+#**********************************************************************************************
+ * SCRIPTNAME: update_documentation 
+ * ============================================================================================
+ * Hinzugefügt: 2019-06-30, um 10:16:21 *#
+
+## Füge hier deine Kommandos und Ausdrücke ein.
+declare sREPOSITORY := "D:/CPP/numere-language/"
+copy sREPOSITORY + "de-DE/lang/*" -target="<>/lang/" -all
+copy sREPOSITORY + "common/*" -target="<>/lang/" -all
+copy sREPOSITORY + "de-DE/docs/*" -target="<>/docs/" -all
+
+#**Ende der Datei
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * https://sites.google.com/site/numereframework/
+ **********************************************************************************************#
