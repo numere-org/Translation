@@ -35,13 +35,14 @@
 		<keyword>bottom</keyword>
 		<keyword>box</keyword>
 		<keyword>boxplot</keyword>
+		<keyword>candles</keyword>
 		<keyword>chorus</keyword>
 		<keyword>coarse</keyword>
 		<keyword>complexmode</keyword>
 		<keyword>connect</keyword>
 		<keyword>cursor</keyword>
-		<keyword>errorb</keyword>
 		<keyword>equal</keyword>
+		<keyword>errorb</keyword>
 		<keyword>fine</keyword>
 		<keyword>font</keyword>
 		<keyword>grid</keyword>
@@ -70,6 +71,7 @@
 		<keyword>nobars</keyword>
 		<keyword>nobox</keyword>
 		<keyword>noboxplot</keyword>
+		<keyword>nocandles</keyword>
 		<keyword>noconnect</keyword>
 		<keyword>noerrorb</keyword>
 		<keyword>nogrid</keyword>
@@ -79,6 +81,7 @@
 		<keyword>nologscale</keyword>
 		<keyword>nomarks</keyword>
 		<keyword>none</keyword>
+		<keyword>noohlc</keyword>
 		<keyword>noopen</keyword>			
 		<keyword>nopoint</keyword>
 		<keyword>noregion</keyword>
@@ -93,6 +96,7 @@
 		<keyword>obps</keyword>
 		<keyword>oeps</keyword>
 		<keyword>ogif</keyword>
+		<keyword>ohlc</keyword>
 		<keyword>onlycol</keyword>
 		<keyword>onlystyl</keyword>
 		<keyword>open</keyword>
@@ -157,6 +161,7 @@
 			<item node="bgcolorscheme=SCHEME">Choose the colorscheme for the background. Predefined schemes are <code>real</code>, <code>rainbow</code>, <code>viridis</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> and <code>map</code>. See <a href="nhlp://colorscheme?frame=new">help colorscheme</a> for further schemes</item>
 			<item node="box/nobox">(De-)activates the surrounding box (modifies how the axis are displayed)</item>
 			<item node="boxplot/<br/>  noboxplot">(De-)activates the boxplot mode (Minimal, maximal value &amp; quartiles). Each data row (only <expr>y</expr> values will be used) creates a single boxplot marker in the final plot.If the whole data set is selected, then a boxplot of each column will be created. An index vector may be used to select distinct columns.</item>
+			<item node="candlestick/<br/>  nocandlestick">(De)activate candlestick mode for displaying a price development (similar to open-high-low-close, <code>ohlc</code>). At least 4 data series are expected, in case of 5 data series the first one is used for <expr>x</expr>. The data series must be given in the order [start value, maximum value, minimum value, end value]. Start and end value describe the central part of the candle, minimum and maximum value describe the respective vertical extensions. Two colors are used for this mode, the first one for positive development and the second one for negative development. Here the development is always referred to the respective start value.</item>
 			<item node="complexmode=MODE">(De-)activates the connections between data points</item>
 			<item node="connect/<br/>  noconnect">(De-)activates the connections between data points</item>
 			<item node="coords=COORDS">Choose the coordinates COORDS. You may choose out of <code>cartesian</code>, <code>polar</code> (cylindrical) and <code>spherical</code>. Depending on the chosen plotting style the coordinate assignements are different. See <a href="nhlp://coords?frame=new">help coords</a> for further details.</item>
@@ -180,6 +185,7 @@
 			<item node="minline=COMMENT">Draws a horizontal line through the minimal function value of a plot and adds the COMMENT. In the form <code>minline=(TEXT,STYLE)</code> the display of the line may be modified</item>
 			<item node="obps=NAME">Creates an EPS file using bitmap representation instead of a PNG file with the filename NAME</item>
 			<item node="oeps=NAME">Creates an EPS file using vector representation instead of a PNG file with the filename NAME</item>
+			<item node="ohlc/<br/>  noohlc">OHLC mode to (de-)activate a price development (Open-High-Low-Close, similar to <code>candlestick</code>). At least 4 data series are expected, in case of 5 data series the first one is used for <expr>x</expr>. The data series must be given in the order [start value, maximum value, minimum value, end value]. Start value and end value describe the lateral offshoots, minimum and maximum value describe the <expr>y</expr> interval of the individual data points. Two colors are used for this mode, the first color for positive and the second for negative development. Here the development is always related to the end value of the previous data point and not to the respective start point.</item>
 			<item node="open/noopen">Show/don't show the created graphic in an external viewer (if available)</item>
 			<item node="opng=NAME">Set the filename of the created PNG file to NAME. Already present files will be overwritten. Filenames containing whitespaces have to be passed inside of quotation marks</item>
 			<item node="origin=ORIGIN">Modify the coordinate origin: <code>origin=std</code> actives the default behavior, with <code>origin=sliding</code> the axes run through at least one 0 if available, and with <code>origin={X,Y,Z}</code> (where values for X,Y,Z are mandatory) the origin may be moved to the desired position (if it is available. Otherwise the behavior of <code>origin=sliding</code> will be applied).</item>

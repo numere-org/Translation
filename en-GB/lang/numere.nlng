@@ -152,6 +152,7 @@ PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(sTable,nMode=0)    
 PARSERFUNCS_LISTFUNC_FUNC_GETKEYVAL_[STRING]=				getkeyval({sKeyVals},sKey,sDef="",strict=false)             ARG      - Returns the value of the corresponding key sKey from the key-value list sKeyVals. sDef is the default value, if the key could not be found. If strict is true and the key was not found, then a warning is issued. sDef is a optional value and defaults to false
 PARSERFUNCS_LISTFUNC_FUNC_GETLASTERROR_[STRING]=			getlasterror()                                             {STR}     - Returns the last error processed by a try-catch block in the form {TYPE, MESSAGE}, where TYPE always corresponds to one of the known error types of try-catch as a string
 PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(sLine)                                    VAL      - Returns the position of the closing parenthesis matching to the first open parenthesis in the string sLine. Note that this applies to brackets and braces as well.
+PARSERFUNCS_LISTFUNC_FUNC_GETOMPTHREADS_[NUM]=				getompthreads()                                             VAL      - Returns the number of the maximal possible OpenMP threads. This corresponds mostly to the number of logical CPU cores.
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(sLine,nPos)                                          STR      - Returns the value of a parameter in the string sLine with the value's first character at position nPos (e.g. after "=") as a string. Note that all whitespaces between nPos and the actual position of the value will be ignored.
 PARSERFUNCS_LISTFUNC_FUNC_GETVERSIONINFO_[STRING]=			getversioninfo()                                           {STR}     - Returns information about the current NumeRe version. The information contain the version name, the build date, the full version number and the file version name (e.g. for the installer)
 PARSERFUNCS_LISTFUNC_FUNC_HCAT_[MAT]=						hcat(mLeft,mRight)                                          MAT      - Concatenates the two matrices horizontally. Thus, the columns of the second matrix are appended to the columns of the first matrix. This operation requires that both matrices have the same number of rows, otherwise the operation is not feasible.
@@ -667,6 +668,7 @@ GUI_EDITOR_CALLTIP_OPT_BSPLINE=method=bspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIO
 GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_BUTTONS=buttons=BUTTONS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
+GUI_EDITOR_CALLTIP_OPT_CANDLESTICK=candlestick [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CATMULLROM=method=catmullrom [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% resample]
 GUI_EDITOR_CALLTIP_OPT_CBSPLINE=method=cbspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
@@ -833,6 +835,7 @@ GUI_EDITOR_CALLTIP_OPT_NOBACKGROUND=nobackground [%%GUI_EDITOR_CALLTIP_COMMON_PL
 GUI_EDITOR_CALLTIP_OPT_NOBARS=nobars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOBOX=nobox [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOBOXPLOT=noboxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOCANDLESTICK=nocandlestick [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOCLOG=noclog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOCLOUDPLOT=nocloudplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOCOLORBAR=nocolorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -853,6 +856,7 @@ GUI_EDITOR_CALLTIP_OPT_NOLIGHT=nolight [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOLOGSCALE=nologscale [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOMARKS=nomarks [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NONE=complexmode=none [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_NOOHLC=noohlc [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOOPEN=noopen [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOORTHOPROJECT=noorthoproject [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOPCONT=nopcont [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -873,6 +877,7 @@ GUI_EDITOR_CALLTIP_OPT_NQ=nq
 GUI_EDITOR_CALLTIP_OPT_OBPS=obps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%
 GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_OHLC=ohlc [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OK=buttons=ok [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_OKCANCEL=buttons=okcancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_ONCHANGE=onchange=EVENTHANDLER [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]

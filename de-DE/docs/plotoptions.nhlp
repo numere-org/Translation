@@ -35,13 +35,14 @@
 		<keyword>bottom</keyword>
 		<keyword>box</keyword>
 		<keyword>boxplot</keyword>
+		<keyword>candles</keyword>
 		<keyword>chorus</keyword>
 		<keyword>coarse</keyword>
 		<keyword>complexmode</keyword>
 		<keyword>connect</keyword>
 		<keyword>cursor</keyword>
-		<keyword>errorb</keyword>
 		<keyword>equal</keyword>
+		<keyword>errorb</keyword>
 		<keyword>fine</keyword>
 		<keyword>font</keyword>
 		<keyword>grid</keyword>
@@ -70,6 +71,7 @@
 		<keyword>nobars</keyword>
 		<keyword>nobox</keyword>
 		<keyword>noboxplot</keyword>
+		<keyword>nocandles</keyword>
 		<keyword>noconnect</keyword>
 		<keyword>noerrorb</keyword>
 		<keyword>nogrid</keyword>
@@ -79,6 +81,7 @@
 		<keyword>nologscale</keyword>
 		<keyword>nomarks</keyword>
 		<keyword>none</keyword>
+		<keyword>noohlc</keyword>
 		<keyword>noopen</keyword>			
 		<keyword>nopoint</keyword>
 		<keyword>noregion</keyword>
@@ -93,6 +96,7 @@
 		<keyword>obps</keyword>
 		<keyword>oeps</keyword>
 		<keyword>ogif</keyword>
+		<keyword>ohlc</keyword>
 		<keyword>onlycol</keyword>
 		<keyword>onlystyl</keyword>
 		<keyword>open</keyword>
@@ -157,6 +161,7 @@
 			<item node="bgcolorscheme=SCHEMA">Das Farbschema SCHEMA für den Hintergrund wählen. Einige vordefinierte Schemata sind <code>real</code>, <code>rainbow</code>, <code>viridis</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> und <code>map</code>. Siehe <a href="nhlp://colorscheme?frame=new">help colorscheme</a> für weitere Schemata</item>
 			<item node="box/nobox">Umfassende Box ein-/ausschalten (beeinflusst die Darstellung der Achsen)</item>
 			<item node="boxplot/<br/>  noboxplot">Boxplot-Modus (de-)aktivieren (Minimum, Maximum &amp; Quartile). Jede Datenreihe (es werden nur <expr>y</expr>-Werte verwendet) erzeugt einen einzelnen Boxplot-Marker im endgültigen Plot. Wird der gesamte Datensatz verwendet, wird von jeder Spalte ein Boxplot erzeugt. Mit einem Indexvektor können auch einzelne Spalten herausgegriffen werden.</item>
+			<item node="candlestick/<br/>  nocandlestick">Candlestick-Modus zur Darstellung einer Preisentwicklung (de-)aktivieren (ähnlich zu Open-High-Low-Close, <code>ohlc</code>). Es werden mindestens 4 Datenreihen erwartet, bei 5 Datenreihen wird die erste für <expr>x</expr> verwendet. Die Datenreihen müssen in der Reihenfolge [Startwert, maximaler Wert, minimaler Wert, Endwert] vorgegeben werden. Start- und Endwert beschreiben den zentralen Teil der Kerze, minimaler und maximaler Wert beschreiben die jeweiligen vertikalen Ausläufer. Es werden zwei Farben für diesen Modus verwendet, wobei die erste Farbe für positive und die zweite für negative Entwicklung verwendet wird. Hierbei wird die Entwicklung immer auf den jeweiligen Startwert bezogen.</item>
 			<item node="complexmode=MODE">Modus zur Darstellung komplexwertiger Daten bzw. Funktionen auswählen. Zur Wahl stehen <code>complexmode=none</code> (nur den Realteil darstellen; Standard), <code>complexmode=reim</code> (Real- und Imaginärteil als getrennte Funktionen im gleichen Graphen darstellen) und <code>complexmode=plane</code> (nur <code>plot</code>, <code>dens</code> und <code>surf</code>; verwendet <expr>x</expr> und <expr>y</expr> als Real- und Imaginärteil der Ergebnisfunktion bei <code>plot</code>. Bei <code>dens</code> bzw. <code>surf</code> wird die Phase der Ergebnisfunktion farbcodiert und der <expr>z</expr>-Wert gibt ihren Betrag an)</item>
 			<item node="connect/<br/>  noconnect">Verbindungen zwischen Datenpunkten ein-/ausschalten</item>
 			<item node="coords=KOORDINATEN">Den Koordinatensatz KOORDINATEN auswählen. Zur Verfügung stehen <code>cartesian</code> (kartesisch), <code>polar</code> (polar/zylindrisch) und <code>spherical</code> (sphärisch). Je nach gewähltem Plotstil sind die Koordinatenzuordnungen unterschiedlich. Siehe <a href="nhlp://coords?frame=new">help coords</a> für weitere Details.</item>
@@ -178,9 +183,10 @@
 			<item node="marks=WERT/<br/>  nomarks">(Nur bei <code>plot3d</code>) Zeichnet Kreise der Größe WERT an den <expr>(x,y,z)</expr>-Koordinaten, wobei die Kreise gemäß des <expr>z</expr>-Werts und des Farbschemas gefüllt sind</item>
 			<item node="maxline=KOMNTR">Zeichnet eine horizontale Linie durch den maximalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>
 			<item node="minline=KOMNTR">Zeichnet eine horizontale Linie durch den minimalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>
-			<item node="open/noopen">Erzeugte Graphik in einem externen Viewer (sofern vorhanden) anzeigen/nicht anzeigen</item>
 			<item node="obps=NAME">Erzeugt anstatt einer PNG-Datei eine EPS-Datei unter Verwendung einer Bitmap-Darstellung unter NAME</item>
 			<item node="oeps=NAME">Erzeugt anstatt einer PNG-Datei eine EPS-Datei unter Verwendung einer Vektor-Darstellung unter NAME</item>
+			<item node="ohlc/<br/>  noohlc">OHLC-Modus zur Darstellung einer Preisentwicklung (de-)aktivieren (Open-High-Low-Close, ähnlich zu <code>candlestick</code>). Es werden mindestens 4 Datenreihen erwartet, bei 5 Datenreihen wird die erste für <expr>x</expr> verwendet. Die Datenreihen müssen in der Reihenfolge [Startwert, maximaler Wert, minimaler Wert, Endwert] vorgegeben werden. Start- und Endwert beschreiben die seitlichen Ausläufer, minimaler und maximaler Wert beschreiben das <expr>y</expr>-Intervall der einzelnen Datenpunkte. Es werden zwei Farben für diesen Modus verwendet, wobei die erste Farbe für positive und die zweite für negative Entwicklung verwendet wird. Hierbei wird die Entwicklung immer auf den Endwert des vorherigen Datenpunkts und nicht auf den jeweiligen Startpunkt bezogen.</item>
+			<item node="open/noopen">Erzeugte Graphik in einem externen Viewer (sofern vorhanden) anzeigen/nicht anzeigen</item>
 			<item node="opng=NAME">Dateiname der erzeugten PNG-Datei auf NAME setzen. Vorhandene Dateien werden überschrieben! Lange Dateinamen (mit Leerzeichen) können mit umschließenden Anführungszeichen angegeben werden</item>
 			<item node="origin=URSPRUNG">Den Koordinatenursprung beeinflussen: <code>origin=std</code> ist das Standardverhalten, mit <code>origin=sliding</code> gehen die Achsen durch mindestens eine 0, falls vorhanden, und mit <code>origin={X,Y,Z}</code> (wobei Werte für X,Y,Z nötig sind) kann der Ursprung auf eine beliebige Position verschoben werden (falls dieser nicht Teil des Plots ist, wird das Verhalten von <code>origin=sliding</code> angewendet).</item>
 			<item node="osvg=NAME">Wie <code>oeps</code>, allerdings wird eine SVG-Datei erzeugt</item>
