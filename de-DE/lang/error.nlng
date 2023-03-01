@@ -454,6 +454,7 @@ ERR_NR_3603_INTERNAL=Interner Parserfehler.
 ERR_NR_3603_STACK=Interner Fehler: Der Stack hat kein Ergebnis zurückgegeben.
 ERR_NR_3603_INCOMPLETE=Interner Fehler: Der Ausdruck wurde unvollständig ausgewertet.
 ERR_NR_3603_OVERWRITE=Interner Fehler: Zugriffsverletztung im internen Speicher.
+ERR_NR_3603_NOT_IMPLEMENTED=Diese Funktion ist nicht für Zeichenketten verfügbar.
 ERR_NR_3700_0_TABLE_DOESNT_EXIST=Die gewünschte Tabelle existiert nicht, oder es wurde keine spezifiziert.
 ERR_NR_3700_1_TABLE_DOESNT_EXIST=Möglicherweise wurde nur die Argumentklammern vergessen.%%LINEBREAK%%%%ERR_SEEALSO%%: "help data" und "help table"
 ERR_NR_3800_0_TOO_FEW_ARGS=Es wurden zu wenig Argumente an "%%1%%" übergeben.

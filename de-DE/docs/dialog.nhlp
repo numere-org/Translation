@@ -25,6 +25,7 @@
 		<keyword>dirdialog</keyword>
 		<keyword>filedialog</keyword>
 		<keyword>listdialog</keyword>
+		<keyword>listedit</keyword>
 		<keyword>selectiondialog</keyword>
 		<keyword>icon</keyword>
 		<keyword>erroricon</keyword>
@@ -44,6 +45,7 @@
 			RESULT = dialog DEFAULTFILE -set type=filedialog title=TITLE
 			RESULT = dialog DEFAULTFOLDER -set type=dirdialog title=TITLE
 			RESULT = dialog {VAL} -set type=listdialog msg=MESSAGE title=TITLE
+			{RESULT} = dialog {VAL} -set type=listeditor msg=MESSAGE title=TITLE
 			{RESULT} = dialog {VAL} -set type=selectiondialog msg=MESSAGE title=TITLE
 		</syntax>
 		NumeRe kann mehrere Typen von Dialogen erzeugen, mit denen graphisch mit dem Nutzer interagiert werden kann. Ein Dialog wird mit dem Kommando <code>dialog</code> generiert. Hierauf folgen Standardwerte und eine Reihe an Optionen. Generisch hat das Kommando die folgende Syntax:<codeblock>dialog STANDARDWERTE -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>Die Auswahl des Benutzers oder der Wert der geklickten Schaltfläche wird als Zeichenkette(n) zurückgegeben. Eine leere Zeichenkette ist dabei gleichbedeutend zu einem Klick auf die "Abbruch"-Schaltfläche.
@@ -55,6 +57,7 @@
 			<item node="filedialog">Öffnet ein Dateiauswahlfenster an, in dem eine Datei ausgewählt werden kann, deren Dateipfad dann als Rückgabewert verfügbar ist. Für den Standardwert können bis zu drei Zeichenketten angeben werden, wobei die erste Zeichenkette das Startverzeichnis, die zweite den Standarddateinamen und die dritte eine Dateitypmaske definiert. Die Maske setzt sich dabei aus einer Beschreibung und dem entsprechenden Filter zusammen: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> Der Filter kann Wildcards und mehrere Filterausdrücke zugleich enthalten, z.B. <code>"Textdateien|*.txt|Projektdateien|*.xml;*.txt;*.ini"</code>. Bricht der Nutzer diesen Dialog ab, wird eine leere Zeichenkette zurückgegeben.</item>
 			<item node="dirdialog">Öffnet ein Verzeichnisauswahlfenster an, in dem ein Verzeichnis ausgewählt werden kann, dessen Dateipfad dann als Rückgabewert verfügbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
 			<item node="listdialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine auswählen kann. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+			<item node="listeditor">Zeigt eine Liste an Zeichenketten an, deren Inhalt der Nutzer durch Doppelklicken bearbeiten kann. Die aktualisierten Zeichenketten werden als Zeichenkettenvektor zurückgegeben. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
 			<item node="selectiondialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine oder mehrere auswählen kann, welche als Zeichenkettenvektor zurückgegeben werden. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
 		</list>
 		Der Optionswert <code>msg=STRING</code> zeigt STRING als informative Nachricht im öffnenden Dialog an. <code>filedialog</code> und <code>dirdialog</code> unterstützen dies jedoch nicht. Durch <code>title=STRING</code> kann des Weiteren die Titelzeile des Fensters modifiziert werden.

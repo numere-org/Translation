@@ -20,10 +20,10 @@
 #
 # This database contains the necessary information for the keyword search.
 #
-# SYNTAX
-# Function~Description~Keywords~TerminalImport
 # The entries have to be alphabetically!
 #
+# SYNTAX
+# Function~Description~Keywords~TerminalImport
 abs(x)~Absolute value of x~absolutwert betrag abs()~abs(
 acos(x)~Inverse cosine of x. arccos(x) is a synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acos(
 acosh(x)~Inverse hyperbolic cosine of x. arcosh(x) is a synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acosh(

@@ -20,10 +20,10 @@
 #
 # Diese Datenbank enthält die nötigen Informationen für die Stichwortsuche.
 #
-# SYNTAX
-# Function~Description~Keywords~TerminalImport
 # Die Einträge MÜSSEN alphabetisch erfolgen!
 #
+# SYNTAX
+# Function~Description~Keywords~TerminalImport
 abs(x)~Betrag von x~absolutwert absolute value betrag abs()~abs(
 acos(x)~Arkuskosinus von x. arccos(x) ist ein Synonym~acos() arccos() arcuscosinus arkuskosinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acos(
 acosh(x)~Areakosinus hyperbolicus von x. arcosh(x) ist ein Synonym~acosh() arcosh() areakosinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acosh(
