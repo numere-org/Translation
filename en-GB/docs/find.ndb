@@ -40,6 +40,8 @@ asec(x)~Inverse secant of x.~asec() arcussecant trigonometrische funktionen trig
 asech(x)~Inverse hyperbolic secant von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
+as_date(nYear, nMonth, nDay)~creates date as_date(
+as_time(nHour, nMinutes, nSeconds, nMilli, nMicro)~creates time as_time(
 assemble(MAT,MAT,MAT)~Creates a new matrix from the values of the third matrix MAT with the target indices from the first and the second matrix~assemble gather zusammensetzen zusammenbauen kombinieren~assemble( 
 assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(

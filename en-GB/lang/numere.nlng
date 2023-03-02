@@ -333,6 +333,8 @@ PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)               
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m=n)                                                 MAT      - Creates a n x m matrix, which is filled with zeroes. If only one argument was passend, then a square matrix will be created.
 PARSERFUNCS_LISTFUNC_FUNC_ZETA_[NUM]=					    zeta(x)                                                     VAL      - Calculates the value of the Riemann zeta function at the location x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {1}
 PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,rho,phi)                                              VAL      - Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position rho in the interval [0,1] at the angle phi in the interval [0,2*PI)
+PARSERFUNCS_LISTFUNC_FUNC_AS_DATE_[TIME]=					as_date(nYear, yMonth=1, nDay=1)                            VAL      - Creates date
+PARSERFUNCS_LISTFUNC_FUNC_AS_TIME_[TIME]=					as_time(nHours, nMinutes=0, nSeconds=0, nMilli=0, nMicro=0) VAL      - Creates time
 PARSERFUNCS_LISTFUNC_TABLEHEAD=								Function:                                                   Type:    Result:
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=The key %%1%% could not be found in the passed list by the function getkeyval().
