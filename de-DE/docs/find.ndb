@@ -40,8 +40,8 @@ asec(x)~Arkussekans von x.~asec() arkussekans trigonometrische funktionen trigon
 asech(x)~Areasekans hyperbolicus von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
-as_date(nYear, nMonth, nDay)~erstellt Datum as_date(
-as_time(nHour, nMinutes, nSeconds, nMilli, nMicro)~Erstellt Zeit as_time(
+as_date(y,m,d)~Kombiniert die einzelnen Werte zu einem gemeinsamen Datum~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
+as_time(h,m,s,i,u)~Kombiniert die einzelnen Werte zu einem gemeinsamen Zeitwert~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 assemble(MAT,MAT,MAT)~Erstellt eine neue Matrix aus den Werten der dritten Matrix MAT mit den Zielindices aus der ersten und zweiten Matrix~assemble() gather zusammensetzen zusammenbauen kombinieren~assemble(
 assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
