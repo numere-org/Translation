@@ -38,7 +38,7 @@
 			<item node="order=ORDER">Specify the order of derivation, by default this is 1. Has to be an <em>odd</em> number</item>
 			<item node="points=POINTS">Specify the number of points to be used by the method of Savitzky and Golay (see below). By default, this value is 5</item>
 		</list>
-		Furthermore, NumeRe can numerically differentiate data sets using the method of Savitzky and Golay. To do this, <code>diff</code> must be specified followed by the desired dataset:<codeblock>diff DATASET(i1:i2,j1:j2)</codeblock>.
+		Furthermore, NumeRe can numerically differentiate data sets using the method of Savitzky and Golay. To do this, <code>diff</code> must be specified followed by the desired dataset:<codeblock>diff DATASET(i1:i2,j1:j2)</codeblock>
 		The dataset should contain <expr>x</expr> and <expr>y</expr> values in the columns to get correct derivatives, otherwise derivatives between grid points of width 1 will be calculated. In addition, the data set must contain at least <code>points</code> points to obtain a derivative. In addition, the first <code>points/2</code> and the last <code>points/2</code> data points of the result are not sensibly determined and are only copies of the following or preceding value.
 		<example desc="Numerical differentiation of the function <expr>f(x) = x^2</expr> at the position <expr>x = 1</expr> with the precision <expr>epsilon = 10^(-6)</expr> and numerical differentiation of a data set:">
 			diff x^2 -set x=1 eps=1e-6

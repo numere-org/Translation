@@ -35,7 +35,7 @@
 			fft2d TABLE() -axisshift ...
 			fft2d TABLE() -inverse ...
 		</syntax>
-		NumeRe is equipped with a fast Fourier transformation algorithm (<em>fast fourier transformation; fft</em>) that can decompose data sets into their contained frequencies for analysis. This algorithm is started with the command <code>fft</code>, where the data series must also be specified:<codeblock>fft DATAOBJECT(I1:I2,J1:J2)</codeblock>.
+		NumeRe is equipped with a fast Fourier transformation algorithm (<em>fast fourier transformation; fft</em>) that can decompose data sets into their contained frequencies for analysis. This algorithm is started with the command <code>fft</code>, where the data series must also be specified:<codeblock>fft DATAOBJECT(I1:I2,J1:J2)</codeblock>
 		NumeRe expects at least two columns in a Fourier transform: Axis values (time or frequency) and amplitude (real or complex). If three columns are specified, they are interpreted as axis values, amplitude and phase, or - if the additional option <code>-complex</code> is passed - as axis values, real part and imaginary part of the amplitude.
 		In case of a datagrid or an image, one can perform a 2D FFT with the command <code>fft2d</code>.
 		<em>Note:</em> An FFT is particularly efficient for data sets with a length of a power of two (e.g. <expr>2^2, 2^3, 2^4, ...</expr> data points). However, if the length of the data sets can only be factorised by particularly large prime numbers, the calculation can take a very long time (i.e. several minutes). Above 1000 data points, NumeRe automatically adapts the length of the data points so that they are at least even.
