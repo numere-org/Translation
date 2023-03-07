@@ -1,2 +1,2 @@
-# translation
+# Translation
 Translation files for NumeRe
