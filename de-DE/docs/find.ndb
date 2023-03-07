@@ -362,7 +362,7 @@ solve(MAT)~Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieb
 sort~Sortiert einen Datensatz, siehe "help data" oder "help table"~ordnen order sortieren aufsteigend absteigend ascending descending~help sort
 spinbut~Fügt ein Spin-Button-Objekt in ein Window-Layout ein~spinctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion~help spline
-split(STR,CHAR)~Teilt die Zeichenkette STR an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens~split(
+split(STR,CHAR,KEEP)~Teilt die Zeichenkette STR an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens~split(
 sqrt(x)~Wurzel von x~wurzel root sqrt()~sqrt(
 start~Ein NumeRe-Script (*.nscr) ausführen, siehe "help script"~starten laden plugins installation installieren execute run~help start
 statictext~Fügt einen statischen Text in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -378,7 +378,7 @@ STR.nmtch(STR,POS)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette,
 STR.nrmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette, das nicht in STR auftritt, bis zum Zeichen POS~methode strings zeichenketten find last nrmtch()~nrmtch(
 STR.rfnd(STR,POS)~Gibt die Position des letzten Auftretens von STR in der Zeichenkette bis zum Zeichen POS zurück~methode strings zeichenketten find last rfnd()~.rfnd(
 STR.rmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens aus STR in der Zeichenkette bis zum Zeichen POS~methode strings zeichenketten find last rmtch()~.rmtch(
-STR.splt(CHAR)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten unterteilen tokenizer zerlegen splt() tokens~.splt(
+STR.splt(CHAR,KEEP)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten unterteilen tokenizer zerlegen splt() tokens~.splt(
 STR.sub(POS,LEN)~Gibt LEN Zeichen ab dem Zeichen POS aus der Zeichenkette als neue Zeichenkette zurück~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(

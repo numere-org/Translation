@@ -363,7 +363,7 @@ solve(MAT)~Solves the system of linear equations, which is described by the matr
 sort~Sorts a data set~ordnen order sortieren aufsteigend absteigend ascending descending~help sort
 spinbut~Inserts a spin button object into a window layout~spinctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion~help spline
-split(STR,CHAR)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
+split(STR,CHAR,KEEP)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
 statictext~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -379,7 +379,7 @@ STR.nmtch(STR,POS)~Searches for the first occurrence of a char in the string goi
 STR.nrmtch(STR,POS)~Searches for the last occurrence of a char in the string up to position POS, which doesn't appear in STR~methode strings zeichenketten find last nrmtch()~.nrmtch(
 STR.rfnd(STR,POS)~Returns the position of the last occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find last rfnd()~.rfnd(
 STR.rmtch(STR,POS)~Searches for the last occurrence of a char of STR in the string up to position POS~methode strings zeichenketten find last rmtch()~.rmtch(
-STR.splt(CHAR)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten unterteilen tokenizer zerlegen splt()~.splt(
+STR.splt(CHAR,KEEP)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten unterteilen tokenizer zerlegen splt()~.splt(
 STR.sub(POS,LEN)~Returns LEN characters starting with the letter POS from the string as a new string~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
