@@ -1,5 +1,6 @@
 ### SUMMARY
-Implements necessary language changes for numere-org/NumeRe#[ISSUE-ID]
+Implements necessary language changes.
+Resolves numere-org/NumeRe#[ISSUE-ID]
 
 *Reviewers:* @numere-org/maintainers
 
