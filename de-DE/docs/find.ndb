@@ -35,13 +35,13 @@ and(x,y,z,...)~Verknüpft die Argumente mit "&&"~logik logic und~and(
 ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans{}
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
+as_date(y,m,d)~Kombiniert die einzelnen Werte zu einem gemeinsamen Datum~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
+as_time(h,m,s,i,u)~Kombiniert die einzelnen Werte zu einem gemeinsamen Zeitwert~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 asec(x)~Arkussekans von x.~asec() arkussekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asec(
 asech(x)~Areasekans hyperbolicus von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
 asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
-as_date(y,m,d)~Kombiniert die einzelnen Werte zu einem gemeinsamen Datum~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
-as_time(h,m,s,i,u)~Kombiniert die einzelnen Werte zu einem gemeinsamen Zeitwert~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 assemble(MAT,MAT,MAT)~Erstellt eine neue Matrix aus den Werten der dritten Matrix MAT mit den Zielindices aus der ersten und zweiten Matrix~assemble() gather zusammensetzen zusammenbauen kombinieren~assemble(
 assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
@@ -234,6 +234,7 @@ laplace_rd(a)~Liefert eine Zufallszahl aus der Laplace-Verteilung mit der Breite
 layout~Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Definiert eine eigene Funktion für die lokale Verwendung, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
 lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
+leave~Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke~leave break continue~help leave
 legendre(n,x)~Berechnet den numerischen Wert der Legendre-Polynome der Ordnung n an der Stelle x~legendrepolynome polynomial legendre()~legendre(
 legendre_a(l,m,x)~Berechnet den numerischen Wert der assoziierten Legendre-Polynome der Ordnung l mit m = [-l,l] an der Stelle x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
 Li2(x)~Berechnet den Dilogarithmus von x~Li2() dilogarithm~Li2(
