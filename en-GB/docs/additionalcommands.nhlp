@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Additional commands" idxkey="about, hline, warn, close, assert, declare, clc, include" />
+	<title string="Additional commands" idxkey="about, hline, warn, close, assert, clc" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -27,9 +27,7 @@
 		<keyword>warn</keyword>
 		<keyword>close</keyword>
 		<keyword>assert</keyword>
-		<keyword>declare</keyword>
 		<keyword>clc</keyword>
-		<keyword>include</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -39,10 +37,7 @@
 			warn MESSAGE\n
 			close -PAR\n
 			assert EXPRESSION\n
-			declare SYMBOL := VAL, ...\n
-			clc\n
-			include FILE
-			include FILE :: TYPE
+			clc
 		</syntax>
 		Beside of the more evaluation-oriented commands knows NumeRe some additional commands, which can be assigned to the pure user interface. These are for example the commands <a href="nhlp://help?frame=new"><code>help</code></a> and <a href="nhlp://find?frame=new"><code>find</code></a>, as well as the following ones:
 		<list>
@@ -51,9 +46,48 @@
 			<item node="warn">This command will display the passed string as a warning in the console. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
 			<item node="close">This command closes previously opened windows, which are selected by parameters using <code>close -PAR</code>: <code>-graphs</code> closes all graphs, <code>-docs</code> all documentation windows, <code>-tables</code> all tables, <code>-images</code> all ImageViewers and <code>-all</code> all windows from this list.</item>
 			<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the procedure flag <code>test</code>, extensive software tests may be implemented.</item>
-			<item node="declare">This command declares one or more file-specific constants for the current script or procedure file. The syntax is <code>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</code>, where numeric values as well as strings or whole expressions can be used for the values. These replace the constants used at the time the file is read. In a procedure file this command can appear at any place (also outside procedures) and is valid from its occurrence for the following lines. Using constants can make code much more readable, as when using explicit literal constants.</item>
 			<item node="clc">This command clears the content of the terminal and resets its content to the startup state.</item>
-			<item node="include">This command can be used to include information from an external file into the current executable file: <code>include FILE</code><br />The file <code>FILE</code> will be searched relatively to the current file. Filenames containing spaces have to be enclosed with quotation marks. With this command, global expressions, definitions and declarations will be imported at this location (therefore it is reasonable for procedure files to use this command only within procedures). After an additional <code>::</code> the type of imported information may be selected, e.g. <code>include FILE :: declarations</code> to import only declarations. Using <code>globals</code> will include global expressions and <code>definitions</code> will import definitions. It is possible to use multiple arguments at the same time.</item>
 		</list>
+	</contents>
+</article>
+
+
+<article id="declare">
+	<title string="Constant declarations" idxkey="declare" />
+	<keywords>
+		<keyword>declare</keyword>
+		<keyword>enum</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			declare SYMBOL := VAL, ...
+			declare enum -&gt; {VAL1, ...}, ...
+		</syntax>
+		The <code>declare</code> command declares one or more file-specific constants for the current script or procedure file. The syntax is as follows, where numeric values as well as strings or whole expressions can be used for the values.
+		<codeblock>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</codeblock>.
+		In addition, automatically enumerated constants can also be created. In addition to the automatic numbering, integer constants or previous constants can also be used as values. Values that are not literal integer constants are ignored here. If any offsets occur in the process, they are taken over and counted on from this value:
+		<codeblock>
+			declare enum -&gt; {VAL1, VAL2, VAL3, ...}
+			declare enum -&gt; {VAL1 = 10, VAL2, VAL3 = VAL2, ...}
+		</codeblock>
+		The values replace the constants used at the time the file is read. In a procedure file, this command can appear anywhere (even outside procedures) and applies to subsequent lines from its occurrence. Using constants can make a code much more readable than using explicit literal constants.
+	</contents>
+</article>
+
+
+<article id="include">
+	<title string="Including further files" idxkey="include" />
+	<keywords>
+		<keyword>include</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			include FILE
+			include FILE :: TYPE
+		</syntax>
+		The command <code>include</code> can be used to include information from an external file into the current executable file:
+		<codeblock>include FILE</codeblock>
+		The file <code>FILE</code> will be searched relatively to the current file. Filenames containing spaces have to be enclosed with quotation marks. With this command, global expressions, definitions and declarations will be imported at this location (therefore it is reasonable for procedure files to use this command only within procedures).
+		After an additional <code>::</code> the type of imported information may be selected, e.g.<codeblock>include FILE :: declarations</codeblock>to import only declarations. Using <code>globals</code> will include global expressions and <code>definitions</code> will import definitions. It is possible to use multiple arguments at the same time.
 	</contents>
 </article>
