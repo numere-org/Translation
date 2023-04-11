@@ -622,7 +622,7 @@ GUI_EDITOR_CALLTIP_THROWN=		thrown         - Error type, which is generated thro
 GUI_EDITOR_CALLTIP_ERROR=		error          - Error type for syntax errors
 GUI_EDITOR_CALLTIP_ASSERTION=	assertion      - Error types for failed assertions using "assert"
 GUI_EDITOR_CALLTIP_EXPRESSION=	expression     - Error type for errors in mathematical expressions
-GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Combined with "declare", it declares an enumeration of the passed symbols in the braces
+GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Combined with "declare", it declares an enumeration of the passed symbols in the braces for the current file. It is possible to set values as integral constants or one can refer to previous values, i.e. "enum -> {VAL1 = 1, VAL2 = VAL1, ...}"
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Conversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plot option

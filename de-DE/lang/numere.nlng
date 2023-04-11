@@ -622,7 +622,7 @@ GUI_EDITOR_CALLTIP_THROWN=		thrown         - Fehlertyp, der durch "throw" generi
 GUI_EDITOR_CALLTIP_ERROR=		error          - Fehlertyp für Syntaxfehler
 GUI_EDITOR_CALLTIP_ASSERTION=	assertion      - Fehlertyp für fehlgeschlagene Überprüfungen mittels "assert"
 GUI_EDITOR_CALLTIP_EXPRESSION=	expression     - Fehlertyp für Fehler in mathematischen Ausdrücken
-GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Deklariert in Kombination mit "declare" eine Enumeration der in geschweiften Klammern angegebenen Symbole
+GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Deklariert in Kombination mit "declare" für die aktuelle Datei eine Enumeration der in geschweiften Klammern angegebenen Symbole. Es können ganzzahlige Konstanten als Werte vorgegeben oder es kann sich auf vorherige Werte bezogen werden, d.h. "enum -> {VAL1 = 1, VAL2 = VAL1, ...}"
 # Option tooltips
 GUI_EDITOR_CALLTIP_COMMON_CONVERSION=Konversion
 GUI_EDITOR_CALLTIP_COMMON_PLOTTING=Plotoption
