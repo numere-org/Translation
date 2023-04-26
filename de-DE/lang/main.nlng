@@ -726,7 +726,7 @@ GUI_OPTIONS_PRINTING=Druckeinstellungen
 GUI_OPTIONS_SAVING=Speichereinstellungen
 GUI_OPTIONS_STARTING=Programmstart
 # Setting labels
-GUI_OPTIONS_AUTOSAVE=[sec] Tabellen-Autosave-Intervall
+GUI_OPTIONS_AUTOSAVE=[sec] Tabellen-Autosave-Intervall (deaktiviert, falls null)
 GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo

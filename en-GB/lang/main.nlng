@@ -726,7 +726,7 @@ GUI_OPTIONS_PRINTING=Print settings
 GUI_OPTIONS_SAVING=Save settings
 GUI_OPTIONS_STARTING=Application start-up
 # Setting labels
-GUI_OPTIONS_AUTOSAVE=[sec] Table autosave interval
+GUI_OPTIONS_AUTOSAVE=[sec] Table autosave interval (Deactivated if 0) 
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Extended file information
