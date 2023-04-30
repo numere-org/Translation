@@ -32,10 +32,12 @@
 		<keyword>cols</keyword>
 		<keyword>ncols</keyword>
 		<keyword>every</keyword>
+		<keyword>range</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			{VAL} = TABLE(i1:i2,j1:j2)
+			{VAL} = TABLE(start:step:end,:)
 			TABLE(i1:i2,j1:j2) = {VAL}\n
 			{STR} = TABLE(#,j1:j2)
 			TABLE(#,j1:j2) = {STR}\n
@@ -65,6 +67,7 @@
 		By default, the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
 		Individual elements of a table can be read out with the syntax <code>TABLE(ROW, COLUMN)</code>. Likewise, values can also be written into the table with it. Tables are to be treated like ordinary variables. The indexing is done by natural numbers <em>greater than</em> zero: 1,2,3,...
 		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
+		Additionally, the step size of the indices can be specified using <code>FIRST INDEX:STEP WIDTH:LAST INDEX</code>.
 		If an entire column is overwritten in the form <code>TABLE(:,j) = VALUES</code>, the type of the column <code>j</code> can also be changed from numeric to string or vice versa. The column heading is retained; any data previously contained in the <code>j</code> column is <em>completely</em> removed.
 		When accessing a table, the special variables <code>nrows</code> contain the number of rows and <code>ncols</code> the number of columns of the current table when used in its argument brackets (<code>nlines</code> is an alias). This is also true if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>.
 		The column headings can be read and edited similarly: <code>TABLE(#,COLUMN)</code> bzw. <code>TABLE(#,COLUMN) = HEAD</code>
