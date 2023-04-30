@@ -427,7 +427,7 @@ TAB().scorrof(n,m,{r1},{r2})~Calculates the Spearman correlation of the columns~
 TAB().size~Determines the size of the table~dimension size element count bounding rectangle~.size
 TAB().typeof({n})~Returns the types of the columns as strings~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Calculates the standardization of the values related to their deviation from the mean~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
-TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename~help table()
+TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename range step widht~help table()
 tablegrid~Inserts a table grid into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotates the passed table around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help tabrot
 tan(x)~Tangent of x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(

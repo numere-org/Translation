@@ -37,7 +37,7 @@
 	<contents>
 		<syntax>
 			{VAL} = TABLE(i1:i2,j1:j2)
-			{VAL} = TABLE(start:step:end,:)
+			{VAL} = TABLE(START:STEP:END,:)
 			TABLE(i1:i2,j1:j2) = {VAL}\n
 			{STR} = TABLE(#,j1:j2)
 			TABLE(#,j1:j2) = {STR}\n
