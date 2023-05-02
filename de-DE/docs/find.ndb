@@ -90,7 +90,7 @@ credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about v
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
 csc(x)~Kosekans von x.~csc() kosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~csc(
 csch(x)~Kosekans hyperbolicus von x.~csch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~csch(
-cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
+cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters range~help cst
 cumprd(MAT,nDim)~Berechnet das kumulative Produkt der Elemente in der Matrix~kumulative cumulative product cumsum() cumprd()~cumprd(
 cumsum(MAT,nDim)~Berechnet die kumulative Summe der Elemente in der Matrix~kumulativ cumulative sum cumsum() cumprd()~cumsum(
 cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die auﬂerhalb der definierten Grenzen liegen aus einer Matrix und ersetzt sie durch den Grenzwert~cutoff abschneiden limit threshold grenzwert~cutoff(

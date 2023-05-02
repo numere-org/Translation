@@ -90,7 +90,7 @@ credits~Legal information about NumeRe~info about versionsinformationen~credits
 cross(MAT)~Calculates the n-dimensional cross product of the vectors, which form the n-1 columns of the matrix MAT~cross product vector vektorprodukt~cross(
 csc(x)~Cosecant of x.~csc() cosecant trigonometrische funktionen trigonometrie trigonometry trigonometric functions~csc(
 csch(x)~Hyperbolic cosecant of x.~csch() areacosecant trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~csch(
-cst~Defines the local clusters in a procedure~procedure local clusters~help cst
+cst~Defines the local clusters in a procedure~procedure local clusters range~help cst
 cumprd(MAT,nDim)~Calculates the cumulative product of the elements in the Matrix~kumulativ cumulative produkt cumsum() cumprd()~cumprd(
 cumsum(MAT,nDim)~Calculates the cumulative sum of the elements in the Matrix~kumulativ cumulative summe cumsum() cumprd()~cumsum(
 cutoff(MAT,THRESHOLD,MODE)~Removes values that are outside of the defined limits from a matrix and replaces them with the limit value~cutoff limit threshold~cutoff(

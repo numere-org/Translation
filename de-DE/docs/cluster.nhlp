@@ -24,6 +24,7 @@
 	<contents>
 		<syntax>
 			{VAL} = CLUSTER{i1:i2}
+			{VAL} = CLUSTER{{INDEXA, INDEXB, START:END, START:STEPWIDTH:END}}
 			CLUSTER{i1:i2} = {VAL}
 		</syntax>
 		Cluster sind spezielle Variablentypen, die wie eine Tabelle mehrere Werte enthalten können. Diese Objekte werden durch einen Namen und die darauf folgenden geschweiften Klammern referenziert und im Gegensatz zu Tabellen automatisch erzeugt, wenn ihnen ein oder mehrere Werte zugewiesen werden:<codeblock>CLUSTER{} = {WERT1, WERT2, WERT3, ...}</codeblock>
