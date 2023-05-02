@@ -71,6 +71,7 @@ Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clau
 clc~Clear the content of the terminal window and reset it to the startup content~clc clear terminal clean~help clc
 clock()~Returns the number of processor clicks since the start-up of NumeRe~time clicks zeit millisekunden milliseconds~clock()
 close~Closes previously opened windows that are selected by parameters~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
+cluster(i)~Cluster-object with access to element "i", see "help cluster"~zwischenspeicher cluster() array range~help cluster()
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count~cnt(
 complex(re,im)~Creates a complex number out of the passed real re and imaginary parts im~komplexe zahlen complex numbers~complex(
@@ -428,7 +429,6 @@ TAB().size~Determines the size of the table~dimension size element count boundin
 TAB().typeof({n})~Returns the types of the columns as strings~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Calculates the standardization of the values related to their deviation from the mean~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
 TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename range step width~help table()
-
 tablegrid~Inserts a table grid into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotates the passed table around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help tabrot
 tan(x)~Tangent of x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(

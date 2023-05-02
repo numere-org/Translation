@@ -71,6 +71,7 @@ Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunct
 clc~Bereinige das Terminal und setze den Inhalt auf den Startzustand zurück~clc clear terminal clean~help clc
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds~clock()
 close~Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
+cluster(i)~Cluster-Objekt mit Zugriff auf Element "i", siehe "help cluster"~zwischenspeicher cluster() array range~help cluster()
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count invalid~cnt(
 complex(re,im)~Erzeugt eine komplexe Zahl aus den angegeben Real- re und Imaginärteilen im~komplexe zahlen complex numbers~complex(
