@@ -25,7 +25,7 @@
 		<keyword>introd</keyword>
 	</keywords>
 	<contents>
-		<h>Hello and welcome in NumeRe: Framework für Numerische Rechnungen</h>
+		<h>Hello and welcome in NumeRe: Framework for Numerical Calculations</h>
 		NumeRe was designed as a table calculation based upon commands and functions, but optimized for the scientific work. NumeRe  features the possibilities to automate predefined processes, generate graphical plots in many different styles and many other things.
 		This is a quite short introduction, which won't display all aspects of NumeRe. Apart from this, there is another way to get help: simply enter <code>help TOPIC</code>, to open the internal documentation about the TOPIC. Leave TOPIC away and you'll get the overview. You may also search directly in the navigator at the left side of this page.
 		If you cannot find a command or a function, you may use the <a href="nhlp://find?frame=new">keyword search</a>: <code>find TERMS</code>. You may enter multiple terms at once, if you separate them with whitespaces.
