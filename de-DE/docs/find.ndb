@@ -71,7 +71,7 @@ Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunct
 clc~Bereinige das Terminal und setze den Inhalt auf den Startzustand zurück~clc clear terminal clean~help clc
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds~clock()
 close~Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
-CLUSTER{i1:i2}~Cluster-Objekt mit Zugriff auf die Elemente "i1" bis "i2", siehe "help cluster"~zwischenspeicher cluster() array range~help cluster()
+CLUSTER{i1:i2}~Cluster-Objekt mit Zugriff auf die Elemente "i1" bis "i2", siehe "help cluster"~zwischenspeicher cluster{} array range schrittweite step width~help cluster
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count invalid~cnt(
 complex(re,im)~Erzeugt eine komplexe Zahl aus den angegeben Real- re und Imaginärteilen im~komplexe zahlen complex numbers~complex(
@@ -91,7 +91,7 @@ credits~Zeigt rechtliche und Versions-Informationen zum Programm an~info about v
 cross(MAT)~Berechnet das n-dimensionale Kreuzprodukt der Vektoren, welche die n-1 Spalten der Matrix MAT bilden, siehe "help matop"~cross product vector vektorprodukt~cross(
 csc(x)~Kosekans von x.~csc() kosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~csc(
 csch(x)~Kosekans hyperbolicus von x.~csch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~csch(
-cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters range~help cst
+cst~Definiert die lokalen Cluster einer Prozedur~procedure local clusters~help cst
 cumprd(MAT,nDim)~Berechnet das kumulative Produkt der Elemente in der Matrix~kumulative cumulative product cumsum() cumprd()~cumprd(
 cumsum(MAT,nDim)~Berechnet die kumulative Summe der Elemente in der Matrix~kumulativ cumulative sum cumsum() cumprd()~cumsum(
 cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die außerhalb der definierten Grenzen liegen aus einer Matrix und ersetzt sie durch den Grenzwert~cutoff abschneiden limit threshold grenzwert~cutoff(
