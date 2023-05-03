@@ -24,11 +24,11 @@
 	<contents>
 		<syntax>
 			{VAL} = CLUSTER{i1:i2}
-			{VAL} = CLUSTER{{INDEXA, INDEXB, START:END, START:STEPWIDTH:END}}
+			{VAL} = CLUSTER{{START:STEPWIDTH:END}}
 			CLUSTER{i1:i2} = {VAL}
 		</syntax>
 		Clusters are special variable types, which may store multiple values just like a table. These objects are referenced using their name and the following curly braces and unlike normal tables, they will be created automatically, if one or more values are assigned to them:<codeblock>CLUSTER{} = {VALUE1, VALUE2, VALUE3, ...}</codeblock>
-		Clusters always have a single dimension and therefore they are not as flexible as tables. In exchange they may store numerical values and strings <em>mixed</em> and in an arbitrary order. Accessing the contained values is done using an index, which will be passed in the curly braces:<codeblock>VALUE = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEW_VALUE"</codeblock>The index may contain a whole range (<code>INDEX1:INDEX2</code>, of course. If no index was passed, it will be interpreted as <em>all</em> elements in the current cluster. This means that either all values will be read from the cluster or the cluster will be overwritten completely.
+		Clusters always have a single dimension and therefore they are not as flexible as tables. In exchange they may store numerical values and strings <em>mixed</em> and in an arbitrary order. Accessing the contained values is done using an index, which will be passed in the curly braces:<codeblock>VALUE = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEW_VALUE"</codeblock>The index may contain a whole range (<code>INDEX1:INDEX2</code> or <a href="nhlp://operator?frame=new"><code>{START:STEPWIDTH:END}</code></a>, respectively), of course. If no index was passed, it will be interpreted as <em>all</em> elements in the current cluster. This means that either all values will be read from the cluster or the cluster will be overwritten completely.
 		The special value <code>nlen</code> can be used during accessing a cluster to reference the last element in the corresponding cluster<codeblock>LAST_VALUE = CLUSTER{nlen}\nCLUSTER{nlen+1} = APPENDED_VALUE</codeblock>
 		<example desc="Using a cluster to store the contents of a text file:">
 			ini{} = read &lt;&gt;/numere.ini
