@@ -20,7 +20,8 @@
 #
 # COMMON:
 # =================================
-COMMON_CANCEL=ABBRUCH.
+COMMON_APPNAME=NumeRe: Framework für Numerische Rechnungen
+COMMON_CANCEL=ABBRUCH
 COMMON_YES_NO=j/n
 COMMON_WITH=mit
 COMMON_WITHOUT=ohne
@@ -148,8 +149,8 @@ BUILTIN_CLEARCACHE_CONFIRM=Alle Tabellen und die automatische Speicherung werden
 BUILTIN_CLEARCACHE_SUCCESS=Alle Tabellen wurden entfernt und der Speicher wurde erfolgreich freigegeben.
 BUILTIN_CLEARCACHE_EMPTY=Es sind keine Tabellen vorhanden, die gelöscht werden könnten.
 BUILTIN_CREDITS_BUILD=Build-Datum
-# BUILTIN_CREDITS_VERSIONINFO=ARTHUR HOLLY COMPTON (1892-1962) war ein US-amerikanischer Physiker und Nobelpreisträger, der den nach ihm benannten Compton-Effekt im Rahmen der Streuung von Röntgenquanten an Elektronen entdeckte. Den übertragenen Impuls konnte er in einer Nebelkammer sichtbar machen, wofür er mit seinem Kollegen C. Wilson mit dem Nobelpreis ausgezeichnet wurde.
-BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
+BUILTIN_CREDITS_VERSIONINFO=PAVEL ALEXEEVIC CHERENKOV (1904-1990) war ein Physiker und Nobelpreisträger, der die nach ihm benannte Cherenkov-Strahlung, die bereits von Marie und Pierre Curie beobachtet wurde, erklären konnte. Sie entsteht beim Durchgang geladener Teilchen (z. B. Elektronen) durch ein lichtdurchlässiges Medium, wenn diese schneller sind als das sich im Medium ausbreitende Licht. Der Effekt zeigt sich als blaues Leuchten.
+# BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt keinen Eigennamen. Außerdem wird NICHT garantiert, dass die gesamte derzeitig Funktionalität erhalten bleibt, wie sie in diesem Release Candidate vorliegt. Auf den Fortgang der Entwicklung kann durch eine Mail an obige Mailadresse Einfluss genommen werden. Sollten Bugs gefunden werden, oder eine Funktionalität noch nicht den erwünschten Umfang haben, sollte dies per Mail übermittelt werden.
 BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, Version 3 der Lizenz.
 BUILTIN_CREDITS_LICENCE_2=Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
 BUILTIN_CREDITS_LICENCE_3=Sie sollten ein Exemplar der GNU GPL zusammen mit diesem Programm erhalten haben. Falls nicht, siehe http://www.gnu.org/licenses/
@@ -561,7 +562,7 @@ TOOLS_TIMESTAMP_AT=um
 PROC_NAMESPACE_THISFILE_MESSAGE=Folgende Prozeduren sind implizit 'private'.
 PROC_ADDED_DATE=Hinzugefügt
 PROC_END_OF_PROCEDURE=Ende der Datei
-PROC_FOOTER=NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+PROC_FOOTER=%%COMMON_APPNAME%% | Freie numerische Software unter der GNU GPL v3
 # CACHE
 # ===============================
 CACHE_WARNING_CMD_OVERLAP=WARNUNG: "%%1%%" stimmt mit einem NumeRe-Kommando überein. "%%1%%" kann in numerischen Ausdrücken verwendet werden, jedoch nicht als Kommandoausdruck.$(Viele Kommandos auf Datensätzen existieren auch in der inversen Schreibweise)
@@ -726,7 +727,7 @@ GUI_OPTIONS_PRINTING=Druckeinstellungen
 GUI_OPTIONS_SAVING=Speichereinstellungen
 GUI_OPTIONS_STARTING=Programmstart
 # Setting labels
-GUI_OPTIONS_AUTOSAVE=[sec] Tabellen-Autosave-Intervall
+GUI_OPTIONS_AUTOSAVE=[sec] Tabellen-Autosave-Intervall (deaktiviert, falls null)
 GUI_OPTIONS_GREETING=Begrüßung beim Start anzeigen
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Erweiterte Dateiinfo
@@ -838,7 +839,7 @@ GUI_ABOUT_TITLE=Über NumeRe
 GUI_ABOUT_LICENCE_SHORT=Fitting | Data analysis | Plotting | Matrix operations | FFT%%LINEBREAK%%Extensible framework | Multiple file formats | Programmable%%LINEBREAK%%Open source | Free for everyone%%LINEBREAK%%%%LINEBREAK%%Copyright (c) 2013-%%1%%, Erik Hänel et al.%%LINEBREAK%%%%LINEBREAK%%NumeRe ist lizensiert unter der GNU General Public License v3, %%LINEBREAK%%verfügbar unter http://www.gnu.org/licenses/gpl.html
 GUI_ABOUT_TEAM_INTRO=NumeRe ist ein Projekt der folgenden Personen:
 GUI_ABOUT_TEAM=Projektleitung:%%LINEBREAK%%Erik HÄNEL%%LINEBREAK%%%%LINEBREAK%%Konzept/UI:%%LINEBREAK%%Erik HÄNEL, Chameleon Team (Basis-UI)%%LINEBREAK%%%%LINEBREAK%%Mathe-Parser:%%LINEBREAK%%Ingo BERG, Erik HÄNEL%%LINEBREAK%%%%LINEBREAK%%Plotting:%%LINEBREAK%%Alexey BALAKIN%%LINEBREAK%%%%LINEBREAK%%Numerische Algorithmen:%%LINEBREAK%%GNU Scientific Library, Erik HÄNEL, Alexey BALAKIN%%LINEBREAK%%%%LINEBREAK%%Zusätzliche Programmierung:%%LINEBREAK%%Raphael ZEHNER, Jonas JANSEN, Rudolf BRAUSEMANN, Ayoub SELMI, Adji ARIOPUTRO%%LINEBREAK%%%%LINEBREAK%%Tokenizer:%%LINEBREAK%%Boost-Library%%LINEBREAK%%%%LINEBREAK%%Matrix-Algorithmen:%%LINEBREAK%%Eigen Library%%LINEBREAK%%%%LINEBREAK%%BasicExcel:%%LINEBREAK%%YAP Chun Wei%%LINEBREAK%%%%LINEBREAK%%TinyXML-2:%%LINEBREAK%%Lee THOMASON%%LINEBREAK%%%%LINEBREAK%%Splines:%%LINEBREAK%%Tino KLUGE%%LINEBREAK%%%%LINEBREAK%%Icons:%%LINEBREAK%%Cole BEMIS%%LINEBREAK%%%%LINEBREAK%%Die (geduldigen) Tester:%%LINEBREAK%%C. ALONSO, D. BAMMERT, N. FREITAG, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, K. RANGANATH, U. RAO, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, A. WINKLER, F. WUNDER, J. ZINßER
-GUI_ABOUT_CREDITS=NumeRe wäre ohne die verwendeten Bibliotheken, die geduldige Mithilfe der Tester und der vielen Tutorials im Netz nicht möglich gewesen.%%LINEBREAK%%%%LINEBREAK%%Außerdem sei all den Urhebern der öffentlich zugänglichen Sourcecodes gedankt, die in manchen Fällen die nötige Inspiration für die eigenen Lösungen lieferten:%%LINEBREAK%%  - Chameleon%%LINEBREAK%%  - muParser%%LINEBREAK%%  - MathGL%%LINEBREAK%%%%LINEBREAK%%Warum ist NumeRe kostenlos?%%LINEBREAK%%%%LINEBREAK%%NumeRe: Framework für Numerische Rechnungen ist vollkommen freie Software und ohne irgendwelche Kosten. Niemals sollen irgendwelche Zahlungen nötig sein, um diese Software zu verwenden. Sie ist gedacht zur Verwendung in Forschung und Ausbildung und wir wollen, dass Ihr Euer Geld behaltet. Wir glauben, dass man für Wissen und Ausbildung nicht zahlen sollte. Unserer Meinung nach existiert kein monetärer Gegenwert für Wissen. Es ist schlicht unbezahlbar. Ihr zahlt Steuern unter Anderem für eine gute Ausbildung, also fragt Euch selbst:%%LINEBREAK%%%%LINEBREAK%%warum zweimal bezahlen?
+GUI_ABOUT_CREDITS=NumeRe wäre ohne die verwendeten Bibliotheken, die geduldige Mithilfe der Tester und der vielen Tutorials im Netz nicht möglich gewesen.%%LINEBREAK%%%%LINEBREAK%%Außerdem sei all den Urhebern der öffentlich zugänglichen Sourcecodes gedankt, die in manchen Fällen die nötige Inspiration für die eigenen Lösungen lieferten:%%LINEBREAK%%  - Chameleon%%LINEBREAK%%  - muParser%%LINEBREAK%%  - MathGL%%LINEBREAK%%%%LINEBREAK%%Warum ist NumeRe kostenlos?%%LINEBREAK%%%%LINEBREAK%%%%COMMON_APPNAME%% ist vollkommen freie Software und ohne irgendwelche Kosten. Niemals sollen irgendwelche Zahlungen nötig sein, um diese Software zu verwenden. Sie ist gedacht zur Verwendung in Forschung und Ausbildung und wir wollen, dass Ihr Euer Geld behaltet. Wir glauben, dass man für Wissen und Ausbildung nicht zahlen sollte. Unserer Meinung nach existiert kein monetärer Gegenwert für Wissen. Es ist schlicht unbezahlbar. Ihr zahlt Steuern unter Anderem für eine gute Ausbildung, also fragt Euch selbst:%%LINEBREAK%%%%LINEBREAK%%warum zweimal bezahlen?
 GUI_ABOUT_INFO=%%BUILTIN_CREDITS_VERSIONINFO%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_1%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_2%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_3%%
 GUI_ABOUT_STATS=C++-Codezeilen:%%LINEBREAK%%   ~141 000%%LINEBREAK%%Git commits:%%LINEBREAK%%   ~1250%%LINEBREAK%%Zahl der Quelldateien:%%LINEBREAK%%   ~348%%LINEBREAK%%Sprachen:%%LINEBREAK%%   2 (Deutsch und Englisch)%%LINEBREAK%%Beginn des Projekts:%%LINEBREAK%%   Oktober 2013%%LINEBREAK%%Ende des Projekts:%%LINEBREAK%%   Nicht in Sicht%%LINEBREAK%%Zahl der behobenen Bugs:%%LINEBREAK%%   ~260 (Dokumentiert)%%LINEBREAK%%   ~700 (Undokumentiert)%%LINEBREAK%%Zahl der (neuen) Bugs, die es in einen RC geschafft haben:%%LINEBREAK%%   ~35%%LINEBREAK%%Zahl der (öffentlichen) Releases:%%LINEBREAK%%   ~35%%LINEBREAK%%Zahl der Kommentare zu NumeRe:%%LINEBREAK%%   ~15 (Komplimente)%%LINEBREAK%%   ~20 (Probleme)%%LINEBREAK%%   ~80 (Bugs)%%LINEBREAK%%Zahl der durchgemachten Nächte:%%LINEBREAK%%   keine%%LINEBREAK%%Zahl der "Hopplas" während einer Vorführung:%%LINEBREAK%%   ~50%%LINEBREAK%%Menge des verzehrten Koffeins:%%LINEBREAK%%   unmessbar
 GUI_ABOUT_JOIN=Von Open Source und GPL überzeugt? Bock auf Programmieren? Eine tolle Idee? Oder einfach nur intensives Testen und Rumspielen? Das ist immer willkommen!%%LINEBREAK%%%%LINEBREAK%%Trete mit uns durch die folgenden Möglichkeiten in Kontakt (die Links findest du unten):%%LINEBREAK%%  - Oldschool: Schreibe uns eine Mail%%LINEBREAK%%  - Fehler oder Idee: Submitte ein Ticket%%LINEBREAK%%  - Quasseln: Sprich oder chatte mit uns direkt auf Discord%%LINEBREAK%%%%LINEBREAK%%Die folgenden Skills sind hilfreich, aber nicht zwingend nötig:%%LINEBREAK%%  - Erfahrung in C++ (Ok, das ist tatsächlich nötig)%%LINEBREAK%%  - Erfahrung mit Programmieren und Debuggen%%LINEBREAK%%%%LINEBREAK%%Wir verwenden diese Tools und Frameworks (wir stellen auch ein vollständiges Setup als Compiler-Suite mit allen Bibliotheken bereit):%%LINEBREAK%%  - MinGW/TDM-GCC%%LINEBREAK%%  - Git%%LINEBREAK%%  - MathGL%%LINEBREAK%%  - Gnu Scientific Library (GSL)%%LINEBREAK%%  - Boost%%LINEBREAK%%  - wxWidgets%%LINEBREAK%%  - Code::Blocks%%LINEBREAK%%%%LINEBREAK%%Mail: dev@numere.org%%LINEBREAK%%Issues: https://github.com/numere-org/NumeRe/issues %%LINEBREAK%%Source: https://github.com/numere-org/NumeRe/ %%LINEBREAK%%Compiler-Suite: https://sourceforge.net/projects/numere/files/ %%LINEBREAK%%Discord: https://discord.gg/s5tSjwU
@@ -936,7 +937,7 @@ GUI_STATUSBAR_LINECOL=Zeile: %d, Spalte: %d
 GUI_STATUSBAR_DEBUGGER_ANALYZER=Debugger & Analyzer: aktiv
 GUI_STATUSBAR_DEBUGGER=NumeRe-Debugger: aktiv
 GUI_STATUSBAR_ANALYZER=Code-Analyzer: aktiv
-GUI_STATUSBAR_WELCOMEPAGE=Willkommen bei NumeRe: Framework für Numerische Rechnungen
+GUI_STATUSBAR_WELCOMEPAGE=Willkommen bei %%COMMON_APPNAME%%
 GUI_STATUSBAR_WELCOMEPAGE_FILETYPE=Willkommen
 # Menu strings:
 # please note, that the ampersands mark the hotkeys for keyboard navigation
