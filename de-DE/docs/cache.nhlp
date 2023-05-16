@@ -32,10 +32,12 @@
 		<keyword>cols</keyword>
 		<keyword>ncols</keyword>
 		<keyword>every</keyword>
+		<keyword>range</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			{VAL} = TABLE(i1:i2,j1:j2)
+			{VAL} = TABLE({START:SCHRITTWEITE:ENDE},:)
 			TABLE(i1:i2,j1:j2) = {VAL}\n
 			{STR} = TABLE(#,j1:j2)
 			TABLE(#,j1:j2) = {STR}\n
@@ -65,6 +67,7 @@
 		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
 		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
 		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden.
+		Zusätzlich kann mittels <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a> die Schrittweite der Indizes vorgegeben werden.
 		Wird eine gesamte Spalte in der Form <code>TABLE(:,j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt.
 		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nrows</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden (<code>nlines</code> ist ein Alias). Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
 		Die Spaltenüberschriften können ähnlich gelesen und bearbeitet werden: <code>TABLE(#,SPALTE)</code> bzw. <code>TABLE(#,SPALTE) = KOPF</code>

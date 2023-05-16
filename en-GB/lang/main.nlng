@@ -20,6 +20,7 @@
 #
 # COMMON:
 # =================================
+COMMON_APPNAME=NumeRe: Framework for Numerical Calculations
 COMMON_CANCEL=CANCEL
 COMMON_YES_NO=y/n
 COMMON_WITH=with
@@ -148,8 +149,8 @@ BUILTIN_CLEARCACHE_CONFIRM=All tables and the automatic backup will be deleted.$
 BUILTIN_CLEARCACHE_SUCCESS=All tables were removed and the memory was freed successfully.
 BUILTIN_CLEARCACHE_EMPTY=There are no tables available, which may by deleted.
 BUILTIN_CREDITS_BUILD=Build date
-# BUILTIN_CREDITS_VERSIONINFO=ARTHUR HOLLY COMPTON (1892-1962) was an American physicist and Nobel Prize winner who discovered the Compton effect, named after him, in the context of the scattering of X-ray quanta by electrons. He was able to make the transmitted impulse visible in a cloud chamber, for which he was awarded the Nobel Prize together with his colleague C. Wilson.
-BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: a Release Candidate doesn't carry a version name. It is not guaranteed that the total current functionality from this Release Candidate will be available in the final stable release. You may influence the further process of the development through writing an e-mail to the upper address. If you find some bugs or a functionality does not possess the desired extent, do not hesitate and notify the developer.
+BUILTIN_CREDITS_VERSIONINFO=PAVEL ALEXEEVIC CHERENKOV (1904-1990) was a physicist and Nobel Prize winner who was able to explain the Cherenkov radiation named after him, which had already been observed by Marie and Pierre Curie. It occurs when charged particles (e.g. electrons) pass through a translucent medium, when they are faster than the light propagating in the medium. The effect shows up as a blue glow.
+# BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: a Release Candidate doesn't carry a version name. It is not guaranteed that the total current functionality from this Release Candidate will be available in the final stable release. You may influence the further process of the development through writing an e-mail to the upper address. If you find some bugs or a functionality does not possess the desired extent, do not hesitate and notify the developer.
 BUILTIN_CREDITS_LICENCE_1=This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
 BUILTIN_CREDITS_LICENCE_2=This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 BUILTIN_CREDITS_LICENCE_3=You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
@@ -561,7 +562,7 @@ TOOLS_TIMESTAMP_AT=at
 PROC_NAMESPACE_THISFILE_MESSAGE=Following procedures are implicit 'private'.
 PROC_ADDED_DATE=Added
 PROC_END_OF_PROCEDURE=End of file
-PROC_FOOTER=NumeRe: Framework für Numerische Rechnungen | Free numerical software licenced under GNU GPL v3
+PROC_FOOTER=%%COMMON_APPNAME%% | Free numerical software licenced under GNU GPL v3
 # CACHE
 # ===============================
 CACHE_WARNING_CMD_OVERLAP=WARNING: "%%1%%" matches with a built-in command. "%%1%%" may be used in numerical expressions, but not as a command expression.$(Many commands on data sets exist in a inverted writing)
@@ -726,7 +727,7 @@ GUI_OPTIONS_PRINTING=Print settings
 GUI_OPTIONS_SAVING=Save settings
 GUI_OPTIONS_STARTING=Application start-up
 # Setting labels
-GUI_OPTIONS_AUTOSAVE=[sec] Table autosave interval
+GUI_OPTIONS_AUTOSAVE=[sec] Table autosave interval (Deactivated if 0) 
 GUI_OPTIONS_GREETING=Show greeting at start-up
 GUI_OPTIONS_COLORTHEME=Color-Theme
 GUI_OPTIONS_EXTENDEDINFO=Extended file information
@@ -838,7 +839,7 @@ GUI_ABOUT_TITLE=About NumeRe
 GUI_ABOUT_LICENCE_SHORT=Fitting | Data analysis | Plotting | Matrix operations | FFT%%LINEBREAK%%Extensible framework | Multiple file formats | Programmable%%LINEBREAK%%Open source | Free for everyone%%LINEBREAK%%%%LINEBREAK%%Copyright (c) 2013-%%1%%, Erik Hänel et al.%%LINEBREAK%%%%LINEBREAK%%NumeRe is licenced under the GNU General Public License v3, %%LINEBREAK%%available at http://www.gnu.org/licenses/gpl.html
 GUI_ABOUT_TEAM_INTRO=NumeRe is a project of the following persons:
 GUI_ABOUT_TEAM=Project lead:%%LINEBREAK%%Erik HÄNEL%%LINEBREAK%%%%LINEBREAK%%Concept/UI:%%LINEBREAK%%Erik HÄNEL, Chameleon Team (Basic UI)%%LINEBREAK%%%%LINEBREAK%%Mathematical parser:%%LINEBREAK%%Ingo BERG, Erik HÄNEL%%LINEBREAK%%%%LINEBREAK%%Plotting:%%LINEBREAK%%Alexey BALAKIN%%LINEBREAK%%%%LINEBREAK%%Numerical algorithms:%%LINEBREAK%%GNU Scientific Library, Erik HÄNEL, Alexey BALAKIN%%LINEBREAK%%%%LINEBREAK%%Additional programming:%%LINEBREAK%%Raphael ZEHNER, Jonas JANSEN, Rudolf BRAUSEMANN, Ayoub SELMI, Adji ARIOPUTRO%%LINEBREAK%%%%LINEBREAK%%Tokenizer:%%LINEBREAK%%Boost-Library%%LINEBREAK%%%%LINEBREAK%%Matrix algorithms:%%LINEBREAK%%Eigen Library%%LINEBREAK%%%%LINEBREAK%%BasicExcel:%%LINEBREAK%%YAP Chun Wei%%LINEBREAK%%%%LINEBREAK%%TinyXML-2:%%LINEBREAK%%Lee THOMASON%%LINEBREAK%%%%LINEBREAK%%Splines:%%LINEBREAK%%Tino KLUGE%%LINEBREAK%%%%LINEBREAK%%Icons:%%LINEBREAK%%Cole BEMIS (https://feathericons.com/)%%LINEBREAK%%%%LINEBREAK%%The (patient) testers:%%LINEBREAK%%C. ALONSO, D. BAMMERT, N. FREITAG, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, K. RANGANATH, U. RAO, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, A. WINKLER, F. WUNDER, J. ZINßER
-GUI_ABOUT_CREDITS=NumeRe wouldn't be possible without the used libraries, the patient support of the testers and all the tutorials in the internet.%%LINEBREAK%%%%LINEBREAK%%In addition we'd like to thank all the creators of the open source codes,%%LINEBREAK%%which in some cases gave us the needed inspirations for our own solutions:%%LINEBREAK%%  - Chameleon%%LINEBREAK%%  - muParser%%LINEBREAK%%  - MathGL%%LINEBREAK%%%%LINEBREAK%%Why is NumeRe free for all?%%LINEBREAK%%%%LINEBREAK%%NumeRe: Framework für Numerische Rechnungen is totally free software and out of any charges. There shall never be any fees for using this software. It's intended for educational and scientific use and we want you to keep your money in your pockets. We believe that there's no need for paying to get knowledge or education. In our opinion, knowledge has no monetary value, it's just invaluable. Education is also one reason you're paying taxes to your government—so ask yourself:%%LINEBREAK%%%%LINEBREAK%%why paying twice?
+GUI_ABOUT_CREDITS=NumeRe wouldn't be possible without the used libraries, the patient support of the testers and all the tutorials in the internet.%%LINEBREAK%%%%LINEBREAK%%In addition we'd like to thank all the creators of the open source codes,%%LINEBREAK%%which in some cases gave us the needed inspirations for our own solutions:%%LINEBREAK%%  - Chameleon%%LINEBREAK%%  - muParser%%LINEBREAK%%  - MathGL%%LINEBREAK%%%%LINEBREAK%%Why is NumeRe free for all?%%LINEBREAK%%%%LINEBREAK%%%%COMMON_APPNAME%% is totally free software and out of any charges. There shall never be any fees for using this software. It's intended for educational and scientific use and we want you to keep your money in your pockets. We believe that there's no need for paying to get knowledge or education. In our opinion, knowledge has no monetary value, it's just invaluable. Education is also one reason you're paying taxes to your government—so ask yourself:%%LINEBREAK%%%%LINEBREAK%%why paying twice?
 GUI_ABOUT_INFO=%%BUILTIN_CREDITS_VERSIONINFO%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_1%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_2%%%%LINEBREAK%%%%LINEBREAK%%%%BUILTIN_CREDITS_LICENCE_3%%
 GUI_ABOUT_STATS=Lines of C++ code:%%LINEBREAK%%   ~141 000%%LINEBREAK%%Git commits:%%LINEBREAK%%   ~1250%%LINEBREAK%%Number of source files:%%LINEBREAK%%   ~348%%LINEBREAK%%Languages:%%LINEBREAK%%   2 (German and English)%%LINEBREAK%%Begin of the project:%%LINEBREAK%%   October 2013%%LINEBREAK%%End of the projects:%%LINEBREAK%%   Not even planned%%LINEBREAK%%Number of fixed bugs:%%LINEBREAK%%   ~260 (Documented)%%LINEBREAK%%   ~700 (Undocumented)%%LINEBREAK%%Number of (new) bugs, which made it in a RC:%%LINEBREAK%%   ~35%%LINEBREAK%%Number of the (public) releases:%%LINEBREAK%%   ~35%%LINEBREAK%%Number of the comments about NumeRe:%%LINEBREAK%%   ~15 (Compliments)%%LINEBREAK%%   ~20 (Problems)%%LINEBREAK%%   ~80 (Bugs)%%LINEBREAK%%Number of overnighters:%%LINEBREAK%%   None%%LINEBREAK%%Number of "Ops" during a presentation:%%LINEBREAK%%   ~50%%LINEBREAK%%Amount of consumend caffeine:%%LINEBREAK%%   unmeasurable
 GUI_ABOUT_JOIN=Do you believe in Open Source and GPL? Crazy on Programming? An amazing idea? Or focus on intense testing? Everything is welcome!%%LINEBREAK%%%%LINEBREAK%%Get in touch through the following possibilities (the links are below):%%LINEBREAK%%  - Old school: write us an email%%LINEBREAK%%  - Bug or idea: submit a ticket%%LINEBREAK%%  - Gabble: chat with us directly on Discord%%LINEBREAK%%%%LINEBREAK%%The following skills are helpful, but not required:%%LINEBREAK%%  - Some knowledge in C++ (well, actually that's needed)%%LINEBREAK%%  - Some experiences in programming and debugging%%LINEBREAK%%%%LINEBREAK%%We're using the following tools and frameworks (we provide a complete setup as compiler suite including all libraries):%%LINEBREAK%%  - MinGW/TDM-GCC%%LINEBREAK%%  - Git%%LINEBREAK%%  - MathGL%%LINEBREAK%%  - Gnu Scientific Library (GSL)%%LINEBREAK%%  - Boost%%LINEBREAK%%  - wxWidgets%%LINEBREAK%%  - Code::Blocks%%LINEBREAK%%%%LINEBREAK%%Mail: dev@numere.org%%LINEBREAK%%Issues: https://github.com/numere-org/NumeRe/issues %%LINEBREAK%%Source: https://github.com/numere-org/NumeRe/ %%LINEBREAK%%Compiler suite: https://sourceforge.net/projects/numere/files/ %%LINEBREAK%%Discord: https://discord.gg/s5tSjwU
@@ -936,7 +937,7 @@ GUI_STATUSBAR_LINECOL=Line: %d, Column: %d
 GUI_STATUSBAR_DEBUGGER_ANALYZER=Debugger & Analyzer: active
 GUI_STATUSBAR_DEBUGGER=NumeRe debugger: active
 GUI_STATUSBAR_ANALYZER=Code analyzer: active
-GUI_STATUSBAR_WELCOMEPAGE=Welcome to NumeRe: Framework für Numerische Rechnungen
+GUI_STATUSBAR_WELCOMEPAGE=Welcome to %%COMMON_APPNAME%%
 GUI_STATUSBAR_WELCOMEPAGE_FILETYPE=Welcome
 # Menu strings:
 # please note, that the ampersands mark the hotkeys for keyboard navigation
