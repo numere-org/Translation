@@ -175,7 +175,7 @@ getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler z
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getompthreads()~Gibt die Zahl der maximal möglichen OpenMP-Threads zurück~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
-getuilang()~Gibt Informationen zur Benutzersprache~version release candidate build datum date~getuilang()
+getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
 getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
 grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
