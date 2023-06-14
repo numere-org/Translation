@@ -26,6 +26,7 @@
 		<keyword>sum</keyword>
 		<keyword>freedman</keyword>
 		<keyword>scott</keyword>
+		<keyword>asgrid</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -39,8 +40,8 @@
 		<code>hist</code> may create multiple histograms for more than one data row at once, but the bins are in this case identical for all data rows and the results will be part of one common table with multiple columns. The graphical representation including all histograms and will be created as well.
 		This command needs of course data rows, which were loaded in advance, or data rows, which are available in a cache. These may be passed in the following way:<codeblock>hist DATAOBJECT(I1:I2,J1:J2) -set OPTIONS</codeblock>
 		For data sets, which describe <expr>(x,y,z)</expr> data points (e.g, vector tuples or data grids), the variant <code>hist2d</code> may be used. For vector tuples a prevalence analysis in <expr>x</expr> and <expr>y</expr> direction will be done; in the case of data grids, they will be summed up in <expr>x</expr> and <expr>y</expr> direction, because data grids cannot contain prevalences in these directions. Both cases will be displayed together with their <expr>(x,y,z)</expr> data points.
-		A single histogram of their <expr>z</expr> values may alternatively be created by invoking <code>hist ... -set grid</code>.
-		The desired options may be directly passed to the command <code>hist</code>:
+		A single histogram of their <expr>z</expr> values may alternatively be created by invoking <code>hist ... -set asgrid</code>.
+		In addition to many <a href="nhlp://plotoptions?frame=new">plotting options</a>, further options may be passed to the commands <code>hist</code> and <code>hist2d</code>:
 		<list>
 			<item node="export=FILENAME">The desired output filename of the created histogram. Filenames containing whitespaces must be enclosed in quotation marks. (Using the file extension *.tex this option will create a TeX file.) If no filename was passed (but <code>export</code> was passed), NumeRe will generate a fitting filename</item>
 			<item node="target=TABLE()">Writes a copy of the result table to a <code>TABLE()</code>. This table will be generated, if it doesn't exist.</item>
@@ -53,7 +54,7 @@
 			<item node="countlabel=LABEL">Set the axis label for the prevalence axis (<expr>y</expr> axis)</item>
 			<item node="silent">Supresses all displayed messages</item>
 			<item node="sum">Activates the summation of the <expr>z</expr> values in the case of vector tuples</item>
-			<item node="grid">Interpretes the passed data set as data grid and determines in combination with <code>hist</code> a single histogram of its <expr>z</expr> values</item>
+			<item node="asgrid">Interpretes the passed data set as data grid and determines in combination with <code>hist</code> a single histogram of its <expr>z</expr> values</item>
 			<item node="method=METHOD">Changes the method for determining the bin width. The default setting is the <em>Sturges-Rule</em>, with <code>scott</code> NumeRe uses the <em>Scott-Rule</em> and with <code>freedman</code> it will use the <em>Freedman-Diaconis-Rule</em>.</item>
 			<item node="xlabel=LABEL">Set the axis label for the <expr>x</expr> axis. The corresponding options for the other axes are <code>ylabel</code> and <code>zlabel</code>.</item>
 		</list>
