@@ -35,13 +35,13 @@ and(x,y,z,...)~ Connects its arguments with "&&"~logik logic und~and(
 ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result~ans{}
 Answer~The answer to life, the universe and everything: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Append data files to data already loaded to memory~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
+as_date(y,m,d)~Combines the values into a single date value~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
+as_time(h,m,s,i,u)~Combines the values into a single time value~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 ascii(STR)~Returns the ASCII values of the characters in STR~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 asec(x)~Inverse secant of x.~asec() arcussecant trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asec(
 asech(x)~Inverse hyperbolic secant von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
 asin(x)~Inverse sine of x. arcsin(x) is a synonym~arcsin() asin() arcussinus arkussinus trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asin(
 asinh(x)~Inverse hyperbolic sine of x. arsinh(x) is a synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
-as_date(y,m,d)~Combines the values into a single date value~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
-as_time(h,m,s,i,u)~Combines the values into a single time value~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 assemble(MAT,MAT,MAT)~Creates a new matrix from the values of the third matrix MAT with the target indices from the first and the second matrix~assemble gather zusammensetzen zusammenbauen kombinieren~assemble( 
 assert~Checks the passed expression for trueness and returns it. Throws an error otherwise~softwaretest sw unit regression~help assert
 atan(x)~Inverse tangent of x. arctan(x) is a synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
@@ -235,6 +235,7 @@ laplace_rd(a)~Returns a random number from the Laplace distribution with width a
 layout~Starts the definition of a window layout that can be used to create an interactive window~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
 lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
+leave~Leaves all nested control flow blocks at this point~leave break continue~help leave
 legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome polynomial legendre()~legendre(
 legendre_a(l,m,x)~Numerical value of the associated Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
 Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm~Li2(

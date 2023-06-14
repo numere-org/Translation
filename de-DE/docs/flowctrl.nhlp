@@ -26,6 +26,7 @@
 		<keyword>kontrollfluss</keyword>
 		<keyword>controlflow</keyword>
 		<keyword>flowcontrol</keyword>
+		<keyword>leave</keyword>
 	</keywords>
 	<contents>
 		Kontrollfluss-Statements sind logische Blöcke im Code, die zusammenhängende Segmente identifizieren. Dies können Schleifen wie <a href="nhlp://for?frame=new"><code>for...endfor</code></a> und <a href="nhlp://while?frame=new"><code>while...endwhile</code></a> oder Verzweigungen wie <a href="nhlp://if?frame=new"><code>if...elseif...else...endif</code></a> und <a href="nhlp://switch?frame=new"><code>switch...case...default...endswitch</code></a> sein. Aber auch die Fehlerbehandlung mittels <a href="nhlp://try?frame=new"><code>try...catch...endtry</code></a> zählt zu den Kontrollfluss-Statements.
@@ -47,7 +48,7 @@
 			endswitch
 		</codeblock>
 		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann wechselt die Konsole in einen speziellen Modus, der durch ein Schlüsselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen Ausdrücke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das äußerste Kontrollfluss-Statement vollständig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszuführen, kann das Kommando <code>abort</code> verwendet werden.
-		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block.
+		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block. Das Kommando <code>leave</code> wird hingegen stets alle ineinander verschachtelten Kontrollflussblöcke verlassen, so dass die Ausführung des Codes nach dem Ender des äußersten Blocks fortgesetzt werden kann.
 		Benötigt NumeRe zum Auswerten eines Kontrollfluss-Statements zu viel Zeit, kann die Ausführung mit der <code>ESC</code>-Taste oder der entsprechenden Funktion der Toolbar abgebrochen werden.
 	</contents>
 </article>
