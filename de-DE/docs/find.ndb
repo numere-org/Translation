@@ -123,7 +123,7 @@ Easteregg~Wie wenn die wirklich so einfach zu finden wären ... Such' nur weiter 
 edit~Bearbeiten und Öffnen von Dateien in einem externen Programm~bearbeiten oeffnen öffnen open view betrachten dateien programm~help edit
 eigenvals(MAT)~Berechnet die Eigenwerte der quadratischen Matrix MAT, siehe "help matop"~eigenvals() eigenvalues matrix~eigenvals(
 eigenvects(MAT)~Berechnet die Eigenvektoren der quadratischen Matrix, siehe "help matop"~eigenvects() eigenvectors matrix~eigenvects(
-ellipticD(x,n,k)~Wert des elliptischen Integrals D(x,n,k)~elliptisches integral~ellipticD(
+ellipticD(x,k)~Wert des elliptischen Integrals D(x,k)~elliptisches integral~ellipticD(
 ellipticE(x,k)~Wert des elliptischen Integrals E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~ Wert des elliptischen Integrals F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Wert des elliptischen Integrals Pi(x,n,k)~elliptisches integral~ellipticPi(
