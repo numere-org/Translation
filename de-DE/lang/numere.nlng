@@ -489,6 +489,7 @@ PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]  
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]              - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Erzeugt eine Auflistung der Werte, die zum gewählten Argument NM vorhanden sind. Die möglichen Argumente sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
@@ -644,6 +645,7 @@ GUI_EDITOR_CALLTIP_OPT_ALPHAMASK=alphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_ANIMATE=animate[=FRAMES] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_APP=mode=app [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASGRID=asgrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
 GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
 GUI_EDITOR_CALLTIP_OPT_ASVAL=asval[={VARSET}] [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]

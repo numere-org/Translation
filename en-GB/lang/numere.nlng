@@ -489,6 +489,7 @@ PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]  
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Starts the definition of a window layout that can be used to create an interactive window
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]             - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Creates a list of the values, which are available for the passed argument NM. The possible arguments are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
@@ -644,6 +645,7 @@ GUI_EDITOR_CALLTIP_OPT_ALPHAMASK=alphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_ANIMATE=animate[=FRAMES] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_APP=mode=app [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASGRID=asgrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
 GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
 GUI_EDITOR_CALLTIP_OPT_ASVAL=asval[={VARSET}] [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
