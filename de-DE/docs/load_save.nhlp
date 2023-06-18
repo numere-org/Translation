@@ -42,10 +42,12 @@
 		<keyword>totable</keyword>
 		<keyword>xy</keyword>
 		<keyword>xz</keyword>
+		<keyword>fileformat</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			{VALS} = load FILENAME
+			{VALS} = load FILENAME -fileformat="FORMAT"
 			{VALS} = load FILENAME -totable=TABLE() ...\n
 			{VALS} = append FILENAME
 			{VALS} = append FILENAME -all ...\n
@@ -53,9 +55,23 @@
 			save TABLE() -file=FILENAME\n
 			export TABLE()
 			export TABLE() -file=FILENAME
+			export TABLE() -file=FILENAME fileformat="FORMAT"
 		</syntax>
-		Daten können in NumeRe geladen oder von NumeRe heraus in eine Datei gespeichert werden. Dazu existieren die Kommandos <code>load</code> und <code>save</code>:<codeblock>{i1, i2, j1, j2} = load DATEI</codeblock>bzw.<codeblock>save DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Beim Laden geht NumeRe standardmäßig von einer Textdatei mit der Endung "<code>*.dat</code>" aus. Die Endung kann jedoch zwischen "<code>*.dat</code>", "<code>*.txt</code>", "<code>*.ndat</code>", "<code>*.labx</code>", "<code>*.jdx"</code>, "<code>*.dx</code>", "<code>*.jcm</code>", "<code>*.ibw</code>", "<code>*.ods</code>", "<code>*.xls</code>", "<code>*.xlsx</code>" und "<code>*.csv</code>" angepasst werden. Es werden auch Zygo MetroPro(R)-Dateien unterstützt, die ebenfalls auf "<code>*.dat</code>" enden. Beim Speichern von Datensätzen wird vorzugsweise in das NumeRe-eigene "NumeRe-Datenfile"-Format (<code>*.ndat</code>) gespeichert, das schneller ist und die Präzision erhält. Die Indices der geladenen Daten in der Zieltabelle werden beim Laden zurückgegeben.
-		DATEI bezeichnet den Dateinamen der geladenen oder gespeicherten Datei. So lange die Datei in den eingestellen Speicherordner gespeichert, bzw. aus dem eingestellten Import-Ordner geladen werden soll, ist dabei die Angabe eines Pfades nicht nötig. Soll der Dateipfad ein oder mehrere Leerstellen enthalten, ist er mit Anführungszeichen zu umschließen.
+		NumeRe kann Daten aus Dateien laden oder selbige in Dateien speichern. Dazu existieren die Kommandos <code>load</code> und <code>save</code>. Das Kommando <code>load</code> lädt eine Datei <code>FILENAME</code><codeblock>{i1, i2, j1, j2} = load FILENAME</codeblock>wobei die Indices der geladenen Daten in der Zieltabelle zurückgegeben werden, und das Kommando <code>save</code> speichert die <code>DATEN()</code> in der Datei <code>FILENAME</code><codeblock>save DATEN(I1:I2,J1:J2) -file=FILENAME</codeblock>
+		Beim Laden versucht NumeRe das Dateiformat der Datei anhand der Dateierweiterung zu erkennen. Wird keine Erweiterung vorgegeben, so versucht NumeRe diese automatisch zu detektieren. Hierbei wird die (alphabetisch sortiert) erste Datei verwendet, die gefunden wird. Sollte die Datei eine andere Erweiterung als die im Folgenden für das verwendete Dateiformat gelisteten Dateierweiterungen verwenden, so kann das Dateiformat explizit mittels der Option <code>fileformat="FORMAT"</code> angegeben werden, beispielsweise:<codeblock>load "textfile.asc" -fileformat="TXT"</codeblock>
+		Die folgenden Dateitypen können importiert werden:
+		<list>
+			<item node="NumeRe-Datenfile<br/>  *.ndat">Dateiformat: <code>NDAT</code><br/>NumeRe-eigenes, binäres Dateiformat, das die Präzision und die Datentypen erhält und zusätzlich schneller zu laden und zu schreiben ist</item>
+			<item node="Textdateien<br/>  *.txt, *.dat</item>">Dateiformat: <code>TXT</code><br/>Tabellarische Textdateien, die Leerzeichen- oder Tabulatorgetrennt sein können</item>
+			<item node="Comma-Separated-Values<br/>  *.csv">Dateiformat: <code>CSV</code><br/>Tabellarische Textdateien, deren Spalten meist mit Kommas oder Semikola getrennt sind</item>
+			<item node="Spreadsheets<br/>  *.xls, *.xlsx, *.ods">Dateiformat: <code>XLS</code>, <code>XLSX</code> oder <code>ODS</code><br/>Tabellarische Dateien, die von Microsoft Excel(R) oder OpenOffice Calc erzeugt wurden</item>
+			<item node="Igor-Binary-Waves<br/>  *.ibw">Dateiformat: <code>IBW</code><br/>Ein binäres Dateiformat, das von Wavemetrics Igor Pro(R) erzeugt wird</item>
+			<item node="Cassy Lab-Dateien<br/>  *.labx">Dateiformat: <code>LABX</code><br/>Datensätze, die von Cassy Lab erzeugt werden</item>
+			<item node="JCAMP-DX-Dateien<br/>  *.jdx, *.dx, *.jcm">Dateiformat: <code>JDX</code><br/>Spektrographie-Datensätze, die nach dem JCAMP-DX-Standard erzeugt wurden</item>
+			<item node="MetroPro-Dateien<br/>  *.dat">Dateiformat: <code>ZYGO</code><br/>Datensätze, die von Zygo MetroPro(R) erzeugt werden und Interferogramme enthalten</item>
+		</list>
+		Beim Speichern von Datensätzen wird vorzugsweise in das NumeRe-eigene NumeRe-Datenfile-Format (<code>*.ndat</code>) gespeichert.
+		<code>FILENAME</code> bezeichnet den Dateinamen der geladenen oder gespeicherten Datei. So lange die Datei in den eingestellen Speicherordner gespeichert, bzw. aus dem eingestellten Import-Ordner geladen werden soll, ist dabei die Angabe eines Pfades nicht nötig. Soll der Dateipfad ein oder mehrere Leerstellen enthalten, ist er mit Anführungszeichen zu umschließen.
 		Es können auch die Platzhalter für die Standardpfade sowie Wildcards (<code>*</code> und <code>?</code>) verwendet werden. Siehe <a href="nhlp://explorer?frame=new">help explorer</a> für weitere Details zu den Platzhaltern.
 		NumeRe unterstützt das gleichzeitige Laden mehrerer Dateien. Dazu kann eine der folgenden Methoden verwendet werden:
 		<list>
@@ -65,7 +81,7 @@
 		</list>
 		Werden beim Speichern keine Dateinamen übergeben, so wählt NumeRe automatisch einen passenden Namen und Speicherort.
 		<code>load</code> kann dabei mit <code>-ignore</code> ergänzt werden, um eine etwaige Bestätigung zu unterdrücken und ggf. automatisch den Speicherplatz freizugeben. Außerdem kann <code>load</code> auch mit <code>-head=ZEILE</code> die Kommentarzeile übergeben werden, in welcher sich die Tabellenköpfe befinden, falls der Fall eintreten sollte, dass NumeRe selbige nicht automatisch identifizieren konnte.
-		Um einen Datensatz in eine Textdatei zu exportieren, steht das Kommando <code>export</code> zur Verfügung:<codeblock>export DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Wird für DATEI ein Dateiname mit der Endung "<code>*.tex</code>" angegeben, so wird eine Tabelle mit TeX-Syntax anstatt der gewöhnlichen Ausgabe erzeugt. Wird als Endung "<code>*.csv</code>" angegeben, werden die Daten im CSV-Format geschrieben. Mit "<code>*.xls</code>" wird eine Excel-(97-2003)-Mappe erzeugt. Zusätzlich kann die Zahl der signifikanten Ziffern durch Anhängen der Option <code>precision=ZIFFERN</code> geändert werden.
+		Um einen Datensatz in eine Textdatei zu exportieren, steht das Kommando <code>export</code> zur Verfügung:<codeblock>export DATEN(I1:I2,J1:J2) -file=DATEI</codeblock>Wird für DATEI ein Dateiname mit der Endung "<code>*.tex</code>" angegeben, so wird eine Tabelle mit TeX-Syntax anstatt der gewöhnlichen Ausgabe erzeugt. Wird als Endung "<code>*.csv</code>" angegeben, werden die Daten im CSV-Format geschrieben. Mit "<code>*.xls</code>" wird eine Excel-(97-2003)-Mappe erzeugt. Zusätzlich kann die Zahl der signifikanten Ziffern durch Anhängen der Option <code>precision=ZIFFERN</code> geändert werden. Soll hier auch eine andere Dateierweiterung verwendet werden, als die für das Dateiformat standardmäßig genutzte, so kann das Dateiformat auch hier mit der Option <code>fileformat="FORMAT"</code> vorgegeben werden, beispielsweise:<codeblock>export table() -file="results.asc" fileformat="TXT"</codeblock>
 		<example desc="Speichern der Tabelle <code>table()</code> in die Datei <code>table.ndat</code> und exportieren der ersten beiden Spalten in eine TeX-Datei:">
 			save table() -file=table    ## .ndat wird automatisch ergänzt
 			Daten wurden erfolgreich nach "&SAVEPATH&/table.ndat" gespeichert.
