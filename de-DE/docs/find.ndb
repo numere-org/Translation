@@ -318,7 +318,7 @@ rayleigh_cdf_q(x,sigma)~Gibt den komplementären Wert der kumulativen Verteilungs
 rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_p(
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_rd(sigma)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
-read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten~help read
+read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
@@ -472,7 +472,7 @@ while (COND)~bedingte Schleife, siehe "help while"~whileschleife endwhile beding
 window~Erlaubt die Erzeugung eines interaktiven Fensters und die Interaktion mit selbigem~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Witz~Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!~witz gag joke~"Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!"
 workpath~Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung~workpath working directory cd change wp~help workpath
-write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenketten strings~help write
+write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenketten strings textdateien textual files txt import load open fopen fread fwrite read~help write
 xor(x,y,z,...)~Verknüpft die Argumente mit "|||"~logik logic oder ausschließendes ausschliessendes xor() exclusives exklusives~xor(
 Y(l,m,theta,phi)~Realteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] der Winkel theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
 Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho unter dem Winkel phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(

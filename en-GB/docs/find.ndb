@@ -318,7 +318,7 @@ rayleigh_cdf_q(x,sigma)~returns the complementary value of the cumulative distri
 rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution function on p for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random cumulative distributionfunction inverse~rayleigh_inv_p(
 rayleigh_inv_q(q,sigma)~returns the inverse of the complementary cumulative distribution function at q for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction inverse~rayleigh_inv_q(
 rayleigh_rd(sigma)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
-read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten~help read
+read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(
@@ -472,7 +472,7 @@ weeknum(VAL)~Returns the calendar week number associated with the passed time va
 while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while() loop command sequence flow control~help while () ... endwhile
 window~Allows the creation of an interactive window and the interaction with it~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 workpath~Changes the current working directory for this session~workpath working directory cd change wp~help workpath
-write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings~help write
+write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings textdateien textual files strings zeichenketten txt import load open fopen fread fwrite read~help write
 xor(x,y,z,...)~Connects its arguments with "|||"~logik logic oder exclusives xor() exklusives ausschliessendes ausschließendes~xor(
 Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
 Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position rho at the angle phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(
