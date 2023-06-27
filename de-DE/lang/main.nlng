@@ -443,6 +443,9 @@ PLOT_RENDERING_BACKGROUND=Rendere Hintergrund
 PLOT_RENDERING_FRAME=Berechne Frame %%1%% von %%2%%
 PLOT_SAVING=Speichern
 PLOT_SAVE_LOCATION=Gespeichert unter: "%%1%%"
+# LANG
+# =============================
+LANGUAGE=de-DE
 # LOOP
 # =============================
 LOOP_SETCOMMAND_ABORT=Deklaration abgebrochen.
