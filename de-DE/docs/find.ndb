@@ -441,6 +441,7 @@ theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaer
 throw~Bricht die Auswertung einer Prozedur ab und gibt eine Fehlermeldung aus~procedure throw try catch error exception~help throw
 time()~Gibt die Zeit in Sekunden seit dem 1.1.1970 zur¸ck~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formatiert die Zeit VAL gem‰ﬂ dem Schema STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+to_ansi(sUtf8Enc)~Konvertiert die UTF-8 encodierte string sUtf8Enc in eine ANSI encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zur¸ck~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string character ascii to_char()~to_char(
 to_cmd(STR)~Wandelt die enthaltene Zeichenkette STR in ein Kommandoausdruck um~zeichenkette command kommando to_cmd()~to_cmd(
 to_lowercase(STR)~Wandelt die Groﬂbuchstaben in STR in Kleinbuchstaben um~zeichenkette command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
@@ -450,6 +451,7 @@ to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche u
 to_tex(VAL,VAL)~Wandelt einen numerischen Wert in einen String im TeX-Format um~string zeichenkette conversion konvertierung tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Wandelt die Zeit in STR2 gem‰ﬂ dem Schema STR1 in einen Zeitwert um~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Groﬂbuchstaben um~string zeichenkette wert to_uppercase() groﬂbuchstaben grossbuchstaben groﬂschreiben grossschreiben~to_uppercase(
+to_utf8(sAnsiEnc)~Konvertiert die ANSI encodierte Zeichenkette sAnsiEnc in eine UTF-8 encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_utf8(
 to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert to_value()~to_value(
 trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
