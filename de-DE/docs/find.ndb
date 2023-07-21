@@ -372,6 +372,8 @@ stfa~Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes~kurzzeitf
 str~Definiert den lokalen Zeichenkettenvariablensatz einer Prozedur~procedure local strings~help str
 STR.at(POS)~Gibt das Zeichen aus der Zeichenkette an der Stelle POS zurück~methode strings zeichenketten character at()~.at(
 STR.fnd(STR,POS)~Gibt die Position des ersten Auftretens von STR in der Zeichenkette ab dem Zeichen POS zurück~methode strings zeichenketten find fnd()~.fnd(
+STR.first~Gibt das erste Zeichen aus einer Zeichenkette zurück first()~.first(
+STR.last~Gibt das letzte Zeichen aus einer Zeichenkette zurück last()~.last(
 STR.len~Länge der Zeichenkette~methode strings zeichenketten laenge len()~.len
 STR.mtch(STR,POS)~Sucht das erste Auftreten eines Zeichens aus STR in der Zeichenkette ab dem Zeichen POS~methode strings zeichenketten find mtch()~.mtch(
 STR.nmtch(STR,POS)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette, das nicht in STR auftritt, ab dem Zeichen POS~methode strings zeichenketten find nmtch()~.nmtch(

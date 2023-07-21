@@ -4,7 +4,7 @@
  * Hinzugefügt: 2019-06-30, um 10:16:21 *#
 
 ## Füge hier deine Kommandos und Ausdrücke ein.
-declare sREPOSITORY := "D:/CPP/numere-language/"
+declare sREPOSITORY := "C:\Users\ayoub.selmi\OneDrive - INVENSITY GmbH\Documents\CoE SDT\NumeReDevelopment\Translation/"
 copy sREPOSITORY + "de-DE/lang/*" -target="<>/lang/" -all
 copy sREPOSITORY + "common/*" -target="<>/lang/" -all
 copy sREPOSITORY + "de-DE/docs/*" -target="<>/docs/" -all

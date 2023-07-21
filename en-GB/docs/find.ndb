@@ -373,6 +373,8 @@ stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfou
 str~Defines the local string variables in a procedure~procedure local strings~help str
 STR.at(POS)~Return the character at the position POS in the string~methode strings zeichenketten character at()~.at(
 STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find fnd()~.fnd(
+STR.first~Return the first character of a string first()~.first(
+STR.last~Return the last character of a string last()~.last(
 STR.len~Length of the string~methode strings zeichenketten laenge length len()~.len
 STR.mtch(STR,POS)~Searches for the first occurrence of a char of STR in the string going from position POS~methode strings zeichenketten find mtch()~.mtch(
 STR.nmtch(STR,POS)~Searches for the first occurrence of a char in the string going from position POS, which doesn't appear in STR~methode strings zeichenketten find nmtch()~.nmtch(
