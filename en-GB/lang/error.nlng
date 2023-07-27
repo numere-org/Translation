@@ -456,6 +456,7 @@ ERR_NR_3603_STACK=Internal error: the stack yielded no results.
 ERR_NR_3603_INCOMPLETE=Internal error: the expression evaluation was incomplete.
 ERR_NR_3603_OVERWRITE=Internal error: memory access violation in internal storage.
 ERR_NR_3603_NOT_IMPLEMENTED=This function is not implemented for strings.
+ERR_NR_3603_NOT_INCOMPATIBLE_TYPES=The types of both values are not compatible with each other.
 ERR_NR_3700_0_TABLE_DOESNT_EXIST=The desired table doesn't exist or was not specified.
 ERR_NR_3700_1_TABLE_DOESNT_EXIST=Probably you forgot the argument parentheses.%%LINEBREAK%%%%ERR_SEEALSO%%: "help data" and "help table"
 ERR_NR_3800_0_TOO_FEW_ARGS=Too few arguments were passed to "%%1%%".

@@ -24,10 +24,11 @@
 	<contents>
 		<syntax>
 			{VAL} = CLUSTER{i1:i2}
+			{VAL} = CLUSTER{{START:SCHRITTWEITE:ENDE}}
 			CLUSTER{i1:i2} = {VAL}
 		</syntax>
 		Cluster sind spezielle Variablentypen, die wie eine Tabelle mehrere Werte enthalten können. Diese Objekte werden durch einen Namen und die darauf folgenden geschweiften Klammern referenziert und im Gegensatz zu Tabellen automatisch erzeugt, wenn ihnen ein oder mehrere Werte zugewiesen werden:<codeblock>CLUSTER{} = {WERT1, WERT2, WERT3, ...}</codeblock>
-		Cluster sind dabei immer eindimensional und sind daher nicht so flexibel wie Tabellen. Dafür können sie allerdings numerische Werte und Zeichenketten <em>gemischt</em> und in einer beliebigen Reihenfolge enthalten. Der Zugriff auf die Werte in einem Cluster erfolgt dabei über einen Index, der dem Cluster in geschweiften Klammern übergeben werden muss:<codeblock>WERT = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEUER_WERT"</codeblock>Der Index kann selbstverständlich auch einen ganzen Bereich abdecken (<code>INDEX1:INDEX2</code>). Wenn kein Index angegeben wird, wird dies als <em>alle</em> Elemente im aktuellen Cluster interpretiert. Das bedeutet, dass entweder alle Werte gelesen oder der gesamte Cluster überschrieben wird.
+		Cluster sind dabei immer eindimensional und sind daher nicht so flexibel wie Tabellen. Dafür können sie allerdings numerische Werte und Zeichenketten <em>gemischt</em> und in einer beliebigen Reihenfolge enthalten. Der Zugriff auf die Werte in einem Cluster erfolgt dabei über einen Index, der dem Cluster in geschweiften Klammern übergeben werden muss:<codeblock>WERT = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEUER_WERT"</codeblock>Der Index kann selbstverständlich auch einen ganzen Bereich abdecken (<code>INDEX1:INDEX2</code> bzw. <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a>). Wenn kein Index angegeben wird, wird dies als <em>alle</em> Elemente im aktuellen Cluster interpretiert. Das bedeutet, dass entweder alle Werte gelesen oder der gesamte Cluster überschrieben wird.
 		Der spezielle Wert <code>nlen</code> kann beim Zugreifen auf einen Cluster verwendet werden, um das aktuell letzte Element zu referenzieren:<codeblock>LETZTER_WERT = CLUSTER{nlen}\nCLUSTER{nlen+1} = ANGEHAENGTER_WERT</codeblock>
 		<example desc="Verwenden eines Clusters, um den Inhalt einer Textdatei zu speichern:">
 			ini{} = read &lt;&gt;/numere.ini

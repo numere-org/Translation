@@ -26,6 +26,7 @@
 		<keyword>kontrollfluss</keyword>
 		<keyword>controlflow</keyword>
 		<keyword>flowcontrol</keyword>
+		<keyword>leave</keyword>
 	</keywords>
 	<contents>
 		Control flow statements are logical blocks in code that identify related segments. These can be loops like <a href="nhlp://for?frame=new"><code>for...endfor</code></a> and <a href="nhlp://while?frame=new"><code>while...endwhile</code></a> or branches like <a href="nhlp://if? frame=new"><code>if...elseif...else...endif</code></a> and <a href="nhlp://switch?frame=new"><code>switch...case...default...endswitch</code></a>. However, error handling using <a href="nhlp://try?frame=new"><code>try...catch...endtry</code></a> also counts as a control flow statement.
@@ -47,7 +48,7 @@
 			endswitch
 		</codeblock>
 		When control flow statements are used interactively in the NumeRe console, the console switches to a special mode, which is made clear by a keyword at the beginning of the line. All expressions now entered are used as part of the control flow statement. As soon as the outermost control flow statement is complete (i.e. closed by the end command), the evaluation is started automatically. On the other hand, to leave this mode without executing the statement, the command <code>abort</code> can be used.
-		The commands <code>break</code> and <code>continue</code> are special commands for control flow statements. They have a special meaning depending on the surrounding parent block. See the article on the corresponding block.
+		The commands <code>break</code> and <code>continue</code> are special commands for control flow statements. They have a special meaning depending on the surrounding parent block. See the article on the corresponding block. The <code>leave</code> command, on the other hand, will always leave all nested control flow blocks so that code execution can continue after the outermost block ends.
 		If NumeRe needs too much time to evaluate a control flow statement, the execution can be aborted with the <code>ESC</code> key or the corresponding function of the toolbar.
 	</contents>
 </article>
