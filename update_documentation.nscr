@@ -1,23 +1,18 @@
 #**********************************************************************************************
  * SCRIPTNAME: update_documentation 
  * ============================================================================================
- * HinzugefÃ¼gt: 2019-06-30, um 10:16:21 *#
+ * Hinzugefügt: 2019-06-30, um 10:16:21 *#
 
-<<<<<<< HEAD
+
 ## Füge hier deine Kommandos und Ausdrücke ein.
-declare sREPOSITORY := "D:/CPP/numere-language/"
-copy sREPOSITORY + "de-DE/lang/*" -target="<>/lang/" -all
-copy sREPOSITORY + "common/*" -target="<>/lang/" -all
-copy sREPOSITORY + "de-DE/docs/*" -target="<>/docs/" -all
-=======
-## FÃ¼ge hier deine Kommandos und AusdrÃ¼cke ein.
+
 sLangId = getuilang(); ## "de-DE" oder "en-GB";
 copy "<this>/" + sLangId + "/lang/*" -target="<>/lang/" -all
 copy "<this>/common/*" -target="<>/lang/" -all
 copy "<this>/" + sLangId + "/docs/*" -target="<>/docs/" -all
->>>>>>> 07d2e3e1a6567c464be22702a27b27b8d6bb89fd
+
 
 #**Ende der Datei
- * NumeRe: Framework fÃ¼r Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://sites.google.com/site/numereframework/
  **********************************************************************************************#
