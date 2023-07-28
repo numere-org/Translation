@@ -53,8 +53,9 @@
 		Some string functions are also available as methods for string variables (not for string literals). These are only alias functions and don't implement a new functionality. The methods are as follows:
 		<codeblock>
 			STRVAR.len()           =>   strlen(STRVAR)
-			STRVAR.first()           =>   firstch(STRVAR)
-			STRVAR.back()           =>   lastch(STRVAR)
+			STRVAR.first()         =>   firstch(STRVAR)
+			STRVAR.back()          =>   lastch(STRVAR)
+
 			STRVAR.at(P)           =>   char(STRVAR,P)
 			STRVAR.fnd(STR,P)      =>   strfnd(STR,STRVAR,P)
 			STRVAR.rfnd(STR,P)     =>   strrfnd(STR,STRVAR,P)
