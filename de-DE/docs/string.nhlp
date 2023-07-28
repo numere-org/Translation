@@ -52,8 +52,8 @@
 		Einige Zeichenkettenfunktionen sind auch als Methoden für Zeichenkettenvariablen (nicht literalen Zeichenketten) verfügbar. Es handelt sich hierbei jedoch nur um Aliase um die Lesbarkeit zu verbessern. Es wird keine neue Funktionalität implementiert. Die Methoden lauten wie folgt:
 		<codeblock>
 			STRVAR.len()           =>   strlen(STRVAR)
-			STRVAR.first()           =>   firstch(STRVAR)
-			STRVAR.back()           =>   lastch(STRVAR)
+			STRVAR.first()         =>   firstch(STRVAR)
+			STRVAR.back()          =>   lastch(STRVAR)
 			STRVAR.at(P)           =>   char(STRVAR,P)
 			STRVAR.fnd(STR,P)      =>   strfnd(STR,STRVAR,P)
 			STRVAR.rfnd(STR,P)     =>   strrfnd(STR,STRVAR,P)
