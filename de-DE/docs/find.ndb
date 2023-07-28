@@ -71,6 +71,7 @@ Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunct
 clc~Bereinige das Terminal und setze den Inhalt auf den Startzustand zurück~clc clear terminal clean~help clc
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds~clock()
 close~Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden~graphs schließen alle Graphen -docs Hilfe-Fenster tables Tabellen images ImageViewer all~help close
+CLUSTER{i1:i2}~Cluster-Objekt mit Zugriff auf die Elemente "i1" bis "i2", siehe "help cluster"~zwischenspeicher cluster{} array range schrittweite step width~help cluster
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count invalid~cnt(
 complex(re,im)~Erzeugt eine komplexe Zahl aus den angegeben Real- re und Imaginärteilen im~komplexe zahlen complex numbers~complex(
@@ -122,7 +123,7 @@ Easteregg~Wie wenn die wirklich so einfach zu finden wären ... Such' nur weiter 
 edit~Bearbeiten und Öffnen von Dateien in einem externen Programm~bearbeiten oeffnen öffnen open view betrachten dateien programm~help edit
 eigenvals(MAT)~Berechnet die Eigenwerte der quadratischen Matrix MAT, siehe "help matop"~eigenvals() eigenvalues matrix~eigenvals(
 eigenvects(MAT)~Berechnet die Eigenvektoren der quadratischen Matrix, siehe "help matop"~eigenvects() eigenvectors matrix~eigenvects(
-ellipticD(x,n,k)~Wert des elliptischen Integrals D(x,n,k)~elliptisches integral~ellipticD(
+ellipticD(x,k)~Wert des elliptischen Integrals D(x,k)~elliptisches integral~ellipticD(
 ellipticE(x,k)~Wert des elliptischen Integrals E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~ Wert des elliptischen Integrals F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Wert des elliptischen Integrals Pi(x,n,k)~elliptisches integral~ellipticPi(
@@ -175,6 +176,7 @@ getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler z
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getompthreads()~Gibt die Zahl der maximal möglichen OpenMP-Threads zurück~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
+getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
 getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
 grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
@@ -236,6 +238,7 @@ lastch(STR)~Gibt das letzte Zeichenkette zurück~begin end last erstes letztes ze
 layout~Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Definiert eine eigene Funktion für die lokale Verwendung, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
 lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
+leave~Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke~leave break continue~help leave
 legendre(n,x)~Berechnet den numerischen Wert der Legendre-Polynome der Ordnung n an der Stelle x~legendrepolynome polynomial legendre()~legendre(
 legendre_a(l,m,x)~Berechnet den numerischen Wert der assoziierten Legendre-Polynome der Ordnung l mit m = [-l,l] an der Stelle x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
 Li2(x)~Berechnet den Dilogarithmus von x~Li2() dilogarithm~Li2(
@@ -317,7 +320,7 @@ rayleigh_cdf_q(x,sigma)~Gibt den komplementären Wert der kumulativen Verteilungs
 rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_p(
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_rd(sigma)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
-read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten~help read
+read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
@@ -430,7 +433,7 @@ TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scor
 TAB().size~Bestimmt die Größe der Tabelle in Zeilen und Spalten~dimension size element count bounding rectangle~.size
 TAB().typeof({n})~Gibt den Spaltentyp der Spalten als Zeichenketten zurück~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
-TABLE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help table"~zwischenspeicher save cache() table() sortieren swap rename~help table()
+TABLE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help table"~zwischenspeicher save cache() table() sortieren swap rename range schrittweite step width~help table()
 tablegrid~Fügt ein Tabellengitter in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotiert die angegebene Tabelle um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help tabrot
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
@@ -442,6 +445,7 @@ theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaer
 throw~Bricht die Auswertung einer Prozedur ab und gibt eine Fehlermeldung aus~procedure throw try catch error exception~help throw
 time()~Gibt die Zeit in Sekunden seit dem 1.1.1970 zurück~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+to_ansi(sUtf8Enc)~Konvertiert die UTF-8 encodierte string sUtf8Enc in eine ANSI encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string character ascii to_char()~to_char(
 to_cmd(STR)~Wandelt die enthaltene Zeichenkette STR in ein Kommandoausdruck um~zeichenkette command kommando to_cmd()~to_cmd(
 to_lowercase(STR)~Wandelt die Großbuchstaben in STR in Kleinbuchstaben um~zeichenkette command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
@@ -451,6 +455,7 @@ to_string(EXPR)~Wandelt EXPR, wenn EXPR keine Zeichenkette ist, in eine solche u
 to_tex(VAL,VAL)~Wandelt einen numerischen Wert in einen String im TeX-Format um~string zeichenkette conversion konvertierung tex latex to_tex()~to_tex(
 to_time(STR1,STR2)~Wandelt die Zeit in STR2 gemäß dem Schema STR1 in einen Zeitwert um~transformieren convert conversion zeitstempel timestamp umwandeln date() to_time() timeformat() time()~to_time(
 to_uppercase(STR)~Wandelt die Kleinbuchstaben in STR in Großbuchstaben um~string zeichenkette wert to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
+to_utf8(sAnsiEnc)~Konvertiert die ANSI encodierte Zeichenkette sAnsiEnc in eine UTF-8 encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_utf8(
 to_value(STR)~Wertet die Zeichenkette STR aus und wandelt sie in einen Wert um~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert to_value()~to_value(
 trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
@@ -473,7 +478,7 @@ while (COND)~bedingte Schleife, siehe "help while"~whileschleife endwhile beding
 window~Erlaubt die Erzeugung eines interaktiven Fensters und die Interaktion mit selbigem~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Witz~Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!~witz gag joke~"Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!"
 workpath~Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung~workpath working directory cd change wp~help workpath
-write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenketten strings~help write
+write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenketten strings textdateien textual files txt import load open fopen fread fwrite read~help write
 xor(x,y,z,...)~Verknüpft die Argumente mit "|||"~logik logic oder ausschließendes ausschliessendes xor() exclusives exklusives~xor(
 Y(l,m,theta,phi)~Realteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] der Winkel theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
 Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho unter dem Winkel phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(
