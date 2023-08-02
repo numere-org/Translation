@@ -88,7 +88,21 @@
 		</list>
 		It is possible to append <code>-ignore</code> to <code>clear</code> and <code>delete</code> to suppress the required confirmation.
 		<h>Methods for working with tables</h>
-		Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methods are <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> and <code>norm</code>. They correspond to the standard functions of the same name and are executed on all elements of the selected table. The following methods are additionally defined:
+		Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Standard statistic methods are the following:
+		<codeblock>
+			TABLE().avg
+			TABLE().std
+			TABLE().sum
+			TABLE().prd
+			TABLE().med
+			TABLE().min
+			TABLE().max
+			TABLE().num
+			TABLE().cnt
+			TABLE().norm
+		</codeblock>
+		They correspond to the standard functions of the same name and are executed on all elements of the selected table. They may also be restricted to a group of rows and columns using the mentioned modifiers.
+		The following methods are additionally defined:
 		<list>
 			<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
 			<item node="TABLE().anovaof(nCategy,nCol,fSignif,nRows)">Performs an analysis of variance (ANOVA) for the categories of column <code>nCategs</code> and the values of column <code>nCol</code> using the significance value <code>fSignif</code> for rows <code>nRows</code>. The rows can be specified and by default correspond to the full dimension. A key-value list with the calculated relevant values is returned</item>
@@ -116,6 +130,7 @@
 			<item node="TABLE().removerows({nRows})">Removes the rows <code>{nRows}</code> from the table. Subsequent rows are moved up</item>
 			<item node="TABLE().rows">Returns the number of rows of the table</item>
 			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Calculates the <code>Spearman</code> correlation of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default. The Spearman correlation can be calculated from all variable types. The calculation of the corresponding ranks is case sensitive</item>
+			<item node="TABLE().shrink">Removes empty trailing cells and columns from the table to save memory. Empty cells and columns surrounded by valid data won't be removed</item>
 			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
 			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
 			<item node="TABLE().zscoreof(nCol,nRows)">Calculates the standardization of the values related to their deviation from the mean (also called z-score) in the column <code>nCol</code> for the rows <code>nRows</code>. The rows can be specified and correspond to the full dimension by default. Mean and standard deviation are always calculated related to the selected rows</item>
@@ -127,7 +142,7 @@
 			<item node=".grid">Declares the current table as a data grid so that the first two columns are ignored for the calculation</item>
 			<item node=".every(nFirst,nIncr)">Use with <code>rows</code> or <code>cols</code> to specify the first column/row (nFirst) and the increment (each => nIncr=1, each second => nIncr=2, etc.). If only one value is specified, it is used for both values. Columns/rows can also be specifically selected if a vector for nFirst (<code>.every({1:10})</code>) is passed</item>
 		</list>
-		<example desc="Display data in the table 'table()', then sort columns 3-6 in ascending order by column 1 and calculate the sum of every second column:">
+		<example desc="Display data in the table <code>table()</code>, then sort columns 3-6 in ascending order by column 1 and calculate the sum of every second column:">
 			show table()
 			[...]
 			sort table() cols=1[3:6]

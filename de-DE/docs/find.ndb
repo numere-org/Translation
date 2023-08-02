@@ -435,6 +435,7 @@ TAB().removecells(r,c,r1,c1)~Entfernt einen Block an Zellen aus der Tabelle~inse
 TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecols(
 TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().shrink~Entfernt leere, anhängende Zellen und Spalten aus der Tabelle~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Bestimmt die Größe der Tabelle in Zeilen und Spalten~dimension size element count bounding rectangle~.size
 TAB().typeof({n})~Gibt den Spaltentyp der Spalten als Zeichenketten zurück~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(

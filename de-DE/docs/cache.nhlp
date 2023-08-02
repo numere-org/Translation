@@ -88,7 +88,21 @@
 		</list>
 		An <code>clear</code> und <code>delete</code> kann <code>-ignore</code> angehängt werden, um die erforderliche Bestätigung zu unterdrücken.
 		<h>Methoden für die Arbeit mit Tabellen</h>
-		Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Methoden sind <code>avg</code>, <code>std</code>, <code>sum</code>, <code>prd</code>, <code>med</code>, <code>min</code>, <code>max</code>, <code>num</code>, <code>cnt</code> und <code>norm</code>. Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Die folgenden Methoden sind zusätzlich definiert:
+		Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Standard-Statistikmethoden sind die folgenden:
+		<codeblock>
+			TABLE().avg
+			TABLE().std
+			TABLE().sum
+			TABLE().prd
+			TABLE().med
+			TABLE().min
+			TABLE().max
+			TABLE().num
+			TABLE().cnt
+			TABLE().norm
+		</codeblock>
+		Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Sie können auch mit den Modifizieren auf Gruppen von Zeilen und Spalten eingeschränkt werden.
+		Die folgenden Methoden sind zusätzlich definiert:
 		<list>
 			<item node="TABLE().aliasof(sTable)">Wandelt die aktuelle Tabelle in einen Alias der Tabelle um, deren Name als Zeichenkette <code>sTable</code> übergeben wurde. Die aktuelle Tabelle wird dabei maskiert, so dass währenddessen nicht mehr auf sie zugegriffen werden kann. Wird eine leere Zeichenkette übergeben, wird die Dereferenzierung aufgehoben und der Bezug auf die aktuelle Tabelle wiederhergestellt. Der Name der referenzierten Tabelle wird als Zeichenkette zurückgegeben</item>
 			<item node="TABLE().anovaof(nCategy,nCol,fSignif,nRows)">Führt eine Varianzanalyse (ANOVA) für die Kategorien der Spalte <code>nCategs</code> und die Werte der Spalte <code>nCol</code> unter Verwendung des Signifikanzwertes <code>fSignif</code> für die Zeilen <code>nRows</code> durch. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Es wird eine Schlüssel-Wert-Liste mit den berechneten relevanten Werten zurückgegeben</item>
@@ -116,6 +130,7 @@
 			<item node="TABLE().removerows({nRows})">Entfernt die Reihen <code>{nRows}</code> aus der Tabelle. Nachfolgende Reihen werden nach oben verschoben</item>
 			<item node="TABLE().rows">Gibt die Zahl der Zeilen der Tabelle zurück</item>
 			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Berechnet die <em>Spearman</em>-Korrelation der Spalten <code>nCol1</code> und <code>nCol2</code>. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Die Spearman-Korrelation kann von allen Variablentypen berechnet werden. Bei der Berechnung der zugehörigen Ränge wird Groß- und Kleinschreibung berücksichtigt</item>
+			<item node="TABLE().shrink">Entfernt leere, anhängende Zellen und Spalten aus der Tabelle, um Speicherplatz zu sparen. Leere Zellen und Spalten, die von validen Daten umschlossen sind, werden beibehalten</item>
 			<item node="TABLE().size">Gibt die Größe der Tabelle in Zeilen und Spalten zurück</item>
 			<item node="TABLE().typeof({nCols})">Gibt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei entweder als <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> oder <code>"category"</code> angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ <code>"none"</code></item>
 			<item node="TABLE().zscoreof(nCol,nRows)">Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert (auch z-Score genannt) in der Spalte <code>nCol</code> für die Zeilen <code>nRows</code>. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Mittelwert und Standardabweichung werden stets bezogen auf die ausgewählten Zeilen berechnet</item>
@@ -127,7 +142,7 @@
 			<item node=".grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
 			<item node=".every(nFirst,nIncr)">Ermöglicht es mit <code>rows</code> oder <code>cols</code>, die erste Spalte/Zeile (nFirst) und das Inkrement (jede => nIncr=1, jede zweite => nIncr=2, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst (<code>.every({1:10})</code>) übergeben wird</item>
 		</list>
-		<example desc="Daten in der Tabelle 'table()' anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
+		<example desc="Daten in der Tabelle <code>table()</code> anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
 			show table()
 			[...]
 			sort table() cols=1[3:6]
