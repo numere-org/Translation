@@ -424,7 +424,7 @@ TAB().countif({n},v{})~Zählt die Elemente in den Spalten, die mit den Werten übe
 TAB().covarof(n,m,{r1},{r2})~Berechnet die Kovarianz der Spalten~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Aktualisiert die Beschreibung der aktuellen Tabelle~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Gibt die Beschreibung der aktuellen Tabelle zurück~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
-TAB().fndcols({STR})~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
+TAB().fndcols({STR},l)~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().name~Gibt den Namen der Tabelle als Zeichenkette zurück~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Berechnet die Pearson-Korrelation der Spalten~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(

@@ -423,7 +423,7 @@ TAB().countif({n},v{})~Counts the element matching to the passed values~countif(
 TAB().covarof(n,m,{r1},{r2})~Calculates the covariance of the columns~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Updates the description of the table~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Returns the description of the table~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
-TAB().fndcols({STR})~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
+TAB().fndcols({STR},l)~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().name~Returns the name of the table as a string~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Calculates the Pearson correlation of the columns~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
