@@ -164,6 +164,7 @@ gauss(x0,x1)~Generates a (real and normal distributed) random number, with the d
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
+getfilediff(STR,STR)~Calculates the linewise differences between the files~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
 getfileinfo(STR)~Returns meta information about the specified file in sFilePath as a key-value list~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
 getfilelist(STR,T)~Returns a list of strings containing all files matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
 getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
