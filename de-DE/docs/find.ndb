@@ -147,6 +147,7 @@ findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurü
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
 findparam(PAR,STR,C)~Gibt die Position zurück, an der Parameter PAR in der Zeichenkette STR enthalten ist, und 0, falls er nicht gefunden werden kann. C ist ein optionales Argument, das das darauffolgende Zeichen bestimmt~parameter positionen optionen options positions commandline findparam()~findparam(
 findtoken(sString,sToken,sSep)~Gibt die Position zurück, an der der Token sToken in sString gefunden wurde, und 0, falls er nicht gefunden werden kann~token match tokenize string zeichenkette split() findtoken()~findtoken(
+firstch(STR)~Gibt das erste Zeichen aus einer Zeichenkette zurück~begin end last erstes letztes zeichen front back~firstch(
 fisher_f_cdf_p(x,nu1,nu2)~Liefert die kumulative Verteilungsfunktion bei x der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~fisher_f_cdf_p(
 fisher_f_cdf_q(x,nu1,nu2)~Liefert die komplementäre kumulative Verteilungsfunktion bei x der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~fisher_f_cdf_q(
 fisher_f_inv_p(p,nu1,nu2)~Liefert die Umkehrung der kumulativen Verteilungsfunktion bei p der F-Verteilung nach Fisher mit den Freiheitsgraden nu1 und nu2~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~fisher_f_inv_p(
@@ -233,6 +234,7 @@ laplace_cdf_q(x,a)~Liefert den Wert der komplementären kumulativen Verteilungsfu
 laplace_inv_p(p,a)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~laplace_inv_p(
 laplace_inv_q(q,a)~Gibt den inversen Wert der komplementären kumulativen Verteilungsfunktion in q für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~laplace_inv_q(
 laplace_rd(a)~Liefert eine Zufallszahl aus der Laplace-Verteilung mit der Breite a~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~laplace_rd(
+lastch(STR)~Gibt das letzte Zeichenkette zurück~begin end last erstes letztes zeichen front back~lastch(
 layout~Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Definiert eine eigene Funktion für die lokale Verwendung, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
 lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm() kgv() least common multiple kleinstes gemeinsames vielfaches~lcm(
@@ -374,7 +376,9 @@ std(x,y,z,...)~Standardabweichung der Werte x,y,z,...~standardabweichung fehler 
 stfa~Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
 str~Definiert den lokalen Zeichenkettenvariablensatz einer Prozedur~procedure local strings~help str
 STR.at(POS)~Gibt das Zeichen aus der Zeichenkette an der Stelle POS zurück~methode strings zeichenketten character at()~.at(
+STR.first~Gibt das erste Zeichen aus einer Zeichenkette zurück first()~methode strings zeichenketten first first()~.first
 STR.fnd(STR,POS)~Gibt die Position des ersten Auftretens von STR in der Zeichenkette ab dem Zeichen POS zurück~methode strings zeichenketten find fnd()~.fnd(
+STR.last~Gibt das letzte Zeichen aus einer Zeichenkette zurück last()~methode strings zeichenkette last last()~.last
 STR.len~Länge der Zeichenkette~methode strings zeichenketten laenge len()~.len
 STR.mtch(STR,POS)~Sucht das erste Auftreten eines Zeichens aus STR in der Zeichenkette ab dem Zeichen POS~methode strings zeichenketten find mtch()~.mtch(
 STR.nmtch(STR,POS)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette, das nicht in STR auftritt, ab dem Zeichen POS~methode strings zeichenketten find nmtch()~.nmtch(
