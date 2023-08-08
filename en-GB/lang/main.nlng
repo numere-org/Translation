@@ -20,7 +20,7 @@
 #
 # COMMON:
 # =================================
-COMMON_APPNAME=NumeRe: Framework for Numerical Calculations
+COMMON_APPNAME=NumeRe: Framework for Numerical Computations
 COMMON_CANCEL=CANCEL
 COMMON_YES_NO=y/n
 COMMON_WITH=with

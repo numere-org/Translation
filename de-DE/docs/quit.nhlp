@@ -23,8 +23,8 @@
 		<keyword>quit</keyword>
 	</keywords>
 	<contents>
-		Das Kommando <code>quit</code> beendet NumeRe und löscht dabei sämtliche Einträge im Speicher. Falls noch ungesicherte Daten im Cache vorhanden sein sollten, wird NumeRe fragen, ob diese gespeichert werden sollen.
-		Der zusätzliche Parameter <code>-as</code> legt ggf. eine automatische Speicherung an, die beim nächsten Start von NumeRe wieder in den Speicher geladen wird, um damit weiterarbeiten zu können.
-		Der Parameter <code>-i</code> wird stattdessen NumeRe beenden, ohne dass auf etwaige vorhandene Daten Rücksicht genommen wird.
+		Das Kommando <code>quit</code> beendet NumeRe und lÃ¶scht dabei sÃ¤mtliche EintrÃ¤ge im Speicher. Falls noch ungesicherte Daten im Cache vorhanden sein sollten, wird NumeRe fragen, ob diese gespeichert werden sollen.
+		Der zusÃ¤tzliche Parameter <code>-as</code> legt ggf. eine automatische Speicherung an, die beim nÃ¤chsten Start von NumeRe wieder in den Speicher geladen wird, um damit weiterarbeiten zu kÃ¶nnen.
+		Der Parameter <code>-i</code> wird stattdessen NumeRe beenden, ohne dass auf etwaige vorhandene Daten RÃ¼cksicht genommen wird.
 	</contents>
 </article>

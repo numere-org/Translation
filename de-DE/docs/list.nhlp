@@ -32,19 +32,19 @@
 			list -PAR
 			list PAR
 		</syntax>
-		Der Befehl <code>list</code> stellt alle Objekte, die durch den zusätzlichen Parameter spezifiziert wurden, in einer übersichtlichen Liste dar.
+		Der Befehl <code>list</code> stellt alle Objekte, die durch den zusÃ¤tzlichen Parameter spezifiziert wurden, in einer Ã¼bersichtlichen Liste dar.
 		Als Parameter sind die folgenden definiert:
 		<list>
 			<item node="-cmd">listet alle NumeRe-Kommandos und eine kurze Beschreibung</item>
 			<item node="-const">listet alle fest implementierten Konstanten, ihre Werte und die ggf. vorhandenen SI-Einheiten</item>
 			<item node="-define">listet alle selbst definierten Funktionen</item>
-			<item node="-files">listet Dateien und Ordner am gewählten Ort bzw. in den Standard-Ordnern. Siehe <a href="nhlp://explorer?frame=new">help explorer</a> für weitere Details</item>
-			<item node="-func[=TYPE]">listet implementierte Funktionen und ihre Argumente. Dieser Parameter kann mit TYPE eingeschränkt werden und listet dann nur zugehörige Funktionen. TYPE kann die folgenden Werte haben: <code>numerical</code>, <code>matrix</code>, <code>string</code>, <code>logical</code>, <code>trigonometric</code>, <code>hyperbolic</code>, <code>random</code>, <code>polynomial</code>, <code>statistical</code>, <code>time</code>, <code>angular</code>, <code>distrib</code>, <code>coords</code>, <code>logarithmic</code> & <code>physical</code></item>
-			<item node="-logic">listet alle Logik-Ausdrücke, mit denen NumeRe umgehen kann</item>
+			<item node="-files">listet Dateien und Ordner am gewÃ¤hlten Ort bzw. in den Standard-Ordnern. Siehe <a href="nhlp://explorer?frame=new">help explorer</a> fÃ¼r weitere Details</item>
+			<item node="-func[=TYPE]">listet implementierte Funktionen und ihre Argumente. Dieser Parameter kann mit TYPE eingeschrÃ¤nkt werden und listet dann nur zugehÃ¶rige Funktionen. TYPE kann die folgenden Werte haben: <code>numerical</code>, <code>matrix</code>, <code>string</code>, <code>logical</code>, <code>trigonometric</code>, <code>hyperbolic</code>, <code>random</code>, <code>polynomial</code>, <code>statistical</code>, <code>time</code>, <code>angular</code>, <code>distrib</code>, <code>coords</code>, <code>logarithmic</code> & <code>physical</code></item>
+			<item node="-logic">listet alle Logik-AusdrÃ¼cke, mit denen NumeRe umgehen kann</item>
 			<item node="-plugins">listet alle installierten Plugins</item>
 			<item node="-settings">listet die Werte aller Einstellungen</item>
 			<item node="-units">listet alle implementierten Einheitenumrechnungen und ihre SI-Pendants</item>
-			<item node="-var">listet alle in NumeRe deklarierten Variablen, ihre Werte und den benötigten Speicherplatz</item>
+			<item node="-var">listet alle in NumeRe deklarierten Variablen, ihre Werte und den benÃ¶tigten Speicherplatz</item>
 		</list>
 		<example desc="Auflisten der deklarierten Variablen">
 			list -var

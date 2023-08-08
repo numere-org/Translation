@@ -17,7 +17,7 @@
 -->
 
 <article id="coords">
-	<title string="Koordinatens‰tze f¸r Plots" idxkey="coords" />
+	<title string="Koordinatens√§tze f√ºr Plots" idxkey="coords" />
 	<keywords>
 		<keyword>coord</keyword>
 		<keyword>koord</keyword>
@@ -30,9 +30,9 @@
 		<keyword>parametric</keyword>
 	</keywords>
 	<contents>
-		NumeRe ist mit drei wesentlichen Koordinatens‰tzen ausgestattet: kartesisch <expr>(x,y,z)</expr>, polar/zylindrisch <expr>(rho,phi[,z])</expr> und sph‰risch <expr>(r,phi,theta)</expr>. Diese Koordinatens‰tze kˆnnen beim Plotten mit der Option <code>coords=KOORDINATEN</code> ausgew‰hlt werden.
+		NumeRe ist mit drei wesentlichen Koordinatens√§tzen ausgestattet: kartesisch <expr>(x,y,z)</expr>, polar/zylindrisch <expr>(rho,phi[,z])</expr> und sph√§risch <expr>(r,phi,theta)</expr>. Diese Koordinatens√§tze k√∂nnen beim Plotten mit der Option <code>coords=KOORDINATEN</code> ausgew√§hlt werden.
 		<h>Parametrische Koordinatentransformation</h>
-		Teilweise kˆnnen Koordinatentransformationen direkt parametrisch angegeben werden. Dabei verwendet NumeRe zus‰tzliche Funktionen oder Datengitter als Abbildungen f¸r die jeweiligen <expr>x</expr>- bzw. <expr>y</expr>-Koordinaten. Diese Variante kann aktiviert werden durch Verwendung von <code>coords=parametric</code> oder <code>coords=KOORDINATEN-parametric</code> (bei Kombination mit einer weiteren Standard-Koordinatentransformation) und bleibt nur f¸r den aktuellen Plot aktiv. Mit diesem Modus kˆnnen Plots auch wie bei MATLAB(R) angegeben werden, beispielsweise:
+		Teilweise k√∂nnen Koordinatentransformationen direkt parametrisch angegeben werden. Dabei verwendet NumeRe zus√§tzliche Funktionen oder Datengitter als Abbildungen f√ºr die jeweiligen <expr>x</expr>- bzw. <expr>y</expr>-Koordinaten. Diese Variante kann aktiviert werden durch Verwendung von <code>coords=parametric</code> oder <code>coords=KOORDINATEN-parametric</code> (bei Kombination mit einer weiteren Standard-Koordinatentransformation) und bleibt nur f√ºr den aktuellen Plot aktiv. Mit diesem Modus k√∂nnen Plots auch wie bei MATLAB(R) angegeben werden, beispielsweise:
 		<codeblock>
 			plot xFUNC(x), yFUNC(x) -set coords=parametric
 			plot xDAT(), yDAT() -set coords=parametric
@@ -43,20 +43,20 @@
 		</example>
 		<img src="<>/docs/parametricsphere.png" />
 		<h>Standard-Koordinatentransformationen</h>
-		Die Art der standardm‰ﬂig definierten Koordinaten wird durch die folgenden Optionen bestimmt. F¸r Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>) sind <code>polar</code> (entspricht <code>polar_rp</code>) und <code>spherical</code> (entspricht <code>spherical_rp</code>) die einzigen Optionen.
+		Die Art der standardm√§√üig definierten Koordinaten wird durch die folgenden Optionen bestimmt. F√ºr Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>) sind <code>polar</code> (entspricht <code>polar_rp</code>) und <code>spherical</code> (entspricht <code>spherical_rp</code>) die einzigen Optionen.
 		<list>
 			<item node="cartesian">kartesische <expr>(x,y,z)</expr>-Koordinaten</item>
-			<item node="polar">Polare/zylindrische <expr>(rho,phi,z)</expr>-Koordinaten. Wird als <code>polar_pz</code> interpretiert oder als <code>polar_rp</code>, wenn der Plotstil ein "3d" im Namen enth‰lt oder ein Vektorplot ist</item>
+			<item node="polar">Polare/zylindrische <expr>(rho,phi,z)</expr>-Koordinaten. Wird als <code>polar_pz</code> interpretiert oder als <code>polar_rp</code>, wenn der Plotstil ein "3d" im Namen enth√§lt oder ein Vektorplot ist</item>
 			<item node="polar_pz">Polare/zylindrische Koordinaten mit <expr>x = phi, y = z, z = rho</expr></item>
 			<item node="polar_rp">Polare/zylindrische Koordinaten mit <expr>x = rho, y = phi, z = z</expr></item>
 			<item node="polar_rz">Polare/zylindrische Koordinaten mit <expr>x = rho, y = z, z = phi</expr></item>
-			<item node="spherical">Sph‰rische <expr>(r,phi,theta)</expr>-Koordinaten. Wird als <code>spherical_pt</code> interpretiert oder als <code>spherical_rp</code>, wenn der Plotstil ein "3d" im Namen enth‰lt oder ein Vektorplot ist</item>
-			<item node="spherical_pt">Sph‰rische Koordinaten mit <expr>x = phi, y = theta, z = r</expr></item>
-			<item node="spherical_rp">Sph‰rische Koordinaten mit <expr>x = r, y = phi, z = theta</expr></item>
-			<item node="spherical_rt">Sph‰rische Koordinaten mit <expr>x = r, y = theta, z = phi</expr></item>
+			<item node="spherical">Sph√§rische <expr>(r,phi,theta)</expr>-Koordinaten. Wird als <code>spherical_pt</code> interpretiert oder als <code>spherical_rp</code>, wenn der Plotstil ein "3d" im Namen enth√§lt oder ein Vektorplot ist</item>
+			<item node="spherical_pt">Sph√§rische Koordinaten mit <expr>x = phi, y = theta, z = r</expr></item>
+			<item node="spherical_rp">Sph√§rische Koordinaten mit <expr>x = r, y = phi, z = theta</expr></item>
+			<item node="spherical_rt">Sph√§rische Koordinaten mit <expr>x = r, y = theta, z = phi</expr></item>
 		</list>
-		NumeRe w‰hlt automatisch die Plotintervalle <expr>[0,2PI]</expr> f¸r <expr>phi</expr> und <expr>[0,PI]</expr> f¸r <expr>theta</expr>, sofern nichts anderes vorgegeben wird. Die Darstellung der entsprechenden Achsen erfolgt dann jedoch auf <expr>PI</expr> normiert.
-		<example desc="Darstellen der Kugelfl‰chenfunktion <expr>Y_(3 2)(theta,phi)</expr> in sph‰rischen Koordinaten:">
+		NumeRe w√§hlt automatisch die Plotintervalle <expr>[0,2PI]</expr> f√ºr <expr>phi</expr> und <expr>[0,PI]</expr> f√ºr <expr>theta</expr>, sofern nichts anderes vorgegeben wird. Die Darstellung der entsprechenden Achsen erfolgt dann jedoch auf <expr>PI</expr> normiert.
+		<example desc="Darstellen der Kugelfl√§chenfunktion <expr>Y_(3 2)(theta,phi)</expr> in sph√§rischen Koordinaten:">
 			surf Y(3, 2, y, x) -set coords=spherical_pt
 		</example>
 		<img src="<>/docs/sphericalharmonic.png" />

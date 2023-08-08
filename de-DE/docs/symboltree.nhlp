@@ -23,8 +23,8 @@
 		<keyword>symbolb</keyword>
 	</keywords>
 	<contents>
-		Der Symbolbaum listet Kommandos, Funktionen und Konstanten mit ihrer Beschreibung, die von hier direkt in den Editor und die Konsole eingefügt werden können. Die verschiedenen Symbole sind dabei entsprechend ihrer Eigenschaften klassifiziert abgelegt. Da eine Funktion z.B. mehrere Attribute haben kann, kann sie auch mehrmals im Symbolbaum auftreten.
-		Es werden außerdem die installierten <a href="nhlp://plugin?frame=new">Plugins</a> und die <a href="nhlp://define?frame=new">selbst definierten Funktionen</a> gelistet.
-		Die Symbole können entweder per Drag'n'Drop oder per Doppelklick in den <a href="nhlp://editor?frame=new">Editor</a> oder mit dem Kontextmenü in die <a href="nhlp://console?frame=new">Konsole</a> kopiert werden.
+		Der Symbolbaum listet Kommandos, Funktionen und Konstanten mit ihrer Beschreibung, die von hier direkt in den Editor und die Konsole eingefÃ¼gt werden kÃ¶nnen. Die verschiedenen Symbole sind dabei entsprechend ihrer Eigenschaften klassifiziert abgelegt. Da eine Funktion z.B. mehrere Attribute haben kann, kann sie auch mehrmals im Symbolbaum auftreten.
+		Es werden auÃŸerdem die installierten <a href="nhlp://plugin?frame=new">Plugins</a> und die <a href="nhlp://define?frame=new">selbst definierten Funktionen</a> gelistet.
+		Die Symbole kÃ¶nnen entweder per Drag'n'Drop oder per Doppelklick in den <a href="nhlp://editor?frame=new">Editor</a> oder mit dem KontextmenÃ¼ in die <a href="nhlp://console?frame=new">Konsole</a> kopiert werden.
 	</contents>
 </article>
