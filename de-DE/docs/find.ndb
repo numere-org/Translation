@@ -473,7 +473,7 @@ vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional qu
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Gibt die Nummer des Wochentages des übergebenen Zeitwertes tTime zurück~weekday() day of week calendar date time datum kalendar~weekday(
-weeknum(VAL)~Gibt die Kalendarwochennummer des übergebenen Zeitwertes zurück~weeknum() calendarweek kalenderwoche date time datum~weeknum(
+weeknum(VAL)~Gibt die Kalenderwochennummer des übergebenen Zeitwertes zurück~weeknum() calendarweek kalenderwoche date time datum~weeknum(
 while (COND)~bedingte Schleife, siehe "help while"~whileschleife endwhile bedingung so lange falls wenn while() loop command sequence flow control~help while () ... endwhile
 window~Erlaubt die Erzeugung eines interaktiven Fensters und die Interaktion mit selbigem~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Witz~Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!~witz gag joke~"Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!"
