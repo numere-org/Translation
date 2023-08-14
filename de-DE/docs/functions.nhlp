@@ -23,18 +23,18 @@
 		<keyword>funk</keyword>
 	</keywords>
 	<contents>
-		NumeRe ist mit einem großen Satz an vordefinierten mathematischen Funktionen ausgestattet. Dieser Satz kann mit dem Kommando <code>list -func</code> angezeigt werden. Obwohl die meisten Funktionen vermutlich selbsterklärend sind, gibt es in diesem Hilfeeintrag ein paar Hinweise zum Umgang mit diesen Funktionen.
-		Die Argumente der trigonometrischen Funktionen und die Ausgabe ihrer Umkehrfunktionen sind stets im Bogenmaß (Radiant) zu verstehen. Die Umrechnung von Grad nach Bogenmaß erfolgt durch die Funktion <code>radian()</code>; die Umkehrung durch <code>degree()</code>.
-		Manche Funktionen können beliebig viele Argumente besitzen (wie z.B. <code>avg()</code> oder <code>std()</code>). Wenn diese mit Spalten oder Zeilen eines Datenobjekts kombiniert werden sollen, dann sind diese in der Form<codeblock>FUNC(DATEN(I1:I2,J))</codeblock>bzw.<codeblock>FUNC(DATEN(I,J1:J2))</codeblock>anzugeben, wobei durch <code>DATEN()</code> ein Datenobjekt bezeichnet sein soll. Mit Ausnahme von <code>cnt()</code> ignorieren diese Funktionen <code>nan</code> oder <code>inf</code>.
-		Dagegen werden alle anderen Funktionen, wenn sie auf Datenobjekte angewendet werden, elementweise ausgeführt, d.h., dass sie so viele Ergebnisse zurückgeben, wie Elemente in der übergebenen Zeile/Spalte vorhanden sind.
-		Die meisten Funktionen sind nur auf einem Definitionsbereich verfügbar, außerhalb dessen sie nur <code>nan</code> ("not a number") zurückgeben. Dieser Definitionsbereich wird auf eine der folgenden Arten angegeben: <code>R; [a,b]; (a,b); R \ {a,b,c,...}</code> oder Kombinationen daraus. Dabei ist:
+		NumeRe ist mit einem groÃŸen Satz an vordefinierten mathematischen Funktionen ausgestattet. Dieser Satz kann mit dem Kommando <code>list -func</code> angezeigt werden. Obwohl die meisten Funktionen vermutlich selbsterklÃ¤rend sind, gibt es in diesem Hilfeeintrag ein paar Hinweise zum Umgang mit diesen Funktionen.
+		Die Argumente der trigonometrischen Funktionen und die Ausgabe ihrer Umkehrfunktionen sind stets im BogenmaÃŸ (Radiant) zu verstehen. Die Umrechnung von Grad nach BogenmaÃŸ erfolgt durch die Funktion <code>radian()</code>; die Umkehrung durch <code>degree()</code>.
+		Manche Funktionen kÃ¶nnen beliebig viele Argumente besitzen (wie z.B. <code>avg()</code> oder <code>std()</code>). Wenn diese mit Spalten oder Zeilen eines Datenobjekts kombiniert werden sollen, dann sind diese in der Form<codeblock>FUNC(DATEN(I1:I2,J))</codeblock>bzw.<codeblock>FUNC(DATEN(I,J1:J2))</codeblock>anzugeben, wobei durch <code>DATEN()</code> ein Datenobjekt bezeichnet sein soll. Mit Ausnahme von <code>cnt()</code> ignorieren diese Funktionen <code>nan</code> oder <code>inf</code>.
+		Dagegen werden alle anderen Funktionen, wenn sie auf Datenobjekte angewendet werden, elementweise ausgefÃ¼hrt, d.h., dass sie so viele Ergebnisse zurÃ¼ckgeben, wie Elemente in der Ã¼bergebenen Zeile/Spalte vorhanden sind.
+		Die meisten Funktionen sind nur auf einem Definitionsbereich verfÃ¼gbar, auÃŸerhalb dessen sie nur <code>nan</code> ("not a number") zurÃ¼ckgeben. Dieser Definitionsbereich wird auf eine der folgenden Arten angegeben: <code>R; [a,b]; (a,b); R \ {a,b,c,...}</code> oder Kombinationen daraus. Dabei ist:
 		<list>
 			<item node="R">Der Wertebereich aller reellen Zahlen.</item>
 			<item node="R \ {a,b,c,...}">Der Wertebereich aller reellen Zahlen, wobei die Stellen <expr>a,b,c,...</expr> ausgenommen sind.</item>
 			<item node="[a,b]">Die Funktion ist nur im Bereich <expr>a &lt;= x &lt;= b</expr> definiert.</item>
 			<item node="(a,b)">Die Funktion ist nur im Bereich <expr>a &lt; x &lt; b</expr> definiert. (Man beachte den Unterschied in der Bedeutung der Klammern.)</item>
 		</list>
-		Der Wert "inf" steht für "unendlich" und "PI" für den Wert von <expr>pi = 3.1415926...</expr> Unter den natürlichen Zahlen versteht man des Weiteren die Zahlen 1,2,3,..., wobei gelegentlich auch die 0 dazu gezählt wird.
-		<em>Tipp:</em> Mit dem Kommando <code>define</code> können eigene Funktionen definiert werden. Siehe hierzu <a href="nhlp://define?frame=new">help define</a>.
+		Der Wert "inf" steht fÃ¼r "unendlich" und "PI" fÃ¼r den Wert von <expr>pi = 3.1415926...</expr> Unter den natÃ¼rlichen Zahlen versteht man des Weiteren die Zahlen 1,2,3,..., wobei gelegentlich auch die 0 dazu gezÃ¤hlt wird.
+		<em>Tipp:</em> Mit dem Kommando <code>define</code> kÃ¶nnen eigene Funktionen definiert werden. Siehe hierzu <a href="nhlp://define?frame=new">help define</a>.
 	</contents>
 </article>

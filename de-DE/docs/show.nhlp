@@ -17,14 +17,14 @@
 -->
 
 <article id="show">
-	<title string="Datensätze anzeigen" idxkey="show" />
+	<title string="DatensÃ¤tze anzeigen" idxkey="show" />
 	<keywords>
 		<keyword>show</keyword>
 		<keyword>anzeig</keyword>
 	</keywords>
 	<contents>
-		Um den Inhalt eines Datensatzes anzuzeigen, kann das Kommando <code>show</code> verwendet werden:<codeblock>show DATEN(I1:I2,J1:J2)</codeblock>Der Inhalt des Datensatzes wird hierbei in einer übersichtlichen, tabellarischen Form dargestellt.
-		Je nach Voreinstellung und Größe des Datensatzes wird jedoch nicht der gesamte Datensatz angezeigt, sondern nur ein grober Überblick, der die ersten und die letzten Zeilen darstellt. Dieses Verhalten kann entweder mit der Einstellung <code>set -compact</code> geändert oder mittels der Variante <code>showf</code> für diesen Fall überschrieben werden.
-		Sehr große Datensätze anzuzeigen kann etwas Zeit benötigen, da formatierte Ausgaben zu den zeitintensiven Operationen gehören.
+		Um den Inhalt eines Datensatzes anzuzeigen, kann das Kommando <code>show</code> verwendet werden:<codeblock>show DATEN(I1:I2,J1:J2)</codeblock>Der Inhalt des Datensatzes wird hierbei in einer Ã¼bersichtlichen, tabellarischen Form dargestellt.
+		Je nach Voreinstellung und GrÃ¶ÃŸe des Datensatzes wird jedoch nicht der gesamte Datensatz angezeigt, sondern nur ein grober Ãœberblick, der die ersten und die letzten Zeilen darstellt. Dieses Verhalten kann entweder mit der Einstellung <code>set -compact</code> geÃ¤ndert oder mittels der Variante <code>showf</code> fÃ¼r diesen Fall Ã¼berschrieben werden.
+		Sehr groÃŸe DatensÃ¤tze anzuzeigen kann etwas Zeit benÃ¶tigen, da formatierte Ausgaben zu den zeitintensiven Operationen gehÃ¶ren.
 	</contents>
 </article>

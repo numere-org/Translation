@@ -31,22 +31,22 @@
 			{VALS} = integrate TABLE() -set ...\n
 			{VALS} = integrate f(x,y), ... -set [x1:x2,y1:y2] ...
 		</syntax>
-		NumeRe ist mit Funktionen zur numerischen Integration ausgestattet. Der dazu einzugebende Befehl <code>integrate</code> ruft die entsprechende Funktion auf. Ob eine 1D- oder 2D-Integration ausgeführt wird, entscheidet NumeRe anhand der übergebenen Optionen (s. u.). Die Integrationsvariable im 1D-Fall ist <expr>x</expr>; im 2D-Fall sind es <expr>x</expr> und <expr>y</expr>.
-		Die Funktionen <expr>f(x)</expr> bzw. <expr>f(x,y)</expr> sind direkt im Anschluss von <code>integrate</code> einzugeben. Dabei können auch mehrere Funktionen zugleich integriert werden, so lange ihre Integrationsgrenzen übereinstimmen. Verwendete Variablen (mit Ausnahme von <expr>x</expr> bzw. <expr>x</expr> und <expr>y</expr>) sind zuvor zu deklarieren.
-		Die Grenzen, die numerische Auflösung der Integration und das Integrationsverfahren müssen dem Kommando mittels dem Parameter <code>-set</code> als Option übergeben werden. Werden dabei nur Grenzen für <expr>x</expr> angegeben, wird eine 1D-Integration ausgeführt. Werden hingegen die Grenzen für <expr>x</expr> und <expr>y</expr> angegeben, wird eine 2D-Integration ausgeführt. Die Grenzen können dabei einzeln wie im Folgenden oder gemeinsam durch <code>[x0:x1,y0:y1]</code> übergeben werden.
+		NumeRe ist mit Funktionen zur numerischen Integration ausgestattet. Der dazu einzugebende Befehl <code>integrate</code> ruft die entsprechende Funktion auf. Ob eine 1D- oder 2D-Integration ausgefÃ¼hrt wird, entscheidet NumeRe anhand der Ã¼bergebenen Optionen (s. u.). Die Integrationsvariable im 1D-Fall ist <expr>x</expr>; im 2D-Fall sind es <expr>x</expr> und <expr>y</expr>.
+		Die Funktionen <expr>f(x)</expr> bzw. <expr>f(x,y)</expr> sind direkt im Anschluss von <code>integrate</code> einzugeben. Dabei kÃ¶nnen auch mehrere Funktionen zugleich integriert werden, so lange ihre Integrationsgrenzen Ã¼bereinstimmen. Verwendete Variablen (mit Ausnahme von <expr>x</expr> bzw. <expr>x</expr> und <expr>y</expr>) sind zuvor zu deklarieren.
+		Die Grenzen, die numerische AuflÃ¶sung der Integration und das Integrationsverfahren mÃ¼ssen dem Kommando mittels dem Parameter <code>-set</code> als Option Ã¼bergeben werden. Werden dabei nur Grenzen fÃ¼r <expr>x</expr> angegeben, wird eine 1D-Integration ausgefÃ¼hrt. Werden hingegen die Grenzen fÃ¼r <expr>x</expr> und <expr>y</expr> angegeben, wird eine 2D-Integration ausgefÃ¼hrt. Die Grenzen kÃ¶nnen dabei einzeln wie im Folgenden oder gemeinsam durch <code>[x0:x1,y0:y1]</code> Ã¼bergeben werden.
 		<list>
 			<item node="x=WERT1:WERT2"><expr>x</expr>-Intervall auf [WERT1, WERT2] setzen</item>
 			<item node="y=WERT1:WERT2"><expr>y</expr>-Intervall auf [WERT1, WERT2] setzen</item>
-			<item node="precision=AUFLÖSUNG">Numerische Auflösung auf den Wert von AUFL setzen. Wird diese Option nicht angegeben, so wird der Standardwert von 1e-3 verwendet. <code>eps=AUFLÖSUNG</code> ist ein Alias zu dieser Option</item>
-			<item node="method=METHODE">Numerisches Verfahren der Integration wählen. Zur Wahl stehen <code>trapezoidal</code> (Standard) für sehr glatte oder konstante und <code>simpson</code> für stark veränderliche Funktionen. <code>simpson</code> ist aufgrund der Tatsache, dass es sich um ein quadratisches Verfahren handelt, deutlich langsamer. Außerdem liefert es im Falle konstanter Funktionen eher schlechtere Ergebnisse als <code>trapezoidal</code></item>
-			<item node="steps=STEPS">Gibt statt der Präzision die Zahl der Unterteilungen des Integrationsintervalls an.</item>
-			<item node="points">Gibt die numerische Stammfunktion der ersten zu integrierenden Funktion als Datensatz zurück</item>
-			<item node="xvals">Bestimmt die entsprechenden <expr>x</expr>-Werte der Stammfunktion (wird nur ausgeführt, wenn <code>points</code> nicht übergeben wird)</item>
+			<item node="precision=AUFLÃ–SUNG">Numerische AuflÃ¶sung auf den Wert von AUFL setzen. Wird diese Option nicht angegeben, so wird der Standardwert von 1e-3 verwendet. <code>eps=AUFLÃ–SUNG</code> ist ein Alias zu dieser Option</item>
+			<item node="method=METHODE">Numerisches Verfahren der Integration wÃ¤hlen. Zur Wahl stehen <code>trapezoidal</code> (Standard) fÃ¼r sehr glatte oder konstante und <code>simpson</code> fÃ¼r stark verÃ¤nderliche Funktionen. <code>simpson</code> ist aufgrund der Tatsache, dass es sich um ein quadratisches Verfahren handelt, deutlich langsamer. AuÃŸerdem liefert es im Falle konstanter Funktionen eher schlechtere Ergebnisse als <code>trapezoidal</code></item>
+			<item node="steps=STEPS">Gibt statt der PrÃ¤zision die Zahl der Unterteilungen des Integrationsintervalls an.</item>
+			<item node="points">Gibt die numerische Stammfunktion der ersten zu integrierenden Funktion als Datensatz zurÃ¼ck</item>
+			<item node="xvals">Bestimmt die entsprechenden <expr>x</expr>-Werte der Stammfunktion (wird nur ausgefÃ¼hrt, wenn <code>points</code> nicht Ã¼bergeben wird)</item>
 		</list>
-		<code>integrate</code> kann auch 1D-Datensätze numerisch integrieren. Diese Datensätze sind dann statt der Funktion zu übergeben: wenn nur eine Spalte übergeben wird, wird nur die Summe des Datensatzes berechnet, werden zwei Spalten angegeben, wird die erste als <expr>x</expr>- und die zweite als die entsprechenden <expr>y</expr>-Werte interpretiert und das entsprechende Integral bestimmt.
-		Die numerische Auflösung bestimmt, wie fein das Integrations-Intervall unterteilt wird. Je kleiner diese Auflösung, desto höher die Rechenzeit. Allerdings begrenzen irgendwann auch Rundungsfehler die Genauigkeit.
+		<code>integrate</code> kann auch 1D-DatensÃ¤tze numerisch integrieren. Diese DatensÃ¤tze sind dann statt der Funktion zu Ã¼bergeben: wenn nur eine Spalte Ã¼bergeben wird, wird nur die Summe des Datensatzes berechnet, werden zwei Spalten angegeben, wird die erste als <expr>x</expr>- und die zweite als die entsprechenden <expr>y</expr>-Werte interpretiert und das entsprechende Integral bestimmt.
+		Die numerische AuflÃ¶sung bestimmt, wie fein das Integrations-Intervall unterteilt wird. Je kleiner diese AuflÃ¶sung, desto hÃ¶her die Rechenzeit. Allerdings begrenzen irgendwann auch Rundungsfehler die Genauigkeit.
 		Die Auswertung kann mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
-		<example desc="Integration der Funktion <expr>f(x) = x^2</expr> von <expr>x = 1</expr> bis <expr>x = 2</expr> mit der num. Auflösung <expr>dx = 10^(-3)</expr> und Integration der Funktion <expr>f(x,y) = x</expr> von <expr>x = 0</expr> bis <expr>x = 1</expr> und <expr>y = 0</expr> bis <expr>y = _2pi</expr> mit der num. Auflösung von <expr>dx,dy = 10^(-4)</expr>:" type="verbatim">
+		<example desc="Integration der Funktion <expr>f(x) = x^2</expr> von <expr>x = 1</expr> bis <expr>x = 2</expr> mit der num. AuflÃ¶sung <expr>dx = 10^(-3)</expr> und Integration der Funktion <expr>f(x,y) = x</expr> von <expr>x = 0</expr> bis <expr>x = 1</expr> und <expr>y = 0</expr> bis <expr>y = _2pi</expr> mit der num. AuflÃ¶sung von <expr>dx,dy = 10^(-4)</expr>:" type="verbatim">
 			|&lt;- integrate x^2 -set [1:2]
 			|-&gt; ans = 2.333
 			|
@@ -54,6 +54,6 @@
 			|INTEGRATE&gt; Werte aus ... 100 %: Erfolg!
 			|-&gt; ans = 3.141593
 		</example>
-		<em>Tipp:</em> In den meisten Fällen genügt eine numerische Auflösung von <expr>10^(-3)</expr> für ein brauchbares Ergebnis oder eine erste Abschätzung. Eine höhere Auflösung sollte nur gewählt werden, wenn das Integral wider Erwarten verschwindet oder die zusätzlichen Nachkommastellen wirklich von Belang sind.
+		<em>Tipp:</em> In den meisten FÃ¤llen genÃ¼gt eine numerische AuflÃ¶sung von <expr>10^(-3)</expr> fÃ¼r ein brauchbares Ergebnis oder eine erste AbschÃ¤tzung. Eine hÃ¶here AuflÃ¶sung sollte nur gewÃ¤hlt werden, wenn das Integral wider Erwarten verschwindet oder die zusÃ¤tzlichen Nachkommastellen wirklich von Belang sind.
 	</contents>
 </article>

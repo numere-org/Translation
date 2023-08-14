@@ -27,9 +27,9 @@
 		<syntax>
 			find SEARCHTERMS
 		</syntax>
-		Das Kommando <code>find</code> erlaubt es, nach einer Funktion oder einem anderen Kommando innerhalb dieses Programms zu suchen. Der (oder die) Begriff(e) müssen diesem Kommando dabei als Parameter übergeben werden. Das Kommando <code>search</code> ist ein Synonym zum Kommando <code>find</code>.
-		Soll ein ganzer Ausdruck mit Leerzeichen gesucht werden, so muss dieser in Anführungszeichen übergeben werden.
-		Werden mehrere Begriffe angegeben, ordnet NumeRe die Ergebnisse der Suche absteigend nach ihrer Relevanz. Diese berechnet NumeRe aus der Zahl der Suchbegriffe, die mit dem Ergebnis übereinstimmen, und einer zusätzlichen, internen Gewichtung, welche bestimmt, wie gut die einzelnen Suchbegriffe jeweils mit dem Treffer übereinstimmen.
+		Das Kommando <code>find</code> erlaubt es, nach einer Funktion oder einem anderen Kommando innerhalb dieses Programms zu suchen. Der (oder die) Begriff(e) mÃ¼ssen diesem Kommando dabei als Parameter Ã¼bergeben werden. Das Kommando <code>search</code> ist ein Synonym zum Kommando <code>find</code>.
+		Soll ein ganzer Ausdruck mit Leerzeichen gesucht werden, so muss dieser in AnfÃ¼hrungszeichen Ã¼bergeben werden.
+		Werden mehrere Begriffe angegeben, ordnet NumeRe die Ergebnisse der Suche absteigend nach ihrer Relevanz. Diese berechnet NumeRe aus der Zahl der Suchbegriffe, die mit dem Ergebnis Ã¼bereinstimmen, und einer zusÃ¤tzlichen, internen Gewichtung, welche bestimmt, wie gut die einzelnen Suchbegriffe jeweils mit dem Treffer Ã¼bereinstimmen.
 		<example desc="Suche der Begriffe 'cos hyp cosh':" type="verbatim">
 			|&lt;- find cos hyp cosh
 			[...]
