@@ -33,10 +33,10 @@
 			implot TABLE()
 			implot TABLE() -set ...
 		</syntax>
-		NumeRe kann Bilder durch das Kommando <code>imread</code> als Datensätze in Form eines <a href="nhlp://datagrid?frame=new">Datengitters</a> einlesen. Unterstützt werden dabei die gängigsten Bildformate: JPEG, BMP, GIF, TIFF, ... Das Bild wird eingelesen, indem das Kommando mit dem Dateinamen aufgerufen wird. Dabei werden die Indices des Bildes in der Zieltabelle zurückgegeben:<codeblock>{i1, i2, j1, j2} = imread PFAD/ZUR/DATEI.png</codeblock>
-		Sehr große Bilder können unter Umständen nicht im Speicher abgebildet werden. In diesem Fall kann es helfen, den kompletten Cache mit <code>clear -memory</code> zu löschen.
-		Standardmäßig wird das Bild im Cache <code>image()</code> abgelegt, der auch erzeugt wird, sofern er nicht bereits vorhanden ist. Mit der Option <code>target=CACHE()</code> kann auch ein anderer Cache als Ziel angegeben werden.
-		Bilder werden standardmäßig in Graustufen geladen. Andere Farbkanäle können mit der Option <code>channels=CHANNELS</code> als Zeichenkette angegeben werden. Dabei kann <code>CHANNELS</code> die Zeichen <code>"rgb"</code> in einer beliebigen Kombination enthalten. Es werden die entsprechenden Kanäle in dieser Reihenfolge geladen und nebeneinander in der Zieltabelle abgelegt.
+		NumeRe kann Bilder durch das Kommando <code>imread</code> als DatensÃ¤tze in Form eines <a href="nhlp://datagrid?frame=new">Datengitters</a> einlesen. UnterstÃ¼tzt werden dabei die gÃ¤ngigsten Bildformate: JPEG, BMP, GIF, TIFF, ... Das Bild wird eingelesen, indem das Kommando mit dem Dateinamen aufgerufen wird. Dabei werden die Indices des Bildes in der Zieltabelle zurÃ¼ckgegeben:<codeblock>{i1, i2, j1, j2} = imread PFAD/ZUR/DATEI.png</codeblock>
+		Sehr groÃŸe Bilder kÃ¶nnen unter UmstÃ¤nden nicht im Speicher abgebildet werden. In diesem Fall kann es helfen, den kompletten Cache mit <code>clear -memory</code> zu lÃ¶schen.
+		StandardmÃ¤ÃŸig wird das Bild im Cache <code>image()</code> abgelegt, der auch erzeugt wird, sofern er nicht bereits vorhanden ist. Mit der Option <code>target=CACHE()</code> kann auch ein anderer Cache als Ziel angegeben werden.
+		Bilder werden standardmÃ¤ÃŸig in Graustufen geladen. Andere FarbkanÃ¤le kÃ¶nnen mit der Option <code>channels=CHANNELS</code> als Zeichenkette angegeben werden. Dabei kann <code>CHANNELS</code> die Zeichen <code>"rgb"</code> in einer beliebigen Kombination enthalten. Es werden die entsprechenden KanÃ¤le in dieser Reihenfolge geladen und nebeneinander in der Zieltabelle abgelegt.
 		Mit dem Kommando <code>implot</code> kann ein Datensatz als Bild dargestellt werden, wobei ein Datenbereich von <expr>[0,255]</expr> angenommen wird:<codeblock>implot image() -set OPTIONEN</codeblock>Optionen zu diesem Kommando entsprechen den Optionen gelistet unter <a href="nhlp://dens?frame=new">help dens</a> und <a href="nhlp://plotoptions?frame=new">help plotoptions</a>.
 	</contents>
 </article>

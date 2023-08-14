@@ -29,9 +29,9 @@
 		<keyword>leave</keyword>
 	</keywords>
 	<contents>
-		Kontrollfluss-Statements sind logische Blöcke im Code, die zusammenhängende Segmente identifizieren. Dies können Schleifen wie <a href="nhlp://for?frame=new"><code>for...endfor</code></a> und <a href="nhlp://while?frame=new"><code>while...endwhile</code></a> oder Verzweigungen wie <a href="nhlp://if?frame=new"><code>if...elseif...else...endif</code></a> und <a href="nhlp://switch?frame=new"><code>switch...case...default...endswitch</code></a> sein. Aber auch die Fehlerbehandlung mittels <a href="nhlp://try?frame=new"><code>try...catch...endtry</code></a> zählt zu den Kontrollfluss-Statements.
-		Kontrollfluss-Statements setzen sich immer <em>mindestens</em> aus dem Startkommando (z.B. <code>switch</code>) und ihrem Endkommando (z.B. <code>endswitch</code>) zusammen. Nur vollständige Statements dieser Form werden ausgewertet.
-		Kontrollfluss-Statements können verwendet werden, um den enthaltenen Code mehrmals (Schleifen) oder bedingt (Verzweigungen) auszuführen. Dabei können Kontrollfluss-Statements auch beliebig oft ineinander verschachtelt verwendet werden, sofern sie sich nicht gegenseitig durchkreuzen. Verschachtelte Blöcke müssen komplett in ihrem Elternblock enthalten sein. Erlaubt ist z.B.
+		Kontrollfluss-Statements sind logische BlÃ¶cke im Code, die zusammenhÃ¤ngende Segmente identifizieren. Dies kÃ¶nnen Schleifen wie <a href="nhlp://for?frame=new"><code>for...endfor</code></a> und <a href="nhlp://while?frame=new"><code>while...endwhile</code></a> oder Verzweigungen wie <a href="nhlp://if?frame=new"><code>if...elseif...else...endif</code></a> und <a href="nhlp://switch?frame=new"><code>switch...case...default...endswitch</code></a> sein. Aber auch die Fehlerbehandlung mittels <a href="nhlp://try?frame=new"><code>try...catch...endtry</code></a> zÃ¤hlt zu den Kontrollfluss-Statements.
+		Kontrollfluss-Statements setzen sich immer <em>mindestens</em> aus dem Startkommando (z.B. <code>switch</code>) und ihrem Endkommando (z.B. <code>endswitch</code>) zusammen. Nur vollstÃ¤ndige Statements dieser Form werden ausgewertet.
+		Kontrollfluss-Statements kÃ¶nnen verwendet werden, um den enthaltenen Code mehrmals (Schleifen) oder bedingt (Verzweigungen) auszufÃ¼hren. Dabei kÃ¶nnen Kontrollfluss-Statements auch beliebig oft ineinander verschachtelt verwendet werden, sofern sie sich nicht gegenseitig durchkreuzen. Verschachtelte BlÃ¶cke mÃ¼ssen komplett in ihrem Elternblock enthalten sein. Erlaubt ist z.B.
 		<codeblock>
 			for (...)
 			\twhile (...)
@@ -47,15 +47,15 @@
 			\tendfor
 			endswitch
 		</codeblock>
-		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann wechselt die Konsole in einen speziellen Modus, der durch ein Schlüsselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen Ausdrücke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das äußerste Kontrollfluss-Statement vollständig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszuführen, kann das Kommando <code>abort</code> verwendet werden.
-		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block. Das Kommando <code>leave</code> wird hingegen stets alle ineinander verschachtelten Kontrollflussblöcke verlassen, so dass die Ausführung des Codes nach dem Ender des äußersten Blocks fortgesetzt werden kann.
-		Benötigt NumeRe zum Auswerten eines Kontrollfluss-Statements zu viel Zeit, kann die Ausführung mit der <code>ESC</code>-Taste oder der entsprechenden Funktion der Toolbar abgebrochen werden.
+		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann wechselt die Konsole in einen speziellen Modus, der durch ein SchlÃ¼sselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen AusdrÃ¼cke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das Ã¤uÃŸerste Kontrollfluss-Statement vollstÃ¤ndig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszufÃ¼hren, kann das Kommando <code>abort</code> verwendet werden.
+		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos fÃ¼r Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block. Das Kommando <code>leave</code> wird hingegen stets alle ineinander verschachtelten KontrollflussblÃ¶cke verlassen, so dass die AusfÃ¼hrung des Codes nach dem Ender des Ã¤uÃŸersten Blocks fortgesetzt werden kann.
+		BenÃ¶tigt NumeRe zum Auswerten eines Kontrollfluss-Statements zu viel Zeit, kann die AusfÃ¼hrung mit der <code>ESC</code>-Taste oder der entsprechenden Funktion der Toolbar abgebrochen werden.
 	</contents>
 </article>
 
 
 <article id="for_loop">
-	<title string="For-Schleifen (Zählschleifen)" idxkey="for" />
+	<title string="For-Schleifen (ZÃ¤hlschleifen)" idxkey="for" />
 	<keywords>
 		<keyword>endfor</keyword>
 		<keyword>for</keyword>
@@ -65,13 +65,13 @@
 		<keyword>sp</keyword>
 	</keywords>
 	<contents>
-		<code>for</code>-Schleifen sind <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statements</a> und führen dieselben <expr>N</expr> Ausdrücke wiederholt aus. Es gibt hierbei zwei Varianten dieses Konstruktes: die <em>indexbezogene</em> <code>for</code>-Schleife und die <em>bereichsbezogene</em> <code>for</code>-Schleife.
+		<code>for</code>-Schleifen sind <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statements</a> und fÃ¼hren dieselben <expr>N</expr> AusdrÃ¼cke wiederholt aus. Es gibt hierbei zwei Varianten dieses Konstruktes: die <em>indexbezogene</em> <code>for</code>-Schleife und die <em>bereichsbezogene</em> <code>for</code>-Schleife.
 		<h>Indexbezogene Schleifen</h>
-		Diese Variante verwendet einen <em>Schleifenindex</em>, der einen Schleifendurchlauf eindeutig identifiziert. Mit diesem Index kann wie mit normalen Variablen umgegangen werden, so dass der Index auch verwendet werden kann, um nicht nur das aktuelle sondern auch vorherige oder nachfolgende Elemente einer Menge zu adressieren. Wird der Index während des Durchlaufs modifiziert (z.B. inkrementiert), so wird das bei der Auswertung berücksichtigt und die Iterationen entsprechend angepasst (z.B. weniger Iterationen). Der Schleifenindex ist zusammen mit seinen Grenzen direkt im Anschluss an <code>for</code> in der folgenden Form zu deklarieren: <code>for (INDEX = I0:I1)</code>
-		Bei den Grenzen bezeichnet <code>I0</code> den initialen und <code>I1</code> den finalen Wert des Indexes. Die Werte für die Indices müssen ganze Zahlen sein. Sollte <expr>I0 &gt; I1</expr> gewählt werden, so wird NumeRe in dieser Schleife rückwärts zählen.
+		Diese Variante verwendet einen <em>Schleifenindex</em>, der einen Schleifendurchlauf eindeutig identifiziert. Mit diesem Index kann wie mit normalen Variablen umgegangen werden, so dass der Index auch verwendet werden kann, um nicht nur das aktuelle sondern auch vorherige oder nachfolgende Elemente einer Menge zu adressieren. Wird der Index wÃ¤hrend des Durchlaufs modifiziert (z.B. inkrementiert), so wird das bei der Auswertung berÃ¼cksichtigt und die Iterationen entsprechend angepasst (z.B. weniger Iterationen). Der Schleifenindex ist zusammen mit seinen Grenzen direkt im Anschluss an <code>for</code> in der folgenden Form zu deklarieren: <code>for (INDEX = I0:I1)</code>
+		Bei den Grenzen bezeichnet <code>I0</code> den initialen und <code>I1</code> den finalen Wert des Indexes. Die Werte fÃ¼r die Indices mÃ¼ssen ganze Zahlen sein. Sollte <expr>I0 &gt; I1</expr> gewÃ¤hlt werden, so wird NumeRe in dieser Schleife rÃ¼ckwÃ¤rts zÃ¤hlen.
 		<codeblock>
 			for (INDEX = I0:I1)
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			endfor
 		</codeblock>
 		<example desc="Indexbezogene <code>for</code>-Schleife, die das jeweils vorhergehende Element eines Clusters auf das aktuelle addiert:" type="verbatim">
@@ -80,31 +80,31 @@
 			|FOR&gt; endfor
 		</example>
 		<h>Bereichsbezogene Schleifen</h>
-		Bereichsbezogene <code>for</code>-Schleifen verwenden statt eines Schleifenindexes sogenannte <em>Iteratoren</em>. Diese Iteratoren enthalten während der Auswertung der <expr>n</expr>-ten Iteration eine Kopie des <expr>n</expr>-ten Wertes des zugrundeliegenden Bereichs. Um diese Schleifenform zu deklarieren, ist der Iterator mit seinem Bereich anzugeben (man beachte den <code>-&gt;</code> Operator): <code>for (ITERATOR -&gt; BEREICH)</code>
-		Ein Bereich kann dabei zum Beispiel der Inhalt eines <a href="nhlp://cluster?frame=new">Clusters</a> oder eine Spalte oder Zeile aus einer <a href="nhlp://table?frame=new">Tabelle</a> sein. Es ist auch möglich, über die Ergebnisse von Funktionen oder <a href="nhlp://procedure?frame=new">Prozeduren</a> mit mehreren Rückgabewerten zu iterieren.
+		Bereichsbezogene <code>for</code>-Schleifen verwenden statt eines Schleifenindexes sogenannte <em>Iteratoren</em>. Diese Iteratoren enthalten wÃ¤hrend der Auswertung der <expr>n</expr>-ten Iteration eine Kopie des <expr>n</expr>-ten Wertes des zugrundeliegenden Bereichs. Um diese Schleifenform zu deklarieren, ist der Iterator mit seinem Bereich anzugeben (man beachte den <code>-&gt;</code> Operator): <code>for (ITERATOR -&gt; BEREICH)</code>
+		Ein Bereich kann dabei zum Beispiel der Inhalt eines <a href="nhlp://cluster?frame=new">Clusters</a> oder eine Spalte oder Zeile aus einer <a href="nhlp://table?frame=new">Tabelle</a> sein. Es ist auch mÃ¶glich, Ã¼ber die Ergebnisse von Funktionen oder <a href="nhlp://procedure?frame=new">Prozeduren</a> mit mehreren RÃ¼ckgabewerten zu iterieren.
 		<codeblock>
 			for (ITERATOR -&gt; BEREICH)
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			endfor
 		</codeblock>
-		Diese Variante unterscheidet sich von der indexbezogenen Schleife dadurch, dass der Iterator kein Index sondern eine Kopie des tatsächlichen Wertes des derzeit iterierten Bereichs ist (also z.B. der <expr>n</expr>-te Wert in einem Cluster). Aufgrund dieser Tatsache kann in einem Schleifendurchlauf sich nicht auf vorherige oder folgende Durchläufe bezogen werden; jeder Durchlauf ist isoliert zu betrachten. Der Wert des Iterators kann trotzdem modifiziert werden, jedoch spiegelt sich dies nicht automatisch im iterierten Bereich wieder, da es sich eben um eine Kopie handelt.
-		Es ist auch möglich, mehrere Iteratoren für einen Bereich anzugeben. Dabei werden die Werte des Bereichs auf diese Iteratoren verteilt und die Zahl der Gesamtiterationen dementsprechend verringert. Im Zusammenhang mit Schlüssel-Wert-Listen können zwei Iteratoren verwendet werden, um den Schlüssel auf den ersten und den Wert auf den zweiten Iterator zu verteilen:<codeblock>for ({KEY, VALUE} -&gt; KEY_VALUE_LIST)</codeblock>
+		Diese Variante unterscheidet sich von der indexbezogenen Schleife dadurch, dass der Iterator kein Index sondern eine Kopie des tatsÃ¤chlichen Wertes des derzeit iterierten Bereichs ist (also z.B. der <expr>n</expr>-te Wert in einem Cluster). Aufgrund dieser Tatsache kann in einem Schleifendurchlauf sich nicht auf vorherige oder folgende DurchlÃ¤ufe bezogen werden; jeder Durchlauf ist isoliert zu betrachten. Der Wert des Iterators kann trotzdem modifiziert werden, jedoch spiegelt sich dies nicht automatisch im iterierten Bereich wieder, da es sich eben um eine Kopie handelt.
+		Es ist auch mÃ¶glich, mehrere Iteratoren fÃ¼r einen Bereich anzugeben. Dabei werden die Werte des Bereichs auf diese Iteratoren verteilt und die Zahl der Gesamtiterationen dementsprechend verringert. Im Zusammenhang mit SchlÃ¼ssel-Wert-Listen kÃ¶nnen zwei Iteratoren verwendet werden, um den SchlÃ¼ssel auf den ersten und den Wert auf den zweiten Iterator zu verteilen:<codeblock>for ({KEY, VALUE} -&gt; KEY_VALUE_LIST)</codeblock>
 		<example desc="Bereichsbezogene <code>for</code>-Schleife, die jede Datei in einem der Standardpfade auflistet:" type="verbatim">
 			|&lt;- for (sFile -&gt; getfilelist("&LOADPATH&"))
 			|FOR&gt; print sFile
 			|FOR&gt; endfor
 		</example>
 		<h>Parameter</h>
-		Es können beim Schließen einer (egal, welcher) Schleife folgende Parameter mit übergeben werden:
+		Es kÃ¶nnen beim SchlieÃŸen einer (egal, welcher) Schleife folgende Parameter mit Ã¼bergeben werden:
 		<list>
-			<item node="mask">Unterdrückt die Fortschrittsanzeige. Dies kann auch standardmäßig in den Einstellungen aktiviert werden</item>
-			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
+			<item node="mask">UnterdrÃ¼ckt die Fortschrittsanzeige. Dies kann auch standardmÃ¤ÃŸig in den Einstellungen aktiviert werden</item>
+			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmÃ¤ÃŸig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle Ã¼ber die ZÃ¤hlschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der ZÃ¤hlschleife ist) stehen kÃ¶nnen und von dort Einfluss auf die Auswertung nehmen:
 		<list>
-			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste ist, wird die Auswertung nach dieser Schleife forgesetzt</item>
-			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
+			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) Ã¤uÃŸere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das Ã¤uÃŸerste ist, wird die Auswertung nach dieser Schleife forgesetzt</item>
+			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fÃ¤hrt sofort mit dem nÃ¤chsten Durchlauf fort</item>
 		</list>
 		<em>Siehe auch:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> und <a href="nhlp://try?frame=self">help try</a>
 	</contents>
@@ -121,22 +121,22 @@
 		<keyword>if</keyword>
 	</keywords>
 	<contents>
-		Mit dem <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> <code>if (COND)</code> wird in NumeRe die Auswertung einer Verzweigung (<code>if...elseif...else...endif</code>) gestartet. Dabei steht <code>COND</code> für einen logischen Ausdruck, der vor dem weiteren Ablauf der Verzweigung ausgewertet wird. Eine Verzweigung besteht mindestens aus einem <code>if</code> und einem <code>endif</code>. Dazwischen können beliebig viele <code>elseif</code> sowie ein <code>else</code> (nur in dieser Reihenfolge) verwendet werden.
-		NumeRe wird in einer IF-Verzweigung nur den Teil auswerten, dessen Bedingung erfüllt wird. Falls <code>if</code> zu <code>false</code> evaluiert wird, werden nacheinander alle weiteren auftretenden <code>elseif</code> Bedingungen der Reihe nach geprüft. Der ELSE-Zweig wird ausgeführt, wenn der IF- und alle zuvor aufgetretenen ELSEIF-Zweige zu <code>false</code> evaluiert wurden.
+		Mit dem <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> <code>if (COND)</code> wird in NumeRe die Auswertung einer Verzweigung (<code>if...elseif...else...endif</code>) gestartet. Dabei steht <code>COND</code> fÃ¼r einen logischen Ausdruck, der vor dem weiteren Ablauf der Verzweigung ausgewertet wird. Eine Verzweigung besteht mindestens aus einem <code>if</code> und einem <code>endif</code>. Dazwischen kÃ¶nnen beliebig viele <code>elseif</code> sowie ein <code>else</code> (nur in dieser Reihenfolge) verwendet werden.
+		NumeRe wird in einer IF-Verzweigung nur den Teil auswerten, dessen Bedingung erfÃ¼llt wird. Falls <code>if</code> zu <code>false</code> evaluiert wird, werden nacheinander alle weiteren auftretenden <code>elseif</code> Bedingungen der Reihe nach geprÃ¼ft. Der ELSE-Zweig wird ausgefÃ¼hrt, wenn der IF- und alle zuvor aufgetretenen ELSEIF-Zweige zu <code>false</code> evaluiert wurden.
 		<codeblock>
 			if (COND1)
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			elseif (COND2)
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			[...]
 			else
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			endif
 		</codeblock>
-		Eine ähnliche Funktionalität stellt die <a href="nhlp://switch?frame=self">Auswahl-Verzweigung</a> dar.
-		Eine Verzweigung muss weder einen ELSE-Zweig noch einen ELSEIF-Zweig besitzen. Sollte die Bedingung für den IF-Zweig nicht erfüllt werden, wird in diesem Fall einfach kein Ausdruck in der Verzweigung ausgewertet.
-		Mit <code>if (TABLE())</code> kann geprüft werden, ob Daten in der Tabelle <code>TABLE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die möglicherweise eine leere Tabelle benötigen. <em>Vorsicht:</em> wenn <code>TABLE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
-		IF-Bedingungen innerhalb von Schleifen können durch die Kommandos <code>break</code> und <code>continue</code> Einfluss auf ihre aufrufende Schleife nehmen (Siehe <a href="nhlp://for?frame=new">help for</a> und <a href="nhlp://while?frame=new">help while</a> für Infos zu diesen Kommandos). Diese Kommandos haben innerhalb einer IF-Bedingung dieselbe Wirkung wie <code>endif</code> (brechen also die Auswertung der aktuellen Bedingung an dieser Stelle ab) und werden so lange an das umgegebende Kontrollfluss-Statement weitergereicht, bis dies entweder eine Schleife ist oder das letzte Statement verlassen wurde, so dass der gesamte Block abgebrochen wird.
+		Eine Ã¤hnliche FunktionalitÃ¤t stellt die <a href="nhlp://switch?frame=self">Auswahl-Verzweigung</a> dar.
+		Eine Verzweigung muss weder einen ELSE-Zweig noch einen ELSEIF-Zweig besitzen. Sollte die Bedingung fÃ¼r den IF-Zweig nicht erfÃ¼llt werden, wird in diesem Fall einfach kein Ausdruck in der Verzweigung ausgewertet.
+		Mit <code>if (TABLE())</code> kann geprÃ¼ft werden, ob Daten in der Tabelle <code>TABLE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die mÃ¶glicherweise eine leere Tabelle benÃ¶tigen. <em>Vorsicht:</em> wenn <code>TABLE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
+		IF-Bedingungen innerhalb von Schleifen kÃ¶nnen durch die Kommandos <code>break</code> und <code>continue</code> Einfluss auf ihre aufrufende Schleife nehmen (Siehe <a href="nhlp://for?frame=new">help for</a> und <a href="nhlp://while?frame=new">help while</a> fÃ¼r Infos zu diesen Kommandos). Diese Kommandos haben innerhalb einer IF-Bedingung dieselbe Wirkung wie <code>endif</code> (brechen also die Auswertung der aktuellen Bedingung an dieser Stelle ab) und werden so lange an das umgegebende Kontrollfluss-Statement weitergereicht, bis dies entweder eine Schleife ist oder das letzte Statement verlassen wurde, so dass der gesamte Block abgebrochen wird.
 		<example desc="Eine einfache Verzweigung, welche die max()-Funktion simuliert:" type="verbatim">
 			|&lt;- if (a &gt; b)
 			|IF-&gt; ans = a
@@ -157,21 +157,21 @@
 		<keyword>lnumctrl</keyword>
 	</keywords>
 	<contents>
-		Ähnlich wie eine <code>for</code>-Schleife ist eine <code>while</code>-Schleife auch ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und arbeitet dieselben <expr>N</expr> Ausdrücke wiederholt ab. Der zentrale Unterschied ist jedoch, dass eine <code>while</code>-Schleife keinen Zählindex benötigt und dementsprechend keine vorgegebene Anzahl an Durchläufen besitzt. Der Abbruch einer <code>while</code>-Schleife wird entweder direkt durch die bei der Deklaration angegebene Bedingung oder durch ein zusätzliches <code>break</code> in einem Teil der Schleife bestimmt.
-		Die Deklaration einer <code>while</code>-Schleife benötigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrücke\nendwhile</codeblock>Die BEDINGUNG wird zu Beginn eines jeden Schleifendurchlaufes überprüft und, falls die BEDINGUNG den logischen Wert WAHR hat, die Schleife fortgesetzt, oder, falls sie FALSCH ist, an dieser Stelle verlassen.
-		Es können beim Schließen einer (egal, welcher) Schleife folgende Parameter mit übergeben werden:
+		Ã„hnlich wie eine <code>for</code>-Schleife ist eine <code>while</code>-Schleife auch ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und arbeitet dieselben <expr>N</expr> AusdrÃ¼cke wiederholt ab. Der zentrale Unterschied ist jedoch, dass eine <code>while</code>-Schleife keinen ZÃ¤hlindex benÃ¶tigt und dementsprechend keine vorgegebene Anzahl an DurchlÃ¤ufen besitzt. Der Abbruch einer <code>while</code>-Schleife wird entweder direkt durch die bei der Deklaration angegebene Bedingung oder durch ein zusÃ¤tzliches <code>break</code> in einem Teil der Schleife bestimmt.
+		Die Deklaration einer <code>while</code>-Schleife benÃ¶tigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrÃ¼cke\nendwhile</codeblock>Die BEDINGUNG wird zu Beginn eines jeden Schleifendurchlaufes Ã¼berprÃ¼ft und, falls die BEDINGUNG den logischen Wert WAHR hat, die Schleife fortgesetzt, oder, falls sie FALSCH ist, an dieser Stelle verlassen.
+		Es kÃ¶nnen beim SchlieÃŸen einer (egal, welcher) Schleife folgende Parameter mit Ã¼bergeben werden:
 		<list>
 			<item node="sv">Zeigt alle Schritte der Auswertung an (<em>Dieser Parameter ist veraltet.</em>)</item>
-			<item node="mask">Unterdrückt die Fortschrittsanzeige. Dies kann auch standardmäßig in den Einstellungen aktiviert werden</item>
-			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
+			<item node="mask">UnterdrÃ¼ckt die Fortschrittsanzeige. Dies kann auch standardmÃ¤ÃŸig in den Einstellungen aktiviert werden</item>
+			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmÃ¤ÃŸig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die <code>while</code>-Schleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der <code>while</code>-Schleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle Ã¼ber die <code>while</code>-Schleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der <code>while</code>-Schleife ist) stehen kÃ¶nnen und von dort Einfluss auf die Auswertung nehmen:
 		<list>
-			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste Statement ist, wird die Auswertung nach dieser Schleife fortgesetzt</item>
-			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
+			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) Ã¤uÃŸere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das Ã¤uÃŸerste Statement ist, wird die Auswertung nach dieser Schleife fortgesetzt</item>
+			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fÃ¤hrt sofort mit dem nÃ¤chsten Durchlauf fort</item>
 		</list>
-		<example desc="Eine <code>while</code>-Schleife, die so lange ausgeführt wird, bis der Dateiname zu einem ladbaren Datensatz eingegeben wurde:" type="verbatim">
+		<example desc="Eine <code>while</code>-Schleife, die so lange ausgefÃ¼hrt wird, bis der Dateiname zu einem ladbaren Datensatz eingegeben wurde:" type="verbatim">
 			|&lt;- while (!data())
 			|WHL&gt; load ??
 			|WHL&gt; endwhile
@@ -190,24 +190,24 @@
 		<keyword>endswitch</keyword>
 	</keywords>
 	<contents>
-		Eine Auswahl-Verzweigung ist ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und besteht aus mindestens drei Kommandos: <code>switch (EX)</code>, <code>case VAL:</code> und <code>endswitch</code>. Es können beliebig viele <code>case</code> Statements verwendet werden. Zusätzlich kann noch <code>default:</code> nach dem letzten <code>case</code> verwendet werden, um den "Sonst-Fall" abzudecken. <code>EX</code> ist ein auswertbarer Ausdruck, der entweder einen numerischen Wert oder eine Zeichenkette zurückgibt. <code>VAL</code> sind ebenfalls numerische Werte oder Zeichenketten.
-		NumeRe wird den Ausdruck <code>EX</code> auswerten und mit den <code>VAL</code> der <code>case</code> Statements vergleichen und in den ersten <code>case</code>, dessen Wert mit dem Ergebnis von <code>EX</code> übereinstimmt, springen. Stimmt keiner überein, wird der optionale <code>default</code> Block verwendet. Danach wird NumeRe alle folgenden Ausdrücke auswerten (auch die der folgenden <code>case</code> und <code>default</code> Statements), bis es entweder das Ende der Auswahl-Verzweigung erreicht oder auf das Kommando <code>break</code> trifft.
+		Eine Auswahl-Verzweigung ist ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und besteht aus mindestens drei Kommandos: <code>switch (EX)</code>, <code>case VAL:</code> und <code>endswitch</code>. Es kÃ¶nnen beliebig viele <code>case</code> Statements verwendet werden. ZusÃ¤tzlich kann noch <code>default:</code> nach dem letzten <code>case</code> verwendet werden, um den "Sonst-Fall" abzudecken. <code>EX</code> ist ein auswertbarer Ausdruck, der entweder einen numerischen Wert oder eine Zeichenkette zurÃ¼ckgibt. <code>VAL</code> sind ebenfalls numerische Werte oder Zeichenketten.
+		NumeRe wird den Ausdruck <code>EX</code> auswerten und mit den <code>VAL</code> der <code>case</code> Statements vergleichen und in den ersten <code>case</code>, dessen Wert mit dem Ergebnis von <code>EX</code> Ã¼bereinstimmt, springen. Stimmt keiner Ã¼berein, wird der optionale <code>default</code> Block verwendet. Danach wird NumeRe alle folgenden AusdrÃ¼cke auswerten (auch die der folgenden <code>case</code> und <code>default</code> Statements), bis es entweder das Ende der Auswahl-Verzweigung erreicht oder auf das Kommando <code>break</code> trifft.
 		<codeblock>
 			switch (EX)
 			case VAL1:
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			\t[break]
 			case VAL2:
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			\t[break]
 			[...]
 			default:
-			\tAusdrücke
+			\tAusdrÃ¼cke
 			endswitch
 		</codeblock>
 		Eine Auswahl-Verzweigung muss mindestens ein <code>case</code> Statement enthalten. Weitere <code>case</code> oder <code>default</code> Statements sind optional.
 		Es muss beachtet werden, dass das Kommando <code>break</code> <em>nicht</em> an umfassende Schleifen weitergereicht wird, da es in <code>switch</code> selbst ausgewertet wird. Das Kommando <code>continue</code> wird normal weitergereicht.
-		Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen ähnliche Funktionalitäten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung für die Auswahl des korrekten Falls konstant. Die Ordnung der Fälle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benötigt <code>if</code> für jeden <code>elseif</code>, der als FALSCH ausgewertet wird, linear mehr Zeit.
+		Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen Ã¤hnliche FunktionalitÃ¤ten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung fÃ¼r die Auswahl des korrekten Falls konstant. Die Ordnung der FÃ¤lle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benÃ¶tigt <code>if</code> fÃ¼r jeden <code>elseif</code>, der als FALSCH ausgewertet wird, linear mehr Zeit.
 		<example desc="Eine Auswahl-Verzweigung, die nach Arbeitstagen und Wochenende selektiert:" type="codeblock">
 			switch (x)
 			case 1:
@@ -241,7 +241,7 @@
 		<keyword>thrown</keyword>
 	</keywords>
 	<contents>
-		Die Fehlerbehandlung mittels <code>try...catch...endtry</code> ist ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und kann verwendet werden, um unerwartete Probleme bereits während der Laufzeit zu beheben, ohne einen kompletten Abbruch in Kauf nehmen zu müssen. Die Syntax ist dabei wie folgt
+		Die Fehlerbehandlung mittels <code>try...catch...endtry</code> ist ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und kann verwendet werden, um unerwartete Probleme bereits wÃ¤hrend der Laufzeit zu beheben, ohne einen kompletten Abbruch in Kauf nehmen zu mÃ¼ssen. Die Syntax ist dabei wie folgt
 		<codeblock>
 			try
 			\tUNSICHERER CODE
@@ -249,15 +249,15 @@
 			\tFEHLERBEHANDLUNG
 			endtry
 		</codeblock>
-		Eine Fehlerbehandlung kann in diesem Kontext beispielsweise das Löschen von Dateien, das Schreiben einer Logging-Nachricht oder das erneute Öffnen von <a href="nhlp://window?frame=new">Fenstern</a> sein.
+		Eine Fehlerbehandlung kann in diesem Kontext beispielsweise das LÃ¶schen von Dateien, das Schreiben einer Logging-Nachricht oder das erneute Ã–ffnen von <a href="nhlp://window?frame=new">Fenstern</a> sein.
 		Das <code>catch</code> Statement kann mehrmals mit verschiedenen Fehlertypen verwendet werden. Als Fehlertypen gibt es vier wesentliche:
 		<list>
-			<item node="expression">Fehler in mathematischen Ausdrücken</item>
+			<item node="expression">Fehler in mathematischen AusdrÃ¼cken</item>
 			<item node="thrown">Fehler, die von einem Benutzer manuell mittels <a href="nhlp://throw?frame=new"><code>throw</code></a> erzeugt werden</item>
-			<item node="assertion">Fehlgeschlagene Überprüfungen (werden durch ein fehlgeschlagenes <code>assert</code> verursacht)</item>
-			<item node="error">Alle anderen Fehler, die bei der Benutzung von NumeRe auftreten können</item>
+			<item node="assertion">Fehlgeschlagene ÃœberprÃ¼fungen (werden durch ein fehlgeschlagenes <code>assert</code> verursacht)</item>
+			<item node="error">Alle anderen Fehler, die bei der Benutzung von NumeRe auftreten kÃ¶nnen</item>
 		</list>
-		Besonders kritische Fehler können nicht von <code>catch</code> gefangen werden. Sie führen immer zu einem Abbruch. Fehlt der Fehlertyp hingegen völlig (d.h. <code>catch:</code>), dann werden einfach alle nicht bereits verarbeiteten Fehler in diesem Block gefangen:
+		Besonders kritische Fehler kÃ¶nnen nicht von <code>catch</code> gefangen werden. Sie fÃ¼hren immer zu einem Abbruch. Fehlt der Fehlertyp hingegen vÃ¶llig (d.h. <code>catch:</code>), dann werden einfach alle nicht bereits verarbeiteten Fehler in diesem Block gefangen:
 		<codeblock>
 			[...]
 			catch expression:
@@ -266,9 +266,9 @@
 			\t## Alle anderen Fehler
 			endtry
 		</codeblock>
-		Um auf den Fehlertyp und die Nachricht zuzugreifen kann die Funktion <code>getlasterror()</code> verwendet werden. Diese gibt <code>{Typ, Nachricht}</code> des letzten in einem <code>catch</code> Statement behandelten Fehler als Vektor zurück.
-		Ist die Fehlerbehandlung abgeschlossen, wird der Code einfach nach <code>endtry</code> fortgesetzt. Treten stattdessen weitere Fehler in einem <code>catch</code> Statement auf, führt das zu einen Abbruch (bzw. weiterreichen an einen umgebenden <code>try...catch</code> Block). Soll der aktuelle Fehler an einen umgebenden Block weitergereicht werden, kann das Kommando <code>rethrow</code> (ohne weitere Argumente oder Ausdrücke) verwendet werden.
-		<em>Hinweis:</em> Fehlerbehandlung ist stets eine ineffiziente Form der Programmierung. Gibt es eine Lösung mit regulären Kontrollfluss-Statements, so sollte diese bevorzugt verwendet werden.
+		Um auf den Fehlertyp und die Nachricht zuzugreifen kann die Funktion <code>getlasterror()</code> verwendet werden. Diese gibt <code>{Typ, Nachricht}</code> des letzten in einem <code>catch</code> Statement behandelten Fehler als Vektor zurÃ¼ck.
+		Ist die Fehlerbehandlung abgeschlossen, wird der Code einfach nach <code>endtry</code> fortgesetzt. Treten stattdessen weitere Fehler in einem <code>catch</code> Statement auf, fÃ¼hrt das zu einen Abbruch (bzw. weiterreichen an einen umgebenden <code>try...catch</code> Block). Soll der aktuelle Fehler an einen umgebenden Block weitergereicht werden, kann das Kommando <code>rethrow</code> (ohne weitere Argumente oder AusdrÃ¼cke) verwendet werden.
+		<em>Hinweis:</em> Fehlerbehandlung ist stets eine ineffiziente Form der Programmierung. Gibt es eine LÃ¶sung mit regulÃ¤ren Kontrollfluss-Statements, so sollte diese bevorzugt verwendet werden.
 		<em>Siehe auch:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> und <a href="nhlp://for?frame=self">help for</a>
 	</contents>
 </article>

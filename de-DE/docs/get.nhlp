@@ -24,10 +24,10 @@
 		<keyword>asval</keyword>
 	</keywords>
 	<contents>
-		Das NumeRe-Kommando <code>get</code> kann genutzt werden, um eine aktuelle Einstellung von NumeRe abzufragen. Dazu ist einer der unten gelisteten Parameter notwendig. Außerdem können noch die Optionen <code>asstr</code> und <code>asval</code> übergeben werden. Dabei gibt <code>asstr</code> den Wert der Einstellung als eine auswertbare Zeichenkette, <code>asval</code> ggf. (nur, wenn die Einstellung einen numerischen Wert besitzt) als ein auswertbaren, numerischen Wert zurück.
+		Das NumeRe-Kommando <code>get</code> kann genutzt werden, um eine aktuelle Einstellung von NumeRe abzufragen. Dazu ist einer der unten gelisteten Parameter notwendig. AuÃŸerdem kÃ¶nnen noch die Optionen <code>asstr</code> und <code>asval</code> Ã¼bergeben werden. Dabei gibt <code>asstr</code> den Wert der Einstellung als eine auswertbare Zeichenkette, <code>asval</code> ggf. (nur, wenn die Einstellung einen numerischen Wert besitzt) als ein auswertbaren, numerischen Wert zurÃ¼ck.
 		<list>
 			<item node="autosave">Speicherintervall abfragen</item>
-			<item node="buffersize">Einstellung der Buffergröße abfragen</item>
+			<item node="buffersize">Einstellung der BuffergrÃ¶ÃŸe abfragen</item>
 			<item node="compact">Tabellendarstellung abfragen</item>
 			<item node="debugger">Status des NumeRe-Debuggers abfragen</item>
 			<item node="defcontrol">Einstellung zum automatischen Laden/Speichern der definierten Funktionen abfragen</item>
@@ -35,7 +35,7 @@
 			<item node="exepath">Den Pfad zur Anwendung abfragen</item>
 			<item node="extendedfileinfo">Einstellung zu den erweiterten Dateiinformationen abfragen</item>
 			<item node="externaldocwindow">Einstellung zum Anzeigen der NumeRe-Hilfe in einem externen Fenster abfragen</item>
-			<item node="greeting">Einstellung zur Begrüßung abfragen</item>
+			<item node="greeting">Einstellung zur BegrÃ¼ÃŸung abfragen</item>
 			<item node="hints">Einstellung zum Tip-des-Tages abfragen</item>
 			<item node="loademptycols">Einstellung zum Laden leerer Spalten abfragen</item>
 			<item node="loadpath">Aktueller Importordner</item>
@@ -44,7 +44,7 @@
 			<item node="plotfont">Standard-Plotschriftart lesen</item>
 			<item node="plotparams">Aktuelle Plotparameter abfragen</item>
 			<item node="plotpath">Aktueller Plot-Speicherordner</item>
-			<item node="precision">Aktuelle Präzision</item>
+			<item node="precision">Aktuelle PrÃ¤zision</item>
 			<item node="procpath">Aktueller Prozeduren-Speicherordner</item>
 			<item node="savepath">Aktueller Speicherordner</item>
 			<item node="scriptpath">Aktuellen Script-Ordner abfragen</item>
@@ -52,7 +52,7 @@
 			<item node="usecustomlang">Einstellung zur Verwendung einer benutzerdefinierten Sprache abfragen</item>
 			<item node="useescinscripts">Einstellung zur Verwendung der <code>ESC</code>-Taste in Scripts abfragen</item>
 			<item node="varlist">Alle deklarierten numerischen und Zeichenkettenvariablen in einer gemeinsamen Liste abrufen</item>
-			<item node="windowsize">Einstellung der Fenstergröße abfragen</item>
+			<item node="windowsize">Einstellung der FenstergrÃ¶ÃŸe abfragen</item>
 			<item node="workpath">Das aktuelle Arbeitsverzeichnis abfragen</item>
 		</list>
 		<example desc="Lesen des Standard-Scriptpfades:">

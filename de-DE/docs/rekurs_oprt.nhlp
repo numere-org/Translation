@@ -28,16 +28,16 @@
 		<keyword>recurs</keyword>
 	</keywords>
 	<contents>
-		Mathematische oder Zeichenketten-Operationen benötigen einen definierten Satz an Operationen, die durch die unten aufgelisteten Operatoren repräsentiert werden. Dabei können viele Operationen sowohl mit numerischen Werten als auch mit Zeichenketten durchgeführt werden. Einige Operationen sind auch rekursiv verfügbar.
-		NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code> und <code>**=</code>. Diese Operatoren sind Abkürzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog für die anderen Operatoren.
-		Speziell ist auch der Vektorinitialisierer in seinen beiden Formen: <code>{A : B}</code> und <code>{A : C : B}</code>. Diese Operatoren generieren einen Vektor, der sich aus einer Expansion der Elemente von <code>A</code> bis <code>B</code> ergibt. Dabei ist<codeblock>{A : B} = {A, A+1, A+2, ..., A+n, (B)}\n{A : C : B} = {A, A+C, A+2C, ..., A+nC, (B)}</codeblock><code>B</code> ist die Grenze der Inkrementierung. Wenn <code>B</code> durch die Operation nicht erreicht werden kann, wird es nicht in den Vektor übernommen, sondern nur das letzte Element davor. <code>B</code> kann auch kleiner als <code>A</code> sein. Dann wird im ersteren Fall automatisch dekrementiert. Es können auch mehrere Expansionen und einfache Vektoren durch Komma kombiniert werden:<codeblock>{a, b, A : B, c, C : E : D, ...} = {a, b, A, A+1, ..., (B), c, C, C+E, ..., (D), ...}</codeblock>
-		Die folgenden Operatoren sind verfügbar:
+		Mathematische oder Zeichenketten-Operationen benÃ¶tigen einen definierten Satz an Operationen, die durch die unten aufgelisteten Operatoren reprÃ¤sentiert werden. Dabei kÃ¶nnen viele Operationen sowohl mit numerischen Werten als auch mit Zeichenketten durchgefÃ¼hrt werden. Einige Operationen sind auch rekursiv verfÃ¼gbar.
+		NumeRe kann mit den folgenden rekursiven Operatoren umgehen: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code> und <code>**=</code>. Diese Operatoren sind AbkÃ¼rzungen der Form:<codeblock>VAR += AUSDRUCK &lt;=&gt; VAR = VAR + (AUSDRUCK)</codeblock>und analog fÃ¼r die anderen Operatoren.
+		Speziell ist auch der Vektorinitialisierer in seinen beiden Formen: <code>{A : B}</code> und <code>{A : C : B}</code>. Diese Operatoren generieren einen Vektor, der sich aus einer Expansion der Elemente von <code>A</code> bis <code>B</code> ergibt. Dabei ist<codeblock>{A : B} = {A, A+1, A+2, ..., A+n, (B)}\n{A : C : B} = {A, A+C, A+2C, ..., A+nC, (B)}</codeblock><code>B</code> ist die Grenze der Inkrementierung. Wenn <code>B</code> durch die Operation nicht erreicht werden kann, wird es nicht in den Vektor Ã¼bernommen, sondern nur das letzte Element davor. <code>B</code> kann auch kleiner als <code>A</code> sein. Dann wird im ersteren Fall automatisch dekrementiert. Es kÃ¶nnen auch mehrere Expansionen und einfache Vektoren durch Komma kombiniert werden:<codeblock>{a, b, A : B, c, C : E : D, ...} = {a, b, A, A+1, ..., (B), c, C, C+E, ..., (D), ...}</codeblock>
+		Die folgenden Operatoren sind verfÃ¼gbar:
 		<table>
 			<tr>
 				<td><em>Operation</em></td><td><em>Operatorsymbol</em></td><td><em>Rekursiv</em></td><td><em>numerisch</em></td><td><em>Zeichenkette</em></td>
 			</tr>
 			<tr>
-				<td>Addition/Verknüpfung</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
+				<td>Addition/VerknÃ¼pfung</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
 				<td>Subtraktion</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>X</td><td></td>
@@ -61,10 +61,10 @@
 				<td>Zuweisung</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
-				<td>Fakultät</td><td><code>A!</code></td><td></td><td>X</td><td></td>
+				<td>FakultÃ¤t</td><td><code>A!</code></td><td></td><td>X</td><td></td>
 			</tr>
 			<tr>
-				<td>Doppelfakultät</td><td><code>A!!</code></td><td></td><td>X</td><td></td>
+				<td>DoppelfakultÃ¤t</td><td><code>A!!</code></td><td></td><td>X</td><td></td>
 			</tr>
 			<tr>
 				<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
@@ -79,10 +79,10 @@
 				<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>X</td><td></td>
 			</tr>
 			<tr>
-				<td>Binäres UND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
+				<td>BinÃ¤res UND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
 			</tr>
 			<tr>
-				<td>Binäres ODER</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
+				<td>BinÃ¤res ODER</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
 			</tr>
 			<tr>
 				<td>Gleich</td><td><code>A == B</code></td><td></td><td>X</td><td>X</td>
@@ -94,13 +94,13 @@
 				<td>Kleiner als</td><td><code>A &lt; B</code></td><td></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
-				<td>Größer als</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
+				<td>GrÃ¶ÃŸer als</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
 				<td>Kleiner oder gleich</td><td><code>A &lt;= B</code></td><td></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
-				<td>Größer oder gleich</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
+				<td>GrÃ¶ÃŸer oder gleich</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
 			</tr>
 			<tr>
 				<td>Intervall</td><td><code>A : B</code></td><td></td><td>X</td><td></td>

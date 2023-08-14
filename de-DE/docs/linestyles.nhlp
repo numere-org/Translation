@@ -27,9 +27,9 @@
 		<keyword>punktst</keyword>
 	</keywords>
 	<contents>
-		Die Linien und Punkte, die in den Zeichnungsmodi <code>draw</code> und <code>draw3d</code> und den Plotmodi <code>plot</code> und <code>plot3d</code> verwendet werden, können in ihrem Erscheinungsbild mit dem STL-Argument der Zeichnungsfunktionen bzw. der <code>linestyles=STYLE</code>- und der <code>pointstyles=STYLE</code>-Optionen beeinflusst werden. Dabei werden für die Farben die Kürzel aus <a href="nhlp://colors?frame=new">help colors</a> verwendet; für die Linienenden und -stile die hier aufgelisteten.
-		Bei Plots und der <code>pointstyles</code>-Option ist zu beachten, dass für jede Datenreihe bis zu ZWEI Zeichen verwendet werden. Dabei ist das zweite Zeichen nur relevant, wenn das erste eine Raute <code>#</code> ist (s.u.). Die Punktformen werden bei dieser Option zeichenweise interpretiert und nur, wenn <code>#</code> gefunden wird, wird auch das folgende Zeichen zur aktuellen Punktform hinzugenommen.
-		Wenn bei <code>pointstyles</code> oder <code>linestyles</code> ein Leerzeichen statt eines der hier gelisteten Zeichen verwendet wird, wird der voreingestellte Stil des betreffenden Plotelements nicht geändert. Auf diese Art kann z.B. der Stil des zweiten Plotelements geändert und der Stil des ersten zugleich beibehalten werden.
+		Die Linien und Punkte, die in den Zeichnungsmodi <code>draw</code> und <code>draw3d</code> und den Plotmodi <code>plot</code> und <code>plot3d</code> verwendet werden, kÃ¶nnen in ihrem Erscheinungsbild mit dem STL-Argument der Zeichnungsfunktionen bzw. der <code>linestyles=STYLE</code>- und der <code>pointstyles=STYLE</code>-Optionen beeinflusst werden. Dabei werden fÃ¼r die Farben die KÃ¼rzel aus <a href="nhlp://colors?frame=new">help colors</a> verwendet; fÃ¼r die Linienenden und -stile die hier aufgelisteten.
+		Bei Plots und der <code>pointstyles</code>-Option ist zu beachten, dass fÃ¼r jede Datenreihe bis zu ZWEI Zeichen verwendet werden. Dabei ist das zweite Zeichen nur relevant, wenn das erste eine Raute <code>#</code> ist (s.u.). Die Punktformen werden bei dieser Option zeichenweise interpretiert und nur, wenn <code>#</code> gefunden wird, wird auch das folgende Zeichen zur aktuellen Punktform hinzugenommen.
+		Wenn bei <code>pointstyles</code> oder <code>linestyles</code> ein Leerzeichen statt eines der hier gelisteten Zeichen verwendet wird, wird der voreingestellte Stil des betreffenden Plotelements nicht geÃ¤ndert. Auf diese Art kann z.B. der Stil des zweiten Plotelements geÃ¤ndert und der Stil des ersten zugleich beibehalten werden.
 		Die Linienenden werden durch die folgenden Zeichen bestimmt:
 		<list>
 			<item node="A">Pfeilspitze</item>
@@ -67,8 +67,8 @@
 			<item node="<">Dreieck (links)</item>
 			<item node=">">Dreieck (rechts)</item>
 		</list>
-		Punktformen können mit der zusätzlichen Raute <code>#</code> versehen werden, um ein gefülltes oder umschlossenes Symbol zu erhalten; z.B. ergibt <code>#x</code> ein mit quadratischem Rahmen umfasstes diagonales Kreuz oder <code>#s</code> ein gefülltes Quadrat.
-		<example desc="Setzen der Punktstile eines Plots (zwei mal Punkte und zwei mal gefüllte Rhomben):">
+		Punktformen kÃ¶nnen mit der zusÃ¤tzlichen Raute <code>#</code> versehen werden, um ein gefÃ¼lltes oder umschlossenes Symbol zu erhalten; z.B. ergibt <code>#x</code> ein mit quadratischem Rahmen umfasstes diagonales Kreuz oder <code>#s</code> ein gefÃ¼lltes Quadrat.
+		<example desc="Setzen der Punktstile eines Plots (zwei mal Punkte und zwei mal gefÃ¼llte Rhomben):">
 			plot [...] -set pointstyles="..#d#d"
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://plotoptions?frame=self">help plotoptions</a> und <a href="nhlp://colors?frame=self">help colors</a>
