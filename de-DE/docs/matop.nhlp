@@ -31,10 +31,10 @@
 			matop TABLE() = EXPR(TABLE(), CLUSTER{})
 			matop CLUSTER{} = EXPR(TABLE(), CLUSTER{})
 		</syntax>
-		NumeRe kann auch Operationen mit <em>ganzen Matrizen</em> durchführen, wenn das Kommando <code>matop</code> verwendet wird:<codeblock>matop AUSDRUCK(data(),TABLE())</codeblock>Das Kommando <code>mtrxop</code> ist ein Synonym zu diesem Kommando.
-		Alle Berechnungen finden hier immer noch elementweise statt. Matrix-Matrix- und Matrix-Vektor-Multiplikationen erreicht man mittels des <code>**</code>-Operators:<codeblock>matop MATRIX1() ** MATRIX2()</codeblock>Der <code>**</code>-Operator hat die höchste Priorität aller Operatoren. Ggf. ist es also nötig, entsprechend zu klammern. Außerdem achtet <code>**</code> auf die korrekte Dimensionen der entsprechenden Matrizen.
-		Im Ausdruck kann die Zieltabelle der Matrix-Operation spezifiziert werden. Wenn sie das <em>nicht</em> wird, wird automatisch <code>matrix()</code> als Ziel verwendet. Sollte die Zieltabelle nicht existieren, so wird sie im Rahmen dieses Kommmandos automatisch erzeugt. Wenn die Zieltabelle mit <em>leeren</em> Argumentklammern angegeben wird, so wird sie <em>vollständig</em> überschrieben.
-		<em>Wichtig:</em> <code>matop</code> kennt einen großen Satz zusätzlicher, spezieller Matrixfunktionen. Diese sind unter <a href="nhlp://matfunc?frame=new">help matfunc</a> aufgelistet.
+		NumeRe kann auch Operationen mit <em>ganzen Matrizen</em> durchfÃ¼hren, wenn das Kommando <code>matop</code> verwendet wird:<codeblock>matop AUSDRUCK(data(),TABLE())</codeblock>Das Kommando <code>mtrxop</code> ist ein Synonym zu diesem Kommando.
+		Alle Berechnungen finden hier immer noch elementweise statt. Matrix-Matrix- und Matrix-Vektor-Multiplikationen erreicht man mittels des <code>**</code>-Operators:<codeblock>matop MATRIX1() ** MATRIX2()</codeblock>Der <code>**</code>-Operator hat die hÃ¶chste PrioritÃ¤t aller Operatoren. Ggf. ist es also nÃ¶tig, entsprechend zu klammern. AuÃŸerdem achtet <code>**</code> auf die korrekte Dimensionen der entsprechenden Matrizen.
+		Im Ausdruck kann die Zieltabelle der Matrix-Operation spezifiziert werden. Wenn sie das <em>nicht</em> wird, wird automatisch <code>matrix()</code> als Ziel verwendet. Sollte die Zieltabelle nicht existieren, so wird sie im Rahmen dieses Kommmandos automatisch erzeugt. Wenn die Zieltabelle mit <em>leeren</em> Argumentklammern angegeben wird, so wird sie <em>vollstÃ¤ndig</em> Ã¼berschrieben.
+		<em>Wichtig:</em> <code>matop</code> kennt einen groÃŸen Satz zusÃ¤tzlicher, spezieller Matrixfunktionen. Diese sind unter <a href="nhlp://matfunc?frame=new">help matfunc</a> aufgelistet.
 		<example desc="Multiplizieren der Elemente in <code>cache()</code> mit den Elementen in <code>data()</code>:">
 			matop cache() *= data()
 		</example>
@@ -54,38 +54,38 @@
 		<keyword>matfunk</keyword>
 	</keywords>
 	<contents>
-		Innerhalb des <code>matop</code>-Kommandos können noch folgende zusätzliche Funktionen verwendet werden:
+		Innerhalb des <code>matop</code>-Kommandos kÃ¶nnen noch folgende zusÃ¤tzliche Funktionen verwendet werden:
 		<list>
 			<item node="and(MAT)">Wendet den Operator && auf die Elemente der Matrix MAT an</item>
-			<item node="covar(MAT,MAT)">Berechnet die Kovarianz der beiden Argumente. Die Argumente müssen dieselben Dimensionen haben</item>
-			<item node="correl(MAT,MAT)">Berechnet die Korrelationsmatrix aus den beiden Argumenten. Wenn die beiden Argumente nicht die gleichen Dimensionen haben, werden sie um entsprechende Zeilen und Spalten ergänzt. Wenn die Argumente identisch sind, wird die Autokorrelationsmatrix berechnet. Die berechnete Ergebnismatrix hat die Dimensionen <expr>(2n-1, 2m-1)</expr>, wobei das Element <code>MAT(n,m)</code> die Korrelation der Nullverschiebung bezeichnet</item>
+			<item node="covar(MAT,MAT)">Berechnet die Kovarianz der beiden Argumente. Die Argumente mÃ¼ssen dieselben Dimensionen haben</item>
+			<item node="correl(MAT,MAT)">Berechnet die Korrelationsmatrix aus den beiden Argumenten. Wenn die beiden Argumente nicht die gleichen Dimensionen haben, werden sie um entsprechende Zeilen und Spalten ergÃ¤nzt. Wenn die Argumente identisch sind, wird die Autokorrelationsmatrix berechnet. Die berechnete Ergebnismatrix hat die Dimensionen <expr>(2n-1, 2m-1)</expr>, wobei das Element <code>MAT(n,m)</code> die Korrelation der Nullverschiebung bezeichnet</item>
 			<item node="cross(MAT)">Berechnet das <expr>n</expr>-dimensionale Kreuzprodukt der Vektoren, welche die <expr>n-1</expr> Spalten der Matrix MAT bilden.</item>
 			<item node="det(MAT)">Berechnet die Determinante der Matrix MAT, falls die Matrix quadratisch ist.</item>
 			<item node="diag(x,y,z,...)">Erzeugt eine Diagonalmatrix mit den Elementen <code>x,y,z,...</code> auf der Hauptdiagonalen.</item>
-			<item node="diagonalize(MAT)">Diagonalisiert die quadratische Matrix MAT. Die Eigenwerte können selbst bei reellen Matrizen komplex sein</item>
-			<item node="eigenvals(MAT)">Berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurück. Die Eigenwerte können selbst bei reellen Matrizen komplex sein</item>
-			<item node="eigenvects(MAT)">Berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurück. Die Eigenvektoren können selbst bei reellen Matrizen komplex sein</item>
+			<item node="diagonalize(MAT)">Diagonalisiert die quadratische Matrix MAT. Die Eigenwerte kÃ¶nnen selbst bei reellen Matrizen komplex sein</item>
+			<item node="eigenvals(MAT)">Berechnet die Eigenwerte der quadratischen Matrix MAT und gibt diese in Form eines Vektors zurÃ¼ck. Die Eigenwerte kÃ¶nnen selbst bei reellen Matrizen komplex sein</item>
+			<item node="eigenvects(MAT)">Berechnet die Eigenvektoren der quadratischen Matrix MAT und gibt diese in Form einer Matrix mit den Eigenvektoren als Spalten zurÃ¼ck. Die Eigenvektoren kÃ¶nnen selbst bei reellen Matrizen komplex sein</item>
 			<item node="identity(n)">Erzeugt eine <expr>n</expr>-dimensionale, quadratische Einheitsmatrix.</item>
-			<item node="idxtolog(n)">Wandelt Indexwerte in einer Matrix in Logikwerte um. Wird ein Vektor übergeben, so gibt die Funktion ein Vektor zurück mit den true in den Zeilen, auf denen die Indices weisen. Wird eine Matrix mit zwei Spalten übergeben, dann gibt die Funktion eine Matrix zurück mit true als Elemente, auf welche die Zeilen- as der ersten und die Spaltenindices aus der zweiten Spalte weisen.</item>
-			<item node="invert(MAT)">Invertiert die Matrix MAT, falls eine Inverse der Matrix existiert. <code>invert()</code> prüft auch, ob die Dimensionen der übergebenen Matrix übereinstimmen.</item>
-			<item node="logtoidx(MAT)">Wandelt Logikwerte in einer Matrix in Indexwerte um. Wird ein Vektor übergeben, so gibt die Funktion ein Vektor zurück mit den Indices zu den Elementen, welche true sind. Wird eine Matrix übergeben, dann gibt die Funktion eine zweispaltige Matrix zurück, mit den Zeilen- in der ersten und den Spaltenindices in der zweiten Spalte.</item>
-			<item node="matfc(X,Y,Z,...)">Erzeugt eine Matrix aus den Spalten <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.</item>
-			<item node="matfcf(X,Y,Z,...)">Erzeugt eine Matrix aus den Spalten <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergänzt.</item>
-			<item node="matfl(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergänzt.</item>
-			<item node="matflf(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden für die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergänzt.</item>
+			<item node="idxtolog(n)">Wandelt Indexwerte in einer Matrix in Logikwerte um. Wird ein Vektor Ã¼bergeben, so gibt die Funktion ein Vektor zurÃ¼ck mit den true in den Zeilen, auf denen die Indices weisen. Wird eine Matrix mit zwei Spalten Ã¼bergeben, dann gibt die Funktion eine Matrix zurÃ¼ck mit true als Elemente, auf welche die Zeilen- as der ersten und die Spaltenindices aus der zweiten Spalte weisen.</item>
+			<item node="invert(MAT)">Invertiert die Matrix MAT, falls eine Inverse der Matrix existiert. <code>invert()</code> prÃ¼ft auch, ob die Dimensionen der Ã¼bergebenen Matrix Ã¼bereinstimmen.</item>
+			<item node="logtoidx(MAT)">Wandelt Logikwerte in einer Matrix in Indexwerte um. Wird ein Vektor Ã¼bergeben, so gibt die Funktion ein Vektor zurÃ¼ck mit den Indices zu den Elementen, welche true sind. Wird eine Matrix Ã¼bergeben, dann gibt die Funktion eine zweispaltige Matrix zurÃ¼ck, mit den Zeilen- in der ersten und den Spaltenindices in der zweiten Spalte.</item>
+			<item node="matfc(X,Y,Z,...)">Erzeugt eine Matrix aus den Spalten <code>X,Y,Z,...</code> Werden fÃ¼r die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergÃ¤nzt.</item>
+			<item node="matfcf(X,Y,Z,...)">Erzeugt eine Matrix aus den Spalten <code>X,Y,Z,...</code> Werden fÃ¼r die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergÃ¤nzt.</item>
+			<item node="matfl(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden fÃ¼r die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden durch 0 ergÃ¤nzt.</item>
+			<item node="matflf(X,Y,Z,...)">Erzeugt eine Matrix aus den Zeilen <code>X,Y,Z,...</code> Werden fÃ¼r die maximale Dimension nicht ausreichend Elemente vorgegeben, so werden die fehlenden aus den vorhandenen <em>logisch</em> ergÃ¤nzt.</item>
 			<item node="normalize(MAT)">Normiert die Werte der Matrix MAT auf den Bereich <expr>[-1,1]</expr> (die Matrix wird durch ihren absolutes Maximum dividiert).</item>
-			<item node="one(n,m)">Erzeugt eine <expr>(n, m)</expr>-Matrix, die mit Einsen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
+			<item node="one(n,m)">Erzeugt eine <expr>(n, m)</expr>-Matrix, die mit Einsen gefÃ¼llt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
 			<item node="or(MAT)">Wendet den Operator || auf die Elemente der Matrix MAT an</item>
 			<item node="repmat(MAT,n,m)">Wiederholt die Matrix MAT <expr>(n, m)</expr>-mal</item>
 			<item node="reshape(MAT,n,m)">Formt die Matrix MAT zu einer <expr>(n, m)</expr>-Matrix um. Die Zahl der Elemente in der alten und der neuen Matrix muss dabei identisch sein. Die Umformung geschieht zeilenweise</item>
-			<item node="resize(MAT,n,m)">Ändert die Größe der Matrix MAT auf <expr>(n, m)</expr>. Fehlende Zeilen und Spalten werden durch 0 ersetzt</item>
-			<item node="shuffle(sel,val)">Gibt <expr>sel</expr> zufällig ausgewählte und eindeutige Werte aus einem <expr>1:val</expr> array zurück. <expr>val</expr> ist optional und ist standardmäßig identisch zu <expr>sel</expr></item>
-			<item node="size(MAT)">Gibt die Zahl der Zeilen und Spalten der Matrix MAT als Vektor zurück</item>
-			<item node="solve(MAT)">Löst das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des Gauß-Algorithmus.</item>
+			<item node="resize(MAT,n,m)">Ã„ndert die GrÃ¶ÃŸe der Matrix MAT auf <expr>(n, m)</expr>. Fehlende Zeilen und Spalten werden durch 0 ersetzt</item>
+			<item node="shuffle(sel,val)">Gibt <expr>sel</expr> zufÃ¤llig ausgewÃ¤hlte und eindeutige Werte aus einem <expr>1:val</expr> array zurÃ¼ck. <expr>val</expr> ist optional und ist standardmÃ¤ÃŸig identisch zu <expr>sel</expr></item>
+			<item node="size(MAT)">Gibt die Zahl der Zeilen und Spalten der Matrix MAT als Vektor zurÃ¼ck</item>
+			<item node="solve(MAT)">LÃ¶st das Lineare Gleichungssystem, das durch die Matrix MAT beschrieben wird, mittels des GauÃŸ-Algorithmus.</item>
 			<item node="trace(MAT)">Berechnet die Spur der quadratischen Matrix MAT.</item>
 			<item node="transpose(MAT)">Transponiert die Matrix MAT (Zeilen- und Spaltenindices werden vertauscht)</item>
-			<item node="unique(MAT,n)">Sortiert und gibt nur eindeutige Elemente zurück. Ist MAT ein Vektor, so gibt die Funktion einen Vektor zurück. Ist MAT eine Matrix, so wird MAT ausgerollt und ein Vektor zurückgegeben. <expr>n</expr> ist optional, wird nur verwendet, wenn MAT eine Matrix ist, und ist standardmäßig 0. Ist <expr>n = 1</expr>, so gibt die Funktion eine Matrix mit eindeutigen Elementen entlang der Zeilen zurück. Ist <expr>n = 2</expr>, so werden die eindeutigen Elemente entlang der Spalten bestimmt</item>
-			<item node="zero(n,m)">Erzeugt eine <expr>(n, m)</expr>-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
+			<item node="unique(MAT,n)">Sortiert und gibt nur eindeutige Elemente zurÃ¼ck. Ist MAT ein Vektor, so gibt die Funktion einen Vektor zurÃ¼ck. Ist MAT eine Matrix, so wird MAT ausgerollt und ein Vektor zurÃ¼ckgegeben. <expr>n</expr> ist optional, wird nur verwendet, wenn MAT eine Matrix ist, und ist standardmÃ¤ÃŸig 0. Ist <expr>n = 1</expr>, so gibt die Funktion eine Matrix mit eindeutigen Elementen entlang der Zeilen zurÃ¼ck. Ist <expr>n = 2</expr>, so werden die eindeutigen Elemente entlang der Spalten bestimmt</item>
+			<item node="zero(n,m)">Erzeugt eine <expr>(n, m)</expr>-Matrix, die mit Nullen gefÃ¼llt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.</item>
 		</list>
 	</contents>
 </article>

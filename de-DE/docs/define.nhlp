@@ -36,28 +36,28 @@
 			ifndefined f(x, ...) := EXPR(x, ...) -set ...\n
 			lclfunc f(x, ...) := EXPR(x, ...)
 		</syntax>
-		Das Kommando <code>define</code> erlaubt es, eigene Funktionen für den wiederholten Aufruf in einer laufenden NumeRe-Sitzung zu definieren. Dabei sind bis zu 100 Definitionen möglich.
-		Die Definition muss mit dem Funktionsnamen, worauf die Funktionsargumente in Klammern direkt darauf angegeben werden müssen, begonnen werden. NumeRe unterstützt im Augenblick bis zu zehn Variablen je Funktion bzw. beliebig viele in Form einer speziellen Syntax. Eine Funktion muss jedoch nicht zwingend Argumente besitzen; auch leere Argumentklammern sind möglich. Der Funktionsname darf dabei keine mathematischen Operatoren enthalten und nicht mit einer Ziffer beginnen.
-		Die Syntax <code>:=</code> leitet dann die eigentliche Deklaration des Ausdrucks und der Funktion an sich ein, wobei mit dem Parameter <code>-set</code> zusätzliche Optionen angegeben werden können:<codeblock>define FUNKTION(ARGUMENTE) := AUSDRUCK(ARGUMENTE) [-set OPTIONEN]</codeblock>
-		Als Optionen stehen die folgenden drei zur Verfügung:
+		Das Kommando <code>define</code> erlaubt es, eigene Funktionen fÃ¼r den wiederholten Aufruf in einer laufenden NumeRe-Sitzung zu definieren. Dabei sind bis zu 100 Definitionen mÃ¶glich.
+		Die Definition muss mit dem Funktionsnamen, worauf die Funktionsargumente in Klammern direkt darauf angegeben werden mÃ¼ssen, begonnen werden. NumeRe unterstÃ¼tzt im Augenblick bis zu zehn Variablen je Funktion bzw. beliebig viele in Form einer speziellen Syntax. Eine Funktion muss jedoch nicht zwingend Argumente besitzen; auch leere Argumentklammern sind mÃ¶glich. Der Funktionsname darf dabei keine mathematischen Operatoren enthalten und nicht mit einer Ziffer beginnen.
+		Die Syntax <code>:=</code> leitet dann die eigentliche Deklaration des Ausdrucks und der Funktion an sich ein, wobei mit dem Parameter <code>-set</code> zusÃ¤tzliche Optionen angegeben werden kÃ¶nnen:<codeblock>define FUNKTION(ARGUMENTE) := AUSDRUCK(ARGUMENTE) [-set OPTIONEN]</codeblock>
+		Als Optionen stehen die folgenden drei zur VerfÃ¼gung:
 		<list>
-			<item node="comment=KOMMENTAR">Einen zusätzlichen Kommentar zur Funktionsdefinition angeben. Ein Kommentar mit Leerzeichen muss von Anführungszeichen umschlossen sein.</item>
-			<item node="asval=VARIABLEN">Einen Satz an Variablen angeben, die während der Definition durch ihre Werte ersetzt werden sollen. Mehrere Variablen müssen in geschweiften Klammern angegeben werden</item>
+			<item node="comment=KOMMENTAR">Einen zusÃ¤tzlichen Kommentar zur Funktionsdefinition angeben. Ein Kommentar mit Leerzeichen muss von AnfÃ¼hrungszeichen umschlossen sein.</item>
+			<item node="asval=VARIABLEN">Einen Satz an Variablen angeben, die wÃ¤hrend der Definition durch ihre Werte ersetzt werden sollen. Mehrere Variablen mÃ¼ssen in geschweiften Klammern angegeben werden</item>
 			<item node="recursive">In Kombination mit dem Kommando <code>redefine</code> kann eine Funktion auf eine vorherige Version ihrer selbst verweisen. Die vorherige Version wird dabei durch die neue Definition ersetzt.</item>
 		</list>
-		Die definierte Funktion kann nach der erfolgreichen Definition durch Angabe des Variablennamens und (Werten für) die Variablen aufgerufen werden.
-		Wenn das letzte Argument in der Form <code>...</code> angegeben wird, so kann für dieses Argument von einem bis beliebig viele Werte übergeben werden. Es wird jedoch mindestens <code>0.0</code> angegeben, auch wenn hierfür eigentlich kein Wert übergeben wurde. Zu beachten ist jedoch, dass die Funktion auch mit beliebig vielen Argumenten umgehen können muss, z.B.:<codeblock>define function(x,y,...) := abs(x)*sign(y)+num(...)</codeblock>
-		NumeRe prüft bei jeder Funktionsdefinition, ob diese Funktion ggf. eine Endlosschleife durch eine rekursive Definition erzeugt und wird die Definition in diesem Fall ablehnen.
-		Mit dem Kommando <code>redefine</code> (und der sonst gleichen Syntax) kann eine bereits definierte Funktion neu definiert werden. Mit diesem Kommando kann eine Funktion (die ohne Argumente übergeben werden muss) auch nachträglich mit einem Kommentar versehen werden:<codeblock>redefine FUNKTION() -set comment=KOMMENTAR</codeblock>
-		Mit <code>ifndefined</code> (und der sonst gleichen Syntax) wird vor dem Versuch einer Definition geprüft, ob die zu definierende Funktion nicht bereits existiert und nur, wenn dies nicht der Fall ist, die Definition vollzogen.
-		Das Kommando <code>undefine</code> entfernt eine oder mehrere zuvor getätigte Definitionen aus dem Speicher. Dabei muss der Funktionsname mit leeren Argumentklammern angegeben werden:<codeblock>undefine FUNKTION(), FUNKTION2(), ...</codeblock>
-		Von NumeRe vordefinierte Funktionen (z.B. <expr>sin(x)</expr>) können nicht neu definiert werden.
-		Das Kommando <code>lclfunc</code> definiert die anschließende Funktion für den aktuell gültigen Bereich. Das kann entweder ein <a href="nhlp://script?frame?new">Script</a> oder eine <a href="nhlp://procedure?frame=new">Prozedur</a> sein. Nach dem Verlassen dieses Bereiches wird die definierte Funktion automatisch gelöscht.
+		Die definierte Funktion kann nach der erfolgreichen Definition durch Angabe des Variablennamens und (Werten fÃ¼r) die Variablen aufgerufen werden.
+		Wenn das letzte Argument in der Form <code>...</code> angegeben wird, so kann fÃ¼r dieses Argument von einem bis beliebig viele Werte Ã¼bergeben werden. Es wird jedoch mindestens <code>0.0</code> angegeben, auch wenn hierfÃ¼r eigentlich kein Wert Ã¼bergeben wurde. Zu beachten ist jedoch, dass die Funktion auch mit beliebig vielen Argumenten umgehen kÃ¶nnen muss, z.B.:<codeblock>define function(x,y,...) := abs(x)*sign(y)+num(...)</codeblock>
+		NumeRe prÃ¼ft bei jeder Funktionsdefinition, ob diese Funktion ggf. eine Endlosschleife durch eine rekursive Definition erzeugt und wird die Definition in diesem Fall ablehnen.
+		Mit dem Kommando <code>redefine</code> (und der sonst gleichen Syntax) kann eine bereits definierte Funktion neu definiert werden. Mit diesem Kommando kann eine Funktion (die ohne Argumente Ã¼bergeben werden muss) auch nachtrÃ¤glich mit einem Kommentar versehen werden:<codeblock>redefine FUNKTION() -set comment=KOMMENTAR</codeblock>
+		Mit <code>ifndefined</code> (und der sonst gleichen Syntax) wird vor dem Versuch einer Definition geprÃ¼ft, ob die zu definierende Funktion nicht bereits existiert und nur, wenn dies nicht der Fall ist, die Definition vollzogen.
+		Das Kommando <code>undefine</code> entfernt eine oder mehrere zuvor getÃ¤tigte Definitionen aus dem Speicher. Dabei muss der Funktionsname mit leeren Argumentklammern angegeben werden:<codeblock>undefine FUNKTION(), FUNKTION2(), ...</codeblock>
+		Von NumeRe vordefinierte Funktionen (z.B. <expr>sin(x)</expr>) kÃ¶nnen nicht neu definiert werden.
+		Das Kommando <code>lclfunc</code> definiert die anschlieÃŸende Funktion fÃ¼r den aktuell gÃ¼ltigen Bereich. Das kann entweder ein <a href="nhlp://script?frame?new">Script</a> oder eine <a href="nhlp://procedure?frame=new">Prozedur</a> sein. Nach dem Verlassen dieses Bereiches wird die definierte Funktion automatisch gelÃ¶scht.
 		<code>define</code> versteht des Weiteren drei erweiterte Parameter:
 		<list>
-			<item node="-save">Definierte Funktionen in die Definitionsdatei (&lt;&gt;/functions.def) speichern. Während des Speichervorganges werden nur aktualisierte Definitionen überschrieben. Die noch nicht verhandenen Definitionen werden an die bestehenden angehängt.</item>
-			<item node="-load">Funktionen aus der Definitionsdatei (&lt;&gt;/functions.def) lesen. Definitionen im Speicher werden währenddessen überschrieben!</item>
-			<item node="-set">Leitet zusätzliche Optionen (wie z.B. <code>comment=KOMMENTAR</code>) ein</item>
+			<item node="-save">Definierte Funktionen in die Definitionsdatei (&lt;&gt;/functions.def) speichern. WÃ¤hrend des Speichervorganges werden nur aktualisierte Definitionen Ã¼berschrieben. Die noch nicht verhandenen Definitionen werden an die bestehenden angehÃ¤ngt.</item>
+			<item node="-load">Funktionen aus der Definitionsdatei (&lt;&gt;/functions.def) lesen. Definitionen im Speicher werden wÃ¤hrenddessen Ã¼berschrieben!</item>
+			<item node="-set">Leitet zusÃ¤tzliche Optionen (wie z.B. <code>comment=KOMMENTAR</code>) ein</item>
 		</list>
 		<example desc="Definition der Funktion <expr>func(x) = sqrt(exp(-x))</expr> mit einem Kommentar und Aufruf mit dem Wert <expr>x = 2.5</expr>:" type="verbatim">
 			|&lt;- define func(x) := sqrt(exp(-x)) -set comment="Modell des Vorgangs"

@@ -18,7 +18,7 @@
 # DATABASE FILE: mathstyle.ndb
 # LANGUAGE: de-DE
 #
-# Diese Datenbank enthält die Styles für mathematische Objekte im Documentation Window.
+# Diese Datenbank enthÃ¤lt die Styles fÃ¼r mathematische Objekte im Documentation Window.
 # 
 # Special pi constructs
 _2pi~<span style="font-style: italic;">2&pi;</span>~VAL

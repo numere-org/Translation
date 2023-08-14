@@ -43,22 +43,22 @@
 			random -lines=LINES cols=COLS distrib=DISTRIBUTION ...
 			random -lines=LINES cols=COLS target=TABLE() ...
 		</syntax>
-		Der NumeRe-Zufallszahlengenerator <code>random</code> generiert eine oder mehrere Datenreihen beliebiger Länge, die mit Zufallszahlen einer gewählten Verteilung folgend gefüllt sind. Dabei können alle nötigen Parameter der gewählten Verteilung bestimmt werden.
-		Die Datenreihen werden in eine Tabelle geschrieben. Die Zieltabelle kann mit der Option <code>target=TABLE()</code> definiert werden, standardmäßig wird <code>table()</code> verwendet.
-		<code>random</code> besitzt des Weiteren folgende Optionen, die direkt übergeben werden können:
+		Der NumeRe-Zufallszahlengenerator <code>random</code> generiert eine oder mehrere Datenreihen beliebiger LÃ¤nge, die mit Zufallszahlen einer gewÃ¤hlten Verteilung folgend gefÃ¼llt sind. Dabei kÃ¶nnen alle nÃ¶tigen Parameter der gewÃ¤hlten Verteilung bestimmt werden.
+		Die Datenreihen werden in eine Tabelle geschrieben. Die Zieltabelle kann mit der Option <code>target=TABLE()</code> definiert werden, standardmÃ¤ÃŸig wird <code>table()</code> verwendet.
+		<code>random</code> besitzt des Weiteren folgende Optionen, die direkt Ã¼bergeben werden kÃ¶nnen:
 		<list>
-			<item node="lines=ZEILEN">[l=] Zahl der mit den Zufallszahlen zu füllenden Zeilen festlegen</item>
-			<item node="cols=SPALTEN">[c=] Zahl der zu füllenden Spalten festlegen</item>
+			<item node="lines=ZEILEN">[l=] Zahl der mit den Zufallszahlen zu fÃ¼llenden Zeilen festlegen</item>
+			<item node="cols=SPALTEN">[c=] Zahl der zu fÃ¼llenden Spalten festlegen</item>
 			<item node="mean=MITTELWERT">[m=] Den Mittelwert der Verteilungen <code>gauss</code>, <code>poisson</code> und <code>uniform</code> festlegen</item>
 			<item node="width=BREITE">[w=] Die Breite der Verteilungen <code>gauss</code> und <code>uniform</code> festlegen</item>
 			<item node="freedoms=FREIHEITEN">[f=] Die Zahl der Freiheitsgrade der <code>student</code>-Verteilungen festlegen</item>
 			<item node="shape=FORM">[sh=] Die Form der <code>gamma</code>-Verteilung festlegen</item>
-			<item node="scale=GRÖSSE">[sc=] Die Größe der <code>gamma</code>-Verteilung festlegen</item>
+			<item node="scale=GRÃ–SSE">[sc=] Die GrÃ¶ÃŸe der <code>gamma</code>-Verteilung festlegen</item>
 			<item node="ubound=OBERGRENZE">[ub=] Die obere Intervallgrenze der <code>binomial</code>-Verteilung bestimmen</item>
 			<item node="prob=WAHRSCHEINLICHKEIT">[p=] Den Wahrscheinlichkeitsparameter der <code>binomial</code>-Verteilung bestimmen</item>
 			<item node="distrib=VERTEILUNG">[d=] Die Verteilung festlegen: <code>gauss</code>, <code>poisson</code>, <code>binomial</code>, <code>student</code>, <code>gamma</code> oder <code>uniform</code></item>
 		</list>
-		Die Optionen, die (abgesehen von der Zahl der Zeilen und der Zahl der Spalten) für die Verteilungen angegeben werden können, sind die Folgenden:<br/>(Optionen, die nicht angegeben werden, erhalten den angegebenen Default-Wert)
+		Die Optionen, die (abgesehen von der Zahl der Zeilen und der Zahl der Spalten) fÃ¼r die Verteilungen angegeben werden kÃ¶nnen, sind die Folgenden:<br/>(Optionen, die nicht angegeben werden, erhalten den angegebenen Default-Wert)
 		<list>
 			<item node="gauss"><code>distrib=gauss mean=0.0 width=1.0</code></item>
 			<item node="poisson"><code>distrib=poisson mean=0.0</code></item>
@@ -70,6 +70,6 @@
 		<example desc="Erzeugen von 2 Spalten in <code>table()</code> mit je 256 normalverteilten Zufallszahlen um den Mittelwert von 0.5 und mit der Breite von 0.75:">
 			random -lines=256 cols=2 mean=0.5 width=0.75 distrib=gauss
 		</example>
-		<em>Tipp:</em> Die gewünschten Optionen können auch nur durch die in eckigen Klammern angegebenen Abkürzungen übergeben werden, also beispielsweise:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>
+		<em>Tipp:</em> Die gewÃ¼nschten Optionen kÃ¶nnen auch nur durch die in eckigen Klammern angegebenen AbkÃ¼rzungen Ã¼bergeben werden, also beispielsweise:<codeblock>random -l=256 c=2 m=0.5 w=0.75 d=gauss</codeblock>
 	</contents>
 </article>
