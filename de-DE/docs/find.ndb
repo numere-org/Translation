@@ -434,6 +434,8 @@ TAB().rankof(n,c,{r})~Berechnet die Ränge der Werte in der Spalte~rankof() rang
 TAB().removecells(r,c,r1,c1)~Entfernt einen Block an Zellen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecells(
 TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecols(
 TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
+TAB().reordercols({c},{n})~Sortiert die Spalten gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
+TAB().reorderrows({r},{n})~Sortiert die Zeilen gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
 TAB().shrink~Entfernt leere, anhängende Zellen und Spalten aus der Tabelle~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Bestimmt die Größe der Tabelle in Zeilen und Spalten~dimension size element count bounding rectangle~.size
