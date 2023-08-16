@@ -17,7 +17,7 @@
 -->
 
 <article id="eval">
-	<title string="Berechnung von Stützstellen" idxkey="eval" />
+	<title string="Berechnung von StÃ¼tzstellen" idxkey="eval" />
 	<keywords>
 		<keyword>eval</keyword>
 		<keyword>samples</keyword>
@@ -27,11 +27,11 @@
 			{VAL} = eval f(x) -set [x1:x2] ...
 			{VAL} = eval f(x) -set [x1:x2] samples=SAMPLES ...
 		</syntax>
-		NumeRe kann eine gewünschte Zahl an linear verteilten Stützstellen eines Ausdrucks mithilfe des Kommandos <code>eval</code> berechnen und direkt in einen Cache speichern. Dazu muss diesem Kommando der auszuwertende Ausdruck, die Variable, bezüglich welcher die Stützstellen berechnet werden sollen, deren linke und rechte Intervallgrenzen und ggf. die Zahl der Stützstellen übergeben werden:<codeblock>eval AUSDRUCK -set VAR=POS1:POS2 samples=STÜTZSTELLEN</codeblock>Wenn statt VAR=POS1:POS2 nur [POS1:POS2] angegeben wird, verwendet NumeRe automatisch <expr>x</expr> als Variable.
-		Wird keine Variable angegeben, wird der Ausdruck als Konstant angenommen und entsprechend der Zahl der Samples wiederholt zurückgegeben.
-		Wenn die Zahl der Stützstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable VAR als Ausdruck.
-		Um eine logarithmische Verteilung der Stützstellen zu bekommen, kann der Parameter <code>-logscale</code> verwendet werden.
-		<example desc="Berechnen von 200 Stützstellen eines <expr>sin(x)</expr> von <expr>0</expr> bis <expr>2PI</expr> und Speichern dieser Stützstellen in den Cache:">
+		NumeRe kann eine gewÃ¼nschte Zahl an linear verteilten StÃ¼tzstellen eines Ausdrucks mithilfe des Kommandos <code>eval</code> berechnen und direkt in einen Cache speichern. Dazu muss diesem Kommando der auszuwertende Ausdruck, die Variable, bezÃ¼glich welcher die StÃ¼tzstellen berechnet werden sollen, deren linke und rechte Intervallgrenzen und ggf. die Zahl der StÃ¼tzstellen Ã¼bergeben werden:<codeblock>eval AUSDRUCK -set VAR=POS1:POS2 samples=STÃœTZSTELLEN</codeblock>Wenn statt VAR=POS1:POS2 nur [POS1:POS2] angegeben wird, verwendet NumeRe automatisch <expr>x</expr> als Variable.
+		Wird keine Variable angegeben, wird der Ausdruck als Konstant angenommen und entsprechend der Zahl der Samples wiederholt zurÃ¼ckgegeben.
+		Wenn die Zahl der StÃ¼tzstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable VAR als Ausdruck.
+		Um eine logarithmische Verteilung der StÃ¼tzstellen zu bekommen, kann der Parameter <code>-logscale</code> verwendet werden.
+		<example desc="Berechnen von 200 StÃ¼tzstellen eines <expr>sin(x)</expr> von <expr>0</expr> bis <expr>2PI</expr> und Speichern dieser StÃ¼tzstellen in den Cache:">
 			cache(:,1) = eval sin(x) -set x=0:_2pi samples=200
 		</example>
 	</contents>

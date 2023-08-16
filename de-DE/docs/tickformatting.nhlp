@@ -26,13 +26,13 @@
 		<keyword>tick</keyword>
 	</keywords>
 	<contents>
-		Die Skalenbeschriftung der Achsen kˆnnen in NumeRe beeinflusst werden, indem die zus‰tzlichen Plotoptionen <code>xticks</code>, <code>yticks</code>, <code>zticks</code> und <code>cticks</code> verwendet werden. Die ersteren drei beeinflussen die Beschriftung der <expr>x</expr>-, <expr>y</expr>- oder <expr>z</expr>-Achse; die letztere die Beschriftung der Farbskala, die bei vielen Plotstilen (wie <code>mesh</code> oder <code>surf3d</code>) rechts neben dem Plot angezeigt wird.
-		Das Format der Skalenbeschriftung muss in Anf¸hrungszeichen angegeben werden und folgt dem C-Schema der <code>printf()</code>-Funktion. Dabei werden alle Zeichen, die vor <code>%</code> angegeben werden, als regul‰re Zeichen betrachtet und alle Zeichen danach als Formatierungsoptionen der an dieser Stelle darzustellenden Zahl.
-		Die wesentliche Komplexit‰t dieser Formatierungsoptionen besteht in dem einzuhaltenden Schema, das sehr viele Mˆglichkeiten umfasst:<codeblock>%[FLG].[PRC][TYP]</codeblock>
+		Die Skalenbeschriftung der Achsen k√∂nnen in NumeRe beeinflusst werden, indem die zus√§tzlichen Plotoptionen <code>xticks</code>, <code>yticks</code>, <code>zticks</code> und <code>cticks</code> verwendet werden. Die ersteren drei beeinflussen die Beschriftung der <expr>x</expr>-, <expr>y</expr>- oder <expr>z</expr>-Achse; die letztere die Beschriftung der Farbskala, die bei vielen Plotstilen (wie <code>mesh</code> oder <code>surf3d</code>) rechts neben dem Plot angezeigt wird.
+		Das Format der Skalenbeschriftung muss in Anf√ºhrungszeichen angegeben werden und folgt dem C-Schema der <code>printf()</code>-Funktion. Dabei werden alle Zeichen, die vor <code>%</code> angegeben werden, als regul√§re Zeichen betrachtet und alle Zeichen danach als Formatierungsoptionen der an dieser Stelle darzustellenden Zahl.
+		Die wesentliche Komplexit√§t dieser Formatierungsoptionen besteht in dem einzuhaltenden Schema, das sehr viele M√∂glichkeiten umfasst:<codeblock>%[FLG].[PRC][TYP]</codeblock>
 		<list>
-			<item node="FLG">Dies sind Schalterwerte, die die Darstellung als Ganzes beeinflussen: <code>-</code> (links ausrichten), <code>+</code> ('+' vor positiven Zeichen erg‰nzen), <code>#</code> (Dezimalpunkt erzwingen) und <code> </code> (Leerzeichen bei positiven Zahlen erg‰nzen)</item>
-			<item node="PRC">Diese Angabe bezeichnet entweder die Zahl der Ziffern oder Zahl der Zeichen nach dem Dezimalpunkt, je nach gew‰hltem Typ TYP.</item>
-			<item node="TYP">Dies gibt den Typ der Darstellung der Zahl an. Meist empfiehlt sich an dieser Stelle <code>g</code> oder <code>G</code>, das je nach Zeichenl‰nge automatisch zwischen dezimaler und exponentieller Darstellung umschaltet, aber es werden auch alle anderen Varianten unterst¸tzt. Namentlich sind das unter anderem <code>E</code>, <code>e</code> und <code>f</code>.</item>
+			<item node="FLG">Dies sind Schalterwerte, die die Darstellung als Ganzes beeinflussen: <code>-</code> (links ausrichten), <code>+</code> ('+' vor positiven Zeichen erg√§nzen), <code>#</code> (Dezimalpunkt erzwingen) und <code> </code> (Leerzeichen bei positiven Zahlen erg√§nzen)</item>
+			<item node="PRC">Diese Angabe bezeichnet entweder die Zahl der Ziffern oder Zahl der Zeichen nach dem Dezimalpunkt, je nach gew√§hltem Typ TYP.</item>
+			<item node="TYP">Dies gibt den Typ der Darstellung der Zahl an. Meist empfiehlt sich an dieser Stelle <code>g</code> oder <code>G</code>, das je nach Zeichenl√§nge automatisch zwischen dezimaler und exponentieller Darstellung umschaltet, aber es werden auch alle anderen Varianten unterst√ºtzt. Namentlich sind das unter anderem <code>E</code>, <code>e</code> und <code>f</code>.</item>
 		</list>
 		<example desc="Darstellung der Zahl '392.65' in verschiedenen Typen und mit verschiedenen Schaltern:" type="verbatim">
 			|   %f   --&gt; 392.65

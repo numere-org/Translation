@@ -36,27 +36,27 @@
 			hist2d TABLE() -set sum ...
 		</syntax>
 		Das Kommando <code>hist</code> erzeugt aus einer gegebenen Datenreihe den Datensatz zur Visualisierung eines Histogramms. Dabei kann entweder die Breite oder die Anzahl der Bins festgelegt werden. Die erzeugte, neue Tabelle kann in der Folge gespeichert werden. Falls weder Binzahl noch Binbreite festgelegt wird, bestimmt NumeRe die Binzahl anhand der <em>Sturges-Regel</em> automatisch.
-		NumeRe erzeugt während der Auswertung zugleich auch noch eine graphische Darstellung des erzeugten Histogrammdatensatzes. Optionen, die für dieses Histogramm verwendet werden sollen, können zuvor mit <code>plot -set OPTIONEN</code> gesetzt werden.
-		<code>hist</code> kann auch von mehreren Datenreihen zugleich Histogramme erstellen, allerdings sind dabei die Bins für alle Reihen identisch und die Ergebnisse sind Teil einer gemeinsamer Tabelle mit mehreren Spalten. Zugleich wird auch eine graphische Darstellung der Histogramme erstellt.
-		Dieses Kommando benötigt natürlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Weise übergeben werden können:<codeblock>hist DATENOBJEKT(I1:I2,J1:J2) -set OPTIONEN</codeblock>
-		Für Datensätze, die <expr>(x,y,z)</expr>-Datenpunkte beschreiben (z.B. Vektortupel oder Datengitter), kann die Abwandlung <code>hist2d</code> verwendet werden. Bei Vektortupeln wird eine Häufigkeitsanalyse in <expr>x</expr>- und <expr>y</expr>-Richtung durchgeführt; falls Datengitter übergeben werden, werden diese in <expr>x</expr>- und <expr>y</expr>-Richtung summiert, da Datengitter aufgrund ihrer Eigenschaften keine Häufungen entlang einer Achse zeigen können. Beide Fälle werden stets zusammen mit den <expr>(x,y,z)</expr>-Datenpunkten dargestellt.
-		Ein einzelnes Histogramm der <expr>z</expr>-Werte eines Datengitters lässt sich alternativ auch mittels <code>hist ... -set asgrid</code> erhalten.
-		Neben vielen <a href="nhlp://plotoptions?frame=new">Plotoptionen</a> können noch weitere Optionen den Kommandos <code>hist</code> und <code>hist2d</code> übergeben werden:
+		NumeRe erzeugt wÃ¤hrend der Auswertung zugleich auch noch eine graphische Darstellung des erzeugten Histogrammdatensatzes. Optionen, die fÃ¼r dieses Histogramm verwendet werden sollen, kÃ¶nnen zuvor mit <code>plot -set OPTIONEN</code> gesetzt werden.
+		<code>hist</code> kann auch von mehreren Datenreihen zugleich Histogramme erstellen, allerdings sind dabei die Bins fÃ¼r alle Reihen identisch und die Ergebnisse sind Teil einer gemeinsamer Tabelle mit mehreren Spalten. Zugleich wird auch eine graphische Darstellung der Histogramme erstellt.
+		Dieses Kommando benÃ¶tigt natÃ¼rlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Weise Ã¼bergeben werden kÃ¶nnen:<codeblock>hist DATENOBJEKT(I1:I2,J1:J2) -set OPTIONEN</codeblock>
+		FÃ¼r DatensÃ¤tze, die <expr>(x,y,z)</expr>-Datenpunkte beschreiben (z.B. Vektortupel oder Datengitter), kann die Abwandlung <code>hist2d</code> verwendet werden. Bei Vektortupeln wird eine HÃ¤ufigkeitsanalyse in <expr>x</expr>- und <expr>y</expr>-Richtung durchgefÃ¼hrt; falls Datengitter Ã¼bergeben werden, werden diese in <expr>x</expr>- und <expr>y</expr>-Richtung summiert, da Datengitter aufgrund ihrer Eigenschaften keine HÃ¤ufungen entlang einer Achse zeigen kÃ¶nnen. Beide FÃ¤lle werden stets zusammen mit den <expr>(x,y,z)</expr>-Datenpunkten dargestellt.
+		Ein einzelnes Histogramm der <expr>z</expr>-Werte eines Datengitters lÃ¤sst sich alternativ auch mittels <code>hist ... -set asgrid</code> erhalten.
+		Neben vielen <a href="nhlp://plotoptions?frame=new">Plotoptionen</a> kÃ¶nnen noch weitere Optionen den Kommandos <code>hist</code> und <code>hist2d</code> Ã¼bergeben werden:
 		<list>
-			<item node="export=DATEINAME">Der gewünschte Ausgabe-Dateiname des erzeugten Histogramms. Dateinamen mit Leerzeichen müssen mit Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei erzeugt.) Wird kein Dateiname angegeben (sondern nur <code>export</code> übergeben), so wird ein automatischer Name generiert</item>
+			<item node="export=DATEINAME">Der gewÃ¼nschte Ausgabe-Dateiname des erzeugten Histogramms. Dateinamen mit Leerzeichen mÃ¼ssen mit AnfÃ¼hrungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei erzeugt.) Wird kein Dateiname angegeben (sondern nur <code>export</code> Ã¼bergeben), so wird ein automatischer Name generiert</item>
 			<item node="target=TABLE()">Schreibt eine Kopie der Ausgabe-Tabelle in <code>TABLE()</code>. Diese Tabelle wird automatisch erzeugt, falls sie nicht existiert.</item>
 			<item node="bins=RUBRIKEN/BINS">Die Anzahl an Bins/Rubriken/Summationsintervallen</item>
-			<item node="width=INTERVALLBREITE">Die Breite der Bins. <em>Hinweis:</em> Falls bereits die Zahl der Bins bestimmt wurde, ist diese Option hinfällig und wird nicht ausgewertet</item>
-			<item node="x=XMIN:XMAX">Die Rubrikenachse auf das Intervall [XMIN,XMAX] einschränken</item>
-			<item node="y=YMIN:YMAX">Die Rubrikenachse auf das Intervall [YMIN,YMAX] einschränken</item>
-			<item node="z=ZMIN:ZMAX">Die Rubrikenachse auf das Intervall [ZMIN,ZMAX] einschränken</item>
-			<item node="binlabel=LABEL">Die Achsenbeschriftung für die Rubrikenachse (<expr>x</expr>-Achse) festlegen</item>
-			<item node="countlabel=LABEL">Die Achsenbeschriftung für die Häufigkeitsache (<expr>y</expr>-Achse) festlegen</item>
-			<item node="silent">Unterdrückt sämtliche Bildschirmausgaben</item>
+			<item node="width=INTERVALLBREITE">Die Breite der Bins. <em>Hinweis:</em> Falls bereits die Zahl der Bins bestimmt wurde, ist diese Option hinfÃ¤llig und wird nicht ausgewertet</item>
+			<item node="x=XMIN:XMAX">Die Rubrikenachse auf das Intervall [XMIN,XMAX] einschrÃ¤nken</item>
+			<item node="y=YMIN:YMAX">Die Rubrikenachse auf das Intervall [YMIN,YMAX] einschrÃ¤nken</item>
+			<item node="z=ZMIN:ZMAX">Die Rubrikenachse auf das Intervall [ZMIN,ZMAX] einschrÃ¤nken</item>
+			<item node="binlabel=LABEL">Die Achsenbeschriftung fÃ¼r die Rubrikenachse (<expr>x</expr>-Achse) festlegen</item>
+			<item node="countlabel=LABEL">Die Achsenbeschriftung fÃ¼r die HÃ¤ufigkeitsache (<expr>y</expr>-Achse) festlegen</item>
+			<item node="silent">UnterdrÃ¼ckt sÃ¤mtliche Bildschirmausgaben</item>
 			<item node="sum">Aktiviert die Summation der <expr>z</expr>-Werte im Falle von Vektortupeln</item>
-			<item node="asgrid">Interpretiert den übergebenen Datensatz als Datengitter und bestimmt in Kombination mit <code>hist</code> ein einzelnes Histogramm entsprechend der <expr>z</expr>-Werte des Gitters</item>
-			<item node="method=METHODE">Die METHODE zur Bestimmung der Binbreite ändern. Standardmäßig ist dies die <em>Sturges-Regel</em>, mit <code>scott</code> wird die <em>Scott-Regel</em> und mit <code>freedman</code> wird die <em>Freedman-Diaconis-Regel</em> verwendet</item>
-			<item node="xlabel=LABEL">Beschriftung der <expr>x</expr>-Achse festlegen. Für die anderen Achsen existieren entsprechend <code>ylabel</code> und <code>zlabel</code>.</item>
+			<item node="asgrid">Interpretiert den Ã¼bergebenen Datensatz als Datengitter und bestimmt in Kombination mit <code>hist</code> ein einzelnes Histogramm entsprechend der <expr>z</expr>-Werte des Gitters</item>
+			<item node="method=METHODE">Die METHODE zur Bestimmung der Binbreite Ã¤ndern. StandardmÃ¤ÃŸig ist dies die <em>Sturges-Regel</em>, mit <code>scott</code> wird die <em>Scott-Regel</em> und mit <code>freedman</code> wird die <em>Freedman-Diaconis-Regel</em> verwendet</item>
+			<item node="xlabel=LABEL">Beschriftung der <expr>x</expr>-Achse festlegen. FÃ¼r die anderen Achsen existieren entsprechend <code>ylabel</code> und <code>zlabel</code>.</item>
 		</list>
 		<example desc="Histogramm der Spalten 1-3 eines Datenfiles mit je 64 Bins, wobei die Ausgabe nach 'hist.dat' gespeichert werden soll:">
 			hist data(:,1:3) -set bins=64 export=hist

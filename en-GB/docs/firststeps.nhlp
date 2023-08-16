@@ -25,7 +25,7 @@
 		<keyword>introd</keyword>
 	</keywords>
 	<contents>
-		<h>Hello and welcome in NumeRe: Framework for Numerical Calculations</h>
+		<h>Hello and welcome in NumeRe: Framework for Numerical Computations</h>
 		NumeRe was designed as a table calculation based upon commands and functions, but optimized for the scientific work. NumeRe  features the possibilities to automate predefined processes, generate graphical plots in many different styles and many other things.
 		This is a quite short introduction, which won't display all aspects of NumeRe. Apart from this, there is another way to get help: simply enter <code>help TOPIC</code>, to open the internal documentation about the TOPIC. Leave TOPIC away and you'll get the overview. You may also search directly in the navigator at the left side of this page.
 		If you cannot find a command or a function, you may use the <a href="nhlp://find?frame=new">keyword search</a>: <code>find TERMS</code>. You may enter multiple terms at once, if you separate them with whitespaces.
@@ -103,7 +103,7 @@
 			A, 1/B
 			plot decay(), Fit(x)
 		</codeblock>
-		What do these lines mean? The first one fits the function <expr>A e^(–B x)</expr> to the data in <code>decay()</code> and modifies <expr>A</expr> and <expr>B</expr> to achieve this. A table with a lot of possible values will be displayed, but they are not of interest at the moment. Details may be found at <a href="nhlp://fit?frame=new">help fit</a>.
+		What do these lines mean? The first one fits the function <expr>A e^(â€“B x)</expr> to the data in <code>decay()</code> and modifies <expr>A</expr> and <expr>B</expr> to achieve this. A table with a lot of possible values will be displayed, but they are not of interest at the moment. Details may be found at <a href="nhlp://fit?frame=new">help fit</a>.
 		The second line calculates the values of <expr>A</expr> and <expr>1/B</expr> and returns them. This should result in something like<codeblock>ans = {   5.026311,   19.85775}</codeblock>which are the two parameters, which we used during the generation of the data (of course there is some minor deviation, which results from the applied gaussian noise).
 		The third line plots the result. The function <code>Fit(x)</code> is created automatically by NumeRe during a successful fit and contains the function, which was used for the fit. To define a custom function, you may want to look into <a href="nhlp://define?frame=new">help define</a>.
 		You should have obtained the following output:

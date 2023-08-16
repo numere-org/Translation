@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, clc" />
+	<title string="ZusÃ¤tzliche Kommandos" idxkey="about, hline, warn, close, assert, clc" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -39,14 +39,14 @@
 			assert EXPRESSION\n
 			clc
 		</syntax>
-		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden können. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
+		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden kÃ¶nnen. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
 		<list>
 			<item node="about">Dieses Kommando (und die Synonyme <code>credits</code> und <code>info</code>) zeigen rechtliche Informationen zu NumeRe und zur Version an.</item>
-			<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
-			<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
-			<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
-			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
-			<item node="clc">Dieses Kommando bereinigt das Terminal und setzt es auf den Anfangszustand zurück.</item>
+			<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehÃ¤ngt, wird eine einfache Linie gezeichnet.</item>
+			<item node="warn">Dieses Kommando zeigt die Ã¼bergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur fÃ¼r tatsÃ¤chliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
+			<item node="close">Dieses Kommando schlieÃŸt zuvor geÃ¶ffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewÃ¤hlt werden: <code>-graphs</code> schlieÃŸt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
+			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prÃ¼ft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschlieÃŸend zurÃ¼ck. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> kÃ¶nnen umfangreiche Software-Tests implementiert werden.</item>
+			<item node="clc">Dieses Kommando bereinigt das Terminal und setzt es auf den Anfangszustand zurÃ¼ck.</item>
 		</list>
 	</contents>
 </article>
@@ -63,14 +63,14 @@
 			declare SYMBOL := VAL, ...
 			declare enum -&gt; {VAL1, ...}, ...
 		</syntax>
-		Das Kommando <code>declare</code> deklariert eine oder mehrere Datei-spezifische Konstanten für das aktuelle Script oder die aktuelle Prozedurdatei. Die Syntax ist dabei wie folgt, wobei für die Werte sowohl numerische Werte als auch Zeichenketten oder ganze Ausdrücke verwendet werden können.
+		Das Kommando <code>declare</code> deklariert eine oder mehrere Datei-spezifische Konstanten fÃ¼r das aktuelle Script oder die aktuelle Prozedurdatei. Die Syntax ist dabei wie folgt, wobei fÃ¼r die Werte sowohl numerische Werte als auch Zeichenketten oder ganze AusdrÃ¼cke verwendet werden kÃ¶nnen.
 		<codeblock>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</codeblock>
-		Zusätzlich können auch automatisch enumerierte Konstanten erzeugt werden. Dabei können zusätzlich zur automatischen Nummerierung auch ganzzahlige Konstanten oder vorherige Konstanten als Werte verwendet werden. Werte, die keine ganzzahlige Literalkonstanten sind, werden hierbei ignoriert. Entstehen dabei etwaige Offsets, so werden die übernommen und ab diesem Wert weitergezählt:
+		ZusÃ¤tzlich kÃ¶nnen auch automatisch enumerierte Konstanten erzeugt werden. Dabei kÃ¶nnen zusÃ¤tzlich zur automatischen Nummerierung auch ganzzahlige Konstanten oder vorherige Konstanten als Werte verwendet werden. Werte, die keine ganzzahlige Literalkonstanten sind, werden hierbei ignoriert. Entstehen dabei etwaige Offsets, so werden die Ã¼bernommen und ab diesem Wert weitergezÃ¤hlt:
 		<codeblock>
 			declare enum -&gt; {VAL1, VAL2, VAL3, ...}
 			declare enum -&gt; {VAL1 = 10, VAL2, VAL3 = VAL2, ...}
 		</codeblock>
-		Die Werte ersetzen zum Zeitpunkt des Einlesens der Datei die verwendeten Konstanten. In einer Prozedurdatei kann dieses Kommando an jeder Stelle erscheinen (auch außerhalb von Prozeduren) und gilt ab seinem Auftreten für die darauffolgenden Zeilen. Durch die Verwendung von Konstanten kann ein Code sehr viel lesbarer werden, wie bei der Verwendung expliziert Literalkonstanten.
+		Die Werte ersetzen zum Zeitpunkt des Einlesens der Datei die verwendeten Konstanten. In einer Prozedurdatei kann dieses Kommando an jeder Stelle erscheinen (auch auÃŸerhalb von Prozeduren) und gilt ab seinem Auftreten fÃ¼r die darauffolgenden Zeilen. Durch die Verwendung von Konstanten kann ein Code sehr viel lesbarer werden, wie bei der Verwendung expliziert Literalkonstanten.
 	</contents>
 </article>
 
@@ -85,9 +85,9 @@
 			include FILE
 			include FILE :: TYPE
 		</syntax>
-		Mit dem Kommando <code>include</code> können Informationen aus einer externen Datei in die aktuelle ausführbare Datei eingebunden werden:
+		Mit dem Kommando <code>include</code> kÃ¶nnen Informationen aus einer externen Datei in die aktuelle ausfÃ¼hrbare Datei eingebunden werden:
 		<codeblock>include FILE</codeblock>
-		Die Datei <code>FILE</code> wird relativ zur aktuellen Datei gesucht. Dateinamen mit Leerzeichen müssen in Anführungszeichen angegeben werden. Es werden durch dieses Kommando globale Ausdrücke, Definitionen und Deklarationen an dieser Stelle importiert (in Prozedurdateien sollte dieses Kommando daher innerhalb einer Prozedur verwendet werden).
-		Nach einem zusätzlichen <code>::</code> kann die Art die importierten Informationen eingeschränkt werden, z.B.<codeblock>include FILE :: declarations</codeblock>um nur Deklarationen zu importieren. Mit <code>globals</code> werden globale Ausdrücke und mit <code>definitions</code> werden Definitionen importiert. Es können mehrere Argumente zugleich verwendet werden.
+		Die Datei <code>FILE</code> wird relativ zur aktuellen Datei gesucht. Dateinamen mit Leerzeichen mÃ¼ssen in AnfÃ¼hrungszeichen angegeben werden. Es werden durch dieses Kommando globale AusdrÃ¼cke, Definitionen und Deklarationen an dieser Stelle importiert (in Prozedurdateien sollte dieses Kommando daher innerhalb einer Prozedur verwendet werden).
+		Nach einem zusÃ¤tzlichen <code>::</code> kann die Art die importierten Informationen eingeschrÃ¤nkt werden, z.B.<codeblock>include FILE :: declarations</codeblock>um nur Deklarationen zu importieren. Mit <code>globals</code> werden globale AusdrÃ¼cke und mit <code>definitions</code> werden Definitionen importiert. Es kÃ¶nnen mehrere Argumente zugleich verwendet werden.
 	</contents>
 </article>
