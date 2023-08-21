@@ -126,7 +126,7 @@ ellipticD(x,k)~Value of the elliptic integral D(x,k)~elliptisches integral~ellip
 ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral~ellipticPi(
-endswith(STR,STR)~Gives the value True back, when the second Substring is found at the end of the first string. Otherwise, False.~begin end last erstes letztes wort word front back~endswith(
+endswith(STR,STR)~Returns true, if the second substring is found at the end of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~endswith(
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gausssche gaußsche komplementär fehlerfunktion errorfunction erfc()~erfc(
 eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace~help eval
