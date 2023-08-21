@@ -121,6 +121,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICD_[NUM]=					ellipticD(x,k)                   
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICE_[NUM]=					ellipticE(x,k)                                              VAL      - Wert des elliptischen Integrals E(x,k) an der Stelle x mit 0 <= k < 1. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICF_[NUM]=					ellipticF(x,k)                                              VAL      - Wert des elliptischen Integrals F(x,k) an der Stelle x mit 0 <= k < 1. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_ELLIPTICPI_[NUM]=					ellipticPi(x,n,k)                                           VAL      - Wert des elliptischen Integrals Pi(x,n,k) an der Stelle x mit 0 <= k < 1. %%DEFINED_REAL%%
+PARSERFUNCS_LISTFUNC_FUNC_ENDSWITH_[STRING]=				endswith(sStr,sEnd)                                         LOG      - Gibt true zurück, wenn der string sStr mit sEnd endet. Sonst, false.
 PARSERFUNCS_LISTFUNC_FUNC_ERFC_[DISTRIB]=					erfc(x)                                                     VAL      - Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_ERF_[DISTRIB]=					erf(x)                                                      VAL      - Wert der gauß'schen Fehlerfunktion an der Stelle x. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                                 {}       - GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
@@ -283,6 +284,7 @@ PARSERFUNCS_LISTFUNC_FUNC_SOLVE_[MAT]=						solve(mEqSys)                       
 PARSERFUNCS_LISTFUNC_FUNC_SPHERE_[DRAW]=					sphere(P,r,STYLE)                                           {}       - Zeichnet eine Kugel mit Radius r an den Koordinaten P. Die Farbe kann mittels STYLE beeinflusst werden. Die Plotoption light macht den 3D-Effekt sichtbar.
 PARSERFUNCS_LISTFUNC_FUNC_SPLIT_[STRING]=					split(sToSplit,cSep,keepEmpty=false)                       {STR}     - Teilt die Zeichenkette sToSplit an den Zeichen cSep in einzelne Zeichenketten auf. Mit keepEmpty = true werden auch leere Zeichenketten zurückgegeben, anderenfalls werden sie unterdrückt
 PARSERFUNCS_LISTFUNC_FUNC_SQRT_[NUM]=						sqrt(x)                                                     VAL      - Wurzel aus x. %%DEFINED_FOR_ALL%%
+PARSERFUNCS_LISTFUNC_FUNC_STARTSWITH_[STRING]=				startswith(sStr, sStart)                                    LOG      - Gibt true zurück, wenn der string sStr mit sStart beginnt. Sonst, false.
 PARSERFUNCS_LISTFUNC_FUNC_STD_[STATS]=						std(x,y,z,...)                                              VAL      - Standardabweichung von x,y,z,... %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_STRFNDALL_[STRING]=				strfndall(sToFind,sWhere,nPos1=1,nPos2=sWhere.len)         {VAL}     - Gibt alle Positionen, an denen sToFind in sWhere ab dem Zeichen nPos1 bis nPos2 auftritt, zurück. nPos1 und nPos2 sind optionale Startwerte für die erste und letzte Position und standardmäßig ist nPos1 = 1 und nPos2 = strlen(sWhere). Falls nichts gefunden wird, wird false zurückgegeben
 PARSERFUNCS_LISTFUNC_FUNC_STRFND_[STRING]=					strfnd(sToFind,sWhere,nPos=1)                               VAL      - Gibt die Position des ersten Auftretens von sToFind in sWhere ab dem Zeichen nPos zurück. nPos ist ein optionaler Startwert für die erste Position und standardmäßig ist nPos = 1. Falls nichts gefunden wird, wird false zurückgegeben
@@ -363,6 +365,7 @@ PARSERFUNCS_LISTFUNC_METHOD_COUNTIF_[DATA]=					countif({nCols},vals{})         
 PARSERFUNCS_LISTFUNC_METHOD_COVAROF_[DATA]=					covarof(nCol1,nCol2,nRows1={1:nrows},nRows2={1:nrows})      VAL      - Berechnet die Kovarianz der Spalten nCol1 und nCol2. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension
 PARSERFUNCS_LISTFUNC_METHOD_DESCRIBE_[DATA]=				describe(sDesc)                                             STR      - Aktualisiert die Beschreibung der aktuellen Tabelle mit dem Inhalt von sDesc. Bei Erfolg wird sDesc zurückgegeben
 PARSERFUNCS_LISTFUNC_METHOD_DESCRIPTION_[DATA]=				description                                                 STR      - Gibt die Beschreibung der aktuellen Tabelle als Zeichenkette zurück
+PARSERFUNCS_LISTFUNC_METHOD_FIRST_[STRING]=					endsw(sEnd)  	                                            LOG      - Gibt true zurück, wenn der string sStr mit sEnd endet. Sonst, false.
 PARSERFUNCS_LISTFUNC_METHOD_EVERY_[DATA]=					every(nFirst,nIncr=nFirst)                                  {}       - Wählt in Kombination mit .cols oder .rows die erste (nFirst) Spalte/Zeile aus, ab der die Multi-Argumentfunktion angewendet wird. Mittels nIncr kann nur jede nIncr-te Spalte/Zeile ausgewählt werden. Wird nur nFirst vorgegeben, so ist nIncr == nFirst. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für nFirst übergeben wird: every({VEC})
 PARSERFUNCS_LISTFUNC_METHOD_FIRST_[STRING]=					first                                                       STR      - Gibt das erste Zeichen aus einer Zeichenkette zurück
 PARSERFUNCS_LISTFUNC_METHOD_FNDCOLS_[DATA]=					fndcols({sNames})                                          {VAL}     - Gibt die Indices aller Spalten zurück, deren Überschriften mit sNames übereinstimmen. Wird nichts gefunden, wird NaN zurückgegeben
@@ -402,6 +405,7 @@ PARSERFUNCS_LISTFUNC_METHOD_SCORROF_[DATA]=					scorrof(nCol1,nCol2,nRows1={1:nr
 PARSERFUNCS_LISTFUNC_METHOD_SHRINK_[DATA]=					shrink                                                      LOG      - Entfernt leere, anhängende Zellen und Spalten aus der Tabelle, um Speicherplatz zu sparen. Leere Zellen und Spalten, die von validen Daten umschlossen sind, werden beibehalten
 PARSERFUNCS_LISTFUNC_METHOD_SIZE_[DATA]=					size                                                       {VAL}     - Bestimmt die Größe der Tabelle in Zeilen und Spalten. Mit den Modifikatoren .cols (Länge der Spalten), .rows (Länge der Zeilen), .grid und .every() kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_SPLT_[STRING]=					splt(cSep,keepEmpty=false)                                 {STR}     - Teilt die Zeichenkette an den Zeichen cSep in einzelne Zeichenketten auf. Mit keepEmpty = true werden auch leere Zeichenketten zurückgegeben, anderenfalls werden sie unterdrückt
+PARSERFUNCS_LISTFUNC_METHOD_STARTSW_[STRING]=				startsw(sStart)                                             LOG      - Gibt true zurück, wenn der string sStr mit sStart beginnt. Sonst, false.
 PARSERFUNCS_LISTFUNC_METHOD_STD_[DATA]=						std                                                        {VAL}     - Wendet die Multi-Argumentfunktion "std()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_SUB_[STRING]=					sub(nPos,nLen=STRINGVAR.len)                                STR      - Gibt nLen Zeichen ab dem Zeichen nPos aus der Zeichenkette als neue Zeichenkette zurück
 PARSERFUNCS_LISTFUNC_METHOD_SUM_[DATA]=						sum                                                        {VAL}     - Wendet die Multi-Argumentfunktion "sum()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
@@ -650,6 +654,7 @@ GUI_EDITOR_CALLTIP_COMMON_FILEREAD=Dateilesemodus
 GUI_EDITOR_CALLTIP_COMMON_SETTING=Einstellung
 GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR=Option für
 GUI_EDITOR_CALLTIP_COMMON_METHODFOR=Methode für
+GUI_EDITOR_CALLTIP_OPT_ACCUM=counts=accum [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist2d]
 GUI_EDITOR_CALLTIP_OPT_ADDXAXIS=addxaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ADDYAXIS=addyaxis=(MIN,MAX,[LABEL[,COLOR]]) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ADVENTOR=adventor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
@@ -661,6 +666,7 @@ GUI_EDITOR_CALLTIP_OPT_ALPHAMASK=alphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_ANIMATE=animate[=FRAMES] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_APP=mode=app [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_AREA=area [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ASAVG=counts=asavg [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist2d]
 GUI_EDITOR_CALLTIP_OPT_ASGRID=asgrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
 GUI_EDITOR_CALLTIP_OPT_ASPECT=aspect=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_ASSTR=asstr [%%GUI_EDITOR_CALLTIP_COMMON_CONVERSION%%]
@@ -724,6 +730,7 @@ GUI_EDITOR_CALLTIP_OPT_COOLWARM=colorscheme=coolwarm [%%GUI_EDITOR_CALLTIP_COMMO
 GUI_EDITOR_CALLTIP_OPT_COORDS=coords=COORDINATESET [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COPPER=colorscheme=copper [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COUNTLABEL=countlabel=LABEL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_COUNTS=counts=COUNTMETHOD [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist/hist2d]
 GUI_EDITOR_CALLTIP_OPT_CRUST=crust [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% plot3d]
 GUI_EDITOR_CALLTIP_OPT_CSCALE=cscale=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -958,6 +965,7 @@ GUI_EDITOR_CALLTIP_OPT_RECURSIVE=recursive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFO
 GUI_EDITOR_CALLTIP_OPT_REFRESH=refresh [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% edit]
 GUI_EDITOR_CALLTIP_OPT_REGION=region [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_REIM=complexmode=reim [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_RELATIVE=counts=relative [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
 GUI_EDITOR_CALLTIP_OPT_RESET=reset [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RESTRICT=restrict=[RESTRICTIONS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
 GUI_EDITOR_CALLTIP_OPT_RK2=method=rk2 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
@@ -995,6 +1003,7 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
+GUI_EDITOR_CALLTIP_OPT_STOREGRID=storegrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist2d]
 GUI_EDITOR_CALLTIP_OPT_STREAMTO=streamto={WINID,ITEMID} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_STYLE=style=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -1037,7 +1046,7 @@ GUI_EDITOR_CALLTIP_OPT_VLINES=vlines=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_P
 GUI_EDITOR_CALLTIP_OPT_WAIT=wait [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
 GUI_EDITOR_CALLTIP_OPT_WARNICON=icon=warnicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_WEIGHTEDLINEAR=method=weightedlinear [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% smooth]
-GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
+GUI_EDITOR_CALLTIP_OPT_WIDTH=width=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random/hist/hist2d]
 GUI_EDITOR_CALLTIP_OPT_WINDOWSIZE=windowsize [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_WITH=with=FUNCTION(x,PARAMS) [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
 GUI_EDITOR_CALLTIP_OPT_WP=wp=PATH [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% execute]
