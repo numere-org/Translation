@@ -388,7 +388,7 @@ STR.nrmtch(STR,POS)~Searches for the last occurrence of a char in the string up 
 STR.rfnd(STR,POS)~Returns the position of the last occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find last rfnd()~.rfnd(
 STR.rmtch(STR,POS)~Searches for the last occurrence of a char of STR in the string up to position POS~methode strings zeichenketten find last rmtch()~.rmtch(
 STR.splt(CHAR,KEEP)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten unterteilen tokenizer zerlegen splt()~.splt(
-STR.startsw(STR)~Gives the value True back, when the second Substring is found at the start of the first string. Otherwise, False.~begin end last erstes letztes wort word front back~.startsw(
+STR.startsw(STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~.startsw(
 STR.sub(POS,LEN)~Returns LEN characters starting with the letter POS from the string as a new string~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
