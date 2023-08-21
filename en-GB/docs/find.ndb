@@ -126,6 +126,7 @@ ellipticD(x,k)~Value of the elliptic integral D(x,k)~elliptisches integral~ellip
 ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral~ellipticPi(
+endswith(STR,STR)~Returns true, if the second substring is found at the end of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~endswith(
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gausssche gaußsche komplementär fehlerfunktion errorfunction erfc()~erfc(
 eval~Calculates function values of the passend Expression at distinct points (samples)~funktionswerte ausdruck stuetzstellen stützstellen samples linspace~help eval
@@ -369,12 +370,14 @@ spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfun
 split(STR,CHAR,KEEP)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
+startswith(STR,STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~startswith(
 statictext~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
 std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz variance stats statistiken std()~std(
 stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
 str~Defines the local string variables in a procedure~procedure local strings~help str
 STR.at(POS)~Return the character at the position POS in the string~methode strings zeichenketten character at()~.at(
+STR.endsw(STR)~Returns true, if the second substring is found at the end of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~.endsw(
 STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find fnd()~.fnd(
 STR.first~Returns the first character of a string first()~begin end last erstes letztes zeichen front back~.first(
 STR.last~Returns the last character of a string~begin end last erstes letztes zeichen front back~.last(
@@ -385,6 +388,7 @@ STR.nrmtch(STR,POS)~Searches for the last occurrence of a char in the string up 
 STR.rfnd(STR,POS)~Returns the position of the last occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find last rfnd()~.rfnd(
 STR.rmtch(STR,POS)~Searches for the last occurrence of a char of STR in the string up to position POS~methode strings zeichenketten find last rmtch()~.rmtch(
 STR.splt(CHAR,KEEP)~Splits the string at the characters CHAR in separate strings~methode strings zeichenketten unterteilen tokenizer zerlegen splt()~.splt(
+STR.startsw(STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~.startsw(
 STR.sub(POS,LEN)~Returns LEN characters starting with the letter POS from the string as a new string~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
 str_not_match(S1,S2,P)~Searches for the first occurrence of a char in the string S2 going from position P, which doesn't appear in S1~zeichenketten strings find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Searches for the last occurrence of a char in the string S2 up to position P, which doesn't appear in S1~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
