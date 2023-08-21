@@ -389,7 +389,7 @@ STR.nrmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkett
 STR.rfnd(STR,POS)~Gibt die Position des letzten Auftretens von STR in der Zeichenkette bis zum Zeichen POS zurück~methode strings zeichenketten find last rfnd()~.rfnd(
 STR.rmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens aus STR in der Zeichenkette bis zum Zeichen POS~methode strings zeichenketten find last rmtch()~.rmtch(
 STR.splt(CHAR,KEEP)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten unterteilen tokenizer zerlegen splt() tokens~.splt(
-STR.startsw(STR)~Gibt den Wert, True zurück, wenn der zweite Substring am Anfang des Strings gefunden wurde, sonst False~begin end last erstes letztes wort word front back~.startsw(
+STR.startsw(STR)~Gibt true zurück, wenn der zweite Substring am Anfang des Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~.startsw(
 STR.sub(POS,LEN)~Gibt LEN Zeichen ab dem Zeichen POS aus der Zeichenkette als neue Zeichenkette zurück~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
 str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings find str_not_match()~str_not_match(
 str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
