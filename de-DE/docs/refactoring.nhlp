@@ -23,10 +23,10 @@
 		<keyword>rename</keyword>
 	</keywords>
 	<contents>
-		NumeRe kann beim Überarbeiten von Code-Abschnitten unterstützen. Dazu stellt NumeRe neben dem <a href="nhlp://analyzer?frame=new">Code-Analyzer</a> die folgenden Funktionen über das Kontextmenü des Editors zur Verfügung:
+		NumeRe kann beim Ãœberarbeiten von Code-Abschnitten unterstÃ¼tzen. Dazu stellt NumeRe neben dem <a href="nhlp://analyzer?frame=new">Code-Analyzer</a> die folgenden Funktionen Ã¼ber das KontextmenÃ¼ des Editors zur VerfÃ¼gung:
 		<list>
-			<item node="Symbole umbenennen">Diese Funktion erlaubt es, jedes Auftreten des aktuellen Symbols mit einem neuen Namen umzubenennen. Dabei wird der Wirkungsbereich (der sogenannte <em>Scope</em>) des Symbols berücksichtigt und das Symbol nur innerhalb dieses Wirkungsbereiches umbenannt.</item>
-			<item node="Abschnitte extrahieren">Hiermit kann ein markierter Code-Abschnitt in eine eigene Prozedur extrahiert werden. NumeRe wird dabei ein neues Fenster öffnen, in dem die neue Prozedur angezeigt wird und weiter bearbeitet werden kann. Es muss beachtet werden, dass die bestimmten Prozedur-Interfaces auf Basis einer Heuristik extrahiert werden. Es kann dabei zu Fehlern kommen.</item>
+			<item node="Symbole umbenennen">Diese Funktion erlaubt es, jedes Auftreten des aktuellen Symbols mit einem neuen Namen umzubenennen. Dabei wird der Wirkungsbereich (der sogenannte <em>Scope</em>) des Symbols berÃ¼cksichtigt und das Symbol nur innerhalb dieses Wirkungsbereiches umbenannt.</item>
+			<item node="Abschnitte extrahieren">Hiermit kann ein markierter Code-Abschnitt in eine eigene Prozedur extrahiert werden. NumeRe wird dabei ein neues Fenster Ã¶ffnen, in dem die neue Prozedur angezeigt wird und weiter bearbeitet werden kann. Es muss beachtet werden, dass die bestimmten Prozedur-Interfaces auf Basis einer Heuristik extrahiert werden. Es kann dabei zu Fehlern kommen.</item>
 		</list>
 	</contents>
 </article>

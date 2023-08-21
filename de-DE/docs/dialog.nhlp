@@ -48,34 +48,34 @@
 			{RESULT} = dialog {VAL} -set type=listeditor msg=MESSAGE title=TITLE
 			{RESULT} = dialog {VAL} -set type=selectiondialog msg=MESSAGE title=TITLE
 		</syntax>
-		NumeRe kann mehrere Typen von Dialogen erzeugen, mit denen graphisch mit dem Nutzer interagiert werden kann. Ein Dialog wird mit dem Kommando <code>dialog</code> generiert. Hierauf folgen Standardwerte und eine Reihe an Optionen. Generisch hat das Kommando die folgende Syntax:<codeblock>dialog STANDARDWERTE -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>Die Auswahl des Benutzers oder der Wert der geklickten Schaltfläche wird als Zeichenkette(n) zurückgegeben. Eine leere Zeichenkette ist dabei gleichbedeutend zu einem Klick auf die "Abbruch"-Schaltfläche.
+		NumeRe kann mehrere Typen von Dialogen erzeugen, mit denen graphisch mit dem Nutzer interagiert werden kann. Ein Dialog wird mit dem Kommando <code>dialog</code> generiert. Hierauf folgen Standardwerte und eine Reihe an Optionen. Generisch hat das Kommando die folgende Syntax:<codeblock>dialog STANDARDWERTE -set type=TYPE msg=STRING title=STRING icon=ICON buttons=BUTTONS</codeblock>Die Auswahl des Benutzers oder der Wert der geklickten SchaltflÃ¤che wird als Zeichenkette(n) zurÃ¼ckgegeben. Eine leere Zeichenkette ist dabei gleichbedeutend zu einem Klick auf die "Abbruch"-SchaltflÃ¤che.
 		<em>Wichtig:</em> ein Dialog unterbricht die Auswertung von NumeRe. NumeRe wird erst fortfahren, wenn der Nutzer den Dialog geschlossen hat. Ein Dialog eignet sich daher nicht, um den Status einer Auswertung oder vergleichbares darzustellen.
-		Der Typ des Dialogs wird durch <code>type=TYPE</code> vorgegeben. Hier sind die folgenden Werte möglich:
+		Der Typ des Dialogs wird durch <code>type=TYPE</code> vorgegeben. Hier sind die folgenden Werte mÃ¶glich:
 		<list>
-			<item node="messagebox">Zeigt eine Messagebox an (Standard). Diese kann verwendet werden, um den Nutzer über irgendetwas zu informieren oder eine ja/nein-Entscheidung einzufordern. Die Messagebox benötigt keinen Standardwert. Außerdem können hier angezeigtes Icon und die Schaltflächen modifiziert werden (siehe unten). Der Rückgabewert dieses Dialogtyps ist von diesen Schaltflächen abhängig.</item>
-			<item node="textentry">Zeigt ein Fenster mit der Möglichkeit einer Texteingabe an. Der Standardwert wird dabei in der entsprechenden Zeile angezeigt.</item>
-			<item node="filedialog">Öffnet ein Dateiauswahlfenster an, in dem eine Datei ausgewählt werden kann, deren Dateipfad dann als Rückgabewert verfügbar ist. Für den Standardwert können bis zu drei Zeichenketten angeben werden, wobei die erste Zeichenkette das Startverzeichnis, die zweite den Standarddateinamen und die dritte eine Dateitypmaske definiert. Die Maske setzt sich dabei aus einer Beschreibung und dem entsprechenden Filter zusammen: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> Der Filter kann Wildcards und mehrere Filterausdrücke zugleich enthalten, z.B. <code>"Textdateien|*.txt|Projektdateien|*.xml;*.txt;*.ini"</code>. Bricht der Nutzer diesen Dialog ab, wird eine leere Zeichenkette zurückgegeben.</item>
-			<item node="dirdialog">Öffnet ein Verzeichnisauswahlfenster an, in dem ein Verzeichnis ausgewählt werden kann, dessen Dateipfad dann als Rückgabewert verfügbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
-			<item node="listdialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine auswählen kann. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
-			<item node="listeditor">Zeigt eine Liste an Zeichenketten an, deren Inhalt der Nutzer durch Doppelklicken bearbeiten kann. Die aktualisierten Zeichenketten werden als Zeichenkettenvektor zurückgegeben. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
-			<item node="selectiondialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine oder mehrere auswählen kann, welche als Zeichenkettenvektor zurückgegeben werden. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
+			<item node="messagebox">Zeigt eine Messagebox an (Standard). Diese kann verwendet werden, um den Nutzer Ã¼ber irgendetwas zu informieren oder eine ja/nein-Entscheidung einzufordern. Die Messagebox benÃ¶tigt keinen Standardwert. AuÃŸerdem kÃ¶nnen hier angezeigtes Icon und die SchaltflÃ¤chen modifiziert werden (siehe unten). Der RÃ¼ckgabewert dieses Dialogtyps ist von diesen SchaltflÃ¤chen abhÃ¤ngig.</item>
+			<item node="textentry">Zeigt ein Fenster mit der MÃ¶glichkeit einer Texteingabe an. Der Standardwert wird dabei in der entsprechenden Zeile angezeigt.</item>
+			<item node="filedialog">Ã–ffnet ein Dateiauswahlfenster an, in dem eine Datei ausgewÃ¤hlt werden kann, deren Dateipfad dann als RÃ¼ckgabewert verfÃ¼gbar ist. FÃ¼r den Standardwert kÃ¶nnen bis zu drei Zeichenketten angeben werden, wobei die erste Zeichenkette das Startverzeichnis, die zweite den Standarddateinamen und die dritte eine Dateitypmaske definiert. Die Maske setzt sich dabei aus einer Beschreibung und dem entsprechenden Filter zusammen: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> Der Filter kann Wildcards und mehrere FilterausdrÃ¼cke zugleich enthalten, z.B. <code>"Textdateien|*.txt|Projektdateien|*.xml;*.txt;*.ini"</code>. Bricht der Nutzer diesen Dialog ab, wird eine leere Zeichenkette zurÃ¼ckgegeben.</item>
+			<item node="dirdialog">Ã–ffnet ein Verzeichnisauswahlfenster an, in dem ein Verzeichnis ausgewÃ¤hlt werden kann, dessen Dateipfad dann als RÃ¼ckgabewert verfÃ¼gbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurÃ¼ckgegeben.</item>
+			<item node="listdialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine auswÃ¤hlen kann. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurÃ¼ckgegeben.</item>
+			<item node="listeditor">Zeigt eine Liste an Zeichenketten an, deren Inhalt der Nutzer durch Doppelklicken bearbeiten kann. Die aktualisierten Zeichenketten werden als Zeichenkettenvektor zurÃ¼ckgegeben. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurÃ¼ckgegeben.</item>
+			<item node="selectiondialog">Zeigt eine Liste an Zeichenketten an, aus denen der Nutzer eine oder mehrere auswÃ¤hlen kann, welche als Zeichenkettenvektor zurÃ¼ckgegeben werden. Die Zeichenketten sind dabei als Standardwerte anzugeben. Bricht der Nutzer ab, wird eine leere Zeichenkette zurÃ¼ckgegeben.</item>
 		</list>
-		Der Optionswert <code>msg=STRING</code> zeigt STRING als informative Nachricht im öffnenden Dialog an. <code>filedialog</code> und <code>dirdialog</code> unterstützen dies jedoch nicht. Durch <code>title=STRING</code> kann des Weiteren die Titelzeile des Fensters modifiziert werden.
-		Für den Typ <code>messagebox</code> kann das angezeigte Icon und die verwendeten Schaltflächen modifiziert werden. Für <code>icon=ICON</code> sind die folgenden Werte verfügbar:
+		Der Optionswert <code>msg=STRING</code> zeigt STRING als informative Nachricht im Ã¶ffnenden Dialog an. <code>filedialog</code> und <code>dirdialog</code> unterstÃ¼tzen dies jedoch nicht. Durch <code>title=STRING</code> kann des Weiteren die Titelzeile des Fensters modifiziert werden.
+		FÃ¼r den Typ <code>messagebox</code> kann das angezeigte Icon und die verwendeten SchaltflÃ¤chen modifiziert werden. FÃ¼r <code>icon=ICON</code> sind die folgenden Werte verfÃ¼gbar:
 		<list>
 			<item node="infoicon">Zeigt ein normales Ausrufezeichen-Icon an (Standard)</item>
 			<item node="questionicon">Zeigt ein Fragezeichen-Icon an</item>
 			<item node="warnicon">Zeigt ein gelbes Warnschild-Icon an</item>
 			<item node="erroricon">Zeigt ein rotes Fehler-Icon an</item>
 		</list>
-		Für <code>buttons=BUTTONS</code> kann folgendes angegeben werden:
+		FÃ¼r <code>buttons=BUTTONS</code> kann folgendes angegeben werden:
 		<list>
-			<item node="ok">Zeigt eine "OK"-Schaltfläche an (Standard). In einer Messagebox hat diese Schaltfläche den Wert <code>"ok"</code></item>
-			<item node="okcancel">Zeigt eine "OK"- und eine "Abbruch"-Schaltfläche an. In einer Messagebox haben diese Schaltflächen die Werte <code>"ok"</code> und <code>"cancel"</code></item>
-			<item node="yesno">Zeigt eine "Ja"- und eine "Nein"-Schaltfläche an. Hier wird außerdem auch automatisch das Fragezeichen-Icon verwendet. In einer Messagebox haben diese Schaltflächen die Werte <code>"yes"</code> und <code>"no"</code></item>
+			<item node="ok">Zeigt eine "OK"-SchaltflÃ¤che an (Standard). In einer Messagebox hat diese SchaltflÃ¤che den Wert <code>"ok"</code></item>
+			<item node="okcancel">Zeigt eine "OK"- und eine "Abbruch"-SchaltflÃ¤che an. In einer Messagebox haben diese SchaltflÃ¤chen die Werte <code>"ok"</code> und <code>"cancel"</code></item>
+			<item node="yesno">Zeigt eine "Ja"- und eine "Nein"-SchaltflÃ¤che an. Hier wird auÃŸerdem auch automatisch das Fragezeichen-Icon verwendet. In einer Messagebox haben diese SchaltflÃ¤chen die Werte <code>"yes"</code> und <code>"no"</code></item>
 		</list>
-		<example desc="Anzeigen eines listdialogs mit auswählbaren Optionen:">
-			sOption = dialog "Quadrat", "Ring", "Linie" -set type=listdialog title="Auswahl der Geometrie" msg="Bitte wähle die aktuelle Geometrie aus:"
+		<example desc="Anzeigen eines listdialogs mit auswÃ¤hlbaren Optionen:">
+			sOption = dialog "Quadrat", "Ring", "Linie" -set type=listdialog title="Auswahl der Geometrie" msg="Bitte wÃ¤hle die aktuelle Geometrie aus:"
 		</example>
 		<img src="<>/docs/dialog.png" />
 		<em>Siehe auch:</em> <a href="nhlp://window?frame=self">help window</a>

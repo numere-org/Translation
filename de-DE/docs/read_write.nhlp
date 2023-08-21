@@ -38,16 +38,16 @@
 			write {VAL} -set file=FILE
 			write {VAL} -set file=FILE mode=MODE ...
 		</syntax>
-		NumeRe kann (abgesehen von Datenfiles) auch <em>direkt</em> auf den Inhalt von Dateien zugreifen und diesen ändern. Dies kann z.B. genutzt werden, um eine Art Logbuch zu schreiben oder Einstellungen für Prozeduren oder Plugins zu speichern.
-		Inhalte aus Dateien können mittels des Kommandos <code>read DATEI</code> gelesen werden. Dabei liest dieses Kommando die gesamte Datei zeilenweise ein und gibt diese Zeilen als einzelne Zeichenketten zurück. Leerzeilen werden dabei standardmäßig ignoriert. Die eingelesenen Zeichenketten können direkt an das <code>string()</code>-Objekt zugewiesen werden:<codeblock>string() = read DATEI</codeblock>
-		Wenn die Datei Kommentare enthält, die ignoriert werden sollen und durch eine bestimmte Zeichensequenz markiert sind, dann kann diese mittels der Option <code>comments=ZEICHENSEQUENZ</code> bzw. mittels <code>comments={LC, BCS, BCE}</code> für Zeilenkommentare und die Start- und Endzeichensequenzen von Kommentarblöcken übergeben werden. Für NumeRe-Code würde man beispielsweise <code>comments={"##", "#*", "*#"}</code> verwenden. Zusammen mit den Zeichensequenzen für Kommentare kann auch das Zeichen für Zeichenketten mit der Option <code>qmarks=ZEICHEN</code> vorgegeben werden, z.B. <code>qmarks="\""</code> für NumeRe-Code.
-		Um Inhalte in Dateien zu schreiben, muss das Kommando <code>write</code> verwendet werden:<codeblock>write INHALT -set file=DATEI</codeblock>Besteht INHALT aus mehreren Zeichenketten, so werden diese als einzelne Zeilen in die Datei DATEI geschrieben. Als Zieldateien werden die NumeRe-eigenen Dateitypen (NumeRe-Script, NumeRe-Prozedur und NumeRe-Datenfile) aus Sicherheitsgründen unterdrückt.
-		Wird der optionale Parameter <code>-noquotes</code> (bzw. <code>-nq</code>) verwendet, werden die Anführungszeichen in der Ausgabedatei unterdrückt. 
-		Sowohl <code>read</code> als auch <code>write</code> können Leerzeilen beibehalten, wenn der Parameter <code>-keepdim</code> (oder <code>-k</code>) verwendet wird. Außerdem kann <code>write</code> mit dem optionalen Parameter <code>-mode=MODE</code> versehen werden, der bestimmt, wie INHALT in die Datei geschrieben wird:
+		NumeRe kann (abgesehen von Datenfiles) auch <em>direkt</em> auf den Inhalt von Dateien zugreifen und diesen Ã¤ndern. Dies kann z.B. genutzt werden, um eine Art Logbuch zu schreiben oder Einstellungen fÃ¼r Prozeduren oder Plugins zu speichern.
+		Inhalte aus Dateien kÃ¶nnen mittels des Kommandos <code>read DATEI</code> gelesen werden. Dabei liest dieses Kommando die gesamte Datei zeilenweise ein und gibt diese Zeilen als einzelne Zeichenketten zurÃ¼ck. Leerzeilen werden dabei standardmÃ¤ÃŸig ignoriert. Die eingelesenen Zeichenketten kÃ¶nnen direkt an das <code>string()</code>-Objekt zugewiesen werden:<codeblock>string() = read DATEI</codeblock>
+		Wenn die Datei Kommentare enthÃ¤lt, die ignoriert werden sollen und durch eine bestimmte Zeichensequenz markiert sind, dann kann diese mittels der Option <code>comments=ZEICHENSEQUENZ</code> bzw. mittels <code>comments={LC, BCS, BCE}</code> fÃ¼r Zeilenkommentare und die Start- und Endzeichensequenzen von KommentarblÃ¶cken Ã¼bergeben werden. FÃ¼r NumeRe-Code wÃ¼rde man beispielsweise <code>comments={"##", "#*", "*#"}</code> verwenden. Zusammen mit den Zeichensequenzen fÃ¼r Kommentare kann auch das Zeichen fÃ¼r Zeichenketten mit der Option <code>qmarks=ZEICHEN</code> vorgegeben werden, z.B. <code>qmarks="\""</code> fÃ¼r NumeRe-Code.
+		Um Inhalte in Dateien zu schreiben, muss das Kommando <code>write</code> verwendet werden:<codeblock>write INHALT -set file=DATEI</codeblock>Besteht INHALT aus mehreren Zeichenketten, so werden diese als einzelne Zeilen in die Datei DATEI geschrieben. Als Zieldateien werden die NumeRe-eigenen Dateitypen (NumeRe-Script, NumeRe-Prozedur und NumeRe-Datenfile) aus SicherheitsgrÃ¼nden unterdrÃ¼ckt.
+		Wird der optionale Parameter <code>-noquotes</code> (bzw. <code>-nq</code>) verwendet, werden die AnfÃ¼hrungszeichen in der Ausgabedatei unterdrÃ¼ckt. 
+		Sowohl <code>read</code> als auch <code>write</code> kÃ¶nnen Leerzeilen beibehalten, wenn der Parameter <code>-keepdim</code> (oder <code>-k</code>) verwendet wird. AuÃŸerdem kann <code>write</code> mit dem optionalen Parameter <code>-mode=MODE</code> versehen werden, der bestimmt, wie INHALT in die Datei geschrieben wird:
 		<list>
-			<item node="app">hängt INHALT an die vorhandenen Inhalte an</item>
-			<item node="overwrite">überschreibt die Datei zeichenweise</item>
-			<item node="trunc">entfernt zunächst alle Inhalte der Datei</item>
+			<item node="app">hÃ¤ngt INHALT an die vorhandenen Inhalte an</item>
+			<item node="overwrite">Ã¼berschreibt die Datei zeichenweise</item>
+			<item node="trunc">entfernt zunÃ¤chst alle Inhalte der Datei</item>
 		</list>
 		Per Default ist <code>trunc</code> aktiviert.
 	</contents>

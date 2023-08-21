@@ -17,7 +17,7 @@
 -->
 
 <article id="2dplots">
-	<title string="Gitter-, Kontur-, Dichte- oder Flächenplots" idxkey="cont, dens, mesh, surf" />
+	<title string="Gitter-, Kontur-, Dichte- oder FlÃ¤chenplots" idxkey="cont, dens, mesh, surf" />
 	<keywords>
 		<keyword>cont</keyword>
 		<keyword>dens</keyword>
@@ -58,38 +58,38 @@
 			dens f(x,y), ...
 			dens f(x,y) "LEGEND", ... -set clog ...
 		</syntax>
-		Die Kommandos <code>mesh</code>, <code>cont</code>, <code>dens</code> bzw. <code>surf</code> ermöglichen Darstellungen von Funktionen der Form <expr>z = f(x,y)</expr>, also Funktionen, deren <expr>z</expr>-Koordinate durch eine Funktion von <expr>x</expr> und <expr>y</expr> gegeben ist. <code>mesh</code> erzeugt dabei einen Gitter-, <code>cont</code> ein Konturlinien- (Niveaulinien-), <code>dens</code> einen Dichte- (Farben entsprechen <expr>z</expr>-Werten) und <code>surf</code> einen Oberflächenplot.
+		Die Kommandos <code>mesh</code>, <code>cont</code>, <code>dens</code> bzw. <code>surf</code> ermÃ¶glichen Darstellungen von Funktionen der Form <expr>z = f(x,y)</expr>, also Funktionen, deren <expr>z</expr>-Koordinate durch eine Funktion von <expr>x</expr> und <expr>y</expr> gegeben ist. <code>mesh</code> erzeugt dabei einen Gitter-, <code>cont</code> ein Konturlinien- (Niveaulinien-), <code>dens</code> einen Dichte- (Farben entsprechen <expr>z</expr>-Werten) und <code>surf</code> einen OberflÃ¤chenplot.
 		Plotvariablen sind <expr>x</expr> und <expr>y</expr>. Alle anderen Variablen werden als Parameter betrachtet.
-		Um Datensätze mit diesen Kommandos darzustellen, müssen diese in Form eines Datengitters vorliegen. Ein solches kann mit <code>datagrid</code> aus einem Datensatz erzeugt werden. Siehe <a href="nhlp://datagrid?frame=new">help datagrid</a> für die entsprechenden Erläuterungen zu dieser Funktion.
-		Dieser Plot-Modus führt ein drittes Intervall ein, das als Option beeinflusst werden kann, also <code>[x1:x2,y1:y2,z1:z2]</code>.
-		Zusätzliche Parameter für <code>mesh</code>, <code>cont</code>, <code>dens</code> und <code>surf</code> sind die folgenden:
+		Um DatensÃ¤tze mit diesen Kommandos darzustellen, mÃ¼ssen diese in Form eines Datengitters vorliegen. Ein solches kann mit <code>datagrid</code> aus einem Datensatz erzeugt werden. Siehe <a href="nhlp://datagrid?frame=new">help datagrid</a> fÃ¼r die entsprechenden ErlÃ¤uterungen zu dieser Funktion.
+		Dieser Plot-Modus fÃ¼hrt ein drittes Intervall ein, das als Option beeinflusst werden kann, also <code>[x1:x2,y1:y2,z1:z2]</code>.
+		ZusÃ¤tzliche Parameter fÃ¼r <code>mesh</code>, <code>cont</code>, <code>dens</code> und <code>surf</code> sind die folgenden:
 		<list>
 			<item node="clog/noclog">Farbschema logarithmisch skalieren</item>
 			<item node="colorbar/nocolorbar">Farbskala ein-/ausschalten</item>
 			<item node="colorrange=C1:C2">Das Intervall der Farbskala auf [C1,C2] anpassen</item>
-			<item node="colorscheme=SCHEMA">Das Farbschema SCHEMA wählen. Einige vordefinierte Schemata sind <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> und <code>map</code>. Siehe <a href="nhlp://colors?frame=new">help colors</a> für weitere Schemata</item>
+			<item node="colorscheme=SCHEMA">Das Farbschema SCHEMA wÃ¤hlen. Einige vordefinierte Schemata sind <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> und <code>map</code>. Siehe <a href="nhlp://colors?frame=new">help colors</a> fÃ¼r weitere Schemata</item>
 			<item node="cscale=WERT">Skalierungsfaktor WERT der Farbskala angeben</item>
-			<item node="cticklabels=LABELS">Selbstdefinierte Farbskalenskalierung festlegen. Die Skaleneinheiten werden äquidistant verteilt. Die LABELS sind als Zeichenkette anzugeben, wobei die Skalenwerte durch "\\n" voneinander getrennt sein müssen.</item>
+			<item node="cticklabels=LABELS">Selbstdefinierte Farbskalenskalierung festlegen. Die Skaleneinheiten werden Ã¤quidistant verteilt. Die LABELS sind als Zeichenkette anzugeben, wobei die Skalenwerte durch "\\n" voneinander getrennt sein mÃ¼ssen.</item>
 			<item node="cticks=FORMAT">Die Formatierung der Farbskalenbeschriftung auf FORMAT setzen. Siehe auch <a href="nhlp://ticks?frame=new">help ticks</a></item>
-			<item node="fcont=NUM/<br/>  nofcont">Farbliche Konturfüllung aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
-			<item node="lcont=NUM/<br/>  nolcont">Mit Werten versehene Konturen aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
-			<item node="orthoproject/<br/>  noorthoproject">Orthogonale Projektion von 2D- und 3D-Plots auf xy-, xz- und yz-Ebene ein-/ausschalten. Erzeugt alle vier Plots als Unterplots in der gewünschten Ausgabedatei. Verfügbar für Oberflächen- und Gitterplots, sowie 3D-Trajektorien und 3D-Vektorfelder.</item>
-			<item node="pcont=NUM/<br/>  nopcont">Konturprojektion auf die untere Ebene aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geändert werden</item>
+			<item node="fcont=NUM/<br/>  nofcont">Farbliche KonturfÃ¼llung aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geÃ¤ndert werden</item>
+			<item node="lcont=NUM/<br/>  nolcont">Mit Werten versehene Konturen aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geÃ¤ndert werden</item>
+			<item node="orthoproject/<br/>  noorthoproject">Orthogonale Projektion von 2D- und 3D-Plots auf xy-, xz- und yz-Ebene ein-/ausschalten. Erzeugt alle vier Plots als Unterplots in der gewÃ¼nschten Ausgabedatei. VerfÃ¼gbar fÃ¼r OberflÃ¤chen- und Gitterplots, sowie 3D-Trajektorien und 3D-Vektorfelder.</item>
+			<item node="pcont=NUM/<br/>  nopcont">Konturprojektion auf die untere Ebene aus-/einschalten. Mit dem optionalen Wert NUM kann die Zahl der Konturlinien- geÃ¤ndert werden</item>
 			<item node="rotate=THETA,PHI">Die Ansicht des Graphen um die Winkel PHI und THETA drehen. PHI dreht den Graphen um die <expr>z</expr>-Achse und THETA kippt ihn</item>
 		</list>
-		<code>lcont</code> verwendet bei den Kommandos <code>mesh</code> und <code>surf</code> automatisch die zugehörigen Konturlinienstile. Im Falle von <code>cont</code> sind sie entsprechend dem <expr>z</expr>-Wert gefärbt.
-		Die Option <code>rotate</code> benötigt nicht zwingend zwei Winkel. Es kann auch nur der zu ändernde Winkel mittels <code>rotate=THETA,</code> bzw. <code>rotate=,PHI</code> angegeben werden. Das Komma ist dabei allerdings essentiell. Die Standardwinkel sind THETA=60 und PHI=115.
-		Für <code>mesh</code> und <code>surf</code> existiert noch die spezielle Option <code>cut/nocut</code>, die die beiden nach vorne gewandten Oktanten aus- bzw. einblendet und dadurch den Blick auf das Zentrum des Plots sichtbar machen kann.
-		Für das Kommando <code>surf</code> gibt es noch zwei zusätzliche Optionen, die aktiviert werden können:
+		<code>lcont</code> verwendet bei den Kommandos <code>mesh</code> und <code>surf</code> automatisch die zugehÃ¶rigen Konturlinienstile. Im Falle von <code>cont</code> sind sie entsprechend dem <expr>z</expr>-Wert gefÃ¤rbt.
+		Die Option <code>rotate</code> benÃ¶tigt nicht zwingend zwei Winkel. Es kann auch nur der zu Ã¤ndernde Winkel mittels <code>rotate=THETA,</code> bzw. <code>rotate=,PHI</code> angegeben werden. Das Komma ist dabei allerdings essentiell. Die Standardwinkel sind THETA=60 und PHI=115.
+		FÃ¼r <code>mesh</code> und <code>surf</code> existiert noch die spezielle Option <code>cut/nocut</code>, die die beiden nach vorne gewandten Oktanten aus- bzw. einblendet und dadurch den Blick auf das Zentrum des Plots sichtbar machen kann.
+		FÃ¼r das Kommando <code>surf</code> gibt es noch zwei zusÃ¤tzliche Optionen, die aktiviert werden kÃ¶nnen:
 		<list>
-			<item node="alpha=VAL/<br/>  noalpha">Oberflächen-Transparenz aus-/einschalten. Die Stärke der Transparenz (0 = keine, 1 = vollständig transparent) kann mit dem optionalen Wert VAL angegeben werden</item>
+			<item node="alpha=VAL/<br/>  noalpha">OberflÃ¤chen-Transparenz aus-/einschalten. Die StÃ¤rke der Transparenz (0 = keine, 1 = vollstÃ¤ndig transparent) kann mit dem optionalen Wert VAL angegeben werden</item>
 			<item node="alphamask/<br/>  noalphamask">Surf-Transparenz entsprechend eines zweiten Datensatzes/Funktion berechnen.</item>
-			<item node="colormask/<br/>  nocolormask">Die Oberfläche entsprechend eines zweiten Datensatzes/Funktion färben. Die Farbskala muss ggf. mittels <code>colorrange=c1:c2</code> angepasst werden</item>
+			<item node="colormask/<br/>  nocolormask">Die OberflÃ¤che entsprechend eines zweiten Datensatzes/Funktion fÃ¤rben. Die Farbskala muss ggf. mittels <code>colorrange=c1:c2</code> angepasst werden</item>
 			<item node="light[=TYP]/<br/>  nolight">plastischen 3D-Lichteffekt aus-/einschalten. TYP ist optional: TYP=smooth oder TYP=soft schalten auf weicheres Licht um</item>
 		</list>
-		<example desc="Oberflächenplot einer Gaußglocke mit den Optionen <code>box light opng=gauss</code>:" type="verbatim">
+		<example desc="OberflÃ¤chenplot einer GauÃŸglocke mit den Optionen <code>box light opng=gauss</code>:" type="verbatim">
 			|&lt;- surf exp(-(x^2+y^2)/5) -set box light opng=gauss
-			|-&gt; Berechne Daten für 2D-Oberflächen-Plot ...
+			|-&gt; Berechne Daten fÃ¼r 2D-OberflÃ¤chen-Plot ...
 			|-&gt; Speichern ... Erfolg!
 			|   Gespeichert unter "&PLOTPATH&/gauss.png"
 		</example>
