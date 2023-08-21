@@ -370,7 +370,7 @@ spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfun
 split(STR,CHAR,KEEP)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
-startswith~Gives the value True back, when the second Substring is found at the start of the first string. Otherwise, False.~begin end last erstes letztes wort word front back~startswith(
+startswith(STR,STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~startswith(
 statictext~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 stats~Calculates the statistics of the passed data set~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
 std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz variance stats statistiken std()~std(
