@@ -168,6 +168,7 @@ gauss(x0,x1)~Generates a (real and normal distributed) random number, with the d
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
+getfilediff(STR,STR)~Calculates the linewise differences between the files~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
 getfileinfo(STR)~Returns meta information about the specified file in sFilePath as a key-value list~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
 getfilelist(STR,T)~Returns a list of strings containing all files matching to the naming scheme STR~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
 getfileparts(sFilePath)~Splits the sFilePath into drive, file path, file name and extension~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
@@ -435,7 +436,7 @@ TAB().countif({n},v{})~Counts the element matching to the passed values~countif(
 TAB().covarof(n,m,{r1},{r2})~Calculates the covariance of the columns~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Updates the description of the table~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Returns the description of the table~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
-TAB().fndcols({STR})~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
+TAB().fndcols({STR},l)~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().insertcells(r,c,r1,c1)~Inserts a block of cells into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
 TAB().insertcols(c,n)~Inserts columns into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
