@@ -62,8 +62,8 @@
 			<item node="method=METHOD">Die Methode zur Bestimmung der Binbreite ändern. Standardmäßig ist dies die <em>Sturges-Regel</em>, mit <code>method=scott</code> wird die <em>Scott-Regel</em> und mit <code>method=freedman</code> wird die <em>Freedman-Diaconis-Regel</em> verwendet</item>
 			<item node="xlabel=LABEL">Beschriftung der <expr>x</expr>-Achse festlegen. Für die anderen Achsen existieren entsprechend <code>ylabel</code> und <code>zlabel</code>.</item>
 		</list>
-		<example desc="Histogramm der Spalten 1-3 eines Datenfiles mit je 64 Bins, wobei die Ausgabe nach 'histo.dat' gespeichert werden soll:">
-			hist data(:,1:3) -set bins=64 file=histo
+		<example desc="Histogramm der Spalten 1-3 eines Datenfiles mit insgesamt 32 Bins, <code>aspect=8/3</code> und einer umfassenden Box, wobei die Ausgabe nach 'histo.dat' gespeichert werden soll:">
+			hist data(:,1:3) -set bins=32 box aspect=8/3 file=histo
 		</example>
 		<img src="<>/docs/dochist.png" />
 		<em>Siehe auch:</em> <a href="nhlp://plotoptions?frame=self">help plotoptions</a>
