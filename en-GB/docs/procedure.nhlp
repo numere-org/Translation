@@ -35,7 +35,7 @@
 		<h>Structure</h>
 		Procedure definitions are started with the keyword <code>procedure</code> and closed with <code>endprocedure</code>. Appended to the keyword <code>procedure</code> the name of the procedure initialized by a <code>$</code> and their argument list must follow. Directly after the argument list and <code>::</code> it's possible to append additional <em>optional flags</em>, which influence the procedure as a whole. Between <code>procedure</code> and <code>endprocedure</code> the body of the procedure follows, in which the actual expressions and commands are evaluated:
 		<codeblock>
-			procedure $PROCEDURENAME(ARGLIST) :: FLAGS    ## Procedure head
+			procedure $PROCEDURENAME(ARGLIST) :: FLAGS   ## Procedure head
 			\tPROCEDURE BODY                           ## Expressions and commands
 			endprocedure                                 ## Prozedure tail
 		</codeblock>
@@ -66,6 +66,7 @@
 		Procedures may be called with a <code>$</code> followed by the procedure's name and the variable list. This may be done directly from the NumeRe console, as well as out of loop or a script. NumeRe will interrupt the current programm flow and execute the desired procedure. If the procedure contains a return value (signalized with the command <code>return</code>), then it may be assigned to a variable or entered in a calculation.
 		<h>Namespaces</h>
 		NumeRe contains namespaces similar as C++, which may be used to avoid naming conflicts with other procedures or to structurize whole projects. The syntax, to call a procedure out of an explicit namespace, is <codeblock>$NAMESPACE~PROCEDURE(ARGUMENTS)</codeblock>These namespaces are represented by subdirectories in the default procedure path, which are named according the current namespace (and not through <code>procedure $NAMESPACE~PROCEDURE(ARGLIST) ...</code>). The namespace <code>main</code> is the global namespace (equal to the default procedure path); the namespace <code>this</code> is the namespace of the current procedure. An exception is the namespace <code>thisfile</code>: this namespace is restricted to the current file. All procedures in this file,  which don't carry the name of the file, automatically are <code>private</code>.
+		By using double tildes in a namespace specification (<code>~~</code>) it is possible to switch to the parent namespace. This is especially useful in combination with the namespace <code>this</code> to switch to the namespace where the current namespace is located. (Example: consider <code>this~namespace == my~embedded~namespace</code>, then follows <code>this~~namespace == my~namespace</code>)
 		Using the command <code>namespace NSP</code> the namespace NSP may be activated for the following procedures to avoid entering the namespace for each procedure. However, procedures of other namespaces may be called by explicitely naming the namespace. This command will only be evaluated inside of a procedure.
 		If a procedure shall be created within a script or directly through the console, and if it shall be located in another namespace than <code>main</code>, this namespace has to be named in the procedure's head through <codeblock>procedure $NAMESPACE~PROCEDURE(ARGLIST)\n\t...\nendprocedure</codeblock>(This is only used for identifying the namespace and won't be written to the procedure file.)
 		<h>Documentation</h>
