@@ -169,6 +169,7 @@ gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 d
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
+getfilediff(STR,STR)~Berechnet die zeilenweisen Unterschiede der beiden Dateien~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
 getfileinfo(STR)~Gibt Meta-Informationen zu der angegebenen Datei in sFilePath als eine Schlüssel-Wert-Liste zurück~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
 getfilelist(STR,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
 getfileparts(STR)~Splittet sFilePath in Laufwerksbuchstaben, Dateipfad, Dateiname und Dateierweiterung auf~file extension file path parts drive letter getfileparts() dateien verzeichnis~getfileparts(
@@ -434,7 +435,7 @@ TAB().countif({n},v{})~Zählt die Elemente in den Spalten, die mit den Werten ü
 TAB().covarof(n,m,{r1},{r2})~Berechnet die Kovarianz der Spalten~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Aktualisiert die Beschreibung der aktuellen Tabelle~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Gibt die Beschreibung der aktuellen Tabelle zurück~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
-TAB().fndcols({STR})~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
+TAB().fndcols({STR},l)~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().name~Gibt den Namen der Tabelle als Zeichenkette zurück~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Berechnet die Pearson-Korrelation der Spalten~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
