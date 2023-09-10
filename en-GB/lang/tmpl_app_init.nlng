@@ -1,0 +1,28 @@
+#***************************************************************************************************
+ * NUMERE-PROCEDURE: $initialize()
+ * =================================================================================================
+ * Generated: %%2%% *#
+
+## Get the item IDs from the window layout
+include "../view/appmain.nlyt" :: declarations
+
+##! \procedure initialize
+##! Initialize the window with the necessary parameters.
+##!
+##! \param _nWinId  The ID of the newly created window
+##! \param _sArgs  Optional parameters passed to the window at startup
+procedure $initialize(_nWinId, _sArgs)
+	##~ Insert your commands and expressions here.
+	|
+	##~ If an initialisiation is not possible, then
+	##~ return false instead
+	return true;
+endprocedure
+
+##~ Create more local procedures here
+
+
+#**End of file
+ * NumeRe: Framework for Numerical Computations | Free numerical software licenced under GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

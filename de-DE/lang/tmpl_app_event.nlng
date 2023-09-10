@@ -1,0 +1,32 @@
+#***************************************************************************************************
+ * NUMERE-PROZEDUR: $handleEvent()
+ * =================================================================================================
+ * Hinzugefügt: %%2%% *#
+
+## Get the item IDs from the window layout
+include "appmain.nlyt" :: declarations
+
+##! \procedure handleEvent
+##! Handle all events originating from the "%%1%%" app window.
+##!
+##! \param _nWinId  The window ID
+##! \param _nItemId  The ID of the firing item
+##! \param _event{}  The event key-value list filled with information about the current event
+procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
+	##~ Füge hier deine Kommandos und Ausdrücke ein.
+	|
+	switch (_nItemId)
+	case nABOUT:
+		dialog "%%1%% ist eine NumeRe-App" -set type=messagebox title="Über %%1%%" icon=infoicon buttons=ok
+		break
+	endswitch
+	return void;
+endprocedure
+
+##~ Ergänze hier weitere lokale Prozeduren
+
+
+#**Ende der Datei
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

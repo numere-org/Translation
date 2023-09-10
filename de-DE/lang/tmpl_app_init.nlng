@@ -1,0 +1,28 @@
+#***************************************************************************************************
+ * NUMERE-PROZEDUR: $initialize()
+ * =================================================================================================
+ * Hinzugefügt: %%2%% *#
+
+## Get the item IDs from the window layout
+include "../view/appmain.nlyt" :: declarations
+
+##! \procedure initialize
+##! Initialize the window with the necessary parameters.
+##!
+##! \param _nWinId  The ID of the newly created window
+##! \param _sArgs  Optional parameters passed to the window at startup
+procedure $initialize(_nWinId, _sArgs)
+	##~ Füge hier deine Kommandos und Ausdrücke ein.
+	|
+	##~ Wenn eine Initialisierung nicht möglich ist,
+	##~ gib hier false zurück
+	return true;
+endprocedure
+
+##~ Ergänze hier weitere lokale Prozeduren
+
+
+#**Ende der Datei
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#
