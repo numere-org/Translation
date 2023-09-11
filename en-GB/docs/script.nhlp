@@ -24,13 +24,13 @@
 		<keyword>inclu</keyword>
 		<keyword>script</keyword>
 		<keyword>start</keyword>
-		<keyword>from line</keyword>
+		<keyword>fromline</keyword>
 		<keyword>run</keyword>
 	</keywords>
 	<contents>
 		Complex command routines or calculations can be outsourced to so-called "NumeRe-Scripts", which are text files with the extension ".nscr". The integrated <a href="nhlp://editor?frame=new">Editor</a> supports the writing of these scripts by syntax highlighting, automatic formatting and static code analysis. The folder from which NumeRe loads the scripts by default can be obtained using <code>get -scriptpath</code> and edited using <code>set -scriptpath=PFAD</code> or in the settings. The editor automatically suggests the correct folder when saving.
 		To execute a script, use either the corresponding functions of the graphical interface [F5] or the command <code>start</code>:<codeblock>start SCRIPTNAME</codeblock>
-		Also there is the option to execute a script from a certain line. This can be done either by using the function of the graphical interface, with a right click in the line and selection of the corresponding context menu entry or by using the command: <codeblock>start SCRIPTNAME -set fromLine=LINENUMBER</codeblock>
+		Also there is the option to execute a script from a certain line. This can be done either by using the function of the graphical interface, with a right click in the line and selection of the corresponding context menu entry or by using the command: <codeblock>start SCRIPTNAME -set fromline=LINENUMBER</codeblock>
 		The script name must be specified in quotation marks if it contains spaces. A full path is also required if the script is not located in the corresponding default folder.
 		The evaluation can be aborted with the <code>ESC</code> key if it takes too much time.
 		Commands and expressions can be written into the script as they are entered directly in NumeRe, but please note that only one command/expression per line may be written, or that the commands/expressions are separated by semicolons:<codeblock>EXPRESSION;COMMANDO;COMMANDO;EXPRESSION...</codeblock>This is not recommended, however, as it makes the script badly readable.

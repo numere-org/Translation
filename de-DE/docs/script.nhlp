@@ -24,13 +24,13 @@
 		<keyword>inclu</keyword>
 		<keyword>script</keyword>
 		<keyword>start</keyword>
-		<keyword>from line</keyword>
+		<keyword>fromline</keyword>
 		<keyword>run</keyword>
 	</keywords>
 	<contents>
 		Komplexe Befehlsroutinen oder Berechnungen können in sogenannte "NumeRe-Scripte" ausgelagert werden, welche Textdateien mit der Endung ".nscr" sind. Der integrierte <a href="nhlp://editor?frame=new">Editor</a> unterstützt das Schreiben dieser Scripte durch farbliche Syntax-Hervorhebungen, automatische Formatierung und statischer Code-Analyse. Der Ordner, aus dem NumeRe die Scripte standardmäßig lädt, kann mittels <code>get -scriptpath</code> erhalten und durch <code>set -scriptpath=PFAD</code> oder in den Einstellungen bearbeitet werden. Der Editor schlägt den richtigen Ordner beim Speichern automatisch vor.
 		Um ein Script auszuführen, können entweder die entsprechenden Funktionen der graphischen Oberfläche [F5] oder das Kommando <code>start</code> verwendet werden:<codeblock>start SCRIPTNAME</codeblock>
-		Auch lässt sich ein Script ab einer bestimmten Zeile ausführen. Dies geschieht entweder mittels der entsprechenden Funktion der graphischen Oberfläche, mittels eines Rechtsklick in die Zeile und Auswahl des entsprechenden Kontext-Menü Eintrags oder mittels des Kommandos: <codeblock>start SCRIPTNAME -set fromLine=ZEILENNUMMER</codeblock>
+		Auch lässt sich ein Script ab einer bestimmten Zeile ausführen. Dies geschieht entweder mittels der entsprechenden Funktion der graphischen Oberfläche, mittels eines Rechtsklick in die Zeile und Auswahl des entsprechenden Kontext-Menü Eintrags oder mittels des Kommandos: <codeblock>start SCRIPTNAME -set fromline=ZEILENNUMMER</codeblock>
 		Der Scriptname muss in Anführungszeichen angegeben werden, wenn er Leerzeichen enthält. Außerdem ist ein vollständiger Pfad nötig, wenn sich das Script nicht im entsprechenden Standardordner befindet.
 		Die Auswertung kann mit der <code>ESC</code>-Taste abgebrochen werden, falls sie zu viel Zeit in Anspruch nimmt.
 		Befehle und Ausdrücke können in das Script geschrieben werden, wie sie direkt in NumeRe eingegeben werden, allerdings ist zu beachten, dass nur ein Befehl/Ausdruck je Zeile geschrieben werden darf, oder dass die Befehle/Ausdrücke durch Semikola voneinander getrennt werden:<codeblock>AUSDRUCK;KOMMANDO;KOMMANDO;AUSDRUCK...</codeblock>Hiervon ist allerdings abzuraten, da es das Script unleserlich macht.
