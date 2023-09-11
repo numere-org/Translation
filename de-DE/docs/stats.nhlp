@@ -24,16 +24,16 @@
 	<contents>
 		<syntax>
 			stats TABLE()
-			stats TABLE() -set export=FILENAME ...\n
+			stats TABLE() -set file=FILENAME ...\n
 			{VAL} = stats TABLE() -set target=TARGET() ...
 		</syntax>
-		Das Kommando <code>stats</code> ermöglicht die vollautomatische Datenanalyse von mehreren Datenreihen zugleich. Die analysierten Datenreihen können dann in eine Tabelle oder zusammen mit den Analysen in eine neue Datei gespeichert werden.
-		<code>stats</code> benötigt natürlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Art übergeben werden können, wobei die zweite Variante das Ergebnis in <code>TABLE()</code> ablegt und die Namen der Zeilen in der entsprechenden Reihenfolge als Vektor zurückgibt:
+		Das Kommando <code>stats</code> ermÃ¶glicht die vollautomatische Datenanalyse von mehreren Datenreihen zugleich. Die analysierten Datenreihen kÃ¶nnen dann in eine Tabelle oder zusammen mit den Analysen in eine neue Datei gespeichert werden.
+		<code>stats</code> benÃ¶tigt natÃ¼rlich Datenreihen, die geladen wurden, oder Datenreihen, die im Cache hinterlegt sind und auf die folgende Art Ã¼bergeben werden kÃ¶nnen, wobei die zweite Variante das Ergebnis in <code>TABLE()</code> ablegt und die Namen der Zeilen in der entsprechenden Reihenfolge sowohl in deren ersten Spalte als auch als Vektor zurÃ¼ckgibt:
 		<codeblock>
 			stats DATENOBJEKT(I1:I2,J1:J2) -set OPTIONEN
 			{ZEILENNAMEN} = stats DATENOBJEKT(I1:I2,J1:J2) -set target=TABLE()
 		</codeblock>
-		Diesem Kommando kann mit der Option <code>export=DATEINAME</code> direkt der gewünschte Ausgabe-Dateiname angegeben werden. Dateinamen, die Leerzeichen enthalten sollen, müssen dabei mit Anführungszeichen umschlossen werden. (Mit der Endung *.tex wird eine TeX-Datei erzeugt) Wird kein Dateiname festgelegt (sondern nur <code>-export</code> übergeben), so wird automatisch ein Dateiname generiert.
+		Diesem Kommando kann mit der Option <code>file=DATEINAME</code> direkt der gewÃ¼nschte Ausgabe-Dateiname angegeben werden. Dateinamen, die Leerzeichen enthalten sollen, mÃ¼ssen dabei mit AnfÃ¼hrungszeichen umschlossen werden (Mit der Endung *.tex wird eine TeX-Datei erzeugt).
 		<code>stats</code> generiert die folgenden Statistikwerte:
 		<list>
 			<item node="MW">Mittelwert der Datenreihen (Funktionen-Pendant: <code>avg()</code>)</item>
@@ -44,16 +44,16 @@
 			<item node="Q1">unteres Quartil der Datenreihen (Funktionen-Pendant: <code>pct()</code>)</item>
 			<item node="Q3">oberes Quartil der Datenreihen (Funktionen-Pendant: <code>pct()</code>)</item>
 			<item node="RMS">gemittelte Norm der Datenreihen (root mean square)</item>
-			<item node="Skew">Schiefe der Datensätze: Skew &lt; 0 für linksschiefe, Skew &gt; 0 für rechtsschiefe Verteilungen</item>
-			<item node="Exz">Exzess der Daten: Exz &gt; 0 für steilgipflige, Exz &lt; 0 für flachgipflige Verteilungen</item>
+			<item node="Skew">Schiefe der DatensÃ¤tze: Skew &lt; 0 fÃ¼r linksschiefe, Skew &gt; 0 fÃ¼r rechtsschiefe Verteilungen</item>
+			<item node="Exz">Exzess der Daten: Exz &gt; 0 fÃ¼r steilgipflige, Exz &lt; 0 fÃ¼r flachgipflige Verteilungen</item>
 			<item node="min">Minimaler Wert (Funktionen-Pendant: <code>min()</code>)</item>
 			<item node="max">Maximaler Wert (Funktionen-Pendant: <code>max()</code>)</item>
-			<item node="num">Zahl der Werte (schließt ungültige Werte aus)</item>
-			<item node="cnt">Zahl der Zeilen (inkl. der ungültigen Werte)</item>
-			<item node="s_t">Student-Faktor für 95 %-Konfidenzintervall (Funktionen-Pendant: <code>student_t()</code>)</item>
+			<item node="num">Zahl der Werte (schlieÃŸt ungÃ¼ltige Werte aus)</item>
+			<item node="cnt">Zahl der Zeilen (inkl. der ungÃ¼ltigen Werte)</item>
+			<item node="s_t">Student-Faktor fÃ¼r 95 %-Konfidenzintervall (Funktionen-Pendant: <code>student_t()</code>)</item>
 		</list>
 		<example desc="Analyse eines geladenenen Datenfiles und speichern der Ergebnisse in die Datei 'results.dat':">
-			stats data(:,:) -set export=results
+			stats data(:,:) -set file=results
 		</example>
 	</contents>
 </article>

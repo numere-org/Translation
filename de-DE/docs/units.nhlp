@@ -24,8 +24,8 @@
 	</keywords>
 	<contents>
 		NumeRe versteht viele (nicht-SI-)Einheiten, die mittels der Syntax <code>WERT'EINHEIT</code> eingegeben wurden. Dabei ist <code>EINHEIT</code> durch das Einheitensymbol (oder ein passendes Pendant) zu ersetzen.
-		NumeRe rechnet den Wert in den numerischen Wert der passenden SI-Basis-Einheiten um, ehe die Auswertung weiter fortgeführt wird. Allerdings erfolgt die endgültige Auswertung dann rein numerisch; es wird auf keine Einheiten Rücksicht genommen.
-		Die vollständige Liste der definierten Einheiten kann mittels des Kommandos <code>list -units</code> angezeigt werden.
+		NumeRe rechnet den Wert in den numerischen Wert der passenden SI-Basis-Einheiten um, ehe die Auswertung weiter fortgefÃ¼hrt wird. Allerdings erfolgt die endgÃ¼ltige Auswertung dann rein numerisch; es wird auf keine Einheiten RÃ¼cksicht genommen.
+		Die vollstÃ¤ndige Liste der definierten Einheiten kann mittels des Kommandos <code>list -units</code> angezeigt werden.
 		<example desc="Umrechnen von 125 keV in Joule:">
 			125e3'eV
 			ans = 2.0027207e-014

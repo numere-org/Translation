@@ -28,8 +28,8 @@
 		<syntax>
 			spline TABLE()
 		</syntax>
-		Um einzelne Datenpunkte miteinandere zu verbinden, kann NumeRe kubische Ausgleichsfunktionen, sogenannte "Splines" berechnen. Diese Splines sind abschnittsweise definiert (stets zwischen zwei Datenpunkten), wobei sichergestellt ist, dass sie überall zweimal stetig differenzierbar sind.
-		Um die Splines zu einem Datensatz zu berechnen, müssen die <expr>x</expr>- und <expr>y</expr>-Werte als Spalten an das Kommando <code>spline</code> übergeben werden:
+		Um einzelne Datenpunkte miteinandere zu verbinden, kann NumeRe kubische Ausgleichsfunktionen, sogenannte "Splines" berechnen. Diese Splines sind abschnittsweise definiert (stets zwischen zwei Datenpunkten), wobei sichergestellt ist, dass sie Ã¼berall zweimal stetig differenzierbar sind.
+		Um die Splines zu einem Datensatz zu berechnen, mÃ¼ssen die <expr>x</expr>- und <expr>y</expr>-Werte als Spalten an das Kommando <code>spline</code> Ã¼bergeben werden:
 		<codeblock>
 			spline DATEN(i1:i2,j1:j2)
 		</codeblock>

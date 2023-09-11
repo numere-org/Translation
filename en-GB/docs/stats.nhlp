@@ -24,16 +24,16 @@
 	<contents>
 		<syntax>
 			stats TABLE()
-			stats TABLE() -set export=FILENAME ...\n
+			stats TABLE() -set file=FILENAME ...\n
 			{VAL} = stats TABLE() -set target=TARGET() ...
 		</syntax>
 		The command <code>stats</code> allows the statistical analysis of multiple data rows at once. The data rows, which were analysed, may be stored in a table or written including their analysis results to a file afterwards.
-		<code>stats</code> needs loaded data or data, which is available in a cache. The data may be passed in the following way, where the second variant stores the results into <code>TABLE()</code> and returns the row labels in their respective order as a vector:
+		<code>stats</code> needs loaded data or data, which is available in a cache. The data may be passed in the following way, where the second variant stores the results into <code>TABLE()</code> and returns the row labels in their respective order in its first column as well as a vector:
 		<codeblock>
 			stats DATAOBJECT(I1:I2,J1:J2) -set OPTIONS
 			{ROWLABELS} = stats DATAOBJECT(I1:I2,J1:J2) -set target=TABLE()
 		</codeblock>
-		You may pass the target filename with the option <code>export=FILENAME</code>. If the filename shall contain whitespaces, then it has to be passed surrounded with quotations marks. (If the file extension is *.tex, then NumeRe will create a TeX file) If no filename is passed but the option <code>export</code>, then NumeRe will generate a fitting filename.
+		You may pass the target filename with the option <code>file=FILENAME</code>. If the filename shall contain whitespaces, then it has to be passed surrounded with quotations marks (If the file extension is *.tex, then NumeRe will create a TeX file).
 		<code>stats</code> calculates the following statistical values:
 		<list>
 			<item node="Avg">Average of each data row (Functions pendant: <code>avg()</code>)</item>
@@ -53,7 +53,7 @@
 			<item node="s_t">Student factor for the corresponding 95 % confidence interval (Functions pendant: <code>student_t()</code>)</item>
 		</list>
 		<example desc="Analysis of a loaded data file and export to the file 'results.dat':">
-			stats data(:,:) -set export=results
+			stats data(:,:) -set file=results
 		</example>
 	</contents>
 </article>

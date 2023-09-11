@@ -66,7 +66,7 @@
 		</verbatim>
 		By default, the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
 		Individual elements of a table can be read out with the syntax <code>TABLE(ROW, COLUMN)</code>. Likewise, values can also be written into the table with it. Tables are to be treated like ordinary variables. The indexing is done by natural numbers <em>greater than</em> zero: 1,2,3,...
-		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets.
+		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables or data files can also be used as index sets. Although indices have to be numerical values, there is an experimental support for selecting the columns according their column headings as strings, i.e. <code>TABLE(:,"NAME")</code>
 		Additionally, the step size of the indices can be specified using <a href="nhlp://operator?frame=new"><code>{START:STEPWIDTH:END}</code></a>.
 		If an entire column is overwritten in the form <code>TABLE(:,j) = VALUES</code>, the type of the column <code>j</code> can also be changed from numeric to string or vice versa. The column heading is retained; any data previously contained in the <code>j</code> column is <em>completely</em> removed.
 		When accessing a table, the special variables <code>nrows</code> contain the number of rows and <code>ncols</code> the number of columns of the current table when used in its argument brackets (<code>nlines</code> is an alias). This is also true if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>.
@@ -76,7 +76,7 @@
 		<list>
 			<item node="new TABLE1(), TABLE2(), ...">Create the tables <code>TABLE1(), TABLE2(), ...</code></item>
 			<item node="clear TABLE()">Delete the contents of the table <code>TABLE()</code></item>
-			<item node="clear -memory">Delete all tables and the automatic backup</item>
+			<item node="clear -memory">Delete all tables, <a href="nhlp://cluster?frame=new">clusters</a> and the automatic backup</item>
 			<item node="show TABLE()">Display data from the corresponding table</item>
 			<item node="showf TABLE()">Display complete record (only has influence if no external viewer is used)</item>
 			<item node="rename TABLE(), NEWNAME()">Rename the table <code>TABLE</code> to <code>NEWNAME</code>. This cannot be applied to <code>table</code>!</item>
@@ -104,7 +104,7 @@
 			<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 			<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
 			<item node="TABLE().indexof(nCol,vals{})">Returns the indices of the elements in column <code>nCol</code> that match the values in cluster <code>vals{}</code>. Each set of indices is separated from the other sets by a NaN</item>
-			<item node="TABLE().fndcols({sNames})">Returns the indices of all columns whose headings match <code>sNames</code>. If nothing is found, NaN is returned</item>
+			<item node="TABLE().fndcols({sNames},enableRegEx)">Returns the indices of all columns whose headings match <code>sNames</code>. <code>sNames</code> can be regular expressions if <code>enableRegEx</code> is <code>true</code>. If nothing is found, NaN is returned</item>
 			<item node="TABLE().countif({nCols},vals{})">Counts the elements in columns <code>nCols</code> that match the values in cluster <code>vals{}</code>. For each column and value in <code>vals{}</code>, a sum is returned ordered by the columns</item>
 			<item node="TABLE().binsof(nCol,nBins)">Calculates a simple histogram of the data in the column <code>nCol</code>. If the number of bins <code>nBins</code> is not specified, it is determined using the Sturges rule. If the column is categorical, then the categories are used as bins. For logical columns, the logical values are used as bins</item>
 			<item node="TABLE().covarof(nCol1,nCol2,nRows1,nRows2)">Calculates the covariance of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default</item>

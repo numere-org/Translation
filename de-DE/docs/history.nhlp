@@ -27,14 +27,14 @@
 	</keywords>
 	<contents>
 		Unten rechts im Hauptfenster von NumeRe befindet sich der Listen-Browser. Hier sind mehrere Funktionen in einem gemeinsamen Bereich untergebracht: die Chronik, die Liste der definierten Variablen und die Liste der lokalen Prozeduren im aktuellen Editor-Fenster.
-		Der Listen-Browser kann mit Drücken auf <code>[F4]</code> aus- und wieder eingeblendet werden.
+		Der Listen-Browser kann mit DrÃ¼cken auf <code>[F4]</code> aus- und wieder eingeblendet werden.
 		<h>Chronik</h>
-		In der Eingabe-Chronik werden die Eingaben, die in die <a href="nhlp://console?frame=new">Konsole</a> vom Benutzer oder durch eine NumeRe-Funktion eingegeben wurden, protokolliert. Die Historie unterstützt dabei die gleiche Syntaxhervorhebung wie der Editor sie für NumeRe-Scripte bereitstellt.
-		Wird auf eine Zeile geklickt und gehalten, wird die gesamte Zeile markiert und sie kann per Drag'n'drop in den <a href="nhlp://editor?frame=new">Editor</a> eingefügt werden. Ein Doppelklick kopiert die aktuelle Zeile in die Konsole und führt sie zugleich aus.
-		<em>Hinweis:</em> Die Eingabe-Chronik wird mehrfach hintereinander übergebene identische Ausdrücke bzw. Kommandos nur einmal protokollieren.
-		Das Kontextmenü der Eingabe-Chronik erlaubt das Löschen einzelner Zeilen aus der Historie.
+		In der Eingabe-Chronik werden die Eingaben, die in die <a href="nhlp://console?frame=new">Konsole</a> vom Benutzer oder durch eine NumeRe-Funktion eingegeben wurden, protokolliert. Die Historie unterstÃ¼tzt dabei die gleiche Syntaxhervorhebung wie der Editor sie fÃ¼r NumeRe-Scripte bereitstellt.
+		Wird auf eine Zeile geklickt und gehalten, wird die gesamte Zeile markiert und sie kann per Drag'n'drop in den <a href="nhlp://editor?frame=new">Editor</a> eingefÃ¼gt werden. Ein Doppelklick kopiert die aktuelle Zeile in die Konsole und fÃ¼hrt sie zugleich aus.
+		<em>Hinweis:</em> Die Eingabe-Chronik wird mehrfach hintereinander Ã¼bergebene identische AusdrÃ¼cke bzw. Kommandos nur einmal protokollieren.
+		Das KontextmenÃ¼ der Eingabe-Chronik erlaubt das LÃ¶schen einzelner Zeilen aus der Historie.
 		<h>Liste der definierten Variablen</h>
-		Diese Liste zeigt alle definierten Variablen sortiert nach Typ inklusive ihrer aktuellen Werte. Für Tabellen existiert auch ein Kontextmenü mit weiteren Funktionen. Zusätzlich kann der Inhalt der Tabellen durch einen Doppelklick auf den Tabellennamen angezeigt werden.
+		Diese Liste zeigt alle definierten Variablen sortiert nach Typ inklusive ihrer aktuellen Werte. FÃ¼r Tabellen existiert auch ein KontextmenÃ¼ mit weiteren Funktionen. ZusÃ¤tzlich kann der Inhalt der Tabellen durch einen Doppelklick auf den Tabellennamen angezeigt werden.
 		Dieses Fenster wird nach Abschluss jeder Berechnung oder am Ende eines Scripts aktualisiert.
 		<h>Liste der lokalen Prozeduren</h>
 		Wenn das aktuelle Editor-Fenster eine Prozedur-Datei zeigt, dann werden hier die Signaturen aller lokalen Prozeduren inklusive ihrer Flags aufgelistet. Die aktuelle Hauptprozedur wird gesondert hervorgehoben. Durch einen Doppelklick auf eine Prozedursignatur springt NumeRe zu ihrer Definition.
