@@ -4,7 +4,7 @@
  * Hinzugefügt: %%2%% *#
 
 ## Enumerate the window items
-declare enum -> {nABOUT = 0, nITEM2, nITEM3}
+declare enum -> {nABOUT = 0, nBUTTON, nITEM3}
 
 ##! \layout appmain
 ##!
@@ -18,6 +18,12 @@ layout -title="%%1%%" size={1024,768}
 	## Create an "Help" menu
 	group -style=menu label="Hilfe"
 		menuitem "Über %%1%%" -set id=nABOUT onclick=$this~handleEvent()
+	endgroup
+	
+	##~ Das hier sind beispielhafte Elemente. Du kannst sie gerne löschen oder
+	##~ durch deine eigenen Elemente austauschen
+	group
+		button "Klick!" -set id=nBUTTON onclick=$this~handleEvent()
 	endgroup
 	
 	##~ Füge hier weitere Kommandos für Deine gewünschte App ein.

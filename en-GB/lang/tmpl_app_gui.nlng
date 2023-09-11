@@ -20,6 +20,12 @@ layout -title="%%1%%" size={1024,768}
 		menuitem "About %%1%%" -set id=nABOUT onclick=$this~handleEvent()
 	endgroup
 	
+	##~ These are exemplary elements. Feel free to delete or replace them
+	##~ with your desired elements
+	group
+		button "Click!" -set id=nBUTTON onclick=$this~handleEvent()
+	endgroup
+	
 	##~ Insert further commands for your desired app here.
 	|
 endlayout

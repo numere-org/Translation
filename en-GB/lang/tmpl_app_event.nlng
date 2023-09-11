@@ -15,11 +15,18 @@ include "appmain.nlyt" :: declarations
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 	##~ Insert your commands and expressions here.
 	|
+	## Handle the events by their IDs
 	switch (_nItemId)
 	case nABOUT:
-		dialog "%%1%% is a NumeRe app" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok
+		dialog "%%1%% is a NumeRe app" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok;
+		break
+	##~ These are the event handlers for the exemplary elements. Delete or replace them
+	case nBUTTON:
+		dialog getkeyval(_event{}, "object") + " " + getkeyval(_event{}, "value") -set type=messagebox title="Button Click" icon=infoicon buttons=ok;
 		break
 	endswitch
+	
+	## Event handler typically return nothing
 	return void;
 endprocedure
 
