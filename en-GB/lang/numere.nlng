@@ -348,6 +348,7 @@ PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_CDF_P_[DISTRIB]= 			weibull_cdf_p(x,a,b)      
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_CDF_Q_[DISTRIB]= 			weibull_cdf_q(x,a,b)                                        VAL      - Returns the complementary cumulative distribution function at x of the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_INV_P_[DISTRIB]= 			weibull_inv_p(p,a,b)                                        VAL      - Returns the inverse of the cumulative distribution function at p of the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_INV_Q_[DISTRIB]= 			weibull_inv_q(q,a,b)                                        VAL      - Returns the inverse of the complementary cumulative distribution function at q of the Weibull distribution with scale a and exponent b
+PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_PDF_[DISTRIB]= 			weibull_pdf(x,a,b)                                          VAL      - Returns the probability density function at x of the Weibull distribution using scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_RD_[RANDOM_DISTRIB]= 		weibull_rd(a,b)                                             VAL      - Returns a random variate from the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_XOR_[LOGIC]=						xor(x,y,z,...)                                              LOG      - Connects its arguments with the "|||" operator
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)                                            VAL      - Value of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
@@ -455,6 +456,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Defines the local clusters in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target table can be passed via parameters
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
+PARSERFUNCS_LISTCMD_CMD_DATEPICKER_[GUI]=				datepicker   [-set PAR]                 - Inserts a date picker field into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Declares a file-specific constant in EX for use in the current file, where the constant must be specified as NAME := EXPRESSION. The constant is automatically removed at the end of the current file
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Defines the "otherwise" case in a switch fork
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]              - Defines the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
@@ -511,9 +513,10 @@ PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR              
 PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]               - Includes information from the file NM into the current executable file at this location. Information may contain global expressions, definitions and declarations. The type of information is configurable
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
+PARSERFUNCS_LISTCMD_CMD_LAMP_[GUI]=						lamp         [-set PAR]                 - Inserts a small lamp into a window layout. The start value is configurable
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Starts the definition of a window layout that can be used to create an interactive window
-PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]             - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Creates a list of the values, which are available for the passed argument NM. The possible arguments are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym)
@@ -574,6 +577,7 @@ PARSERFUNCS_LISTCMD_CMD_TAB_[PROC]=						tab          EX                        
 PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR  -> {VAL}      - Expands the passed expression EX into a taylor polynomial of the order n, defines it as a function and returns the corresponding coefficients. The variable and the position of the expansion have to be passed as parameters. Additionally, one can choose the order of the expansion
 PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]              - Inserts a text field into a window layout. Event handling, multiline and start value are configurable
 PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]                      - Aborts the procedure execution in case of an error and displays the error message STR in the console
+PARSERFUNCS_LISTCMD_CMD_TIMEPICKER_[GUI]=				timepicker   [-set PAR]                 - Inserts a time picker field into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]                 - Inserts a tree list into a window layout. Event handling, the number of columns and the number of elements are configurable
 PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                     - Starts a try-catch block in which errors can be caught and handled
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Removes the custom function definition, which corresponds to the expression EX
@@ -1012,6 +1016,7 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STATUSTEXT=statustext[=TEXT] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STOREGRID=storegrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist2d]

@@ -456,6 +456,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Definiert die lokalen Cluster in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Erzeugt ein Datengitter aus dem Ausdruck oder den Daten in EX. Die x- und y-Werte sind als Parameter anzugeben. Außerdem kann die Zahl der samples und die Zieltabelle durch Parameter angegeben werden.
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Optionen auf Datensätzen. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
+PARSERFUNCS_LISTCMD_CMD_DATEPICKER_[GUI]=				datepicker   [-set PAR]                 - Fügt ein Feld zur Datumsauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei, wobei die Konstante als NAME := AUSDRUCK angegeben werden muss. Die Konstante wird am Ende der aktuellen Datei automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Definiert den "sonst"-Fall in einer Auswahlverzweigung
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]              - Definiert die Funktion in EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
@@ -512,9 +513,10 @@ PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR              
 PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]               - Bindet Informationen aus der Datei NM an dieser Stelle in die aktuelle ausführbare Datei ein. Informationen können globale Ausdrücke, Definitionen oder Deklarationen sein. Die Art der Informationen lassen sich auswählen
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
+PARSERFUNCS_LISTCMD_CMD_LAMP_[GUI]=						lamp         [-set PAR]                 - Fügt eine kleine Lampe in ein Window-Layout ein. Der Startwert ist konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann
-PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]              - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Erzeugt eine Auflistung der Werte, die zum gewählten Argument NM vorhanden sind. Die möglichen Argumente sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Wertet den Ausdruck EX mit dem Matrixmodus aus. ("mtrxop" ist ein Synonym)
@@ -575,6 +577,7 @@ PARSERFUNCS_LISTCMD_CMD_TAB_[PROC]=						tab          EX                        
 PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR  -> {VAL}      - Entwickelt den Ausdruck EX in ein Taylorpolynom der Ordnung n, definert es als Funktion und gibt die entsprechenden Koeffizienten zurück. Die Variable und die Position der Entwicklung muss durch Parameter übergeben werden. Außerdem kann die Ordnung der Entwicklung geändert werden.
 PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]              - Fügt ein Textfeld in ein Window-Layout ein. Das Eventhandling, die Mehrzeiligkeit und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]                      - Bricht die Auswertung der Prozedur im Fehlerfall ab und gibt die Fehlermeldung STR auf der Konsole aus
+PARSERFUNCS_LISTCMD_CMD_TIMEPICKER_[GUI]=				timepicker   [-set PAR]                 - Fügt ein Feld zur Zeitauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]                 - Fügt eine Treelist in ein Window-Layout ein. Das Eventhandling, die Zahl der Spalten und die Zahl der Elemente sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                     - Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Entfernt die Funktionsdefinition die dem Ausdruck EX entspricht
@@ -1013,6 +1016,7 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STATUSTEXT=statustext[=TEXT] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STOREGRID=storegrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist2d]
