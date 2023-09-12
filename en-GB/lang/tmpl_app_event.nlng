@@ -6,27 +6,105 @@
 ## Get the item IDs from the window layout
 include "appmain.nlyt" :: declarations
 
-##! \procedure handleEvent
-##! Handle all events originating from the "%%1%%" app window.
+###! \procedure handleEvent
+##! Handle all events originating from the "Test-App" app window.
 ##!
 ##! \param _nWinId  The window ID
 ##! \param _nItemId  The ID of the firing item
 ##! \param _event{}  The event key-value list filled with information about the current event
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
-	##~ Insert your commands and expressions here.
+	var fValue, nValue
+	str sValue
+	cst values{}, idx{}
+	##~ Füge hier deine Kommandos und Ausdrücke ein.
 	|
 	## Handle the events by their IDs
 	switch (_nItemId)
 	case nABOUT:
-		dialog "%%1%% is a NumeRe app" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok;
+		dialog "%%1%% is a NumeRe App" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok;
 		break
-	##~ These are the event handlers for the exemplary elements. Delete or replace them
-	case nBUTTON:
-		dialog getkeyval(_event{}, "object") + " " + getkeyval(_event{}, "value") -set type=messagebox title="Button Click" icon=infoicon buttons=ok;
+		##~ These are event handlers for the exemplary elements. Feel free to delete or replace them
+	case nADD:
+		## Add a coordinate
+		sValue = window _nWinId -get value item=nXVALS;
+		sValue = sValue + "\t" + window _nWinId -get value item=nYVALS;
+		
+		## Ensure that we have at least some reasonable values
+		if (sValue != "\t")
+			values{} = window _nWinId -get value item=nTREELIST;
+			
+			## Append the coordinates
+			if (!num(values{}))
+				values{} = sValue;
+			else
+				values{nlen+1} = sValue;
+			endif
+			
+			## Update the controls and the grapher
+			window _nWinId -set value=values{} item=nTREELIST;
+			$thisfile~plotArray(_nWinId, values{});
+		endif
+		
+		break
+	case nDELETE:
+		## Delete the currently selected point
+		fValue = window _nWinId -get selection item=nTREELIST;
+		
+		## Ensure that we have a selection
+		if (fValue)
+			values{} = window _nWinId -get value item=nTREELIST;
+			nValue = num(values{});
+			
+			## Remove the point from the list
+			if (!nValue)
+				return void;
+			elseif (nValue == 1)
+				window _nWinId -set value="" item=nTREELIST;
+				return void;
+			else
+				idx{} = logtoidx({1:nValue} != fValue);
+				values{} = values{idx{}};
+			endif
+			
+			## Update controls and the grapher
+			window _nWinId -set value=values{} item=nTREELIST;
+			$thisfile~plotArray(_nWinId, values{});
+		endif
+		
+		break
+	case nRESET:
+		## Reset the points list
+		window _nWinId -set value="" item=nTREELIST;
 		break
 	endswitch
 	
 	## Event handler typically return nothing
+	return void;
+endprocedure
+
+
+##! \procedure plotArray
+##! Plot the list of points in the grapher
+##!
+##! \param _nWinId  The window ID
+##! \param _array{}  The points to be plotted
+procedure $plotArray(_nWinId, _array{}) :: explicit mask
+	tab tArray()
+	
+	## Split the points at the tab char and assign them to different columns
+	_array{} = split(_array{}, "\t");
+	tArray(:, 1) = _array{{1:2:nlen}};
+	tArray(:, 2) = _array{{2:2:nlen}};
+	
+	## Ensure that we can convert the columns to numerical values
+	if (tArray().convert({1,2}, "value") != "value")
+		dialog "There are invalid elements in the coordinates list" -set type=messagebox title="%%1%%: Invalid coordinates" icon=erroricon buttons=ok;
+		return void;
+	endif
+	
+	## Plot the coordinate
+	plot tArray() "Coordinates" -set box streamto={_nWinId, nGRAPHER} connect
+	
 	return void;
 endprocedure
 

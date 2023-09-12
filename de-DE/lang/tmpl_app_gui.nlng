@@ -4,12 +4,12 @@
  * Hinzugefügt: %%2%% *#
 
 ## Enumerate the window items
-declare enum -> {nABOUT = 0, nBUTTON, nITEM3}
+declare enum -> {nABOUT = 0, nGRAPHER, nTREELIST, nXVALS, nYVALS, nADD, nDELETE, nRESET}
 
 ##! \layout appmain
 ##!
 ##! Defines the layout for the "%%1%%" app.
-layout -title="%%1%%" size={1024,768}
+layout -title="%%1%%" size={1024,620} statustext="Willkommen bei %%1%%"
 	## Create a "File" menu
 	group -style=menu label="Datei"
 		menuitem "Schließen" -set onclick=evt_close()
@@ -22,8 +22,23 @@ layout -title="%%1%%" size={1024,768}
 	
 	##~ Das hier sind beispielhafte Elemente. Du kannst sie gerne löschen oder
 	##~ durch deine eigenen Elemente austauschen
-	group
-		button "Klick!" -set id=nBUTTON onclick=$this~handleEvent()
+	group -type=horizontal
+		## Add grapher
+		grapher -set size={600,600} id=nGRAPHER
+		
+		## Add the controls to the right of the grapher
+		group -type=vertical label="Koordinaten" expand
+			treelist -set label={"x-Werte", "y-Werte"} id=nTREELIST
+			group -type=horizontal
+				textfield "0" -set label="x =" size={150,-1} id=nXVALS
+				textfield "0" -set label="y =" size={150,-1} id=nYVALS
+			endgroup
+			group -type=horizontal
+				button "Hinzufügen" -set id=nADD onclick=$this~handleEvent()
+				button "Auswahl löschen" -set id=nDELETE onclick=$this~handleEvent()
+				button "Zurücksetzen" -set id=nRESET onclick=$this~handleEvent()
+			endgroup
+		endgroup
 	endgroup
 	
 	##~ Füge hier weitere Kommandos für Deine gewünschte App ein.
