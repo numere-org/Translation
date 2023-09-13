@@ -1,0 +1,49 @@
+#
+# Dieser Datensatz wurde erzeugt mit
+# NumeRe: Framework für Numerische Rechnungen
+#=============================================
+# Version: 1.1.5 "Cherenkov" (x64), Build: 2023-05-16
+# Quellcode und Programm: (c) 2023, Erik Hänel et al., lizensiert unter der GNU GPL v3.0
+#
+# Diese Datei wurde erzeugt am 2023-08-24, um 12:17:54
+#
+# (Kommentar-Standard und Formatierung sind für Gnuplot optimiert.)
+#
+# Erstellt durch: Histogramm (v 1.1.2) unter Verwendung der Datenreihe(n) 3-5 aus tempdata
+#
+#       Bins  Counts: x  Counts: y  Counts: z
+#============================================
+   -3.062477          2          4          0
+   -2.779015          2          1          0
+   -2.495554          2          0          0
+   -2.212093          2          5          0
+   -1.928631          4          2          0
+    -1.64517          3          6          0
+   -1.361709          5          3          0
+   -1.078247          6          5          0
+  -0.7947858          8          6          0
+  -0.5113245          9          9          0
+  -0.2278632         13         10          1
+  0.05559819          8         12          5
+   0.3390595         12         10          5
+   0.6225209          5          8          4
+   0.9059822          3          4          6
+    1.189444          7          4          4
+    1.472905          5          6          5
+    1.756366          1          0          4
+    2.039828          4          3          4
+    2.323289          0          2          6
+     2.60675          0          1          5
+    2.890212          0          0          4
+    3.173673          0          0          6
+    3.457134          0          0          3
+    3.740596          0          0          6
+    4.024057          0          0          5
+    4.307518          0          0          4
+     4.59098          0          0          6
+    4.874441          0          0          3
+    5.157902          0          0          5
+    5.441364          0          0          5
+    5.724825          0          0          5
+#
+# Die Bins bezeichnen immer die untere Kante einer Kategorie. Der minimale Wert ist -3.0625, der maximale 6.0083. Die Breite einer Kategorie ist 0.28346.
