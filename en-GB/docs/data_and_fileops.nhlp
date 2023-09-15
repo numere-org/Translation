@@ -39,6 +39,7 @@
 			move FILE -target=NEWFILE all\n
 			delete TABLE()\n
 			clear TABLE()
+			clear -var
 			clear -memory\n
 			remove TABLE(), ...
 			remove FILE
