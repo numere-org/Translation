@@ -7,7 +7,7 @@
 include "appmain.nlyt" :: declarations
 
 ###! \procedure handleEvent
-##! Handle all events originating from the "Test-App" app window.
+##! Handle all events originating from the "%%1%%" app window.
 ##!
 ##! \param _nWinId  The window ID
 ##! \param _nItemId  The ID of the firing item

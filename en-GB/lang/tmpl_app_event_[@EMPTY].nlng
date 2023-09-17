@@ -7,13 +7,13 @@
 include "appmain.nlyt" :: declarations
 
 ###! \procedure handleEvent
-##! Handle all events originating from the "Test-App" app window.
+##! Handle all events originating from the "%%1%%" app window.
 ##!
 ##! \param _nWinId  The window ID
 ##! \param _nItemId  The ID of the firing item
 ##! \param _event{}  The event key-value list filled with information about the current event
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
-	##~ Füge hier deine Kommandos und Ausdrücke ein.
+	##~ Insert your commands and expressions here
 	|
 	## Handle the events by their IDs
 	switch (_nItemId)

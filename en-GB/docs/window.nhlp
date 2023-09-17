@@ -74,8 +74,9 @@
 		<keyword>unhide</keyword>
 		<keyword>lamp</keyword>
 		<keyword>statustext</keyword>
-		<keyword>datepicker</keyword>
+		<keyword>datetimepicker</keyword>
 		<keyword>timepicker</keyword>
+		<keyword>datepicker</keyword>		
 	</keywords>
 	<contents>
 		<syntax>
@@ -111,8 +112,7 @@
 			<item node="spinbut [-set PAR]">Generates a spin button that can be labeled with <code>label=LABEL</code>. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>.
 			<item node="slider [-set PAR]">Generates a slider. Minimum (<code>min=VAL</code>) and maximum (<code>max=VAL</code>) are configurable.</item>
 			<item node="lamp [-set PAR]">Generates a small lamp. Label (<code>label=LABEL</code>) and colour (<code>color={R,G,B}</code>) are configurable. In addition, one can choose for <code>value=VAL</code> out of the pre-defined lamp colours: <code>"ok"</code>, <code>"warn"</code>, <code>"error"</code> and <code>"off"</code></item>
-			<item node="datepicker [-set PAR]">Generates a data picker field including a calendar. <code>value=VAL</code> has to be a string encoded date, numerical values won't be accepted</item>
-			<item node="timepicker [-set PAR]">Generates a time picker field. <code>value=VAL</code> has to be a string encoded date, numerical values won't be accepted</item>
+			<item node="datetimepicker [-set PAR]">Generates a date-and-time picker field including a calendar. Using <code>type=datepicker</code> only a date and using <code>type=timepicker</code> only a time value can be selected. <code>value=VAL</code> has to be a string encoded time value, numerical values won't be accepted</item>
 			<item node="gauge [-set PAR]">Creates a progress bar that can be oriented either horizontally or vertically. The bar can have values from 0 to 100 (<code>value=VAL</code>). The special value -1 switches to the pulsation mode of the progress bar.</item>
 			<item node="tablegrid [-set PAR]">Creates a table grid with a defined number of rows and columns (<code>size={row, col}</code>), but at least one row and one column. Values of the table can be modified by <code>window ID -set value=TABLEDATA() item=ITEMID</code> and read by <code>window ID -get value item=ITEMID target=TARGETTABLE()</code>. In the absence of the <code>target=TARGETTABLE()</code> option, <code>valtable()</code> is used as default.</item>.
 			<item node="bitmap EX [-set PAR]">Displays the image from the <code>EX</code> file.</item>

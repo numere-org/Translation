@@ -74,8 +74,9 @@
 		<keyword>unhide</keyword>
 		<keyword>lamp</keyword>
 		<keyword>statustext</keyword>
-		<keyword>datepicker</keyword>
+		<keyword>datetimepicker</keyword>
 		<keyword>timepicker</keyword>
+		<keyword>datepicker</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -111,8 +112,7 @@
 			<item node="spinbut [-set PAR]">Generiert einen Spinbutton, der mit <code>label=LABEL</code> beschriftet werden kann. Minimaler (<code>min=VAL</code>) und maximaler (<code>max=VAL</code>) sind konfigurierbar.</item>
 			<item node="slider [-set PAR]">Generiert einen Schieberegler. Minimaler (<code>min=VAL</code>) und maximaler (<code>max=VAL</code>) sind konfigurierbar.</item>
 			<item node="lamp [-set PAR]">Generiert eine kleine Lampe. Beschriftung (<code>label=LABEL</code>) und Farbe (<code>color={R,G,B}</code>) sind konfigurierbar. Zusätzlich kann durch <code>value=VAL</code> eine der vordefinierten Lampenfarben verwendet werden: <code>"ok"</code>, <code>"warn"</code>, <code>"error"</code> und <code>"off"</code></item>
-			<item node="datepicker [-set PAR]">Generiert ein Feld zur Datumsauswahl mithilfe eines Kalenders. <code>value=VAL</code> muss ein Datum als Zeichenkette enthalten, numerische Werte werden nicht akzeptiert</item>
-			<item node="timepicker [-set PAR]">Generiert ein Feld zur Zeitauswahl. <code>value=VAL</code> muss ein Zeitwert als Zeichenkette enthalten, numerische Werte werden nicht akzeptiert</item>
+			<item node="datetimepicker [-set PAR]">Generiert ein Feld zur Datums- und Zeitauswahl mithilfe eines Kalenders. Mit <code>type=datepicker</code> kann nur ein Datums- und mit <code>type=timepicker</code> nur ein Zeitwert ausgewählt werden. <code>value=VAL</code> muss ein Zeitwert als Zeichenkette enthalten, numerische Werte werden nicht akzeptiert</item>
 			<item node="gauge [-set PAR]">Erzeugt einen Fortschrittsbalken, der entweder horizontal oder vertikal orientiert sein kann. Der Fortschrittsbalken kann Werte von 0 bis 100 annehmen (<code>value=VAL</code>). Der spezielle Wert -1 lässt den Balken pulsieren.</item>
 			<item node="tablegrid [-set PAR]">Erzeugt ein Tabellengitter mit einer definierten Anzahl an Zeilen und Spalten (<code>size={row, col}</code>), jedoch mindestens einer Zeile und einer Spalte. Werte der Tabelle können durch <code>window ID -set value=TABLEDATA() item=ITEMID</code> verändert und durch <code>window ID -get value item=ITEMID target=TARGETTABLE()</code> gelesen werden. Bei Fehlen der <code>target=TARGETTABLE()</code>-Option wird <code>valtable()</code> als Standard verwendet.</item>
 			<item node="bitmap EX [-set PAR]">Zeigt das Bild aus der Datei <code>EX</code> an.</item>

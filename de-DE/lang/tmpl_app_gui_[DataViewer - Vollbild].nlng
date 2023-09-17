@@ -1,0 +1,55 @@
+#***************************************************************************************************
+ * WINDOW-LAYOUT: %%1%% 
+ * =================================================================================================
+ * Hinzugefügt: %%2%% *#
+
+## Enumerate the window items
+declare enum -> {nABOUT = 0, nGRID, nGRAPHER, nOPEN, nOPENMENU, nCLEARTABLE, nPLOT, nXCOL, nYCOL}, sNOFILE := "KEINE DATEI GELADEN"
+
+##! \layout appmain
+##!
+##! Defines the layout for the "%%1%%" app.
+layout -title="%%1%%" size={-1,-1} statustext="Willkommen bei %%1%%"
+	## Create a "File" menu
+	group -style=menu label="Datei"
+		menuitem "Öffnen ...\tCtrl-O" -set onclick=$this~handleEvent() id=nOPENMENU
+		separator
+		menuitem "Schließen" -set onclick=evt_close()
+	endgroup
+	
+	## Create an "Help" menu
+	group -style=menu label="Hilfe"
+		menuitem "Über %%1%%" -set id=nABOUT onclick=$this~handleEvent()
+	endgroup
+	
+	group -type=horizontal expand
+		group -type=vertical
+			group -type=horizontal
+				button "Datei öffnen" -set onclick=$this~handleEvent() id=nOPEN
+			endgroup
+			group -type=horizontal
+				button "Tabelle leeren" -set onclick=$this~handleEvent() state=disabled id=nCLEARTABLE
+			endgroup
+			separator 40 -set type=space
+			group -type=vertical label="Plot-Achsen"
+				dropdown sNOFILE -set value=1 state=disabled id=nXCOL
+				dropdown sNOFILE -set value=1 state=disabled id=nYCOL
+			endgroup
+			group -type=horizontal
+				button "Plotten" -set state=disabled onclick=$this~handleEvent() id=nPLOT
+			endgroup
+		endgroup
+		group -type=vertical expand
+			tablegrid -set id=nGRID
+			grapher -set id=nGRAPHER
+		endgroup
+	endgroup
+	
+	##~ Füge hier weitere Kommandos für Deine gewünschte App ein.
+	|
+endlayout
+
+#**Ende der Datei
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

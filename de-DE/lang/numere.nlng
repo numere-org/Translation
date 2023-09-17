@@ -456,7 +456,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Definiert die lokalen Cluster in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Erzeugt ein Datengitter aus dem Ausdruck oder den Daten in EX. Die x- und y-Werte sind als Parameter anzugeben. Außerdem kann die Zahl der samples und die Zieltabelle durch Parameter angegeben werden.
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Optionen auf Datensätzen. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
-PARSERFUNCS_LISTCMD_CMD_DATEPICKER_[GUI]=				datepicker   [-set PAR]                 - Fügt ein Feld zur Datumsauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
+PARSERFUNCS_LISTCMD_CMD_DATETIMEPICKER_[GUI]=			datetimepicker   [-set PAR]             - Fügt ein Feld zur Datums- und Zeitauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei, wobei die Konstante als NAME := AUSDRUCK angegeben werden muss. Die Konstante wird am Ende der aktuellen Datei automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Definiert den "sonst"-Fall in einer Auswahlverzweigung
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]              - Definiert die Funktion in EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
@@ -577,7 +577,6 @@ PARSERFUNCS_LISTCMD_CMD_TAB_[PROC]=						tab          EX                        
 PARSERFUNCS_LISTCMD_CMD_TAYLOR_[EVAL]=					taylor       EX -set PAR  -> {VAL}      - Entwickelt den Ausdruck EX in ein Taylorpolynom der Ordnung n, definert es als Funktion und gibt die entsprechenden Koeffizienten zurück. Die Variable und die Position der Entwicklung muss durch Parameter übergeben werden. Außerdem kann die Ordnung der Entwicklung geändert werden.
 PARSERFUNCS_LISTCMD_CMD_TEXTFIELD_[GUI]=				textfield    EX [-set PAR]              - Fügt ein Textfeld in ein Window-Layout ein. Das Eventhandling, die Mehrzeiligkeit und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_THROW_[FLOWCTRL_PROC]=			throw        [STR]                      - Bricht die Auswertung der Prozedur im Fehlerfall ab und gibt die Fehlermeldung STR auf der Konsole aus
-PARSERFUNCS_LISTCMD_CMD_TIMEPICKER_[GUI]=				timepicker   [-set PAR]                 - Fügt ein Feld zur Zeitauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TREELIST_[GUI]=					treelist     [-set PAR]                 - Fügt eine Treelist in ein Window-Layout ein. Das Eventhandling, die Zahl der Spalten und die Zahl der Elemente sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                     - Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Entfernt die Funktionsdefinition die dem Ausdruck EX entspricht
@@ -744,6 +743,7 @@ GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMM
 GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DATEPICKER=type=datepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=method=daubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_DEBUGGER=debugger [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
@@ -1036,6 +1036,7 @@ GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTI
 GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
 GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
 GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TIMEPICKER=type=timepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
 GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
 GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

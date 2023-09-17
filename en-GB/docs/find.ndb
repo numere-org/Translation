@@ -101,7 +101,7 @@ cyltopol(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
 datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
-datepicker~Inserts a date picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datepicker
+datetimepicker~Inserts a date-and-time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
 Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error bugs throw~help debugger
 declare~Declares a file-specific constant in EX for use in the current file~define macro makro filestatic constant konstante~help declare
@@ -460,7 +460,6 @@ theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~pola
 throw~Aborts the procedure execution and displays an error message~procedure throw try catch error exception~help throw
 time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
-timepicker~Inserts a time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help timepicker
 to_ansi(sUtf8Enc)~Converts the UTF-8 encoded string sUtf8Enc into an ANSI encoded string~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string character ascii to_char()~to_char(
 to_cmd(STR)~Transforms the passed string STR to a command expression~zeichenkette command kommando to_cmd()~to_cmd(
