@@ -384,9 +384,9 @@ stats~Calculates the statistics of the passed data set~standardabweichung mittel
 std(x,y,z,...)~Returns the standard deviation of x,y,z,...~standardabweichung fehler varianz variance stats statistiken std()~std(
 stfa~Calculates a short-time Fourier analysis of the passed data set~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
 STR.at(POS)~Return the character at the position POS in the string~methode strings zeichenketten character at()~.at(
+STR.first~Returns the first character of a string first()~begin end last erstes letztes zeichen front back~.first(
 STR.endsw(STR)~Returns true, if the second substring is found at the end of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~.endsw(
 STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find fnd()~.fnd(
-STR.first~Returns the first character of a string first()~begin end last erstes letztes zeichen front back~.first(
 STR.fnd(STR,POS)~Returns the position of the first occurrence of STR in the string, with the search starting from the position POS~methode strings zeichenketten find fnd()~.fnd(
 STR.last~Returns the last character of a string~begin end last erstes letztes zeichen front back~.last(
 STR.len~Length of the string~methode strings zeichenketten laenge length len()~.len
@@ -438,10 +438,19 @@ TAB().describe(STR)~Updates the description of the table~describe() description 
 TAB().description~Returns the description of the table~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
 TAB().fndcols({STR},l)~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
+TAB().insertcells(r,c,r1,c1)~Inserts a block of cells into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
+TAB().insertcols(c,n)~Inserts columns into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
+TAB().insertrows(r,n)~Inserts rows into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
 TAB().name~Returns the name of the table as a string~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Calculates the Pearson correlation of the columns~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
 TAB().rankof(n,c,{r})~Calculates the ranks of the values in the column~rankof() rang reihenfolge sortieren competition~.rankof(
+TAB().removecells(r,c,r1,c1)~Removes a block of cells from the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecells(
+TAB().removecols({c})~Removes columns from the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecols(
+TAB().removerows({r})~Removes rows from the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
+TAB().reordercols({c},{n})~Sorts the columns according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
+TAB().reorderrows({r},{n})~Sorts the rows according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
 TAB().scorrof(n,m,{r1},{r2})~Calculates the Spearman correlation of the columns~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().shrink~Removes empty trailing cells and columns from the table~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Determines the size of the table~dimension size element count bounding rectangle~.size
 TAB().typeof({n})~Returns the types of the columns as strings~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Calculates the standardization of the values related to their deviation from the mean~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
