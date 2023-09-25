@@ -35,8 +35,6 @@ and(x,y,z,...)~Verknüpft die Argumente mit "&&"~logik logic und~and(
 ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans{}
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
 append~Daten aus Dateien an die Daten im Speicher anhängen, siehe "help load"~laden daten dateien speicher load data *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values~help append
-as_date(y,m,d)~Kombiniert die einzelnen Werte zu einem gemeinsamen Datum~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
-as_time(h,m,s,i,u)~Kombiniert die einzelnen Werte zu einem gemeinsamen Zeitwert~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 ascii(STR)~Gibt die ASCII-Zeichenwerte der Zeichen in STR zurück~ascii() umwandeln transformation conversion convert zeichenkette zeichencodes charactercodes code string~ascii(
 asec(x)~Arkussekans von x.~asec() arkussekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~asec(
 asech(x)~Areasekans hyperbolicus von x.~asech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asech(
@@ -44,10 +42,12 @@ asin(x)~Arkussinus von x. arcsin(x) ist ein Synonym~arcsin() asin() arcussinus a
 asinh(x)~Areasinus hyperbolicus von x. arsinh(x) ist ein Synonym~arsinh() asinh() areasinus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~asinh(
 assemble(MAT,MAT,MAT)~Erstellt eine neue Matrix aus den Werten der dritten Matrix MAT mit den Zielindices aus der ersten und zweiten Matrix~assemble() gather zusammensetzen zusammenbauen kombinieren~assemble(
 assert~Überprüft den übergebenen Ausdruck auf Wahrheit und gibt ihn zurück. Wirft einen Fehler anderenfalls~softwaretest sw unit regression~help assert
+as_date(y,m,d)~Kombiniert die einzelnen Werte zu einem gemeinsamen Datum~as_date() as_time() datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren tag monat jahr day month year ymd~as_date(
+as_time(h,m,s,i,u)~Kombiniert die einzelnen Werte zu einem gemeinsamen Zeitwert~as_date() as_time() dauer duration sekunden seconds datumswert konvertieren convert combine zeitwert time value interpretieren kombinieren minuten stunden milli minutes hours hhmmss~as_time(
 atan(x)~Arkustangens von x. arctan(x) ist ein Synonym~arctan() atan() arcustangens arkustangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions~atan(
 atanh(x)~Areatangens hyperbolicus von x. artanh(x) ist ein Synonym~artanh() atanh() areatangens trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~atanh(
-audio~Erzeugt eine WAVE-Datei aus einem Datensatz~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 audioread~Liest die Metadaten einer WAVE-Datei oder die gesamte Datei~audiofile pcm audiodatei sound wavefile wavedatei~help audioread
+audio~Erzeugt eine WAVE-Datei aus einem Datensatz~audiofile pcm audiodatei sound wavefile wavedatei~help audio
 avg(x,y,z,...)~Mittelwert von x,y,z,...~avg() mittelwert mean() average durchschnitt stats statistiken~avg(
 basetodec(sBase,sBaseVal)~Konvertiert die Zahl sBaseVal aus der Basis sBase ins Dezimalsystem und gibt diese als numerischen Wert zurück~hexadezimal hexadecimal octal oktal binär binary basetodec()~basetodec(
 bessel(n,x)~Besselfunktion erster Gattung der Ordnung n~bessel() first kind erster art besselfunktionen~bessel(
@@ -78,9 +78,9 @@ cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kan
 complex(re,im)~Erzeugt eine komplexe Zahl aus den angegeben Real- re und Imaginärteilen im~komplexe zahlen complex numbers~complex(
 compose~Erlaubt die Komposition mehrerer Plotstile und mehrerer Plots in einer Ausgabe, siehe "help compose"~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose
 conj(z)~Gibt die komplex-konjugierte Zahl zur komplexen Zahl z zurück~conjugate complex numbers komplexe zahlen~conj(
-cont~Erstellen eines Konturlinienplots~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
 cont3d~Erstellen eines 3D-Konturlinienplots~contour3d kontur niveau dreidimensional~help cont3d
 continue~Überspringt die restlichen Befehle einer FOR- oder WHILE-Schleife und setzt die Auswertung mit dem nächsten Durchlauf fort~ueberspringen überspringen for fortsetzen while~help continue
+cont~Erstellen eines Konturlinienplots~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
 coordstogrid(MAT,MAT)~Bildet die ein oder zwei Spalten der zweiten Matrix in den Gitterkoordinaten der ersten Matrix ab~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren coordstogrid()~coordstogrid(
 copy~Kopiert je nach Ausdruck Einträge/Spalten/Untertabellen zwischen Datenobjekten oder Dateien, siehe "help copy"~kopieren  tabellen dateien files~help copy
 correl(MAT,MAT)~Berechnet die Korrelationsmatrix aus den beiden Argumenten~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl() mustererkennung pattern recognition~correl(
@@ -110,16 +110,16 @@ dectobase(sBase,nDecVal)~Konvertiert die Zahl nDecVal aus dem Dezimalsystem in d
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Gradwert von x [Radiant]~todegree gradwert rad2deg() umrechnen degree()~degree(
 delete~Entfernt Einträge/Spalten/Untertabellen aus einer Tabelle, siehe "help delete"~loeschen löschen entfernen remove erase~help delete
-dens~Erzeugt einen Dichte-Plot~density dichte~help dens
 dens3d~Erzeugt einen 3D-Dichte-Plot~density3d dichte dreidimensional~help dens3d
+dens~Erzeugt einen Dichte-Plot~density dichte~help dens
 det(MAT)~Berechnet die Determinante einer quadratischen Matrix MAT, siehe "help matop"~det() matrix~det(
 detect~Erkennt Strukturen in einem 2D-Datengitter und speichert selbige in der Form (x,y) in der Zieltabelle~strukturerkennung bonedetection structures structuredetection bones~help detect
 diag(x,y,z,...)~Erzeugt eine Diagonalmatrix mit x,y,z,... als Hauptdiagonale, siehe "help matop"~diag() matrix diagonal~diag(
 diagonalize(MAT)~Diagonalisiert die quadratische Matrix MAT, siehe "help matop"~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
 dialog~Erzeugt ein Dialogfenster zur Interaktion mit dem Benutzer~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog
 diff~numerische Differentiation einer gegebenen Funktion, siehe "help diff"~ableiten differenzieren differentieren ableitung differentiation~help diff
-draw~Zeichenmodus, der die Darstellung primitiver Objekte und das Anzeigen von Text erlaubt~zeichnen drawings anmerkungen annotations zeichnungen~help draw
 draw3d~3D-Zeichenmodus, der die Darstellung primitiver Objekte im dreidimensionalem Raum erlaubt~zeichnen drawings anmerkungen annotations zeichnungen~help draw3d
+draw~Zeichenmodus, der die Darstellung primitiver Objekte und das Anzeigen von Text erlaubt~zeichnen drawings anmerkungen annotations zeichnungen~help draw
 dropdown~Fügt eine Dropdown-Liste in ein Window-Layout ein~choices windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Easteregg~Wie wenn die wirklich so einfach zu finden wären ... Such' nur weiter ...~easteregg osterei lustig~nan
 edit~Bearbeiten und Öffnen von Dateien in einem externen Programm~bearbeiten oeffnen öffnen open view betrachten dateien programm~help edit
@@ -143,8 +143,8 @@ explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren
 export~Export eines Datensatzes als ANSI-Text-, CSV- oder TeX-Datei~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
 extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Siehe "help extrema"~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
 factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()~factorial(
-fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 fft2d~Schnelle 2D-Fourier-Transformation eines Datengitters~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
+fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 filter(MAT,KERNEL,MODE)~Wendet einen frei definierbaren Filterkernel KERNEL auf die Matrix MAT an. Der Parameter MODE definiert dabei das Verhalten an den Matrixgrenzen. Mit MODE = 0 wird der Randwert der Matrix festgehalten (boundary clamp), mit MODE = 1 werden die Randwerte gespiegelt (boundary reflection).~filter kernel matrixfilter matrix boundary faltung convolution~filter(
 findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurück, deren Spaltenüberschrift mit STR2 übereinstimmen~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
@@ -157,9 +157,9 @@ fisher_f_inv_p(p,nu1,nu2)~Liefert die Umkehrung der kumulativen Verteilungsfunkt
 fisher_f_inv_q(q,nu1,nu2)~Liefert die Umkehrung der komplementären kumulativen Verteilungsfunktion bei q der F-Verteilung nach Fisher mit den Freiheitsgraden nu1 und nu2~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~fisher_f_inv_q(
 fisher_f_pdf(x,nu1,nu2)~Liefert die Dichte der Verteilungsfunktion bei x der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~fisher_f_pdf(
 fisher_f_rd(nu1,nu2)~Liefert eine Zufallszahl aus der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~fisher_f_rd(
-fit~Passt eine Funktion mittels Parameter an eine Datenreihe an, siehe "help fit"~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
 Fitprotokoll~Das Fitprotokoll findest du unter "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult~edit <savepath>/numerefit.log
 fitw~Passt eine Funktion mittels Parameter an eine Datenreihe an und gewichtet die Datenpunkte entsprechend der Fehlerwerte, siehe "help fit"~fitten fitting anpassen daten fehler errors abweichungen deviations trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fitw
+fit~Passt eine Funktion mittels Parameter an eine Datenreihe an, siehe "help fit"~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
 floor(x)~rundet x auf die nächsttiefere Ganzzahl ab~floor() abrunden ganzzahlen integral number~floor(
 for (VAR = INI:FIN)~Zählschleife, siehe "help for"~zaehlschleife zählschleife endfor for() loop command sequence flow control~help for () ... endfor
 Frage~Stell' ich hier die Fragen oder du?~question~"Das hättest du dir so gedacht..."
@@ -184,8 +184,8 @@ getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen W
 getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
 getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
-grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
 grad3d~Erstellen eines 3D-Gradienten-Plots~gradienten feldlinien dreidimensional field lines force kraft three-dimensional~help grad3d
+grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
 grapher~Fügt ein Graph-Objekt in ein Window-Layout ein~plotting windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 gridrot~Rotiert das angegebene Datengitter um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help gridrot
 group~Startet die Definition einer Gruppierungsbox für ein Window-Layout~endgroup windowsystem layout interaction gui graphical user interface graphisch fenster dialog~help window
@@ -193,8 +193,8 @@ hcat(MAT,MAT)~Horizontale Verkettung von zwei Matrizen, die die gleiche Anzahl v
 heaviside(x)~Heaviside-(Theta-)Funktion~thetafunktion function heavisidefunktion heaviside() stufenfunktion distribution~heaviside(
 help THEMA~Ruft die NumeRe-Hilfe zum gewählten Thema THEMA auf. Wird kein Thema angegeben, so wird die NumeRe-Hilfe-Übersicht aufgerufen~hilfe manual documentation dokumentation~help
 hermite(n,x)~Berechnet den numerischen Wert der Hermite-Polynome der Ordnung n an der Stelle x~hermitepolynome hermite()~hermite(
-hist~Berechnet einen Histogramm-Datensatz aus einem gegebenen Datensatz~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
 hist2d~Berechnet ein 2D-Histogramm aus einem gegebenen (x,y,z)-Datensatz. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter~help hist2d
+hist~Berechnet einen Histogramm-Datensatz aus einem gegebenen Datensatz~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
 hline~Zeichnet eine horizontale (einfache oder doppelte) Linie~formatierung ausgabe trenner abstand doppellinie separator~help hline
 identity(n)~Erzeugt eine n-Dimensionale Einheitsmatrix, siehe "help matop"~identity() matrix identität eye()~identity(
 idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index indices transformieren~idxtolog(
@@ -256,8 +256,8 @@ load~Daten aus Dateien in den Speicher laden, siehe "help load"~laden load data 
 locate({STR},STR,N)~Sucht nach dem Auftreten der zweiten Zeichenkette in dem Zeichenkettenarray des ersten Arguments und gibt die zugehörigen Indices zurück~locate() find string cluster position index array~locate(
 log10(x)~Logarithmus zur Basis 10 von x~logarithmus base 10 log10() log()~log10(
 log2(x)~Logarithmus zur Basis 2 von x~logarithmus base 2 log2()~log2(
-log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 logtoidx(MAT)~Wandelt Logikwerte in einer Matrix in Indexwerte um~logic index indices boolean position transformieren~logtoidx(
+log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 Lösung~Was soll das denn? Ich kann numerisch rechnen - und nicht etwa hellsehen!~solution lösen solver~solution = nan
 matfc(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., siehe "help matop"~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
 matfcf(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., wobei fehlende Elemente logisch ergänzt werden, siehe "help matop"~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
@@ -269,8 +269,8 @@ max(x,y,z,...)~Maximum der Werte x,y,z,... Kann auch auf Zeichenketten angewende
 maxpos(x,y,z,...)~Index des Maximums der Werte x,y,z,...~maximum position max() maxpos() maximal value~maxpos(
 med(x,y,z,...)~Median der Werte x,y,z,...~zentralwert median untermedian obermedian med()~med(
 menuitem~Definiert ein Eintrag in einem Menü für ein Window-Layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 mesh3d~Erstellen eines 3D-Gitterplots~meshgrid3d gitterplot dreidimensional~help mesh3d
+mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
 minpos(x,y,z,...)~Index des Minimums der Werte x,y,z,...~minimum position min() minpos() minimal value~minpos(
 movavg(MAT,n,m)~Schiebt ein Fenster über die Matrix und berechnet den Mittelwert~movavg() moving gleitender sliding mittelwert mean average window~movavg(
@@ -301,8 +301,8 @@ pack~Packt die referenzierten Dateien in eine gemeinsame Archivdatei~zipfile tar
 pct(x,y,z,...,p)~p-tes Perzentil der Werte x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
 perlin(x,y,z,seed,freq,oct,pers)~Berechnet Perlin-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~perlin(
 phi(x,y)~Berechnet den Azimuthwinkel phi~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
-plot~Erstellen eines Graphen~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
 plot3d~Erstellen eines 3D-Graphen~plotten graphisch dreidimensional plot()~help plot3d
+plot~Erstellen eines Graphen~plotten graphisch plotoptions noalphamask noanimate noarea aspect noaxis nobackground nobars colorscheme nobox logscale noconnect coords spherical polar ticklabels ticks font nogrid nointerpolate legend linestyles plotstyles pointstyles noopen origin noorthoproject perspective noregion nosilent size title noerrorbars plot()~help plot
 poltocart(MAT)~Konvertiert die Spalten der Matrix MAT von polaren (rho,phi,theta) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocart(
 poltocyl(MAT)~Konvertiert die Spalten der Matrix MAT von polaren (rho,phi,theta) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~poltocyl(
 polylength(MAT)~Berechnet die Länge des Polygonzuges, der durch die Zeilen der Matrix MAT definiert wird~polygonlänge polygonlaenge umfang perimeter polygon length~polylength(
@@ -329,8 +329,8 @@ rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunkti
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Gibt den Wert der Dichte der Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_pdf(
 rayleigh_rd(sigma)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
-read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
+read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
 redefine~Überschreibt eine bestehende Funktionendefinition, siehe "help define"~funktion ueberschreiben überschreiben definieren neue definition~help redefine
@@ -384,7 +384,6 @@ statictext~Fügt einen statischen Text in ein Window-Layout ein~windowsystem lay
 stats~Berechnet die Statistiken einer gegebenen Tabelle~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
 std(x,y,z,...)~Standardabweichung der Werte x,y,z,...~standardabweichung fehler varianz variance deviation stats statistiken std()~std(
 stfa~Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
-str~Definiert den lokalen Zeichenkettenvariablensatz einer Prozedur~procedure local strings~help str
 STR.at(POS)~Gibt das Zeichen aus der Zeichenkette an der Stelle POS zurück~methode strings zeichenketten character at()~.at(
 STR.endsw(STR)~Gibt true zurück, wenn der zweite Substring am Ende des Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~.endsw(
 STR.first~Gibt das erste Zeichen aus einer Zeichenkette zurück first()~methode strings zeichenketten first first()~.first
@@ -399,8 +398,6 @@ STR.rmtch(STR,POS)~Sucht das letzte Auftreten eines Zeichens aus STR in der Zeic
 STR.splt(CHAR,KEEP)~Teilt die Zeichenkette an den Zeichen CHAR in einzelne Zeichenketten auf~methode strings zeichenketten unterteilen tokenizer zerlegen splt() tokens~.splt(
 STR.startsw(STR)~Gibt true zurück, wenn der zweite Substring am Anfang des Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~.startsw(
 STR.sub(POS,LEN)~Gibt LEN Zeichen ab dem Zeichen POS aus der Zeichenkette als neue Zeichenkette zurück~methode strings zeichenketten ausschnitt ausschneiden sub()~.sub(
-str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings find str_not_match()~str_not_match(
-str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
 strfnd(STR1,STR2,P)~Gibt die Position des ersten Auftretens der Zeichenkette STR1 in STR2 ab dem Zeichen P zurück~zeichenketten strings find strfnd()~strfnd(
 strfndall(STR1,STR2,P,P)~Gibt alle Positionen, an denen STR1 in STR2 zwischen beiden Positionen auftritt, zurück~zeichenketten strings finden alle find strfnd() strfndall()~strfndall(
 string(i)~Zeichenketten-Objekt mit Zugriff auf Zeichenkette "i", siehe "help string"~zeichenketten string()~help string()
@@ -412,6 +409,9 @@ strmatchall(STR1,STR2,P,P)~Sucht die ersten Auftreten aller Zeichen aus STR1 in 
 strrfnd(STR1,STR2,P)~Gibt die Position des letzten Auftretens von STR1 in STR2 bis zum Zeichen P zurück~zeichenketten strings find rfind last strrfnd()~strrfnd(
 strrmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens aus S1 in der Zeichenkette S2 bis zum Zeichen P~zeichenketten strings find last strrmatch()~strrmatch(
 strunique({STR},N)~Sortiert und gibt nur eindeutige Elemente aus den Zeichenketten STR zurück~unique() strunique() zeichenketten strings eindeutig einmalig single once~strunique(
+str_not_match(S1,S2,P)~Sucht das erste Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, ab dem Zeichen P~zeichenketten strings find str_not_match()~str_not_match(
+str_not_rmatch(S1,S2,P)~Sucht das letzte Auftreten eines Zeichens in der Zeichenkette S2, das nicht in S1 auftritt, bis zum Zeichen P~zeichenketten strings find last str_not_rmatch()~str_not_rmatch(
+str~Definiert den lokalen Zeichenkettenvariablensatz einer Prozedur~procedure local strings~help str
 student_t(n,c)~Berechnet den Student-Faktor t für n Messungen mit dem Konfidenzintervall 0 < c < 1~student_t() studentfaktor~student_t(
 student_t_cdf_p(x,nu)~Liefert die kumulative Verteilungsfunktion bei x der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~student_t_cdf_p(
 student_t_cdf_q(x,nu)~Liefert die komplementäre kumulative Verteilungsfunktion an x der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~student_t_cdf_q(
@@ -422,11 +422,10 @@ student_t_rd(nu)~Liefert eine Zufallszahl aus der Student's t-Verteilung mit nu 
 subplot~Leitet einen neuen Unterplot in Verbindung mit dem "compose"-Modus ein~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Gibt l Zeichen ab dem Zeichen n aus der Zeichenkette STR als neue Zeichenkette zurück~zeichenketten strings ausschnitt ausschneiden substr()~substr(
 sum(x,y,z,...)~Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden~summe summieren zeichenketten strings sum()~sum(
-surf~Erstellen eines Oberflächenplots~oberflaechenplot oberflächenplot surface()~help surf
 surf3d~Erstellen eines 3D-Oberflächenplots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
+surf~Erstellen eines Oberflächenplots~oberflaechenplot oberflächenplot surface()~help surf
 swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austauschen exchange content table()~help swap
 switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
-tab~Definiert die lokalen Tabellen einer Prozedur~procedure local tables~help str
 TAB().aliasof(STR)~Wandelt die aktuelle Tabelle in einen Alias der übergebenen Tabelle um~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof(n,m,f,{r})~Führt eine Varianzanalyse für die Kategorien der selektierten Spalte durch~anovaof() analysis of variance~.anovaof(
 TAB().binsof(n,b)~Berechnet ein einfaches Histogramm der Daten in der Spalte~histogram binsof() rubriken häufigkeiten frequency~.binsof(
@@ -439,16 +438,26 @@ TAB().describe(STR)~Aktualisiert die Beschreibung der aktuellen Tabelle~describe
 TAB().description~Gibt die Beschreibung der aktuellen Tabelle zurück~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
 TAB().fndcols({STR},l)~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
+TAB().insertcells(r,c,r1,c1)~Fügt einen Block an Zellen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
+TAB().insertcols(c,n)~Fügt Spalten in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
+TAB().insertrows(r,n)~Fügt Reihen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
 TAB().name~Gibt den Namen der Tabelle als Zeichenkette zurück~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Berechnet die Pearson-Korrelation der Spalten~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
 TAB().rankof(n,c,{r})~Berechnet die Ränge der Werte in der Spalte~rankof() rang reihenfolge sortieren competition~.rankof(
+TAB().removecells(r,c,r1,c1)~Entfernt einen Block an Zellen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecells(
+TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removecols(
+TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
+TAB().reordercols({c},{n})~Sortiert die Spalten gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
+TAB().reorderrows({r},{n})~Sortiert die Zeilen gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().shrink~Entfernt leere, anhängende Zellen und Spalten aus der Tabelle~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Bestimmt die Größe der Tabelle in Zeilen und Spalten~dimension size element count bounding rectangle~.size
 TAB().typeof({n})~Gibt den Spaltentyp der Spalten als Zeichenketten zurück~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
 TABLE(i,j)~Table-Objekt mit Zugriff auf Element "i,j", siehe "help table"~zwischenspeicher save cache() table() sortieren swap rename range schrittweite step width~help table()
 tablegrid~Fügt ein Tabellengitter in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 tabrot~Rotiert die angegebene Tabelle um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help tabrot
+tab~Definiert die lokalen Tabellen einer Prozedur~procedure local tables~help str
 tan(x)~Tangens von x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
 tanh(x)~Tangens hyperbolicus von x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
 taylor~Entwickelt eine Funktion in ein Taylorpolynom der Ordnung n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
@@ -481,8 +490,8 @@ url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokol
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables~help var
 vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von Spalten haben~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
-vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
+vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Gibt die Nummer des Wochentages des übergebenen Zeitwertes tTime zurück~weekday() day of week calendar date time datum kalendar~weekday(
