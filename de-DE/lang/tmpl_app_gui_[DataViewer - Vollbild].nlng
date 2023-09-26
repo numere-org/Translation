@@ -40,7 +40,7 @@ layout -title="%%1%%" size={-1,-1} statustext="Willkommen bei %%1%%"
 			endgroup
 		endgroup
 		group -type=vertical expand
-			tablegrid -set id=nGRID
+			tablegrid -set id=nGRID state=readonly
 			grapher -set id=nGRAPHER
 		endgroup
 	endgroup
