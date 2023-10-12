@@ -128,6 +128,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ERF_[DISTRIB]=					erf(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                                 {}       - GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CLOSE_[GUI]=					evt_close()                                                 {}       - GUI-Event-Handler: Schließt das aktuelle Fenster. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden
 PARSERFUNCS_LISTFUNC_FUNC_EVT_COPYVALUES_[GUI]=				evt_copyvalues(nFromId,nToId1,...)                          {}       - GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
+PARSERFUNCS_LISTFUNC_FUNC_EVT_ENDDIALOG_[GUI]=				evt_enddialog(sReturnValue)                                 {}       - GUI-Event-Handler: Beendet den Dialog-Modus des aktuellen Fensters mit sReturnValue als Rückgabewert. Falls das aktuelle Fenster nicht im Dialog-Modus ist, wird es stattdessen geschlossen. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                               {}       - GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                                                      VAL      - Exponentialfunktion von x. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,STYLE)                                        {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die ersten beiden Richtungsvektoren sind die untere und linke Kante und der letzte die Diagonale. Die Füllung des Vierecks kann mit STYLE beeinflusst werden.
@@ -757,6 +758,7 @@ GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=method=daubechies [%%GUI_EDITOR_CALLTIP_COMMON
 GUI_EDITOR_CALLTIP_OPT_DEBUGGER=debugger [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
+GUI_EDITOR_CALLTIP_OPT_DIALOGRESULT=dialogresult [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
 GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -856,6 +858,7 @@ GUI_EDITOR_CALLTIP_OPT_LOGSCALE=logscale
 GUI_EDITOR_CALLTIP_OPT_LYAPUNOV=lyapunov [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
 GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
 GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MARGIN=margin="<_^>" [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MASK=mask
 GUI_EDITOR_CALLTIP_OPT_MAX=max[=VAL]

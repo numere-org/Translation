@@ -135,6 +135,7 @@ eval~Calculates function values of the passend Expression at distinct points (sa
 evt_changestate(nId,sState)~GUI event handler: changes the state of the element with the ID nId to the new state sState~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_changestate(
 evt_close()~GUI event handler: closes the current window~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_close()
 evt_copyvalues(nFromId,nToId1,...)~GUI event handler: copies the values from the elements with the ID nFromId into the elements with the IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
+evt_enddialog(STR)~GUI event handler: terminates the dialog mode~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_enddialog(
 evt_sendvaltoitem(nToId1,...)~GUI event handler: copies the values from the event-firing element into the elements with the IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
 execute~Executes a command using the windows shell~command bash programm wait run ausführen cmd.exe~help execute
 exp(x)~Exponential function of x~exponentialfunktion eulersche zahl exp()~exp(

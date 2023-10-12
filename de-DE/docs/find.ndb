@@ -136,6 +136,7 @@ eval~Berechnet Funktionswerte eines gegebenen Ausdrucks~funktionswerte ausdruck 
 evt_changestate(nId,sState)~GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_changestate(
 evt_close()~GUI-Event-Handler: Schließt das aktuelle Fenster~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_close()
 evt_copyvalues(nFromId,nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
+evt_enddialog(STR)~GUI-Event-Handler: Beendet den Dialog-Modus~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_enddialog(
 evt_sendvaltoitem(nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
 execute~Führt ein Kommando mithilfe der Windows-Shell aus~command bash programm wait ausführen run cmd.exe~help execute
 exp(x)~Exponentialfunktion von x~exponentialfunktion eulersche zahl exp()~exp(
