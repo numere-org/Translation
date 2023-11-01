@@ -58,6 +58,7 @@
 		<keyword>legend</keyword>
 		<keyword>linesize</keyword>
 		<keyword>logscale</keyword>
+		<keyword>margin</keyword>
 		<keyword>marks</keyword>
 		<keyword>maxlin</keyword>
 		<keyword>medium</keyword>
@@ -177,9 +178,10 @@
 			<item node="lborder=(POS,KOMNTR)">Zeichnet eine vertikale Linie durch den <expr>x</expr>-Wert POS und versieht selbige mit dem KOMNTR. Durch einen KOMNTR in der Form TEXT,STYLE kann die Darstellung der Linie beeinflusst werden</item>
 			<item node="legend=POS">Position der Legende bei <code>plot</code>, <code>hist</code> und Spezialfällen von <code>plot3d</code> festlegen. POS kann <code>topleft</code>, <code>topright</code>, <code>bottomleft</code>, <code>bottomright</code> sein</item>
 			<item node="legendstyle=STYLE">Legendensymbole bei <code>plot</code> und <code>plot3d</code> beeinflussen: <code>onlycolors</code> zeigt nur die Farben, <code>onlystyles</code> nur die Styles der Kurven/Punkte</item>
-			<item node="linesizes=SIZES">Die Liniendicke in Plots ändern. Jede Ziffer in SIZES steht für einen Plot und kann alle Werte zwischen 0 und 9 umfassen.</item>
+			<item node="linesizes=SIZES">Die Liniendicke sowie die zugehörige Markergröße in Plots ändern. Jede Ziffer in SIZES steht für einen Plot und kann alle Werte zwischen 0 und 9 umfassen.</item>
 			<item node="linestyles=STYLE">Den Linienstil in Plots ändern. Siehe <a href="nhlp://linestyles?frame=new">help linestyles</a> für weitere Details.</item>
 			<item node="logscale/<br/>  nologscale">Logarithmische Skalierung aller Achsen ein-/ausschalten</item>
+			<item node="margin=MARGIN">Definiert, ob oberhalb (<code>^</code>), unterhalb (<code>_</code>), links (<code>&lt;</code>) oder rechts (<code>&gt;</code>) Abstand zum Plotbereich für Achsenbeschriftung und Farbskala vorgehalten werden soll. Standardmäßig werden alle Abstände freigehalten (<code>margin="&lt;^_&gt;"</code>). Wenn kein entsprechender Abstand freigehalten wird, kann es sein, dass eine Achsenbeschriftung oder eine Farbskala nicht angezeigt wird (<code>margin="_"</code> ist ein guter Kompromiss). Mit <code>margin="#"</code> wird überhaupt kein Abstand vorgehalten, der Plot geht bis zum Rand und auch die Achsenskalierung wird nicht mehr angezeigt. In Verbindung mit dem <code>compose</code>-Modus und mehreren <a href="nhlp://subplot?frame=new"><code>subplot</code></a>s, muss diese Option direkt an <code>subplot ... -set margin=MARGIN</code> angehängt werden.</item>
 			<item node="marks=WERT/<br/>  nomarks">(Nur bei <code>plot3d</code>) Zeichnet Kreise der Größe WERT an den <expr>(x,y,z)</expr>-Koordinaten, wobei die Kreise gemäß des <expr>z</expr>-Werts und des Farbschemas gefüllt sind</item>
 			<item node="maxline=KOMNTR">Zeichnet eine horizontale Linie durch den maximalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>
 			<item node="minline=KOMNTR">Zeichnet eine horizontale Linie durch den minimalen Funktionswert eines Plots und versieht selbige mit dem KOMNTR. In der Form <code>maxline=(TEXT,STYLE)</code> kann die Darstellung der Linie beeinflusst werden</item>

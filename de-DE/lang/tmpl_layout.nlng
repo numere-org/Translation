@@ -3,6 +3,8 @@
  * =================================================================================================
  * Hinzugefügt: %%2%% *#
 
+declare enum -> {nITEM1 = 0, nITEM2, nITEM3}
+
 layout -title="%%1%%"
 	##~ Füge hier die Kommandos für Dein gewünschtes Layout ein.
 	|

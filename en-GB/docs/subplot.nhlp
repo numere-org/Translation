@@ -51,6 +51,7 @@
 			|-----------------------------------------------------|
 		</verbatim>
 		Subplots may span over multiple grid cells as well, if they shall be larger, higher or wider than the surrounding plots. In this case, you have to pass the options <code>lines=LINES</code> or <code>cols=COLS</code> after the parameter <code>set</code> to <code>subplot</code> (you only have to pass both options, if the plot shall span over multiple lines <em>and</em> multiple columns):<codeblock>subplot -set cols=COLS lines=LINES</codeblock>You have to take care that there is enough space in the created grid. The desired position may be specified like above and defines itself the top-left edge.
+		<em>Note:</em> If the margin of the individual plots of a <code>multiplot</code> array shall be modified with <a href="nhlp://margin?frame=new"><code>margin=MARGIN</code></a>, then this option <em>must</em> be attached to the respective leading command <code>subplot</code> directly as follows: <code>subplot ... -set margin=MARGIN ...</code>
 		<example desc="Three plots in a 2x2 grid, where the last one shall span over two columns:" type="codeblock">
 			compose -multiplot=2,2
 			\tsubplot

@@ -51,6 +51,7 @@
 			|-----------------------------------------------------|
 		</verbatim>
 		Unterplots können sich auch über mehrere Gitterzellen erstrecken, falls sie z.B. größer, höher oder breiter als die anderen Teilplots sein sollen. Für derartige Unterplots muss <code>subplot</code> der Parameter <code>set</code> gefolgt von den Optionen <code>lines=LINES</code> bzw. <code>cols=COLS</code> übergeben werden (es sind nur dann beide Optionen nötig, wenn der Plot sich über mehrere Spalten <em>und</em> Zeilen erstrecken soll):<codeblock>subplot -set cols=COLS lines=LINES</codeblock>Dabei ist u.A. darauf zu achten, dass der Plot ab der gewünschten Zelle auch Platz in dem erzeugten Gitter findet. Die gewünschte Position kann ebenso vorgegeben werden und wird durch die erste enthaltene Zelle links oben bestimmt.
+		<em>Hinweis:</em> Soll der Rand um die jeweiligen Plots eines <code>multiplot</code>-Feldes mit <a href="nhlp://margin?frame=new"><code>margin=MARGIN</code></a> modifiziert werden, so <em>muss</em> diese Option direkt an das jeweils vorangehende Kommando <code>subplot ... -set margin=MARGIN ...</code> angehängt werden.
 		<example desc="Drei Plots in einem 2x2-Gitter, wobei der letzte sich über zwei Spalten erstrecken soll:" type="codeblock">
 			compose -multiplot=2,2
 			\tsubplot

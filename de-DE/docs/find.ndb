@@ -102,6 +102,7 @@ data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time~date(
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
+datetimepicker~Fügt ein Feld zur Datums-und Zeitauswahl in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Sammelt zusätzliche Informationen bei Fehlern in Prozeduren, siehe "help debugger"~fehlersuche debugging bugs throw error~help debugger
 declare~Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei~define macro makro filestatic constant konstante~help declare
@@ -135,6 +136,7 @@ eval~Berechnet Funktionswerte eines gegebenen Ausdrucks~funktionswerte ausdruck 
 evt_changestate(nId,sState)~GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_changestate(
 evt_close()~GUI-Event-Handler: Schließt das aktuelle Fenster~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_close()
 evt_copyvalues(nFromId,nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
+evt_enddialog(STR)~GUI-Event-Handler: Beendet den Dialog-Modus~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_enddialog(
 evt_sendvaltoitem(nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
 execute~Führt ein Kommando mithilfe der Windows-Shell aus~command bash programm wait ausführen run cmd.exe~help execute
 exp(x)~Exponentialfunktion von x~exponentialfunktion eulersche zahl exp()~exp(
@@ -232,6 +234,7 @@ ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit w�
 justify(STR,N)~Richtet die Zeichenketten in dem Zeichenkettenvektor links, rechts oder zentriert aus~justify() alignment ausrichten justification left right center tabular layout tabellarisch spalten columns~justify(
 laguerre(n,x)~Berechnet den numerischen Wert der Laguerre-Polynome der Ordnung n an der Stelle x~laguerrepolynome polynomial laguerre()~laguerre(
 laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polynome der Ordnung n mit k = [0,n] an der Stelle x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
+lamp~Fügt eine kleine Lampe in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help lamp
 landau_pdf(x)~Gibt den Wert der Dichte der Landau-Verteilung bei x zurück~landau verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~landau_pdf(
 landau_rd()~Gibt eine Zufallszahl der Landau-Verteilung zurück~landau verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~landau_rd(
 laplace_cdf_p(x,a)~Gibt den Wert der kumulativen Verteilungsfunktion bei x für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~laplace_cdf_p(

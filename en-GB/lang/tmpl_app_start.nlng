@@ -1,0 +1,29 @@
+#***************************************************************************************************
+ * NUMERE-PROCEDURE: $start()
+ * =================================================================================================
+ * Generated: %%2%% *#
+
+##! \procedure start
+##! Starts the "%%1%%" app.
+##!
+##! \param _sArgs  (!!=""!!) Optional starting parameters passed to the initializing function.
+procedure $start(_sArgs = "") :: mask explicit
+	var nWinId
+	
+	## Open the main app window
+	nWinId = window "<this>/view/appmain";
+	
+	## Try to initialize the app
+	if (!$this~controller~initialize(nWinId, _sArgs))
+		window nWinId -close;
+		throw "The \"%%1%%\" app could not be initialized.";
+	endif
+	
+	return void;
+endprocedure
+
+
+#**End of file
+ * NumeRe: Framework for Numerical Computations | Free numerical software licenced under GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

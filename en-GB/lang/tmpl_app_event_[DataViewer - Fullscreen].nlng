@@ -1,0 +1,148 @@
+#***************************************************************************************************
+ * NUMERE-PROCEDURE: $handleEvent()
+ * =================================================================================================
+ * Generated: %%2%% *#
+
+## Get the item IDs from the window layout
+include "appmain.nlyt" :: declarations
+
+##! \procedure handleEvent
+##! Handle all events originating from the "%%1%%" app window.
+##!
+##! \param _nWinId  The window ID
+##! \param _nItemId  The ID of the firing item
+##! \param _event{}  The event key-value list filled with information about the current event
+procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
+	tab loadedData()
+	str sValue
+	cst values{}, dim{}, types{}, errorInfo{}
+	var fAspect
+	
+	##~ Insert your commands and expressions here
+	|
+	try
+		## Handle the events by their IDs
+		switch (_nItemId)
+		case nABOUT:
+			dialog "%%1%% is a NumeRe App" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok;
+			break
+		case nOPEN:
+		case nOPENMENU:
+			## Open a file to be viewed. Show a file dialog first
+			sValue = dialog "<loadpath>", "", "Data files|*.dat;*.ndat;*.csv|DAT files|*.dat|NDAT files|*.ndat|CSV files|*.csv|All files|*.*" -set type=filedialog title="Select file";
+			
+			## If the user selected a file, try to load it
+			if (sValue)
+				try
+					load sValue -totable=loadedData() -ignore;
+				catch:
+					dialog "The file '" + sValue + "' cannot be loaded." -set type=messagebox title="Error loading file" icon=erroricon;
+					return void;
+				endtry
+				
+				## Loading has succeded, update the GUI correspondingly
+				## Get the table headlines first
+				values{} = loadedData(#,:);
+				
+				window _nWinId -set value=loadedData() -item=nGRID;
+				window _nWinId -set state=enabled item=nCLEARTABLE;
+				window _nWinId -set state=enabled item=nPLOT;
+				
+				## Update the x axis selector
+				window _nWinId -set label=values{} item=nXCOL;
+				window _nWinId -set value=values{1} item=nXCOL;
+				window _nWinId -set state=enabled item=nXCOL;
+				
+				## Update the y axis selector
+				window _nWinId -set label=values{} item=nYCOL;
+				window _nWinId -set value=values{2} item=nYCOL;
+				window _nWinId -set state=enabled item=nYCOL;
+			endif
+			
+			break
+		case nCLEARTABLE:
+			## Clear the table by setting an empty table and 
+			## disabling the corresponding controls
+			window _nWinId -set value=loadedData() -item=nGRID;
+			window _nWinId -set state=disabled item=nCLEARTABLE;
+			window _nWinId -set state=disabled item=nPLOT;
+			
+			window _nWinId -set label=sNOFILE item=nXCOL;
+			window _nWinId -set value=1 item=nXCOL;
+			window _nWinId -set state=disabled item=nXCOL;
+			
+			window _nWinId -set label=sNOFILE item=nYCOL;
+			window _nWinId -set value=1 item=nYCOL;
+			window _nWinId -set state=disabled item=nYCOL; 
+			break
+		case nPLOT:
+			## Plot the data from the two selected axes. Get the data
+			## and the selected axes first
+			window _nWinId -get value item=nGRID target=loadedData();
+			values{1} = window _nWinId -get value item=nXCOL;
+			values{2} = window _nWinId -get value item=nYCOL;
+			plot -set reset
+			
+			## Get the window dimensions for estimating the aspect ratio
+			dim{} = window _nWinId -get value;
+			fAspect = 2*dim{1}/dim{2}; ## Grapher gets about half of the height of the screen
+			
+			## Find the columns in the table and their types
+			dim{} = loadedData().fndcols(values{});
+			types{} = loadedData().typeof(dim{});
+			
+			## Switch to time axes if necessary
+			if (types{1} == "datetime")
+				sValue = $thisfile~selectTimeFormat(max(loadedData(:, dim{1})) - min(loadedData(:, dim{1})));
+				plot -set timeaxes=("x", sValue)
+			endif
+			
+			if (types{2} == "datetime")
+				sValue = $thisfile~selectTimeFormat(max(loadedData(:, dim{2})) - min(loadedData(:, dim{2})));
+				plot -set timeaxes=("y", sValue)
+			endif
+			
+			## Try to plot the data in the columns
+			try
+				plot loadedData(:, dim{}) -set box streamto={_nWinId, nGRAPHER} aspect=fAspect xlabel=values{1} ylabel=values{2}
+			catch:
+				values{} = getlasterror();
+				dialog values{2} -set type=messagebox title="Error during plotting" icon=erroricon;
+			endtry
+			
+			break
+		endswitch
+	catch:
+		errorInfo{} = getlasterror();
+		dialog errorInfo{2} -set type=messagebox title="An error occured" icon=erroricon;
+	endtry
+	
+	## Event handler typically return nothing
+	return void;
+endprocedure
+
+
+##! \procedure selectTimeFormat
+##! Get a reasonable time formatting string based upon the selected range.
+##!
+##! \param _fRange  The time interval range
+##! \return STR  The time formatting string
+procedure $selectTimeFormat(_fRange)
+	if (_fRange > 24*3600*150)
+		return "MM/DD/YY";
+	elseif (_fRange > 24*3600)
+		return "MM/DD";
+	elseif (_fRange > 3600)
+		return "hh:mm";
+	endif
+	
+	return "hh:mm:ss";
+endprocedure
+
+##~ Create more local procedures here
+
+
+#**End of file
+ * NumeRe: Framework for Numerical Computations | Free numerical software licenced under GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

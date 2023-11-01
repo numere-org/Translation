@@ -128,6 +128,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ERF_[DISTRIB]=					erf(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                                 {}       - GUI event handler: changes the state of the element with the ID nId to the new state sState. GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CLOSE_[GUI]=					evt_close()                                                 {}       - GUI event handler: closes the current window. GUI-Event-Handler may only be used directly in a Layout-Script
 PARSERFUNCS_LISTFUNC_FUNC_EVT_COPYVALUES_[GUI]=				evt_copyvalues(nFromId,nToId1,...)                          {}       - GUI event handler: copies the values from the elements with the ID nFromId into the elements with the IDs nToId1, ... . GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
+PARSERFUNCS_LISTFUNC_FUNC_EVT_ENDDIALOG_[GUI]=				evt_enddialog(sReturnValue)                                 {}       - GUI event handler: Terminates the dialog mode of the current window with sReturnValue as return value. If the current window is not in dialog mode, it is closed instead. GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
 PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                               {}       - GUI event handler: copies the values from the event-firing element into the elements with the IDs nToId1, ... . GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                                                      VAL      - Exponential function of x. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,STYLE)                                        {}       - Draws a quadrangle. You may pass from two to four edges. If you pass two, NumeRe will draw an square, passing three edges will result in a parallelogram and all four edges will draw a custom quadrangle. The first two vectors are the lower and the left border and the last is the diagonal opposite one. The filling of the quadrangle may be modified using STYLE.
@@ -348,6 +349,7 @@ PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_CDF_P_[DISTRIB]= 			weibull_cdf_p(x,a,b)      
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_CDF_Q_[DISTRIB]= 			weibull_cdf_q(x,a,b)                                        VAL      - Returns the complementary cumulative distribution function at x of the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_INV_P_[DISTRIB]= 			weibull_inv_p(p,a,b)                                        VAL      - Returns the inverse of the cumulative distribution function at p of the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_INV_Q_[DISTRIB]= 			weibull_inv_q(q,a,b)                                        VAL      - Returns the inverse of the complementary cumulative distribution function at q of the Weibull distribution with scale a and exponent b
+PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_PDF_[DISTRIB]= 			weibull_pdf(x,a,b)                                          VAL      - Returns the probability density function at x of the Weibull distribution using scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_WEIBULL_RD_[RANDOM_DISTRIB]= 		weibull_rd(a,b)                                             VAL      - Returns a random variate from the Weibull distribution with scale a and exponent b
 PARSERFUNCS_LISTFUNC_FUNC_XOR_[LOGIC]=						xor(x,y,z,...)                                              LOG      - Connects its arguments with the "|||" operator
 PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,theta,phi)                                            VAL      - Value of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta in the interval [0,PI] and phi in the interval [0,2*PI)
@@ -464,6 +466,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Defines the local clusters in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target table can be passed via parameters
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
+PARSERFUNCS_LISTCMD_CMD_DATETIMEPICKER_[GUI]=			datetimepicker   [-set PAR]             - Inserts a date-and-time picker field into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Declares a file-specific constant in EX for use in the current file, where the constant must be specified as NAME := EXPRESSION. The constant is automatically removed at the end of the current file
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Defines the "otherwise" case in a switch fork
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]              - Defines the function in EX, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values
@@ -520,9 +523,10 @@ PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR              
 PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]               - Includes information from the file NM into the current executable file at this location. Information may contain global expressions, definitions and declarations. The type of information is configurable
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Executes the install routines in the script NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integrates the expression or the data in EX numerically. An expression may also be integrated in two dimensions. The integration intervals have to be passed as parameters. Additionally, one can set the precision and the method for integration as well as returning the numerical determined indefinite integral
+PARSERFUNCS_LISTCMD_CMD_LAMP_[GUI]=						lamp         [-set PAR]                 - Inserts a small lamp into a window layout. The start value is configurable
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Starts the definition of a window layout that can be used to create an interactive window
-PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]             - Defines the function in EX for the usage in the current script or the current procedure, where the function has to be passed as NAME(ARG) := EXPRESSION(ARG). Parameters allow commenting the function and conversion of variables into their values. The function is removed automatically at the end of the current scope
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Creates a list of the values, which are available for the passed argument NM. The possible arguments are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym)
@@ -749,10 +753,12 @@ GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMM
 GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DATEPICKER=type=datepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=method=daubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_DEBUGGER=debugger [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
+GUI_EDITOR_CALLTIP_OPT_DIALOGRESULT=dialogresult [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
 GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -852,6 +858,7 @@ GUI_EDITOR_CALLTIP_OPT_LOGSCALE=logscale
 GUI_EDITOR_CALLTIP_OPT_LYAPUNOV=lyapunov [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
 GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
 GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MARGIN=margin="<_^>" [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MASK=mask
 GUI_EDITOR_CALLTIP_OPT_MAX=max[=VAL]
@@ -978,12 +985,14 @@ GUI_EDITOR_CALLTIP_OPT_QMARKS=QMARKS=STRINGDELIMITER [%%GUI_EDITOR_CALLTIP_COMMO
 GUI_EDITOR_CALLTIP_OPT_QUESTIONICON=icon=questionicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RBORDER=rborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_READONLY=state=readonly [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_REAL=bgcolorscheme=real [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RECURSIVE=recursive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% define]
 GUI_EDITOR_CALLTIP_OPT_REFRESH=refresh [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% edit]
 GUI_EDITOR_CALLTIP_OPT_REGION=region [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_REIM=complexmode=reim [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RELATIVE=counts=relative [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_RELSCL=relscl=FACTOR [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_RESET=reset [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RESTORE=display=restore [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_RESTRICT=restrict=[RESTRICTIONS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
@@ -1021,6 +1030,7 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STATUSTEXT=statustext[=TEXT] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STOREGRID=storegrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist2d]
@@ -1040,6 +1050,7 @@ GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTI
 GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
 GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
 GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TIMEPICKER=type=timepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
 GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
 GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

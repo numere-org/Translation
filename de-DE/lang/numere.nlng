@@ -128,6 +128,7 @@ PARSERFUNCS_LISTFUNC_FUNC_ERF_[DISTRIB]=					erf(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CHANGESTATE_[GUI]=			evt_changestate(nId,sState)                                 {}       - GUI-Event-Handler: Ändert den Status des Elements mit der ID nId in den neuen Status sState. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EVT_CLOSE_[GUI]=					evt_close()                                                 {}       - GUI-Event-Handler: Schließt das aktuelle Fenster. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden
 PARSERFUNCS_LISTFUNC_FUNC_EVT_COPYVALUES_[GUI]=				evt_copyvalues(nFromId,nToId1,...)                          {}       - GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
+PARSERFUNCS_LISTFUNC_FUNC_EVT_ENDDIALOG_[GUI]=				evt_enddialog(sReturnValue)                                 {}       - GUI-Event-Handler: Beendet den Dialog-Modus des aktuellen Fensters mit sReturnValue als Rückgabewert. Falls das aktuelle Fenster nicht im Dialog-Modus ist, wird es stattdessen geschlossen. GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                               {}       - GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ... . GUI-Event-Handler können nur direkt in einem Layout-Script verwendet werden und die Argumente müssen Literale (also keine Variablen) sein
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                                                      VAL      - Exponentialfunktion von x. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,STYLE)                                        {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die ersten beiden Richtungsvektoren sind die untere und linke Kante und der letzte die Diagonale. Die Füllung des Vierecks kann mit STYLE beeinflusst werden.
@@ -465,6 +466,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Definiert die lokalen Cluster in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Erzeugt ein Datengitter aus dem Ausdruck oder den Daten in EX. Die x- und y-Werte sind als Parameter anzugeben. Außerdem kann die Zahl der samples und die Zieltabelle durch Parameter angegeben werden.
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Optionen auf Datensätzen. Parameter ermöglichen viele Operationen, unter anderem auch die Anwendung von Multi-Argumentfunktionen
+PARSERFUNCS_LISTCMD_CMD_DATETIMEPICKER_[GUI]=			datetimepicker   [-set PAR]             - Fügt ein Feld zur Datums- und Zeitauswahl in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei, wobei die Konstante als NAME := AUSDRUCK angegeben werden muss. Die Konstante wird am Ende der aktuellen Datei automatisch entfernt
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Definiert den "sonst"-Fall in einer Auswahlverzweigung
 PARSERFUNCS_LISTCMD_CMD_DEFINE_[DEF]=					define       EX [-set PAR]              - Definiert die Funktion in EX, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte
@@ -521,9 +523,10 @@ PARSERFUNCS_LISTCMD_CMD_IMROT_[EVAL]=					imrot        OB -set PAR              
 PARSERFUNCS_LISTCMD_CMD_INCLUDE_[MAINCTRL_FLOWCTRL]=	include      NM [:: ARGS]               - Bindet Informationen aus der Datei NM an dieser Stelle in die aktuelle ausführbare Datei ein. Informationen können globale Ausdrücke, Definitionen oder Deklarationen sein. Die Art der Informationen lassen sich auswählen
 PARSERFUNCS_LISTCMD_CMD_INSTALL_[MAINCTRL]=				install      NM                         - Führt die Installationsroutinen im Script NM aus. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_INTEGRATE_[EVAL]=				integrate    EX -set PAR  -> {VAL}      - Integriert den Ausdruck oder die Daten in EX numerisch. Ein Ausdruck kann dabei auch zweidimensional integriert werden. Die Integrationsintervalle müssen als Parameter übergeben werden. Außerdem kann die Genauigkeit und die Methode ausgewählt werden ebenso wie die Rückgabe der numerisch bestimmten Stammfunktion
+PARSERFUNCS_LISTCMD_CMD_LAMP_[GUI]=						lamp         [-set PAR]                 - Fügt eine kleine Lampe in ein Window-Layout ein. Der Startwert ist konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_LAYOUT_[GUI]=					layout       [-PAR]                     - Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann
-PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]              - Definiert die Funktion in EX für die Verwendung im aktuellen Script oder der aktuellen Prozedur, wobei die Funktion als NAME(ARG) := AUSDRUCK(ARG) angegeben werden muss. Parameter erlauben ein Kommentieren der Funktion und das Ersetzen von Variablen durch ihre Werte. Die Funktion wird am Ende des aktuellen Scopes automatisch entfernt
+PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Erzeugt eine Auflistung der Werte, die zum gewählten Argument NM vorhanden sind. Die möglichen Argumente sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - Wertet den Ausdruck EX mit dem Matrixmodus aus. ("mtrxop" ist ein Synonym)
@@ -750,10 +753,12 @@ GUI_EDITOR_CALLTIP_OPT_CTICKLABELS=cticklabels=LABELS [%%GUI_EDITOR_CALLTIP_COMM
 GUI_EDITOR_CALLTIP_OPT_CTICKS=cticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CURSOR=cursor [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_CUT=cut [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_DATEPICKER=type=datepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DAUBECHIES=method=daubechies [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt]
 GUI_EDITOR_CALLTIP_OPT_DEBUGGER=debugger [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DEFCONTROL=defcontrol [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_DESC=sort=desc [Sorting direction]
+GUI_EDITOR_CALLTIP_OPT_DIALOGRESULT=dialogresult [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_DIR=dir[=DIRNAME]
 GUI_EDITOR_CALLTIP_OPT_DIRDIALOG=type=dirdialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_DISABLED=state=disabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -853,6 +858,7 @@ GUI_EDITOR_CALLTIP_OPT_LOGSCALE=logscale
 GUI_EDITOR_CALLTIP_OPT_LYAPUNOV=lyapunov [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% odesolve]
 GUI_EDITOR_CALLTIP_OPT_MAIN=main [Namespace]
 GUI_EDITOR_CALLTIP_OPT_MAP=colorscheme=map [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_MARGIN=margin="<_^>" [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MARKS=marks=SIZE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_MASK=mask
 GUI_EDITOR_CALLTIP_OPT_MAX=max[=VAL]
@@ -979,12 +985,14 @@ GUI_EDITOR_CALLTIP_OPT_QMARKS=qmarks=STRINGDELIMITER [%%GUI_EDITOR_CALLTIP_COMMO
 GUI_EDITOR_CALLTIP_OPT_QUESTIONICON=icon=questionicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RBORDER=rborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_READONLY=state=readonly [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_REAL=bgcolorscheme=real [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RECURSIVE=recursive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% define]
 GUI_EDITOR_CALLTIP_OPT_REFRESH=refresh [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% edit]
 GUI_EDITOR_CALLTIP_OPT_REGION=region [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_REIM=complexmode=reim [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RELATIVE=counts=relative [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% hist]
+GUI_EDITOR_CALLTIP_OPT_RELSCL=relscl=FACTOR [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_RESET=reset [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_RESTORE=display=restore [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_RESTRICT=restrict=[RESTRICTIONS] [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fit]
@@ -1022,6 +1030,7 @@ GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_STATUSTEXT=statustext[=TEXT] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STD=std
 GUI_EDITOR_CALLTIP_OPT_STEPS=steps[=VAL]
 GUI_EDITOR_CALLTIP_OPT_STOREGRID=storegrid [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% hist2d]
@@ -1041,6 +1050,7 @@ GUI_EDITOR_CALLTIP_OPT_TEXTSIZE=textsize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTI
 GUI_EDITOR_CALLTIP_OPT_THIS=this [Namespace]
 GUI_EDITOR_CALLTIP_OPT_THISFILE=thisfile [Namespace]
 GUI_EDITOR_CALLTIP_OPT_TIMEAXES=timeaxes=(AXES,FORMAT) [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_TIMEPICKER=type=timepicker [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_TITLE=title=TITLE
 GUI_EDITOR_CALLTIP_OPT_TOL=tol=VAL
 GUI_EDITOR_CALLTIP_OPT_TOPLEFT=legend=topleft [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
