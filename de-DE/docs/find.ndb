@@ -68,6 +68,8 @@ cauchy_pdf(x,a)~Liefert den Wert der Dichte der Verteilungsfunktion bei x für d
 cauchy_rd(a)~Liefert eine Zufallszahl aus der Cauchy-Verteilung mit Skalenparameter a~cauchy verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_rd(
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
 checkbox~Fügt eine Checkbox in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+circshiftcol(MAT,n)~Schiebt alle Elemente einer Matrix um n Positionen in horizontaler Richtung (Richtung der Spalten)~circular shift rotation col columnwise rotieren~circshiftcol(
+circshiftrow(MAT,n)~Schiebt alle Elemente einer Matrix um n Positionen in vertikaler Richtung (Richtung der Reihen)~circular shift rotation row rowwise rotieren~circshiftrow(
 Cl2(x)~Berechnet den Wert der Clausenfunktion an der Stelle x~Cl2() clausenfunction~Cl2(
 clc~Bereinige das Terminal und setze den Inhalt auf den Startzustand zurück~clc clear terminal clean~help clc
 clock()~Gibt die Zahl der Prozessorclicks seit dem Start von NumeRe zurück~time clicks zeit millisekunden milliseconds~clock()
@@ -493,6 +495,8 @@ var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables
 vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von Spalten haben~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
+vectshiftcol(MAT,n)~Verschiebt alle Spalten einer Matrix um n Positionen in horizontaler Richtung (Richtung der Spalten)~colshift columnshift shift col colwise schieben~vectshiftcol(
+vectshiftrow(MAT,n)~Verschiebt alle Zeilen einer Matrix um n Positionen in vertikaler Richtung (Richtung der Zeilen)~rowshift shift row rowwise schieben~vectshiftrow(
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Gibt die Nummer des Wochentages des übergebenen Zeitwertes tTime zurück~weekday() day of week calendar date time datum kalendar~weekday(

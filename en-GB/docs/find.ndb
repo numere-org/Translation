@@ -68,6 +68,8 @@ cauchy_pdf(x,a)~Get the value of the probability density function at x for the C
 cauchy_rd(a)~Returns a random number from the Cauchy distribution with scale parameter a~cauchy distribution function random distributionfunction~cauchy_rd(
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
 checkbox~Inserts a checkbox into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+circshiftcol(MAT,n)~Shifts all elements of a matrix by n positions in the horizontal direction (direction of the columns)~circular shift rotation col columnwise rotieren~circshiftcol(
+circshiftrow(MAT,n)~Shifts all elements of a matrix by n positions in the vertical direction (direction of the rows)~circular shift rotation row rowwise rotieren~circshiftrow(
 Cl2(x)~Calculates the value of the Clausen function at the location x~Cl2() clausenfunction~Cl2(
 clc~Clear the content of the terminal window and reset it to the startup content~clc clear terminal clean~help clc
 clock()~Returns the number of processor clicks since the start-up of NumeRe~time clicks zeit millisekunden milliseconds~clock()
@@ -495,6 +497,8 @@ var~Defines the local numerical variables in a procedure~procedure local variabl
 vcat(MAT,MAT)~Vertically concatenates tow matrices that have the same number of columns~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
+vectshiftcol(MAT,n)~Shifts all columns of a matrix by n positions in the horizontal direction (direction of the columns)~colshift columnshift shift col colwise schieben~vectshiftcol(
+vectshiftrow(MAT,n)~Shifts all rows of a matrix by n positions in the vertical direction (direction of the rows)~rowshift shift row rowwise schieben~vectshiftrow(
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
 warn~Displays the passed string as a warning~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Returns the weekday number associated with the passed time value~weekday() day of week calendar date time datum kalendar~weekday(
