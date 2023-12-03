@@ -25,7 +25,7 @@ Plots und Graphen können auf etliche Arten modifiziert werden. "help plotoption
 Komplexe oder häufig wiederkehrende Eingaben können in Scripte oder in mehr abstrahierter Form in Prozeduren ausgelagert werden. "help script" und "help procedure" geben hierzu Hinweise. Im Scriptordner gibt es auch viele Beispiele.
 Die Einstellungen finden sich im "Werkzeuge"-Menü unter "Optionen". NumeRe kann aber auch mit dem Kommando "set" konfiguriert werden. "help set" zeigt eine Liste aller Einstellungen; "list -settings" die aktuelle Konfiguration.
 Mit Datenreihen kann wie mit den Spalten einer Tabellenkalkulation gerechnet werden. Allerdings können die Daten in "data()" nicht überschrieben werden.
-Mit "new CACHE()" kann ein neuer Cache mit dem Namen CACHE erzeugt werden. "remove CACHE()" entfernt ihn wieder und "delete CACHE()" löscht nur den Inhalt. "clear cache()" entfernt alle Caches und setzt den Speicher zurück.
+Mit "new TABLE()" kann eine neue Tabelle mit dem Namen TABLE erzeugt werden. "remove TABLE()" entfernt sie wieder und "delete TABLE()" löscht nur den Inhalt. "clear -memory" entfernt alle Tabellen und setzt den Speicher zurück.
 Mit "fit" und "fitw" können Funktionen an Datenreihen angepasst werden. Hier hilft "help fit" weiter. Die Ergebnisse einer Anpassung werden in "<savepath>/numerefit.log" protokolliert und die angepasste Funktion in "Fit(x)" bzw. "Fitw(x)" definiert.
 Numerische Variablen und Zeichenkettenvariablen werden automatisch anhand ihrer zugewiesenen Werte erkannt. Bei Mehrdeutigkeit werden die Variablen als numerisch identifiziert.
 NumeRe kann mit einem Imageviewer verknüpft werden, um spezielle Bildformate zu betrachten. "help viewer" enthält die dazu nötigen Hinweise.
@@ -38,7 +38,7 @@ Die Stichwortsuche ist ein mächtiges Tool, wenn nach einer Funktion oder einem 
 "help idx" oder "help index" zeigt eine Liste aller Einträge in der NumeRe-Hilfe an.
 Zusätzliche Informationen zu Kommandos und Funktionen gibt es auch in der NumeRe-Onlinereferenz: <https://sites.google.com/site/numereframework/onlinereferenz/>
 Trivia: "NumeRe" steht für "Numerische Rechnungen". "numere" ist aber auch der Vokativ singular des lateinischen "numerus", was wiederum für Zahl oder Menge steht.
-Der Cache verfügt über eine Autosave-Funktion: die automatische Sicherung wird beim Start auch automatisch geladen. Das gilt natürlich ebenso für selbst erzeugte Caches.
+Tabellen verfügen über eine Autosave-Funktion: die automatische Sicherung wird beim Start auch automatisch geladen.
 Alle Eingaben in die NumeRe-Konsole und alle Fehler werden in der Datei "<>/numere.log" protokolliert. Eine vereinfachte Version der Eingabehistorie findet sich unten rechts.
 Schon die NumeRe-Dokumention als PDF gesehen? Du findest sie im NumeRe-Verzeichnis im Ordner "docs" oder als Verlinkung im Startmenü.
 # Advanced
@@ -48,7 +48,7 @@ Datenreihen können mittels "fft" fouriertransformiert werden. "help fft" enthä
 Mit "datagrid" können Datengitter (2D-Datensätze) aus anderen Datensätzen oder mit Funktionswerten erzeugt werden. "help datagrid" enthält die nötigen Informationen dazu.
 Mit "install" können Plugins und Prozeduren aus Scripten installiert werden. "help install" hilft hier weiter. Im Unterordner "scripts" könnten entsprechende Scripte zu finden sein.
 Mit dem Ausdruck "??" kann eine Eingabe in einem Script oder einer Prozedur während der Auswertung abgefragt werden. Siehe "help ??" für weitere Details.
-Mit "edit CACHE()" kann ein Cache im Tabelleneditor bearbeitet werden. Hier können auch kopierte tabellarische Daten aus anderen Quellen eingefügt werden.
+Mit "edit TABLE()" kann eine Tabelle im Tabelleneditor bearbeitet werden. Hier können auch kopierte tabellarische Daten aus anderen Quellen eingefügt werden.
 Ergebnisse von Funktionen und Kommandos, die mehrere Werte oder Zeichenketten zugleich zurückliefern, können entweder an Datenobjekte oder an "temporäre Spalten" ("{x,y,z,...}" bzw. "{str1,str2,str3,...}") zugewiesen werden.
 Das Kommando "matop" erlaubt Matrizenoperationen (siehe "help matop" für Details). Dabei sind auch Determinanten, Invertierungen und spezielle Matrizen möglich.
 "zeroes" und "extrema" können auch Nullstellen bzw. Extrema von Datensätzen bestimmen. Siehe "help zeroes" und "help extrema".

@@ -35,8 +35,8 @@
 		Alle Berechnungen finden hier immer noch elementweise statt. Matrix-Matrix- und Matrix-Vektor-Multiplikationen erreicht man mittels des <code>**</code>-Operators:<codeblock>matop MATRIX1() ** MATRIX2()</codeblock>Der <code>**</code>-Operator hat die höchste Priorität aller Operatoren. Ggf. ist es also nötig, entsprechend zu klammern. Außerdem achtet <code>**</code> auf die korrekte Dimensionen der entsprechenden Matrizen.
 		Im Ausdruck kann die Zieltabelle der Matrix-Operation spezifiziert werden. Wenn sie das <em>nicht</em> wird, wird automatisch <code>matrix()</code> als Ziel verwendet. Sollte die Zieltabelle nicht existieren, so wird sie im Rahmen dieses Kommmandos automatisch erzeugt. Wenn die Zieltabelle mit <em>leeren</em> Argumentklammern angegeben wird, so wird sie <em>vollständig</em> überschrieben.
 		<em>Wichtig:</em> <code>matop</code> kennt einen großen Satz zusätzlicher, spezieller Matrixfunktionen. Diese sind unter <a href="nhlp://matfunc?frame=new">help matfunc</a> aufgelistet.
-		<example desc="Multiplizieren der Elemente in <code>cache()</code> mit den Elementen in <code>data()</code>:">
-			matop cache() *= data()
+		<example desc="Multiplizieren der Elemente in <code>table()</code> mit den Elementen in <code>data()</code>:">
+			matop table() *= data()
 		</example>
 	</contents>
 </article>

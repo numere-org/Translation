@@ -48,8 +48,6 @@
 			<item node="script">Ein "NumeRe-Script" laden und verwenden</item>
 			<item node="set -SETTING">Eine Einstellung tätigen</item>
 			<item node="get -SETTING">Den Wert einer Einstellung abfragen</item>
-			<item node="data">Ruft Methoden zu Datenfiles auf</item>
-			<item node="cache">Ruft Methoden zu den Caches auf</item>
 		</list>
 		Zu allen hier gelisteten Kommandos existiert ein Artikel in der NumeRe-Hilfe. Um diesen aufzurufen, einfach <code>help KOMMANDO</code> eintippen. Diese Artikel enthalten auch die Informationen zu Parametern und Optionen, die auf das KOMMANDO angewendet werden können.
 		<em>Wichtig:</em> Wenn Parametern und Optionen Werte durch ein <code>=</code> übergeben werden, sollten hier keine zusätzlichen Leerzeichen verwendet werden, da Leerzeichen die einzelnen Parameter/Optionen trennen.

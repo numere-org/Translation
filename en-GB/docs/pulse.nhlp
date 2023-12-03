@@ -36,8 +36,8 @@
 			<item node="Energy in first pulse">The calculated energy transported in this pulse</item>
 		</list>
 		The command <code>pulse</code> returns the determined values directly. You can assign them to data objects of temporary columns.
-		<example desc="Determination of the pulse properties of the data in the cache and assignment of the results to a temporary column:">
-			{maxAmpl, x0, fwhm, width, energy} = pulse cache(:,1:2)
+		<example desc="Determination of the pulse properties of the data in a table and assignment of the results to a temporary column:">
+			{maxAmpl, x0, fwhm, width, energy} = pulse table(:,1:2)
 		</example>
 		<em>Tip:</em> The pulse analysis can be used for the analysis of statistical distributions.
 	</contents>

@@ -37,100 +37,100 @@
 				<td><em>Operation</em></td><td><em>Operatorsymbol</em></td><td><em>Rekursiv</em></td><td><em>numerisch</em></td><td><em>Zeichenkette</em></td>
 			</tr>
 			<tr>
-				<td>Addition/Verknüpfung</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
+				<td>Addition/Verknüpfung</td><td><code>A + B</code></td><td><code>A += B</code></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Subtraktion</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>X</td><td></td>
+				<td>Subtraktion</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Multiplikation</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>X</td><td></td>
+				<td>Multiplikation</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>X</td><td></td>
+				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Exponent</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>X</td><td></td>
+				<td>Exponent</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Modulo</td><td><code>A % B</code></td><td></td><td>X</td><td></td>
+				<td>Modulo</td><td><code>A % B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Matrixmultiplikation</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>X</td><td></td>
+				<td>Matrixmultiplikation</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Zuweisung</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
+				<td>Zuweisung</td><td><code>A = B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Fakultät</td><td><code>A!</code></td><td></td><td>X</td><td></td>
+				<td>Fakultät</td><td><code>A!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Doppelfakultät</td><td><code>A!!</code></td><td></td><td>X</td><td></td>
+				<td>Doppelfakultät</td><td><code>A!!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
+				<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logisches UND</td><td><code>A && B</code></td><td></td><td>X</td><td></td>
+				<td>Logisches UND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logisches ODER</td><td><code>A || B</code></td><td></td><td>X</td><td></td>
+				<td>Logisches ODER</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>		
 			<tr>
-				<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>X</td><td></td>
+				<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Binäres UND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
+				<td>Binäres UND</td><td><code>A & B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Binäres ODER</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
+				<td>Binäres ODER</td><td><code>A | B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Gleich</td><td><code>A == B</code></td><td></td><td>X</td><td>X</td>
+				<td>Gleich</td><td><code>A == B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Ungleich</td><td><code>A != B</code></td><td></td><td>X</td><td>X</td>
+				<td>Ungleich</td><td><code>A != B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Kleiner als</td><td><code>A &lt; B</code></td><td></td><td>X</td><td>X</td>
+				<td>Kleiner als</td><td><code>A &lt; B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Größer als</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
+				<td>Größer als</td><td><code>A &gt; B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Kleiner oder gleich</td><td><code>A &lt;= B</code></td><td></td><td>X</td><td>X</td>
+				<td>Kleiner oder gleich</td><td><code>A &lt;= B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Größer oder gleich</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
+				<td>Größer oder gleich</td><td><code>A &gt;= B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Intervall</td><td><code>A : B</code></td><td></td><td>X</td><td></td>
+				<td>Intervall</td><td><code>A : B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Zeichenketten-Parser</td><td><code>#A</code></td><td></td><td>X</td><td>X</td>
+				<td>Zeichenketten-Parser</td><td><code>#A</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logische Klammern</td><td><code>(A)</code></td><td></td><td>X</td><td>X</td>
+				<td>Logische Klammern</td><td><code>(A)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Listen-/Vektorklammern</td><td><code>{A, B, ...}</code></td><td></td><td>X</td><td>X</td>
+				<td>Listen-/Vektorklammern</td><td><code>{A, B, ...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Vektorinitialisierer mit Abstand 1</td><td><code>{A : B}</code></td><td></td><td>X</td><td></td>
+				<td>Vektorinitialisierer mit Abstand 1</td><td><code>{A : B}</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Vektorinitialisierer mit C != 1</td><td><code>{A : C : B}</code></td><td></td><td>X</td><td></td>
+				<td>Vektorinitialisierer mit C != 1</td><td><code>{A : C : B}</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Zeichenkette</td><td><code>"A"</code></td><td></td><td>X</td><td>X</td>
+				<td>Zeichenkette</td><td><code>"A"</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>If-Else-Konstrukt</td><td><code>A ? B : C</code></td><td></td><td>X</td><td>X</td>
+				<td>If-Else-Konstrukt</td><td><code>A ? B : C</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Eingabeaufforderung</td><td><code>??</code></td><td></td><td>X</td><td>X</td>
+				<td>Eingabeaufforderung</td><td><code>??</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Zeilenumbruch</td><td><code>\\</code></td><td></td><td>X</td><td>X</td>
+				<td>Zeilenumbruch</td><td><code>\\</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 		</table>
 	</contents>

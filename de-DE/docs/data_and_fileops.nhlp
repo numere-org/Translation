@@ -64,7 +64,7 @@
 			<item node="&lt;fname&gt;">Wird durch den Dateinamen (ohne Pfad und Dateierweiterung) der aktuell verschobenen/kopierten Datei ersetzt.</item>
 		</list>
 		Außerdem kann bei Dateioperationen auch der Parameter <code>-all</code> verwendet werden, wenn die Dateinamen mit Wildcards (<code>*</code> und <code>?</code>) ausgewählt werden. In diesem Fall werden alle Dateien, die durch diese Wildcards beschrieben werden, kopiert/verschoben/gelöscht. Auch hier werden aber auch nur Dateien modifiziert, die von NumeRe selbst verwendet werden.
-		<example desc="Kopieren eines Datensatzes in die Standardtabelle 'cache()' und Verschieben der Ursprungsdatei:">
+		<example desc="Kopieren eines Datensatzes in die Standardtabelle 'table()' und Verschieben der Ursprungsdatei:">
 			load &lt;&gt;/samples/data
 			Daten aus "&EXEPATH&/samples/data.dat" wurden erfolgreich in den Speicher geladen: der Datensatz besteht aus 25 Zeile(n) und 4 Spalte(n).
 			copy data(:,:)
@@ -72,6 +72,6 @@
 			move &lt;&gt;/samples/data.dat -target=&lt;loadpath&gt;/
 			Die Datei "&EXEPATH&/samples/data.dat" wurde erfolgreich verschoben.
 		</example>
-		<em>Siehe auch:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a>, <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://string?frame=self">help string</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
+		<em>Siehe auch:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://string?frame=self">help string</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
 	</contents>
 </article>

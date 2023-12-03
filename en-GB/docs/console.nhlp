@@ -48,8 +48,6 @@
 			<item node="script">Loading and starting of a "NumeRe script"</item>
 			<item node="set -SETTING">Apply or change a setting</item>
 			<item node="get -SETTING">Returns the value of a setting</item>
-			<item node="data">Calls methods on data files</item>
-			<item node="cache">Calls methods on the cache</item>
 		</list>
 		For every listed command you'll find a corresponding article in the NumeRe documentation. Enter <code>help COMMAND</code>, to show this article. The articles contain information about parameters and options, which may be applied to the COMMAND.
 		<em>Important:</em> If you like to pass values to parameters or options via the equal sign <code>=</code>, you should not use additional whitespaces (although it's possible), because they are used to separate parameters and options.

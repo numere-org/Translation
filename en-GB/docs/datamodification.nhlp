@@ -46,7 +46,7 @@
 			retouch TABLE()
 			retouch TABLE() -grid ...
 		</syntax>
-		NumeRe may modify the data from one or more data sets to simplify the analysis if you use one of the commands <code>smooth</code>, <code>resample</code> and <code>retouch</code>. The command <code>smooth</code> smoothes the data suppressing noise peaks, <code>resample</code> increases or decreases the number of data points by the usage of a Lanczos filter, and <code>retouch</code> removes invalid values from data sets using linear interpolation. These commands can only be applied to data sets in a cache.
+		NumeRe may modify the data from one or more data sets to simplify the analysis if you use one of the commands <code>smooth</code>, <code>resample</code> and <code>retouch</code>. The command <code>smooth</code> smoothes the data suppressing noise peaks, <code>resample</code> increases or decreases the number of data points by the usage of a Lanczos filter, and <code>retouch</code> removes invalid values from data sets using linear interpolation. These commands can only be applied to data sets in a table.
 		<h>Smoothing data</h>
 		The command <code>smooth</code> requires the data area to which it is to be applied, the filter order, the filter name, and, if necessary, the shape of the filter:<codeblock>smooth TABLE(I1:I2, J1:J2) -order=ORDER method=FILTER alpha=FORM</codeblock>The order <code>ORDER</code> determines the size of the data section over which common filtering is performed. The following filters are available as <code>method</code>:
 		<list>
@@ -70,8 +70,8 @@
 		</list>
 		<em>Note:</em> A resampling operation is never non-destructive. New grid points must always be interpolated from the old grid points, inevitably resulting in artefacts and rounding errors.
 		<h>Retouching data</h>
-		<code>retouch</code> simply needs the data set, which shall be retouched:<codeblock>retouch CACHE(I1:I2,J1:J2)</codeblock>
+		<code>retouch</code> simply needs the data set, which shall be retouched:<codeblock>retouch TABLE(I1:I2,J1:J2)</codeblock>
 		<em>Important:</em> as default NumeRe applies these commands to two dimensional data sets, if it's applicable. To switch this behavior to column- or lineweise application, the corresponding additional parameter <code>cols</code> or <code>lines</code>, respectively, has to be passed to the command. If the commands shall be restricted to the <expr>z</expr> values of a data grid, the optional parameter <code>grid</code> may be passed. The order of the <expr>x</expr> or <expr>y</expr> won't be considered in this case (NumeRe expects that the <expr>x</expr>-<expr>y</expr> values are already ordered). In the case of two dimensional smoothening NumeRe will call <code>retouch</code> internally, to remove the invalid and non-interpolationable data points.
-		<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a> and <a href="nhlp://cache?frame=self">help cache</a>
+		<em>See also:</em> <a href="nhlp://plot?frame=self">help plot</a> and <a href="nhlp://table?frame=self">help table</a>
 	</contents>
 </article>

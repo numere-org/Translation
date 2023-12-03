@@ -37,100 +37,100 @@
 				<td><em>Operation</em></td><td><em>Operator's symbol</em></td><td><em>Recursive</em></td><td><em>Numerical</em></td><td><em>String</em></td>
 			</tr>
 			<tr>
-				<td>Addition/Concatenation</td><td><code>A + B</code></td><td><code>A += B</code></td><td>X</td><td>X</td>
+				<td>Addition/Concatenation</td><td><code>A + B</code></td><td><code>A += B</code></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Subtraction</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>X</td><td></td>
+				<td>Subtraction</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Multiplication</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>X</td><td></td>
+				<td>Multiplication</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>X</td><td></td>
+				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Power</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>X</td><td></td>
+				<td>Power</td><td><code>A ^ B</code></td><td><code>A ^= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Modulo</td><td><code>A % B</code></td><td></td><td>X</td><td></td>
+				<td>Modulo</td><td><code>A % B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Matrix multiplication</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>X</td><td></td>
+				<td>Matrix multiplication</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Assignment</td><td><code>A = B</code></td><td></td><td>X</td><td>X</td>
+				<td>Assignment</td><td><code>A = B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Factorial</td><td><code>A!</code></td><td></td><td>X</td><td></td>
+				<td>Factorial</td><td><code>A!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Double factorial</td><td><code>A!!</code></td><td></td><td>X</td><td></td>
+				<td>Double factorial</td><td><code>A!!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logical NOT</td><td><code>!A</code></td><td></td><td>X</td><td></td>
+				<td>Logical NOT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logical AND</td><td><code>A && B</code></td><td></td><td>X</td><td></td>
+				<td>Logical AND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logical OR</td><td><code>A || B</code></td><td></td><td>X</td><td></td>
+				<td>Logical OR</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>		
 			<tr>
-				<td>Logical XOR</td><td><code>A ||| B</code></td><td></td><td>X</td><td></td>
+				<td>Logical XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Binary AND</td><td><code>A & B</code></td><td></td><td>X</td><td></td>
+				<td>Binary AND</td><td><code>A & B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Binary OR</td><td><code>A | B</code></td><td></td><td>X</td><td></td>
+				<td>Binary OR</td><td><code>A | B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Equal</td><td><code>A == B</code></td><td></td><td>X</td><td>X</td>
+				<td>Equal</td><td><code>A == B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Not equal</td><td><code>A != B</code></td><td></td><td>X</td><td>X</td>
+				<td>Not equal</td><td><code>A != B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Less than</td><td><code>A &lt; B</code></td><td></td><td>X</td><td>X</td>
+				<td>Less than</td><td><code>A &lt; B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Greater than</td><td><code>A &gt; B</code></td><td></td><td>X</td><td>X</td>
+				<td>Greater than</td><td><code>A &gt; B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Less or equal</td><td><code>A &lt;= B</code></td><td></td><td>X</td><td>X</td>
+				<td>Less or equal</td><td><code>A &lt;= B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Greater or equal</td><td><code>A &gt;= B</code></td><td></td><td>X</td><td>X</td>
+				<td>Greater or equal</td><td><code>A &gt;= B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Interval</td><td><code>A : B</code></td><td></td><td>X</td><td></td>
+				<td>Interval</td><td><code>A : B</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>String parser</td><td><code>#A</code></td><td></td><td>X</td><td>X</td>
+				<td>String parser</td><td><code>#A</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logical parentheses</td><td><code>(A)</code></td><td></td><td>X</td><td>X</td>
+				<td>Logical parentheses</td><td><code>(A)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>List/vector braces</td><td><code>{A, B, ...}</code></td><td></td><td>X</td><td>X</td>
+				<td>List/vector braces</td><td><code>{A, B, ...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Vector initializer with difference 1</td><td><code>{A : B}</code></td><td></td><td>X</td><td></td>
+				<td>Vector initializer with difference 1</td><td><code>{A : B}</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Vector initializer with C != 1</td><td><code>{A : C : B}</code></td><td></td><td>X</td><td></td>
+				<td>Vector initializer with C != 1</td><td><code>{A : C : B}</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>String</td><td><code>"A"</code></td><td></td><td>X</td><td>X</td>
+				<td>String</td><td><code>"A"</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>If-else-construct</td><td><code>A ? B : C</code></td><td></td><td>X</td><td>X</td>
+				<td>If-else-construct</td><td><code>A ? B : C</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Prompt</td><td><code>??</code></td><td></td><td>X</td><td>X</td>
+				<td>Prompt</td><td><code>??</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Linebreak</td><td><code>\\</code></td><td></td><td>X</td><td>X</td>
+				<td>Linebreak</td><td><code>\\</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 		</table>	
 	</contents>

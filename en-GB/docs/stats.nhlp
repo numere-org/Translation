@@ -28,7 +28,7 @@
 			{VAL} = stats TABLE() -set target=TARGET() ...
 		</syntax>
 		The command <code>stats</code> allows the statistical analysis of multiple data rows at once. The data rows, which were analysed, may be stored in a table or written including their analysis results to a file afterwards.
-		<code>stats</code> needs loaded data or data, which is available in a cache. The data may be passed in the following way, where the second variant stores the results into <code>TABLE()</code> and returns the row labels in their respective order in its first column as well as a vector:
+		<code>stats</code> needs loaded data or data, which is available in a table. The data may be passed in the following way, where the second variant stores the results into <code>TABLE()</code> and returns the row labels in their respective order in its first column as well as a vector:
 		<codeblock>
 			stats DATAOBJECT(I1:I2,J1:J2) -set OPTIONS
 			{ROWLABELS} = stats DATAOBJECT(I1:I2,J1:J2) -set target=TABLE()

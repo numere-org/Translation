@@ -35,14 +35,14 @@
 		</codeblock>
 		The command <code>spline</code> will calculate the coefficient of the polynomial between the datapoints and define the complete polynomial as <code>Spline(x)</code> using the functions <code>polynomial(x,a0,a1,a2,a3)</code> and <code>ivl(x,x0,x1,1,2)</code>.
 		<example desc="Creating a spline and displaying it:" type="verbatim">
-			|&lt;- cache(:,1) = 0,1,4,5;
+			|&lt;- table(:,1) = 0,1,4,5;
 			|
-			|&lt;- cache(:,2) = 0,1,1,2;
+			|&lt;- table(:,2) = 0,1,1,2;
 			|
-			|&lt;- spline cache()
+			|&lt;- spline table()
 			|-&gt; Spline(x) := polynomial(x,0,1.2,0,-0.2)*ivl(x,0,1,1,2) + polynomial(x-1,1,0.6,-0.6,0.1333)*ivl(x,1,4,1,2) + polynomial(x-4,1,0.6,0.6,-0.2)*ivl(x,4,5,1,1)
 			|
-			|&lt;- plot cache(), Spline(x)
+			|&lt;- plot table(), Spline(x)
 		</example>
 		<img src="<>/docs/spline.png" />
 	</contents>

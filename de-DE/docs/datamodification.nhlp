@@ -72,6 +72,6 @@
 		<h>Retuschieren: Fehlende Datenpunkte ergänzen</h>
 		<code>retouch</code> muss bloß der Datensatz, welcher retuschiert werden soll, vorgegeben werden:<codeblock>retouch TABLE(I1:I2,J1:J2)</codeblock>
 		<em>Wichtig:</em> Standardmäßig wendet NumeRe diese drei Kommandos auf einen 2D-Datensatz an, sofern dies Sinn macht. Um dieses Verhalten auf spalten- oder zeilenweise Anwendung umzuschalten, muss der entsprechende zusätzliche Parameter <code>cols</code> bzw. <code>lines</code> an das gewünschte Kommando angehängt werden. Um eines dieser Kommandos direkt auf ein Datengitter anzuwenden, kann der Parameter <code>grid</code> verwendet werden. Die Reihenfolge der <expr>x</expr>- oder <expr>y</expr>-Punkte wird dabei jedoch nicht beachtet (NumeRe geht davon aus, dass die <expr>x</expr>-<expr>y</expr>-Werte bereits geordnet sind). Im Falle zweidimensionaler Glättung wird NumeRe zuvor intern <code>retouch</code> aufrufen, um die nicht interpolierbaren und ungültigen Datenpunkte zu entfernen.
-		<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://cache?frame=self">help cache</a>
+		<em>Siehe auch:</em> <a href="nhlp://plot?frame=self">help plot</a> und <a href="nhlp://table?frame=self">help table</a>
 	</contents>
 </article>

@@ -30,7 +30,7 @@
 		<keyword>string</keyword>
 	</keywords>
 	<contents>
-		NumeRe ist in der Lage, mit Zeichenketten umzugehen. Dies kann verwendet werden, um beispielsweise die Tabellenköpfe des Datafile- oder Cache-Objekts automatisch zu definieren. Zeichenketten können in Zeichenkettenvariablen gespeichert werden, die von NumeRe automatisch als solche erkannt werden, wenn ihnen während der Initialisierung eine Zeichenkette zugewiesen wurde:<codeblock>STRINGVAR = "ZEICHENKETTE", STRINGVAR2 = "ZEICHENKETTE2", ...</codeblock>Eine Konvertierung der Variablentypen von numerisch zu Zeichenkette oder umgekehrt ist nicht möglich.
+		NumeRe ist in der Lage, mit Zeichenketten umzugehen. Dies kann verwendet werden, um beispielsweise die Tabellenköpfe einer Tabelle automatisch zu definieren. Zeichenketten können in Zeichenkettenvariablen gespeichert werden, die von NumeRe automatisch als solche erkannt werden, wenn ihnen während der Initialisierung eine Zeichenkette zugewiesen wurde:<codeblock>STRINGVAR = "ZEICHENKETTE", STRINGVAR2 = "ZEICHENKETTE2", ...</codeblock>Eine Konvertierung der Variablentypen von numerisch zu Zeichenkette oder umgekehrt ist nicht möglich.
 		Außerdem steht das <code>string()</code>-Objekt für mehrfache Zeichenketten zur Verfügung. Dieses Objekt kann beliebig viele Zeichenketten speichern und bietet Zugriff auf eine beliebige Zeichenkette.
 		Zeichenketten (auch: "strings") müssen dabei in umschließenden Anführungszeichen eingegeben werden. Zwei oder mehr Zeichenketten können durch ein jeweils zwischengestelltes <code>+</code> verknüpft werden. Durch ein zwischengestelltes <code>,</code> können mehrere Zeichenketten zugleich verarbeitet werden.
 		Zeichenketten können dem Objekt <code>string()</code> durch<codeblock>string(INDEX) = "ZEICHENKETTE"</codeblock>zugewiesen werden. Bleibt INDEX leer, wird dies als <code>string(:)</code> interpretiert, anderenfalls wird die Zeichenkette am Index INDEX in <code>string()</code> überschrieben. Durch Angabe von <code>string(INDEX)</code> wird die Zeichenkette am Index INDEX gelesen und ausgegeben. Bleibt hier INDEX leer, wird dies als <code>string(:)</code> interpretiert und alle Zeichenketten in <code>string()</code> ausgegeben.
@@ -45,7 +45,7 @@
 			<item node="'\ '">maskiert den Backslash selbst</item>
 		</list>
 		NumeRe kann den Wert von Variablen in eine Zeichenkette umwandeln, wenn die Variable mit einem vorangestellten <code>#</code> aufgerufen wird. Werden zwischen den Variablennamen und <code>#</code> ein oder mehrere <code>~</code> eingefügt, so ergänzt NumeRe in der Ausgabe ggf. so viele <code>0</code> vor dem eigentlichen Wert, dass die Zahl der ausgegeben Zeichen mindestens gleich der Zahl der <code>~</code>+1 ist. Besitzt der Wert der Variablen bereits ausreichend oder mehr Stellen, wird NumeRe nichts ergänzen. Außerdem können die Ergebnisse von ganzen Ausdrücken durch <code>#(AUSDRUCK)</code>, von Funktionen mittels <code>#FUNKTION(ARGS)</code> und die Werte von <a href="nhlp://explorer?frame=new">Pfad-Platzhaltern</a> durch <code>#&lt;PFAD&gt;</code> umgewandelt werden.
-		Die Tabellenköpfe der Datenobjekte können mit der Syntax <code>data(#,Spalte)</code> bzw. <code>CACHE(#,Spalte)</code> ausgelesen und bearbeitet werden. Der Dateinamen des geladenen Datenfiles kann mit <code>data(#,#)</code> gelesen werden.
+		Die Tabellenköpfe der Datenobjekte können mit der Syntax <code>TABLE(#,Spalte)</code> ausgelesen und bearbeitet werden. Der Dateinamen des geladenen Datenfiles kann mit <code>data(#,#)</code> gelesen werden.
 		NumeRe ist in der Lage, Zeichenkettenlogik auszuführen. Dazu können die Vergleichsoperatoren <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> und <code>&gt;=</code> angewendet werden, um zwei Zeichenketten zu vergleichen. Dabei vergleichen die Operatoren die ASCII-Zeichenwerte der beiden Zeichenketten zeichenweise. Außerdem können Logikausdrücke mit <code>&&</code> und <code>||</code> verknüpft werden.
 		NumeRe gibt mehrere Zeichenketten zugleich ähnlich wie numerische Werte als Vektoren zurück, die dann die aktuellen Werte im <a href="nhlp://cluster?frame=new">Cluster</a> <code>ans{}</code> ersetzen. Aus Darstellungsgründen müssen Zeichenketten dabei in der Konsolenausgabe häufig abgeschnitten werden:<codeblock>ans = { "STRING1...", "STRING2...", "STRING3...", ...}</codeblock>Um eine Zeichenkette als eine Textausgabe zu verwenden, muss das Kommando <code>print</code> vorangestellt werden: <code>print STRING</code>. Dabei werden automatisch alle umschließenden Anführungszeichen entfernt. Mehrfache Zeichenketten werden in diesem Fall komplett und durch Komma getrennt dargestellt.
 		Um zu prüfen, ob die Variable, die einer NumeRe-Prozedur übergeben wurde, eine Zeichenkette ist, bietet sich die Funktion <code>is_string(EXPR)</code> an, die <code>true</code> zurückgibt, wenn EXPR eine oder mehr Zeichenketten enthält. Um eine Zeichenkette (aus Ziffern oder einen Variablenname) in einen Wert umzuwandeln, bietet NumeRe die Funktion <code>to_value(STRING)</code> an. Die Funktion <code>to_string(EXPR)</code> wandelt EXPR in eine Zeichenkette um, ungeachtet eventueller Rechenoperationen in EXPR, Zeichenketten und -variablen werden jedoch ausgewertet. <code>string_cast(EXPR)</code> ist noch brutaler: hier werden selbst Zeichenkettenvariablennamen direkt in Zeichenketten umgewandelt. Die Funktion <code>to_cmd(STRING)</code> wandelt die Zeichenkette STRING in einen Kommandoausdruck um.
@@ -53,7 +53,7 @@
 		<codeblock>
 			STRVAR.len()           =>   strlen(STRVAR)
 			STRVAR.first()         =>   firstch(STRVAR)
-			STRVAR.back()          =>   lastch(STRVAR)
+			STRVAR.last()          =>   lastch(STRVAR)
 			STRVAR.startsw(STR)    =>   startswith(STRVAR,STR)
 			STRVAR.endsw(STR)      =>   endswith(STRVAR,STR)
 			STRVAR.at(P)           =>   char(STRVAR,P)
@@ -66,9 +66,9 @@
 			STRVAR.nmtch(STR,P)    =>   str_not_match(STR,STRVAR,P)
 			STRVAR.nrmtch(STR,P)   =>   str_not_rmatch(STR,STRVAR,P)
 		</codeblock>
-		<example desc="Automatisches Füllen der Cache-Tabellenköpfe in einer FOR-Schleife, wobei die Nummer der aktuellen Spalte auf mindestens zwei Zeichen ergänzt werden soll:" type="verbatim">
+		<example desc="Automatisches Füllen der Tabellenköpfe in einer FOR-Schleife, wobei die Nummer der aktuellen Spalte auf mindestens zwei Zeichen ergänzt werden soll:" type="verbatim">
 			|FOR&gt; [...]
-			|FOR&gt; cache(#,i) = "Spalte_" + #~i		(wird ggf. eine 0 ergänzen)
+			|FOR&gt; table(#,i) = "Spalte_" + #~i		(wird ggf. eine 0 ergänzen)
 			|FOR&gt; [...]
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://explorer?frame=self">help explorer</a> und <a href="nhlp://cluster?frame=self">help cluster</a>
