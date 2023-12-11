@@ -318,6 +318,7 @@ psi_n(n,x)~Calculates the value of the polygamma function of the order n at the 
 pso~Uses a particle swarm optimizer to locate the global minimum in the expression~partikelschwarmoptimierer minimal extremal extremum optimum optimal optimieren~help pso
 pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 Question~Is it me, who asks the questions, or is it you?~question~"Nice try, my friend ..."
+qrcode~Creates a QR code from the contents of the passed string~barcode quick response code matrixcode~help qrcode
 quit~Exits NumeRe~schliessen close exit beenden~quit
 radian(a)~Calculates the radians of the angle alpha [Degree]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Inserts a radio group into a window layout~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window

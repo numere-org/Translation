@@ -546,6 +546,7 @@ PARSERFUNCS_LISTCMD_CMD_PROGRESS_[MISC_FLOWCTRL]=		progress     EX [-set PAR]   
 PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop         EX                         - Genereates one ore more internal variables for the current window layout, which may be filled with information. The variables are intrinsical type less and may contain numerical values as well as strings
 PARSERFUNCS_LISTCMD_CMD_PSO_[EVAL]=						pso          EX [-set PAR]  -> {VAL}    - Uses a particle swarm optimizer to locate the global minimum in the expression. The expression can be up to fourdimensional, as long as all intervals are defined
 PARSERFUNCS_LISTCMD_CMD_PULSE_[EVAL]=					pulse        OB  -> {VAL}               - Determines the pulse properties of the passed data set OB
+PARSERFUNCS_LISTCMD_CMD_QRCODE_[MISC]=					qrcode       STR [-set PAR]             - Creates a QR code from the contents of the passed string and saves it as a SVG at the defined location
 PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]                     - Exits NumeRe. The parameter influences the creation of an auto save file
 PARSERFUNCS_LISTCMD_CMD_RADIO_[GUI]=					radio        EX [-set PAR]              - Inserts a radio group into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_RANDOM_[DATACREATION]=			random       -PAR                       - Creates a set of random numbers depending on the chosen distribution and its parameters. The list of parameters is available at "help random"
@@ -727,7 +728,7 @@ GUI_EDITOR_CALLTIP_OPT_CMD=cmd
 GUI_EDITOR_CALLTIP_OPT_COARSE=grid=coarse [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COAST=colorscheme=coast [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLD=colorscheme=cold [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}]
 GUI_EDITOR_CALLTIP_OPT_COLORBAR=colorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORMASK=colormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORRANGE=colorrange=MIN:MAX [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -844,6 +845,7 @@ GUI_EDITOR_CALLTIP_OPT_LBORDER=lborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON
 GUI_EDITOR_CALLTIP_OPT_LCONT=lcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LEGEND=legend=POSITION [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LEGENDSTYLE=legendstyle=LEGENDSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEVEL=level=LEVEL
 GUI_EDITOR_CALLTIP_OPT_LIGHT=light[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LINES=lines[=VAL]
 GUI_EDITOR_CALLTIP_OPT_LINESIZES=linesizes=VALS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

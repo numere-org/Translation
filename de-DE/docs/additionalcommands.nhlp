@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, clc" />
+	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, clc, qrcode" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -28,6 +28,7 @@
 		<keyword>close</keyword>
 		<keyword>assert</keyword>
 		<keyword>clc</keyword>
+		<keyword>qrcode</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -37,7 +38,9 @@
 			warn MESSAGE\n
 			close -PAR\n
 			assert EXPRESSION\n
-			clc
+			clc\n
+			qrcode STR
+			qrcode STR -set file=FILENAME ...
 		</syntax>
 		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden können. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
 		<list>
@@ -47,6 +50,7 @@
 			<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
 			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
 			<item node="clc">Dieses Kommando bereinigt das Terminal und setzt es auf den Anfangszustand zurück.</item>
+			<item node="qrcode">Erzeugt einen QR-Code mit dem Inhalt der übergebenen Zeichenkette. Der QR-Code wird als SVG unter <code>&lt;savepath&gt;/qrcode.svg</code> gespeichert, wenn kein dedizierter Dateiname mittels <code>file=FILENAME</code> angegeben wird. Mit der Option <code>color={R,G,B}</code> kann die Farbe des QR-Codes und mit <code>level=LEVEL</code> (0-3) das Level der Fehlerkorrektur definiert werden.</item>
 		</list>
 	</contents>
 </article>
