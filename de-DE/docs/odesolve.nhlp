@@ -52,7 +52,7 @@
 		Die Ergebnisse der Integration werden standardmäßig in die Tabelle <code>ode()</code> als Tabelle geschrieben. Die erste Spalte enthält dabei die <expr>x</expr>-Werte und die folgenden Spalten die dazu integrierten Funktionswerte.
 		Mit den Optionen kann weiter Einfluss auf die Auswertung des ODE-Solvers genommen werden:
 		<list>
-			<item node="method=METHODE">Dies bestimmt den Integrationsalgorithmus, der von NumeRe für diese DGL verwendet werden soll. Zur Wahl stehen<br/>  <code>rk2</code> - Runge-Kutta (2,3)<br/>  <code>rk4</code> - Runge-Kutta 4. Ordnung (Standard)<br/>  <code>rkck</code> - Runge-Kutta Cash-Carp (4,5)<br/>  <code>rkf45</code> - Runge-Kutta-Fehlberg (4,5)<br/>  <code>rk8pd</code> - Runge-Kutta Prince-Dormand (8,9)</item>
+			<item node="method=METHODE">Dies bestimmt den Integrationsalgorithmus, der von NumeRe für diese DGL verwendet werden soll. Zur Wahl stehen<br/>  <code>rk2</code> - Runge-Kutta (2,3)<br/>  <code>rk4</code> - Runge-Kutta 4. Ordnung (Standard)<br/>  <code>rkck</code> - Runge-Kutta Cash-Karp (4,5)<br/>  <code>rkf45</code> - Runge-Kutta-Fehlberg (4,5)<br/>  <code>rk8pd</code> - Runge-Kutta Prince-Dormand (8,9)</item>
 			<item node="tol=TOLERANZEN">Legt die Toleranzen für den Algorithmus fest. Es können relative und absolute Toleranzen getrennt [REL,ABS] oder als gemeinsamer Wert angegeben werden.</item>
 			<item node="samples=SAMPLES">Bestimmt die Zahl der Stützstellen, die integriert werden. Standard ist 100</item>
 			<item node="target=TABLE()">Ändert die Zieltabelle von <code>ode()</code> zu <code>TABLE()</code>. Falls nötig wird die Tabelle <code>TABLE()</code> im Rahmen dieses Kommandos erzeugt</item>
