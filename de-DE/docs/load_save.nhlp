@@ -62,7 +62,7 @@
 		Die folgenden Dateitypen können importiert werden:
 		<list>
 			<item node="NumeRe-Datenfile<br/>  *.ndat">Dateiformat: <code>NDAT</code><br/>NumeRe-eigenes, binäres Dateiformat, das die Präzision und die Datentypen erhält und zusätzlich schneller zu laden und zu schreiben ist</item>
-			<item node="Textdateien<br/>  *.txt, *.dat</item>">Dateiformat: <code>TXT</code><br/>Tabellarische Textdateien, die Leerzeichen- oder Tabulatorgetrennt sein können</item>
+			<item node="Textdateien<br/>  *.txt, *.dat">Dateiformat: <code>TXT</code><br/>Tabellarische Textdateien, die Leerzeichen- oder Tabulatorgetrennt sein können</item>
 			<item node="Comma-Separated-Values<br/>  *.csv">Dateiformat: <code>CSV</code><br/>Tabellarische Textdateien, deren Spalten meist mit Kommas oder Semikola getrennt sind</item>
 			<item node="Spreadsheets<br/>  *.xls, *.xlsx, *.ods">Dateiformat: <code>XLS</code>, <code>XLSX</code> oder <code>ODS</code><br/>Tabellarische Dateien, die von Microsoft Excel(R) oder OpenOffice Calc erzeugt wurden</item>
 			<item node="Igor-Binary-Waves<br/>  *.ibw">Dateiformat: <code>IBW</code><br/>Ein binäres Dateiformat, das von Wavemetrics Igor Pro(R) erzeugt wird</item>

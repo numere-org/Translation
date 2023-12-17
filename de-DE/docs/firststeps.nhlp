@@ -40,7 +40,7 @@
 		NumeRe kann auch numerisch Differenzieren und Integrieren, sowie Extrema und Nullstellen suchen. Die dazu nötigen Kommandos sowie eine komplette Liste aller anderen findest du im <a href="nhlp://symboltree?frame=new">Symbolbaum</a> auf der linken Seite des Hauptfensters.
 		<em>Tipp:</em>Weiterführende Infos findest du unter <a href="nhlp://expression?frame=new">help expression</a>, <a href="nhlp://variables?frame=new">help variables</a>, <a href="nhlp://integrate?frame=new">help integrate</a>, <a href="nhlp://diff?frame=new">help diff</a>, <a href="nhlp://extrema?frame=new">help extrema</a> und <a href="nhlp://zeroes?frame=new">help zeroes</a>
 		<h>Was tue ich als erstes?</h>
-		Zunächst muss NumeRe eingerichtet werden: Dazu gehören vor allem die Standardpfade. Öffne die Optionen im Werkzeugemenü, wähle den Tab "Verzeichnisse" und passe die dort vorgegebenen Pfade auf deine Wünsche an. Es spielt keine Rolle, ob hierbei "\" oder "/" zum Trennen der Pfade verwendet wird.
+		Zunächst muss NumeRe eingerichtet werden: Dazu gehören vor allem die Standardpfade. Öffne die Optionen im Werkzeugemenü, wähle den Tab "Verzeichnisse" und passe die dort vorgegebenen Pfade auf deine Wünsche an. Es spielt keine Rolle, ob hierbei <code>\</code> oder <code>/</code> zum Trennen der Pfade verwendet wird.
 		Der Importordner beschreibt das Verzeichnis, an dem deine Daten liegen. Falls das kein eindeutiger Ordner ist, brauchst du diesen Pfad nicht ändern, sondern kannst das Arbeitsverzeichnis entsprechend anpassen, indem du<codeblock>workpath "PFAD/ZU/DEINEN/DATEN"</codeblock>in die Konsole eingibst. Dies wird nur für die aktuelle Sitzung gespeichert und kann über den Platzhalter <code>&lt;wp&gt;</code> verwendet werden.
 		Der Speicherordner ist der Pfad, wo die exportierten Daten oder anderweitig gespeicherten Daten abliegen.
 		Der Scriptordner ist der standardmäßige Suchpfad für Scripte. Du kannst diesen Pfad sowie den Prozedurenordner im Moment einfach beibehalten. (Es müssten sich bereits Scripte in deinem Scriptordner befinden)
@@ -109,7 +109,7 @@
 		Du solltest die folgende Ausgabe erhalten haben:
 		<img src="<>/docs/fit.png" />
 		Wie zu sehen ist, verläuft die angepasste Funktion mitten durch die Datenpunkte und gleicht sie aus.
-		<h>Automatisieren, Scripte & Prozeduren</h>
+		<h>Automatisieren, Scripte &amp; Prozeduren</h>
 		Wie zuvor erwähnt wurde, kann NumeRe vordefinierte Abläufe automatisieren. Dazu stehen dir einfache Programmierfunktionen zur Verfügung, die du während der Laufzeit direkt eingeben, oder aber in ein sogenanntes "NumeRe-Script" (*.nscr) auslagern kannst.
 		Als Funktionen stehen dir die Zählschleife (<code>for</code>-Schleife), die bedingte Schleife (<code>while</code>-Schleife), die bedingte Verzweigung (<code>if</code>-Verzweigung) und die Auswahlverzweigung (<code>switch</code>-Verzweigung) zur Verfügung, die im Wesentlichen über dieselben Fähigkeiten wie die entsprechenden Varianten aus C/C++ verfügen.
 		Scripte kannst du durch klicken auf die Toolbarfunktion "Ausführen" [F5] oder das Kommando <code>start SCRIPT</code>, wobei SCRIPT durch den Dateinamen des Scripts zu ersetzen ist, starten. Wenn ein Script gestartet wurde, werden alle Ausdrücke zeilenweise abgearbeitet, die im Script gefunden werden. Im Dateibaum unter "Scripte/examples" sollten ein paar Beispielscripte zu finden sein, sofern du sie bei Installation nicht abgewählt hast. Teste einfach mal<codeblock>start examples/amplitude</codeblock>

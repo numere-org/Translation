@@ -21,127 +21,127 @@
 # Diese Datenbank enthält die Styles für mathematische Objekte im Documentation Window.
 # 
 # Special pi constructs
-_2pi~<span style="font-style: italic;">2&pi;</span>~VAL
-_pi~<span style="font-style: italic;">&pi;</span>~VAL
-PI~<span style="font-style: italic;">&pi;</span>~VAL
+_2pi~VAL~<span style="font-style: italic;">2&pi;</span>~2\pi
+_pi~VAL~<span style="font-style: italic;">&pi;</span>~\pi
+PI~VAL~<span style="font-style: italic;">&pi;</span>~\pi
 # Uppercase greek letters
-Alpha~<span style="font-style: normal;">&Alpha;</span>~VAL
-Beta~<span style="font-style: normal;">&Beta;</span>~VAL
-Gamma~<span style="font-style: normal;">&Gamma;</span>~VAL
-Delta~<span style="font-style: normal;">&Delta;</span>~VAL
-Epsilon~<span style="font-style: normal;">&Epsilon;</span>~VAL
-Zeta~<span style="font-style: normal;">&Zeta;</span>~VAL
-Eta~<span style="font-style: normal;">&Eta;</span>~VAL
-Theta~<span style="font-style: normal;">&Theta;</span>~VAL
-Iota~<span style="font-style: normal;">&Iota;</span>~VAL
-Kappa~<span style="font-style: normal;">&Kappa;</span>~VAL
-Lambda~<span style="font-style: normal;">&Lambda;</span>~VAL
-Mu~<span style="font-style: normal;">&Mu;</span>~VAL
-Nu~<span style="font-style: normal;">&Nu;</span>~VAL
-Xi~<span style="font-style: normal;">&Xi;</span>~VAL
-Omicron~<span style="font-style: normal;">&Omicron;</span>~VAL
-Pi~<span style="font-style: normal;">&Pi;</span>~VAL
-Rho~<span style="font-style: normal;">&Rho;</span>~VAL
-Sigma~<span style="font-style: normal;">&Sigma;</span>~VAL
-Tau~<span style="font-style: normal;">&Tau;</span>~VAL
-Upsilon~<span style="font-style: normal;">&Upsilon;</span>~VAL
-Phi~<span style="font-style: normal;">&Phi;</span>~VAL
-Chi~<span style="font-style: normal;">&Chi;</span>~VAL
-Psi~<span style="font-style: normal;">&Psi;</span>~VAL
-Omega~<span style="font-style: normal;">&Omega;</span>~VAL
+Alpha~VAL~<span style="font-style: normal;">&Alpha;</span>~\Alpha
+Beta~VAL~<span style="font-style: normal;">&Beta;</span>~\Beta
+Gamma~VAL~<span style="font-style: normal;">&Gamma;</span>~\Gamma
+Delta~VAL~<span style="font-style: normal;">&Delta;</span>~\Delta
+Epsilon~VAL~<span style="font-style: normal;">&Epsilon;</span>~\Epsilon
+Zeta~VAL~<span style="font-style: normal;">&Zeta;</span>~\Zeta
+Eta~VAL~<span style="font-style: normal;">&Eta;</span>~\Eta
+Theta~VAL~<span style="font-style: normal;">&Theta;</span>~\Theta
+Iota~VAL~<span style="font-style: normal;">&Iota;</span>~\Iota
+Kappa~VAL~<span style="font-style: normal;">&Kappa;</span>~\Kappa
+Lambda~VAL~<span style="font-style: normal;">&Lambda;</span>~\Lambda
+Mu~VAL~<span style="font-style: normal;">&Mu;</span>~\Mu
+Nu~VAL~<span style="font-style: normal;">&Nu;</span>~\Nu
+Xi~VAL~<span style="font-style: normal;">&Xi;</span>~\Xi
+Omicron~VAL~<span style="font-style: normal;">&Omicron;</span>~\Omicron
+Pi~VAL~<span style="font-style: normal;">&Pi;</span>~\Pi
+Rho~VAL~<span style="font-style: normal;">&Rho;</span>~\Rho
+Sigma~VAL~<span style="font-style: normal;">&Sigma;</span>~\Sigma
+Tau~VAL~<span style="font-style: normal;">&Tau;</span>~\Tau
+Upsilon~VAL~<span style="font-style: normal;">&Upsilon;</span>~\Upsilon
+Phi~VAL~<span style="font-style: normal;">&Phi;</span>~\Phi
+Chi~VAL~<span style="font-style: normal;">&Chi;</span>~\Chi
+Psi~VAL~<span style="font-style: normal;">&Psi;</span>~\Psi
+Omega~VAL~<span style="font-style: normal;">&Omega;</span>~\Omega
 # Lowercase greek letters
-alpha~<span style="font-style: italic;">&alpha;</span>~VAL
-beta~<span style="font-style: italic;">&beta;</span>~VAL
-gamma~<span style="font-style: italic;">&gamma;</span>~VAL
-delta~<span style="font-style: italic;">&delta;</span>~VAL
-epsilon~<span style="font-style: italic;">&epsilon;</span>~VAL
-zeta~<span style="font-style: italic;">&zeta;</span>~VAL
-eta~<span style="font-style: italic;">&eta;</span>~VAL
-theta~<span style="font-style: italic;">&thetasym;</span>~VAL
-iota~<span style="font-style: italic;">&iota;</span>~VAL
-kappa~<span style="font-style: italic;">&kappa;</span>~VAL
-lambda~<span style="font-style: italic;">&lambda;</span>~VAL
-mu~<span style="font-style: italic;">&mu;</span>~VAL
-nu~<span style="font-style: italic;">&nu;</span>~VAL
-xi~<span style="font-style: italic;">&xi;</span>~VAL
-omicron~<span style="font-style: italic;">&omicron;</span>~VAL
-pi~<span style="font-style: italic;">&pi;</span>~VAL
-rho~<span style="font-style: italic;">&rho;</span>~VAL
-sigma~<span style="font-style: italic;">&sigma;</span>~VAL
-tau~<span style="font-style: italic;">&tau;</span>~VAL
-upsilon~<span style="font-style: italic;">&upsilon;</span>~VAL
-phi~<span style="font-style: italic;">&phi;</span>~VAL
-chi~<span style="font-style: italic;">&chi;</span>~VAL
-psi~<span style="font-style: italic;">&psi;</span>~VAL
-omega~<span style="font-style: italic;">&omega;</span>~VAL
+alpha~VAL~<span style="font-style: italic;">&alpha;</span>~\alpha
+beta~VAL~<span style="font-style: italic;">&beta;</span>~\beta
+gamma~VAL~<span style="font-style: italic;">&gamma;</span>~\gamma
+delta~VAL~<span style="font-style: italic;">&delta;</span>~\delta
+epsilon~VAL~<span style="font-style: italic;">&epsilon;</span>~\varepsilon
+zeta~VAL~<span style="font-style: italic;">&zeta;</span>~\zeta
+eta~VAL~<span style="font-style: italic;">&eta;</span>~\eta
+theta~VAL~<span style="font-style: italic;">&thetasym;</span>~\vartheta
+iota~VAL~<span style="font-style: italic;">&iota;</span>~\iota
+kappa~VAL~<span style="font-style: italic;">&kappa;</span>~\kappa
+lambda~VAL~<span style="font-style: italic;">&lambda;</span>~\lambda
+mu~VAL~<span style="font-style: italic;">&mu;</span>~\mu
+nu~VAL~<span style="font-style: italic;">&nu;</span>~\nu
+xi~VAL~<span style="font-style: italic;">&xi;</span>~\xi
+omicron~VAL~<span style="font-style: italic;">&omicron;</span>~\omicron
+pi~VAL~<span style="font-style: italic;">&pi;</span>~\pi
+rho~VAL~<span style="font-style: italic;">&rho;</span>~\varrho
+sigma~VAL~<span style="font-style: italic;">&sigma;</span>~\sigma
+tau~VAL~<span style="font-style: italic;">&tau;</span>~\tau
+upsilon~VAL~<span style="font-style: italic;">&upsilon;</span>~\upsilon
+phi~VAL~<span style="font-style: italic;">&phi;</span>~\varphi
+chi~VAL~<span style="font-style: italic;">&chi;</span>~\chi
+psi~VAL~<span style="font-style: italic;">&psi;</span>~\psi
+omega~VAL~<span style="font-style: italic;">&omega;</span>~\omega
 # Infinity and other objects
-inf~<span style="font-style: italic;">&infin;</span>~VAL
-\n~<br>~OP
+inf~VAL~<span style="font-style: italic;">&infin;</span>~\infty
+\n~OP~<br>~\\
 # Math operators
-+-~<span style="font-style: normal;">&plusmn;</span>~OP
-+/-~<span style="font-style: normal;">&plusmn;</span>~OP
--~<span style="font-style: normal;">&minus;</span>~OP
-+~<span style="font-style: normal;">+</span>~OP
-*~&nbsp;~OP
-times~<span style="font-style: normal;">&times;</span>~OP
-<="~<span style="font-style: normal;">&le;</span~OP
-&lt;=~<span style="font-style: normal;">&le;</span>~OP
->=~<span style="font-style: normal;">&ge;</span>~OP
-&gt;=~<span style="font-style: normal;">&ge;</span>~OP
-!=~<span style="font-style: normal;">&ne;</span>~OP
-approx~<span style="font-style: normal;">&asymp;</span>~OP
-=~<span style="font-style: normal;">=</span>~OP
-:~<span style="font-style: normal;">:</span>~OP
++-~OP~<span style="font-style: normal;">&plusmn;</span>~\pm
++/-~OP~<span style="font-style: normal;">&plusmn;</span>~\pm
+-~OP~<span style="font-style: normal;">&minus;</span>~-
++~OP~<span style="font-style: normal;">+</span>~+
+*~OP~&nbsp;~\,
+times~OP~<span style="font-style: normal;">&times;</span>~\times
+<=~OP~<span style="font-style: normal;">&le;</span~\leq
+&lt;=~OP~<span style="font-style: normal;">&le;</span>~\leq
+>=~OP~<span style="font-style: normal;">&ge;</span>~\geq
+&gt;=~OP~<span style="font-style: normal;">&ge;</span>~\geq
+!=~OP~<span style="font-style: normal;">&ne;</span>~\neq
+approx~OP~<span style="font-style: normal;">&asymp;</span>~\approx
+=~OP~<span style="font-style: normal;">=</span>~=
+:~OP~<span style="font-style: normal;">:</span>~:
 # Parentheses
-(~<span style="font-style: normal;">(</span>~OP
-)~<span style="font-style: normal;">)</span>~OP
-[~<span style="font-style: normal;">[</span>~OP
-]~<span style="font-style: normal;">]</span>~OP
-{~<span style="font-style: normal;">{</span>~OP
-}~<span style="font-style: normal;">}</span>~OP
+(~OP~<span style="font-style: normal;">(</span>~(
+)~OP~<span style="font-style: normal;">)</span>~)
+[~OP~<span style="font-style: normal;">[</span>~[
+]~OP~<span style="font-style: normal;">]</span>~]
+{~OP~<span style="font-style: normal;">{</span>~{
+}~OP~<span style="font-style: normal;">}</span>~}
 # Advanced math operators
-nabla~<span style="font-style: normal; font-weight: normal;">&nabla;</span>~OP
-integrate~<span style="font-style: italic;">&int;</span>~OP
-sum~<span style="font-style: normal;">&sum;</span>~OP
-product~<span style="font-style: normal;">&prod;</span>~OP
-and~<span style="font-style: normal;">&and;</span>~OP
-or~<span style="font-style: normal;">&or;</span>~OP
-not~<span style="font-style: normal;">&not;</span>~OP
-det~<span style="font-style: normal;">det</span>~OP
-in~<span style="font-style: normal; font-family: lucida sans unicode;">&isin;</span>~OP
-nin~<span style="font-style: normal; font-family: lucida sans unicode;">&notin;</span>~OP
-forall~<span style="font-style: normal; font-family: lucida sans unicode;">&forall;</span>~OP
-exist~<span style="font-style: normal; font-family: lucida sans unicode;">&exist;</span>~OP
-partial~<span style="font-style: normal;">&part;</span>~OP
-emptyset~<span style="font-style: normal; font-family: lucida sans unicode;">&empty;</span>~OP
+nabla~OP~<span style="font-style: normal; font-weight: normal;">&nabla;</span>~\nabla
+integrate~OP~<span style="font-style: italic;">&int;</span>~\int
+sum~OP~<span style="font-style: normal;">&sum;</span>~\sum
+product~OP~<span style="font-style: normal;">&prod;</span>~\prod
+and~OP~<span style="font-style: normal;">&and;</span>~\land
+or~OP~<span style="font-style: normal;">&or;</span>~\lor
+not~OP~<span style="font-style: normal;">&not;</span>~\neg
+det~OP~<span style="font-style: normal;">det</span>~\det
+in~OP~<span style="font-style: normal; font-family: lucida sans unicode;">&isin;</span>~\in
+nin~OP~<span style="font-style: normal; font-family: lucida sans unicode;">&notin;</span>~\notin
+forall~OP~<span style="font-style: normal; font-family: lucida sans unicode;">&forall;</span>~\forall
+exist~OP~<span style="font-style: normal; font-family: lucida sans unicode;">&exist;</span>~\exists
+partial~OP~<span style="font-style: normal;">&part;</span>~\partial
+emptyset~OP~<span style="font-style: normal; font-family: lucida sans unicode;">&empty;</span>~\empty
 # Mathematical functions
-cos~<span style="font-style: normal;">cos</span>~FCT
-acos~<span style="font-style: normal;">arccos</span>~FCT
-arccos~<span style="font-style: normal;">arccos</span>~FCT
-cosh~<span style="font-style: normal;">cosh</span>~FCT
-acosh~<span style="font-style: normal;">arcosh</span>~FCT
-arcosh~<span style="font-style: normal;">arcosh</span>~FCT
-sin~<span style="font-style: normal;">sin</span>~FCT
-asin~<span style="font-style: normal;">arcsin</span>~FCT
-arcsin~<span style="font-style: normal;">arcsin</span>~FCT
-sinh~<span style="font-style: normal;">sinh</span>~FCT
-asinh~<span style="font-style: normal;">arsinh</span>~FCT
-arsinh~<span style="font-style: normal;">arsinh</span>~FCT
-tan~<span style="font-style: normal;">tan</span>~FCT
-atan~<span style="font-style: normal;">arctan</span>~FCT
-arctan~<span style="font-style: normal;">arctan</span>~FCT
-tanh~<span style="font-style: normal;">tanh</span>~FCT
-atanh~<span style="font-style: normal;">artanh</span>~FCT
-artanh~<span style="font-style: normal;">artanh</span>~FCT
-cot~<span style="font-style: normal;">cot</span>~FCT
-sinc~<span style="font-style: normal;">sinc</span>~FCT
-exp~<span style="font-style: normal;">exp</span>~FCT
-sqrt~<span style="font-style: normal;">sqrt</span>~FCT
-Ai~<span style="font-style: normal;">Ai</span>~FCT
-Bi~<span style="font-style: normal;">Bi</span>~FCT
-erf~<span style="font-style: normal;">erf</span>~FCT
-erfc~<span style="font-style: normal;">erfc</span>~FCT
-ln~<span style="font-style: normal;">ln</span>~FCT
-log~<span style="font-style: normal;">log</span>~FCT
-Cl2~<span style="font-style: normal;">Cl<sub>2</sub></span>~FCT
-Li2~<span style="font-style: normal;">Li<sub>2</sub></span>~FCT
+cos~FCT~<span style="font-style: normal;">cos</span>~\cos
+acos~FCT~<span style="font-style: normal;">arccos</span>~\arccos
+arccos~FCT~<span style="font-style: normal;">arccos</span>~\arccos
+cosh~FCT~<span style="font-style: normal;">cosh</span>~\cosh
+acosh~FCT~<span style="font-style: normal;">arcosh</span>~\arcosh
+arcosh~FCT~<span style="font-style: normal;">arcosh</span>~\arcosh
+sin~FCT~<span style="font-style: normal;">sin</span>~\sin
+asin~FCT~<span style="font-style: normal;">arcsin</span>~\arcsin
+arcsin~FCT~<span style="font-style: normal;">arcsin</span>~\arcsin
+sinh~FCT~<span style="font-style: normal;">sinh</span>~\sinh
+asinh~FCT~<span style="font-style: normal;">arsinh</span>~\arsinh
+arsinh~FCT~<span style="font-style: normal;">arsinh</span>~\arsinh
+tan~FCT~<span style="font-style: normal;">tan</span>~\tan
+atan~FCT~<span style="font-style: normal;">arctan</span>~\arctan
+arctan~FCT~<span style="font-style: normal;">arctan</span>~\arctan
+tanh~FCT~<span style="font-style: normal;">tanh</span>~\tanh
+atanh~FCT~<span style="font-style: normal;">artanh</span>~\artanh
+artanh~FCT~<span style="font-style: normal;">artanh</span>~\artanh
+cot~FCT~<span style="font-style: normal;">cot</span>~\cot
+sinc~FCT~<span style="font-style: normal;">sinc</span>~\sinc
+exp~FCT~<span style="font-style: normal;">exp</span>~\exp
+sqrt~FCT~<span style="font-style: normal;">sqrt</span>~\surd
+Ai~FCT~<span style="font-style: normal;">Ai</span>~\mathrm{Ai}
+Bi~FCT~<span style="font-style: normal;">Bi</span>~\mathrm{Bi}
+erf~FCT~<span style="font-style: normal;">erf</span>~\mathrm{erf}
+erfc~FCT~<span style="font-style: normal;">erfc</span>~\mathrm{erfc}
+ln~FCT~<span style="font-style: normal;">ln</span>~\ln
+log~FCT~<span style="font-style: normal;">log</span>~\log
+Cl2~FCT~<span style="font-style: normal;">Cl<sub>2</sub></span>~\mathrm{Cl}_2
+Li2~FCT~<span style="font-style: normal;">Li<sub>2</sub></span>~\mathrm{Li}_2

@@ -50,7 +50,7 @@
 		Also, you may use <code>&lt;example&gt;</code>, <code>&lt;list&gt;</code> or other environments in this article.
 		<list>
 			<item node="&lt;article id=&quot;...&quot;&gt;">The unique key, which will link the documentation index with the corresponding entry of the documentation index (<code>id=</code>). One file may contain multiple articles</item>
-			<item node="&lt;title string=&quot;...&quot; idxkey=&quot;...&quot;/&gt;">The title (<code>string=</code>) and the index keys (<code>idxkey=</code>) for the documentation index, meaning the keywords, which will be listed for the article by invoking <a href="nhlp://index?frame=new">help idx</a></item>
+			<item node="&lt;title string=&quot;...&quot; idxkey=&quot;...&quot;/&gt;">The title (<code>string=</code>) and the index keys (<code>idxkey=</code>) for the documentation index, meaning the keywords, which will be listed for the article by invoking <a href="nhlp://index?frame=new"><code>help idx</code></a></item>
 			<item node="&lt;keyword&gt;">A keyword used for displaying the article. Simple rule: the more keywords the better. A keyword doesn't have to be a full word. <em>Important</em>: the passed keywords will overwrite the keywords of the default documentation articles.</item>
 			<item node="&lt;list&gt;">List environment for a list just like this one. Contains further <code>&lt;item&gt;</code> environments, which are the actual items of the list</item>
 			<item node="&lt;item node=&quot;...&quot;&gt;">List item with a corresponding identifier (<code>node=</code>)</item>
