@@ -376,7 +376,7 @@ PARSERFUNCS_LISTFUNC_METHOD_CATEGORIESOF_[DATA]=			categoriesof({nCols})        
 PARSERFUNCS_LISTFUNC_METHOD_CATEGORIZE_[DATA]=				categorize({nCols},{sCategories}={})                        CST      - Aktualisiert die Kategorien einer kategorialen Spalte (konvertiert sie sofern nötig). Die Zahl der neuen Kategorien muss dabei nicht mit den bisherigen Kategorien übereinstimmen. Bei Erfolg werden die neuen Kategorien der ausgewählten kategorialen Spalte(n) als Schlüssel-Wert-Liste zurückgegeben
 PARSERFUNCS_LISTFUNC_METHOD_CNT_[DATA]=						cnt                                                        {VAL}     - Wendet die Multi-Argumentfunktion "cnt()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_COLS_[DATA]=					cols                                                        {*}      - Modifiziert die Operation der Multi-Argumentfunktion auf spaltenweises Vorgehen oder gibt die Zahl der Spalten der Tabelle zurück, wenn sie einzeln oder in Kombination mit ".grid" (für ein Datengitter) verwendet wird
-PARSERFUNCS_LISTFUNC_METHOD_CONVERT_[DATA]=					convert({nCols},sType="auto")                               STR      - Konvertiert die Spalten mit den Indices {nCols} zum neuen Spaltentyp sType. sType ist eine Zeichenkette und kann entweder "value", "string", "datetime", "logical" oder "category" sein. "auto" führt eine automatische Detektion der besten Konvertierung je Spalte aus. Ist die Konvertierung erfolgreich, wird der neue Typ als Zeichenkette zurückgegeben, anderenfalls ist die Zeichenkette leer. "auto" ist immer erfolgreich, auch wenn keine Spalte konvertiert wurde
+PARSERFUNCS_LISTFUNC_METHOD_CONVERT_[DATA]=					convert({nCols},sType="auto")                               STR      - Konvertiert die Spalten mit den Indices {nCols} zum neuen Spaltentyp sType. sType ist eine Zeichenkette und kann eines von%%ITEMIZE%%"value" (oder einer der Subtypen)%%ITEMIZE%%"string"%%ITEMIZE%%"datetime"%%ITEMIZE%%"logical"%%ITEMIZE%%"category"%%ITEMIZE_END%%sein. Subtypen von "value" sind "value.cf32", "value.f64", "value.f32", "value.i8", "value.ui8", "value.i16", "value.ui16", "value.i32", "value.ui32", "value.i64" und "value.ui64". "auto" führt eine automatische Detektion der besten Konvertierung je Spalte aus. Ist die Konvertierung erfolgreich, wird der neue Typ als Zeichenkette zurückgegeben, anderenfalls ist die Zeichenkette leer. "auto" ist immer erfolgreich, auch wenn keine Spalte konvertiert wurde
 PARSERFUNCS_LISTFUNC_METHOD_COUNTIF_[DATA]=					countif({nCols},vals{})                                    {VAL}     - Zählt die Elemente in den Spalten nCols, die mit den Werten im Cluster vals{} übereinstimmen. Für jede Spalte und jeden Wert in vals{} wird eine Summe geordnet nach den Spalten zurück gegeben
 PARSERFUNCS_LISTFUNC_METHOD_COVAROF_[DATA]=					covarof(nCol1,nCol2,nRows1={1:nrows},nRows2={1:nrows})      VAL      - Berechnet die Kovarianz der Spalten nCol1 und nCol2. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension
 PARSERFUNCS_LISTFUNC_METHOD_DESCRIBE_[DATA]=				describe(sDesc)                                             STR      - Aktualisiert die Beschreibung der aktuellen Tabelle mit dem Inhalt von sDesc. Bei Erfolg wird sDesc zurückgegeben
@@ -425,7 +425,7 @@ PARSERFUNCS_LISTFUNC_METHOD_STARTSW_[STRING]=				startsw(sStart)                
 PARSERFUNCS_LISTFUNC_METHOD_STD_[DATA]=						std                                                        {VAL}     - Wendet die Multi-Argumentfunktion "std()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_SUB_[STRING]=					sub(nPos,nLen=STRINGVAR.len)                                STR      - Gibt nLen Zeichen ab dem Zeichen nPos aus der Zeichenkette als neue Zeichenkette zurück
 PARSERFUNCS_LISTFUNC_METHOD_SUM_[DATA]=						sum                                                        {VAL}     - Wendet die Multi-Argumentfunktion "sum()" auf den Datensatz an. Mit den Modifikatoren .cols, .rows, .grid und .every() kann die Funktion weiter eingeschränkt werden
-PARSERFUNCS_LISTFUNC_METHOD_TYPEOF_[DATA]=					typeof({nCols})                                            {STR}     - Gibt den Spaltentyp der mit {nCols} indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei als %%ITEMIZE%%"value"%%ITEMIZE%%"string"%%ITEMIZE%%"datetime"%%ITEMIZE%%"logical"%%ITEMIZE%%"category"%%ITEMIZE_END%%angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ %%ITEMIZE%%"none"%%ITEMIZE_END%%
+PARSERFUNCS_LISTFUNC_METHOD_TYPEOF_[DATA]=					typeof({nCols})                                            {STR}     - Gibt den Spaltentyp der mit {nCols} indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei als %%ITEMIZE%%"value" (oder einer der Subtypen)%%ITEMIZE%%"string"%%ITEMIZE%%"datetime"%%ITEMIZE%%"logical"%%ITEMIZE%%"category"%%ITEMIZE_END%%angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ %%ITEMIZE%%"none"%%ITEMIZE_END%%Subtypen von "value" sind "value.cf32", "value.f64", "value.f32", "value.i8", "value.ui8", "value.i16", "value.ui16", "value.i32", "value.ui32", "value.i64" und "value.ui64".
 PARSERFUNCS_LISTFUNC_METHOD_XOR_[DATA]=						xor                                                        {LOG}     - Wendet die Multi-Argumentfunktion "xor()" auf den Datensatz an. Mit den Modifikatoren %%ITEMIZE%%.cols%%ITEMIZE%%.rows%%ITEMIZE%%.grid%%ITEMIZE%%.every()%%ITEMIZE_END%% kann die Funktion weiter eingeschränkt werden
 PARSERFUNCS_LISTFUNC_METHOD_ZSCOREOF_[DATA]=				zscoreof(nCol,nRows={1:nrows})                             {VAL}     - Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert (auch z-Score genannt) in der Spalte nCol für die Zeilen nRows. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Mittelwert und Standardabweichung werden stets bezogen auf die ausgewählten Zeilen berechnet
 # Kommandotabelle
@@ -548,6 +548,7 @@ PARSERFUNCS_LISTCMD_CMD_PROGRESS_[MISC_FLOWCTRL]=		progress     EX [-set PAR]   
 PARSERFUNCS_LISTCMD_CMD_PROP_[GUI]=						prop         EX                         - Generiert eine oder mehrere neue interne Variablen für das aktuelle Window-Layout, die mit Informationen befüllt werden können. Die Variablen sind intrinsisch typlos und können sowohl numerische Werte als auch Zeichenketten enthalten
 PARSERFUNCS_LISTCMD_CMD_PSO_[EVAL]=						pso          EX [-set PAR]  -> {VAL}    - Verwendet einen Partikelschwarm-Optimierer, um das globale Minimum im Ausdruck zu finden. Der Ausdruck kann bis zu vierdimensional sein, sofern dafür Intervalle vorgegeben wurden
 PARSERFUNCS_LISTCMD_CMD_PULSE_[EVAL]=					pulse        OB  -> {VAL}               - Bestimmt die Pulseigenschaften des übergebenen Datensatzes OB
+PARSERFUNCS_LISTCMD_CMD_QRCODE_[MISC]=					qrcode       STR [-set PAR]             - Erzeugt einen QR-Code aus dem Inhalt der übergebenen Zeichenkette und speichert ihn als SVG am gewählten Ort
 PARSERFUNCS_LISTCMD_CMD_QUIT_[MAINCTRL]=				quit         [-PAR]                     - Beendet NumeRe. Der Parameter hat Einfluss auf die Erzeugung eines Auto-Saves
 PARSERFUNCS_LISTCMD_CMD_RADIO_[GUI]=					radio        EX [-set PAR]              - Fügt eine Radio-Group in ein Window-Layout ein. Das Eventhandling und der Startwert sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_RANDOM_[DATACREATION]=			random       -PAR                       - Generiert einen Satz an Zufallszahlen abhängig von der gewählten Verteilung und deren Parametersatz. Die Liste der Parameter ist unter "help random" verfügbar
@@ -729,7 +730,7 @@ GUI_EDITOR_CALLTIP_OPT_CMD=cmd
 GUI_EDITOR_CALLTIP_OPT_COARSE=grid=coarse [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COAST=colorscheme=coast [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLD=colorscheme=cold [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
+GUI_EDITOR_CALLTIP_OPT_COLOR=color[={R,G,B}]
 GUI_EDITOR_CALLTIP_OPT_COLORBAR=colorbar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORMASK=colormask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_COLORRANGE=colorrange=MIN:MAX [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -846,6 +847,7 @@ GUI_EDITOR_CALLTIP_OPT_LBORDER=lborder=(POS,STRING) [%%GUI_EDITOR_CALLTIP_COMMON
 GUI_EDITOR_CALLTIP_OPT_LCONT=lcont[=NUM] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LEGEND=legend=POSITION [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LEGENDSTYLE=legendstyle=LEGENDSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_LEVEL=level=LEVEL
 GUI_EDITOR_CALLTIP_OPT_LIGHT=light[=MODE] [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_LINES=lines[=VAL]
 GUI_EDITOR_CALLTIP_OPT_LINESIZES=linesizes=VALS [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1109,29 +1111,38 @@ GUI_EDITOR_CALLTIP_OPT_ZTICKS=zticks=TICKSTYLE [%%GUI_EDITOR_CALLTIP_COMMON_PLOT
 # Constants tooltips
 GUI_EDITOR_CALLTIP_CONST_G_[ASTRO]=_g = 9.80665 [m/s^2]
 GUI_EDITOR_CALLTIP_CONST_C_[FIELDTHEORY]=_c = 299792458 [m/s]
-GUI_EDITOR_CALLTIP_CONST_ELEK_FELDKONST_[FIELDTHEORY]=_elek_feldkonst = 8.8541878e-12 [A s/(V m)]
+GUI_EDITOR_CALLTIP_CONST_ELECTRIC_CONST_[FIELDTHEORY]=_electric_const = 8.8541878e-12 [A s/(V m)]
+GUI_EDITOR_CALLTIP_CONST_ELEK_FELDKONST_[FIELDTHEORY]=_elek_feldkonst = _electric_const
 GUI_EDITOR_CALLTIP_CONST_N_AVOGADRO_[CHEMICAL]=_n_avogadro = 6.02214129e23 [1/mol]
 GUI_EDITOR_CALLTIP_CONST_K_BOLTZ_[THERMO]=_k_boltz = 1.3806488e-23 [J/K]
-GUI_EDITOR_CALLTIP_CONST_ELEM_LADUNG_[FIELDTHEORY]=_elem_ladung = 1.602176565e-19 [A s]
+GUI_EDITOR_CALLTIP_CONST_ELEM_CHARGE_[FIELDTHEORY]=_elem_charge = 1.602176565e-19 [A s]
+GUI_EDITOR_CALLTIP_CONST_ELEM_LADUNG_[FIELDTHEORY]=_elem_ladung = _elem_charge
 GUI_EDITOR_CALLTIP_CONST_H_[ATOMIC]=_h = 6.62606957e-34 [J s]
 GUI_EDITOR_CALLTIP_CONST_HBAR_[ATOMIC]=_hbar = 1.05457173e-34 [J s]
-GUI_EDITOR_CALLTIP_CONST_M_ELEKTRON_[PARTICLE]=_m_elektron = 9.10938291e-31 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_ELECTRON_[PARTICLE]=_m_electron = 9.10938291e-31 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_ELEKTRON_[PARTICLE]=_m_elektron = _m_electron
 GUI_EDITOR_CALLTIP_CONST_M_PROTON_[PARTICLE]=_m_proton = 1.67262178e-27 [kg]
 GUI_EDITOR_CALLTIP_CONST_M_NEUTRON_[PARTICLE]=_m_neutron = 1.67492735e-27 [kg]
 GUI_EDITOR_CALLTIP_CONST_M_MUON_[PARTICLE]=_m_muon = 1.88353148e-28 [kg]
 GUI_EDITOR_CALLTIP_CONST_M_TAU_[PARTICLE]=_m_tau = 3.16747e-27 [kg]
-GUI_EDITOR_CALLTIP_CONST_MAGN_FELDKONST_[FIELDTHEORY]=_magn_feldkonst = 1.25663706e-6 [V s/(A m)]
-GUI_EDITOR_CALLTIP_CONST_M_ERDE_[ASTRO]=_m_erde = 5.9726e24 [kg]
-GUI_EDITOR_CALLTIP_CONST_M_SONNE_[ASTRO]=_m_sonne = 1.9885e30 [kg]
-GUI_EDITOR_CALLTIP_CONST_R_ERDE_[ASTRO]=_r_erde = 6.378137e6 [m]
-GUI_EDITOR_CALLTIP_CONST_R_SONNE_[ASTRO]=_r_sonne = 6.9551e8 [m]
+GUI_EDITOR_CALLTIP_CONST_MAGNETIC_CONST_[FIELDTHEORY]=_magnetic_const = 1.25663706e-6 [V s/(A m)]
+GUI_EDITOR_CALLTIP_CONST_MAGN_FELDKONST_[FIELDTHEORY]=_magn_feldkonst = _magnetic_const
+GUI_EDITOR_CALLTIP_CONST_M_EARTH_[ASTRO]=_m_earth = 5.9726e24 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_ERDE_[ASTRO]=_m_erde = _m_earth
+GUI_EDITOR_CALLTIP_CONST_M_SUN_[ASTRO]=_m_sun = 1.9885e30 [kg]
+GUI_EDITOR_CALLTIP_CONST_M_SONNE_[ASTRO]=_m_sonne = _m_sun
+GUI_EDITOR_CALLTIP_CONST_R_EARTH_[ASTRO]=_r_earth = 6.378137e6 [m]
+GUI_EDITOR_CALLTIP_CONST_R_ERDE_[ASTRO]=_r_erde = _r_earth
+GUI_EDITOR_CALLTIP_CONST_R_SUN_[ASTRO]=_r_sun = 6.9551e8 [m]
+GUI_EDITOR_CALLTIP_CONST_R_SONNE_[ASTRO]=_r_sonne = _r_sun
 GUI_EDITOR_CALLTIP_CONST_THETA_WEINBERG_[PARTICLE]=_theta_weinberg = 0.490976214
 GUI_EDITOR_CALLTIP_CONST_2PI_[MATHEMATICAL]=_2pi = 6.28318531
 GUI_EDITOR_CALLTIP_CONST_PI_[MATHEMATICAL]=_pi = 3.14159265
 GUI_EDITOR_CALLTIP_CONST_R_[THERMO]=_R = 8.3144622 [J/(mol K)]
 GUI_EDITOR_CALLTIP_CONST_ALPHA_FS_[ATOMIC]=_alpha_fs = 7.29735257e-3
 GUI_EDITOR_CALLTIP_CONST_MU_BOHR_[ATOMIC]=_mu_bohr = 9.27400968e-24 [J/T]
-GUI_EDITOR_CALLTIP_CONST_MU_KERN_[ATOMIC]=_mu_kern = 5.05078353e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_NUCLEAR_[ATOMIC]=_mu_nuclear = 5.05078353e-27 [J/T]
+GUI_EDITOR_CALLTIP_CONST_MU_KERN_[ATOMIC]=_mu_kern = _mu_nuclear
 GUI_EDITOR_CALLTIP_CONST_M_AMU_[CHEMICAL]=_m_amu = 1.66053892e-27 [kg]
 GUI_EDITOR_CALLTIP_CONST_R_BOHR_[ATOMIC]=_r_bohr = 5.29177211e-11 [m]
 GUI_EDITOR_CALLTIP_CONST_GRAV_[ASTRO]=_G = 6.67384e-11 [m^3/(kg s^2)]
@@ -1149,3 +1160,27 @@ GUI_EDITOR_CALLTIP_CONST_GAMMA_E_[PARTICLE]=_gamma_e = 1.760859644e11 [1/(T s)]
 GUI_EDITOR_CALLTIP_CONST_LANDE_E_[PARTICLE]=_lande_e = -2.00231930436182
 GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_DELTA_[MATHEMATICAL]=_feigenbaum_delta = 4.6692016091
 GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_ALPHA_[MATHEMATICAL]=_feigenbaum_alpha = 2.5029078751
+GUI_EDITOR_CALLTIP_CONST_UI8_MAX_[INTERNAL]=ui8_max = 255
+GUI_EDITOR_CALLTIP_CONST_I8_MAX_[INTERNAL]=i8_max = 127
+GUI_EDITOR_CALLTIP_CONST_I8_MIN_[INTERNAL]=i8_min = -128
+GUI_EDITOR_CALLTIP_CONST_UI16_MAX_[INTERNAL]=ui16_max = 65535
+GUI_EDITOR_CALLTIP_CONST_I16_MAX_[INTERNAL]=i16_max = 32767
+GUI_EDITOR_CALLTIP_CONST_I16_MIN_[INTERNAL]=i16_min = -32768
+GUI_EDITOR_CALLTIP_CONST_UI32_MAX_[INTERNAL]=ui32_max = 4294967295
+GUI_EDITOR_CALLTIP_CONST_I32_MAX_[INTERNAL]=i32_max = 2147483647
+GUI_EDITOR_CALLTIP_CONST_I32_MIN_[INTERNAL]=i32_min = -2147483648
+GUI_EDITOR_CALLTIP_CONST_UI64_MAX_[INTERNAL]=ui64_max = 18446744073709551615
+GUI_EDITOR_CALLTIP_CONST_I64_MAX_[INTERNAL]=i64_max = 9223372036854775807
+GUI_EDITOR_CALLTIP_CONST_I64_MIN_[INTERNAL]=i64_min = -9223372036854775808
+GUI_EDITOR_CALLTIP_CONST_F64_MAX_[INTERNAL]=f64_max = 1.797693e+308
+GUI_EDITOR_CALLTIP_CONST_F64_MIN_[INTERNAL]=f64_min = 2.225074e-308
+GUI_EDITOR_CALLTIP_CONST_F64_EPS_[INTERNAL]=f64_eps = 2.220446e-16
+GUI_EDITOR_CALLTIP_CONST_F32_MAX_[INTERNAL]=f32_max = 3.402823e+38
+GUI_EDITOR_CALLTIP_CONST_F32_MIN_[INTERNAL]=f32_min = 1.175494e-38
+GUI_EDITOR_CALLTIP_CONST_F32_EPS_[INTERNAL]=f32_eps = 1.192093e-07
+GUI_EDITOR_CALLTIP_CONST_CF64_MAX_[INTERNAL]=cf64_max = f64_max+I*f64_max
+GUI_EDITOR_CALLTIP_CONST_CF64_MIN_[INTERNAL]=cf64_min = f64_min+I*f64_min
+GUI_EDITOR_CALLTIP_CONST_CF64_EPS_[INTERNAL]=cf64_eps = f64_eps+I*f64_eps
+GUI_EDITOR_CALLTIP_CONST_CF32_MAX_[INTERNAL]=cf32_max = f32_max+I*f32_max
+GUI_EDITOR_CALLTIP_CONST_CF32_MIN_[INTERNAL]=cf32_min = f32_min+I*f32_min
+GUI_EDITOR_CALLTIP_CONST_CF32_EPS_[INTERNAL]=cf32_eps = f32_eps+I*f32_eps

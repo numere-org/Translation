@@ -33,6 +33,6 @@
 		<example desc="Verwenden eines Clusters, um den Inhalt einer Textdatei zu speichern:">
 			ini{} = read &lt;&gt;/numere.ini
 		</example>
-		<em>Siehe auch:</em> <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://string?frame=self">help string</a> und <a href="nhlp://cache?frame=self">help cache</a>
+		<em>Siehe auch:</em> <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://string?frame=self">help string</a> und <a href="nhlp://table?frame=self">help table</a>
 	</contents>
 </article>

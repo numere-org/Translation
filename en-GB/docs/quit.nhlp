@@ -23,7 +23,7 @@
 		<keyword>quit</keyword>
 	</keywords>
 	<contents>
-		The command <code>quit</code> ends NumeRe and deletes all entries in memory. If there is any unsaved data in any cache, then NumeRe will ask, if they shall be saved.
+		The command <code>quit</code> ends NumeRe and deletes all entries in memory. If there is any unsaved data in any table, then NumeRe will ask, if they shall be saved.
 		The additional parameter <code>-as</code> creates an automatic backup, if applicable, which will be directly loaded to memory at next startup, so you may gaplessly continue your work.
 		The parameter <code>-i</code> will force NumeRe to quit without saving any unsaved data.
 	</contents>

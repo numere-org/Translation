@@ -1,5 +1,6 @@
 % Header file for NumeRe documentations
 \usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage{listings}
 \usepackage{etoolbox}
 \usepackage{amsmath}
@@ -7,6 +8,8 @@
 \usepackage{booktabs}
 \usepackage{scrlayer-scrpage}
 \usepackage{fontspec,unicode-math}
+\usepackage{utfsym}
+\usepackage{longtable}
 \setmainfont{Palatino Linotype}
 \setmathfont{Cambria Math}
 \setsansfont{Arial}
@@ -56,15 +59,16 @@
 \definecolor{ConstantStyle}{RGB}{255,0,128}
 \definecolor{MethodStyle}{RGB}{0,180,50}
 \definecolor{OptionStyle}{RGB}{0,128,100}
+\definecolor{DefaultStyle}{RGB}{0,0,64}
 
 % Activate the language
 \lstset{
     language=nscr,
-    basicstyle={\footnotesize\ttfamily\itshape},
+    basicstyle={\color{DefaultStyle}\footnotesize\ttfamily\itshape},
     extendedchars=true,
     tabsize=4,
     columns=fixed,
-    keepspaces=false,
+    keepspaces=true,
     breaklines=true,
     showstringspaces=false,
     numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
@@ -75,7 +79,7 @@
     keywordstyle=[4]{\color{ConstantStyle}\bfseries\upshape},
     keywordstyle=[5]{\color{OptionStyle}\upshape},
     keywordstyle=[6]{\color{MethodStyle}\bfseries\upshape},
-    keywordstyle=[7]{\bfseries\upshape},
+    keywordstyle=[7]{\color{black}\bfseries\upshape},
     stringstyle={\color{StringStyle}\upshape},
     backgroundcolor=\color{BGColorTwo},
     literate=*{(}{{\oprts{(}}}1

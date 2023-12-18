@@ -319,6 +319,7 @@ psi(x)~Berechnet den Wert der Digammafunktion an der Stelle x~psi() digammafunct
 psi_n(n,x)~Berechnet den Wert der Polygammafunktion der Ordnung n and der Stelle x~psi_n() digammafunction polygammafunction trigammafunction~psi_n(
 pso~Verwendet einen Partikelschwarm-Optimierer, um das globale Minimum im Ausdruck zu finden~particle swarm optimizer partikelschwarmoptimierer minimal extremal extremum optimum optimal optimieren~help pso
 pulse~Bestimmt die Pulseigenschaften des übergebenen Datensatzes~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
+qrcode~Erzeugt einen QR-Code aus dem Inhalt der übergebenen Zeichenkette~barcode quick response code matrixcode~help qrcode
 quit~Beendet NumeRe~schliessen close exit beenden~quit
 radian(a)~Bogenmaßwert von Winkel a [Grad]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Fügt eine Radio-Group in ein Window-Layout ein~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window

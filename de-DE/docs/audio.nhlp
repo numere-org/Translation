@@ -42,10 +42,10 @@
 			{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
 			{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()
 		</codeblock>
-		<em>Wichtig</em>: Audiodaten können eine große Zahl an Datenpunkten benötigen. Es ist möglich, dass die Zahl der Samples nicht von NumeRe verarbeitet werden kann.
+		<em>Wichtig</em>: Audiodaten können eine große Zahl an Datenpunkten benötigen. Es ist möglich, dass die Zahl der Samples nicht von NumeRe verarbeitet werden kann. Um Speicherplatz zu sparen, werden die Audiodaten im <code>"value.f32"</code>-<a href="nhlp://table?frame=new">Subtyp</a> geladen.
 		Bei sehr großen Dateien kann es besser sein, nur Ausschnitte aus diesen Dateien einzulesen. Mit dem Kommando <code>seek</code> kann ein Ausschnitt ab einer Position POSITION und der Länge in Samples LENGTH gelesen werden, wobei die Zahl der gelesenen Samples zurückgegeben wird:<codeblock>nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()</codeblock>Die Zieltabelle ist standardmäßig <code>audiodata()</code>, wenn sie nicht angegeben wird.
-		<example desc="Erzeugen der Audiodatei 'sin.wav' mit 16 kHz Samplerate und nur einem Channel, wobei die Samples in Spalte 2 in 'cache()' vorliegen:">
-			audio cache(:,2) -set samples=16'k file=sin.wav
+		<example desc="Erzeugen der Audiodatei 'sin.wav' mit 16 kHz Samplerate und nur einem Channel, wobei die Samples in Spalte 2 in 'table()' vorliegen:">
+			audio table(:,2) -set samples=16'k file=sin.wav
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://regularize?frame=self">help regularize</a>
 	</contents>

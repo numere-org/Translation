@@ -43,6 +43,6 @@
 		<h>Erzeugen einer Dokumentation</h>
 		Der Editor kann auch eine <a href="nhlp://latex?frame=new">LaTeX-Dokumentation</a> eines aktuell geöffneten Scripts oder einer Prozedur erzeugen und den LaTeX-XeLaTeX-Compiler für eine aktuell geöffnete TeX-Datei aufrufen. Dokumentationssequenzen können durch eine Funktion im "Ansicht-Menü" auch als Abschnitte interpretiert werden, durch die schnell mit <code>[STRG-M]</code> gesprungen werden kann.
 		<h>Weitere Dateiformate</h>
-		Der Editor ist auch in der Lage MATLAB-Dateien (*.m) und C/C++-Quelldateien (*.cpp,*.c,*.cxx,*.hpp,*.h,*.hxx) zu öffnen und entsprechend zu bearbeiten. Ebenso wird die Suche nach dupliziertem Code und der statische Code-Analyzer unterstützt.
+		Der Editor ist auch in der Lage MATLAB-Dateien (*.m) und C/C++-Quelldateien (*.cpp, *.c, *.cxx, *.hpp, *.h, *.hxx) zu öffnen und entsprechend zu bearbeiten. Ebenso wird die Suche nach dupliziertem Code und der statische Code-Analyzer unterstützt.
 	</contents>
 </article>

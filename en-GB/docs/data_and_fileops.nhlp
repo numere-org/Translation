@@ -64,7 +64,7 @@
 			<item node="&lt;fname&gt;">Will be replaced with the filename (without path and file extension) of the current moved/copied file</item>
 		</list>
 		Additionally one can apply the parameter <code>-all</code> to all file operations, if the filenames are selected using placeholders (<code>*</code> and <code>?</code>). In this case, all files corresponding to the naming scheme will be copied/moved/deleted. NumeRe will apply the corresponding action only to files, whose file types are used by NumeRe itself.
-		<example desc="Copying of a data set to the default table 'cache()' and moving of the source file:">
+		<example desc="Copying of a data set to the default table 'table()' and moving of the source file:">
 			load &lt;&gt;/samples/data
 			The data from "&EXEPATH&/samples/data.dat" was successfully loaded to memory: the data set contains 25 line(s) and 4 column(s).
 			copy data(:,:)
@@ -72,6 +72,6 @@
 			move &lt;&gt;/samples/data.dat -target=&lt;loadpath&gt;/
 			The file "&EXEPATH&/samples/data.dat" was moved successfully.
 		</example>
-		<em>See also:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a>, <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://string?frame=self">help string</a> and <a href="nhlp://explorer?frame=self">help explorer</a>
+		<em>See also:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://string?frame=self">help string</a> and <a href="nhlp://explorer?frame=self">help explorer</a>
 	</contents>
 </article>

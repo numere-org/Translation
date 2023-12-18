@@ -17,7 +17,7 @@
 -->
 
 <article id="additionalcommands">
-	<title string="Additional commands" idxkey="about, hline, warn, close, assert, clc" />
+	<title string="Additional commands" idxkey="about, hline, warn, close, assert, clc, qrcode" />
 	<keywords>
 		<keyword>about</keyword>
 		<keyword>hline</keyword>
@@ -28,6 +28,7 @@
 		<keyword>close</keyword>
 		<keyword>assert</keyword>
 		<keyword>clc</keyword>
+		<keyword>qrcode</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -37,7 +38,9 @@
 			warn MESSAGE\n
 			close -PAR\n
 			assert EXPRESSION\n
-			clc
+			clc\n
+			qrcode STR
+			qrcode STR -set file=FILENAME ...
 		</syntax>
 		Beside of the more evaluation-oriented commands knows NumeRe some additional commands, which can be assigned to the pure user interface. These are for example the commands <a href="nhlp://help?frame=new"><code>help</code></a> and <a href="nhlp://find?frame=new"><code>find</code></a>, as well as the following ones:
 		<list>
@@ -47,6 +50,7 @@
 			<item node="close">This command closes previously opened windows, which are selected by parameters using <code>close -PAR</code>: <code>-graphs</code> closes all graphs, <code>-docs</code> all documentation windows, <code>-tables</code> all tables, <code>-images</code> all ImageViewers and <code>-all</code> all windows from this list.</item>
 			<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the procedure flag <code>test</code>, extensive software tests may be implemented.</item>
 			<item node="clc">This command clears the content of the terminal and resets its content to the startup state.</item>
+			<item node="qrcode">Creates a QR code with the content of the transferred string. The QR code is saved as an SVG under <code>&lt;savepath&gt;/qrcode.svg</code> if no dedicated file name is specified using <code>file=FILENAME</code>. The color of the QR code can be defined with the option <code>color={R,G,B}</code> and the level of error correction with <code>level=LEVEL</code> (0-3).</item>
 		</list>
 	</contents>
 </article>

@@ -49,13 +49,13 @@
 			...
 			dy_n/dx = ODE(x,y1,y2,...,y_(n-1))
 		</exprblock>
-		The results of the integration willt be written by defaul into the cache <code>ode()</code> as a table. The first column contains the <expr>x</expr> values and the following columns the corresponding integrated function values.
+		The results of the integration willt be written by default into the table <code>ode()</code> as a table. The first column contains the <expr>x</expr> values and the following columns the corresponding integrated function values.
 		You may take further influence of the evaluations of the ODE solver with these options:
 		<list>
-			<item node="method=METHOD">This determines the integration algorithm, which NumeRe shall use for this ODE. You may choose out of<br/>  <code>rk2</code> - Runge-Kutta (2,3)<br/>  <code>rk4</code> - Runge-Kutta 4. order (default)<br/>  <code>rkck</code> - Runge-Kutta Cash-Carp (4,5)<br/>  <code>rkf45</code> - Runge-Kutta-Fehlberg (4,5)<br/>  <code>rk8pd</code> - Runge-Kutta Prince-Dormand (8,9)</item>
+			<item node="method=METHOD">This determines the integration algorithm, which NumeRe shall use for this ODE. You may choose out of<br/>  <code>rk2</code> - Runge-Kutta (2,3)<br/>  <code>rk4</code> - Runge-Kutta 4. order (default)<br/>  <code>rkck</code> - Runge-Kutta Cash-Karp (4,5)<br/>  <code>rkf45</code> - Runge-Kutta-Fehlberg (4,5)<br/>  <code>rk8pd</code> - Runge-Kutta Prince-Dormand (8,9)</item>
 			<item node="tol=TOLERANCES">Defines the tolerances for the algorithm. You may pass relative and absolute tolerances separately [REL,ABS] or as a single value.</item>
 			<item node="samples=SAMPLES">Determines the number of samples, which shall be integrated. The default value is 100</item>
-			<item node="target=CACHE()">Changes the target cache from <code>ode()</code> to <code>CACHE()</code>. If necessary, the cache <code>CACHE()</code> will be created automatically</item>
+			<item node="target=TABLE()">Changes the target table from <code>ode()</code> to <code>TABLE()</code>. If necessary, the table <code>TABLE()</code> will be created automatically</item>
 			<item node="fx0=STARTVALUES">This defines the starting values of the single function variables <code>[Y01,Y02,...,Y0n]</code>. If none or too few starting values are passed, NumeRe will use 0 for the missing ones</item>
 			<item node="lyapunov">Additionally calculates the shorttime Lyapunov exponent in two additional data rows. This parameter defines, if the calculuated solution is chaotic: it is chaotic, if the exponent is positive, it is regular, if the exponent is negative</item>
 		</list>

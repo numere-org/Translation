@@ -50,7 +50,7 @@
 		Des Weiteren können <code>&lt;example&gt;</code>-, <code>&lt;list&gt;</code>- oder andere Umgebungen verwendet werden. 
 		<list>
 			<item node="&lt;article id=&quot;...&quot;&gt;">Der eindeutige Schlüssel, der Hilfeartikel mit dem entsprechenden Eintrag im Dokumentationsverzeichnis verknüpft (<code>id=</code>). In einer Datei können mehrere Artikel auftreten</item>
-			<item node="&lt;title string=&quot;...&quot; idxkey=&quot;...&quot;/&gt;">Der Titel (<code>string=</code>) und die Indexschlüssel (<code>idxkey=</code>) für das Dokumentationsverzeichnis, also die Schlüsselwörter, die für den Artikel während <a href="nhlp://index?frame=new">help idx</a> angezeigt werden</item>
+			<item node="&lt;title string=&quot;...&quot; idxkey=&quot;...&quot;/&gt;">Der Titel (<code>string=</code>) und die Indexschlüssel (<code>idxkey=</code>) für das Dokumentationsverzeichnis, also die Schlüsselwörter, die für den Artikel während <a href="nhlp://index?frame=new"><code>help idx</code></a> angezeigt werden</item>
 			<item node="&lt;keyword&gt;">Schlüsselwort unter welchem der Artikel gefunden werden kann. Je mehr, desto besser. Es muss sich hierbei nicht um ein ganzes Wort handeln. <em>Wichtig</em>: Die hier angegebenen Schlüsselwörter können die Schlüsselwörter der standardmäßigen Hilfeartikel überschreiben!</item>
 			<item node="&lt;list&gt;">Listen-Umgebung für eine Auflistung wie diese hier. Fasst weitere <code>&lt;item&gt;</code>-Umgebungen, die die jeweiligen Listenpunkte bezeichnen</item>
 			<item node="&lt;item node=&quot;...&quot;&gt;">Listenpunkt mit entsprechendem Bezeichner (<code>node=</code>)</item>

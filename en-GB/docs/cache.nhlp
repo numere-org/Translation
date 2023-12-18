@@ -17,7 +17,7 @@
 -->
 
 <article id="cache">
-	<title string="Tables (Caches)" idxkey="cache, table" />
+	<title string="Tables (Caches)" idxkey="table" />
 	<keywords>
 		<keyword>cache</keyword>
 		<keyword>rename</keyword>
@@ -110,7 +110,7 @@
 			<item node="TABLE().categoriesof({nCols})">Returns the categories of the selected categorial column(s) as a key-value list. The return value is an empty string, if the selected columns are not categorial</item>
 			<item node="TABLE().categorize({nCols},{sCategories})">Updates the categories in a categorial column (converts the column, if necessary). The number of new categories does not have to match the old number. Returns the categories of the selected categorial column(s) as a key-value list in case of success</item>
 			<item node="TABLE().cols">Returns the number of columns of the table</item>
-			<item node="TABLE().convert({nCols},sType)">Converts the column type of the columns indexed with <code>{nCols}</code> into the type <code>sType</code>. The new type can be specified either as <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. <code>"auto"</code> performs an auto-detect of the best fitting column type per column. If the conversion is successful, the new type is returned as a string, otherwise the string is empty. <code>"auto"</code> returns success always even if no column was actually converted. Conversion is only possible if the data used in the respective column can also be interpreted in the new type</item>
+			<item node="TABLE().convert({nCols},sType)">Converts the column type of the columns indexed with <code>{nCols}</code> into the type <code>sType</code>. The new type can be specified either as <code>"value"</code> (or a subtype thereof, see table below), <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. <code>"auto"</code> performs an auto-detect of the best fitting column type per column. If the conversion is successful, the new type is returned as a string, otherwise the string is empty. <code>"auto"</code> returns success always even if no column was actually converted. Conversion is only possible if the data used in the respective column can also be interpreted in the new type</item>
 			<item node="TABLE().countif({nCols},vals{})">Counts the elements in columns <code>nCols</code> that match the values in cluster <code>vals{}</code>. For each column and value in <code>vals{}</code>, a sum is returned ordered by the columns</item>
 			<item node="TABLE().covarof(nCol1,nCol2,nRows1,nRows2)">Calculates the covariance of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default</item>
 			<item node="TABLE().describe(sDesc)">Updates the description of the table or dataset to the contents of <code>sDesc</code>. The description can be used to describe the content of the dataset in words by documenting the source and the collection method</item>
@@ -132,9 +132,51 @@
 			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Calculates the <code>Spearman</code> correlation of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default. The Spearman correlation can be calculated from all variable types. The calculation of the corresponding ranks is case sensitive</item>
 			<item node="TABLE().shrink">Removes empty trailing cells and columns from the table to save memory. Empty cells and columns surrounded by valid data won't be removed</item>
 			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
-			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code>, <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
+			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code> (or a subtype thereof, see table below), <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> or <code>"category"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
 			<item node="TABLE().zscoreof(nCol,nRows)">Calculates the standardization of the values related to their deviation from the mean (also called z-score) in the column <code>nCol</code> for the rows <code>nRows</code>. The rows can be specified and correspond to the full dimension by default. Mean and standard deviation are always calculated related to the selected rows</item>
 		</list>
+		Subtypes of <code>"value"</code> are:
+		<table>
+			<tr>
+				<td><em>Subtype</em></td><td><em>Bitsize</em></td><td><em>Complex-valued</em></td><td><em>Signed</em></td><td><em>Floating point</em></td>
+			</tr>
+			<tr>
+				<td><code>"value"</code><br/>(<code>"value.cf64"</code>)</td><td>64</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td><code>"value.cf32"</code></td><td>32</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td><code>"value.f64"</code></td><td>64</td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td><code>"value.f32"</code></td><td>32</td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td><code>"value.i8"</code></td><td>8</td><td></td><td>&#x2713;</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui8"</code></td><td>8</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i16"</code></td><td>16</td><td></td><td>&#x2713;</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui16"</code></td><td>16</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i32"</code></td><td>32</td><td></td><td>&#x2713;</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui32"</code></td><td>32</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i64"</code></td><td>64</td><td></td><td>&#x2713;</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui64"</code></td><td>64</td><td></td><td></td><td></td>
+			</tr>
+		</table>
 		The following are defined as modifiers:
 		<list>
 			<item node=".rows">Applies, in combination with another method, this method line by line and returns a corresponding number of results (<code>.lines</code> is an alias)</item>

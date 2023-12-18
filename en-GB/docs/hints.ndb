@@ -26,7 +26,7 @@ Complex or often recurring inputs may be outsourced to scripts or to procedures 
 The settings are located within the "Options" entry under the "Tools" menu.
 NumeRe can be configured via "set" command. Typing "help set" into the command line shows a list of all possible settings, while the command "list -settings" shows the current configuration.
 You may use your data rows just like the columns of a table calculation. But keep in mind that you cannot overwrite the contents of "data()".
-The command "new CACHE()" generates a new cache with the name CACHE. You can remove it completely via "remove CACHE()" and delte its content with "delete CACHE()". With "clear cache()" you can remove all caches and reset the memory.
+The command "new TABLE()" generates a new table with the name TABLE. You can remove it completely via "remove TABLE()" and delte its content with "delete TABLE()". With "clear -memory" you can remove all tables and reset the memory.
 Functions can be fitted to data rows using the commands "fit" and "fitw". The documentation within "help fit" provides some hints. The results of the final fit will be saved to "<savepath>/numerefit.log" and the resulting fit-function will be defined as "Fit(x)" or "Fitw(x)", respectively.
 Numerical and string variables will be recognized automatically depending on their assigned value. If the case the value is ambiguous, the variables will be identified as numericals.
 For viewing special image formats, NumeRe can be linked to an image viewer. You'll find additional information in "help viewer".
@@ -39,7 +39,7 @@ The NumeRe keyword search tool is a quite powerful if you're searching for a fun
 The commands "help idx" or "help index" show a list of all entries within the NumeRe documentation.
 Additional information about commands and functions can be found in the NumeRe online reference: <https://sites.google.com/site/numereframework/onlinereferenz/>
 Trivia: "NumeRe" stands for "Numerische Rechnungen" (meaning "numerical calculations"). "Numere" is also the vocative singular of the latin word "numerus", which refers to number or quantity.
-The cache has an automatic backup function, which will load the last backup automatically at startup. This is also true for custom generated caches.
+Tables have an automatic backup function, which will load the last backup automatically at startup.
 All entries to the NumeRe console and all errors will be protocolled in the file "<>/numere.log". A simplified version of the entry history is located at the bottom right of the screen.
 Have you seen the NumeRe documentation in PDF format? You'll find it within the subdirectory "docs" in the root path or via the link in the start menu.
 # Advanced
@@ -49,7 +49,7 @@ Data rows can be Fourier-transformed by typing "fft". The command "help fft" con
 Using the command "datagrid" allows you to create data grids (2D data sets) out of data sets or calculate them from function values. See "help datagrid" for further information.
 You can install plugins and procedures with the command "install" directly from scripts. Typing "help install" provides further information. Some corresponding scripts should be located in the subdirectory "scripts".
 You can prompt for an input during the execution of a script or a procedure by using the expression "??". See "help ??" for further details.
-By entering "edit CACHE()" a cache may be edited in the table editor. Here data copied from other sources may be inserted.
+By entering "edit TABLE()" a table may be edited in the table editor. Here data copied from other sources may be inserted.
 Results of functions and commands, which simultaneously return multiple values or strings, can either be assigned to data objects or to "temporary columns" ("{x,y,z,...}" or "{str1,str2,str3,...}", respectively).
 The command "matop" allows for advanced matrix operations (see "help matop" for further information). Determinants, Invertion and special matrices are also possible.
 Intersection with the x-axis and extremal positions can be determined via the commands "zeroes" and "extrema" respectively. See "help zeroes" and "help extrema" for additional information.

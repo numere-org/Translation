@@ -62,7 +62,7 @@
 		Die folgenden Dateitypen können importiert werden:
 		<list>
 			<item node="NumeRe-Datenfile<br/>  *.ndat">Dateiformat: <code>NDAT</code><br/>NumeRe-eigenes, binäres Dateiformat, das die Präzision und die Datentypen erhält und zusätzlich schneller zu laden und zu schreiben ist</item>
-			<item node="Textdateien<br/>  *.txt, *.dat</item>">Dateiformat: <code>TXT</code><br/>Tabellarische Textdateien, die Leerzeichen- oder Tabulatorgetrennt sein können</item>
+			<item node="Textdateien<br/>  *.txt, *.dat">Dateiformat: <code>TXT</code><br/>Tabellarische Textdateien, die Leerzeichen- oder Tabulatorgetrennt sein können</item>
 			<item node="Comma-Separated-Values<br/>  *.csv">Dateiformat: <code>CSV</code><br/>Tabellarische Textdateien, deren Spalten meist mit Kommas oder Semikola getrennt sind</item>
 			<item node="Spreadsheets<br/>  *.xls, *.xlsx, *.ods">Dateiformat: <code>XLS</code>, <code>XLSX</code> oder <code>ODS</code><br/>Tabellarische Dateien, die von Microsoft Excel(R) oder OpenOffice Calc erzeugt wurden</item>
 			<item node="Igor-Binary-Waves<br/>  *.ibw">Dateiformat: <code>IBW</code><br/>Ein binäres Dateiformat, das von Wavemetrics Igor Pro(R) erzeugt wird</item>
@@ -70,6 +70,7 @@
 			<item node="JCAMP-DX-Dateien<br/>  *.jdx, *.dx, *.jcm">Dateiformat: <code>JDX</code><br/>Spektrographie-Datensätze, die nach dem JCAMP-DX-Standard erzeugt wurden</item>
 			<item node="MetroPro-Dateien<br/>  *.dat">Dateiformat: <code>ZYGO</code><br/>Datensätze, die von Zygo MetroPro(R) erzeugt werden und Interferogramme enthalten</item>
 		</list>
+		Manche Dateitypen definieren für einzelne Spalten dedizierte <code>"value"</code>-<a href="nhlp://table?frame=new">Subtypen</a>. Diese werden soweit möglich beibehalten.
 		Beim Speichern von Datensätzen wird vorzugsweise in das NumeRe-eigene NumeRe-Datenfile-Format (<code>*.ndat</code>) gespeichert.
 		<code>FILENAME</code> bezeichnet den Dateinamen der geladenen oder gespeicherten Datei. So lange die Datei in den eingestellen Speicherordner gespeichert, bzw. aus dem eingestellten Import-Ordner geladen werden soll, ist dabei die Angabe eines Pfades nicht nötig. Soll der Dateipfad ein oder mehrere Leerstellen enthalten, ist er mit Anführungszeichen zu umschließen.
 		Es können auch die Platzhalter für die Standardpfade sowie Wildcards (<code>*</code> und <code>?</code>) verwendet werden. Siehe <a href="nhlp://explorer?frame=new">help explorer</a> für weitere Details zu den Platzhaltern.
@@ -88,6 +89,6 @@
 			export table(:,1:2) -file=table.tex
 			Speichern abgeschlossen. Es wurde ein Tabelle mit 2088 Elementen erfolgreich in die Datei "&SAVEPATH&/table.tex" geschrieben.
 		</example>
-		<em>Siehe auch:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://cache?frame=self">help cache</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
+		<em>Siehe auch:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://table?frame=self">help table</a> und <a href="nhlp://explorer?frame=self">help explorer</a>
 	</contents>
 </article>
