@@ -495,7 +495,7 @@ var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables
 vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von Spalten haben~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
-vectshift(MAT,n,dim)~Verschiebt alle Spalten einer Matrix um n Positionen in Richtung der Matrixdimension dim (wählen Sie 0 für Zeile und 1 für Spalte)~vectshift colshift rowshift columnshift shift col row colwise rowwise schieben~vectshift(
+vectshift(MAT,n,dim)~Verschiebt alle Zeilen/Spalten einer Matrix um n Positionen in Richtung der Matrixdimension dim (wählen Sie 0 für Zeile und 1 für Spalte)~vectshift colshift rowshift columnshift shift col row colwise rowwise schieben~vectshift(
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Gibt die Nummer des Wochentages des übergebenen Zeitwertes tTime zurück~weekday() day of week calendar date time datum kalendar~weekday(
