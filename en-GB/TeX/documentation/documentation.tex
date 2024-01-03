@@ -1,0 +1,224 @@
+\documentclass[DIV=17, parskip=half]{scrreprt}
+% Main file for the documentation file D:/Software/NumeRe/scripts/cheat_sheet.nscr
+\usepackage[headsepline]{scrlayer-scrpage}% activates pagestyle scrheadings automatically
+%\usepackage[ngerman]{babel}
+\input{D:/Software/NumeRe/save/docs/numereheader}
+\definecolor{cLink}{RGB}{0,0,128}
+\usepackage[linkcolor=cLink,colorlinks=true]{hyperref}
+\automark{chapter}
+
+\ohead{\headmark}
+\chead{}
+\ihead{NumeRe: Documentation}
+\ifoot{Free numerical software}
+\ofoot{Get it at: www.numere.org}
+\pagestyle{scrheadings}
+\subject{NumeRe: Framework for Numerical Computations}
+\title{Documentation}
+\subtitle{NumeRe v1.1.5 >>Cherenkov<<}
+\date{}
+\author{\small Provided to you by NumeRe.org}
+\begin{document}
+    \maketitle
+% 	\begin{abstract}
+% 		\textbf{Even the longest way begins with the first step} once said Lao-Tse, Chinese philosopher in the 6th century before Christ. And of course this statement is necessarily true. But what does it say?
+% 
+% 		In essence, it is about starting in the first place, even with difficult topics. And because we know that it can be really difficult to find the direction for the first step, we help you here with the most important basics in NumeRe.
+% 
+% 		For all topics it can be helpful to have a look at the NumeRe documentation, which you can display with [F1], the context menu or with the command help. We would also like to recommend the search function in the toolbar if you get stuck.
+% 	\end{abstract}
+	\tableofcontents
+	\addsec{Copyrights}
+		\paragraph{Copyright \copyright\ 2013-2023, Erik H\"anel \emph{et al.}} 
+		NumeRe has been licensed under the terms of the GNU General Public License v3, available at \href{http://www.gnu.org/licenses/gpl.html}{$\Rightarrow$ GPL}
+		\paragraph{External Dependencies and Licenses:}
+		\begin{itemize}
+			\item \verb!muParser! \copyright\ Ingo Berg [MIT]
+			\href{https://beltoforion.de/en/muparser/}{$\Rightarrow$ muParser}
+
+			\item \verb!MathGL! \copyright\ Alexey A. Balakin [GPL]
+			\href{https://mathgl.sourceforge.net/}{$\Rightarrow$ MathGL}
+
+			\item \verb!GSL! \copyright\ M. Galassi et al. [GPL]
+			\href{https://www.gnu.org/software/gsl/}{$\Rightarrow$ GNU Scientific Library}
+
+			\item \verb!Boost! \copyright\ Joe Coder [Boost]
+			\href{https://www.boost.org/}{$\Rightarrow$ Boost C++ Libraries}
+
+			\item \verb!Eigen! \copyright\ Gael Guennebaud, Benoit Jacob [MPL v2]
+			\href{https://eigen.tuxfamily.org/}{$\Rightarrow$ Eigen}
+
+			\item \verb!curl! \copyright\ Daniel Stenberg [curl]
+			\href{https://curl.se/libcurl/}{$\Rightarrow$ cURL}
+
+			\item \verb!libNoise! \copyright\ Jason Bevins [LGPL]
+			\href{https://libnoise.sourceforge.net/}{$\Rightarrow$ libNoise}
+
+			\item \verb!fast_float! \copyright\ The \verb!fast_float! authors [MIT]
+			\href{https://github.com/fastfloat/fast_float}{$\Rightarrow$ fast\_float}
+
+			\item \verb!chrono::date! \copyright\ Howard Hinnant [MIT]
+			\href{https://github.com/HowardHinnant/date}{$\Rightarrow$ chrono::date}
+
+			\item \verb!Info-ZIP! \copyright\ Mark Adler et al. [BSD]
+			\href{https://infozip.sourceforge.net/}{$\Rightarrow$ Info-ZIP}
+
+			\item \verb!dtl - Diff Template Library! \copyright\ Tatsuhiko Kubo [BSD]
+			\href{https://github.com/cubicdaiya/dtl}{$\Rightarrow$ dtl}
+
+			\item \verb!TinyXML-2! \copyright\ Lee Thomason [zLib]
+			\href{https://github.com/leethomason/tinyxml2}{$\Rightarrow$ TinyXML-2}
+
+			\item \verb!BasicExcel! \copyright\ Yap Chun Wei [Public domain]
+			\href{https://www.codeproject.com/Articles/13852/BasicExcel-A-Class-to-Read-and-Write-to-Microsoft}{$\Rightarrow$ BasicExcel}
+
+			\item \verb!wxWidgets! \copyright\ wxWidgets Team [wxWindows]
+			\href{https://www.wxwidgets.org/}{$\Rightarrow$ wxWidgets}
+
+			\item \verb!Feather-Icons! \copyright\ Cole Bemis [MIT]
+			\href{https://feathericons.com/}{$\Rightarrow$ Feather-Icons}
+
+			\item \verb!QR Code Generator Library! \copyright\ Project Nayuki [MIT]
+			\href{https://www.nayuki.io/page/qr-code-generator-library}{$\Rightarrow$ QR Code Generator Library}
+		\end{itemize}
+	\chapter{Basics}
+		Get to know the basics of NumeRe here. If you are completely new here, you will also find a section on the first steps in this chapter. In it, we show you how to use NumeRe using simple lines of code.
+		\input{articles/main.tex}
+		\input{articles/firststeps.tex}
+		\input{articles/syntax.tex}
+		\input{articles/expression.tex}
+		\input{articles/functions.tex}
+		\input{articles/find.tex}
+		\input{articles/list.tex}
+		\input{articles/get.tex}
+		\input{articles/set.tex}
+		\input{articles/quit.tex}
+	
+	\chapter{Interface \& Editor}
+		This chapter gives you an overview of the graphical user interface, especially the editor. Learn how to write and optimize NumeRe code as efficiently as possible. You will also find a description of the debugger, which will help you with problems in the code.
+		\input{articles/editor.tex}
+		\input{articles/codeanalyzer.tex}
+		\input{articles/refactoring.tex}
+		\input{articles/versioncontrol.tex}
+		\input{articles/console.tex}
+		\input{articles/debugger.tex}
+		\input{articles/filetree.tex}
+		\input{articles/symboltree.tex}
+		\input{articles/graphviewer.tex}
+		\input{articles/history.tex}
+		
+	\chapter{Variables \& Data Structures}
+		Get to know the central data structures of NumeRe and their interactions. Central to this are the tables with their specialized methods, which simplify data management and processing many times over.
+		\input{articles/variables.tex}
+		\input{articles/string.tex}
+		\input{articles/rekurs_oprt.tex}
+		\input{articles/multiresult.tex}
+		\input{articles/cache.tex}
+		\input{articles/cluster.tex}
+		\input{articles/new.tex}
+		\input{articles/show.tex}
+	
+	\chapter{File System}
+		This chapter gives you an insight into the file system, how data can be loaded and written, how you can read in any files, how files can be copied and moved automatically and how you can open archive files.
+		\input{articles/data.tex}
+		\input{articles/edit.tex}
+		\input{articles/load_save.tex}
+		\input{articles/read_write.tex}
+		\input{articles/data_and_fileops.tex}
+		\input{articles/explorer.tex}
+		\input{articles/pack.tex}
+	
+	\chapter{Plotting}
+		From simple line and dot plots to three-dimensional vector plots, NumeRe has a considerable number of different styles and variants from which you can choose for your data. Learn here what these are and how you can access them.
+		\input{articles/plot.tex}
+		\input{articles/plot3d.tex}
+		\input{articles/2dplots.tex}
+		\input{articles/3dplots.tex}
+		\input{articles/drawing.tex}
+		\input{articles/3ddrawing.tex}
+		\input{articles/gradient.tex}
+		\input{articles/gradient3d.tex}
+		\input{articles/vect.tex}
+		\input{articles/vect3d.tex}
+		\input{articles/compose.tex}
+		\input{articles/subplot.tex}
+		\input{articles/plotoptions.tex}
+		\input{articles/tickformatting.tex}
+		\input{articles/color.tex}
+		\input{articles/coords.tex}
+		\input{articles/linestyles.tex}
+	
+	\chapter{Data Processing}
+		A significant proportion of the functionalities are those that focus on data processing. This includes sorting, creating histograms, audio data processing, Fourier transformations, fitting and much more.
+		\input{articles/sort.tex}
+		\input{articles/stats.tex}
+		\input{articles/histogramm.tex}
+		\input{articles/units.tex}
+		\input{articles/audio.tex}
+		\input{articles/imread.tex}
+		\input{articles/eval.tex}
+		\input{articles/datagrid.tex}
+		\input{articles/datamodification.tex}
+		\input{articles/regularize.tex}
+		\input{articles/rotate.tex}
+		\input{articles/detect.tex}
+		\input{articles/extrema.tex}
+		\input{articles/zeroes.tex}
+		\input{articles/fft.tex}
+		\input{articles/stfa.tex}
+		\input{articles/fwt.tex}
+		\input{articles/fitting.tex}
+		\input{articles/fitting_restrictions.tex}
+		\input{articles/fitting_chimap.tex}
+		\input{articles/pulse.tex}
+		\input{articles/random.tex}
+	
+	\chapter{Mathematical Operations}
+		This chapter deals with more extensive mathematical operations such as integrating, differentiating, matrix operations and similar.
+		\input{articles/integrate.tex}
+		\input{articles/diff.tex}
+		\input{articles/taylor.tex}
+		\input{articles/spline.tex}
+		\input{articles/matop.tex}
+		\input{articles/matop_functions.tex}
+		\input{articles/pso.tex}
+		\input{articles/odesolve.tex}
+		
+	\chapter{Control Flow}
+		Understanding the control flow blocks is essential on the path to advanced automation. Get to know the six central control flow blocks here.
+		\input{articles/flow_ctrl.tex}
+		\input{articles/if_cond.tex}
+		\input{articles/for_loop.tex}
+		\input{articles/while_loop.tex}
+		\input{articles/switch.tex}
+		\input{articles/try_catch.tex}
+		\input{articles/abort.tex}
+	
+	\chapter{Automation}
+		From simple scripts to complex procedures, you will find everything your heart desires in terms of automation. You will also learn how to define file-specific constants and how to bundle your solutions into packages and plugins so that others can use them.
+		\input{articles/script.tex}
+		\input{articles/prompt.tex}
+		\input{articles/define.tex}
+		\input{articles/declare.tex}
+		\input{articles/include.tex}
+		\input{articles/procedure.tex}
+		\input{articles/procedure_commands.tex}
+		\input{articles/install.tex}
+		\input{articles/plugins.tex}
+		\input{articles/progress.tex}
+	
+	\chapter{Graphical User Interfaces}
+		If you want to put the finishing touches to your automations, the graphical user interfaces are just the thing for you. Use simple dialogs for quick user interactions and complex window layouts for the complete look 'n feel of entire applications.
+		\input{articles/dialog.tex}
+		\input{articles/window.tex}
+		
+	\chapter{Miscellaneous}
+		In this chapter you will find additional commands and functionalities that have not yet been covered in the other chapters.
+		\input{articles/url.tex}
+		\input{articles/execute.tex}
+		\input{articles/additionalcommands.tex}
+		\input{articles/language.tex}
+		\input{articles/latex.tex}
+		\input{articles/documentation.tex}
+\end{document}
+

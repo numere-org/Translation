@@ -68,7 +68,7 @@
 		</codeblock>
 		<example desc="Automatisches Füllen der Tabellenköpfe in einer FOR-Schleife, wobei die Nummer der aktuellen Spalte auf mindestens zwei Zeichen ergänzt werden soll:" type="verbatim">
 			|FOR&gt; [...]
-			|FOR&gt; table(#,i) = "Spalte_" + #~i		(wird ggf. eine 0 ergänzen)
+			|FOR&gt; table(#,i) = "Spalte_" + #~i		## (wird ggf. eine 0 ergänzen)
 			|FOR&gt; [...]
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://explorer?frame=self">help explorer</a> und <a href="nhlp://cluster?frame=self">help cluster</a>

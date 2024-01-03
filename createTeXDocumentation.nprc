@@ -1,0 +1,180 @@
+#***************************************************************************************************
+ * NUMERE-PROZEDUR: $createTeXDocumentation()
+ * =================================================================================================
+ * Hinzugefügt: 2024-01-03, um 12:33:37 *#
+
+procedure $createTeXDocumentation() :: explicit mask
+	##~ Füge hier deine Kommandos und Ausdrücke ein.
+	str sOrigLangId = getuilang()
+	copy "<this>/common/*" -target="<>/lang/" -all
+	
+	namespace thisfile
+	
+	## Create German Documentation
+	$createDocumentationFiles("de-DE");
+	
+	## Create English documentation
+	$createDocumentationFiles("en-GB");
+	
+	## Reset original state
+	copy "<this>/" + sOrigLangId + "/docs/*" -target="<>/docs/" -all
+	print "All PDF documentations were created."
+	
+	return void;
+endprocedure
+
+
+procedure $createDocumentationFiles(_sLangId) :: explicit
+	print "Creating PDF documentation for " + _sLangId + " files ..."
+	copy "<this>/" + _sLangId + "/docs/*" -target="<>/docs/" -all
+	
+	help "abort" -tex
+	help "about" -tex
+	help "analyzer" -tex
+	help "append" -tex
+	help "audio" -tex
+	help "chimap" -tex
+	help "clear" -tex
+	help "cluster" -tex
+	help "colors" -tex
+	help "compose" -tex
+	help "console" -tex
+	help "cont" -tex
+	help "cont3d" -tex
+	help "coords" -tex
+	help "data" -tex
+	help "datagrid" -tex
+	help "debugger" -tex
+	help "declare" -tex
+	help "define" -tex
+	help "detect" -tex
+	help "dialog" -tex
+	help "diff" -tex
+	help "documentation" -tex
+	help "draw" -tex
+	help "draw3d" -tex
+	help "edit" -tex
+	help "editor" -tex
+	help "eval" -tex
+	help "execute" -tex
+	help "explorer" -tex
+	help "expression" -tex
+	help "extrema" -tex
+	help "fft" -tex
+	help "filetree" -tex
+	help "find" -tex
+	help "firststeps" -tex
+	help "fit" -tex
+	help "functions" -tex
+	help "fwt" -tex
+	help "get" -tex
+	help "grad" -tex
+	help "grad3d" -tex
+	help "graphviewer" -tex
+	help "gridrot" -tex
+	help "hist" -tex
+	help "history" -tex
+	help "implot" -tex
+	help "include" -tex
+	help "install" -tex
+	help "integrate" -tex
+	help "language" -tex
+	help "latex" -tex
+	help "layout" -tex
+	help "linestyles" -tex
+	help "list" -tex
+	help "listbrowser" -tex
+	help "matfunc" -tex
+	help "matop" -tex
+	help "multiresult" -tex
+	help "new" -tex
+	help "numere" -tex
+	help "operator" -tex
+	help "pack" -tex
+	help "plot" -tex
+	help "plot3d" -tex
+	help "plugin" -tex
+	help "proccmd" -tex
+	help "progress" -tex
+	help "prompt" -tex
+	help "pso" -tex
+	help "pulse" -tex
+	help "quit" -tex
+	help "random" -tex
+	help "read" -tex
+	help "refactoring" -tex
+	help "regularize" -tex
+	help "resample" -tex
+	help "restrict" -tex
+	help "revision" -tex
+	help "script" -tex
+	help "set" -tex
+	help "show" -tex
+	help "sort" -tex
+	help "spline" -tex
+	help "stats" -tex
+	help "stfa" -tex
+	help "string" -tex
+	help "subplot" -tex
+	help "symboltree" -tex
+	help "syntax" -tex
+	help "table" -tex
+	help "taylor" -tex
+	help "ticks" -tex
+	help "unit" -tex
+	help "url" -tex
+	help "variables" -tex
+	help "vect" -tex
+	help "vect3d" -tex
+	help "zeroes" -tex
+	help "for" -tex
+	help "flowctrl" -tex
+	help "if" -tex
+	help "while" -tex
+	help "switch" -tex
+	help "try" -tex
+	help "odesolve" -tex
+	help "plotoptions" -tex
+	help "procedure" -tex
+	
+	move "<>/docs/texexport/*.tex" -target="<this>/" + _sLangId + "/TeX/documentation/articles/*" -all
+	
+	print "Articles created. Running LaTeX ..."
+	$thisfile~runLaTeX(_sLangId);
+	
+	return void;
+endprocedure
+
+
+procedure $runLaTeX(_sLangId) :: explicit
+	str sRootPath = "<this>/" + _sLangId + "/TeX/documentation", sVersion = getkeyval(getversioninfo(), "Version")
+	cst mainFile{}
+	var nPos
+	
+	## Prepare version number
+	if (sVersion.fnd(" (x64)"))
+		sVersion = sVersion.sub(1, sVersion.fnd(" (x64)")-1);
+	endif
+	
+	if (sVersion.last == "\"")
+		sVersion = replace(sVersion, sVersion.fnd("\""), 1, ">>");
+		sVersion = replace(sVersion, sVersion.fnd("\""), 1, "<<");
+	endif
+	
+	## Update version number
+	mainFile{} = read sRootPath + "/documentation.tex" -keepdim;
+	nPos = locate(mainFile{}, "\ subtitle{", 2);
+	mainFile{nPos} = "\ subtitle{NumeRe v" + sVersion + "}";
+	write mainFile{} -set file=sRootPath + "/documentation.tex" -keepdim nq
+	
+	## Execute the XeLaTeX compiler
+	execute "xelatex.exe" -set params=sRootPath + "/documentation.tex -interaction=nonstopmode" wait wp=sRootPath
+	execute "xelatex.exe" -set params=sRootPath + "/documentation.tex" wait wp=sRootPath
+	
+	return void;
+endprocedure
+
+#**Ende der Datei
+ * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * https://www.numere.org/
+ **************************************************************************************************#

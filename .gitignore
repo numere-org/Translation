@@ -1,0 +1,9 @@
+*.dat
+*.log
+*.aux
+*.toc
+*.out
+*.pdf
+*.revisions
+/de-DE/TeX/documentation/articles/*
+/en-GB/TeX/documentation/articles/*
