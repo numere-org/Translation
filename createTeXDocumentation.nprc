@@ -3,6 +3,9 @@
  * =================================================================================================
  * Hinzugefügt: 2024-01-03, um 12:33:37 *#
 
+##! \procedure createTeXDocumentation
+##! Create the PDF documention from the documentation articles using the !!-tex!! export 
+##! functionality and the XeLaTeX compiler.
 procedure $createTeXDocumentation() :: explicit mask
 	##~ Füge hier deine Kommandos und Ausdrücke ein.
 	str sOrigLangId = getuilang()
@@ -24,6 +27,10 @@ procedure $createTeXDocumentation() :: explicit mask
 endprocedure
 
 
+##! \procedure createDocumentationFiles
+##! Create the articles and run the XeLaTeX compiler on them.
+##!
+##! \param _sLangId  The language ID
 procedure $createDocumentationFiles(_sLangId) :: explicit
 	print "Creating PDF documentation for " + _sLangId + " files ..."
 	copy "<this>/" + _sLangId + "/docs/*" -target="<>/docs/" -all
@@ -146,6 +153,10 @@ procedure $createDocumentationFiles(_sLangId) :: explicit
 endprocedure
 
 
+##! \procedure runLaTeX
+##! Run the XeLaTeX compiler
+##!
+##! \param _sLangId  The current language ID
 procedure $runLaTeX(_sLangId) :: explicit
 	str sRootPath = "<this>/" + _sLangId + "/TeX/documentation", sVersion = getkeyval(getversioninfo(), "Version")
 	cst mainFile{}

@@ -69,7 +69,7 @@
 		</codeblock>
 		<example desc="Automatic filling of a table's heads in a FOR loop, where the number of the current loop shall be extended to at least two characters:" type="verbatim">
 			|FOR&gt; [...]
-			|FOR&gt; table(#,i) = "Column_" + #~i		## (will append a 0 if applicable)
+			|FOR&gt; table(#,i) = "Column_" + #~i  ## (will append a 0 if applicable)
 			|FOR&gt; [...]
 		</example>
 		<em>See also:</em> <a href="nhlp://procedure?frame=self">help procedure</a>, <a href="nhlp://explorer?frame=self">help explorer</a> and <a href="nhlp://cluster?frame=new">help cluster</a>
