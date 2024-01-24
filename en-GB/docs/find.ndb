@@ -104,7 +104,7 @@ datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
 datetimepicker~Inserts a date-and-time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
-Debugger~Gathers additional information at unexpected errors in procedures~fehlersuche debugging error bugs throw~help debugger
+Debugger~Enables error detection via code inspection during runtime~fehlersuche debugging error bugs throw breakpoint conditional~help debugger
 declare~Declares a file-specific constant in EX for use in the current file~define macro makro filestatic constant konstante~help declare
 dectobase(sBase,nDecVal)~Converts the number nDecVal from the decimal system to the base and returns the result as a string~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine~help define
