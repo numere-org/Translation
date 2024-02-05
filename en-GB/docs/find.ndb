@@ -433,7 +433,7 @@ swap~Swaps the contents of two tables~austauschen exchange content table()~help 
 switch (EX)~Starts the definition of a switch condition, see "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 tab~Defines the local tables in a procedure~procedure local tables~help str
 TAB().aliasof(STR)~Converts the current table into an alias of the passed table~aliasof() reference referenz pointer~.aliasof(
-TAB().anovaof(n,m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
+TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
 TAB().binsof(n,b)~Calculates a simple histogram of the data in the column~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Returns the categories of the columns~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Updates the categories of a category column~categorize() category factor~.categorize(
