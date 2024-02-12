@@ -215,7 +215,7 @@
 			<item node="*label=LABEL">Das Label der *-Achse auf LABEL setzen. Lange Labels (mit Leerzeichen) können mit umschließenden Anführungszeichen angegeben werden</item>
 			<item node="*log/no*log">*-Achse logarithmisch skalieren</item>
 			<item node="*scale=WERT">*-Achsenskalierungsfaktor WERT festlegen</item>
-			<item node="*ticklabels=LABELS">Selbstdefinierte *-Achsenskalierung festlegen. Die Skaleneinheiten werden äquidistant verteilt. Die LABELS sind als Zeichenkette anzugeben, wobei die Skalenwerte durch <code>"\n"</code> voneinander getrennt sein müssen.</item>
+			<item node="*ticklabels={LABELS}">Selbstdefinierte *-Achsenskalierung durch eine Liste von Zeichenketten festlegen. Die Skaleneinheiten werden äquidistant verteilt. Aus Günden der Abwärtskompatibiltät können alle Labels auch als eine einzige Zeichenkette angegeben werden, wobei die Skalenwerte durch <code>"\n"</code> voneinander getrennt sein müssen.</item>
 			<item node="*ticks=FORMAT">Die Formatierung der *-Skalenbeschriftung auf FORMAT setzen. Siehe auch <a href="nhlp://ticks?frame=new">help ticks</a></item>
 			<item node="xerrorbars/<br/>  noxerrorbars">Fehlerbalken in <expr>x</expr>-Richtung anzeigen/deaktivieren. Benötigt 3 Spalten: <expr>x, y, delta_x</expr></item>
 			<item node="yerrorbars/<br/>  noyerrorbars">Fehlerbalken in <expr>y</expr>-Richtung anzeigen/deaktivieren. Benötigt 3 Spalten: <expr>x, y, delta_y</expr></item>

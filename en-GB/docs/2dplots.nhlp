@@ -69,7 +69,7 @@
 			<item node="colorrange=C1:C2">Set the interval for the colorbar to [C1,C2]</item>
 			<item node="colorscheme=SCHEME">Choose the coloring scheme SCHEME. Some predefined schemes are <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> and <code>map</code>. See <a href="nhlp://colors?frame=new">help colors</a> for additional schemes</item>
 			<item node="cscale=VALUE">Define the scaling factor VALUE of the colorbar</item>
-			<item node="cticklabels=LABELS">Pass custom ticks for the colorbar. The ticks will be distributed equidistantly. The LABELS have to be entered as a string, in which the single ticks are separated with "\\n"</item>
+			<item node="cticklabels={LABELS}">Pass custom ticks for the colorbar via a list of strings. The ticks will be distributed equidistantly. For compatibility reasons, one can pass all labels also as a single string, in which the single ticks are separated with <code>"\n"</code></item>
 			<item node="cticks=FORMAT">Set the formatting of the tick labels to FORMAT. See also <a href="nhlp://ticks?frame=new">help ticks</a></item>
 			<item node="fcont=NUM/<br/>  nofcont">Set the contour filling on/off. The number of contour lines may be modified using the optional NUM</item>
 			<item node="lcont=NUM/<br/>  nolcont">Set the labels of the contours on/off. The number of contour lines may be modified using the optional NUM</item>

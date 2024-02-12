@@ -215,7 +215,7 @@
 			<item node="*label=LABEL">Set the label of the * axis to LABEL. Labels containing whitespaces have to be passed inside of quotation marks</item>
 			<item node="*log/no*log">Use logarithmic scale for the * axis</item>
 			<item node="*scale=VALUE">Set the axis scale for the * axis to VALUE</item>
-			<item node="*ticklabels=LABELS">Pass custom defined axis ticks for the * axis. The ticks will be distributed equidistantly. The LABELS have to be passed as strings separated with <code>"\n"</code>.</item>
+			<item node="*ticklabels={LABELS}">Pass custom defined axis ticks for the * axis via a list of strings. The ticks will be distributed equidistantly. For compatibility reasons, one can pass all labels also as a single string, in which the single ticks are separated with <code>"\n"</code>.</item>
 			<item node="*ticks=FORMAT">Set the ticks format of the * axis to FORMAT. See also <a href="nhlp://ticks?frame=new">help ticks</a></item>
 			<item node="xerrorbars/<br/>  noxerrorbars">(De-)activates errorbars in <expr>x</expr> direction. Needs three columns: <expr>x, y, delta_x</expr></item>
 			<item node="yerrorbars/<br/>  noyerrorbars">(De-)activates errorbars in <expr>y</expr> direction. Needs three columns: <expr>x, y, delta_y</expr></item>
