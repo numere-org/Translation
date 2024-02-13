@@ -1,0 +1,52 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="audio">
+	<title string="Audiodateien erzeugen und einlesen" idxkey="audio, audioread, seek" />
+	<keywords>
+		<keyword>audio</keyword>
+		<keyword>wav</keyword>
+		<keyword>pcm</keyword>
+		<keyword>sound</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			audio TABLE()
+			audio TABLE() -set samples=SAMPLES ...\n
+			{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
+			{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()\n
+			nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav
+			nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()
+		</syntax>
+		NumeRe peut générer des fichiers audio au format PCM wave à partir de jeux de données, qui peuvent être lus dans n'importe quel lecteur audio. La commande <code>audio</code> peut être utilisée à cet effet. NumeRe peut générer les fichiers audio en mono ou en stéréo, selon que 1 ou 2 colonnes sont passées à la commande<codeblock>:audio DATA(I1:I2,J1:J2)</codeblock>Il n'est <em>pas</em> possible de spécifier <expr>les valeurs x</expr> ou l'axe temporel du fichier audio ; les échantillons du fichier audio doivent toujours être équidistants. Utilise la commande <code>regularize</code> pour calculer des échantillons équidistants à partir d'enregistrements non équidistants. Les échantillons sont à comprendre comme un groupe d'un point de référence par canal.
+		Le fichier audio généré est automatiquement normalisé à la valeur maximale de l'ensemble de données.
+		Par défaut, les fichiers audio sont générés avec un taux d'échantillonnage de 44,1 kHz. Si cela n'est pas souhaité, le paramètre <code>samples=SAMPLERATE</code> peut être passé à la commande avec le SAMPLERATE souhaité sous forme d'un nombre naturel.
+		Par défaut, NumeRe utilise <code>&lt;savepath&gt;/audiofile.wav</code> comme fichier de sortie. Cela peut être modifié à l'aide du paramètre <code>file=FILENAME</code>.
+		Pour lire des fichiers audio, la commande <code>audioread</code> peut être utilisée avec le nom du fichier comme expression. Si une table cible est également indiquée avec <code>target=TABLE()</code>, NumeRe tentera de charger le fichier entier en mémoire. Sinon, seules les métadonnées du fichier (nombre d'échantillons, canaux, fréquence d'échantillonnage et durée en secondes) seront chargées :
+		<codeblock>
+			{nSamples, nChannels, nSampleRate, fDurInSecs} = audioread PATH/TO/AUDIOFILE.wav
+			{i1, i2, j1, j2} = audioread PATH/TO/AUDIOFILE.wav -set target=TABLE()
+		</codeblock>
+		<em>Important</em>: les données audio peuvent nécessiter un grand nombre de points de données. Il est possible que le nombre d'échantillons ne puisse pas être traité par NumeRe. Pour économiser de la mémoire, les données audio sont chargées dans le<a href="nhlp://table?frame=new">sous-type</a> <code>"value.f32"</code>.
+		Dans le cas de fichiers très volumineux, il peut être préférable de ne lire que des extraits de ces fichiers. La commande <code>seek</code> permet de lire un extrait à partir d'une position POSITION et d'une longueur en échantillons LENGTH, en renvoyant le nombre d'échantillons lus<codeblock>:nSamples = seek POSITION, LENGTH -set file=PATH/TO/AUDIOFILE.wav target=TABLE()</codeblock>La table cible est par défaut <code>audiodata()</code>, si elle n'est pas spécifiée.
+		<example desc="Erzeugen der Audiodatei 'sin.wav' mit 16 kHz Samplerate und nur einem Channel, wobei die Samples in Spalte 2 in 'table()' vorliegen:">
+			table audio( :,2) -set samples=16'k file=sin.wav
+		</example>
+		<em>Voir aussi :</em> <a href="nhlp://regularize?frame=self">help regularize</a>
+	</contents>
+</article>

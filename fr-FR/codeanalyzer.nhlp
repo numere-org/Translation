@@ -1,0 +1,62 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2017  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="codeanalyzer">
+	<title string="Code-Analyzer" idxkey="analyzer" />
+	<keywords>
+		<keyword>codeana</keyword>
+		<keyword>analyzer</keyword>
+		<keyword>metrik</keyword>
+		<keyword>metric</keyword>
+		<keyword>LOC</keyword>
+		<keyword>cyclomat</keyword>
+		<keyword>complexit</keyword>
+		<keyword>zyklomat</keyword>
+		<keyword>komplexit</keyword>
+	</keywords>
+	<contents>
+		L'éditeur peut effectuer une analyse statique du code saisi. L'analyseur de code est activé avec l'option de menu correspondante ou avec <code>[Strg-Shift-A]</code> et affiche des messages à trois niveaux :
+		<list>
+			<item node="Hinweis (grau)">Ce sont des messages qui doivent servir à améliorer le style de programmation. Ils n'ont pas d'influence pertinente sur le déroulement du code.</item>
+			<item node="Warnung (gelb)">Les avertissements sont des points dans le code qui ne sont éventuellement pas voulus par l'utilisateur et qui devraient donc être examinés de plus près, par exemple une boucle sans fin ou des variables locales non utilisées.</item>
+			<item node="Fehler (rot)">Si un tel message apparaît, il convient d'en éliminer la cause, sinon il est fort probable qu'il s'arrête en cours d'exécution. Par exemple, une commande utilisée sans expression ou une procédure introuvable.</item>
+		</list>
+		En outre, des métriques de code telles que la complexité cyclomatique sont appliquées. 
+		<list>
+			<item node="Zyklomatische Komplexität">Cette métrique mesure le nombre de chemins indépendants que le flux de contrôle peut prendre dans un module, soit le nombre d'instructions <code>if</code>, <code>elseif</code>, <code>for</code> et <code>while</code> plus le nombre de fonctions <code>and()</code>, <code>or()</code> et <code>xor()</code> et le nombre d'opérateurs <code>&&</code>, <code>||</code> et <code>|||</code> + 1. Une indication est affichée pour une complexité supérieure à 15 et un avertissement pour une complexité supérieure à 20.</item>
+			<item node="Codezeilen">Il s'agit du nombre de lignes qui ne sont pas vides et qui ne se composent pas uniquement de commentaires, c'est-à-dire les lignes d'instructions et d'expressions proprement dites.</item>
+			<item node="Kommentardichte">La densité des commentaires est calculée en divisant le nombre de lignes contenant des commentaires (plusieurs commentaires sur une même ligne sont pris en compte) par le nombre de lignes de code (voir ci-dessus). Un code bien commenté a une densité de commentaires de 60 à 150 %.</item>
+		</list>
+		Les résultats des métriques sont comparés à des limites prédéfinies et, le cas échéant, un avertissement ou une remarque s'affiche :
+		<table>
+			<tr>
+				<td><em>Métrique</em></td><td><em>Limite inférieure</em></td><td><em>Barrière supérieure</em></td><td><em>Solution proposée</em></td>
+			</tr>
+			<tr>
+				<td>Complexité cyclique</td><td>---</td><td>15/20</td><td>Subdiviser le module en introduisant des procédures, car il risque d'être difficile à comprendre et à tester.</td>
+			</tr>
+			<tr>
+				<td>Lignes de code</td><td>---</td><td>100</td><td>Subdiviser le module en introduisant des procédures, car il est difficile de s'y retrouver à cause du nombre de lignes.</td>
+			</tr>
+			<tr>
+				<td>Densité des commentaires</td><td>50 %</td><td>150 %</td><td>Continuer à commenter le module ou vérifier la présence de code commenté, qui est une cause fréquente de densité élevée de commentaires.</td>
+			</tr>
+		</table>
+		L'analyseur de code peut également être configuré via les paramètres du programme.
+	</contents>
+</article>

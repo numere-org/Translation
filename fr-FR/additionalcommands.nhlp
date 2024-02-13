@@ -1,0 +1,97 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2017  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="additionalcommands">
+	<title string="Zusätzliche Kommandos" idxkey="about, hline, warn, close, assert, clc, qrcode" />
+	<keywords>
+		<keyword>about</keyword>
+		<keyword>hline</keyword>
+		<keyword>credits</keyword>
+		<keyword>info</keyword>
+		<keyword>single</keyword>
+		<keyword>warn</keyword>
+		<keyword>close</keyword>
+		<keyword>assert</keyword>
+		<keyword>clc</keyword>
+		<keyword>qrcode</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			about\n
+			hline
+			hline -single\n
+			warn MESSAGE\n
+			close -PAR\n
+			assert EXPRESSION\n
+			clc\n
+			qrcode STR
+			qrcode STR -set file=FILENAME ...
+		</syntax>
+		Outre les commandes plutôt orientées vers l'évaluation, NumeRe maîtrise quelques autres commandes qui peuvent être attribuées à l'interface utilisateur pure. Il s'agit entre autres des commandes <a href="nhlp://help?frame=new"><code>help</code></a> et <a href="nhlp://find?frame=new"><code>find</code></a>ainsi que les commandes suivantes :
+		<list>
+			<item node="about">Cette commande (et les synonymes <code>credits</code> et <code>info</code>) affiche des informations légales sur NumeRe et la version.</item>
+			<item node="hline">Cette commande trace une double ligne horizontale dans la console. Si le paramètre <code>-single</code> est ajouté, une ligne simple est dessinée.</item>
+			<item node="warn">Cette commande affiche la chaîne de caractères passée en paramètre sous forme d'avertissement dans la console. Cela ne devrait être utilisé que pour des avertissements réels, car les avertissements ont un impact sur le temps d'exécution du code.</item>
+			<item node="close">Cette commande ferme les fenêtres précédemment ouvertes qui sont sélectionnées par des paramètres au moyen de <code>close -PAR</code>: <code>-graphs</code> ferme tous les graphiques, <code>-docs</code> toutes les fenêtres d'aide, <code>-tables</code> tous les tableaux, <code>-images</code> tous les ImageViewer et <code>-all</code> toutes les fenêtres de cette liste.</item>
+			<item node="assert">La commande <code>assert EXPR</code> est destinée à être utilisée dans les tests de logiciels. Elle vérifie la véracité logique de l'expression <code>EXPR</code> et la renvoie ensuite. Si, en revanche, l'expression est fausse, une erreur est renvoyée. Ainsi, une condition de test peut être réalisée de manière confortable. En combinaison avec l'indicateur de procédure <code>test</code>, des tests logiciels étendus peuvent être mis en œuvre.</item>
+			<item node="clc">Cette commande nettoie le terminal et le ramène à son état initial.</item>
+			<item node="qrcode">Elle crée un code QR avec le contenu de la chaîne de caractères transmise. Le code QR est enregistré en tant que SVG à l'adresse <code>&lt;savepath&gt;/qrcode.svg</code> si aucun nom de fichier dédié n'est indiqué via <code>file=FILENAME</code>. L'option <code>color={R,G,B}</code> permet de définir la couleur du code QR et <code>level=LEVEL</code> (0-3) le niveau de correction des erreurs.</item>
+		</list>
+	</contents>
+</article>
+
+
+<article id="declare">
+	<title string="Konstantendeklarationen" idxkey="declare" />
+	<keywords>
+		<keyword>declare</keyword>
+		<keyword>enum</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			declare SYMBOL := VAL, ...
+			declare enum -&gt; {VAL1, ...}, ...
+		</syntax>
+		La commande <code>declare</code> déclare une ou plusieurs constantes spécifiques au fichier pour le script ou le fichier de procédure actuel. La syntaxe est la suivante, les valeurs pouvant être des valeurs numériques, des chaînes de caractères ou des expressions entières.
+		<codeblock>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</codeblock>
+		Il est également possible de générer automatiquement des constantes énumérées. En plus de la numérotation automatique, des constantes entières ou des constantes précédentes peuvent être utilisées comme valeurs. Les valeurs qui ne sont pas des constantes littérales entières sont ignorées. Si d'éventuels décalages apparaissent, ils sont pris en compte et le comptage se poursuit à partir de cette valeur :
+		<codeblock>
+			declare enum -&gt; {VAL1, VAL2, VAL3, ...}
+			declare enum -&gt; {VAL1 = 10, VAL2, VAL3 = VAL2, ...}
+		</codeblock>
+		Au moment de la lecture du fichier, ces valeurs remplacent les constantes utilisées. Dans un fichier de procédure, cette commande peut apparaître à n'importe quel endroit (même en dehors des procédures) et est valable dès son apparition pour les lignes suivantes. L'utilisation de constantes peut rendre un code beaucoup plus lisible, comme c'est le cas avec l'utilisation de constantes littérales explicites.
+	</contents>
+</article>
+
+
+<article id="include">
+	<title string="Einbinden weiterer Dateien" idxkey="include" />
+	<keywords>
+		<keyword>include</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			include FILE
+			include FILE :: TYPE
+		</syntax>
+		La commande <code>include</code> permet d'inclure des informations provenant d'un fichier externe dans le fichier exécutable actuel :
+		<codeblock>include FILE</codeblock>
+		Le fichier <code>FILE</code> est recherché relativement au fichier actuel. Les noms de fichiers contenant des espaces doivent être indiqués entre guillemets. Les expressions globales, les définitions et les déclarations sont importées à cet endroit par cette commande (dans les fichiers de procédure, cette commande devrait donc être utilisée à l'intérieur d'une procédure).
+		Après un <code>::</code> supplémentaire, le type d'informations importées peut être limité, par exemple<codeblock>include FILE : : declarationsum</codeblock>pour n'importer que des déclarations. Avec <code>globals</code>, les expressions globales sont importées et avec <code>definitions</code>, les définitions. Il est possible d'utiliser plusieurs arguments à la fois.
+	</contents>
+</article>

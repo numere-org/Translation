@@ -1,0 +1,38 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2019  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="cluster">
+	<title string="Cluster" idxkey="cluster" />
+	<keywords>
+		<keyword>cluster</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			{VAL} = CLUSTER{i1:i2}
+			{VAL} = CLUSTER{{START:SCHRITTWEITE:ENDE}}
+			CLUSTER{i1:i2} = {VAL}
+		</syntax>
+		Les clusters sont des types de variables spéciales qui, comme un tableau, peuvent contenir plusieurs valeurs. Ces objets sont référencés par un nom et les accolades qui le suivent et, contrairement aux tableaux, ils sont créés automatiquement lorsqu'une ou plusieurs valeurs leur sont attribuées<codeblock>:CLUSTER{} = {VALEUR1, VALEUR2, VALEUR3, ...}</codeblock>.
+		Les clusters sont toujours unidimensionnels et ne sont donc pas aussi flexibles que les tableaux. En revanche, ils peuvent contenir des valeurs numériques et des chaînes de caractères <em>mélangées</em> et dans n'importe quel ordre. L'accès aux valeurs d'un cluster s'effectue via un index qui doit être transmis au cluster entre accolades<codeblock>:VALEUR = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NOUVELLE_VALEUR</codeblock>"L'index peut bien entendu couvrir toute une plage (<code>INDEX1:INDEX2</code> ou . <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a>). Si aucun index n'est indiqué, il est interprété comme <em>tous les</em> éléments du cluster actuel. Cela signifie que soit toutes les valeurs sont lues, soit tout le cluster est écrasé.
+		La valeur spéciale <code>nlen</code> peut être utilisée lors de l'accès à un cluster pour référencer le dernier élément actuel<codeblock>:LETZTER_WERT = CLUSTER{nlen}\nCLUSTER{nlen+1} = ANGEHAENGTER_WERT</codeblock>
+		<example desc="Verwenden eines Clusters, um den Inhalt einer Textdatei zu speichern:">
+			ini{} = read &lt;&gt;/numere.ini
+		</example>
+		<em>Voir aussi :</em> <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://string?frame=self">help string</a> et <a href="nhlp://table?frame=self">help table</a>
+	</contents>
+</article>

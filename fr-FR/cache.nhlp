@@ -1,0 +1,198 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="cache">
+	<title string="Tabellen (Caches)" idxkey="table"/>
+	<keywords>
+		<keyword>cache</keyword>
+		<keyword>table</keyword>
+		<keyword>tabell</keyword>
+		<keyword>rename</keyword>
+		<keyword>swap</keyword>
+		<keyword>desc</keyword>
+		<keyword>lines</keyword>
+		<keyword>nlines</keyword>
+		<keyword>rows</keyword>
+		<keyword>nrows</keyword>
+		<keyword>cols</keyword>
+		<keyword>ncols</keyword>
+		<keyword>every</keyword>
+		<keyword>range</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			{VAL} = TABLE(i1:i2,j1:j2)
+			{VAL} = TABLE({START:SCHRITTWEITE:ENDE},:)
+			TABLE(i1:i2,j1:j2) = {VAL}\n
+			{STR} = TABLE(#,j1:j2)
+			TABLE(#,j1:j2) = {STR}\n
+			new TABLE(), ...
+			remove TABLE(), ...\n
+			clear TABLE()
+			delete TABLE()\n
+			show TABLE()\n
+			save TABLE()
+			save TABLE() -set file=NAME\n
+			export TABLE()
+			export TABLE() -set file=NAME\n
+			rename TABLE(), NEWNAME()\n
+			swap TABLE1(), TABLE2()
+		</syntax>
+		Les tableaux sont des mémoires actives dans NumeRe qui peuvent stocker temporairement des données tabulaires afin de pouvoir les traiter ultérieurement. Les données tabulaires se caractérisent par le fait que les données sont organisées en colonnes. Les colonnes des tableaux NumeRe peuvent contenir soit des valeurs numériques, des valeurs de date et d'heure, des valeurs logiques, des catégories ou <a href="nhlp://string?frame=new">des chaînes de caractères</a>. Lorsque des valeurs numériques sont écrites dans des colonnes de chaînes de caractères, elles sont automatiquement converties en chaînes de caractères. En revanche, l'écriture de chaînes de caractères dans des colonnes numériques n'est possible <em>que</em> si les chaînes de caractères peuvent être interprétées numériquement.
+		Les valeurs de date et d'heure sont enregistrées en secondes depuis le 1.1.1970 (UTC) avec une précision de l'ordre de la microseconde. De telles valeurs sont générées et traitées par des fonctions spéciales (comme par exemple <code>time()</code> ou <code>timeformat()</code>). Les valeurs de date et d'heure peuvent également être écrites sous forme de chaînes de caractères dans les colonnes correspondantes, si elles correspondent à l'un des schémas suivants ou à une combinaison date/heure de ceux-ci :
+		<verbatim>
+			DD.MM.YY(YY)
+			YY(YY)-MM-DD
+			YY(YY)/MM/DD
+			DD/MM/YYYY ou D/M/YY(YY)
+			hh:mm
+			hh:mm:ss
+			hh:mm:ss.iii
+		</verbatim>
+		La table <code>table()</code> existe par défaut. Mais avec la commande <code>new</code>, il est possible de créer d'autres tables avec d'autres noms<codeblock>:new TABLE1(), TABLE2(), ...</codeblock>
+		Les éléments individuels d'un tableau peuvent être lus avec la syntaxe <code>TABLE(ZEILE, SPALTE)</code>. Elle permet également d'écrire des valeurs dans le tableau. Les tableaux doivent être traités comme des variables ordinaires. L'indexation se fait par des nombres naturels <em>supérieurs à</em> zéro : 1,2,3,...
+		Les plages d'éléments peuvent être conservées avec la syntaxe <code>ERSTER INDEX:ZWEITER INDEX</code>. Si l'un des deux indices est omis, il est automatiquement complété par l'indice minimal ou maximal. Si les deux indices manquent, la totalité de la plage possible est sélectionnée. Il est également possible d'utiliser des lignes/colonnes d'autres tableaux ou fichiers de données comme ensemble d'indices. Bien que les index doivent être des valeurs numériques, il existe un support expérimental pour la sélection de colonnes à l'aide de leurs en-têtes sous forme de chaîne de caractères, c.-à-d. : "colonne". <code>TABLE(:,"NAME")</code>
+		En outre, il est possible d'utiliser <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a> l'incrément des indices peut être spécifié.
+		Si une colonne entière est écrasée sous la forme <code>TABLE(:,j) = VALUES</code>, le type de la colonne <code>j</code> peut également être modifié de numérique à chaîne de caractères ou inversement. L'en-tête de la colonne est conservé ; les données éventuellement contenues auparavant dans la colonne <code>j</code> sont <em>entièrement</em> supprimées.
+		Lors de l'accès à un tableau, les variables spéciales <code>nrows</code> contiennent le nombre de lignes et <code>ncols</code> le nombre de colonnes du tableau actuel, si elles sont utilisées dans ses parenthèses d'arguments (<code>nlines</code> est un alias). Cela s'applique également si d'autres objets de données sont utilisés dans l'expression ou comme ensemble d'index<codeblock>:TABLE1( :, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
+		Les en-têtes de colonnes peuvent être lus et modifiés de manière similaire : <code>TABLE(#,SPALTE)</code> ou. <code>TABLE(#,SPALTE) = KOPF</code>
+		<h>Commandes en relation avec les tableaux</h>
+		Des commandes spéciales sont disponibles en relation avec les tableaux :
+		<list>
+			<item node="new TABLE1(), TABLE2(), ...">Créer les tableaux <code>TABLE1(), TABLE2(), ...</code> </item>
+			<item node="clear TABLE()">Effacer le contenu de la table <code>TABLE()</code> </item>
+			<item node="clear -memory">Supprimer toutes les tables, <a href="nhlp://cluster?frame=new">les clusters</a> et la sauvegarde automatique</item>
+			<item node="show TABLE()">Afficher les données de la table correspondante</item>
+			<item node="showf TABLE()">Afficher l'enregistrement complet (n'a d'influence que si aucun visualiseur externe n'est utilisé).</item>
+			<item node="rename TABLE(), NEUERNAME()">Renommer la table <code>TABLE</code> en <code>NEUERNAME</code>. Ceci ne peut pas être appliqué à <code>table</code>!</item>
+			<item node="swap TABLE1(), TABLE2()">Echanger le contenu de la table <code>TABLE1</code> avec le contenu de <code>TABLE2</code> </item>
+			<item node="save TABLE()">Enregistrer les données de la table sélectionnée dans un fichier avec un nom généré automatiquement. Le nom du fichier peut être indiqué avec <code>save TABLE() -set filename=NAME</code>. Les noms de fichiers contenant des espaces doivent être entourés de guillemets.</item>
+			<item node="export TABLE()">Exporter les données de la table sélectionnée dans un fichier texte avec un nom de fichier généré automatiquement. Le nom de fichier peut être indiqué avec <code>export TABLE() -set filename=NAME</code>. Les noms de fichiers avec des espaces doivent également être entourés de guillemets. (L'extension *.tex permet de créer un fichier TeX, *.csv un fichier CSV et *.xls un classeur Excel(R)).</item>
+			<item node="delete TABLE(i1:i2,j1:j2)">Toutes les entrées de la ligne <expr>i1</expr> à <expr>i2</expr> et de la colonne <expr>j1</expr> à <expr>j2</expr> sont irrévocablement supprimées. Il est bien sûr possible de ne sélectionner qu'un seul élément.</item>
+			<item node="remove TABLE1(), TABLE2(), ...">Supprime complètement les tableaux <code>TABLE1(), TABLE2(), ...</code> </item>
+		</list>
+		A <code>clear</code> et <code>delete</code>, on peut ajouter <code>-ignore</code> pour supprimer la confirmation nécessaire.
+		<h>Méthodes pour travailler avec les tableaux</h>
+		Les tableaux offrent à l'utilisateur quelques méthodes destinées à faciliter le travail et à rendre le code plus lisible. Les méthodes sont appelées avec la syntaxe <codeblock>TABLE().METHOD.</codeblock> La plupart des méthodes peuvent encore être affinées par un ou plusieurs modificateurs<codeblock>:TABLE().METHOD.MODIFIER1.MODIFIER2Les méthodes statistiques standard</codeblock>sont les suivantes :
+		<codeblock>
+			TABLE().avg
+			TABLE().std
+			TABLE().sum
+			TABLE().prd
+			TABLE().med
+			TABLE().min
+			TABLE().max
+			TABLE().num
+			TABLE().cnt
+			TABLE().norme
+		</codeblock>
+		Elles correspondent aux fonctions standard du même nom et sont exécutées sur tous les éléments du tableau sélectionné. Elles peuvent aussi être limitées à des groupes de lignes et de colonnes avec les Modifier.
+		Les méthodes suivantes sont définies en plus :
+		<list>
+			<item node="TABLE().aliasof(sTable)">Transforme le tableau actuel en un alias du tableau dont le nom a été transmis sous forme de chaîne de caractères <code>sTable</code>. La table actuelle est alors masquée, de sorte qu'il n'est plus possible d'y accéder pendant ce temps. Si une chaîne de caractères vide est passée, le déréférencement est annulé et la référence à la table actuelle est rétablie. Le nom de la table référencée est renvoyé sous forme de chaîne de caractères.</item>
+			<item node="TABLE().anovaof({nCategy},nCol,fSignif,nRows)">Effectue une analyse de variance (ANOVA) pour les catégories des colonnes <code>nCategs</code> et les valeurs de la colonne <code>nCol</code> en utilisant la valeur de signification <code>fSignif</code> pour les lignes <code>nRows</code>. Les lignes peuvent être prédéfinies et correspondent par défaut à la dimension complète. Une liste clé-valeur est renvoyée avec les valeurs pertinentes calculées.</item>
+			<item node="TABLE().binsof(nCol,nBins)">Calcule un histogramme simple des données de la colonne <code>nCol</code>. Si le nombre de bins <code>nBins</code> n'est pas spécifié, il est déterminé à l'aide de la règle de Sturges. Si la colonne est catégorielle, les catégories sont utilisées comme bins. Si les colonnes sont logiques, les valeurs logiques sont utilisées en tant qu'unités.</item>
+			<item node="TABLE().categoriesof({nCols})">Renvoie les catégories de la ou des colonnes catégorielles sélectionnées sous forme de liste clé-valeur. Si les colonnes sélectionnées ne sont pas catégorielles, une chaîne de caractères vide est renvoyée.</item>
+			<item node="TABLE().categorize({nCols},{sCategories})">Met à jour les catégories d'une colonne catégorielle (les convertit si nécessaire). Le nombre de nouvelles catégories ne doit pas nécessairement correspondre aux catégories existantes. En cas de succès, les nouvelles catégories de la ou des colonnes catégorielles sélectionnées sont renvoyées sous forme de liste clé-valeur.</item>
+			<item node="TABLE().cols">Renvoie le nombre de colonnes du tableau</item>
+			<item node="TABLE().convert({nCols},sType)">Convertit le type des colonnes indexées par <code>{nCols}</code> en type <code>sType</code>. Le nouveau type peut être spécifié soit comme <code>"value"</code> (ou un sous-type de celui-ci, voir tableau suivant), <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> ou <code>"category"</code>. <code>"auto"</code> effectue une détection automatique de la meilleure conversion par colonne. Si la conversion est réussie, le nouveau type est renvoyé sous forme de chaîne de caractères, sinon la chaîne de caractères est vide. <code>"auto"</code> est toujours réussi, même si aucune colonne n'a été convertie. Une conversion n'est possible que si les données utilisées dans la colonne concernée sont également interprétables dans le nouveau type.</item>
+			<item node="TABLE().countif({nCols},vals{})">Compte les éléments dans les colonnes <code>nCols</code> qui correspondent aux valeurs dans le cluster <code>vals{}</code>. Pour chaque colonne et chaque valeur dans <code>vals{}</code>, renvoie une somme classée par colonne.</item>
+			<item node="TABLE().covarof(nCol1,nCol2,nRows1,nRows2)">Calcule la covariance des colonnes <code>nCol1</code> et <code>nCol2</code>. Les lignes respectives peuvent être prédéfinies et correspondent par défaut à la dimension complète.</item>
+			<item node="TABLE().describe(sDesc)">Actualise la description de la table ou de l'ensemble de données pour le contenu de <code>sDesc</code>. La description peut être utilisée pour décrire le contenu de l'ensemble de données en mots, en documentant la source et la méthode d'enquête.</item>
+			<item node="TABLE().description">Renvoie la description de la table ou de l'ensemble de données sous forme de chaîne de caractères.</item>
+			<item node="TABLE().fndcols({sNames},enableRegEx)">Renvoie les index de toutes les colonnes dont les titres correspondent à <code>sNames</code>. <code>sNames</code> peut être des expressions régulières si <code>enableRegEx</code> est <code>true</code>. Si rien n'est trouvé, NaN est renvoyé.</item>
+			<item node="TABLE().indexof(nCol,vals{})">Renvoie les indices des éléments de la colonne <code>nCol</code> qui correspondent aux valeurs du cluster <code>vals{}</code>. Chaque bloc d'indices est séparé des autres blocs par un NaN.</item>
+			<item node="TABLE().insertcells(nRow,nCol,nRows,nCols)">Insère un bloc de <code>nRows x nCols</code> cellules à la position <code>{nRow, nCol}</code> dans le tableau. Les cellules déjà existantes sont déplacées vers le bas ou vers la droite si <code>[nRow, nRow+nRows]</code> couvre une colonne entière.</item>
+			<item node="TABLE().insertcols(nCol,nCols)">Insère <code>nCols</code> colonnes avant la colonne <code>nCol</code> dans le tableau.</item>
+			<item node="TABLE().insertrows(nRow,nRows)">Insère <code>nRows</code> rangées avant la rangée <code>nRow</code> dans le tableau.</item>
+			<item node="TABLE().maxpos">Détermine la position du maximum du tableau et la renvoie en lignes et en colonnes. En cas d'occurrences multiples de la même valeur, seule la première position trouvée est renvoyée.</item>
+			<item node="TABLE().minpos">Détermine la position du minimum du tableau et la renvoie en lignes et en colonnes. En cas d'occurrences multiples de la même valeur, seule la première position trouvée est renvoyée.</item>
+			<item node="TABLE().name">Renvoie le nom du tableau sous forme de chaîne, ce qui raccourcit les constructions comme <code>to_string(TABLE())</code> </item>
+			<item node="TABLE().pcorrof(nCol1,nCol2,nRows1,nRows2)">Calcule la <em>corrélation de Pearson</em> des colonnes <code>nCol1</code> et <code>nCol2</code>. Les lignes respectives peuvent être prédéfinies et correspondent par défaut à la dimension complète. La corrélation de Pearson ne peut être calculée qu'à partir de valeurs numériques.</item>
+			<item node="TABLE().rankof(nCol,cType,nRows)">Calcule les rangs des valeurs dans la colonne <code>nCol</code> pour les lignes <code>nRows</code> selon le type <code>cType</code>. Les lignes peuvent être prédéfinies et correspondent par défaut à la dimension complète. Le type <code>cType</code> spécifie la manière dont les rangs sont attribués. <code>cType = "c"</code>: compétitif, c.-à-d. selon le <em>schéma 1-2-2-4</em>, <code>cType = "f"</code>: fractionné, c.-à-d. selon le <em>schéma 1-2.5-2.5-4</em>, <code>cType = "d"</code>: consécutif-dense, c.-à-d. selon le <em>schéma 1-2-2-3</em>.</item>
+			<item node="TABLE().removecells(nRow,nCol,nRows,nCols)">Supprime du tableau un bloc de cellules <code>nRows x nCols</code> à partir de la position <code>{nRow, nCol}</code>. Les cellules qui suivent en bas sont déplacées vers le haut ou vers la gauche si <code>[nRow, nRow+nRows]</code> couvre une colonne entière.</item>
+			<item node="TABLE().removecols({nCols})">Supprime les colonnes <code>{nCols}</code> du tableau. Les colonnes suivantes sont déplacées vers la gauche.</item>
+			<item node="TABLE().removerows({nRows})">Supprime les lignes <code>{nRows}</code> du tableau. Les lignes suivantes sont déplacées vers le haut.</item>
+			<item node="TABLE().reordercols({nCols},{nNewOrder})">Réorganise les colonnes <code>{nCols}</code> selon le nouvel ordre <code>{nNewOrder}</code>. Les indices <code>{nNewOrder}</code> doivent être une permutation de <code>{1:num({nCols})}</code>. Retourne <code>true</code> si le tri a pu être effectué.</item>
+			<item node="TABLE().reorderrows({nRows},{nNewOrder})">Réorganise les lignes <code>{nRows}</code> selon le nouvel ordre <code>{nNewOrder}</code>. Les indices <code>{nNewOrder}</code> doivent être une permutation de <code>{1:num({nRows})}</code>. Retourne <code>true</code> si le tri a été possible.</item>
+			<item node="TABLE().rows">Renvoie le nombre de lignes du tableau</item>
+			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Calcule la <em>corrélation de Spearman</em> des colonnes <code>nCol1</code> et <code>nCol2</code>. Les lignes respectives peuvent être prédéfinies et correspondent par défaut à la dimension complète. La corrélation de Spearman peut être calculée pour tous les types de variables. Le calcul des rangs correspondants tient compte des majuscules et des minuscules.</item>
+			<item node="TABLE().shrink">Supprime les cellules et les colonnes vides et jointes du tableau afin d'économiser de la mémoire. Les cellules et colonnes vides entourées de données valides sont conservées.</item>
+			<item node="TABLE().size">Renvoie la taille du tableau en lignes et en colonnes</item>
+			<item node="TABLE().typeof({nCols})">Renvoie le type des colonnes indexées par <code>{nCols}</code> sous forme de chaînes de caractères. Le type peut être soit <code>"value"</code> (ou un sous-type de celui-ci, voir tableau suivant), <code>"string"</code>, <code>"datetime"</code>, <code>"logical"</code> ou <code>"category"</code>. Les colonnes vides ou inexistantes sont de type <code>"none"</code></item>
+			<item node="TABLE().zscoreof(nCol,nRows)">Calcule la standardisation des valeurs par rapport à leur écart par rapport à la moyenne (également appelé z-score) dans la colonne <code>nCol</code> pour les lignes <code>nRows</code>. Les lignes peuvent être prédéfinies et correspondent par défaut à la dimension complète. La moyenne et l'écart-type sont toujours calculés par rapport aux lignes sélectionnées.</item>
+		</list>
+		Les sous-types de <code>"value"</code> sont
+		<table>
+			<tr>
+				<td><em>Sous-type</em></td><td><em>Taille des bits</em></td><td><em>Valeur complexe</em></td><td><em>Signe</em></td><td><em>Nombre à virgule flottante</em></td>
+			</tr>
+			<tr>
+				<td><code>"value"</code><br/>(<code>"value.cf64"</code>)</td><td>64</td><td>✓</td><td>✓</td><td>✓</td>
+			</tr>
+			<tr>
+				<td><code>"value.cf32"</code></td><td>32</td><td>✓</td><td>✓</td><td>✓</td>
+			</tr>
+			<tr>
+				<td><code>"value.f64"</code></td><td>64</td><td></td><td>✓</td><td>✓</td>
+			</tr>
+			<tr>
+				<td><code>"value.f32"</code></td><td>32</td><td></td><td>✓</td><td>✓</td>
+			</tr>
+			<tr>
+				<td><code>"value.i8"</code></td><td>8</td><td></td><td>✓</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui8"</code></td><td>8</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i16"</code></td><td>16</td><td></td><td>✓</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui16"</code></td><td>16</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i32"</code></td><td>32</td><td></td><td>✓</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui32"</code></td><td>32</td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.i64"</code></td><td>64</td><td></td><td>✓</td><td></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui64"</code></td><td>64</td><td></td><td></td><td></td>
+			</tr>
+		</table>
+		Les modificateurs définis sont les suivants :
+		<list>
+			<item node=".rows">En combinaison avec une autre méthode, les applique ligne par ligne et renvoie un nombre correspondant de résultats (<code>.lines</code> est un alias).</item>
+			<item node=".cols">En combinaison avec une autre méthode, l'applique colonne par colonne et renvoie un nombre correspondant de résultats.</item>
+			<item node=".grid">Déclare la table courante comme grille de données, de sorte que les deux premières colonnes sont ignorées pour le calcul.</item>
+			<item node=".every(nFirst,nIncr)">Permet de spécifier avec <code>rows</code> ou <code>cols</code>, la première colonne/ligne (nFirst) et l'incrément (chaque =&gt; nIncr=1, chaque deuxième =&gt; nIncr=2, etc.). Si une seule valeur est prédéfinie, elle est utilisée pour les deux valeurs. Les colonnes/lignes peuvent également être sélectionnées de manière ciblée si un vecteur pour nFirst (<code>.every({1:10})</code>) est passé.</item>
+		</list>
+		<example desc="Daten in der Tabelle <code>table()</code> anzeigen, anschließendes aufsteigendes Sortieren der Spalten 3-6 nach Spalte 1 und Berechnung der Summe jeder zweiten Spalte:">
+			show table()
+			[...]
+			sort table() cols=1[3:6]
+			[...]
+			table().sum.cols.every(2,2)
+		</example>
+		<em>Voir aussi :</em> <a href="nhlp://new?frame=self">help new</a>, <a href="nhlp://remove?frame=self">help remove</a>, <a href="nhlp://datagrid?frame=self">help datagrid</a>, <a href="nhlp://save?frame=self">help save</a>, help <a href="nhlp://string?frame=self">string</a>, <a href="nhlp://cluster?frame=self">help cluster</a> et <a href="nhlp://delete?frame=self">help delete</a>
+	</contents>
+</article>

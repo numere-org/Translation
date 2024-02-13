@@ -1,0 +1,60 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="3dplots">
+	<title string="3D-Gitter-, 3D-Kontur-, 3D-Dichte- oder 3D-Flächenplots" idxkey="cont3d, dens3d, mesh3d, surf3d" />
+	<keywords>
+		<keyword>cont3d</keyword>
+		<keyword>contour3d</keyword>
+		<keyword>dens3d</keyword>
+		<keyword>density3d</keyword>
+		<keyword>mesh3d</keyword>
+		<keyword>meshgrid3d</keyword>
+		<keyword>surf3d</keyword>
+		<keyword>surface3d</keyword>
+		<keyword>cloudplot</keyword>
+		<keyword>nocloudplot</keyword>
+		<keyword>slices</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			surf3d f(x,y,z)
+			surf3d f(x,y,z) -set [x1:x2,y1:y2,z1:z2] ...\n
+			mesh3d f(x,y,z)
+			mesh3d f(x,y,z) -set colorrange=c1:c2 ...\n
+			cont3d f(x,y,z)
+			cont3d f(x,y,z) -set slices={X,Y,Z} ...\n
+			dens3d f(x,y,z)
+			dens3d f(x,y,z) -set cloudplot ...
+		</syntax>
+		Les commandes <code>mesh3d</code>, <code>cont3d</code>, <code>dens3d</code> ou <code>surf3d</code> permettent de représenter des fonctions de la forme <expr>Phi = Phi(x,y,z)</expr>, c'est-à-dire des champs scalaires dont la valeur fonctionnelle est donnée en chaque point <expr>(x,y,z)</expr> du volume observé par une fonction de <expr>x, y</expr> et <expr>z</expr>. <code>mesh3d</code> génère un tracé de grille 3D, <code>cont3d</code> un tracé de lignes de contour 3D (lignes de niveau), <code>dens3d</code> un tracé de densité 3D (les couleurs correspondent aux amplitudes des champs) et <code>surf3d</code> un tracé de surface 3D. <code>surf3d</code> et <code>mesh3d</code> montrent une sélection des surfaces équipotentielles, qui sont indiquées par des lignes de contour dans le cas de <code>cont3d</code>.
+		Les variables de tracé sont <expr>x, y</expr> et <expr>z</expr>. Toutes les autres variables sont considérées comme des paramètres.
+		Ce mode de tracé nécessite l'indication d'un troisième intervalle qui peut être influencé comme option, c'est-à-dire <code>[x1:x2,y1:y2,z1:z2]</code>.
+		Les paramètres supplémentaires pour ces styles de tracé correspondent aux styles de tracé des variantes 2D, à l'exception de <code>cloudplot/nocloudplot</code> et <code>slices={X,Y,Z}</code>. Voir à ce sujet par ex. <a href="nhlp://surf?frame=new">help surf</a>
+		<code>dens3d</code> crée avec l'option supplémentaire <code>cloudplot</code> un tracé de densité à l'échelle de la pièce (au lieu des 3 tranches discrètes). Si l'option <code>alpha</code> est également passée, la transparence du "nuage" généré va de pair avec l'amplitude du champ.
+		L'option <code>slices={X,Y,Z}</code> peut être appliquée à <code>cont3d</code> et <code>dens3d</code> et indique le nombre de coupes représentées orthogonalement à la direction spatiale correspondante. Toutes les directions de l'espace doivent toujours être indiquées et les nombres doivent à chaque fois se situer dans la plage [0,5], p.ex.<codeblock>:slices={1,4,2}</codeblock>
+		<example desc="3D-Meshgrid eines Dipols mit <expr>z1 = -4</expr> und <expr>z2 = +4</expr> mit den Optionen <code>box light opng=dipol cut pcont colorrange=-3.5:3.5</code>:" type="verbatim">
+			|&lt;- mesh3d 10/sqrt(x^2+y^2+(z-4)^2)-10/sqrt(x^2+y^2+(z+4)^2) -set box light opng=dipol cut pcont colorrange=-3.5:3.5
+			|-&gt; Calculer les données pour le tracé de maillage 3D ...
+			|-&gt; Enregistrer ... Succès!
+			| Enregistré sous "&PLOTPATH&/dipol.png
+		</example>
+		<img src="<>/docs/dipol.png" />
+		<em>Voir aussi :</em> <a href="nhlp://plot?frame=self">help plot</a> et <a href="nhlp://mesh?frame=self">help mesh</a>
+	</contents>
+</article>

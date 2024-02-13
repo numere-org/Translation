@@ -1,0 +1,93 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="color">
+	<title string="Farbschemata und Linienfarben für Plots" idxkey="colors" />
+	<keywords>
+		<keyword>color</keyword>
+		<keyword>farbs</keyword>
+		<keyword>plotcol</keyword>
+		<keyword>coast</keyword>
+		<keyword>cold</keyword>
+		<keyword>copper</keyword>
+		<keyword>grey</keyword>
+		<keyword>hot</keyword>
+		<keyword>map</keyword>
+		<keyword>moy</keyword>
+		<keyword>plasma</keyword>
+		<keyword>rainbow</keyword>
+		<keyword>viridis</keyword>
+		<keyword>coolwarm</keyword>
+		<keyword>hue</keyword>
+		<keyword>polarity</keyword>
+		<keyword>ryg</keyword>
+		<keyword>spectral</keyword>
+	</keywords>
+	<contents>
+		Les schémas de couleurs utilisés par NumeRe dans les tracés 2D et 3D peuvent être adaptés, tout comme les couleurs des lignes dans les tracés ordinaires et les trajectoires 3D. Pour cela, l'option <code>colorscheme=SCHEMA</code> ou <code>plotcolors=FARBEN</code> doit être transmise lors du traçage.
+		Pour les tracés 2D et 3D, il existe des schémas prédéfinis, dont <code>viridis</code> est préréglé.
+		<h>Schémas linéaires</h>
+		<list>
+			<item node="coast">Côte des Caraïbes : du bleu foncé au jaune en passant par le cyan</item>
+			<item node="cold">Un dégradé de couleurs froides du bleu foncé au cyan en passant par le bleu</item>
+			<item node="copper">"Cuivre" : du foncé au clair cuivré</item>
+			<item node="grey">Un schéma simple d'échelle de gris</item>
+			<item node="hot">Un dégradé chaud du noir au jaune en passant par le rouge</item>
+			<item node="moy">"Magenta-Orange-Yellow" : du noir au blanc en passant par le magenta, l'orange et le jaune.</item>
+			<item node="plasma">Un dégradé du bleu foncé au jaune clair en passant par le violet</item>
+			<item node="viridis">Similaire à <code>coast</code>, mais plus de vert et de bleu (standard)</item>
+		</list>
+		<h>Schémas divergents</h>
+		<list>
+			<item node="coolwarm">Dégradé bilatéral du bleu au rouge en passant par un violet léger</item>
+			<item node="polarity">Dégradé bidirectionnel et cyclique du blanc au rouge en passant par le bleu et le violet foncé, puis à nouveau au blanc</item>
+			<item node="ryg">Dégradé bilatéral du rouge-brun au vert en passant par le jaune</item>
+			<item node="spectral">Dégradé bilatéral du rouge-brun au bleu en passant par l'orange, le jaune et le vert</item>
+		</list>
+		<h>Schémas cycliques</h>
+		<list>
+			<item node="hue">Dégradé cyclique du rouge au rouge en passant par toutes les couleurs de la roue chromatique</item>
+			<item node="polarity">Dégradé bilatéral et cyclique du blanc au bleu et au violet foncé, puis au rouge et à nouveau au blanc</item>
+		</list>
+		<h>Schémas spéciaux</h>
+		<list>
+			<item node="hue">Dégradé cyclique du rouge vers le rouge en passant par toutes les couleurs de la roue chromatique</item>
+			<item node="map">Dégradé de couleurs typique d'une carte physique : du violet et du bleu foncé au rouge et enfin au gris en passant par le vert/jaune et l'orange.</item>
+			<item node="rainbow">Le schéma bien connu de l'arc-en-ciel : du bleu foncé au rouge profond en passant par le vert et le jaune.</item>
+		</list>
+		Les schémas <code>rainbow</code> et <code>map</code> ne doivent pas être utilisés si le tracé imprimé doit éventuellement être imprimé dans des échelles de gris, car les maxima de luminosité ne se trouvent pas à l'extrémité supérieure de l'échelle.
+		Il est également possible de définir ses propres schémas. Pour cela, les couleurs, représentées par des lettres individuelles, doivent être enchaînées dans l'ordre souhaité et transmises entre guillemets supplémentaires en tant que SCHEMA<codeblock>:colorscheme="BbcyrR" ## Jeu de couleurs du schéma arc-en-cielLes</codeblock>couleurs sont alors interpolées automatiquement pour les dégradés nécessaires.
+		Les couleurs doivent toujours être indiquées de la couleur correspondant à la plus petite valeur de fonction à la couleur correspondant à la plus grande valeur de fonction. Le nombre de couleurs (jusqu'à 32) doit être choisi en fonction du nombre de détails à mettre en évidence. Pour les détails simples, 2-3 suffisent, pour un grand nombre, il devrait y en avoir entre 5 et 7.
+		Les deux symboles <code>#</code> et <code>|</code> permettent d'influer davantage sur la représentation : <code>#</code> dessine une grille supplémentaire sur les tracés de surface, de densité et de gradient. Si ce symbole est utilisé dans le schéma de couleurs pour <code>surf3d</code>, la sortie de <code>mesh3d</code> est générée. Le caractère <code>|</code> désactive l'interpolation des couleurs dans le schéma de couleurs actuel.
+		Dans les tracés ordinaires ou les trajectoires 3D, la couleur de chaque ligne est représentée par une des lettres mentionnées ci-dessous. La première lettre représente la première ligne, la deuxième la deuxième (etc.).
+		Il est possible d'indiquer ici 20 couleurs au maximum ; pour la 21e ligne, la couleur de la première ligne est à nouveau utilisée. Il n'est cependant pas nécessaire d'indiquer 20 styles ; s'il y en a moins, seul le nombre de lignes correspondant sera adapté<codeblock>:plotcolors="rrr" ## dessine les trois premières lignes en rougeSi</codeblock>un espace est indiqué au lieu d'une couleur, la couleur prédéfinie correspondante ne sera pas modifiée. De plus, si le schéma de couleurs <code>grey</code> est actif, les couleurs des lignes passent automatiquement aux valeurs de gris.
+		Les couleurs existantes sont représentées par les lettres suivantes :
+		<table>
+			<tr><td><code>w</code></td><td>blanc</td><td><code>y</code></td><td>jaune</td><td><code>n</code></td><td>bleu pastel</td></tr>
+			<tr><td><code>W</code></td><td>gris clair</td><td><code>E</code></td><td>vert jaune foncé</td><td><code>B</code></td><td>bleu foncé</td></tr>
+			<tr><td><code>h</code></td><td>gris</td><td><code>e</code></td><td>vert jaune clair</td><td><code>b</code></td><td>bleu</td></tr>
+			<tr><td><code>H</code></td><td>gris foncé</td><td><code>G</code></td><td>vert foncé</td><td><code>U</code></td><td>violet foncé</td></tr>
+			<tr><td><code>k</code></td><td>noir</td><td><code>g</code></td><td>vert</td><td><code>u</code></td><td>violet</td></tr>
+			<tr><td><code>R</code></td><td>rouge foncé</td><td><code>L</code></td><td>vert tan foncé</td><td><code>M</code></td><td>magenta foncé</td></tr>
+			<tr><td><code>r</code></td><td>rouge</td><td><code>l</code></td><td>vert tan</td><td><code>m</code></td><td>magenta</td></tr>
+			<tr><td><code>Q</code></td><td>orange foncé</td><td><code>C</code></td><td>cyan foncé</td><td><code>P</code></td><td>pourpre foncé</td></tr>
+			<tr><td><code>q</code></td><td>orange</td><td><code>c</code></td><td>cyan</td><td><code>p</code></td><td>pourpre</td></tr>
+			<tr><td><code>Y</code></td><td>jaune foncé</td><td><code>N</code></td><td>bleu pastel foncé</td></tr>
+		</table>
+	</contents>
+</article>

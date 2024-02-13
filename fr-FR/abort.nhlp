@@ -1,0 +1,32 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2017  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="abort">
+	<title string="Blockdefinitionen abbrechen" idxkey="abort" />
+	<keywords>
+		<keyword>abort</keyword>
+		<keyword>block</keyword>
+		<keyword>abbrech</keyword>
+		<keyword>cancel</keyword>
+	</keywords>
+	<contents>
+		Lorsqu'un bloc de flux de contrôle est défini dans la console (par exemple une <a href="nhlp://if?frame=new">branche if</a> ou un <a href="nhlp://compose?frame=new">bloc compose</a>), il peut arriver que cette définition ne soit plus nécessaire pour une raison ou une autre. Cela peut par exemple être le cas lors d'une erreur de frappe importante.
+		La commande <code>abort</code> permet d'annuler un tel bloc sans que le bloc défini jusqu'alors ne soit exécuté. <em>Remarque :</em> cela concerne bien sûr le bloc entier jusqu'à la boucle la plus extérieure.
+		<em>Voir aussi :</em> <a href="nhlp://if?frame=self">if</a>, <a href="nhlp://for?frame=self">for</a>, <a href="nhlp://while?frame=self">while</a>, <a href="nhlp://compose?frame=self">compose</a> et <a href="nhlp://procedure?frame=self">procedure</a>
+	</contents>
+</article>

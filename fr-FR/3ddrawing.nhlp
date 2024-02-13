@@ -1,0 +1,58 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="3ddrawing">
+	<title string="3D-Zeichnungen und Anmerkungen" idxkey="draw3d" />
+	<keywords>
+		<keyword>3dzeichn</keyword>
+		<keyword>draw3d</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			draw3d FUNC(PNT, ...), ...
+			draw3d FUNC(PNT, ..., STL), ...
+			draw3d ... -set ...
+		</syntax>
+		Dans NumeRe, il est également possible de créer des dessins simples en trois dimensions avec des annotations. La commande nécessaire est <code>draw3d</code>. Cette commande correspond en gros à son équivalent en deux dimensions <code>draw</code>.
+		En mode dessin, les fonctions suivantes peuvent être utilisées dans n'importe quel ordre et combinaison, tant qu'elles sont séparées par des virgules. Les explications des abréviations se trouvent sous <a href="nhlp://draw?frame=new">help draw</a>, à l'exception du fait que tous les jeux de coordonnées de <code>PNT</code> ou <code>DIR</code> sont représentés par trois nombres <expr>(x,y,z)</expr> au lieu de deux <expr>(x,y)</expr>.
+		<list>
+			<item node="point(PNT,STL)">Dessine un point à l'emplacement PNT en utilisant STL. La forme du point et sa couleur peuvent être influencées par le STL.</item>
+			<item node="line(PNT,PNT,STL)<br/>linev(PNT,DIR,STL)">Dessine une ligne droite de PNT à PNT ou PNT+DIR. Si un seul point est indiqué, le point manquant est placé à l'origine. La couleur, la forme et les extrémités de la ligne peuvent être influencées par le STL.</item>
+			<item node="curve(PNT,DIR,PNT,DIR,STL)">Dessine une ligne de "Bézier" de PNT à PNT. Les vecteurs de direction DIR indiquent la courbure respective de la courbe. Il faut noter que le système de coordonnées est tourné de PI au deuxième point (le cas échéant, des signes supplémentaires sont nécessaires pour le deuxième vecteur de direction). La couleur, la forme et les extrémités de la ligne peuvent être modifiées à l'aide de STL.</item>
+			<item node="arc(PNT[,DIR],PNT,ANG,STL)<br/>arcv(PNT[,DIR],DIR,ANG,STL)">Dessine un arc de cercle de l'angle ANG autour du point PNT à partir du point PNT ou PNT+DIR. La direction optionnelle DIR indique le vecteur normal de l'arc de cercle, l'axe z étant le vecteur par défaut. Le sens de rotation est inverse à celui des aiguilles d'une montre. Le style de la ligne de l'arc de cercle peut être modifié au moyen de STL.</item>
+			<item node="triangle(PNT,PNT[,PNT],STL)<br/>trianglev(PNT,DIR[,DIR],STL)">Dessine un triangle. Deux ou trois angles peuvent être indiqués. Avec deux angles, NumeRe dessine un triangle équilatéral ; avec trois angles, un triangle général. Les angles sont numérotés à partir du bas à gauche dans le sens inverse des aiguilles d'une montre. Le remplissage du triangle peut être influencé par STL.</item>
+			<item node="face(PNT,PNT[,PNT,PNT],STL)<br/>facev(PNT,DIR[,DIR,DIR],STL)">Dessine un quadrilatère. Deux à quatre angles peuvent être indiqués. Pour deux coins, NumeRe dessine un carré, pour trois coins un parallélogramme et pour les quatre coins un quadrilatère général. Les coins sont numérotés dans le sens inverse des aiguilles d'une montre, en partant du bas à gauche. Pour <code>facev()</code>, les deux premiers vecteurs de direction sont les arêtes inférieure et gauche et le dernier la diagonale. Le remplissage du quadrilatère peut être influencé par STL.</item>
+			<item node="polygon(PNT,PNT,N,STL)<br/>polygonv(PNT,DIR,N,STL)">Dessine un N-angle régulier autour du point PNT à partir du point PNT ou PNT+DIR. Le remplissage et le style du n-angle peuvent être modifiés à l'aide de STL.</item>
+			<item node="circle(PNT,RAD,STL)">Dessine un cercle autour du point PNT avec un rayon RAD. Le remplissage et le style du cercle peuvent être modifiés au moyen de STL. <code>polygon()</code> avec N &gt;= 30 donne des résultats similaires et permet d'incliner le "cercle".</item>
+			<item node="ellipse(PNT,PNT,RAD,STL)<br/>ellipsev(PNT,DIR,RAD,STL)">Génère une ellipse avec les foyers PNT ou PNT+DIR et le rayon d'ellipse RAD. Le remplissage et le style peuvent être modifiés par STL.</item>
+			<item node="sphere(PNT,RAD,STL)">Dessine une sphère de rayon RAD aux coordonnées PNT. La couleur peut être influencée par STL. L'option de tracé <code>light</code> rend l'effet 3D visible.</item>
+			<item node="drop(PNT,DIR[,SFT,ASP],STL)">Dessine une goutte tridimensionnelle au point PNT, inclinée dans la direction DIR. Les paramètres optionnels SFT et ASP peuvent être utilisés pour modifier la forme de la goutte. La couleur peut être modifiée au moyen de STL et l'option de tracé <code>light</code> rend l'effet 3D visible.</item>
+			<item node="cone(PNT,PNT,RAD[,RAD],STL)<br/>conev(PNT,DIR,RAD[,RAD],STL)">Dessine une enveloppe conique de PNT à PNT ou PNT+DIR avec un rayon RAD. Un cône tronqué est représenté avec le deuxième rayon RAD. Au moyen de STL, il est possible de forcer la représentation des surfaces de couvercle par <code>@</code>. Avec <code>4</code>, <code>6</code> ou <code>8</code>, une pyramide à 4, 6 ou 8 côtés est dessinée au lieu d'un cône tronqué.</item>
+			<item node="cuboid(PNT,DIR[,DIR,DIR],STL)">Fonction pour représenter un spatule : dessine un cube avec le coin inférieur gauche à PNT, d'où part simultanément un système de coordonnées. La direction DIR décrit la direction x du spatule. La direction y est choisie orthogonale à celle-ci, la coordonnée z étant identique. La direction z est calculée à partir des deux premières. Si une deuxième direction est donnée, elle décrit la direction y du spath ; la direction z est choisie orthogonale à la première. Enfin, la troisième direction décrit également la direction z du spatule.</item>
+			<item node="text(PNT[,PNT],TXT,STL)">Imprime le texte TXT à l'endroit PNT. L'alignement et la couleur peuvent être influencés au moyen de STL, l'alignement et la forme devant être séparés de la couleur par <code>:</code>. Les couleurs du texte sont déterminées comme toutes les autres couleurs selon <a href="nhlp://colors?frame=new">help colors</a>; l'alignement par <code>LRC</code> (Left-Right-Centered) et la forme par <code>rib</code> (roman-italic-bold). La deuxième paire de coordonnées optionnelle peut être utilisée si le texte ne doit pas être imprimé horizontalement.</item>
+		</list>
+		Les couleurs qui peuvent être utilisées dans les chaînes de style sont les mêmes que celles que l'on trouve sous <a href="nhlp://colors?frame=new">help colors</a>. Les extrémités de lignes de <code>line()</code>, <code>curve()</code> et <code>arc()</code>, les variantes de lignes de tous les tracés de lignes et l'apparence des points pour <code>point()</code> sont décrites par la liste figurant sous <a href="nhlp://linestyles?frame=new">help linestyles</a>.
+		Pour les objets remplis (comme <code>circle()</code>, <code>face()</code> et <code>ellipse()</code>), l'ajout de <code>#</code> réduit la forme à son contour ou la rend visible. A l'exception de <code>face()</code> et <code>triangle()</code>, tous les objets de surface peuvent également être modifiés avec <code>@</code>, qui affiche le contour et l'aire. De plus, l'épaisseur des lignes peut être modifiée à l'aide des chiffres 0-9 qui sont transmis à la chaîne de style.
+		En combinaison avec le mode de composition des tracés, le mode de dessin peut également être utilisé pour dessiner à l'intérieur d'autres tracés ou pour ajouter des annotations supplémentaires.
+		<example desc="Zeichnen eines einfachen roten Kreisels:">
+			draw3d cone(-2,2,4,0,0,1.5, "r"), cone(-2,2,4,-3,3,6,4,4, "r@"), cone(-3,3,6,-5,5,10,0.5,0.2, "r@") -set light
+		</example>
+		<img src="<>/docs/draw3d.png" />
+		<em>Voir aussi :</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://draw?frame=self">help draw</a>, <a href="nhlp://colors?frame=self">help colors</a>, <a href="nhlp://linestyles?frame=self">help linestyles</a> et <a href="nhlp://compose?frame=self">help compose</a>
+	</contents>
+</article>

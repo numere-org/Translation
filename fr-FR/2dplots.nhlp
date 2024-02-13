@@ -1,0 +1,99 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2016  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="2dplots">
+	<title string="Gitter-, Kontur-, Dichte- oder Flächenplots" idxkey="cont, dens, mesh, surf" />
+	<keywords>
+		<keyword>cont</keyword>
+		<keyword>dens</keyword>
+		<keyword>mesh</keyword>
+		<keyword>surf</keyword>
+		<keyword>alpha</keyword>
+		<keyword>noalpha</keyword>
+		<keyword>light</keyword>
+		<keyword>nolight</keyword>
+		<keyword>cscale</keyword>
+		<keyword>ctick</keyword>
+		<keyword>rotate</keyword>
+		<keyword>colorrange</keyword>
+		<keyword>colorscheme</keyword>
+		<keyword>colormask</keyword>
+		<keyword>nocolormask</keyword>
+		<keyword>clog</keyword>
+		<keyword>noclog</keyword>
+		<keyword>colorbar</keyword>
+		<keyword>nocolorbar</keyword>
+		<keyword>fcont</keyword>
+		<keyword>nofcont</keyword>
+		<keyword>pcont</keyword>
+		<keyword>nopcont</keyword>
+		<keyword>lcont</keyword>
+		<keyword>nolcont</keyword>
+		<keyword>orthopro</keyword>
+		<keyword>noorthopro</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			surf f(x,y), ...
+			surf f(x,y) "LEGEND", ... -set [x1:x2,y1:y2,z1:z2] ...\n
+			mesh f(x,y), ...
+			mesh f(x,y) "LEGEND", ... -set orthoproject ...\n
+			cont f(x,y), ...
+			cont f(x,y) "LEGEND", ... -set lcont=VAL ...\n
+			dens f(x,y), ...
+			dens f(x,y) "LEGEND", ... -set clog ...
+		</syntax>
+		Les commandes <code>mesh</code>, <code>cont</code>, <code>dens</code> et <code>surf</code> permettent de représenter des fonctions de la forme <expr>z = f(x,y)</expr>, c'est-à-dire des fonctions dont <expr>la coordonnée z</expr> est donnée par une fonction de <expr>x</expr> et <expr>y</expr>. <code>mesh</code> génère un tracé de grille, <code>cont</code> un tracé de lignes de contour (lignes de niveau), <code>dens</code> un tracé de densité (les couleurs correspondent <expr>aux valeurs de z</expr>) et <code>surf</code> un tracé de surface.
+		Les variables de tracé sont <expr>x</expr> et <expr>y</expr>. Toutes les autres variables sont considérées comme des paramètres.
+		Pour pouvoir représenter des ensembles de données avec ces commandes, ceux-ci doivent être disponibles sous la forme d'une grille de données. Une telle grille peut être créée à partir d'un ensemble de données avec <code>datagrid</code>. Voir <a href="nhlp://datagrid?frame=new">help datagrid</a> pour les explications correspondantes à cette fonction.
+		Ce mode de tracé introduit un troisième intervalle qui peut être influencé en tant qu'option, à savoir <code>[x1:x2,y1:y2,z1:z2]</code>.
+		Les paramètres supplémentaires pour <code>mesh</code>, <code>cont</code>, <code>dens</code> et <code>surf</code> sont les suivants :
+		<list>
+			<item node="clog/noclog">Mise à l'échelle logarithmique du schéma de couleurs</item>
+			<item node="colorbar/nocolorbar">Activer/désactiver l'échelle de couleurs</item>
+			<item node="colorrange=C1:C2">Adapter l'intervalle de l'échelle de couleurs à [C1,C2].</item>
+			<item node="colorscheme=SCHEMA">Sélectionner le schéma de couleurs SCHEMA. Certains schémas prédéfinis sont <code>rainbow</code>, <code>grey</code>, <code>hot</code>, <code>cold</code> et <code>map</code>. Voir <a href="nhlp://colors?frame=new">help colors</a> pour d'autres schémas.</item>
+			<item node="cscale=WERT">Indiquer le facteur d'échelle VALEUR de l'échelle de couleurs</item>
+			<item node="cticklabels=LABELS">Définir une échelle de couleurs auto-définie. Les unités de l'échelle sont réparties de manière équidistante. Les LABELS doivent être indiqués sous forme de chaîne de caractères, les valeurs de l'échelle devant être séparées par des "\\n".</item>
+			<item node="cticks=FORMAT">Définir le formatage des étiquettes de l'échelle de couleurs sur FORMAT. Voir aussi <a href="nhlp://ticks?frame=new">help ticks</a></item>
+			<item node="fcont=NUM/<br/>  nofcont">Activer/désactiver le remplissage des contours en couleur. La valeur optionnelle NUM permet de modifier le nombre de lignes de contour-.</item>
+			<item node="lcont=NUM/<br/>  nolcont">Activer/désactiver les contours dotés de valeurs. La valeur optionnelle NUM permet de modifier le nombre de lignes de contour.</item>
+			<item node="orthoproject/<br/>  noorthoproject">Activer/désactiver la projection orthogonale des tracés 2D et 3D sur les plans xy, xz et yz. Crée les quatre tracés comme sous-tracés dans le fichier de sortie souhaité. Disponible pour les tracés de surface et de grille, ainsi que pour les trajectoires 3D et les champs de vecteurs 3D.</item>
+			<item node="pcont=NUM/<br/>  nopcont">Désactiver/activer la projection des contours sur le plan inférieur. La valeur optionnelle NUM permet de modifier le nombre de lignes de contour-.</item>
+			<item node="rotate=THETA,PHI">Faire pivoter la vue du graphique autour des angles PHI et THETA. PHI fait pivoter le graphique autour de l'<expr>axe z</expr> et THETA l'incline.</item>
+		</list>
+		<code>lcont</code> utilise automatiquement les styles de lignes de contour correspondants pour les commandes <code>mesh</code> et <code>surf</code>. Dans le cas de <code>cont</code>, ils sont colorés en fonction de la <expr>valeur z</expr>.
+		L'option <code>rotate</code> ne nécessite pas obligatoirement deux angles. Il est également possible d'indiquer uniquement l'angle à modifier à l'aide de <code>rotate=THETA,</code> ou <code>rotate=,PHI</code>. La virgule est toutefois essentielle. Les angles par défaut sont THETA=60 et PHI=115.
+		Pour <code>mesh</code> et <code>surf</code>, il existe encore l'option spéciale <code>cut/nocut</code>, qui masque ou affiche les deux octants tournés vers l'avant et peut ainsi rendre visible le centre du tracé.
+		Pour la commande <code>surf</code>, il existe encore deux options supplémentaires qui peuvent être activées :
+		<list>
+			<item node="alpha=VAL/<br/>  noalpha">Activer/désactiver la transparence de la surface. L'intensité de la transparence (0 = aucune, 1 = entièrement transparente) peut être indiquée avec la valeur optionnelle VAL.</item>
+			<item node="alphamask/<br/>  noalphamask">Calculer la transparence de navigation en fonction d'un deuxième ensemble de données/fonction.</item>
+			<item node="colormask/<br/>  nocolormask">Colorer la surface en fonction d'un deuxième ensemble de données/fonction. L'échelle de couleurs doit être adaptée si nécessaire à l'aide de <code>colorrange=c1:c2</code>.</item>
+			<item node="light[=TYP]/<br/>  nolight">activer/désactiver l'effet de lumière 3D plastique. Le TYP est facultatif : TYP=smooth ou TYP=soft permet de passer à une lumière plus douce.</item>
+		</list>
+		<example desc="Oberflächenplot einer Gaußglocke mit den Optionen <code>box light opng=gauss</code>:" type="verbatim">
+			|&lt;- surf exp(-(x^2+y^2)/5) -set box light opng=gauss
+			|-&gt; Calculer les données pour le tracé de surface 2D ...
+			|-&gt; Enregistrer ... Succès!
+			| Enregistré sous "&PLOTPATH&/gauss.png".
+		</example>
+		<img src="<>/docs/gauss.png" />
+		<em>Voir aussi :</em> <a href="nhlp://plot?frame=self">help plot</a>, <a href="nhlp://grad?frame=self">help grad</a> et <a href="nhlp://datagrid?frame=self">help datagrid</a>
+	</contents>
+</article>
