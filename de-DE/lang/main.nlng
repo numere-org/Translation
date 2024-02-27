@@ -844,6 +844,7 @@ GUI_OPTIONS_BRACE_AUTOCOMP=Klammern: ( ) [ ] { }
 GUI_OPTIONS_BLOCK_AUTOCOMP=Kontrollflussblöcke
 GUI_OPTIONS_QUOTE_AUTOCOMP=Anführungszeichen: " "
 GUI_OPTIONS_SMARTSENSE_AUTOCOMP=SmartSense (Kontextbezogene Vervollständigung)
+GUI_OPTIONS_CALLTIP_DETECT_ARGS=Erkenne Argumenttypen im Kontext-Tooltip
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
 GUI_OPTIONS_LATEXPATH=Pfad zu den Binaries der LaTeX-Distribution%%LINEBREAK%%(Der Unterordner "bin" oder "bin/x64" in der LaTeX-Distribution)
 GUI_OPTIONS_MISC=Verschiedenes

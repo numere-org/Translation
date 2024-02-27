@@ -844,6 +844,7 @@ GUI_OPTIONS_BRACE_AUTOCOMP=Braces: ( ) [ ] { }
 GUI_OPTIONS_BLOCK_AUTOCOMP=Control flow blocks
 GUI_OPTIONS_QUOTE_AUTOCOMP=Quotation marks: " "
 GUI_OPTIONS_SMARTSENSE_AUTOCOMP=SmartSense (Context-based autocompletion)
+GUI_OPTIONS_CALLTIP_DETECT_ARGS=Detect argument types in context tooltip
 GUI_OPTIONS_PRECISION=Precision (Decimals int the console)
 GUI_OPTIONS_LATEXPATH=Path to the binaries of your LaTeX distribution%%LINEBREAK%%(The subdirectory "bin" or "bin/x64" in the LaTeX distribution)
 GUI_OPTIONS_MISC=Miscellaneous
