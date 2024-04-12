@@ -31,14 +31,14 @@
 			sort ... -set desc ...\n
 			{VAL} = sort ... -set index ...
 		</syntax>
-		NumeRe kann geladene Daten, Daten in einer Tabelle, in einem Cluster oder Zeichenketten im <code>string()</code> Objekt mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
+		NumeRe kann Daten in einer Tabelle oder in einem Cluster mit dem Kommando <code>sort</code> sortieren. Dabei kann auch nur ein Teil des Datenobjektes ausgewählt werden:
 		<codeblock>
-			sort DATEN(I1:I2,J1:J2)
+			sort TABLE(I1:I2,J1:J2)
 			sort CLUSTER{I1:I2}
 		</codeblock>
 		Der standardmäßige Aufruf des Kommandos sortiert den übergebenen Datensatz spaltenweise und aufsteigend. Welche Spalten sortiert werden sollen, kann mit der Option <code>cols</code> beeinflusst werden: <code>cols=SPALTEN</code>. Dazu können auch Indexspalten ausgewählt werden, nach denen sortiert werden soll:
 		<codeblock>
-			sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN]
+			sort TABLE(I1:I2,J1:J2) -set cols=INDEX[SPALTEN]
 		</codeblock>
 		Indexspalten können hierarchisch verwendet werden, indem in <code>SPALTEN</code> erneut <code>INDEX[SPALTEN]</code> verwendet wird: <code>cols=INDEX1[INDEX2[INDEX3[SPALTEN]]]</code>. Zu beachten ist, dass hierbei auch die Indexspalten sortiert werden.
 		<em>Hinweis:</em> Cluster bestehen nur aus einer Spalte, daher ist die Option <code>cols=SPALTEN</code> in diesem Fall ohne Funktion. Da Cluster gemischte Datentypen enthalten können, werden die Werte eines gemischten Clusters <em>immer</em> als Zeichenketten interpretiert.
@@ -46,7 +46,7 @@
 		Beim Sortieren von Zeichenketten ist darauf zu achten, dass NumeRe diese standardmäßig naiv sortiert (also Groß- und Kleinbuchstaben als unterschiedliche Zeichen betrachtet). Mit der Option <code>ignorecase</code> kann umgeschaltet werden, damit Groß- und Kleinbuchstaben als dieselben Zeichen betrachtet werden.
 		Anstatt die Daten selbst zu sortieren, kann mittels <code>index</code> ein Indexvektor zurückgegeben werden, mit dessen Hilfe die Spalten selbst sortiert werden können:
 		<codeblock>
-			INDEX() = sort DATEN(I1:I2,J1:J2) -set cols=INDEX[SPALTEN] index
+			INDEX() = sort TABLE(I1:I2,J1:J2) -set cols=INDEX[SPALTEN] index
 		</codeblock>
 		<example desc="Sortieren der Daten nach Spalten 1 und 2">
 			sort data() -set cols=1[2[3:]]
