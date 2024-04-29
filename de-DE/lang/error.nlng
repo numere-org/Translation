@@ -502,5 +502,5 @@ ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=Die Variable, bezüglich welcher die Nullstel
 # CATCHALL_ERROR
 # ==========================
 ERR_CATCHALL=ENTER drücken, um mit NumeRe fortzufahren ...
-ERR_GENERIC_0=Der Fehler Nr. %%1%% trat auf und zwang NumeRe, alle laufenden Auswertungen abzubrechen. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Wir freuen uns über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://sourceforge.net/p/numere/tickets/>.
+ERR_GENERIC_0=Der Fehler Nr. %%1%% trat auf und zwang NumeRe, alle laufenden Auswertungen abzubrechen. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Wir freuen uns über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
 ERR_GENERIC_1=%%ERR_SEEALSO%%: "help numere"

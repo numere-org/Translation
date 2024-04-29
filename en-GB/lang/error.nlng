@@ -502,5 +502,5 @@ ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=The variable for searching the intersections 
 # CATCHALL_ERROR
 # ======================
 ERR_CATCHALL=Press ENTER to resume NumeRe ...
-ERR_GENERIC_0=The error no. %%1%% appeared and requested the termination of all processes. Please consider, informing us about this error. We're very grateful, if we receive a bug message via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/>.
+ERR_GENERIC_0=The error no. %%1%% appeared and requested the termination of all processes. Please consider, informing us about this error. We're very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
 ERR_GENERIC_1=%%ERR_SEEALSO%%: "help numere"
