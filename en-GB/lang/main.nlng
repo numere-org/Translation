@@ -695,7 +695,7 @@ GUI_DLG_COMPARE_FILE_2=Select second file for comparison
 GUI_DLG_CVS_HEAD=NumeRe: Conditional cell color scheme
 GUI_DLG_CVS_CONDITION=Color scheme condition
 GUI_DLG_CVS_VALUES=Cell values
-GUI_DLG_CVS_COLORS=Color scheme  definition
+GUI_DLG_CVS_COLORS=Color scheme definition
 GUI_DLG_CVS_COLOR_COUNT=Use %%1%% colours
 GUI_DLG_CVS_LT_GT_EQ_VALUE=Value(s)
 GUI_DLG_CVS_LT_GT_EQ_VALUE_EXP=Multiple values may be entered via {VAL1,VAL2,...}.
@@ -708,6 +708,8 @@ GUI_DLG_CVS_INTERVAL=Map colours to range
 GUI_DLG_CVS_INTERVAL_EXCL_START=Lower boundary
 GUI_DLG_CVS_INTERVAL_EXCL_END=Upper boundary
 GUI_DLG_CVS_INTERVAL_EXCL=Map colours to range and external values
+GUI_DLG_CLOSE_DEBUGGING=The debugger currently is in control.%%LINEBREAK%%Do you want to stop the process and close NumeRe?
+GUI_DLG_CLOSE_DEBUGGING_TITLE=NumeRe: Debugger running
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
 GUI_TIPOTD_DYK=Did you know ...?
