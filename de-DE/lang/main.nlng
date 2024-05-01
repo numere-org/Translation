@@ -733,6 +733,7 @@ GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Klicken und ziehen oder mit Doppelklick dir
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche
+GUI_OPTIONS_TABLEREP=Tabellenanzeige
 GUI_OPTIONS_INTERNALS=Interne Konfiguration
 GUI_OPTIONS_DEFAULTPATHS=Standardordner
 GUI_OPTIONS_MISCPATHS=Zusätzliche Pfade
@@ -754,6 +755,7 @@ GUI_OPTIONS_DEFCTRL=Funktionsdefinitionsverwaltung%%LINEBREAK%%(automatisches La
 GUI_OPTIONS_COMPACTTABLES=Kompakte Tabellendarstellung
 GUI_OPTIONS_SHOWGRIDLINES=Gitternetzlinien anzeigen
 GUI_OPTIONS_AUTOGROUPCOLS=Spalten mit gleichen Überschriften automatisch gruppieren
+GUI_OPTIONS_SHOWQMARKS=Umschließe Zeichenketten mit Anführungszeichen
 GUI_OPTIONS_EMPTYCOLS=Laden leerer Spalten
 GUI_OPTIONS_LOGFILE=Protokollierung der Konsole
 GUI_OPTIONS_HINTS=Tipps und Tricks beim Start anzeigen

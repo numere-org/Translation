@@ -733,6 +733,7 @@ GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Click and drag or directly insert into the 
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=User interface
+GUI_OPTIONS_TABLEREP=Table display
 GUI_OPTIONS_INTERNALS=Internal configuration
 GUI_OPTIONS_DEFAULTPATHS=Default paths
 GUI_OPTIONS_MISCPATHS=Additional paths
@@ -754,6 +755,7 @@ GUI_OPTIONS_DEFCTRL=Definition control%%LINEBREAK%%(automatic loading and saving
 GUI_OPTIONS_COMPACTTABLES=Compact table view
 GUI_OPTIONS_SHOWGRIDLINES=Show grid lines
 GUI_OPTIONS_AUTOGROUPCOLS=Automatically group columns with equal column headings
+GUI_OPTIONS_SHOWQMARKS=Enclose strings in quotation marks
 GUI_OPTIONS_EMPTYCOLS=Loading of empty cols
 GUI_OPTIONS_LOGFILE=Logging of console input
 GUI_OPTIONS_HINTS=Show the "Tip of the day" at start-up
