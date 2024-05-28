@@ -182,7 +182,7 @@ getlasterror()~Returns the last error processed by a try-catch block~try catch t
 getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getompthreads()~Returns the number of the maximal possible OpenMP threads~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
-getutcofset()~Returns the current time zone~getutcofset() time zone~getutcofset(
+get_utc_offset()~Returns the current time zone~get_utc_offset() time zone~get_utc_offset(
 getuilang()~Returns information about user's current language~language translation sprache deutsch german english english~getuilang()
 getversioninfo()~Returns information about the current NumeRe version~version release candidate date datum build~getversioninfo()
 global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global
@@ -218,12 +218,12 @@ is_blank(STR)~Determines for each character in STR, whether it is a blank charac
 is_cluster(STR)~Returns true, if STR is a cluster, false otherwise~is_cluster() cluster variablen type detection erkennung~is_cluster(
 is_cntrl(STR)~Determines for each character in STR, whether it is a control  character type, or not~is_cntrl() character type representation zeichen~is_cntrl(
 is_data(STR)~Returns true, if STR is a data object (a table or a cluster), false otherwise~is_data() datafile cache cluster variablen type detection erkennung~is_data(
-is_daylightsavingtime(nYear, nMonth, nDay)~Returns true, if the date given is a daylight saving time, false otherwise~is_daylightsavingtime() daylight savingtime time saving~is_daylightsavingtime(
+is_daylightsavingtime(nDate)~Returns true, if the date given is a daylight saving time, false otherwise~is_daylightsavingtime() daylight savingtime time saving~is_daylightsavingtime(
 is_digit(STR)~Determines for each character in STR, whether it is a decimal character type, or not~is_digit() character type representation zeichen~is_digit(
 is_dirpath(STR)~Returns true if string is a valid directory name and false if not~is_dirpath() directory valid pfad path ordner folder~is_dirpath(
 is_filepath(STR)~Returns true if string is a valid file directory and name and false if not~is_filepath() directory valid pfad path ordner folder~is_filepath(
 is_graph(STR)~Determines for each character in STR, whether it is a graphical character type, or not~is_graph() character type representation zeichen~is_graph(
-is_leapyear(nYear)~Returns true if the year is a leap year, otherwise returns false~is_leapyear() leap year~is_leapyear(
+is_leapyear(nDate)~Returns true if the year is a leap year, otherwise returns false~is_leapyear() leap year~is_leapyear(
 is_lower(STR)~Determines for each character in STR, whether it is a lowercase character type, or nott~is_lower() character type representation zeichen~is_lower(
 is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number~is_nan(
 is_print(STR)~Determines for each character in STR, whether it is a printable character type, or not~is_print() character type representation zeichen~is_print(
