@@ -432,6 +432,7 @@ swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austausch
 switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TAB().aliasof(STR)~Wandelt die aktuelle Tabelle in einen Alias der übergebenen Tabelle um~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Führt eine Varianzanalyse für die Kategorien der selektierten Spalten durch~anovaof() analysis of variance~.anovaof(
+TAB().kmeansof({n},m,f,r)~Clustert Daten mittels kmeans Algorithmus~kmeansof() k-means clustering~.kmeansof(
 TAB().binsof(n,b)~Berechnet ein einfaches Histogramm der Daten in der Spalte~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Gibt die Kategorien der Spalten zurück~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Aktualisiert die Kategorien einer kategorialen Spalte~categorize() category factor~.categorize(
