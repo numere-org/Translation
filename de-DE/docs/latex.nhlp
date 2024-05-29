@@ -45,6 +45,24 @@
 			\end{itemize}
 			Text
 		</verbatim>
+		Enumerationen wie diese
+		<verbatim>
+			#*! Text
+			1. Nummerierung
+			2. Nummerierung
+			Text
+			*#
+		</verbatim>
+		werden ebenfalls in die entsprechende LaTeX-Umgebung übersetzt:
+		<verbatim>
+			Text
+			\begin{enumerate}
+			\item Nummerierung
+			\item Nummerierung
+			\end{enumerate}
+			Text
+		</verbatim>
+		Für beide Fälle gilt, dass die Zugehörigkeit einzelner Zeilen zu den Spiegelstrichen bzw. Enumerationen durch eine entsprechende Einrückung mit Leerzeichen bestimmt wird (Zahl der Zeichen zum jeweiligen Textanfang in Leerzeichen).
 		Wenn Code im normalen Text gezeigt werden soll, so muss dieser Abschnitt durch doppelte Ausrufezeichen umgegeben sein: <code>!!CODE IN EINEM TEXT!!</code>
 		<a href="nhlp://procedure?frame=new">Prozedur-Dokumentationen</a> (auch als "Prozedur-Header" bekannt) orientieren sich am Doxygen-Standard und definieren dazu einige Signalwörter, die in ebendiesem Artikel erläuert werden. Diese Signalwörter werden beim Konvertieren in ein PDF in spezielle Elemente wie z.B. Parametertabellen umgewandelt.
 		Kommentare, die hinter <code>##~</code> stehen oder sich zwischen <code>#** ... *#</code> befinden, werden vollkommen ignoriert und nicht in der Dokumentation angezeigt. (Dies kann verwendet werden, um auskommentierten Code zu verstecken.)

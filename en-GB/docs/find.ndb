@@ -414,6 +414,7 @@ strfndall(STR1,STR2,P,P)~Returns all occurrences of STR1 in STR2 between both po
 string(i)~String object with access to the string "i"~zeichenketten string()~help string()
 string_cast(EXPR)~Transforms EXPR directly to a string and ignores possible string expressions~zeichenketten umwandeln transformation conversion convert wert string_cast() strings~string_cast(
 strip(sStr,sPref,sSuff,nStripAll)~Removes the prefix sPref and the suffix sSuff from the string sStr, if they have a non-zero length~stripping prefixes suffixes startswith endswith~strip(
+strjoin({STR},STR,LOG)~Joins the strings into a single string with an optional separator~strjoin() concatenate verknüpfen stringjoin zeichenketten strings~strjoin(
 strlen(STR)~Returns the length of the string STR~zeichenketten strings laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Searches for the first occurrence of a char of S1 in the string S2 going from position P~zeichenketten strings find strmatch()~strmatch(
 strmatchall(STR1,STR2,P,P)~Searches for the first occurrences of each character of STR1 in STR2 between both positions~zeichenketten strings finden alle find strmatch() strmatchall()~strmatchall(
@@ -429,7 +430,7 @@ student_t_pdf(x,nu)~Get the probability density function at x of Student's t-dis
 student_t_rd(nu)~Returns a random number from Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random distributionfunction~student_t_rd(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten strings ausschnitt ausschneiden substr()~substr(
-sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings and will concatenate them~summe summieren zeichenketten strings sum()~sum(
+sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings as well~summe summieren zeichenketten strings sum()~sum(
 surf~Generates surface plots~oberflaechenplot oberflächenplot surface()~help surf
 surf3d~Generates 3D surface plots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
 swap~Swaps the contents of two tables~austauschen exchange content table()~help swap
@@ -437,6 +438,7 @@ switch (EX)~Starts the definition of a switch condition, see "help switch"~cases
 tab~Defines the local tables in a procedure~procedure local tables~help str
 TAB().aliasof(STR)~Converts the current table into an alias of the passed table~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
+TAB().kmeansof({n},m,f,r)~Clusters data using the k-means algorithm~kmeansof() k-means clustering~.kmeansof(
 TAB().binsof(n,b)~Calculates a simple histogram of the data in the column~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Returns the categories of the columns~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Updates the categories of a category column~categorize() category factor~.categorize(

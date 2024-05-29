@@ -412,6 +412,7 @@ strfndall(STR1,STR2,P,P)~Gibt alle Positionen, an denen STR1 in STR2 zwischen be
 string(i)~Zeichenketten-Objekt mit Zugriff auf Zeichenkette "i", siehe "help string"~zeichenketten string()~help string()
 string_cast(EXPR)~Wandelt EXPR ungeachtet eventueller Rechenoperationen in eine Zeichenkette um~zeichenketten umwandeln transformation conversion convert wert string_cast() strings~string_cast(
 strip(sStr,sPref,sSuff,nStripAll)~Entfernt den Präfix sPref und den Suffix sSuff von der Zeichenkette sStr, wenn sie nicht-leer sind~stripping prefixes suffixes startswith endswith~strip(
+strjoin({STR},STR,LOG)~Verkettet die Zeichenketten mit einem optionalen Separator~strjoin() concatenate verknüpfen stringjoin zeichenketten strings~strjoin(
 strlen(STR)~Gibt die Länge der Zeichenkette STR zurück~zeichenketten strings laenge länge strlen()~strlen(
 strmatch(S1,S2,P)~Sucht das erste Auftreten eines Zeichens aus S1 in der Zeichenkette S2 ab dem Zeichen P~zeichenketten strings find strmatch()~strmatch(
 strmatchall(STR1,STR2,P,P)~Sucht die ersten Auftreten aller Zeichen aus STR1 in der Zeichenkette STR2 zwischen beiden Positionen~zeichenketten strings finden alle find strmatch() strmatchall()~strmatchall(
@@ -435,6 +436,7 @@ switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch
 tab~Definiert die lokalen Tabellen einer Prozedur~procedure local tables~help str
 TAB().aliasof(STR)~Wandelt die aktuelle Tabelle in einen Alias der übergebenen Tabelle um~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Führt eine Varianzanalyse für die Kategorien der selektierten Spalten durch~anovaof() analysis of variance~.anovaof(
+TAB().kmeansof({n},m,f,r)~Clustert Daten mittels kmeans Algorithmus~kmeansof() k-means clustering~.kmeansof(
 TAB().binsof(n,b)~Berechnet ein einfaches Histogramm der Daten in der Spalte~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Gibt die Kategorien der Spalten zurück~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Aktualisiert die Kategorien einer kategorialen Spalte~categorize() category factor~.categorize(
