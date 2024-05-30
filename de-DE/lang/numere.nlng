@@ -163,6 +163,7 @@ PARSERFUNCS_LISTFUNC_FUNC_GETLASTERROR_[STRING]=			getlasterror()               
 PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=		getmatchingparens(sLine)                                              VAL      - Gibt die Position der passenden schließenden Klammer in sLine zurück. Wenn das erste Zeichen keine Klammer ist, wird die passende Klammer zur als erstes gefundenen bestimmt
 PARSERFUNCS_LISTFUNC_FUNC_GETOMPTHREADS_[NUM]=				getompthreads()                                                       VAL      - Gibt die Zahl der maximal möglichen OpenMP-Threads zurück. Das entspricht im Allgemeinen der Zahl der logischen CPU-Kerne.
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(sLine,nPos)                                                    STR      - Gibt den Wert eines Parameters in der Zeichenkette sLine, dessen Wert an der Stelle nPos beginnt (z.B. nach "="), als Zeichenkette zurück. Leerzeichen zwischen nPos und der tatsächlichen Position des Werts werden ignoriert.
+PARSERFUNCS_LISTFUNC_FUNC_GET_UTC_OFFSET_[TIME]=			get_utc_offset()                                                      VAL      - Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit
 PARSERFUNCS_LISTFUNC_FUNC_GETUILANG_[STRING]=				getuilang()                                                           STR      - Gibt Informationen zur Benutzersprache zurück
 PARSERFUNCS_LISTFUNC_FUNC_GETVERSIONINFO_[STRING_TIME]=		getversioninfo()                                                     {STR}     - Gibt Informationen zur aktuellen NumeRe-Version als Schlüssel-Wert-Liste zurück. Die Informationen umfassen den Versionsnamen, das Build-Datum, die vollständige Versionsnummer, die Version als Dateibezeichner (z.B. für den Installer) und die Architektur (32 bit bzw. 64 bit)
 PARSERFUNCS_LISTFUNC_FUNC_HCAT_[MAT]=						hcat(mLeft,mRight)                                                    MAT      - Verkettet die zwei Matrizen horizontal. Es werden also die Spalten der zweiten Matrix an die Spalten der ersten Matrix angefügt. Diese Operation setzt voraus, dass beide Matrizen die gleiche Zeilenzahl haben, da ansonsten die Operation nicht durchführbar ist.
@@ -180,10 +181,12 @@ PARSERFUNCS_LISTFUNC_FUNC_IS_BLANK_[STRING_LOGIC]=			is_blank(sToParse)         
 PARSERFUNCS_LISTFUNC_FUNC_IS_CLUSTER_[STRING_LOGIC]=		is_cluster(sObject)                                                   LOG      - Gibt true zurück, wenn sObject ein Cluster ist, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_CNTRL_[STRING_LOGIC]=			is_cntrl(sToParse)                                                   {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein Steuerungszeichen handelt oder nicht
 PARSERFUNCS_LISTFUNC_FUNC_IS_DATA_[STRING_LOGIC]=			is_data(sObject)                                                      LOG      - Gibt true zurück, wenn sObject ein Datenobjekt (eine Tabelle oder ein Cluster) ist, sonst false
+PARSERFUNCS_LISTFUNC_FUNC_IS_DAYLIGHTSAVINGTIME_[TIME]=		is_daylightsavingtime(nDate)                                          LOG      - Gibt true zurück, wenn das angegebene Datum eine Sommerzeit ist, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_DIGIT_[STRING_LOGIC]=			is_digit(sToParse)                                                   {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein numerisches Zeichen handelt oder nicht
 PARSERFUNCS_LISTFUNC_FUNC_IS_DIRPATH_[STRING_LOGIC]=		is_dirpath(sPath)                                                     LOG      - Gibt true zurück, wenn sPath ein valider Ordnerpfad ist, anderenfalls false
 PARSERFUNCS_LISTFUNC_FUNC_IS_FILEPATH_[STRING_LOGIC]=		is_filepath(sPath)                                                    LOG      - Gibt true zurück, wenn sPath ein valider Dateipfad ist, anderenfalls false
 PARSERFUNCS_LISTFUNC_FUNC_IS_GRAPH_[STRING_LOGIC]=			is_graph(sToParse)                                                   {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein graphisches Zeichen handelt oder nicht
+PARSERFUNCS_LISTFUNC_FUNC_IS_LEAPYEAR_[TIME]=				is_leapyear(nDate)                                                    LOG      - Gibt true zurück, wenn das Jahr ein Schaltjahr ist, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_LOWER_[STRING_LOGIC]=			is_lower(sToParse)                                                   {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein Kleinbuchstaben handelt oder nicht
 PARSERFUNCS_LISTFUNC_FUNC_IS_NAN_[LOGIC]=					is_nan(x)                                                             LOG      - Gibt true zurück, wenn x den Wert nan hat, sonst false
 PARSERFUNCS_LISTFUNC_FUNC_IS_PRINT_[STRING_LOGIC]=			is_print(sToParse)                                                   {LOG}     - Bestimmt für jedes Zeichen in sToParse, ob es sich um ein druckbares Zeichen handelt oder nicht
@@ -278,8 +281,8 @@ PARSERFUNCS_LISTFUNC_FUNC_RINT_[NUM]=						rint(x)                              
 PARSERFUNCS_LISTFUNC_FUNC_ROOF_[NUM]=						roof(x)                                                               VAL      - rundet x auf die nächsthöhere Ganzzahl auf. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_ROUND_[NUM]=						round(x,n)                                                            VAL      - rundet x auf n Nachkommastellen. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_SBESSEL_[NUM_POLYNOMIAL_PHYSICS]=	sbessel(n,x)                                                          VAL      - sphärische Besselfunktion der Ordnung n. %%DEFINED_REAL%%
-PARSERFUNCS_LISTFUNC_FUNC_SECH_[NUM_HYPERBOLIC]=			sech(x)                                                              	VAL      - Sekans Hyperbolicus von x. %%DEFINED_FOR_ALL_C_RANGE_R%% [1,inf]
-PARSERFUNCS_LISTFUNC_FUNC_SEC_[NUM_TRIGONOMETRIC]=			sec(x)                                                               	VAL      - Sekans von x. %%DEFINED_FOR_ALL_C_RANGE_R%% [-1,1]
+PARSERFUNCS_LISTFUNC_FUNC_SECH_[NUM_HYPERBOLIC]=			sech(x)                                                               VAL      - Sekans Hyperbolicus von x. %%DEFINED_FOR_ALL_C_RANGE_R%% [1,inf]
+PARSERFUNCS_LISTFUNC_FUNC_SEC_[NUM_TRIGONOMETRIC]=			sec(x)                                                                VAL      - Sekans von x. %%DEFINED_FOR_ALL_C_RANGE_R%% [-1,1]
 PARSERFUNCS_LISTFUNC_FUNC_SELECT_[MAT]=						select(mVals,mRows,mCols)                                             MAT      - Extrahiert Werte aus der Matrix mVals. Dabei werden die Zeilenindices aus der Matrix mRows und die Spaltenindices aus der Matrix mCols simultan entnommen. mRows und mCols müssen identische Dimensionen haben oder Skalare sein. Sind diese Vektoren, so gibt die Funktion auch einen Vektor zurück.
 PARSERFUNCS_LISTFUNC_FUNC_SHA256_[STRING]=					sha256(sString,asFile=false)                                          STR      - Berechnet die SHA-256 der übergebenen Zeichenkette sString oder interpretiert sString als Dateinamen (asFile=true) und berechnet die SHA-256 der korrespondierenden Datei. Das Ergebnis wird als hexadezimal formatierter Wert in Form einer Zeichenkette zurück gegeben.
 PARSERFUNCS_LISTFUNC_FUNC_SHUFFLE_[MAT]=					shuffle(nSel,nVal=nSel)                                               MAT      - Gibt nSel zufällig ausgewählte und eindeutige Werte aus einem 1:nVal array zurück. nVal ist ein optionaler Wert und ist standardmäßig identisch zu nSel.
@@ -1178,6 +1181,10 @@ GUI_EDITOR_CALLTIP_CONST_GAMMA_E_[PARTICLE]=_gamma_e = 1.760859644e11 [1/(T s)]
 GUI_EDITOR_CALLTIP_CONST_LANDE_E_[PARTICLE]=_lande_e = -2.00231930436182
 GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_DELTA_[MATHEMATICAL]=_feigenbaum_delta = 4.6692016091
 GUI_EDITOR_CALLTIP_CONST_FEIGENBAUM_ALPHA_[MATHEMATICAL]=_feigenbaum_alpha = 2.5029078751
+GUI_EDITOR_CALLTIP_CONST_DAY_SECS_[TIME]=_day_secs = 86400
+GUI_EDITOR_CALLTIP_CONST_HOUR_SECS_[TIME]=_hour_secs = 3600
+GUI_EDITOR_CALLTIP_CONST_WEEK_SECS_[TIME]=_week_secs = 604800
+GUI_EDITOR_CALLTIP_CONST_YEAR_SECS_[TIME]=_year_secs = 31536000
 GUI_EDITOR_CALLTIP_CONST_UI8_MAX_[INTERNAL]=ui8_max = 255
 GUI_EDITOR_CALLTIP_CONST_I8_MAX_[INTERNAL]=i8_max = 127
 GUI_EDITOR_CALLTIP_CONST_I8_MIN_[INTERNAL]=i8_min = -128
