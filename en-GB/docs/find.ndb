@@ -438,7 +438,6 @@ switch (EX)~Starts the definition of a switch condition, see "help switch"~cases
 tab~Defines the local tables in a procedure~procedure local tables~help str
 TAB().aliasof(STR)~Converts the current table into an alias of the passed table~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
-TAB().kmeansof({n},m,f,r)~Clusters data using the k-means algorithm~kmeansof() k-means clustering~.kmeansof(
 TAB().binsof(n,b)~Calculates a simple histogram of the data in the column~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Returns the categories of the columns~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Updates the categories of a category column~categorize() category factor~.categorize(
@@ -448,10 +447,13 @@ TAB().covarof(n,m,{r1},{r2})~Calculates the covariance of the columns~covarof() 
 TAB().describe(STR)~Updates the description of the table~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Returns the description of the table~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
 TAB().fndcols({STR},l)~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
+TAB().getunit({c})~Returns the units of the values in the columns~getunit() SI measurement messung system units einheiten~.getunit(
 TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().insertcells(r,c,r1,c1)~Inserts a block of cells into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
 TAB().insertcols(c,n)~Inserts columns into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
 TAB().insertrows(r,n)~Inserts rows into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
+TAB().inSIunits(c)~Returns the values of the column in the SI units system~inSIunits() SI measurement messung system convert konversion konvertieren units einheiten  umrechnen~.inSIunits(
+TAB().kmeansof({n},m,f,r)~Clusters data using the k-means algorithm~kmeansof() k-means clustering~.kmeansof(
 TAB().name~Returns the name of the table as a string~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Calculates the Pearson correlation of the columns~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
 TAB().rankof(n,c,{r})~Calculates the ranks of the values in the column~rankof() rang reihenfolge sortieren competition~.rankof(
@@ -461,8 +463,10 @@ TAB().removerows({r})~Removes rows from the table~insert remove cells rows cols 
 TAB().reordercols({c},{n})~Sorts the columns according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
 TAB().reorderrows({r},{n})~Sorts the rows according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
 TAB().scorrof(n,m,{r1},{r2})~Calculates the Spearman correlation of the columns~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().setunit({c},{STR})~Assigns the unit(s) to the columns~setunit() SI measurement messung system units einheiten~.setunit(
 TAB().shrink~Removes empty trailing cells and columns from the table~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Determines the size of the table~dimension size element count bounding rectangle~.size
+TAB().toSIunits({c},STR,l)~Converts the values in the columns to SI units~toSIunits() SI measurement messung system conversion convert konversion konvertieren units einheiten simplify vereinfachen umrechnen~.toSIunits(
 TAB().typeof({n})~Returns the types of the columns as strings~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Calculates the standardization of the values related to their deviation from the mean~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
 TABLE(i,j)~Table object with read/write access to the element "i,j"~zwischenspeicher save cache() table() sortieren swap rename range schrittweite step width~help table()
