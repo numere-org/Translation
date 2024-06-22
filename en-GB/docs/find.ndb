@@ -184,6 +184,7 @@ getompthreads()~Returns the number of the maximal possible OpenMP threads~CPU co
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
 get_utc_offset()~Returns the offset to UTC+00 in seconds. This corresponds to the timezone difference including an optional daylight saving time~get_utc_offset() time zone~get_utc_offset(
 getuilang()~Returns information about user's current language~language translation sprache deutsch german english english~getuilang()
+uuid()~Creates a new UUID and returns it as a string. Universally Unique Identifier string~uuid()
 getversioninfo()~Returns information about the current NumeRe version~version release candidate date datum build~getversioninfo()
 global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global
 grad~Generates a gradient plot~gradienten feldlinien field lines force kraft~help grad
