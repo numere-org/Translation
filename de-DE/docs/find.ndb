@@ -185,7 +185,7 @@ getompthreads()~Gibt die Zahl der maximal möglichen OpenMP-Threads zurück~CPU 
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
 get_utc_offset()~Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit~get_utc_offset() time zone utc~get_utc_offset(
 getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
-uuid()~Erstellt eine neue uuid und gibt diese als String zurück Universally Unique Identifier string~uuid()
+uuid()~Erstellt eine neue UUID und gibt diese als String zurück~Universally Unique Identifier string~uuid()
 getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
 grad~Erstellen eines Gradienten-Plots~gradienten feldlinien field lines force kraft~help grad
