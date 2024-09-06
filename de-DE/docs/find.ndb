@@ -30,7 +30,7 @@ acosh(x)~Areakosinus hyperbolicus von x. arcosh(x) ist ein Synonym~acosh() arcos
 acsc(x)~Arkuskosekans von x.~acsc() arkuskosekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acsc(
 acsch(x)~Areakosekans hyperbolicus von x.~acsch() areakosekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~acsch(
 Ai(x)~Airy-Funktion Ai(x)~optik potentialtopf Ai() optics airyfunction~Ai(
-alpha_stable_rd(c,alpha)~Liefert eine Zufallszahl aus der stabilen Levy-Alpha-Verteilung mit Skalenparameter c und Exponent alpha~levy alpha stable verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~alpha_stable_rd(
+alpha_stable_rd(c,alpha,n)~Liefert eine Zufallszahl aus der stabilen Levy-Alpha-Verteilung mit Skalenparameter c und Exponent alpha~levy alpha stable verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~alpha_stable_rd(
 and(x,y,z,...)~Verknüpft die Argumente mit "&&"~logik logic und~and(
 ans~spezielle Variable, siehe "help var"~answer last letztes ergebnis result~ans{}
 Antwort~Die Antwort auf die Frage nach dem Universum, dem Leben und dem ganzen Rest: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
@@ -65,7 +65,7 @@ cauchy_cdf_q(x,a)~Liefert den Wert der komplementären kumulativen Verteilungsfu
 cauchy_inv_p(p,a)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Cauchy-Verteilung mit dem Skalenparameter a zurück~cauchy inverse verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_inv_p(
 cauchy_inv_q(q,a)~Liefert den inversen Wert der komplementären kumulativen Verteilungsfunktion bei q für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy inverse verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_inv_q(
 cauchy_pdf(x,a)~Liefert den Wert der Dichte der Verteilungsfunktion bei x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_pdf(
-cauchy_rd(a)~Liefert eine Zufallszahl aus der Cauchy-Verteilung mit Skalenparameter a~cauchy verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_rd(
+cauchy_rd(a,n)~Liefert eine Zufallszahl aus der Cauchy-Verteilung mit Skalenparameter a~cauchy verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_rd(
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
 checkbox~Fügt eine Checkbox in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 circshift(MAT,n,dim)~Verschiebt alle Elemente einer Matrix um n Positionen in Richtung der Matrixdimension dim (wählen Sie 0 für Zeile und 1 für Spalte)~circshift circular shift rotation col row columnwise rowwise rotieren~circshift(
@@ -158,7 +158,7 @@ fisher_f_cdf_q(x,nu1,nu2)~Liefert die komplementäre kumulative Verteilungsfunkt
 fisher_f_inv_p(p,nu1,nu2)~Liefert die Umkehrung der kumulativen Verteilungsfunktion bei p der F-Verteilung nach Fisher mit den Freiheitsgraden nu1 und nu2~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~fisher_f_inv_p(
 fisher_f_inv_q(q,nu1,nu2)~Liefert die Umkehrung der komplementären kumulativen Verteilungsfunktion bei q der F-Verteilung nach Fisher mit den Freiheitsgraden nu1 und nu2~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~fisher_f_inv_q(
 fisher_f_pdf(x,nu1,nu2)~Liefert die Dichte der Verteilungsfunktion bei x der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~fisher_f_pdf(
-fisher_f_rd(nu1,nu2)~Liefert eine Zufallszahl aus der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~fisher_f_rd(
+fisher_f_rd(nu1,nu2,n)~Liefert eine Zufallszahl aus der Fisher's F-Verteilung mit nu1 und nu2 Freiheitsgraden~fisher fisher-f f-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~fisher_f_rd(
 fit~Passt eine Funktion mittels Parameter an eine Datenreihe an, siehe "help fit"~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
 Fitprotokoll~Das Fitprotokoll findest du unter "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult~edit <savepath>/numerefit.log
 fitw~Passt eine Funktion mittels Parameter an eine Datenreihe an und gewichtet die Datenpunkte entsprechend der Fehlerwerte, siehe "help fit"~fitten fitting anpassen daten fehler errors abweichungen deviations trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fitw
@@ -168,7 +168,7 @@ Frage~Stell' ich hier die Fragen oder du?~question~"Das hättest du dir so gedac
 fwt~Schnelle Wavelet-Transformation eines Datensatzes~fast schnelle wavelettransformation transformieren invers daubechies haar bspline~help fwt
 gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Fügt einen Fortschrittsbalken in ein Window-Layout ein~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-gauss(x0,x1)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
+gauss(x0,x1,n)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
@@ -183,6 +183,8 @@ getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler z
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getompthreads()~Gibt die Zahl der maximal möglichen OpenMP-Threads zurück~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
+getorder({x,y,z,...})~Gibt die Reihenfolge der aufsteigend sortierten Elemente zurück~sortieren getorder() ascending reihenfolge~getorder(
+gettypeof(x)~Gibt den Datentyp zurück~gettypeof() typeof datentypen datatypes~gettypeof(
 get_utc_offset()~Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit~get_utc_offset() time zone utc~get_utc_offset(
 getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
 uuid()~Erstellt eine neue UUID und gibt diese als String zurück~Universally Unique Identifier string~uuid()
@@ -241,13 +243,13 @@ laguerre(n,x)~Berechnet den numerischen Wert der Laguerre-Polynome der Ordnung n
 laguerre_a(n,k,x)~Berechnet den numerischen Wert der assoziierten Laguerre-Polynome der Ordnung n mit k = [0,n] an der Stelle x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
 lamp~Fügt eine kleine Lampe in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help lamp
 landau_pdf(x)~Gibt den Wert der Dichte der Landau-Verteilung bei x zurück~landau verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~landau_pdf(
-landau_rd()~Gibt eine Zufallszahl der Landau-Verteilung zurück~landau verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~landau_rd(
+landau_rd(n)~Gibt eine Zufallszahl der Landau-Verteilung zurück~landau verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~landau_rd(
 laplace_cdf_p(x,a)~Gibt den Wert der kumulativen Verteilungsfunktion bei x für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~laplace_cdf_p(
 laplace_cdf_q(x,a)~Liefert den Wert der komplementären kumulativen Verteilungsfunktion an x für die Laplace-Verteilung mit der Breite a~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~laplace_cdf_q(
 laplace_inv_p(p,a)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~laplace_inv_p(
 laplace_inv_q(q,a)~Gibt den inversen Wert der komplementären kumulativen Verteilungsfunktion in q für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~laplace_inv_q(
 laplace_pdf(x,a)~Gibt den Wert der Dichte der Verteilungsfunktion bei x für die Laplace-Verteilung mit der Breite a zurück~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~laplace_pdf(
-laplace_rd(a)~Liefert eine Zufallszahl aus der Laplace-Verteilung mit der Breite a~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~laplace_rd(
+laplace_rd(a,n)~Liefert eine Zufallszahl aus der Laplace-Verteilung mit der Breite a~laplace verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~laplace_rd(
 lastch(STR)~Gibt das letzte Zeichenkette zurück~begin end last erstes letztes zeichen front back~lastch(
 layout~Startet die Definition eines Window-Layouts, das zur Erzeugung eines interaktiven Fensters verwendet werden kann~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Definiert eine eigene Funktion für die lokale Verwendung, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
@@ -327,7 +329,7 @@ qrcode~Erzeugt einen QR-Code aus dem Inhalt der übergebenen Zeichenkette~barcod
 quit~Beendet NumeRe~schliessen close exit beenden~quit
 radian(a)~Bogenmaßwert von Winkel a [Grad]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Fügt eine Radio-Group in ein Window-Layout ein~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-rand(x0,x1)~Generiert eine (reelle, gleichverteilte) Zufallszahl im Intervall [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
+rand(x0,x1,n)~Generiert eine (reelle, gleichverteilte) Zufallszahl im Intervall [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
 random~Zufallszahlengenerator, der Zufallszahlen entsprechend der gewählten Verteilung erzeugt~zufallszahlen generator gaussverteilung gaussian gaußverteilung gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
 range(VAR,LFT,RGHT)~Schränkt VAR auf das Intervall [LFT,RGHT] ein~intervall bereich range()~range(
 rayleigh_cdf_p(x,sigma)~Gibt den Wert der kumulativen Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_cdf_p(
@@ -335,7 +337,7 @@ rayleigh_cdf_q(x,sigma)~Gibt den komplementären Wert der kumulativen Verteilung
 rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_p(
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Gibt den Wert der Dichte der Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_pdf(
-rayleigh_rd(sigma)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
+rayleigh_rd(sigma,n)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
 read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
@@ -426,7 +428,7 @@ student_t_cdf_q(x,nu)~Liefert die komplementäre kumulative Verteilungsfunktion 
 student_t_inv_p(p,nu)~Gibt die Inverse der kumulativen Verteilungsfunktion an p der Student's t-Verteilung mit nu Freiheitsgraden zurück~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~student_t_inv_p(
 student_t_inv_q(q,nu)~Liefert die Umkehrung der komplementären kumulativen Verteilungsfunktion bei q der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~student_t_inv_q(
 student_t_pdf(x,nu)~Liefert die Dichte der Verteilungsfunktion bei x der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~student_t_pdf(
-student_t_rd(nu)~Liefert eine Zufallszahl aus der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~student_t_rd(
+student_t_rd(nu,n)~Liefert eine Zufallszahl aus der Student's t-Verteilung mit nu Freiheitsgraden~student student-t t-distribution verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~student_t_rd(
 subplot~Leitet einen neuen Unterplot in Verbindung mit dem "compose"-Modus ein~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Gibt l Zeichen ab dem Zeichen n aus der Zeichenkette STR als neue Zeichenkette zurück~zeichenketten strings ausschnitt ausschneiden substr()~substr(
 sum(x,y,z,...)~Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden~summe summieren zeichenketten strings sum()~sum(
@@ -515,7 +517,7 @@ weibull_cdf_q(x,a,b)~Liefert die komplementäre kumulative Verteilungsfunktion b
 weibull_inv_p(p,a,b)~Liefert die Umkehrung der kumulativen Verteilungsfunktion bei p der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random inverse~weibull_inv_p(
 weibull_inv_q(q,a,b)~Liefert die Umkehrung der komplementären kumulativen Verteilungsfunktion bei q der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random~weibull_inv_q(
 weibull_pdf(x,a,b)~Liefert die Dichte der Verteilungsfunktion bei x der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random~weibull_pdf(
-weibull_rd(a,b)~Liefert eine Zufallszahl aus der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random~weibull_rd(
+weibull_rd(a,b,n)~Liefert eine Zufallszahl aus der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random~weibull_rd(
 while (COND)~bedingte Schleife, siehe "help while"~whileschleife endwhile bedingung so lange falls wenn while() loop command sequence flow control~help while () ... endwhile
 window~Erlaubt die Erzeugung eines interaktiven Fensters und die Interaktion mit selbigem~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 Witz~Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!~witz gag joke~"Theorie ist, wenn man zwar weiß, wie es geht, aber es funktioniert nicht. Praxis ist, wenn es zwar funktioniert, aber man nicht weiß, warum. Physik ist, wenn nichts funktioniert und keiner weiß, warum!"

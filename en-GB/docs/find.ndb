@@ -30,7 +30,7 @@ acosh(x)~Inverse hyperbolic cosine of x. arcosh(x) is a synonym~acosh() arcosh()
 acsc(x)~Inverse cosecant of x.~acsc() arcuscosecant trigonometrische funktionen trigonometrie trigonometry trigonometric functions~acsc(
 acsch(x)~Inverse hyperbolic cosecant of x.~acsch() areacosecant trigonometrische funktionen trigonometrie hyperbolische trigonometry trigonometric functions hyperbolic~acsch(
 Ai(x)~Airy function Ai(x)~optik potentialtopf Ai() optics airyfunction~Ai(
-alpha_stable_rd(c,alpha)~Returns a random number from the stable Levy alpha distribution with scale parameter c and exponent alpha~levy alpha stable distribution function random number distributionfunction~alpha_stable_rd(
+alpha_stable_rd(c,alpha,n)~Returns a random number from the stable Levy alpha distribution with scale parameter c and exponent alpha~levy alpha stable distribution function random number distributionfunction~alpha_stable_rd(
 and(x,y,z,...)~ Connects its arguments with "&&"~logik logic und~and(
 ans~Special variable, which stores the last numerical result~answer last letztes ergebnis result~ans{}
 Answer~The answer to life, the universe and everything: 42~answer ergebnis result hitchhikers guide per anhalter durch die galaxis~42
@@ -65,7 +65,7 @@ cauchy_cdf_q(x,a)~Get the value of the complementary cumulative distribution fun
 cauchy_inv_p(p,a)~Returns the value of the inverse cumulative distribution function on p for the Cauchy distribution with scale parameter a~cauchy inverse distribution function random number distributionfunction~cauchy_inv_p(
 cauchy_inv_q(q,a)~returns the inverse value of the complementary cumulative distribution function at q for the Cauchy distribution with scale parameter a~cauchy inverse distribution function random number distributionfunction~cauchy_inv_q(
 cauchy_pdf(x,a)~Get the value of the probability density function at x for the Cauchy distribution with scale parameter a~cauchy distribution function cumulative random number distributionfunction~cauchy_pdf(
-cauchy_rd(a)~Returns a random number from the Cauchy distribution with scale parameter a~cauchy distribution function random distributionfunction~cauchy_rd(
+cauchy_rd(a,n)~Returns a random number from the Cauchy distribution with scale parameter a~cauchy distribution function random distributionfunction~cauchy_rd(
 char(STR,POS)~Return the character at the Position POS in STR~zeichen character string zeichenkette at() char()~char(
 checkbox~Inserts a checkbox into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 circshift(MAT,n,dim)~Shifts all elements of a matrix by n positions in the direction of the matrix dimension dim (choose 0 for row and 1 for column)~circshift circular shift rotation col row columnwise rowwise rotieren~circshift(
@@ -158,7 +158,7 @@ fisher_f_cdf_q(x,nu1,nu2)~provides the complementary cumulative distribution fun
 fisher_f_inv_p(p,nu1,nu2)~provides the inverse of the cumulative distribution function at p of Fisher's F-distribution with degrees of freedom nu1 and nu2~fisher fisher-f f-distribution distribution function random number distributionfunction inverse~fisher_f_inv_p(
 fisher_f_inv_q(q,nu1,nu2)~provides the inverse of the complementary cumulative distribution function at q of Fisher's F-distribution with degrees of freedom nu1 and nu2~fisher fisher-f f-distribution distribution function random number distributionfunction inverse~fisher_f_inv_q(
 fisher_f_pdf(x,nu1,nu2)~gives the probability density function at x of Fisher's F-distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random cumulative~fisher_f_pdf(
-fisher_f_rd(nu1,nu2)~Returns a random number from the Fisher's F distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random~fisher_f_rd(
+fisher_f_rd(nu1,nu2,n)~Returns a random number from the Fisher's F distribution with nu1 and nu2 degrees of freedom~fisher fisher-f f-distribution distribution function random~fisher_f_rd(
 fit~Fit functions to data sets via parameters~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
 Fitting protocol~The fitting protocol can be found at "<savepath>/numerefit.log"~fittinglog fitlog fittingprotokoll fitergebnis fittingergebnis fitresult fittingresult~edit <savepath>/numerefit.log
 fitw~Fit functions to data sets via parameters and concern the additional error values of the data set~fitten fitting anpassen daten fehler errors abweichungen deviations trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fitw
@@ -167,7 +167,7 @@ for (VAR = INI:FIN)~Starts the definition of a FOR loop~zaehlschleife zählschle
 fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettransformation transformieren invers daubechies haar bspline~help fwt
 gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Inserts a progress bar (a gauge) into a window layout~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-gauss(x0,x1)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
+gauss(x0,x1,n)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
@@ -182,6 +182,8 @@ getlasterror()~Returns the last error processed by a try-catch block~try catch t
 getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
 getompthreads()~Returns the number of the maximal possible OpenMP threads~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
+getorder({x,y,z,...})~Returns the order of the sorted elements~sortieren getorder() ascending reihenfolge~getorder(
+gettypeof(x)~Returns the data type~gettypeof() typeof datentypen datatypes~gettypeof(
 get_utc_offset()~Returns the offset to UTC+00 in seconds. This corresponds to the timezone difference including an optional daylight saving time~get_utc_offset() time zone~get_utc_offset(
 getuilang()~Returns information about user's current language~language translation sprache deutsch german english english~getuilang()
 uuid()~Creates a new UUID and returns it as a string~Universally Unique Identifier string~uuid()
@@ -241,13 +243,13 @@ laguerre(n,x)~Numerical value of the Laguerre polynomial with the order n >= 0 a
 laguerre_a(n,k,x)~Numerical value of the associated Laguerre polynomial with the orders n >= 0 and k = [0,n] at the position x~laguerrepolynome associated polynomial zugeordnete laguerre_a()~laguerre_a(
 lamp~Inserts a small lamp into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help lamp
 landau_pdf(x)~returns the value of the probability density of the Landau distribution at x~landau distribution function random number distributionfunction~landau_pdf(
-landau_rd()~returns a random number of the Landau distribution~landau distribution function random number distributionfunction~landau_rd(
+landau_rd(n)~returns a random number of the Landau distribution~landau distribution function random number distributionfunction~landau_rd(
 laplace_cdf_p(x,a)~Returns the value of the cumulative distribution function at x for the Laplace distribution with width a~laplace distribution function random number distributionfunction cumulative~laplace_cdf_p(
 laplace_cdf_q(x,a)~returns the value of the complementary cumulative distribution function at x for the Laplace distribution with width a~laplace distribution function random number distributionfunction cumulative~laplace_cdf_q(
 laplace_inv_p(p,a)~returns the value of the inverse cumulative distribution function on p for the Laplace distribution with width a~laplace distribution function random number distributionfunction inverse~laplace_inv_p(
 laplace_inv_q(q,a)~Returns the inverse value of the complementary cumulative distribution function in q for the Laplace distribution with width a~laplace distribution function random number distributionfunction inverse~laplace_inv_q(
 laplace_pdf(x,a)~Returns the value of the probability density function at x for the Laplace distribution with width a~laplace distribution function random number distributionfunction cumulative~laplace_pdf(
-laplace_rd(a)~Returns a random number from the Laplace distribution with width a~laplace distribution function random~laplace_rd(
+laplace_rd(a,n)~Returns a random number from the Laplace distribution with width a~laplace distribution function random~laplace_rd(
 lastch(STR)~Returns the last character of a string~begin end last erstes letztes zeichen front back~lastch(
 layout~Starts the definition of a window layout that can be used to create an interactive window~endlayout windowsystem group interaction gui graphical user interface graphisch fenster dialog~help window
 lclfunc~Defines custom functions for local usage~funktionen definieren neue definition undefine ifndefined redefine local definition~help lclfunc
@@ -327,7 +329,7 @@ Question~Is it me, who asks the questions, or is it you?~question~"Nice try, my 
 quit~Exits NumeRe~schliessen close exit beenden~quit
 radian(a)~Calculates the radians of the angle alpha [Degree]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Inserts a radio group into a window layout~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
-rand(x0,x1)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
+rand(x0,x1,n)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
 random~Random number generator with freely choosable distributions~zufallszahlen generator gaussverteilung gaußverteilung gaussian gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
 range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()~range(
 rayleigh_cdf_p(x,sigma)~Returns the value of the cumulative distribution function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_cdf_p(
@@ -335,7 +337,7 @@ rayleigh_cdf_q(x,sigma)~returns the complementary value of the cumulative distri
 rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution function on p for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random cumulative distributionfunction inverse~rayleigh_inv_p(
 rayleigh_inv_q(q,sigma)~returns the inverse of the complementary cumulative distribution function at q for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Returns the value of the probability density function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_pdf(
-rayleigh_rd(sigma)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
+rayleigh_rd(sigma,n)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
 read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
 real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
@@ -428,7 +430,7 @@ student_t_cdf_q(x,nu)~Get the complementary cumulative distribution function at 
 student_t_inv_p(p,nu)~returns the inverse of the cumulative distribution function at p of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction inverse~student_t_inv_p(
 student_t_inv_q(q,nu)~returns the inverse of the complementary cumulative distribution function at q of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction inverse~student_t_inv_q(
 student_t_pdf(x,nu)~Get the probability density function at x of Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random number distributionfunction cumulative~student_t_pdf(
-student_t_rd(nu)~Returns a random number from Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random distributionfunction~student_t_rd(
+student_t_rd(nu,n)~Returns a random number from Student's t-distribution with nu degrees of freedom~student student-t t-distribution distribution function random distributionfunction~student_t_rd(
 subplot~Starts a new subplot in combination with the "compose" mode~subplots unterplots multiplots~help subplot
 substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a new string~zeichenketten strings ausschnitt ausschneiden substr()~substr(
 sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings as well~summe summieren zeichenketten strings sum()~sum(
@@ -517,7 +519,7 @@ weibull_cdf_q(x,a,b)~Returns the complementary cumulative distribution function 
 weibull_inv_p(p,a,b)~Returns the inverse of the cumulative distribution function at p of the Weibull distribution with scale a and exponent b~weibull distribution function random inverse~weibull_inv_p(
 weibull_inv_q(q,a,b)~Returns the inverse of the complementary cumulative distribution function at q of the Weibull distribution with scale a and exponent b~weibull distribution function random inverse~weibull_inv_q(
 weibull_pdf(x,a,b)~Returns the probability density function at x of the Weibull distribution with scale a and exponent b~weibull distribution function random~weibull_pdf(
-weibull_rd(a,b)~Returns a random variate from the Weibull distribution with scale a and exponent b~weibull distribution function random~weibull_rd(
+weibull_rd(a,b,n)~Returns a random variate from the Weibull distribution with scale a and exponent b~weibull distribution function random~weibull_rd(
 while (COND)~Starts the definition of a WHILE loop~whileschleife endwhile bedingung so lange falls wenn while() loop command sequence flow control~help while () ... endwhile
 window~Allows the creation of an interactive window and the interaction with it~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 workpath~Changes the current working directory for this session~workpath working directory cd change wp~help workpath
