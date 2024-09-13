@@ -37,6 +37,7 @@
 		<keyword>polarity</keyword>
 		<keyword>ryg</keyword>
 		<keyword>spectral</keyword>
+		<keyword>turbo</keyword>
 	</keywords>
 	<contents>
 		Die Farbschemata, die NumeRe in 2D- und 3D-Plots verwendet, können - ebenso wie die Linienfarben in gewöhnlichen Plots und 3D-Trajektorien - angepasst werden. Dabei muss die Option <code>colorscheme=SCHEMA</code> bzw. <code>plotcolors=FARBEN</code> beim Plotten übergeben werden.
@@ -69,6 +70,7 @@
 			<item node="hue">Zyklischer Farbverlauf von rot über alle Farben des Farbenrades nach rot</item>
 			<item node="map">Ein typischer Farbverlauf einer physischen Karte: von violett und dunklem Blau über grün/gelb und orange nach rot und schließlich grau</item>
 			<item node="rainbow">Das bekannte Regenbogenschema von dunklem blau über grün/gelb nach tiefem rot</item>
+			<item node="turbo">Eine Abwandlung von <code>rainbow</code> mit gedeckteren Farben und einem gleichmäßigeren Helligkeitsverlauf. Ähnlich zu <code>map</code></item>
 		</list>
 		Die Schemata <code>rainbow</code> und <code>map</code> sollten nicht verwendet werden, wenn der ausgegebene Plot unter Umständen in Grauskalen gedruckt werden sollte, da hier die Helligkeitsmaxima nicht am oberen Ende der Skala liegen.
 		Daneben können aber auch noch eigene Schemata bestimmt werden. Dazu müssen die Farben, die durch einzelne Buchstaben repräsentiert werden, in der gewünschten Reihenfolge aneinandergehängt werden und in zusätzlichen Anführungszeichen als SCHEMA übergeben werden:<codeblock>colorscheme="BbcyrR"    ## Farbsatz des rainbow-Schemas</codeblock>Die Farben werden dabei für die nötigen Farbverläufe automatisch interpoliert.

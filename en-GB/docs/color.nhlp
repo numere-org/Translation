@@ -37,6 +37,7 @@
 		<keyword>polarity</keyword>
 		<keyword>ryg</keyword>
 		<keyword>spectral</keyword>
+		<keyword>turbo</keyword>
 	</keywords>
 	<contents>
 		The coloring schemes, which NumeRe uses in its 2D and 3D plots, can be customized--as well as the line colors in usual plots and 3D trajectories. While plotting, simply pass the option <code>colorscheme=SCHEME</code> or <code>plotcolors=COLORS</code>, repectively.
@@ -69,6 +70,7 @@
 			<item node="hue">Cyclic gradient from red through all colors of the color wheel to red</item>
 			<item node="map">A typical color gradient of a physical map: from purple and dark blue to green/yellow and orange to red and finally gray</item>
 			<item node="rainbow">The well-known rainbow scheme from dark blue to green/yellow to deep red</item>
+			<item node="turbo">An adation of <code>rainbow</code> with less intense colors and a more uniform luminosity gradient. Similar to <code>map</code></item>
 		</list>
 		The schemes <code>rainbow</code> and <code>map</code> should not be used, if the resulting plot probably may be printed in greyscales, because the brightest point is not at the upper end of the scale.
 		Apart from this, custom coloring schemes can be defined. The colors, which shall be used and which are represented by single characters, have to appended in the corresponding order and passed in additional quotation marks as SCHEME to the <code>colorscheme</code> option:<codeblock>colorscheme="BbcyrR"    ## color set of the rainbow coloring scheme</codeblock>The colors will be interpolated linearly for the final gradient.
