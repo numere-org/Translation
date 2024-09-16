@@ -810,6 +810,7 @@ GUI_OPTIONS_ANALYZER_SWITCH_FALLTHROUGH=Warne, wenn "break" in einem "case" von 
 GUI_OPTIONS_ANALYZER_STYLE=Stilistische Empfehlungen
 GUI_OPTIONS_ANALYZER_TYPE_ORIENTATION=Markiere Variablen ohne Typen-Präfix
 GUI_OPTIONS_ANALYZER_MISLEADING_TYPE=Warne bei missverständlichen Typen-Präfixen
+GUI_OPTIONS_ANALYZER_TYPE_MISUSE=Warne bei möglicherweise falsch verwendeten Typen
 GUI_OPTIONS_ANALYZER_ARGUMENT_UNDERSCORE=Markiere Argumente, die nicht mit Unterstrich beginnen
 GUI_OPTIONS_ANALYZER_VARIABLE_LENGTH=Markiere sehr kurze Variablennamen
 GUI_OPTIONS_ANALYZER_GLOBAL_VARIABLES=Warne, wenn globale Variablen in Prozeduren verwendet werden
@@ -1269,6 +1270,7 @@ GUI_ANALYZER_PROCEDURENOTFOUND=Die Prozedur "%%1%%" konnte nicht gefunden werden
 GUI_ANALYZER_VARNAMETOOSHORT=Der Variablenname "%%1%%" ist sehr kurz.
 GUI_ANALYZER_VARNOTTYPEORIENTED=Der Variablenname "%%1%%" hat kein Typen-Präfix (z.B. "nVar" bzw. "sVar").
 GUI_ANALYZER_MISLEADING_TYPE=Die Variable "%%1%%" hat einen missverständlichen Typen-Präfix (eine String-Variable hat einen numerischen Präfix oder umgekehrt).
+GUI_ANALYZER_TYPE_MISUSE=Das Symbol "%%1%%" wurde zuvor mit einem anderen Typ eingeführt. Bei Tabellen und Clustern gehören die Klammern mit zum Symbol und müssen stets mitgeführt werden.
 GUI_ANALYZER_INDICATEARGUMENT=Beginne Prozedurenargumente mit einem Unterstrich, um sie von den lokalen Variablen unterscheiden zu können
 GUI_ANALYZER_HIGHCOMPLEXITY=Dieses Modul hat eine hohe zyklomatische Komplexität (v(G) = %%1%%).
 GUI_ANALYZER_MANYLINES=Dieses Modul besteht aus sehr vielen Zeilen (%%1%%).

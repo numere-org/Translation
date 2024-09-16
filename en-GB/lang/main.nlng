@@ -810,6 +810,7 @@ GUI_OPTIONS_ANALYZER_SWITCH_FALLTHROUGH=Warn, if "break" is missing in a "case" 
 GUI_OPTIONS_ANALYZER_STYLE=Coding style recommendations
 GUI_OPTIONS_ANALYZER_TYPE_ORIENTATION=Notify, if variable has no type prefix
 GUI_OPTIONS_ANALYZER_MISLEADING_TYPE=Warn, if type prefixes are used misleading
+GUI_OPTIONS_ANALYZER_TYPE_MISUSE=Warn, if types are accidentally used erroneously
 GUI_OPTIONS_ANALYZER_ARGUMENT_UNDERSCORE=Notify, if procedure arguments are not preceded by an underscore
 GUI_OPTIONS_ANALYZER_VARIABLE_LENGTH=Notify, if a variable's name is quite short
 GUI_OPTIONS_ANALYZER_GLOBAL_VARIABLES=Warn, if global variables are used in procedures
@@ -1269,6 +1270,7 @@ GUI_ANALYZER_PROCEDURENOTFOUND=The procedure "%%1%%" was not found.
 GUI_ANALYZER_VARNAMETOOSHORT=The variable name "%%1%%" is quite short.
 GUI_ANALYZER_VARNOTTYPEORIENTED=The variable name "%%1%%" has no type prefix (e.g. "nVar" or "sVar").
 GUI_ANALYZER_MISLEADING_TYPE=The variable "%%1%%" has a misleading type prefix (a string variable is prefixed as if it was numerically or the other way around).
+GUI_ANALYZER_TYPE_MISUSE=The symbol "%%1%%" was introduced previously with a different type. For tables and clusters, the brackets are part of the symbol and must always be included.
 GUI_ANALYZER_INDICATEARGUMENT=Add an underscore as a prefix for procedure arguments to distringuish between them and local variables.
 GUI_ANALYZER_HIGHCOMPLEXITY=This module has a high cyclomatic complexity (v(G) = %%1%%).
 GUI_ANALYZER_MANYLINES=This module contains many lines (%%1%%).
