@@ -1255,6 +1255,7 @@ GUI_ANALYZER_MISSINGENDPROCEDURE=Das Ende der Prozedur konnte nicht gefunden wer
 GUI_ANALYZER_UNFINISHEDBLOCK=Dieser Kontrollflussblock hat kein Anfang oder Ende.
 GUI_ANALYZER_UNUSEDVARIABLE=Die lokale Variable "%%1%%" wird womöglich nicht verwendet.
 GUI_ANALYZER_NOVARIABLES=Es wurden keine lokalen Variablen definiert.
+GUI_ANALYZER_ONLYEXECUTEDONCE=In Schleifen werden Deklarationen lokaler Variablen nur einmalig je Prozedurausführung durchgeführt.
 GUI_ANALYZER_RETURN_ADDSEMICOLON=Füge ein Semikolon ";" an, um die doppelte Anzeige des Ergebnisses zu unterdrücken.
 GUI_ANALYZER_RETURN_ALWAYSTRUE=Dies Anweisung wird immer true zurückgeben.
 GUI_ANALYZER_NOTALLOWED=Dieses kontextspezifische Element kann hier nicht verwendet werden.

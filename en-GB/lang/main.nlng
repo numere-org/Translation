@@ -1255,6 +1255,7 @@ GUI_ANALYZER_MISSINGENDPROCEDURE=The end of the procedure could not be found.
 GUI_ANALYZER_UNFINISHEDBLOCK=This control flow block does not have a beginning or an end.
 GUI_ANALYZER_UNUSEDVARIABLE=The local variable "%%1%%" is probably unused.
 GUI_ANALYZER_NOVARIABLES=No local variables were defined.
+GUI_ANALYZER_ONLYEXECUTEDONCE=Within loops, declarations of local variables are performed only once per procedure execution.
 GUI_ANALYZER_RETURN_ADDSEMICOLON=Append a semicolon ";" to suppress the doubled display of the result.
 GUI_ANALYZER_RETURN_ALWAYSTRUE=This statement will always return true.
 GUI_ANALYZER_NOTALLOWED=This context-sensitive element cannot be used here.
