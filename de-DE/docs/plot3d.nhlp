@@ -45,6 +45,10 @@
 			<item node="cut/nocut">Blendet die beiden nach vorne gewandten Oktanten aus/ein, so dass das Zentrum des dargestellten Plots betrachtet werden kann</item>
 			<item node="marks=WERT/nomarks">Zeichnet Kreise der Größe WERT an den <expr>(x,y,z)</expr>-Koordinaten, wobei die Kreise anhand des Farbschemas entsprechend ihres <expr>z</expr>-Werts gefüllt sind</item>
 			<item node="crust/nocrust">Rekonstruiert eine 2D-Oberfläche aus beliebig verteilten <expr>(x,y,z)</expr>-Punkten. Es wird das aktuelle Farbschema verwendet</item>
+			<item node="alpha=VAL/<br/>  noalpha">Transparenz aus-/einschalten. Die Stärke der Transparenz (0 = keine, 1 = vollständig transparent) kann mit dem optionalen Wert VAL angegeben werden</item>
+			<item node="alphamask/<br/>  noalphamask">Marker-Transparenz entsprechend eines zweiten Datensatzes/Funktion berechnen. Nur in Verbindung mit <code>marks=WERT</code></item>
+			<item node="colormask/<br/>  nocolormask">Die Marker entsprechend eines zweiten Datensatzes/Funktion färben. Die Farbskala muss ggf. mittels <code>colorrange=c1:c2</code> angepasst werden. Nur in Verbindung mit <code>marks=WERT</code></item>
+			<item node="light[=TYP]/<br/>  nolight">plastischen 3D-Lichteffekt aus-/einschalten. TYP ist optional: TYP=smooth oder TYP=soft schalten auf weicheres Licht um</item>
 		</list>
 		Die Option <code>rotate</code> benötigt nicht zwingend zwei Winkel. Es kann auch nur der zu ändernde Winkel mittels <code>rotate=THETA,</code> bzw. <code>rotate=,PHI</code> angegeben werden. Das Komma ist dabei allerdings essentiell. Die Standardwinkel sind THETA=60 und PHI=115.
 		Zu beachten ist außerdem, dass mindestens 3 Spalten mit Daten gegeben werden: <expr>x, y, z</expr> (Werden mehr angegeben, so wählt NumeRe automatisch die ersten drei)

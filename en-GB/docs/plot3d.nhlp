@@ -45,6 +45,10 @@
 			<item node="cut/nocut">Makes the both front octants (in-)visible so that the view to the center of the plot is possible</item>
 			<item node="marks=VALUE/nomarks">Draws circles of the size VALUE at the <expr>(x,y,z)</expr> coordinates, where the circles are filled according their <expr>z</expr> values using the current coloring scheme</item>
 			<item node="crust/nocrust">recontructs a 2D surface out of arbitrary distributed <expr>(x,y,z)</expr> points. The current coloring scheme will be used</item>
+			<item node="alpha=VAL/<br/>  noalpha">Set the transparency on/off. The strength of transparency (0 = no transparency, 1 full transparency) may be modified using the optional VAL</item>
+			<item node="alphamask/<br/>  noalphamask">Calculate the marks transparency according a second function/data set. Works only in combination with <code>marks=VALUE</code></item>
+			<item node="colormask/<br/>  nocolormask">Color the marks according a second function/data set. The colorscale probably must be resized with <code>colorrange=c1:c2</code>. Works only in combination with <code>marks=VALUE</code></item>
+			<item node="light[=TYPE]/<br/>  nolight">Set the 3D lighting effect on/off. The TYPE is an optional value: TYPE=smooth or TYPE=soft switch to a more smooth lighting</item>
 		</list>
 		The option <code>rotate</code> needs not necessary two angles. You may only pass the angle, which shall be changed with <code>rotate=THETA,</code> or <code>rotate=,PHI</code>, respectively. But note that the comma is essential for identifying the actual angle. The default angles are THETA=60 and PHI=115.
 		Additional you need at least 3 columns of data: <expr>x, y, z</expr> (If more are passed, NumeRe will automatically choose the first three).
