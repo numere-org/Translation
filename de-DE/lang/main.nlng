@@ -733,6 +733,8 @@ GUI_SEARCH_TELLME=Was möchtest du tun?
 GUI_SEARCH_CALLTIP_TREE=Doppelklicken zum Auswählen
 GUI_SEARCH_CALLTIP_TOOLBAR=Klicken und ziehen oder mit Doppelklick Dokumentation anzeigen
 GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Klicken und ziehen oder mit Doppelklick direkt in den Editor einfügen
+GUI_SEARCH_HISTORY=Die Chronik durchsuchen ...
+GUI_SEARCH_CALLTIP_HISTORY=Klicken und ziehen oder mit Doppelklick direkt im Terminal ausführen
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=Benutzeroberfläche

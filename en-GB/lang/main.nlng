@@ -733,6 +733,8 @@ GUI_SEARCH_TELLME=Tell me, what you want to do ...
 GUI_SEARCH_CALLTIP_TREE=Select with double click
 GUI_SEARCH_CALLTIP_TOOLBAR=Click and drag or show documentation with a double click
 GUI_SEARCH_CALLTIP_TOOLBAR_HIGHLIGHT=Click and drag or directly insert into the editor with a double click
+GUI_SEARCH_HISTORY=Search in history ...
+GUI_SEARCH_CALLTIP_HISTORY=Click and drag or directly execute within the terminal with a double click
 # Options dialog
 # Section headlines
 GUI_OPTIONS_USERINTERFACE=User interface
