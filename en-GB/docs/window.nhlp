@@ -121,7 +121,7 @@
 			<item node="grapher [-set PAR]">Generates a graph object with configurable size (<code>size={x,y}</code>, by default <expr>640times480</expr>). The graph object can only be populated by a plotting command using the <code>streamto={WINID,ITEMID}</code> option.</item>
 			<item node="menuitem STR [-set PAR]">Defines an item in a menu labeled <code>STR</code>. <code>STR</code> may contain tab-delimited shortcuts which are registered automatically. The <code>type=checkmark</code> option embeds a checkbox in the menu item. The same can be achieved with <code>checkbox</code> when used as part of a menu.</item>.
 			<item node="separator EX [-set PAR]">Inserts a separator object. This can be either a horizontal or vertical line (<code>type=horizontal</code> or <code>type=vertical</code> respectively) or a space of height and width EX (<code>type=space</code>).</item>
-			<item node="prop P1, P2, ...">Generates one or more new internal variables <code>P1, P2, ...</code> for the current window layout, which can be filled with information. The variables are intrinsically <em>typeless</em> and can contain numeric values as well as strings. Default values can be assigned directly: <code>P1 = V1, P2 = V2, ...</code>. To read or modify these variables, <code>window ID -get value prop=PROPNAME</code> or <code>window ID -set value=VALUE prop=PROPNAME</code> must be used.</item>
+			<item node="prop P1, P2, ...">Generates one or more new internal variables <code>P1, P2, ...</code> for the current window layout, which can be filled with information. The variables are intrinsically <em>typeless</em> and can contain numeric values as well as strings. Default values can be assigned directly: <code>P1 = V1, P2 = V2, ...</code>. To read or modify these variables, <code>window ID -get value prop=sPROPNAME</code> or <code>window ID -set value=VALUE prop=sPROPNAME</code> (<code>sPROPNAME</code> is a string) must be used.</item>
 		</list>
 		Thus, a layout script has the following generic shape:
 		<codeblock>
@@ -186,7 +186,7 @@
 		<em>Note:</em> If an event handler has a longer computation time, it will not negatively affect the graphical user interface. It is still usable. However, it should be noted that the user naturally expects a response in a reasonable time frame; at least once the information that computation is in progress.
 		<h>Internal variables</h>
 		In addition to the displayed GUI elements, it is often necessary to assign internal variables to a window in order to be able to uniquely assign further information to that window. <code>prop</code> can be used for this purpose: <code>prop VAR1 = VAL1, VAR2, ...</code> This command generates one or more internal variables which have no specific type, i.e. they can contain both a numeric value or a string.
-		Internal variables can be read with the command sequence <code>window ID -get value prop=VARNAME</code> and written with <code>window ID -set value=VAL prop=VARNAME</code>.
+		Internal variables can be read with the command sequence <code>window ID -get value prop=sPROPNAME</code> and written with <code>window ID -set value=VAL prop=sPROPNAME</code>  (<code>sPROPNAME</code> is a string).
 		<example desc="A window layout, which will display an interactive preview of the result of <code>smooth</code> with a custom selectable level:" type="codeblock">
 			## Window layout: A wide grapher object at the top, a row of controls below
 			layout -title="Smooth Preview" size={700, 300}
