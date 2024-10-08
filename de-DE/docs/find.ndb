@@ -444,11 +444,14 @@ TAB().anovaof({n},m,f,{r})~Führt eine Varianzanalyse für die Kategorien der se
 TAB().binsof(n,b)~Berechnet ein einfaches Histogramm der Daten in der Spalte~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Gibt die Kategorien der Spalten zurück~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Aktualisiert die Kategorien einer kategorialen Spalte~categorize() category factor~.categorize(
+TAB().cells(f,i)~Modifizierer, um Selektionen parallel zur Auswertung durchzuführen~cells() selections selektionen auswahl modifier modifizierer~.cells(
+TAB().cols~Modifizierer für spaltenweises Vorgehen oder gibt die Zahl der Spalten der Tabelle zurück~columncount spaltenzahl größe groesse size dimension modifier modifizierer~.cols
 TAB().convert({n},STR)~Konvertiert die ausgewählten Spalten zum neuen Typ~typeof() convert() konvertieren category string datetime logical value data type~.convert(
 TAB().countif({n},v{})~Zählt die Elemente in den Spalten, die mit den Werten übereinstimmen~countif() enumerate nummerieren zählen elements~.countif(
 TAB().covarof(n,m,{r1},{r2})~Berechnet die Kovarianz der Spalten~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Aktualisiert die Beschreibung der aktuellen Tabelle~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Gibt die Beschreibung der aktuellen Tabelle zurück~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
+TAB().every(f,i)~Modifizierer, um Selektionen orthogonal zur Auswertung durchzuführen~every() selections selektionen auswahl modifier modifizierer~.every(
 TAB().fndcols({STR},l)~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().getunit({c})~Gibt die Einheiten der Werte in den Spalten zurück~getunit() SI measurement messung system units einheiten~.getunit(
 TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
@@ -465,10 +468,13 @@ TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows 
 TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
 TAB().reordercols({c},{n})~Sortiert die Spalten gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
 TAB().reorderrows({r},{n})~Sortiert die Zeilen gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
+TAB().rows~Modifizierer für zeilenweises Vorgehen oder gibt die Zahl der Zeilen der Tabelle zurück~rowcount zeilenzahl reihenzahl größe groesse size dimension modifier modifizierer~.rows
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().scwin(c,w,s)~Modifizierer für ein gleitendes Fenster entlang einer Spalte~scwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.scwin(
 TAB().setunit({c},{STR})~Weist den Spalten die Einheit(en) zu~setunit() SI measurement messung system units einheiten~.setunit(
 TAB().shrink~Entfernt leere, anhängende Zellen und Spalten aus der Tabelle~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Bestimmt die Größe der Tabelle in Zeilen und Spalten~dimension size element count bounding rectangle~.size
+TAB().srwin(r,w,s)~Modifizierer für ein gleitendes Fenster entlang einer Zeile~srwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.srwin(
 TAB().toSIunits({c},STR,l)~Wandelt die Werte der Spalten nCols in SI-(bzw. SI-kompatible) Einheiten um~toSIunits() SI measurement messung system conversion convert konversion konvertieren units einheiten simplify vereinfachen umrechnen~.toSIunits(
 TAB().typeof({n})~Gibt den Spaltentyp der Spalten als Zeichenketten zurück~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(

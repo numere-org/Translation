@@ -446,11 +446,14 @@ TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~
 TAB().binsof(n,b)~Calculates a simple histogram of the data in the column~histogram binsof() rubriken häufigkeiten frequency~.binsof(
 TAB().categoriesof({n})~Returns the categories of the columns~categoriesof() category factor~.categoriesof(
 TAB().categorize({n},{STR})~Updates the categories of a category column~categorize() category factor~.categorize(
+TAB().cells(f,i)~Modifier to perform selections in parallel with the evaluation~cells() selections selektionen auswahl modifier modifizierer~.cells(
+TAB().cols~Column-by-column modifier or returns the number of columns in the table~columncount spaltenzahl größe groesse size dimension modifier modifizierer~.cols
 TAB().convert({n},STR)~Converts the selected columns to the new type~typeof() convert() konvertieren category string datetime logical value data type~.convert(
 TAB().countif({n},v{})~Counts the element matching to the passed values~countif() enumerate nummerieren zählen elements~.countif(
 TAB().covarof(n,m,{r1},{r2})~Calculates the covariance of the columns~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Updates the description of the table~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Returns the description of the table~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
+TAB().every(f,i)~Modifier to perform selections perpendicular to the evaluation~every() selections selektionen auswahl modifier modifizierer~.every(
 TAB().fndcols({STR},l)~Returns the indices of the columns with matching headlines~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().getunit({c})~Returns the units of the values in the columns~getunit() SI measurement messung system units einheiten~.getunit(
 TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
@@ -467,10 +470,13 @@ TAB().removecols({c})~Removes columns from the table~insert remove cells rows co
 TAB().removerows({r})~Removes rows from the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
 TAB().reordercols({c},{n})~Sorts the columns according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
 TAB().reorderrows({r},{n})~Sorts the rows according the new order~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
+TAB().rows~Row-by-row modifier or returns the number of rows in the table~rowcount zeilenzahl reihenzahl größe groesse size dimension modifier modifizierer~.rows
 TAB().scorrof(n,m,{r1},{r2})~Calculates the Spearman correlation of the columns~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
+TAB().scwin(c,w,s)~Modifier for a moving window along a column~scwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.scwin(
 TAB().setunit({c},{STR})~Assigns the unit(s) to the columns~setunit() SI measurement messung system units einheiten~.setunit(
 TAB().shrink~Removes empty trailing cells and columns from the table~remove trailing save memory compress space speicher sparen leere zellen cells spalten columns komprimieren~.shrink
 TAB().size~Determines the size of the table~dimension size element count bounding rectangle~.size
+TAB().srwin(r,w,s)~Modifier for a moving window along a row~srwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.srwin(
 TAB().toSIunits({c},STR,l)~Converts the values in the columns to SI units~toSIunits() SI measurement messung system conversion convert konversion konvertieren units einheiten simplify vereinfachen umrechnen~.toSIunits(
 TAB().typeof({n})~Returns the types of the columns as strings~typeof() convert() konvertieren category string datetime logical value data type~.typeof(
 TAB().zscoreof(n,{r})~Calculates the standardization of the values related to their deviation from the mean~zscoreof() std() avg() mean average standarddeviation zscale~.zscoreof(
