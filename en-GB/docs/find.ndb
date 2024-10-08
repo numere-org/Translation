@@ -54,6 +54,7 @@ bessel(n,x)~Bessel function of the first kind with the order n at the point x~be
 beta(x,y)~Calculates the value of the beta function of x and y~beta() betafunction~beta(
 betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculated with the Bethe-Weizsäcker mass formula~kernbindungsenergie massenformel bethe weizsaecker weizsäcker betheweizsaecker()~betheweizsaecker(
 Bi(x)~Airy function Bi(x)~optik potentialtopf Bi() optics airyfunction~Bi(
+billownoise(x,y,z,seed,freq,oct,pers)~Calculates the billow noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~billownoise(
 binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()~binom(
 bitmap~Inserts an image into a window layout~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbrechen cancel for while switch~help break
@@ -361,6 +362,7 @@ resize(MAT,n,m)~Changes the size of the matrix MAT to (n x m)~vergrößern verkl
 rethrow~Passes the error that is being processed in the current catch block on~try catch throw exception handling error~help rethrow
 retouch~Removes invalid values from data sets~nan inf retuschieren ausgleichen interpolieren interpolate fehlerhaft retoque~help retouch
 return~Declares the return value of the procedure and can be used to leave a script at the current line~procedure script returning leave returnvalue~help return
+ridgedmulti(x,y,z,seed,freq,oct)~Calculates the ridged multi-fractal noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~rigdedmulti(
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()~rint(
 roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen ceil()~roof(
 round(x,n)~Rounds x to n decimals~runden round round()~round(
@@ -521,6 +523,7 @@ vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3
 vectshift(MAT,n,dim)~Shifts all rows/columns of a matrix by n positions in the direction of the matrix dimension dim (choose 0 for row and 1 for column)~vectshift colshift rowshift columnshift shift col row colwise rowwise schieben~vectshift(
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
+voronoinoise(x,y,z,seed,freq,displ,useDist)~Calculates the Voronoi noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~voronoinoise(
 warn~Displays the passed string as a warning~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Returns the weekday number associated with the passed time value~weekday() day of week calendar date time datum kalendar~weekday(
 weeknum(VAL)~Returns the calendar week number associated with the passed time value~weeknum() calendarweek kalenderwoche date time datum~weeknum(
