@@ -22,10 +22,12 @@
 		<keyword>get</keyword>
 		<keyword>asstr</keyword>
 		<keyword>asval</keyword>
+		<keyword>windowsize</keyword>
 	</keywords>
 	<contents>
 		Das NumeRe-Kommando <code>get</code> kann genutzt werden, um eine aktuelle Einstellung von NumeRe abzufragen. Dazu ist einer der unten gelisteten Parameter notwendig. Außerdem können noch die Optionen <code>asstr</code> und <code>asval</code> übergeben werden. Dabei gibt <code>asstr</code> den Wert der Einstellung als eine auswertbare Zeichenkette, <code>asval</code> ggf. (nur, wenn die Einstellung einen numerischen Wert besitzt) als ein auswertbaren, numerischen Wert zurück.
 		<list>
+			<item node="appautoclose">Auto-Schließen-Modus abfragen</item>
 			<item node="autosave">Speicherintervall abfragen</item>
 			<item node="buffersize">Einstellung der Buffergröße abfragen</item>
 			<item node="compact">Tabellendarstellung abfragen</item>
@@ -52,6 +54,7 @@
 			<item node="usecustomlang">Einstellung zur Verwendung einer benutzerdefinierten Sprache abfragen</item>
 			<item node="useescinscripts">Einstellung zur Verwendung der <code>ESC</code>-Taste in Scripts abfragen</item>
 			<item node="varlist">Alle deklarierten numerischen und Zeichenkettenvariablen in einer gemeinsamen Liste abrufen</item>
+			<item node="windowshown">Abfragen, ob das Hauptfenster angezeigt wird</item>
 			<item node="windowsize">Einstellung der Fenstergröße abfragen</item>
 			<item node="workpath">Das aktuelle Arbeitsverzeichnis abfragen</item>
 		</list>

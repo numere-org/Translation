@@ -46,7 +46,8 @@
 		<keyword>set</keyword>
 		<keyword>usecustomlang</keyword>
 		<keyword>useescinscripts</keyword>
-		<keyword>windowsize</keyword>
+		<keyword>windowshown</keyword>
+		<keyword>appautoclose</keyword>
 	</keywords>
 	<contents>
 		The NumeRe command <code>set</code> is used to modify a configuration setting in NumeRe. You have to pass a parameter to <code>set</code>.
@@ -54,6 +55,7 @@
 		Changed configuration settings will be saved at program's end and will be available again after a restart.
 		Parameters for the command <code>set</code> are as follows:
 		<list>
+			<item node="appautoclose=WERT">Close the application automatically, if the last window has been closed and the main window is hidden</item>
 			<item node="autosave=VALUE">Interval [in sec] for the automatic backup</item>
 			<item node="compact=VALUE">Show tables in a compact view</item>
 			<item node="debugger=VALUE">(De-)activates the NumeRe debugger</item>
@@ -75,6 +77,7 @@
 			<item node="scriptpath=PATH">Set the path to default script saving location</item>
 			<item node="usecustomlang=VALUE">(De-)activates the usage of a custom defined language</item>
 			<item node="useescinscripts=VALUE">(De-)activates the usage of the <code>ESC</code> key in scripts</item>
+			<item node="windowshown=WERT">Hide or show the main window</item>
 			<item node="workpath=PATH">Set the path to the current working directory. A faster possibility is the command <code>workpath PATH</code></item>
 		</list>
 		<example desc="Changing the default loading location to 'data/import' in the NumeRe root directory:">

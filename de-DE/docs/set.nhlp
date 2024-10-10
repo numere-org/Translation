@@ -46,7 +46,8 @@
 		<keyword>set</keyword>
 		<keyword>usecustomlang</keyword>
 		<keyword>useescinscripts</keyword>
-		<keyword>windowsize</keyword>
+		<keyword>windowshown</keyword>
+		<keyword>appautoclose</keyword>
 	</keywords>
 	<contents>
 		Das NumeRe-Kommando <code>set</code> wird dazu genutzt, um eine Einstellung an NumeRe zu tätigen. Dabei muss der Befehl <code>set</code> mit einem Parameter versehen werden.
@@ -54,6 +55,7 @@
 		Geänderte Einstellungen werden zum Programmende gespeichert und sind bei einem Neustart wieder verfügbar.
 		Parameter für das Kommando <code>set</code> sind die folgenden:
 		<list>
+			<item node="appautoclose=WERT">Applikation automatisch beenden, wenn das letzte Fenster geschlossen und das Hauptfenster ausgeblendet ist</item>
 			<item node="autosave=WERT">Speicherintervall [in sec]</item>
 			<item node="compact=WERT">Kompakte Tabellenanzeige</item>
 			<item node="debugger=WERT">Den NumeRe-Debugger (de-)aktivieren</item>
@@ -75,6 +77,7 @@
 			<item node="scriptpath=PFAD">Pfad zu den NumeRe-Scripts einstellen</item>
 			<item node="usecustomlang=WERT">Verwendung einer benutzerdefinierten Sprache (de-)aktivieren</item>
 			<item node="useescinscripts=WERT">Verwendung der <code>ESC</code>-Taste in Scripts (de-)aktivieren</item>
+			<item node="windowshown=WERT">Das Hauptfenster anzeigen oder verbergen</item>
 			<item node="workpath=PFAD">Das aktuelle Arbeitsverzeichnis einstellen. Schneller geht das mit dem Kommando <code>workpath PFAD</code></item>
 		</list>
 		<example desc="Einstellen des Importordners auf den Ordner 'data/import' im NumeRe-Verzeichnis:">

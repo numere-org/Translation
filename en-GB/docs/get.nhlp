@@ -22,10 +22,12 @@
 		<keyword>get</keyword>
 		<keyword>asval</keyword>
 		<keyword>asstr</keyword>
+		<keyword>windowsize</keyword>
 	</keywords>
 	<contents>
 		The NumeRe command <code>get</code> may be used to read a current configuration setting of NumeRe. This needs one of the parameters, which are listed below. In addition, you may pass the options <code>asstr</code> and <code>asval</code>. The option <code>asstr</code> returns the value of the configuration setting as a string, <code>asval</code> as a numerical value, if applicable (means: only if the configuration setting contains a numerical value).
 		<list>
+			<item node="appautoclose">Read app auto-close mode</item>
 			<item node="autosave">Read autosave time interval</item>
 			<item node="buffersize">Read the current buffersize</item>
 			<item node="compact">Read, if tables shall be displayed more compact</item>
@@ -52,6 +54,7 @@
 			<item node="usecustomlang">Read, if a custom language shall be used</item>
 			<item node="useescinscripts">Read, if the <code>ESC</code> key shall be used to abort scripts</item>
 			<item node="varlist">Get all declared numerical and all string variables in a common list</item>
+			<item node="windowshown">Get, whether the main window is being shown</item>
 			<item node="windowsize">Get the current windowsize</item>
 			<item node="workpath">Get the current working directory</item>
 		</list>
