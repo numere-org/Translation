@@ -662,6 +662,8 @@ GUI_DLG_GOTO_QUESTION=Eine Zeilennummer eingeben: 1-%%1%%
 GUI_DLG_GOTO_ERROR=Diese Zeile existiert nicht.
 GUI_DLG_SESSION_ERROR=NumeRe: Sitzungswiederherstellung
 GUI_DLG_SESSION_RECREATIONERROR=NumeRe konnte die Datei(en)%%LINEBREAK%%%%1%%nicht wiederherstellen. Möglicherweise wurde(n) sie gelöscht.
+GUI_DLG_START_AFTER_CRASH=NumeRe: Crash Reporter
+GUI_DLG_START_AFTER_CRASH_QUESTION=Es tut uns Leid, offenbar gab es ein Problem während deiner letzten Sitzung und NumeRe wurde nicht richtig beendet.%%LINEBREAK%%Willst du uns einen Fehlerbericht zusenden?
 GUI_DLG_FILEMODIFIED=NumeRe: Aktualisieren
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%Diese Datei wurde außerhalb von NumeRe oder durch ein Script/eine Prozedur geändert. Soll sie neu geladen werden?%%LINEBREAK%%%%LINEBREAK%%(Deine Änderungen gehen dadurch verloren.)
 GUI_DLG_PROC_NEXISTS_CREATE=Die Prozedur %%1%%() scheint nicht zu existieren. Soll sie neu erzeugt werden?
@@ -1121,6 +1123,7 @@ GUI_SELECT_PACKAGE_FOR_INSTALL=NumeRe: Package zum Installieren auswählen
 GUI_MENU_NO_PLUGINS_INSTALLED=Keine GUI-Plugins installiert
 # Help menu
 GUI_MENU_SHOWHELP=&Hilfethemen%%TAB%%F1
+GUI_MENU_REPORTISSUE=Ein Problem oder Wunsch melden
 GUI_MENU_ABOUT=&Über NumeRe
 GUI_MENU_ABOUT_TTP=Zeige Informationen über NumeRe
 GUI_MENU_HELP=&Hilfe

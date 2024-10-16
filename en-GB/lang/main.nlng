@@ -662,6 +662,8 @@ GUI_DLG_GOTO_QUESTION=Insert a line number: 1-%%1%%
 GUI_DLG_GOTO_ERROR=This line doesn't exist.
 GUI_DLG_SESSION_ERROR=NumeRe: Session recovery
 GUI_DLG_SESSION_RECREATIONERROR=NumeRe could not recreate the file(s):%%LINEBREAK%%%%1%%It/they was/were probably deleted.
+GUI_DLG_START_AFTER_CRASH=NumeRe: Crash Reporter
+GUI_DLG_START_AFTER_CRASH_QUESTION=We are sorry, it seems that you experienced a problem during your last session and NumeRe was not terminated correctly.%%LINEBREAK%%Do you want to send us a crash report?
 GUI_DLG_FILEMODIFIED=NumeRe: Reload
 GUI_DLG_FILEMODIFIED_QUESTION=%%1%%%%LINEBREAK%%%%LINEBREAK%%This file was modified externally or through a script or a procedure. Shall NumeRe reload this file?%%LINEBREAK%%%%LINEBREAK%%(Your changes will get lost.)
 GUI_DLG_PROC_NEXISTS_CREATE=It seems that the procedure %%1%%() doesn't exist. Shall it be created?
@@ -1121,6 +1123,7 @@ GUI_SELECT_PACKAGE_FOR_INSTALL=NumeRe: Select package for install
 GUI_MENU_NO_PLUGINS_INSTALLED=No GUI plugins installed
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
+GUI_MENU_REPORTISSUE=Report a problem or a feature request
 GUI_MENU_ABOUT=&About NumeRe
 GUI_MENU_ABOUT_TTP=Show informations about NumeRe
 GUI_MENU_HELP=&Help
