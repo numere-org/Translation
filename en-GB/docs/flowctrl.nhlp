@@ -79,6 +79,12 @@
 			|FOR&gt; clust{i} += clust{i-1};
 			|FOR&gt; endfor
 		</example>
+		<em>Optional</em>, it is possible to specify a second argument as a condition in the form <code>INDEX = I0:I1, CONDITION</code>, which must be fulfilled before and during the execution of the loop. If the condition is not fulfilled at any point during the loop run, the loop is either aborted or not even started.
+		<example desc="Index based <code>for</code> loop adding each previous element in a cluster to the current element with the usage of an additional condition:" type="verbatim">
+			|&lt;- for (i = 1:10, !is_nan(clust{i}))
+			|FOR&gt; clust{i} += clust{i-1};
+			|FOR&gt; endfor
+		</example>
 		<h>Range based loops</h>
 		Range-based <code>for</code> loops use so-called <em>iterators</em> instead of a loop index. During execution of the <expr>n</expr>-th iteration, these iterators contain a copy of the <expr>n</expr>-th value of the underlying range. To declare this loop form, the iterator must be specified with its range (note the <code>-&gt;</code> operator): <code>for (ITERATOR -> RANGE)</code>
 		A range can be, for example, the contents of a <a href="nhlp://cluster?frame=new">cluster</a> or a column or row from a <a href="nhlp://table?frame=new">table</a>. It is also possible to iterate over the results of functions or <a href="nhlp://procedure?frame=new">procedures</a> with multiple return values.

@@ -79,6 +79,12 @@
 			|FOR&gt; clust{i} += clust{i-1};
 			|FOR&gt; endfor
 		</example>
+		<em>Optional</em> ist es möglich, ein zweites Argument als Bedingung in der Form <code>INDEX = I0:I1, CONDITION</code> anzugeben, die vor und während der Ausführung der Schleife erfüllt sein muss. Ist die Bedingung zu einem Zeitpunkt während des Schleifendurchlaufes nicht erfüllt, wird die Schleife entweder abgebrochen oder gar nicht erst begonnen.
+		<example desc="Indexbezogene <code>for</code>-Schleife, die das jeweils vorhergehende Element eines Clusters auf das aktuelle addiert, wobei eine zusätzliche Bedingung verwendet wird:" type="verbatim">
+			|&lt;- for (i = 2:10, !is_nan(clust{i}))
+			|FOR&gt; clust{i} += clust{i-1};
+			|FOR&gt; endfor
+		</example>
 		<h>Bereichsbezogene Schleifen</h>
 		Bereichsbezogene <code>for</code>-Schleifen verwenden statt eines Schleifenindexes sogenannte <em>Iteratoren</em>. Diese Iteratoren enthalten während der Auswertung der <expr>n</expr>-ten Iteration eine Kopie des <expr>n</expr>-ten Wertes des zugrundeliegenden Bereichs. Um diese Schleifenform zu deklarieren, ist der Iterator mit seinem Bereich anzugeben (man beachte den <code>-&gt;</code> Operator): <code>for (ITERATOR -&gt; BEREICH)</code>
 		Ein Bereich kann dabei zum Beispiel der Inhalt eines <a href="nhlp://cluster?frame=new">Clusters</a> oder eine Spalte oder Zeile aus einer <a href="nhlp://table?frame=new">Tabelle</a> sein. Es ist auch möglich, über die Ergebnisse von Funktionen oder <a href="nhlp://procedure?frame=new">Prozeduren</a> mit mehreren Rückgabewerten zu iterieren.
