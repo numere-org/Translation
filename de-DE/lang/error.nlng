@@ -117,8 +117,8 @@ ERR_MUP_41_METHOD_ERROR=Die Methode "$TOK$" existiert nicht, ist für den verwen
 ERR_MUP_42_INTERNAL_ERROR=Interner Fehler.
 # STD-Errors
 # ========================
-ERR_STD_BADALLOC=NumeRe konnte nicht ausreichend Speicher für die aktuelle Aufgabe reservieren. Versuche Speicher freizugeben, indem du überzählige Graphen schließt oder Tabellen entfernst, oder versuche, weniger Speicher zu verwenden. Du kannst fortfahren, es kann aber zu weiteren Problemen kommen. Ziehe in Erwägung, NumeRe neu zu starten. Bitte informiere uns unter <dev@numere.org> oder <https://sourceforge.net/p/numere/tickets/> über dieses Problem.
-ERR_STD_INTERNAL=Dies ist ein nicht-kritischer Fehler. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Wir freuen uns über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://sourceforge.net/p/numere/tickets/>.
+ERR_STD_BADALLOC=NumeRe konnte nicht ausreichend Speicher für die aktuelle Aufgabe reservieren. Versuche Speicher freizugeben, indem du überzählige Graphen schließt oder Tabellen entfernst, oder versuche, weniger Speicher zu verwenden. Du kannst fortfahren, es kann aber zu weiteren Problemen kommen. Ziehe in Erwägung, NumeRe neu zu starten. Bitte informiere uns über die Reporting-Funktion im "Hilfe"-Menü oder unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues> über dieses Problem.
+ERR_STD_INTERNAL=Dies ist ein nicht-kritischer Fehler. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Im "Hilfe"-Menü findest du eine entsprechende Funktion hierfür. Wir freuen uns auch über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
 # NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ========================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=Die gewünschte Tabelle "%%1%%" existiert bereits.
@@ -511,5 +511,5 @@ ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=Die Variable, bezüglich welcher die Nullstel
 # CATCHALL_ERROR
 # ==========================
 ERR_CATCHALL=ENTER drücken, um mit NumeRe fortzufahren ...
-ERR_GENERIC_0=Der Fehler Nr. %%1%% trat auf und zwang NumeRe, alle laufenden Auswertungen abzubrechen. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Wir freuen uns über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
+ERR_GENERIC_0=Der Fehler Nr. %%1%% trat auf und zwang NumeRe, alle laufenden Auswertungen abzubrechen. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren.  Im "Hilfe"-Menü findest du eine entsprechende Funktion hierfür. Wir freuen uns auch über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
 ERR_GENERIC_1=%%ERR_SEEALSO%%: "help numere"

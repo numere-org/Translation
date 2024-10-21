@@ -117,8 +117,8 @@ ERR_MUP_41_METHOD_ERROR=The method "$TOK$" does not exist, is not defined for th
 ERR_MUP_42_INTERNAL_ERROR=Internal Error.
 # STD-Errors
 # ====================
-ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/> about this issue.
-ERR_STD_INTERNAL=This is a non-critical error. Please consider, informing us about this error. We're very grateful, if we receive a bug message via <dev@numere.org> or <https://sourceforge.net/p/numere/tickets/>.
+ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via thre reporting functionality in the "Help" menu or via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues> about this issue.
+ERR_STD_INTERNAL=This is a non-critical error. Please consider, informing us about this error. There is a corresponding functionality located in the "Help" menu. We're also very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
 # NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ====================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=The desired table "%%1%%" already exists.
@@ -511,5 +511,5 @@ ERR_NR_4200_1_ZEROES_VAR_NOT_FOUND=The variable for searching the intersections 
 # CATCHALL_ERROR
 # ======================
 ERR_CATCHALL=Press ENTER to resume NumeRe ...
-ERR_GENERIC_0=The error no. %%1%% appeared and requested the termination of all processes. Please consider, informing us about this error. We're very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
+ERR_GENERIC_0=The error no. %%1%% appeared and requested the termination of all processes. Please consider, informing us about this error. There is a corresponding functionality located in the "Help" menu. We're also very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
 ERR_GENERIC_1=%%ERR_SEEALSO%%: "help numere"
