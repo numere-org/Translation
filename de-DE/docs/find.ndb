@@ -61,12 +61,15 @@ break~Bricht eine Schleife an der aktuellen Stelle ab oder beendet ein CASE-Stat
 button~Fügt eine beschriftbare Schaltfläche in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
 carttopol(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
+category(sName,nId)~Erzeugt eine Kategorie mit dem Namen und einer zugehörigen ID~category() kategorial categoryies categorize kategorisieren numerieren enumerate~category(
 cauchy_cdf_p(x,a)~Liefert den Wert der kumulativen Verteilungsfunktion bei x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_cdf_p(
 cauchy_cdf_q(x,a)~Liefert den Wert der komplementären kumulativen Verteilungsfunktion an x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_cdf_q(
 cauchy_inv_p(p,a)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Cauchy-Verteilung mit dem Skalenparameter a zurück~cauchy inverse verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_inv_p(
 cauchy_inv_q(q,a)~Liefert den inversen Wert der komplementären kumulativen Verteilungsfunktion bei q für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy inverse verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_inv_q(
 cauchy_pdf(x,a)~Liefert den Wert der Dichte der Verteilungsfunktion bei x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_pdf(
 cauchy_rd(a,n)~Liefert eine Zufallszahl aus der Cauchy-Verteilung mit Skalenparameter a~cauchy verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~cauchy_rd(
+cf32(x)~Konvertiert den Wert x in den Datentyp "value.cf32"~cf32() complex komplex floating point fließkommazahl data type datentyp convert konvertieren~cf32(
+cf64(x)~Konvertiert den Wert x in den Datentyp "value.cf64"~cf64() complex komplex floating point fließkommazahl data type datentyp convert konvertieren~cf64(
 char(STR,POS)~Gibt das Zeichen aus der Zeichenkette STR an der Stelle POS zurück~zeichen character string zeichenkette at() char()~char(
 checkbox~Fügt eine Checkbox in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 circshift(MAT,n,dim)~Verschiebt alle Elemente einer Matrix um n Positionen in Richtung der Matrixdimension dim (wählen Sie 0 für Zeile und 1 für Spalte)~circshift circular shift rotation col row columnwise rowwise rotieren~circshift(
@@ -140,11 +143,14 @@ evt_close()~GUI-Event-Handler: Schließt das aktuelle Fenster~eventhandling wind
 evt_copyvalues(nFromId,nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Elements mit der ID nFromId in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_copyvalues(
 evt_enddialog(STR)~GUI-Event-Handler: Beendet den Dialog-Modus~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_enddialog(
 evt_sendvaltoitem(nToId1,...)~GUI-Event-Handler: Kopiert die Werte des Event-auslösenden Elements in die Elemente mit den IDs nToId1, ...~eventhandling windowsystem layout group interaction gui graphical user interface graphisch fenster dialog onclick onchange~evt_sendvaltoitem(
+exc(x,y,z,...)~Berechnet den Excess (Wölbung, Kurtosis-3) der Verteilung~exc() stats statistiken steilgipflig flachgipflig mesokurtic leptokurtic platykurtic~exc(
 execute~Führt ein Kommando mithilfe der Windows-Shell aus~command bash programm wait ausführen run cmd.exe~help execute
 exp(x)~Exponentialfunktion von x~exponentialfunktion eulersche zahl exp()~exp(
 explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren überschreiben ueberschreiben~help explicit
 export~Export eines Datensatzes als ANSI-Text-, CSV- oder TeX-Datei~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
 extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Siehe "help extrema"~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
+f32(x)~Konvertiert den Wert x in den Datentyp "value.f32"~f32() floating point fließkommazahl data type datentyp convert konvertieren~f32(
+f64(x)~Konvertiert den Wert x in den Datentyp "value.f64"~f64() floating point fließkommazahl data type datentyp convert konvertieren~f64(
 factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()~factorial(
 fft2d~Schnelle 2D-Fourier-Transformation eines Datengitters~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
 fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
@@ -174,6 +180,7 @@ gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~great
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 get_utc_offset()~Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit~get_utc_offset() time zone utc~get_utc_offset(
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
+geterrormsg(sErrorCode)~Gibt die Fehlermeldung zum Fehlercode sErrorCode zurück~geterrormsg() errorcode errormessage fehlercode fehlermeldung assertion expression# syntax#~geterrormsg(
 getfilediff(STR,STR)~Berechnet die zeilenweisen Unterschiede der beiden Dateien~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
 getfileinfo(STR)~Gibt Meta-Informationen zu der angegebenen Datei in sFilePath als eine Schlüssel-Wert-Liste zurück~file information size groesse größe bytes datei getfileinfo() modifikation erstellung modification creation time~getfileinfo(
 getfilelist(STR,T)~Gibt eine Liste aller Dateien, auf die das Namensschema STR zutrifft, als Zeichenketten zurück~dateien files liste getfilelist() verzeichnis inhalt content directory dir()~getfilelist(
@@ -202,6 +209,10 @@ hermite(n,x)~Berechnet den numerischen Wert der Hermite-Polynome der Ordnung n a
 hist2d~Berechnet ein 2D-Histogramm aus einem gegebenen (x,y,z)-Datensatz. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter~help hist2d
 hist~Berechnet einen Histogramm-Datensatz aus einem gegebenen Datensatz~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
 hline~Zeichnet eine horizontale (einfache oder doppelte) Linie~formatierung ausgabe trenner abstand doppellinie separator~help hline
+i16(x)~Konvertiert den Wert x in den Datentyp "value.i16"~i16() integer data type datentyp convert konvertieren~i16(
+i32(x)~Konvertiert den Wert x in den Datentyp "value.i32"~i32() integer data type datentyp convert konvertieren~i32(
+i64(x)~Konvertiert den Wert x in den Datentyp "value.i64"~i64() integer data type datentyp convert konvertieren~i64(
+i8(x)~Konvertiert den Wert x in den Datentyp "value.i8"~i8() integer data type datentyp convert konvertieren~i8(
 identity(n)~Erzeugt eine n-Dimensionale Einheitsmatrix, siehe "help matop"~identity() matrix identität eye()~identity(
 idxtolog(MAT)~Wandelt Indexwerte in einer Matrix in Logikwerte um~logic index indices transformieren~idxtolog(
 if (COND)~Wertet Blöcke von Ausdrücken entsprechend der vorgegebenen Bedingung COND aus, siehe "help if"~condition bedingung else elseif() if() endif wenn falls verzweigung loop command sequence flow control~help if () ... endif
@@ -364,6 +375,7 @@ retouch~Entfernt ungültige Werte aus Datensätzen~nan inf retuschieren ausgleic
 return~Deklariert den Rückgabewert der Prozedur und kann verwendet werden, um ein Script sofort zu verlassen~procedure script returning leave returnvalue~help return
 ridgedmulti(x,y,z,seed,freq,oct)~Berechnet Ridged-Multifractal-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~ridgedmulti(
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()~rint(
+rms(x,y,z,...)~Berechnet das quadratische Mittel (Root Mean Square)~rms() fehler error varianz variance stats statistiken noise rauschen~rms(
 roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen ceil() integral number~roof(
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
 save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving daten datei file data functions settings options~help save
@@ -382,6 +394,7 @@ sin(x)~Sinus von x~sinus trigonometrische funktionen trigonometrie trigonometry 
 sinc(x)~Sinus cardinalis von x~sinus cardinalis trigonometrische funktionen trigonometrie trigonometry trigonometric functions sinc()~sinc(
 sinh(x)~Sinus hyperbolicus von x~sinus hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic sinh()~sinh(
 size(MAT)~Gibt die Zahl der Zeilen und Spalten der Matrix MAT zurück~lines columns rows size() nlines ncols~size(
+skw(x,y,z,...)~Berechnet die Schiefe (Skewness) der Verteilung~skw() skew() stats statistiken linksschief rechtsschief left-skew right-skew~skw(
 sleep(nMilliSeconds)~Wartet die angegebenen nMilliSeconds und gibt diesen Wert anschließend zurück~sleep() pause() waiting time zeit dauer warten~sleep(
 slider~Fügt einen Schieberegler in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 smooth~Verringert das Rauschen auf Datenreihen gemäß einer gewählten Ordnung der Linearisierung~noise reduction rauschen reduzieren verringern glaetten glätten smoothing gaussian filter kernel savitzkygolay~help smooth
@@ -397,6 +410,7 @@ start~Ein NumeRe-Script (*.nscr) ausführen, siehe "help script"~starten laden p
 statictext~Fügt einen statischen Text in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 stats~Berechnet die Statistiken einer gegebenen Tabelle~standardabweichung mittelwert statistiken fehler exzess excess kurtosis schiefe skewness~help stats
 std(x,y,z,...)~Standardabweichung der Werte x,y,z,...~standardabweichung fehler varianz variance deviation stats statistiken std()~std(
+stderr(x,y,z,...)~Berechnet den Standardfehler (Unsicherheit)~stderr() standard error uncertainty fehler stats statistiken~stderr(
 stfa~Bestimmt eine Kurzzeit-Fourieranalyse des übergebenen Datensatzes~kurzzeitfourieranalyse shorttimefourieranalysis spectrogram spektrogramm~help stfa
 STR.at(POS)~Gibt das Zeichen aus der Zeichenkette an der Stelle POS zurück~methode strings zeichenketten character at()~.at(
 STR.endsw(STR)~Gibt true zurück, wenn der zweite Substring am Ende des Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~.endsw(
@@ -509,6 +523,10 @@ trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~t
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
 treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 try~Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können~try catch endtry error exception handling throw~help try
+ui16(x)~Konvertiert den Wert x in den Datentyp "value.ui16"~ui16() unsigned integer data type datentyp convert konvertieren~ui16(
+ui32(x)~Konvertiert den Wert x in den Datentyp "value.ui32"~ui32() unsigned integer data type datentyp convert konvertieren~ui32(
+ui64(x)~Konvertiert den Wert x in den Datentyp "value.ui64"~ui64() unsigned integer data type datentyp convert konvertieren~ui64(
+ui8(x)~Konvertiert den Wert x in den Datentyp "value.ui8"~ui8() unsigned integer data type datentyp convert konvertieren~ui8(
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 unpack~Entpackt eine Archivdatei~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
