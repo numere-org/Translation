@@ -506,7 +506,7 @@ textfield~Inserts a text field into a window layout~textctrl windowsystem layout
 textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
 throw~Aborts the procedure execution and displays an error message~procedure throw try catch error exception~help throw
-time()~Returns the number of seconds since 1.1.1970~zeit sekunden dauer date() to_time() timeformat()~time()
+time()~Returns the current time~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
 to_ansi(sUtf8Enc)~Converts the UTF-8 encoded string sUtf8Enc into an ANSI encoded string~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string character ascii to_char()~to_char(
@@ -520,6 +520,7 @@ to_time(STR1,STR2)~Transforms the time in STR2 according to the pattern in STR1 
 to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string zeichenkette wert to_uppercase() großbuchstaben grossbuchstaben großschreiben grossschreiben~to_uppercase(
 to_utf8(sAnsiEnc)~Converts the ANSI encoded string sAnsiEnc into an UTF-8 encoded string~utf8 ansi ascii to_utf8() to_ansi() conversion wide char~to_utf8(
 to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert to_value()~to_value(
+today()~Returns the current date~zeit sekunden dauer date() to_time() timeformat() today()~today()
 trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 treelist~Inserts a tree list into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
