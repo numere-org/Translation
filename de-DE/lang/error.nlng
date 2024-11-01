@@ -112,7 +112,7 @@ ERR_MUP_36_TYPE_NO_STR=Ein verwendeter Wert ist kein String.
 ERR_MUP_37_TYPE_NO_VAL=Ein verwendeter Wert ist nicht numerisch.
 ERR_MUP_38_TYPE_MISMATCH=Die Typen der verwendeten Werte passen nicht zusammen oder die Operation ist nicht für die verwendeten Typen definiert.
 ERR_MUP_39_TYPE_MISMATCH_OOB=Die Typen der verwendeten Werte passen nicht zusammen oder der Index des zugrundeliegenden Arrays ist außerhalb des gültigen Bereichs.
-ERR_MUP_40_ASSIGNED_TYPE_MISMATCH=Einer bereits initialisierten Variable kann kein Wert eines anderen Typs zugewiesen werden.
+ERR_MUP_40_ASSIGNED_TYPE_MISMATCH=Einer bereits initialisierten Variable kann kein Wert eines anderen Typs zugewiesen werden. Setze Cluster ein, um gemischte Datentypen zu verwenden.
 ERR_MUP_41_METHOD_ERROR=Die Methode "$TOK$" existiert nicht, ist für den verwendeten Typ nicht definiert oder es wurden zu wenig Argumente verwendet.
 ERR_MUP_42_INTERNAL_ERROR=Interner Fehler.
 # STD-Errors
