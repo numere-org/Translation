@@ -474,7 +474,7 @@ TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mi
 TAB().insertcells(r,c,r1,c1)~Fügt einen Block an Zellen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
 TAB().insertcols(c,n)~Fügt Spalten in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
 TAB().insertrows(r,n)~Fügt Reihen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
-TAB().inSIunits(c)~Gibt die Werte der Spalte im SI-Einheiten-System zurück~inSIunits() SI measurement messung system convert konversion konvertieren units einheiten  umrechnen~.inSIunits(
+TAB().inSIunits(c,STR)~Gibt die Werte der Spalte im SI-Einheiten-System zurück~inSIunits() SI measurement messung system convert konversion konvertieren units einheiten  umrechnen~.inSIunits(
 TAB().kmeansof({n},m,f,r)~Clustert Daten mittels kmeans Algorithmus~kmeansof() k-means clustering~.kmeansof(
 TAB().name~Gibt den Namen der Tabelle als Zeichenkette zurück~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Berechnet die Pearson-Korrelation der Spalten~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(

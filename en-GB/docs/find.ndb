@@ -475,7 +475,7 @@ TAB().indexof(n,v{})~Returns the indices of the matching elements in the column~
 TAB().insertcells(r,c,r1,c1)~Inserts a block of cells into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
 TAB().insertcols(c,n)~Inserts columns into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
 TAB().insertrows(r,n)~Inserts rows into the table~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
-TAB().inSIunits(c)~Returns the values of the column in the SI units system~inSIunits() SI measurement messung system convert konversion konvertieren units einheiten  umrechnen~.inSIunits(
+TAB().inSIunits(c,STR)~Returns the values of the column in the SI units system~inSIunits() SI measurement messung system convert konversion konvertieren units einheiten  umrechnen~.inSIunits(
 TAB().kmeansof({n},m,f,r)~Clusters data using the k-means algorithm~kmeansof() k-means clustering~.kmeansof(
 TAB().name~Returns the name of the table as a string~aliasof() bezeichnung reference referenz~.name
 TAB().pcorrof(n,m,{r1},{r2})~Calculates the Pearson correlation of the columns~pcorrof() pearson spearman correlation coefficient korrelationskoeffizient~.pcorrof(
