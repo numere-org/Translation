@@ -1,0 +1,75 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2024  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="database">
+	<title string="Datenbanken (MySQL, SQLite und weitere)" idxkey="database" />
+	<keywords>
+		<keyword>database</keyword>
+		<keyword>mysql</keyword>
+		<keyword>mariadb</keyword>
+		<keyword>sqlite</keyword>
+		<keyword>postgres</keyword>
+		<keyword>odbc</keyword>
+		<keyword>sql</keyword>
+		<keyword>usedb</keyword>
+		<keyword>port</keyword>
+		<keyword>driver</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			ID = database FILENAME -set type=sqlite
+			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD ...
+			VAL = database ID -set sql=SQLSTATEMENT
+			VAL = database ID -set sql={SQLSTATEMENTS} ...
+			VAL = database ID -close
+		</syntax>
+		Neben der Möglichkeit, direkt auf <a href="nhlp://url?frame=new">URLs</a> zuzugreifen, bietet NumeRe auch ein Interface auf die geläufigsten Datenbankentypen: MySQL/MariaDB, SQLite, PostGreSQL (noch nicht verfügbar) und ODBC (Open Database Connectivity). Dabei gibt es kleinere Unterschiede in der SQL Syntax und in den bereitgestellten Zusatzfunktionen. NumeRe gleicht diese Unterschiede <em>nicht</em> aus.
+		<h>Verbindungsaufbau</h>
+		Beim Aufbau einer Verbindung mit einem Datenbank-Host wird die Verbindung als ID zurückgegeben. Mit dieser ID kann im Anschluss mit der Datenbank interagiert und die Verbindung wieder getrennt werden. Verbindungen werden aber auch automatisch getrennt, wenn NumeRe beendet oder die Verbindung lange Zeit nicht genutzt wird.
+		Der Aufbau einer Verbindung erfordert den Hostnamen (oder Dateinamen bei SQLite) und mindestens den Datenbanktyp <code>type=TYPE</code>. Es kann aber auch ein Username <code>usr=USERNAME</code> und ein Passwort <code>pwd=PASSWORD</code> sowie ein dedizierter Port <code>port=PORT</code> nötig sein. Abseits von SQLite bietet es sich auch an, den Ziel-Datenbanknamen <code>usedb=DBNAME</code> mit anzugeben:
+		<codeblock>
+			ID = database FILENAME -set type=sqlite
+			ID = database HOST -set type=TYPE
+			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD port=PORT usedb=DBNAME
+		</codeblock>
+		<em>Hinweis:</em> ODBC-Verbindungen sind von zusätzlichen Treibern für die jeweiligen Datenbanktypen abhängig, von denen einer bei einer Verbindung mittels <code>driver=ODBCDRIVERNAME</code> angegeben werden muss. Die Funktion <code>getodbcdrivers()</code> gibt eine Liste der auf dem aktuellen System installierten ODBC-Treibern zurück. Diese enthält auf Windows-Systemen standardmäßig mindestens den <code>"SQL Server"</code>-Treiber. Die zurückgegebenen Treiberbezeichnungen können direkt an <code>driver</code> übergeben werden:
+		<codeblock>
+			drivers{} = getodbcdrivers();
+			ID = database HOST -set type=odbc driver=drivers{1} usr=USERNAME pwd=PASSWORD ...
+		</codeblock>
+		<example desc="Aufbau einer Verbindung zu der MySQL-Datenbank 'MyDB' auf 'localhost' mit zusätzlichen Parametern:">
+			nId = database "localhost" -set type=mysql usr="NumeRe" pwd="mysqlpwd" port=3307 usedb="MyDB"
+		</example>
+		<h>Datenbank-Interaktion</h>
+		Mithilfe der Verbindungs-ID kann mit der verbundenen Datenbank durch SQL-Statements interagiert werden. Wenn ein solches Statement eine Tabelle zurückgibt (z.B. <code>SELECT * FROM ...</code>), dann werden maximal die ersten zehn Zeilen der Tabelle im Terminal wiedergegeben. Um die gesamte Tabelle zu verwenden, muss eine Zieltabelle mittels <code>target=TABLE()</code> angegeben werden, die auch ggf. automatisch erzeugt wird:
+		<codeblock>
+			VAL = database ID -set sql=SQLSTATEMENT
+			VAL = database ID -set sql=SQLSTATEMENT target=TABLE()
+		</codeblock>
+		Dabei kann <code>sql=SQLSTATEMENT</code> auch einen Vektor mit mehreren Statements enthalten, die direkt nacheinander ausgeführt werden.
+		Die Datenbankverbindung kann mittels <code>database ID -close</code> wieder geschlossen werden.
+		<example desc="Erzeugen einer neuen Tabelle 'Employee' in der MySQL-Datenbank und befüllen mit mehreren Werten:">
+			database nId -set sql="CREATE TABLE Employee (`ID` INT NOT NULL AUTO_INCREMENT, `Name` TEXT, `Created` DATE, PRIMARY KEY(`ID`))"
+			true
+			database nId -set sql="INSERT INTO Employee (`Name`,`Created`) VALUES ("+{"John Doe","Jane Doe"}+","+timeformat("YYYY-MM-DD"),time())+")"
+			true
+			database nId -set sql="SELECT * FROM Employee"
+		</example>
+		<em>Siehe auch:</em> <a href="nhlp://url?frame=self">help url</a>
+	</contents>
+</article>
