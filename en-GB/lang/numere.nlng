@@ -172,6 +172,7 @@ PARSERFUNCS_LISTFUNC_FUNC_GETINDICES_[STRING]=				getindices(sTable,nMode=0)    
 PARSERFUNCS_LISTFUNC_FUNC_GETKEYVAL_[STRING]=				getkeyval({keyVals},sKey,def="",strict=false)                       ARG      - Returns the value of the corresponding key sKey from the key-value list keyVals. def is the default value, if the key could not be found (can be a numerical or string value). If strict is true and the key was not found, then a warning is issued. strict is an optional value and defaults to false
 PARSERFUNCS_LISTFUNC_FUNC_GETLASTERROR_[STRING_SYNTAX]=		getlasterror()                                                       {STR}     - Returns the last error processed by a try-catch block in the form {TYPE, MESSAGE}, where TYPE always corresponds to one of the known error types of try-catch as a string
 PARSERFUNCS_LISTFUNC_FUNC_GETMATCHINGPARENS_[STRING]=	    getmatchingparens(sLine)                                              VAL      - Returns the position of the closing parenthesis matching to the first open parenthesis in the string sLine. Note that this applies to brackets and braces as well.
+PARSERFUNCS_LISTFUNC_FUNC_GETODBCDRIVERS_[STRING]=			getodbcdrivers()                                                     {STR}     - Returns a list of on the current system installed ODBC drivers, which can be used for a ODBC database connection using the database command
 PARSERFUNCS_LISTFUNC_FUNC_GETOMPTHREADS_[NUM]=				getompthreads()                                                       VAL      - Returns the number of the maximal possible OpenMP threads. This corresponds mostly to the number of logical CPU cores.
 PARSERFUNCS_LISTFUNC_FUNC_GETOPT_[STRING]=					getopt(sLine,nPos)                                                    STR      - Returns the value of a parameter in the string sLine with the value's first character at position nPos (e.g. after "=") as a string. Note that all whitespaces between nPos and the actual position of the value will be ignored.
 PARSERFUNCS_LISTFUNC_FUNC_GETORDER_[STRING_NUM]=			getorder({x,y,z,...})                                                {VAL}     - Returns the order of the elements {x,y,z,...} sorted ascending as an index. Defined for numerical values and strings
@@ -515,6 +516,7 @@ PARSERFUNCS_LISTCMD_CMD_COPY_[MAINCTRL]=				copy         OB [-PAR]              
 PARSERFUNCS_LISTCMD_CMD_CST_[PROC]=						cst          EX                         - Defines the local clusters in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_DATAGRID_[DATACREATION]=		datagrid     EX -PAR                    - Creates a data grid from the expression or the data in EX. The x and y values have to be passed as parameters. In addition, the number of samples and the target table can be passed via parameters
 PARSERFUNCS_LISTCMD_CMD_DATA_[DATACTRL]=				data         -PAR  -> {VAL}             - Options applied to the elements of the loaded data file. The parameters allow multiple operations, just like applying multi-argument functions
+PARSERFUNCS_LISTCMD_CMD_DATABASE_[DATACTRL_LOADSAVE]=	database     EX -set PAR  -> VAL        - Enables a connection to be established to databases and interaction with the data contained therein by transferring SQL commands. When establishing a connection, EX is the host and the connection is returned as an ID. When interacting with the database, EX is the ID of the connection
 PARSERFUNCS_LISTCMD_CMD_DATETIMEPICKER_[GUI]=			datetimepicker   [-set PAR]             - Inserts a date-and-time picker field into a window layout. The event handling and the start value are configurable
 PARSERFUNCS_LISTCMD_CMD_DECLARE_[DEF_PROC]=				declare      EX                         - Declares a file-specific constant in EX for use in the current file, where the constant must be specified as NAME := EXPRESSION. The constant is automatically removed at the end of the current file
 PARSERFUNCS_LISTCMD_CMD_DEFAULT_[FLOWCTRL]=				default:                                - Defines the "otherwise" case in a switch fork
@@ -837,6 +839,7 @@ GUI_EDITOR_CALLTIP_OPT_DISTRIB=distrib=DISTRIBUTION [%%GUI_EDITOR_CALLTIP_COMMON
 GUI_EDITOR_CALLTIP_OPT_DOCS=docs [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_DOWN=down [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes]
 GUI_EDITOR_CALLTIP_OPT_DRAFTMODE=draftmode [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_DRIVER=driver=ODBCDRIVERNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_EDITOR=editor[=PATH/TO/EDITOR] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_ENABLED=state=enabled [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_EPS=eps=PRECISION
@@ -952,6 +955,7 @@ GUI_EDITOR_CALLTIP_OPT_MOY=colorscheme=moy [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING
 GUI_EDITOR_CALLTIP_OPT_MSG=msg=MESSAGE
 GUI_EDITOR_CALLTIP_OPT_MULTILINE=type=multiline [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_MULTIPLOT=multiplot=ROWS,COLS
+GUI_EDITOR_CALLTIP_OPT_MYSQL=type=mysql [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_NICE=axis=nice [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOALPHA=noalpha [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOALPHAMASK=noalphamask [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1002,6 +1006,7 @@ GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOZLOG=nozlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NQ=nq
 GUI_EDITOR_CALLTIP_OPT_OBPS=obps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%
+GUI_EDITOR_CALLTIP_OPT_ODBC=type=odbc [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_OEPS=oeps=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OGIF=ogif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OHLC=ohlc [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1045,15 +1050,17 @@ GUI_EDITOR_CALLTIP_OPT_POINTS=points[=VAL]
 GUI_EDITOR_CALLTIP_OPT_POINTSTYLES=pointstyles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_POISSON=distrib=poisson [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_POLAR=coords=polar [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_POLARITY=colorscheme=polarity [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_POLAR_PZ=coords=polar_pz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_POLAR_RP=coords=polar_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_POLAR_RZ=coords=polar_rz [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_POLARITY=colorscheme=polarity [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_PORT=port=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
+GUI_EDITOR_CALLTIP_OPT_POSTGRES=type=postgres [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_PRECISION=precision=VAL
 GUI_EDITOR_CALLTIP_OPT_PROB=prob=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_PROC=proc=PROCNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% new]
 GUI_EDITOR_CALLTIP_OPT_PROCPATH=procpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
-GUI_EDITOR_CALLTIP_OPT_PWD=pwd=PASSWORD [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
+GUI_EDITOR_CALLTIP_OPT_PWD=pwd=PASSWORD [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/database]
 GUI_EDITOR_CALLTIP_OPT_QMARKS=QMARKS=STRINGDELIMITER [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% read]
 GUI_EDITOR_CALLTIP_OPT_QUESTIONICON=icon=questionicon [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
 GUI_EDITOR_CALLTIP_OPT_RAINBOW=colorscheme=rainbow [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1095,13 +1102,15 @@ GUI_EDITOR_CALLTIP_OPT_SINGLE=single
 GUI_EDITOR_CALLTIP_OPT_SIZE=size={x,y} [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%/%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SLICES=slices=SLICES
 GUI_EDITOR_CALLTIP_OPT_SLIDING=origin=sliding [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_SP=sp [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for/while]
 GUI_EDITOR_CALLTIP_OPT_SPACE=type=space [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_SPECTRAL=colorscheme=spectral [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL=coords=spherical [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_PT=coords=spherical_pt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RP=coords=spherical_rp [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SPHERICAL_RT=coords=spherical_rt [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_SQL=sql={SQLSTATEMENTS} [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
+GUI_EDITOR_CALLTIP_OPT_SQLITE=type=sqlite [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_STACKED=stacked [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_STATE=state[=STATE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STATUSTEXT=statustext[=TEXT] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
@@ -1112,7 +1121,7 @@ GUI_EDITOR_CALLTIP_OPT_STREAMTO=streamto={WINID,ITEMID} [%%GUI_EDITOR_CALLTIP_CO
 GUI_EDITOR_CALLTIP_OPT_STUDENT=distrib=student [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_STYLE=style=STYLE [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_STYLES=styles=STYLES [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
-GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for, while]
+GUI_EDITOR_CALLTIP_OPT_SV=sv [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% for/while]
 GUI_EDITOR_CALLTIP_OPT_TABLES=tables [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% close]
 GUI_EDITOR_CALLTIP_OPT_TABS=style=tabs [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_TARCHIVE=type=tarchive [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% pack]
@@ -1140,10 +1149,11 @@ GUI_EDITOR_CALLTIP_OPT_UNHIDE=display=unhide [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_UNIFORM=distrib=uniform [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_UNIQUE=unique
 GUI_EDITOR_CALLTIP_OPT_UNITS=units
-GUI_EDITOR_CALLTIP_OPT_UP=up [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes, url]
+GUI_EDITOR_CALLTIP_OPT_UP=up [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% zeroes/url]
 GUI_EDITOR_CALLTIP_OPT_USECUSTOMLANG=usecustomlang [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
+GUI_EDITOR_CALLTIP_OPT_USEDB=usedb=DBNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% database]
 GUI_EDITOR_CALLTIP_OPT_USEESCINSCRIPTS=useescinscripts [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
-GUI_EDITOR_CALLTIP_OPT_USR=usr=USERNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url]
+GUI_EDITOR_CALLTIP_OPT_USR=usr=USERNAME [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/database]
 GUI_EDITOR_CALLTIP_OPT_VALUE=value[=VALUE] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_VAR=var
 GUI_EDITOR_CALLTIP_OPT_VERTICAL=type=vertical [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]

@@ -104,6 +104,7 @@ cutoff(MAT,THRESHOLD,MODE)~Entfernt Werte, die außerhalb der definierten Grenze
 cyltocart(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu kartesischen Koordinaten (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Konvertiert die Spalten der Matrix MAT von zylindrischen (rho,phi,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel sheet mappe workbook~help data()
+database~Ermöglicht die Interaktion mit SQL-Datenbanken~mysql odbc postgresql sqlite databases datenbanken verbindungen connectivity interaction access zugriff~help database
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time~date(
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
@@ -190,6 +191,7 @@ getindices(STR,T)~Gibt die Indices eines als Zeichenkette übergebenen Datenobje
 getkeyval({STR},STR,ARG,LOG)~Gibt den Wert zum zugehörigen Schlüssel aus der zweiten Zeichenkette aus der Schlüssel-Wert-Liste des ersten Zeichenkettenarrays zurück~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyval(
 getlasterror()~Gibt den letzten von einem try-catch-Block verarbeiteten Fehler zurück~try catch throw error exception handling~getlasterror()
 getmatchingparens(STR)~Gibt die Position der passenen schließenden Klammer in STR zurück~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
+getodbcdrivers()~Gibt eine Liste installierter ODBC-Treiber zurück~database datenbanken verbindungen mysql connectivity treiber drivers~getodbcdrivers()
 getompthreads()~Gibt die Zahl der maximal möglichen OpenMP-Threads zurück~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Gibt den Wert eines Parameters in der Zeichenkette STR, dessen Wert an der Stelle POS beginnt, als Zeichenkette zurück~parameter werte argumente options commandline values getopt()~getopt(
 getorder({x,y,z,...})~Gibt die Reihenfolge der aufsteigend sortierten Elemente zurück~sortieren getorder() ascending reihenfolge~getorder(

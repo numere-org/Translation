@@ -23,13 +23,16 @@
 		<keyword>http</keyword>
 		<keyword>ftp</keyword>
 		<keyword>sftp</keyword>
+		<keyword>usr</keyword>
+		<keyword>pwd</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			VAL = url ADDRESS
 			VAL = url ADDRESS -file=FILENAME ...
 		</syntax>
-		Für den Zugriff auf Online-Ressourcen stellt NumeRe das Kommando <code>url</code> bereit, mit dem Webseiten und Dateien aus dem Netz heruntergeladen werden können. Die heruntergeladenen Dateien werden dabei als Zeichenketten zurückgegeben, sofern keine Zieldatei mittels <code>file=TARGETFILE</code> angegeben wird. Wenn der Parameter <code>up</code> in Kombination mit <code>file=SOURCEFILE</code> angegeben wird, kann diese Datei auf einen FTP-Server hochgeladen werden. In den letzteren beiden Fällen wird die Zahl der herunter- bzw. hochgeladenen Bytes zurückgegeben:
+		Für den Zugriff auf Online-Ressourcen stellt NumeRe das Kommando <code>url</code> bereit, mit dem Webseiten und Dateien aus dem Netz heruntergeladen werden können, jedoch nicht auf Datenbanken zugegriffen werden kann. Für Datenbanken steht stattdessen <a href="nhlp://database?frame=new"><code>database</code></a> zur Verfügung.
+		Die heruntergeladenen Dateien werden dabei als Zeichenketten zurückgegeben, sofern keine Zieldatei mittels <code>file=TARGETFILE</code> angegeben wird. Wenn der Parameter <code>up</code> in Kombination mit <code>file=SOURCEFILE</code> angegeben wird, kann diese Datei auf einen FTP-Server hochgeladen werden. In den letzteren beiden Fällen wird die Zahl der herunter- bzw. hochgeladenen Bytes zurückgegeben:
 		<codeblock>
 			sFILECONTENTS = url sURL
 			nBYTES = url sURL -file=TARGETFILE
@@ -42,5 +45,6 @@
 		<example desc="Zugriff auf den 'macros'-Unterordner des CTAN FTPs:">
 			url "ftp://ftp.fau.de/ctan/macros/"
 		</example>
+		<em>Siehe auch:</em> <a href="nhlp://database?frame=self">help database</a>
 	</contents>
 </article>

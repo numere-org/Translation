@@ -118,7 +118,7 @@ ERR_MUP_42_INTERNAL_ERROR=Interner Fehler.
 # STD-Errors
 # ========================
 ERR_STD_BADALLOC=NumeRe konnte nicht ausreichend Speicher für die aktuelle Aufgabe reservieren. Versuche Speicher freizugeben, indem du überzählige Graphen schließt oder Tabellen entfernst, oder versuche, weniger Speicher zu verwenden. Du kannst fortfahren, es kann aber zu weiteren Problemen kommen. Ziehe in Erwägung, NumeRe neu zu starten. Bitte informiere uns über die Reporting-Funktion im "Hilfe"-Menü oder unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues> über dieses Problem.
-ERR_STD_INTERNAL=Dies ist ein nicht-kritischer Fehler. Bitte ziehe in Betracht, uns über diesen Fehler zu informieren. Im "Hilfe"-Menü findest du eine entsprechende Funktion hierfür. Wir freuen uns auch über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
+ERR_STD_INTERNAL=Bitte ziehe in Betracht, uns über diesen internen Fehler zu informieren. Im "Hilfe"-Menü findest du eine entsprechende Funktion hierfür. Wir freuen uns auch über eine entsprechende Bugmeldung unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues>.
 # NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ========================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=Die gewünschte Tabelle "%%1%%" existiert bereits.
@@ -213,6 +213,14 @@ ERR_NR_200_0_COL_COUNTS_DOESNT_MATCH=Die Spalten konnten in "%%1%%" nicht ermitt
 ERR_NR_200_1_COL_COUNTS_DOESNT_MATCH=In der Datei "%%1%%" kann die Zahl der Spalten nicht korrekt ermittelt werden. Dies kann zum Beispiel durch tabulatorgetrennte Spalten, die selbst Leerzeichen enthalten, verursacht werden. Ersetze die Leerzeichen durch Unterstriche "_" und versuche es erneut. Alternativ kann dies auch auftreten, wenn die Spalten nur durch Tabulatoren getrennt werden, diese aber uneinheitlich verwendet sind: Spalten dürfen nur durch einen einzigen Tabulator getrennt werden.%%LINEBREAK%%%%ERR_SEEALSO%%: "help data"
 ERR_NR_201_0_CUTOFF_MODE_INVALID=Der gewählte CutOff Modus existiert nicht.
 ERR_NR_201_1_CUTOFF_MODE_INVALID=Bitte wähle einen der möglichen Werte, wie in der Dokumentation beschrieben.%%LINEBREAK%%%%ERR_SEEALSO%%: "help cutoff"
+ERR_NR_202_0_DATABASE_ERROR_SQLITE=SQLite Fehler: %%1%%
+ERR_NR_202_1_DATABASE_ERROR_SQLITE=%%ERR_SEEALSO%%: "help database"
+ERR_NR_203_0_DATABASE_ERROR_MYSQL=MySQL Fehler: %%1%%
+ERR_NR_203_1_DATABASE_ERROR_MYSQL=%%ERR_SEEALSO%%: "help database"
+ERR_NR_204_0_DATABASE_ERROR_POSTGRES=PostGreSQL Fehler: %%1%%
+ERR_NR_204_1_DATABASE_ERROR_POSTGRES=%%ERR_SEEALSO%%: "help database"
+ERR_NR_205_0_DATABASE_ERROR_ODBC=ODBC Fehler: %%1%%
+ERR_NR_205_1_DATABASE_ERROR_ODBC=%%ERR_SEEALSO%%: "help database"
 ERR_NR_300_0_DATAFILE_NOT_EXIST=Die Datei "%%1%%" existiert nicht oder kann nicht geöffnet werden.
 ERR_NR_300_1_DATAFILE_NOT_EXIST=%%ERR_SEEALSO%%: "help data" und "help load"
 ERR_NR_400_0_DATAPOINTS_CANNOT_BE_MODIFIED_WHILE_PLOTTING=Datensätze können während des Plottens nicht modifiziert werden.

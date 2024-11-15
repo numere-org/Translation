@@ -118,7 +118,7 @@ ERR_MUP_42_INTERNAL_ERROR=Internal Error.
 # STD-Errors
 # ====================
 ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via thre reporting functionality in the "Help" menu or via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues> about this issue.
-ERR_STD_INTERNAL=This is a non-critical error. Please consider, informing us about this error. There is a corresponding functionality located in the "Help" menu. We're also very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
+ERR_STD_INTERNAL=Please consider, informing us about this internal error. There is a corresponding functionality located in the "Help" menu. We're also very grateful, if we receive a bug message via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues>.
 # NR-Errors: %%1%% will be used for the error token, %%2%% to %%5%% will be used for error indices
 # ====================
 ERR_NR_0_0_CACHE_ALREADY_EXISTS=The desired table "%%1%%" already exists.
@@ -213,6 +213,14 @@ ERR_NR_200_0_COL_COUNTS_DOESNT_MATCH=The columns could not be detected in "%%1%%
 ERR_NR_200_1_COL_COUNTS_DOESNT_MATCH=The numbers of columns could not be calculated correctly in the data file "%%1%%". This may be caused by tabulator separated columns, which contain whitespaces themselves. Replace the whitespaces with "_" and try again. Alternatively, this issue might result from tabulator-only separated columns, where the tabulator was used inconsistently: only one tabulator shall be used to separate columns.%%LINEBREAK%%%%ERR_SEEALSO%%: "help data"
 ERR_NR_201_0_CUTOFF_MODE_INVALID=The selected CutOff mode does not exist.
 ERR_NR_201_1_CUTOFF_MODE_INVALID=Please select an valid value as described in the documentation.%%LINEBREAK%%%%ERR_SEEALSO%%: "help cutoff"
+ERR_NR_202_0_DATABASE_ERROR_SQLITE=SQLite error: %%1%%
+ERR_NR_202_1_DATABASE_ERROR_SQLITE=%%ERR_SEEALSO%%: "help database"
+ERR_NR_203_0_DATABASE_ERROR_MYSQL=MySQL error: %%1%%
+ERR_NR_203_1_DATABASE_ERROR_MYSQL=%%ERR_SEEALSO%%: "help database"
+ERR_NR_204_0_DATABASE_ERROR_POSTGRES=PostGreSQL error: %%1%%
+ERR_NR_204_1_DATABASE_ERROR_POSTGRES=%%ERR_SEEALSO%%: "help database"
+ERR_NR_205_0_DATABASE_ERROR_ODBC=ODBC error: %%1%%
+ERR_NR_205_1_DATABASE_ERROR_ODBC=%%ERR_SEEALSO%%: "help database"
 ERR_NR_300_0_DATAFILE_NOT_EXIST=The file "%%1%%" could not be opened or doesn't exist.
 ERR_NR_300_1_DATAFILE_NOT_EXIST=%%ERR_SEEALSO%%: "help data" and "help load"
 ERR_NR_400_0_DATAPOINTS_CANNOT_BE_MODIFIED_WHILE_PLOTTING=Data sets cannot be modified during plotting.

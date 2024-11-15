@@ -104,6 +104,7 @@ cutoff(MAT,THRESHOLD,MODE)~Removes values that are outside of the defined limits
 cyltocart(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cartesian coordinates (x,y,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltocart(
 cyltopol(MAT)~Converts the columns of the matrix MAT from cylindrical (rho,phi,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~cyltopol(
 data(i,j)~Data file object with access to the element "i,j"~data() daten sortieren datafile laden load save *.dat *.ndat *.txt *.labx *.jdx *.jcm *.dx *.csv *.ods *.ibw *.xlsx opendocument spreadsheet cassylab jcamp-dx igor binary waves comma separated values excel workbook~help data()
+database~Enables the interaction with SQL databases~mysql odbc postgresql sqlite databases datenbanken verbindungen connectivity interaction access zugriff~help database
 datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
 datetimepicker~Inserts a date-and-time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
@@ -189,6 +190,7 @@ getindices(STR,T)~Returns the indices of the as a string passed data object acce
 getkeyval({STR},STR,ARG,LOG)~Returns the value of the corresponding key in the second string from the key-value list in the first string array~keyvaluelist key values suchen matching searching schluessel schluesselliste keylist options arguments optionen argumente parameters~getkeyal(
 getlasterror()~Returns the last error processed by a try-catch block~try catch throw error exception handling~getlasterror()
 getmatchingparens(STR)~Returns the position of the closing parenthesis corresponding to the first open parenthesis in the string STR~klammer zu geschlossene geschweifte getmatchingparens() closing parenthesis bracket curly brace~getmatchingparens(
+getodbcdrivers()~Returns a list of installed ODBC drivers~database datenbanken verbindungen mysql connectivity treiber drivers~getodbcdrivers()
 getompthreads()~Returns the number of the maximal possible OpenMP threads~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
 getorder({x,y,z,...})~Returns the order of the sorted elements~sortieren getorder() ascending reihenfolge~getorder(
