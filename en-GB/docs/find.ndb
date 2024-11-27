@@ -179,6 +179,7 @@ gauss(x0,x1,n)~Generates a (real and normal distributed) random number, with the
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 get_utc_offset()~Returns the offset to UTC+00 in seconds. This corresponds to the timezone difference including an optional daylight saving time~get_utc_offset() time zone~get_utc_offset(
+getdpiscale()~Returns the display's scaling factor~screen scaling factor display bildschirm vergrößerung vergroesserung~getdpiscale()
 getenvvar(sVarName)~Returns the value of the system environment variable sVarName or an empty string, if the corresponding variable does not exist~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
 geterrormsg(sErrorCode)~Returns the error message for the error code~geterrormsg() errorcode errormessage fehlercode fehlermeldung assertion expression# syntax#~geterrormsg(
 getfilediff(STR,STR)~Calculates the linewise differences between the files~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
@@ -243,7 +244,7 @@ is_filepath(STR)~Returns true if string is a valid file directory and name and f
 is_graph(STR)~Determines for each character in STR, whether it is a graphical character type, or not~is_graph() character type representation zeichen~is_graph(
 is_leapyear(nDate)~Returns true if the year is a leap year, otherwise returns false~is_leapyear() leap year~is_leapyear(
 is_lower(STR)~Determines for each character in STR, whether it is a lowercase character type, or nott~is_lower() character type representation zeichen~is_lower(
-is_nan(EXPR)~Returns true, if x has the value nan, false otherwise~is_nan() not a number~is_nan(
+is_nan(x)~Returns true, if x has the value nan, false otherwise~is_nan() not a number~is_nan(
 is_ordered(x,y,z,...)~Returns true if the values x,y,z,... are sorted in ascending order, otherwise false~is_ordered() ordered sorted ascending sortiert aufsteigend geordnet~is_ordered(
 is_print(STR)~Determines for each character in STR, whether it is a printable character type, or not~is_print() character type representation zeichen~is_print(
 is_punct(STR)~Determines for each character in STR, whether it is a punctuation character type, or not~is_punct() character type representation zeichen~is_punct(
@@ -252,6 +253,7 @@ is_string(EXPR)~Returns true, if EXPR contains strings, false otherwise~zeichenk
 is_table(STR)~Returns true, if STR is a table, false otherwise~is_table() data cache table variablen type detection erkennung~is_table(
 is_unique(x,y,z,...)~Returns true if each value in x,y,z,... occurs only once, otherwise false~is_unique() einzigartig eindeutig solely~is_unique(
 is_upper(STR)~Determines for each character in STR, whether it is a uppercase character type, or not~is_upper() character type representation zeichen~is_upper(
+is_void(x)~Returns true, if x has the value void, false otherwise~is_void() not a number invalid empty leer undefiniert undefined~is_void(
 is_xdigit(STR)~Determines for each character in STR, whether it is a hexadecimal character type, or not~is_xdigit() character type representation zeichen~is_xdigit(
 ivl(x,x0,x1,l,r)~Interval function: defines an interval from x0 to x1 with arbitrary border types~intervalfunction stepwise abschnittsweise ivl()~ivl(
 Joke~It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!~witz gag joke~"It's theory, if you know, how it should work, but it doesn't. It's practice, if it works, but you don't know, why. It's physics, if just nothing works and no one knows, why!"

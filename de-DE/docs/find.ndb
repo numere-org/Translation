@@ -180,6 +180,7 @@ gauss(x0,x1,n)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 get_utc_offset()~Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit~get_utc_offset() time zone utc~get_utc_offset(
+getdpiscale()~Gibt den Skalierungsfaktor des Displays zurück~screen scaling factor display bildschirm vergrößerung vergroesserung~getdpiscale()
 getenvvar(sVarName)~Gibt den Wert der Umgebungsvariablen sVarName zurück oder einen leeren String, falls die entsprechende Variable nicht existiert~environment system variables systemumgebungsvariablen %path% %temp% %appdata% %localappdata% %programfiles% getenvvar()~getenvvar(
 geterrormsg(sErrorCode)~Gibt die Fehlermeldung zum Fehlercode sErrorCode zurück~geterrormsg() errorcode errormessage fehlercode fehlermeldung assertion expression# syntax#~geterrormsg(
 getfilediff(STR,STR)~Berechnet die zeilenweisen Unterschiede der beiden Dateien~diff getfilediff() unified diff unterschiede differences version control scm~getfilediff(
@@ -244,7 +245,7 @@ is_filepath(STR)~Gibt true zurück, wenn es sich um einen validen Dateipfad hand
 is_graph(STR)~Prüft für jedes Zeichen in STR, ob es eine graphische Repräsentierung hat~is_graph() character type representation zeichen~is_graph(
 is_leapyear(nDate)~Gibt true zurück, wenn das Jahr ein Schaltjahr ist, sonst false~is_leapyear() leap year~is_leapyear(
 is_lower(STR)~Prüft für jedes Zeichen in STR, ob es ein Kleinbuchstabe ist~is_lower() character type representation zeichen~is_lower(
-is_nan(EXPR)~Gibt true zurück, wenn EXPR den Wert "nan" hat, sonst false~is_nan() not a number~is_nan(
+is_nan(x)~Gibt true zurück, wenn x den Wert nan hat, sonst false~is_nan() not a number~is_nan(
 is_ordered(x,y,z,...)~Gibt true zurück, wenn die Werte x,y,z,... aufsteigend sortiert sind, sonst false~is_ordered() ordered sorted ascending sortiert aufsteigend geordnet~is_ordered(
 is_print(STR)~Prüft für jedes Zeichen in STR, ob es druckbar ist~is_print() character type representation zeichen~is_print(
 is_punct(STR)~Prüft für jedes Zeichen in STR, ob es eine Interpunktion ist~is_punct() character type representation zeichen~is_punct(
@@ -253,6 +254,7 @@ is_string(EXPR)~Gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false
 is_table(STR)~Gibt true zurück, wenn STR eine Tabelle ist, sonst false~is_table() data cache table variablen type detection erkennung~is_table(
 is_unique(x,y,z,...)~Gibt true zurück, wenn jeder Wert in x,y,z,... nur einmal vorkommt, sonst false~is_unique() einzigartig eindeutig solely~is_unique(
 is_upper(STR)~Prüft für jedes Zeichen in STR, ob es ein Großbuchstabe ist~is_upper() character type representation zeichen~is_upper(
+is_void(x)~Gibt true zurück, wenn x den Wert void hat, sonst false~is_void() not a number invalid empty leer undefiniert undefined~is_void(
 is_xdigit(STR)~Prüft für jedes Zeichen in STR, ob es Teil eines Hexadezimalwertes sein kann~is_xdigit() character type representation zeichen~is_xdigit(
 ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()~ivl(
 justify(STR,N)~Richtet die Zeichenketten in dem Zeichenkettenvektor links, rechts oder zentriert aus~justify() alignment ausrichten justification left right center tabular layout tabellarisch spalten columns~justify(
