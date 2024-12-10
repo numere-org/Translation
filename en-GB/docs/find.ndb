@@ -107,6 +107,7 @@ data(i,j)~Data file object with access to the element "i,j"~data() daten sortier
 database~Enables the interaction with SQL databases~mysql odbc postgresql sqlite databases datenbanken verbindungen connectivity interaction access zugriff~help database
 datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
+datetime(x)~Converts x into a date-time value~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 datetimepicker~Inserts a date-and-time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
 Debugger~Enables error detection via code inspection during runtime~fehlersuche debugging error bugs throw breakpoint conditional~help debugger

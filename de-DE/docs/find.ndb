@@ -107,6 +107,7 @@ data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data
 database~Ermöglicht die Interaktion mit SQL-Datenbanken~mysql odbc postgresql sqlite databases datenbanken verbindungen connectivity interaction access zugriff~help database
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time~date(
+datetime(x)~Konvertiert x in einen Zeitwert~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
 datetimepicker~Fügt ein Feld zur Datums-und Zeitauswahl in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
