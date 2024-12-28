@@ -143,6 +143,7 @@ procedure $createDocumentationFiles(_sLangId) :: explicit
 	help "odesolve" -tex
 	help "plotoptions" -tex
 	help "procedure" -tex
+	help "database" -tex
 	
 	move "<>/docs/texexport/*.tex" -target="<this>/" + _sLangId + "/TeX/documentation/articles/*" -all
 	

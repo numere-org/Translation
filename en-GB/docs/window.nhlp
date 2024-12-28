@@ -162,12 +162,12 @@
 		The keys supported by <code>tablegrid</code> are:
 		<list>
 			<item node="&quot;min-rows&quot;">Specifies the minimum number of rows via <code>..., "min-rows", ROWCOUNT, ...</code></item>
-			<item node="&quot;min-cols&quot;">Specifies the minimum number of columns via <code>..., "min-cols", COLCOUNT, ...</code</item>
+			<item node="&quot;min-cols&quot;">Specifies the minimum number of columns via <code>..., "min-cols", COLCOUNT, ...</code></item>
 			<item node="&quot;use-qmarks&quot;">Defines whether character strings are displayed in cells with enclosing quotation marks via <code>..., "use-qmarks", USE, ...</code>. This option overwrites the corresponding user setting for the current <code>tablegrid</code></item>
 			<item node="&quot;fitsize&quot;">Sets all cell sizes of the table to match their content if <code>true</code> is specified as the value: <code>..., "fitsize", true, ...</code></item>
 			<item node="&quot;fitsize-cols&quot;">Sets the widths of the selected columns to match their contents. The columns are specified as a list: <code>..., "fitsize-cols", {COLS}, ...</code></item>
 			<item node="&quot;col-labels&quot;">Defines alternative column labels to be used instead of 1,2,3,... via <code>..., "col-labels", {{COLS}, {LABELS}}, ...</code></item>
-			<item node="&quot;hide-rows&quot;">Defines rows to be hidden via <code>..., "hide-rows", {ROWS}, ...</code>, negative rows reference the table headings</item>
+			<item node="&quot;hide-rows&quot;">Defines rows to be hidden via <code>..., "hide-rows", {ROWS}, ...</code>, rows less-or-equal to 0 reference the table headings</item>
 			<item node="&quot;hide-cols&quot;">Defines columns to be hidden via <code>..., "hide-cols", {COLS}, ...</code></item>
 			<item node="&quot;cond-format&quot;">Defines conditional formatting for individual columns via <code>..., "cond-format", {{COLS}, {FORMATTING-DEF}, ...}, ...</code></item>
 			<item node="&quot;cell-format&quot;">Defines the specific formatting of individual cells via <code>..., "cell-format", {{{ROWS},{COLS}}, {FORMATTING-DEF}, ...}, ...</code></item>

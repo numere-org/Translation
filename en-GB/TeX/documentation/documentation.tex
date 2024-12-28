@@ -17,7 +17,7 @@
 \pagestyle{scrheadings}
 \subject{NumeRe: Framework for Numerical Computations}
 \title{Documentation}
-\subtitle{NumeRe v1.1.6 >>Casimir<<}
+\subtitle{NumeRe v1.1.7 >>Beta<<}
 \date{}
 \author{\small Provided to you by NumeRe.org}
 \begin{document}
@@ -33,56 +33,7 @@
 	\addsec{Copyrights}
 		\paragraph{Copyright \copyright\ 2013-2024, Erik H\"anel \emph{et al.}} 
 		NumeRe has been licensed under the terms of the GNU General Public License v3, available at \href{http://www.gnu.org/licenses/gpl.html}{$\Rightarrow$ GPL}
-		\paragraph{External Dependencies and Licenses:}
-		\begin{itemize}
-			\item \verb!muParser! \copyright\ Ingo Berg [MIT]
-			\href{https://beltoforion.de/en/muparser/}{$\Rightarrow$ muParser}
-
-			\item \verb!MathGL! \copyright\ Alexey A. Balakin [GPL]
-			\href{https://mathgl.sourceforge.net/}{$\Rightarrow$ MathGL}
-
-			\item \verb!GSL! \copyright\ M. Galassi et al. [GPL]
-			\href{https://www.gnu.org/software/gsl/}{$\Rightarrow$ GNU Scientific Library}
-
-			\item \verb!Boost! \copyright\ Joe Coder [Boost]
-			\href{https://www.boost.org/}{$\Rightarrow$ Boost C++ Libraries}
-
-			\item \verb!Eigen! \copyright\ Gael Guennebaud, Benoit Jacob [MPL v2]
-			\href{https://eigen.tuxfamily.org/}{$\Rightarrow$ Eigen}
-
-			\item \verb!curl! \copyright\ Daniel Stenberg [curl]
-			\href{https://curl.se/libcurl/}{$\Rightarrow$ cURL}
-
-			\item \verb!libNoise! \copyright\ Jason Bevins [LGPL]
-			\href{https://libnoise.sourceforge.net/}{$\Rightarrow$ libNoise}
-
-			\item \verb!fast_float! \copyright\ The \verb!fast_float! authors [MIT]
-			\href{https://github.com/fastfloat/fast_float}{$\Rightarrow$ fast\_float}
-
-			\item \verb!chrono::date! \copyright\ Howard Hinnant [MIT]
-			\href{https://github.com/HowardHinnant/date}{$\Rightarrow$ chrono::date}
-
-			\item \verb!Info-ZIP! \copyright\ Mark Adler et al. [BSD]
-			\href{https://infozip.sourceforge.net/}{$\Rightarrow$ Info-ZIP}
-
-			\item \verb!dtl - Diff Template Library! \copyright\ Tatsuhiko Kubo [BSD]
-			\href{https://github.com/cubicdaiya/dtl}{$\Rightarrow$ dtl}
-
-			\item \verb!TinyXML-2! \copyright\ Lee Thomason [zLib]
-			\href{https://github.com/leethomason/tinyxml2}{$\Rightarrow$ TinyXML-2}
-
-			\item \verb!BasicExcel! \copyright\ Yap Chun Wei [Public domain]
-			\href{https://www.codeproject.com/Articles/13852/BasicExcel-A-Class-to-Read-and-Write-to-Microsoft}{$\Rightarrow$ BasicExcel}
-
-			\item \verb!wxWidgets! \copyright\ wxWidgets Team [wxWindows]
-			\href{https://www.wxwidgets.org/}{$\Rightarrow$ wxWidgets}
-
-			\item \verb!Feather-Icons! \copyright\ Cole Bemis [MIT]
-			\href{https://feathericons.com/}{$\Rightarrow$ Feather-Icons}
-
-			\item \verb!QR Code Generator Library! \copyright\ Project Nayuki [MIT]
-			\href{https://www.nayuki.io/page/qr-code-generator-library}{$\Rightarrow$ QR Code Generator Library}
-		\end{itemize}
+		\paragraph{External Dependencies and Licenses} A list of all external dependencies and their associate licenses may be found in the file \verb!THIRD_PARTY.licences! in the installation root directory.
 	\chapter{Basics}
 		Get to know the basics of NumeRe here. If you are completely new here, you will also find a section on the first steps in this chapter. In it, we show you how to use NumeRe using simple lines of code.
 		\input{articles/main.tex}
@@ -213,10 +164,14 @@
 		If you want to put the finishing touches to your automations, the graphical user interfaces are just the thing for you. Use simple dialogs for quick user interactions and complex window layouts for the complete look 'n feel of entire applications.
 		\input{articles/dialog.tex}
 		\input{articles/window.tex}
+	
+	\chapter{Networking and Databases}
+		Working with remote data sources is central in modern data analytics without any alternative and will be described in this chapter.
+		\input{articles/url.tex}
+		\input{articles/database.tex}
 		
 	\chapter{Miscellaneous}
 		In this chapter you will find additional commands and functionalities that have not yet been covered in the other chapters.
-		\input{articles/url.tex}
 		\input{articles/execute.tex}
 		\input{articles/additionalcommands.tex}
 		\input{articles/language.tex}

@@ -17,7 +17,7 @@
 \pagestyle{scrheadings}
 \subject{NumeRe: Framework f\"ur Numerische Rechnungen}
 \title{Dokumentation}
-\subtitle{NumeRe v1.1.6 >>Casimir<<}
+\subtitle{NumeRe v1.1.7 >>Beta<<}
 \date{}
 \author{\small Provided to you by NumeRe.org}
 \begin{document}
@@ -33,56 +33,7 @@
 	\addsec{Copyrights}
 		\paragraph{Copyright \copyright\ 2013-2024 Erik H\"anel \emph{et al.}} 
 		NumeRe ist lizensiert unter der GNU General Public License v3, verf\"ugbar unter \href{http://www.gnu.org/licenses/gpl.html}{$\Rightarrow$ GPL}
-		\paragraph{Externe Abh\"angigkeiten und Lizenzen:}
-		\begin{itemize}
-			\item \verb!muParser! \copyright\ Ingo Berg [MIT]
-			\href{https://beltoforion.de/en/muparser/}{$\Rightarrow$ muParser}
-
-			\item \verb!MathGL! \copyright\ Alexey A. Balakin [GPL]
-			\href{https://mathgl.sourceforge.net/}{$\Rightarrow$ MathGL}
-
-			\item \verb!GSL! \copyright\ M. Galassi et al. [GPL]
-			\href{https://www.gnu.org/software/gsl/}{$\Rightarrow$ GNU Scientific Library}
-
-			\item \verb!Boost! \copyright\ Joe Coder [Boost]
-			\href{https://www.boost.org/}{$\Rightarrow$ Boost C++ Libraries}
-
-			\item \verb!Eigen! \copyright\ Gael Guennebaud, Benoit Jacob [MPL v2]
-			\href{https://eigen.tuxfamily.org/}{$\Rightarrow$ Eigen}
-
-			\item \verb!curl! \copyright\ Daniel Stenberg [curl]
-			\href{https://curl.se/libcurl/}{$\Rightarrow$ cURL}
-
-			\item \verb!libNoise! \copyright\ Jason Bevins [LGPL]
-			\href{https://libnoise.sourceforge.net/}{$\Rightarrow$ libNoise}
-
-			\item \verb!fast_float! \copyright\ The \verb!fast_float! authors [MIT]
-			\href{https://github.com/fastfloat/fast_float}{$\Rightarrow$ fast\_float}
-
-			\item \verb!chrono::date! \copyright\ Howard Hinnant [MIT]
-			\href{https://github.com/HowardHinnant/date}{$\Rightarrow$ chrono::date}
-
-			\item \verb!Info-ZIP! \copyright\ Mark Adler et al. [BSD]
-			\href{https://infozip.sourceforge.net/}{$\Rightarrow$ Info-ZIP}
-
-			\item \verb!dtl - Diff Template Library! \copyright\ Tatsuhiko Kubo [BSD]
-			\href{https://github.com/cubicdaiya/dtl}{$\Rightarrow$ dtl}
-
-			\item \verb!TinyXML-2! \copyright\ Lee Thomason [zLib]
-			\href{https://github.com/leethomason/tinyxml2}{$\Rightarrow$ TinyXML-2}
-
-			\item \verb!BasicExcel! \copyright\ Yap Chun Wei [Public domain]
-			\href{https://www.codeproject.com/Articles/13852/BasicExcel-A-Class-to-Read-and-Write-to-Microsoft}{$\Rightarrow$ BasicExcel}
-
-			\item \verb!wxWidgets! \copyright\ wxWidgets Team [wxWindows]
-			\href{https://www.wxwidgets.org/}{$\Rightarrow$ wxWidgets}
-
-			\item \verb!Feather-Icons! \copyright\ Cole Bemis [MIT]
-			\href{https://feathericons.com/}{$\Rightarrow$ Feather-Icons}
-
-			\item \verb!QR Code Generator Library! \copyright\ Project Nayuki [MIT]
-			\href{https://www.nayuki.io/page/qr-code-generator-library}{$\Rightarrow$ QR Code Generator Library}
-		\end{itemize}
+		\paragraph{Externe Abh\"angigkeiten und Lizenzen} Eine Auflistung aller externen Abh\"angigkeiten und der zugeh\"origen Lizenzen kann in der Datei \verb!THIRD_PARTY.licenses! im Installationsverzeichnis gefunden werden.
 	\chapter{Grundlagen}
 		Lerne hier die Grundlagen von NumeRe kennen. Wenn du komplett neu hier bist, dann findest du hier in diesem Kapitel auch einen Abschnitt zu den ersten Schritten. Darin zeigen wir dir anhand einfacher Code-Zeilen, wie du NumeRe verwenden kannst.
 		\input{articles/main.tex}
@@ -213,10 +164,14 @@
 		Wenn du deinen Automatisierungen noch den finalen Feinschliff verpassen willst, bist du bei den graphischen User Interfaces genau richtig. Verwende einfache Dialoge f\"ur schnelle Benutzerinteraktionen und komplexe Window-Layouts f\"ur das komplette Look 'n Feel kompletter Applikationen.
 		\input{articles/dialog.tex}
 		\input{articles/window.tex}
+	
+	\chapter{Netzwerk und Datenbanken}
+		Das Arbeiten mit Remote-Datenquellen ist in der modernen Datenanalyse unabdingbar und wird in diesem Kapitel erl\"autert.
+		\input{articles/url.tex}
+		\input{articles/database.tex}
 		
 	\chapter{Verschiedenes}
 		In diesem Kapitel findest du weitere Kommandos und Funktionalit\"aten, die noch nicht in den anderen Kapiteln behandelt wurden.
-		\input{articles/url.tex}
 		\input{articles/execute.tex}
 		\input{articles/additionalcommands.tex}
 		\input{articles/language.tex}

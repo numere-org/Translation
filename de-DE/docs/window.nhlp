@@ -167,7 +167,7 @@
 			<item node="&quot;fitsize&quot;">Stellt alle Zellengrößen der Tabelle passend auf ihren Inhalt ein, wenn <code>true</code> als Wert angegeben wird: <code>..., "fitsize", true, ...</code></item>
 			<item node="&quot;fitsize-cols&quot;">Stellt die Breiten der ausgewählten Spalten passend auf ihre Inhalte ein. Die Spalten werden als Liste angegeben: <code>..., "fitsize-cols", {COLS}, ...</code></item>
 			<item node="&quot;col-labels&quot;">Definiert alternative Spaltenlabels, die statt 1,2,3,... verwendet werden sollen via <code>..., "col-labels", {{COLS}, {LABELS}}, ...</code></item>
-			<item node="&quot;hide-rows&quot;">Definiert auszublendende Zeilen via <code>..., "hide-rows", {ROWS}, ...</code>, negative Zeilen referenzieren dabei die Tabellenüberschriften</item>
+			<item node="&quot;hide-rows&quot;">Definiert auszublendende Zeilen via <code>..., "hide-rows", {ROWS}, ...</code>, Zeilen kleiner-gleich 0 referenzieren dabei die Tabellenüberschriften</item>
 			<item node="&quot;hide-cols&quot;">Definiert auszublendende Spalten via <code>..., "hide-cols", {COLS}, ...</code></item>
 			<item node="&quot;cond-format&quot;">Definiert bedingte Formatierung für einzelne Spalten via <code>..., "cond-format", {{COLS}, {FORMATTING-DEF}, ...}, ...</code></item>
 			<item node="&quot;cell-format&quot;">Definiert die gezielte Formatierung einzelner Zellen via <code>..., "cell-format", {{{ROWS},{COLS}}, {FORMATTING-DEF}, ...}, ...</code></item>
