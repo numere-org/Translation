@@ -80,6 +80,7 @@ close~Closes previously opened windows that are selected by parameters~graphs sc
 CLUSTER{i1:i2}~Cluster-object with access to elements "i1" to "i2", see "help cluster"~zwischenspeicher cluster{} array range schrittweite step width~help cluster()
 cmp(x,y,z,...,CMP,T)~Compares the values x,y,z,... with CMP and returns a value corresponding to T = {-4,-3,-2,-1,0,1,2,3,4}~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Returns the number of the elements in its argument (even the invalid ones). May be applied to strings~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count~cnt(
+complement({setU},{setA})~Determines the complementary set~complement() complementary komplementär setdifference differenzmenge~complement(
 complex(re,im)~Creates a complex number out of the passed real re and imaginary parts im~komplexe zahlen complex numbers~complex(
 compose~Starts the composition of multiple plotting styles~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose
 conj(z)~Returns the complex conjugated number of the passed complex number z~conjugate complex numbers komplexe zahlen~conj(
@@ -229,6 +230,7 @@ include~Includes information from another file into the current executable file~
 install~Installs a plugin or a package~procedure installieren aktualisieren update~help install
 integrate~Integrates a function f(x) or f(x,y) numerically~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpolates values from the first matrix bilinearly using the row and column values of the second matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
+intersection({setA},{setB})~Determines the set intersection~intersection() set schnittmenge~intersection(
 inv_pct({x,y,z,...},fPct)~Returns the percentile(s) at which the value fPct would be assigned in {x,y,z,...}~inv_pct() pct percentile perzentile~inv_pct(
 invert(MAT)~Inverts the matrix MAT~invert() matrix invertieren~invert(
 is_alnum(STR)~Determines for each character in STR, whether it is a alphanumeric character type, or not~is_alnum() character type representation zeichen~is_alnum(
@@ -535,6 +537,7 @@ ui32(x)~Converts the value x into the data type "value.ui32"~ui32() unsigned int
 ui64(x)~Converts the value x into the data type "value.ui64"~ui64() unsigned integer data type datentyp convert konvertieren~ui64(
 ui8(x)~Converts the value x into the data type "value.ui8"~ui8() unsigned integer data type datentyp convert konvertieren~ui8(
 undefine~Removes a custom function definition~funktion entfernen loeschen delete remove definieren neue definition~help undefine
+union({setA},{setB})~Determines the set union~union() set vereingungsmenge~union(
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 unpack~Unpacks an archive file~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
 url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip download upload~help url

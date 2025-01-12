@@ -80,6 +80,7 @@ close~Schließt zuvor geöffnete Fenster, die durch Parameter ausgewählt werden
 CLUSTER{i1:i2}~Cluster-Objekt mit Zugriff auf die Elemente "i1" bis "i2", siehe "help cluster"~zwischenspeicher cluster{} array range schrittweite step width~help cluster
 cmp(x,y,z,...,CMP,T)~Vergleicht x,y,z,... mit CMP und gibt ein Ergebnis entsprechend T = {-4,-3,-2,-1,0,1,2,3,4} zurück~cmp() compare vergleich dataelement cacheelement~cmp(
 cnt(x,y,z,...)~Gibt die Zahl aller Argumente zurück (auch der ungültigen). Kann auch auf Zeichenketten angewendet werden~cnt() zählen zaehlen zahl nummer number enumerate zeichenketten strings count invalid~cnt(
+complement(U,A)~Bestimmt die komplementäre Menge~complement() complementary komplementär setdifference differenzmenge~complement(
 complex(re,im)~Erzeugt eine komplexe Zahl aus den angegeben Real- re und Imaginärteilen im~komplexe zahlen complex numbers~complex(
 compose~Erlaubt die Komposition mehrerer Plotstile und mehrerer Plots in einer Ausgabe, siehe "help compose"~komposition composite plotstile hold kombinieren combine verbinden zusammensetzen subplot multiplot unterplot~help compose ... endcompose
 conj(z)~Gibt die komplex-konjugierte Zahl zur komplexen Zahl z zurück~conjugate complex numbers komplexe zahlen~conj(
@@ -107,8 +108,8 @@ data(i,j)~Datenfile-Objekt mit Zugriff auf Element "i,j", siehe "help data"~data
 database~Ermöglicht die Interaktion mit SQL-Datenbanken~mysql odbc postgresql sqlite databases datenbanken verbindungen connectivity interaction access zugriff~help database
 datagrid~Datengitter für 2D-Plots erzeugen, siehe "help datagrid"~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit formatieren time~date(
-datetime(x)~Konvertiert x in einen Zeitwert~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
+datetime(x)~Konvertiert x in einen Zeitwert~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 datetimepicker~Fügt ein Feld zur Datums-und Zeitauswahl in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Ermöglicht Fehlersuche durch Code-Inspektion zur Laufzeit~fehlersuche debugging bugs throw error breakpoint conditional~help debugger
@@ -230,6 +231,7 @@ include~Bindet Informationen aus einer Datei in die aktuelle ausführbare Datei 
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpoliert Werte aus der ersten Matrix bilinear unter Verwendung der Zeilen- und Spaltenwerte der zweiten Matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
+intersection(A,B)~Bestimmt die Schnittmenge~intersection() set schnittmenge~intersection(
 inv_pct({x,y,z,...},fPct)~Gibt die Perzentile zurück, unter denen der Wert fPct in {x,y,z,...} zu verordnen wäre~inv_pct() pct percentile perzentile~inv_pct(
 invert(MAT)~Invertiert die Matrix MAT, siehe "help matop"~invert() matrix invertieren~invert(
 is_alnum(STR)~Prüft für jedes Zeichen in STR, ob es alphanumerisch ist~is_alnum() character type representation zeichen~is_alnum(
@@ -534,6 +536,7 @@ ui32(x)~Konvertiert den Wert x in den Datentyp "value.ui32"~ui32() unsigned inte
 ui64(x)~Konvertiert den Wert x in den Datentyp "value.ui64"~ui64() unsigned integer data type datentyp convert konvertieren~ui64(
 ui8(x)~Konvertiert den Wert x in den Datentyp "value.ui8"~ui8() unsigned integer data type datentyp convert konvertieren~ui8(
 undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funktion entfernen loeschen delete remove definieren neue definition~help undefine
+union(A,B)~Bestimmt die Vereinungsmenge~union() set vereingungsmenge~union(
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 unpack~Entpackt eine Archivdatei~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
 url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip download upload~help url
