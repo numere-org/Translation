@@ -1125,6 +1125,7 @@ GUI_MENU_NO_PLUGINS_INSTALLED=No GUI plugins installed
 # Help menu
 GUI_MENU_SHOWHELP=&Help topics%%TAB%%F1
 GUI_MENU_REPORTISSUE=Report a problem or a feature request
+GUI_MENU_FINDUPDATE=Check for a new version
 GUI_MENU_ABOUT=&About NumeRe
 GUI_MENU_ABOUT_TTP=Show informations about NumeRe
 GUI_MENU_HELP=&Help
