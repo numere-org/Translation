@@ -1129,6 +1129,14 @@ GUI_MENU_FINDUPDATE=Check for a new version
 GUI_MENU_ABOUT=&About NumeRe
 GUI_MENU_ABOUT_TTP=Show informations about NumeRe
 GUI_MENU_HELP=&Help
+# Find update
+GUI_UPDATECHECK_FND=The new version %%1%% is available.%%LINEBREAK%%%%LINEBREAK%%Installed: %%2%%%%LINEBREAK%%Available: %%3%%%%LINEBREAK%%%%LINEBREAK%%Do you want to view it?
+GUI_UPDATECHECK_FND_RC=The new pre-release %%1%% is available.%%LINEBREAK%%%%LINEBREAK%%Installed: %%2%%%%LINEBREAK%%Available: %%3%%%%LINEBREAK%%%%LINEBREAK%%Do you want to view it?
+GUI_UPDATECHECK_FND_HL=Update available
+GUI_UPDATECHECK_NONE=Congratulations. You're running the latest version.
+GUI_UPDATECHECK_NONE_HL=No update available
+GUI_UPDATECHECK_ERROR=No releases could be found. Could be an internal error, but you want to check your internet connection as well.
+GUI_UPDATECHECK_ERROR_HL=Invalid server response
 # Editor
 GUI_EDITOR_TAB_CLOSE=Close tab
 GUI_EDITOR_TAB_CLOSEALL=Close all tabs

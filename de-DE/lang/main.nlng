@@ -1129,6 +1129,14 @@ GUI_MENU_FINDUPDATE=Auf neue Version prüfen
 GUI_MENU_ABOUT=&Über NumeRe
 GUI_MENU_ABOUT_TTP=Zeige Informationen über NumeRe
 GUI_MENU_HELP=&Hilfe
+# Find update
+GUI_UPDATECHECK_FND=Die neue Version %%1%% ist verfügbar.%%LINEBREAK%%%%LINEBREAK%%Installiert: %%2%%%%LINEBREAK%%Verfügbar: %%3%%%%LINEBREAK%%%%LINEBREAK%%Willst du sie sehen?
+GUI_UPDATECHECK_FND_RC=Die neue Vorab-Version %%1%% ist verfügbar.%%LINEBREAK%%%%LINEBREAK%%Installiert: %%2%%%%LINEBREAK%%Verfügbar: %%3%%%%LINEBREAK%%%%LINEBREAK%%Willst du sie sehen?
+GUI_UPDATECHECK_FND_HL=Update verfügbar
+GUI_UPDATECHECK_NONE=Glückwunsch, du verwendest bereits die aktuellste Version.
+GUI_UPDATECHECK_NONE_HL=Kein Update verfügbar
+GUI_UPDATECHECK_ERROR=Keine Releases wurden gefunden. Das könnte ein interner Fehler sein, aber prüfe bitte auch deine Internetverbindung.
+GUI_UPDATECHECK_ERROR_HL=Serverfehler
 # Editor
 GUI_EDITOR_TAB_CLOSE=Registerkarte schließen
 GUI_EDITOR_TAB_CLOSEALL=Alle Registerkarten schließen
