@@ -25,11 +25,14 @@
 		<keyword>sftp</keyword>
 		<keyword>usr</keyword>
 		<keyword>pwd</keyword>
+		<keyword>header</keyword>
+		<keyword>payload</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			VAL = url ADDRESS
 			VAL = url ADDRESS -file=FILENAME ...
+			VAL = url ADDRESS -header={HTTP-HEADER} ...
 		</syntax>
 		For accessing online resources, NumeRe provides the <code>url</code> command, which can be used to download web pages and files from the net, but cannot access databases. For databases, NumeRe provides the command <a href="nhlp://database?frame=new"><code>database</code></a> instead.
 		The downloaded files are returned as strings unless a destination file is specified using <code>file=TARGETFILE</code>. If the <code>up</code> parameter is specified in combination with <code>file=SOURCEFILE</code>, this file can be uploaded to an FTP server. In the latter two cases, the number of bytes downloaded or uploaded is returned:
@@ -42,8 +45,12 @@
 		NumeRe uses TLS as encryption, however the transmitted certificates are <em>not</em> validated. Therefore, this command is not suitable for transmitting sensitive information.
 		If JavaScript is used on the accessed web page, this code is <em>not</em> interpreted. As a result, highly dynamic web pages can only be downloaded incompletely.
 		A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
-		<example desc="Access the 'macros' subfolder of the CTAN FTP:">
+		To access REST APIs, it may be necessary to set a user-defined HTTP header. Several such lines can be defined simultaneously with <code>header={HTTP-HEADER}</code>. If something is to be transferred to the API, this can be passed to <code>payload=PAYLOAD</code>.
+		<example desc="Access the 'macros' subfolder of the CTAN FTP and requesting the GitHub API to return the metadata about the latest releases of NumeRe:">
 			url "ftp://ftp.fau.de/ctan/macros/"
+			[...]
+			url "https://api.github.com/repos/numere-org/NumeRe/releases" -set header={"Accept: application/vnd.github+json", "X-GitHub-Api-Version: 2022-11-28"}
+			[...]
 		</example>
 		<em>See also:</em> <a href="nhlp://database?frame=self">help database</a>
 	</contents>
