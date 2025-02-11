@@ -873,6 +873,9 @@ GUI_OPTIONS_BLOCK_AUTOCOMP=Kontrollflussblöcke
 GUI_OPTIONS_QUOTE_AUTOCOMP=Anführungszeichen: " "
 GUI_OPTIONS_SMARTSENSE_AUTOCOMP=SmartSense (Kontextbezogene Vervollständigung)
 GUI_OPTIONS_CALLTIP_DETECT_ARGS=Erweiterte Typ-Informationen im Kontext-Tooltip
+GUI_OPTIONS_DEFAULTPAGE=Willkommensseite
+GUI_OPTIONS_DEFPAGE_RELNOTES=Release Notes des aktuellsten Releases anzeigen
+GUI_OPTIONS_ALWAYS_DEFPAGE=Anzeigen, auch wenn die letzte Sitzung wiederhergestellt wurde
 GUI_OPTIONS_PRECISION=Präzision (Dezimalstellen in der Konsole)
 GUI_OPTIONS_LATEXPATH=Pfad zu den Binaries der LaTeX-Distribution%%LINEBREAK%%(Der Unterordner "bin" oder "bin/x64" in der LaTeX-Distribution)
 GUI_OPTIONS_MISC=Verschiedenes
@@ -1449,3 +1452,7 @@ GUI_NEWDLG_NAPP=App%%LINEBREAK%%**NumeRe-App**%%LINEBREAK%%[TYP: APP | NPRC-/NLY
 # Custom window strings
 GUI_CUSTOMWINDOW_CATCH=Ein Fehler ist während der Änderung von Fensterobjekteigenschaften mittels%%LINEBREAK%%%%LINEBREAK%%%%1%%%%LINEBREAK%%%%LINEBREAK%%aufgetreten. Die verwendeten Datentypen sind höchstwahrscheinlich inkompatibel oder die Syntax wurde nicht eingehalten. 
 GUI_CUSTOMWINDOW_CATCH_HEAD=NumeRe: Fehler während Eigenschaftsmodifikation
+# Default page strings
+GUI_DEFAULTPAGE_NAME=Dateiname
+GUI_DEFAULTPAGE_TYPE=Typ
+GUI_DEFAULTPAGE_LAST_USED=Letzte Verwendung

@@ -1,31 +1,13 @@
-#NumeRe: Framework für Numerische Rechnungen
+*Mehr als nur eine Tabellenkalkulation:* NumeRe ist eine Applikation für numerische Berechnungen, Statistik, Datenanalyse und numerische Modellbildung.
 
-Willkommen bei *NumeRe: Framework für Numerische Rechnungen*! Diese Seite soll 
-dir den Einstieg ein wenig erleichtern.
+##Du bist neu und brauchst Unterstützung?
 
+Die Übersicht der *NumeRe-Hilfe* kannst durch [F1] aufrufen. Nutze auch gerne die *Suchleiste* in der Toolbar oben, um schnell zu den richtigen Hilfeartikeln zu gelangen. Gerne kannst Du uns auch direkt per Discord (https://discord.gg/s5tSjwU) Fragen stellen. Außerdem findest Du eine Einführung in die ersten wichtigen Schritte in unserem Online-Tutorial: https://www.numere.org/tutorials/erste-schritte
 
-##Sofort loslegen
-Du kannst NumeRe *interaktiv* oder *gescriptet* verwenden, wobei gescriptet für 
-aufwändige Aufgaben wohl zu bevorzugen ist.
+*Beispiele gefällig?* Im Unterordner "examples" im Scriptordner findest Du viele Beispiele für klassische Probleme.
 
+##Links
 
-##Interaktive Bedienung
-Schreibe ein Kommando oder einen Ausdruck in die Konsole (unten mitte) und 
-drücke [ENTER]. NumeRe wird das Ergebnis in der nächsten Zeile ausgeben.
-**Beispiel:**
-	Gebe "plot sin(x)" oder "cos(_pi) + 5" in die Konsole ein
+Website: https://www.numere.org | GitHub: https://github.com/numere-org/NumeRe/ | Unterstütze uns: https://ko-fi.com/numere
 
-
-##Scripte
-Erzeuge eine neues Script (im Dateimenü oder in der Toolbar oben links) und
-schreibe deine Kommandos und Ausdrücke zeilenweise in diese Datei. Nach dem 
-Speichern kannst du die Datei mit Klicken auf "Ausführen" oder mit [F5] 
-ausführen. Im Scriptordner findest du viele Beispielscripte.
-**Beispiel:**
-	Gebe "edit examples/simple_integration.nscr" in die Konsole ein.
-
-
-##Hilfe und weitere Unterstützung
-Hilfe und weitere Unterstützung findest du in der *NumeRe-Hilfe*. Drücke [F1], 
-um die Übersicht aufzurufen, oder klicke mit der rechten Maustaste auf ein 
-Kommando, um die Hilfe zu diesem Kommando zu öffnen.
+*Tipp: Diese Seite kannst Du in den Einstellungen konfigurieren oder deaktivieren.*

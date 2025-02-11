@@ -1,31 +1,13 @@
-#NumeRe: Framework for Numerical Computations
+*More than just a spreadsheet:* NumeRe is an application for numerical calculations, statistics, data analysis and numerical modeling.
 
-Welcome at *NumeRe: Framework for Numerical Computations*! This page shall easy 
-your first steps in this application.
+##Are you new and need support?
 
+The overview of the *NumeRe help* can be called up by pressing [F1]. You can also use the *search bar* in the toolbar above to quickly find the right help articles. Also, we are welcoming you to ask us questions directly via Discord (https://discord.gg/s5tSjwU). You can also find an introduction to the first important steps in our online tutorial: https://www.numere.org/tutorials/erste-schritte
 
-##Start Now
-You may interact with NumeRe *interactively* or using *scripts*, but scripts are
-favorable, if something with a high complexity shall be evaluated.
+*Need some examples?* You can find many examples of classic problems in the "examples" subfolder in the script folder.
 
+##Links
 
-##Interactive Usage
-Enter a command or an expression into the console (lower middle) and press 
-[ENTER]. NumeRe will return the result in the next line.
-**Example:**
-	Enter "plot sin(x)" or "cos(_pi) + 5" into the console
+Website: https://www.numere.org | GitHub: https://github.com/numere-org/NumeRe/ | Support us: https://ko-fi.com/numere
 
-
-##Scripts
-Create a new script (in the file menu or using the toolbar upper left) and enter
-your commands and expressions linewise to this file. After saving, you may 
-execute the file by clicking on "Execute" or pressing [F5]. You'll find many 
-example scripts in the script folder.
-**Example:**
-	Enter "edit examples/simple_integration.nscr" into the console
-
-
-##Help and Further Support
-You'll find help and further support in the *NumeRe Documentation*. Press [F1]
-to open the overview, or click right onto a command to open the documentation 
-article concerning this command.
+*Tip: You can configure or deactivate this page in the settings.
