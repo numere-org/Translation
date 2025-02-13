@@ -63,7 +63,7 @@
 			<item node="-x=XMIN:XMAX">Restricts the <expr>x</expr> interval to [XMIN,XMAX]</item>
 			<item node="-y=YMIN:YMAX">Restricts the <expr>y</expr> interval to [YMIN,YMAX]</item>
 			<item node="-z=ZMIN:ZMAX">Restricts the <expr>z</expr> interval for the 2D fit algorithm to [ZMIN,ZMAX]</item>
-			<item node="-tol=TOLERANCE">Determines the (relative and absolute) tolerance, which defines the border, from where the current parameter set will be interpreted as converging. The default value is <expr>10^(-4)</expr></item>
+			<item node="-tol=TOLERANCES">Specifies the tolerances for the algorithm from which a parameter set is considered convergent. Relative and absolute tolerances can be specified separately <code>tol={reltol,abstol}</code> or as a common value. The default value for both is <expr>10^(-4)</expr></item>
 			<item node="-iter=ITERATIONS">Defines the maximal number of iterations, after them the fit algorithm will be canceled. The default value is 500</item>
 			<item node="-chimap=DATAGRID()">Creates a <expr>chi^2</expr> convergence data set. The passed datagrid must have the correct dimensions and the corresponding parameter names as column headings. Further details can be found at <a href="nhlp://chimap?frame=new">help chimap</a></item>
 		</list>

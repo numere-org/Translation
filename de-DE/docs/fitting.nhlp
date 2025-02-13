@@ -63,7 +63,7 @@
 			<item node="-x=XMIN:XMAX">Schränkt das <expr>x</expr>-Intervall für den Fitalgorithmus auf [XMIN,XMAX] ein</item>
 			<item node="-y=YMIN:YMAX">Schränkt das <expr>y</expr>-Intervall für den Fitalgorithmus auf [YMIN,YMAX] ein</item>
 			<item node="-z=ZMIN:ZMAX">Schränkt das <expr>y</expr>-Intervall für den 2D-Fitalgorithmus auf [ZMIN,ZMAX] ein</item>
-			<item node="-tol=TOLERANCE">Bestimmt die (relative und absolute) Toleranz, ab der ein Parametersatz als konvergent betrachtet wird. Standardmäßig ist dies <expr>10^(-4)</expr></item>
+			<item node="-tol=TOLERANZEN">Legt die Toleranzen für den Algorithmus fest, ab der ein Parametersatz als konvergent betrachtet wird. Es können relative und absolute Toleranzen getrennt <code>tol={reltol,abstol}</code> oder als gemeinsamer Wert angegeben werden. Standardmäßig sind beide <expr>10^(-4)</expr></item>
 			<item node="-iter=ITERATIONEN">Legt die maximale Zahl der Iterationen fest, nach denen der Fitalgorithmus abgebrochen wird. Hier ist 500 vorgegeben</item>
 			<item node="-chimap=DATAGRID()">Erzeugt einen <expr>chi^2</expr>-Konvergenz-Datensatz. Das Datengitter muss bereits die korrekten Dimensionen und die entsprechenden Parameternamen als Spaltenüberschriften besitzen. Details finden sich unter <a href="nhlp://chimap?frame=new">help chimap</a></item>
 		</list>

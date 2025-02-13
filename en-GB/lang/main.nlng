@@ -399,7 +399,7 @@ PARSERFUNCS_FIT_POINTS_WO_ERR=			Data points:                            %%1%% w
 PARSERFUNCS_FIT_COORD_RESTRICTS=	%%1%% values restricted to:                 [%%2%%,%%3%%]
 PARSERFUNCS_FIT_PARAM_RESTRICTS=		Parameter restrictions:                 [%%1%%]
 PARSERFUNCS_FIT_FREEDOMS=				Degrees of freedom:                     %%1%%
-PARSERFUNCS_FIT_ALGORITHM_SETTINGS=		Parameters for the algorithm:           TOL=%%1%%, MAXITER=%%2%%
+PARSERFUNCS_FIT_ALGORITHM_SETTINGS=		Parameters for the algorithm:           RTOL=%%1%%, ATOL=%%2%%, MAXITER=%%3%%
 PARSERFUNCS_FIT_ITERATIONS=				Iterations:                             %%1%%
 PARSERFUNCS_FIT_CHI2=					Weighted Sum of the residuals (chi^2):  %%1%%
 PARSERFUNCS_FIT_RED_CHI2=				Variance of the residuals (red. chi^2): %%1%%
