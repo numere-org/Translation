@@ -36,21 +36,21 @@
 		You may pass the target filename with the option <code>file=FILENAME</code>. If the filename shall contain whitespaces, then it has to be passed surrounded with quotations marks (If the file extension is *.tex, then NumeRe will create a TeX file).
 		<code>stats</code> calculates the following statistical values:
 		<list>
-			<item node="Avg">Average of each data row (Functions pendant: <code>avg()</code>)</item>
-			<item node="+/-">Standard deviation (Functions pendant: <code>std()</code>)</item>
-			<item node="CnfInt">Percentage of the data points, which are located in the 1-sigma interval [Avg-(+/-),Avg+(+/-)]</item>
-			<item node="StdErr">Standard error of the average</item>
-			<item node="Med">Median of each data row (Functions pendant: <code>med()</code>)</item>
-			<item node="Q1">lower quartile of each data row (Functions pendant: <code>pct()</code>)</item>
-			<item node="Q3">upper quartile of each data row (Functions pendant: <code>pct()</code>)</item>
-			<item node="RMS">averaged norm of each data row (root mean square)</item>
-			<item node="Skew">Skewness of each data row: Skew &lt; 0 for left-skewed, Skew &gt; 0 for right-skewed distributions</item>
-			<item node="Exc">Excess kurtosis of each data row: Exc &gt; 0 for small-peaked, Exc &lt; 0 for wide-peaked distributions</item>
+			<item node="Avg">Average <expr>mu</expr> of the data (Functions pendant: <code>avg()</code>)</item>
+			<item node="+/-">Standard deviation <expr>sigma</expr> of the data (corresponds to <expr>1sigma</expr>, functions pendant: <code>std()</code>)</item>
+			<item node="CI">Half-width of the 95 % confidence interval of the average (average uncertainty) <expr>CI = sigma s_t/sqrt(n)</expr> with the Student factor for <expr>n-1</expr> degrees of freedom <expr>s_t = t_(n-1)(0.95)</expr>. The confidence interval calculates as <expr>[mu-CI, mu+CI]</expr></item>
+			<item node="StdErr">Standard error of the average (Functions pendant: <code>stderr()</code>)</item>
+			<item node="Med">Median of each column of data (Functions pendant: <code>med()</code>)</item>
+			<item node="Q1">lower quartile of each column of data (Functions pendant: <code>pct()</code>)</item>
+			<item node="Q3">upper quartile of each column of data (Functions pendant: <code>pct()</code>)</item>
+			<item node="RMS">averaged norm of each column of data (root mean square, functions pendant: <code>rms()</code>)</item>
+			<item node="Skew">Skewness <expr>gamma_1</expr> of each column of data: <expr>gamma_1 &lt; 0</expr> for left-skewed, <expr>gamma_1 &gt; 0</expr> for right-skewed distributions (Functions pendant: <code>skw()</code>)</item>
+			<item node="Exc">Excess kurtosis <expr>gamma_2 = kappa - 3</expr> of each column of data: <expr>gamma_2 &gt; 0</expr> for small-peaked, <expr>gamma_2 &lt; 0</expr> for wide-peaked distributions (Functions pendant: <code>exc()</code>)</item>
 			<item node="min">Minimal value (Functions pendant: <code>min()</code>)</item>
 			<item node="max">Maximal value (Functions pendant: <code>max()</code>)</item>
-			<item node="num">Number of values (excludes invalid values)</item>
-			<item node="cnt">Number of "lines" (includes invalid values)</item>
-			<item node="s_t">Student factor for the corresponding 95 % confidence interval (Functions pendant: <code>student_t()</code>)</item>
+			<item node="num">Number of valid values</item>
+			<item node="cnt">Number of all values (includes invalid ones)</item>
+			<item node="s_t">Student factor for the corresponding 95 % confidence interval (corresponds to the <expr>2sigma</expr> interval, functions pendant: <code>student_t()</code>)</item>
 		</list>
 		<example desc="Analysis of a loaded data file and export to the file 'results.dat':">
 			stats data(:,:) -set file=results

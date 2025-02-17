@@ -561,14 +561,14 @@ RANDOM_DISTRIB_TYPE_STUDENT=student-t distributed
 STATS_HEADLINE=Statistics
 STATS_TYPE_AVG=Avg
 STATS_TYPE_STD=+/-
-STATS_TYPE_CONFINT=CnfInt
+STATS_TYPE_CONFINT=CI
 STATS_TYPE_STDERR=StdErr
 STATS_TYPE_MED=Med
 STATS_TYPE_RMS=RMS
 STATS_TYPE_SKEW=Skew
 STATS_TYPE_EXCESS=Exc
 STATS_OUT_PLGNINFO=Statistics (v %%1%%) using the data out of %%2%%
-STATS_OUT_COMMENTLINE=Legend: %%STATS_TYPE_AVG%% = average, %%STATS_TYPE_STD%% = standard deviation, %%STATS_TYPE_CONFINT%% = percentage in confidence interval, %%STATS_TYPE_STDERR%% = standard error, %%STATS_TYPE_MED%% = median, Q1 = lower quartile, Q3 = upper quartile, %%STATS_TYPE_RMS%% = root mean square, %%STATS_TYPE_SKEW%% = skewness, %%STATS_TYPE_EXCESS%% = excess, min = minimum, max = maximum, num = number of elements, cnt = number of lines, s_t = Student factor
+STATS_OUT_COMMENTLINE=Legend: %%STATS_TYPE_AVG%% = average, %%STATS_TYPE_STD%% = standard deviation, %%STATS_TYPE_CONFINT%% = width of the 95% confidence interval of the average, %%STATS_TYPE_STDERR%% = standard error, %%STATS_TYPE_MED%% = median, Q1 = lower quartile, Q3 = upper quartile, %%STATS_TYPE_RMS%% = root mean square, %%STATS_TYPE_SKEW%% = skewness, %%STATS_TYPE_EXCESS%% = excess, min = minimum, max = maximum, num = number of elements, cnt = number of lines, s_t = Student factor
 # SETTINGS
 # ===============================
 SETTINGS_SAVE_SUCCESS=Configuration was saved successfully.

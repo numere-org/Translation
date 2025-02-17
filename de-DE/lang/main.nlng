@@ -561,14 +561,14 @@ RANDOM_DISTRIB_TYPE_STUDENT=student-t-verteilte
 STATS_HEADLINE=Statistiken
 STATS_TYPE_AVG=MW
 STATS_TYPE_STD=+/-
-STATS_TYPE_CONFINT=iVInt
-STATS_TYPE_STDERR=Uns
+STATS_TYPE_CONFINT=CI
+STATS_TYPE_STDERR=StdF
 STATS_TYPE_MED=Med
 STATS_TYPE_RMS=RMS
 STATS_TYPE_SKEW=Skew
 STATS_TYPE_EXCESS=Exz
 STATS_OUT_PLGNINFO=Statistik (v %%1%%) unter Verwendung der Daten aus %%2%%
-STATS_OUT_COMMENTLINE=Legende: %%STATS_TYPE_AVG%% = Mittelwert, %%STATS_TYPE_STD%% = Standardabweichung, %%STATS_TYPE_CONFINT%% = im Vertrauensintervall, %%STATS_TYPE_STDERR%% = Unsicherheit, %%STATS_TYPE_MED%% = Median, Q1 = unteres Quartil, Q3 = oberes Quartil, %%STATS_TYPE_RMS%% = root mean square, %%STATS_TYPE_SKEW%% = Schiefe, %%STATS_TYPE_EXCESS%% = Exzess, min = Minimum, max = Maximum, num = Zahl der Elemente, cnt = Zahl der Zeilen, s_t = Student-Faktor
+STATS_OUT_COMMENTLINE=Legende: %%STATS_TYPE_AVG%% = Mittelwert, %%STATS_TYPE_STD%% = Standardabweichung, %%STATS_TYPE_CONFINT%% = Breite des 95%-Vertrauensintervalls des Mittelwerts, %%STATS_TYPE_STDERR%% = Standardfehler, %%STATS_TYPE_MED%% = Median, Q1 = unteres Quartil, Q3 = oberes Quartil, %%STATS_TYPE_RMS%% = root mean square, %%STATS_TYPE_SKEW%% = Schiefe, %%STATS_TYPE_EXCESS%% = Exzess, min = Minimum, max = Maximum, num = Zahl der Elemente, cnt = Zahl der Zeilen, s_t = Student-Faktor
 # SETTINGS
 # ===============================
 SETTINGS_SAVE_SUCCESS=Konfiguration wurde erfolgreich gespeichert.

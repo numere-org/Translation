@@ -36,21 +36,21 @@
 		Diesem Kommando kann mit der Option <code>file=DATEINAME</code> direkt der gewünschte Ausgabe-Dateiname angegeben werden. Dateinamen, die Leerzeichen enthalten sollen, müssen dabei mit Anführungszeichen umschlossen werden (Mit der Endung *.tex wird eine TeX-Datei erzeugt).
 		<code>stats</code> generiert die folgenden Statistikwerte:
 		<list>
-			<item node="MW">Mittelwert der Datenreihen (Funktionen-Pendant: <code>avg()</code>)</item>
-			<item node="+/-">Standardabweichung (Funktionen-Pendant: <code>std()</code>)</item>
-			<item node="iVInt">Prozentsatz der Datenpunkte, die im 1-Sigma-Intervall [MW-(+/-),MW+(+/-)] liegen</item>
-			<item node="Uns">Unsicherheit/Standardfehler des Mittelwerts</item>
-			<item node="Med">Median der Datenreihen (Funktionen-Pendant: <code>med()</code>)</item>
-			<item node="Q1">unteres Quartil der Datenreihen (Funktionen-Pendant: <code>pct()</code>)</item>
-			<item node="Q3">oberes Quartil der Datenreihen (Funktionen-Pendant: <code>pct()</code>)</item>
-			<item node="RMS">gemittelte Norm der Datenreihen (root mean square)</item>
-			<item node="Skew">Schiefe der Datensätze: Skew &lt; 0 für linksschiefe, Skew &gt; 0 für rechtsschiefe Verteilungen</item>
-			<item node="Exz">Exzess der Daten: Exz &gt; 0 für steilgipflige, Exz &lt; 0 für flachgipflige Verteilungen</item>
+			<item node="MW">Mittelwert <expr>mu</expr> der Daten (Funktionen-Pendant: <code>avg()</code>)</item>
+			<item node="+/-">Standardabweichung <expr>sigma</expr> der Daten (entspricht <expr>1sigma</expr>, Funktionen-Pendant: <code>std()</code>)</item>
+			<item node="CI">Halbe Breite des 95 %-Konfidenzintervalls des Mittelwertes (Mittelwertunsicherheit) <expr>CI = sigma s_t/sqrt(n)</expr> mit dem Student-Faktor für <expr>n-1</expr> Freiheitsgrade <expr>s_t = t_(n-1)(0.95)</expr>. Das Konfidenzintervall ergibt sich dann als <expr>[mu-CI, mu+CI]</expr></item>
+			<item node="StdF">Standardfehler des Mittelwerts (Funktionen-Pendant: <code>stderr()</code>)</item>
+			<item node="Med">Median der Daten (Funktionen-Pendant: <code>med()</code>)</item>
+			<item node="Q1">unteres Quartil der Daten (Funktionen-Pendant: <code>pct()</code>)</item>
+			<item node="Q3">oberes Quartil der Daten (Funktionen-Pendant: <code>pct()</code>)</item>
+			<item node="RMS">gemittelte Norm der Daten (root mean square, Funktionen-Pendant: <code>rms()</code>)</item>
+			<item node="Skew">Schiefe <expr>gamma_m</expr> der Datensätze: <expr>gamma_m &lt; 0</expr> für linksschiefe, <expr>gamma_m &gt; 0</expr> für rechtsschiefe Verteilungen (Funktionen-Pendant: <code>skw()</code>)</item>
+			<item node="Exz">Exzess <expr>gamma = beta_2 - 3</expr> der Daten: <expr>gamma &gt; 0</expr> für steilgipflige, <expr>gamma &lt; 0</expr> für flachgipflige Verteilungen (Funktionen-Pendant: <code>exc()</code>)</item>
 			<item node="min">Minimaler Wert (Funktionen-Pendant: <code>min()</code>)</item>
 			<item node="max">Maximaler Wert (Funktionen-Pendant: <code>max()</code>)</item>
-			<item node="num">Zahl der Werte (schließt ungültige Werte aus)</item>
-			<item node="cnt">Zahl der Zeilen (inkl. der ungültigen Werte)</item>
-			<item node="s_t">Student-Faktor für 95 %-Konfidenzintervall (Funktionen-Pendant: <code>student_t()</code>)</item>
+			<item node="num">Zahl der gültigen Werte</item>
+			<item node="cnt">Zahl aller Werte (inkl. der ungültigen Werte)</item>
+			<item node="s_t">Student-Faktor für 95 %-Konfidenzintervall (entspricht dem <expr>2sigma</expr>-Intervall, Funktionen-Pendant: <code>student_t()</code>)</item>
 		</list>
 		<example desc="Analyse eines geladenenen Datenfiles und speichern der Ergebnisse in die Datei 'results.dat':">
 			stats data(:,:) -set file=results
