@@ -25,8 +25,8 @@
 	<contents>
 		<img src="<>/icons/folder.png" />
 		<em>NumeRe: Framework for Numerical Computations is a framework written for Microsoft Windows(R) and released under the GNU GPL v3 for solving mathematical and physical problems numerically.</em>
-		NumeRe is designed as a terminal-based table calculation software but optimized for the scientific work.
-		NumeRe is targeting a very intuitive usage. This requires a simple, talking-like syntax, which is very tolerant against errors. Therefore small details of a syntax as well as the number of commands don't play a that great role here.
+		NumeRe is designed as a terminal-based table calculation software and is optimized for the scientific work.
+		Together with the interaction via commands, the syntax is characterized by functions and variables of various types. The table type in particular is central to all data management and data modification.
 		<em>New at this place?</em> The you might want to look at the <a href="nhlp://firststeps?frame=new">first steps</a>.
 		The basic features are as follows:
 		<list>
