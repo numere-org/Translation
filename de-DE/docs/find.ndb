@@ -491,6 +491,7 @@ TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows 
 TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
 TAB().reordercols({c},{n})~Sortiert die Spalten gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
 TAB().reorderrows({r},{n})~Sortiert die Zeilen gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
+TAB().replacevals({c},{o},{n})~Ersetzt in den Spalten jedes Auftreten eines Wertes in {o} mit dem korrespondierenden Wert in {n}~replacevals() werte ersetzen values spalten columns umbenennen rename~.replacevals(
 TAB().rows~Modifizierer für zeilenweises Vorgehen oder gibt die Zahl der Zeilen der Tabelle zurück~rowcount zeilenzahl reihenzahl größe groesse size dimension modifier modifizierer~.rows
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
 TAB().scwin(c,w,s)~Modifizierer für ein gleitendes Fenster entlang einer Spalte~scwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.scwin(
