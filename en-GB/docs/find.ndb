@@ -197,6 +197,7 @@ getodbcdrivers()~Returns a list of installed ODBC drivers~database datenbanken v
 getompthreads()~Returns the number of the maximal possible OpenMP threads~CPU core logical logische kerne prozessor multithreading multiprocessing~getompthreads()
 getopt(STR,POS)~Returns the value of a parameter in the string STR, with the first character of the value at position POS~parameter werte argumente options commandline values getopt()~getopt(
 getorder({x,y,z,...})~Returns the order of the sorted elements~sortieren getorder() ascending reihenfolge~getorder(
+getoverlap({l},{r})~Returns the common overlap or the respective intersection of all intervals~getoverlap() intersection schnittmenge ueberlapp~getoverlap(
 gettypeof(x)~Returns the data type~gettypeof() typeof datentypen datatypes~gettypeof(
 getuilang()~Returns information about user's current language~language translation sprache deutsch german english english~getuilang()
 getversioninfo()~Returns information about the current NumeRe version~version release candidate date datum build~getversioninfo()
