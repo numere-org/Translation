@@ -182,6 +182,7 @@ BUILTIN_CHECKKEYWORD_CLEARSTRINGS_EMPTY=Es wurden keine Zeichenketten gefunden.
 BUILTIN_CHECKKEYWORD_COPYDATA_SUCCESS=Der Datensatz wurde erfolgreich kopiert.
 BUILTIN_CHECKKEYWORD_COPYFILE_SUCCESS=Die Datei "%%1%%" wurde erfolgreich kopiert.
 BUILTIN_CHECKKEYWORD_COPYFILE_ALL_SUCCESS=Die Dateien "%%1%%" wurden erfolgreich kopiert.
+BUILTIN_CHECKKEYWORD_COPYFILE_NO_FILE=Keine passende Datei(en) gefunden.
 BUILTIN_CHECKKEYWORD_MOVEDATA_SUCCESS=Der Datensatz wurde erfolgreich verschoben.
 BUILTIN_CHECKKEYWORD_MOVEFILE_SUCCESS=Die Datei "%%1%%" wurde erfolgreich verschoben.
 BUILTIN_CHECKKEYWORD_MOVEFILE_ALL_SUCCESS=Die Dateien "%%1%%" wurden erfolgreich verschoben.
