@@ -43,7 +43,7 @@
 				<td>Subtraktion</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Multiplikation</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td></td>
+				<td>Multiplikation</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>&#x2713;</td><td></td>
@@ -67,16 +67,16 @@
 				<td>Doppelfakultät</td><td><code>A!!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logisches NICHT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logisches UND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logisches UND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logisches ODER</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logisches ODER</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>		
 			<tr>
-				<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logisches XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Binäres UND</td><td><code>A & B</code></td><td></td><td>&#x2713;</td><td></td>

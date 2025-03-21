@@ -34,7 +34,7 @@
 		<list>
 			<item node="minval=VAL">Defines the lower threshold <expr>VAL</expr> above which structures are detected. Structures below this value will be ignored. By default, this is identical to the minimum of the data grid</item>
 			<item node="minlen=LENGTH">Defines the minimum length of points a structure must have. Shorter structures will be ignored. This is identical to 0 by default</item>
-			<item node="attract={x,y}">Defines the number of data points in <expr>x</expr> and <expr>y</expr> that structures can skip and still count as a single structure. By default, this is identical to <expr>(x,y) = (0,1)</expr>. <em>Note:</em> If only one value is passed, it will be used for<expr>y</expr></item>
+			<item node="attract={x,y}">Defines the number of data points in <expr>x</expr> and <expr>y</expr> that structures can skip and still count as a single structure. By default, this is identical to <expr>(x,y) = (0,1)</expr>. <em>Note:</em> If only one value is passed, it will be used for <expr>y</expr></item>
 			<item node="target=TRGT()">Defines the target table where the structures will be stored. By default, this is identical to <code>detectdat()</code></item>
 		</list>
 		<example desc="Structure detection of a 2D map calculated from:<br/><expr>exp(-30*(y - 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(y + 0.5*sin(_pi*x))^2 - rnd(0,1)/10) + exp(-30*(x + y)^2 - rnd(0,1)/10)</expr>, where <expr>rnd(0,1)</expr> returns uniformly distributed random numbers between 0 and 1">

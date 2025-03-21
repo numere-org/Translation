@@ -26,16 +26,23 @@
 		<keyword>{</keyword>
 	</keywords>
 	<contents>
-		NumeRe may calculate <em>multiple values at once</em>, if their originating expressions are entered separated with commas. This may be enough in many cases, but it may be quite challenging, to enter a nearly identical expression multiple times correctly, if the expressions are only differ at single distinct locations.
-		An improvement gives the so-called <em>NumeRe vector syntax</em>. All expression parts, which are identical for all expressions ("scalars") have to be entered normally, whereas the differing elements have to be entered in braces:<codeblock>EXPRESSION {ELEMENT_1, ELEMENT_2, ...} EXPRESSION ...</codeblock>
-		There is nearly no limitation in the type of elements. This may be numbers as well as complete expressions, but neither new braces nor data objects.
-		If multiple of such braces are used in an expression, but the number of their elements are not matching, then the "shorter" braces will be extended to match the "longest" brace. In most cases the value 0.0 will be used, only if there is a <code>/</code> directly on the left of the corresponding brace, then it will be replaced by a 1.0. If the value 1.0 is instead needed in every case, then the "shorter" brace have to be surrounded by additional parentheses:<code>({ELEMENT_1, ELEMENT_2, ...})</code>. The parentheses of a surrounding function will be enough.
-		The results of such a multi expression evaluation may be written directly to a table:<codeblock>TABLE(I1:I2,J1:J2) = EXPRESSION {ELEMENT_1, ELEMENT_2, ...} ...</codeblock>
-		Temporary columns may be created as well with this syntax, and a set of values may be directly assigned to its variables:<codeblock>{ELEMENT_1, ELEMENT_2, ...} = EXPRESSION {...}</codeblock>
-		<example desc="Multiple calculation of the values of <code>cos(n*PI) + n</code>, where <code>n = {1, 2, 3, 4, 5}</code>:">
-			cos({1,2,3,4,5}*_pi) + {1,2,3,4,5}
-			ans = {     0,     3,     2,     5,     4}
+		NumeRe can calculate <em>several expressions at the same time</em> by entering them separated by commas. To calculate a <em>vector expression</em>, however, either the variables or functions involved must be vector (or return several elements) or scalar values must be combined into a vector using curly brackets, e.g. <code>{x, y, z, ...}</code>; the values <code>x, y, ...</code> can also have different data types or be vectors themselves in the latter case.
+		The operations are then performed component by component. If several vector values are used in an expression whose number of elements is not identical, the missing elements are added as "empty" elements, i.e. they are generally replaced virtually by <code>0</code> or <code>""</code>.
+		The result of such a vectorial calculation can be assigned to different data structures depending on the result data types obtained for the individual elements:
+		<list>
+			<item node="*">If the types are different, the result can either be assigned to a <a href="nhlp://cluster?frame=new">cluster</a>, a row of a <a href="nhlp://table?frame=new">table</a> (provided the types match) or a vector of variables with the matching types: <code>{v1,v2,...} = {...}</code></item>
+			<item node="*">If the types are identical, the result can be assigned <em>as a further option</em> to a variable of the same type, which then becomes vectorial </item>
+		</list>
+		<example desc="Vectorial calculation of the values of <code>cos(n*PI) + n</code>, where <code>n = {1, 2, 3, 4, 5}</code>, as well as further examples of vectorial assignments:">
+			cos({1, 2, 3, 4, 5}*_pi) + {1, 2, 3, 4, 5}
+			ans = {      0,       3,       2,       5,       4}
+			fVect = {1:3}
+			ans = {      1,       2,       3}
+			sVect = {"Hello", "World"}
+			ans = {"Hello", "World"}
+			{f, s} = {42, "The answer"}
+			ans = {     42, "Th..."}
 		</example>
-		<em>See also:</em> <a href="nhlp://data?frame=self">help data</a> and <a href="nhlp://table?frame=self">help table</a>
+		<em>See also:</em> <a href="nhlp://operator?frame=self">help operator</a>, <a href="nhlp://cluster?frame=self">help cluster</a> and <a href="nhlp://table?frame=self">help table</a>
 	</contents>
 </article>

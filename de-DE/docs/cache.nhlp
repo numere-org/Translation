@@ -17,7 +17,7 @@
 -->
 
 <article id="cache">
-	<title string="Tabellen (Caches)" idxkey="table"/>
+	<title string="Tabellen" idxkey="table"/>
 	<keywords>
 		<keyword>cache</keyword>
 		<keyword>table</keyword>
@@ -54,7 +54,7 @@
 			swap TABLE1(), TABLE2()
 		</syntax>
 		Tabellen sind aktive Speicher in NumeRe, die tabellare Daten zwischenspeichern können, damit selbige weiterverarbeitet werden können. Tabellarische Daten zeichnen sich dadurch aus, dass die Daten spaltenweise organisiert sind. Spalten in NumeRe-Tabellen können entweder numerische Werte, Zeit-Datumswerte, logische Werte, Kategorien oder <a href="nhlp://string?frame=new">Zeichenketten</a> enthalten. Werden numerische Werte in Zeichenketten-Spalten geschrieben, werden sie automatisch in Zeichenketten konvertiert. Schreiben von Zeichenketten in numerische Spalten ist dagegen <em>nur</em> möglich, wenn die Zeichenketten numerisch interpretiert werden können.
-		Zeit-Datumswerte werden in Sekunden seit dem 1.1.1970 (UTC) mit Mikrosekunden-Präzision gespeichert. Derartige Werte werden von speziellen Funktionen (wie z.B. <code>time()</code> oder <code>timeformat()</code>) generiert und verarbeitet. Zeit-Datumswerte können auch als Zeichenketten in die entsprechenden Spalten geschrieben werden, wenn sie einem der folgenden Schemata oder einer Datums-Zeitkombination davon entsprechen:
+		Zeit-Datumswerte werden in Sekunden seit dem 01.01.1970 (UTC) mit Mikrosekunden-Präzision gespeichert. Derartige Werte werden von speziellen Funktionen (wie z.B. <code>time()</code> oder <code>timeformat()</code>) generiert und verarbeitet. Zeit-Datumswerte können auch als Zeichenketten in die entsprechenden Spalten geschrieben werden, wenn sie einem der folgenden Schemata oder einer Datums-Zeitkombination davon entsprechen (aufgrund der nicht vorhandenen Eindeutigkeit wird das amerikanische Format <code>MM/DD/YYYY</code> nicht unterstützt):
 		<verbatim>
 			DD.MM.YY(YY)
 			YY(YY)-MM-DD
@@ -66,9 +66,9 @@
 		</verbatim>
 		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
 		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
-		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden. Obwohl Indices numerische Werte sein müssen, besteht eine experimentelle Unterstützung für die Auswahl von Spalten anhand ihrer Spaltenüberschriften als Zeichenkette, d.h. <code>TABLE(:,"NAME")</code>
+		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen oder Datenfiles als Indexmenge verwendet werden. Neben numerischen Indices besteht eine Unterstützung für die Auswahl von Spalten anhand ihrer Spaltenüberschriften als Zeichenkette, d.h. <code>TABLE(:,"NAME")</code>
 		Zusätzlich kann mittels <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a> die Schrittweite der Indizes vorgegeben werden.
-		Wird eine gesamte Spalte in der Form <code>TABLE(:,j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt.
+		Wird eine gesamte Spalte in der Form <code>TABLE(:,j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt. Eine Konvertierung kann aber auch durch die Tabellenmethode <code>TABLE().convert(...)</code> (siehe unten) erreicht werden.
 		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nrows</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden (<code>nlines</code> ist ein Alias). Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
 		Die Spaltenüberschriften können ähnlich gelesen und bearbeitet werden: <code>TABLE(#,SPALTE)</code> bzw. <code>TABLE(#,SPALTE) = KOPF</code>
 		<h>Kommandos in Zusammenhang mit Tabellen</h>
@@ -82,7 +82,7 @@
 			<item node="rename TABLE(), NEUERNAME()">Die Tabelle <code>TABLE</code> zu <code>NEUERNAME</code> umbenennen. Dies kann nicht auf <code>table</code> angewendet werden!</item>
 			<item node="swap TABLE1(), TABLE2()">Den Inhalt der Tabelle <code>TABLE1</code> mit dem Inhalt von <code>TABLE2</code> vertauschen</item>
 			<item node="save TABLE()">Daten aus der gewählten Tabelle in eine Datei mit automatisch generiertem Namen speichern. Mit <code>save TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen von Anführungszeichen umschlossen sein</item>
-			<item node="export TABLE()">Daten aus der gewählten Tabelle in eine Textdatei mit automatisch generiertem Dateinamen exportieren. Mit <code>export TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. (Mit der Endung *.tex wird eine TeX-Datei, mit *.csv eine CSV-Datei und mit *.xls wird eine Excel(R)-Mappe erzeugt)</item>
+			<item node="export TABLE()">Daten aus der gewählten Tabelle in eine Textdatei mit automatisch generiertem Dateinamen exportieren. Mit <code>export TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. Siehe auch <a href="nhlp://export?frame=new"><code>export</code></a> für weitere Details</item>
 			<item node="delete TABLE(i1:i2,j1:j2)">Alle Einträge von Zeile <expr>i1</expr> bis <expr>i2</expr> und von Spalte <expr>j1</expr> bis <expr>j2</expr> werden unwiderruflich gelöscht. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden</item>
 			<item node="remove TABLE1(), TABLE2(), ...">Entfernt die Tabellen <code>TABLE1(), TABLE2(), ...</code> komplett</item>
 		</list>
@@ -100,6 +100,10 @@
 			TABLE().num
 			TABLE().cnt
 			TABLE().norm
+			TABLE().exc
+			TABLE().skw
+			TABLE().stderr
+			TABLE().rms
 		</codeblock>
 		Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Sie können auch mit den Modifizieren auf Gruppen von Zeilen und Spalten eingeschränkt werden.
 		Die folgenden Methoden sind zusätzlich definiert:

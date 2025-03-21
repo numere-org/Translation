@@ -37,7 +37,7 @@
 			vect ... -set ...
 		</syntax>
 		Das Kommando <code>vect</code> ermöglicht die Darstellung eines zweidimensionalen Vektorfeldes<exprblock>A(x,y) := A_x(x,y) e_x + A_y(x,y) e_y</exprblock>in den beiden Raumrichtungen <expr>x</expr> und <expr>y</expr> oder eines komplexwertigen Vektorfeldes<exprblock>A(x,y) := A_(re)(x,y) + i A_(im)(x,y)</exprblock>
-		Das Vektorfeld <expr>A(x,y)</expr> muss dabei in der Form <code>{Ax(x,y), Ay(x,y)}</code> oder <code>Ax(x,y)+I*Ay(x,y)</code> oder als komplexwertiges <a href="nhlp://datagrid?frame=new">Datengitter</a> angegeben werden. Dabei sind <expr>A_x</expr> und <expr>A_y</expr> Funktionen der Raumrichtungen <expr>x</expr> und <expr>y</expr>. Ein Vektorfeld kann dabei auch in Form eines Ausdrucks angegeben werden, z.B. <code>{x,y-2} - {x,y+2}</code> bzw. <code>x+I*(y-2) - x+I*(y+2)</code>. Es können mehrere Vektorfelder zugleich angegeben werden.
+		Das Vektorfeld <expr>A(x,y)</expr> muss dabei in der Form <code>{Ax(x,y), Ay(x,y)}</code> oder <code>Ax(x,y)+I*Ay(x,y)</code> oder als komplexwertiges <a href="nhlp://datagrid?frame=new">Datengitter</a> angegeben werden. Dabei sind <expr>A_x</expr> und <expr>A_y</expr> Funktionen der Raumrichtungen <expr>x</expr> und <expr>y</expr>. Ein Vektorfeld kann dabei auch in Form eines Ausdrucks angegeben werden, z.B. <code>{x,y-2} - {x,y+2}</code> bzw. <code>x+I*(y-2) - (x+I*(y+2))</code>. Es können mehrere Vektorfelder zugleich angegeben werden.
 		<em>Wichtig:</em> Ein Ausdruck der Form <code>vect x, y</code> wird als zwei Vektorfelder mit den Darstellungen <code>vect {x, 0}, {y, 0}</code> interpretiert.
 		<code>vect</code> kennt drei zusätzliche Optionen:
 		<list>

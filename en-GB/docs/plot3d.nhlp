@@ -41,7 +41,7 @@
 		The syntax is identical to <code>plot</code> and there are (except of the third interval <code>[x1:x2,y1:y2,z1:z2]</code>, although not all intervals must be passed) only the following additional options:
 		<list>
 			<item node="t=t0:t1">Set the parameter interval to <expr>[t0,t1]</expr></item>
-			<item node="rotate=THETA,PHI">Rotate the view on the graph around the angles PHI and THETA. PHI rotates the graph around its <expr>z</expr> axis and THETA tilts it</item>
+			<item node="rotate=THETA,PHI">Rotate the view on the graph around the angles <expr>phi</expr> and <expr>theta</expr>. <expr>phi</expr> rotates the graph around its <expr>z</expr> axis and <expr>theta</expr> tilts it</item>
 			<item node="cut/nocut">Makes the both front octants (in-)visible so that the view to the center of the plot is possible</item>
 			<item node="marks=VALUE/nomarks">Draws circles of the size VALUE at the <expr>(x,y,z)</expr> coordinates, where the circles are filled according their <expr>z</expr> values using the current coloring scheme</item>
 			<item node="crust/nocrust">recontructs a 2D surface out of arbitrary distributed <expr>(x,y,z)</expr> points. The current coloring scheme will be used</item>
@@ -50,7 +50,7 @@
 			<item node="colormask/<br/>  nocolormask">Color the marks according a second function/data set. The colorscale probably must be resized with <code>colorrange=c1:c2</code>. Works only in combination with <code>marks=VALUE</code></item>
 			<item node="light[=TYPE]/<br/>  nolight">Set the 3D lighting effect on/off. The TYPE is an optional value: TYPE=smooth or TYPE=soft switch to a more smooth lighting</item>
 		</list>
-		The option <code>rotate</code> needs not necessary two angles. You may only pass the angle, which shall be changed with <code>rotate=THETA,</code> or <code>rotate=,PHI</code>, respectively. But note that the comma is essential for identifying the actual angle. The default angles are THETA=60 and PHI=115.
+		The option <code>rotate</code> needs not necessary two angles. You may only pass the angle, which shall be changed with <code>rotate=THETA,</code> or <code>rotate=,PHI</code>, respectively. But note that the comma is essential for identifying the actual angle. The default angles are <expr>theta = 60</expr> and <expr>phi = 115</expr>.
 		Additional you need at least 3 columns of data: <expr>x, y, z</expr> (If more are passed, NumeRe will automatically choose the first three).
 		If the parameter <code>errorbars</code> is active, NumeRe needs 6 columns in this order: <expr>x, y, z, delta_x, delta_y, delta_z</expr>
 		<example desc="Plotting of the columns 3-5 out of <code>data()</code> with the options <code>grid opng=data</code> and a tornado-like trajectory:" type="verbatim">

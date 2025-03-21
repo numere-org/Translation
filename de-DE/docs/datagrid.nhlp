@@ -17,7 +17,7 @@
 -->
 
 <article id="datagrid">
-	<title string="Datengitter für 2D-Plots" idxkey="datagrid" />
+	<title string="Datengitter" idxkey="datagrid" />
 	<keywords>
 		<keyword>datagr</keyword>
 		<keyword>datengit</keyword>
@@ -30,7 +30,7 @@
 			datagrid TABLE() -set x=TABX() y=TABY()
 			datagrid ... -set target=TABLE()
 		</syntax>
-		Wenn Daten in 2D-Plots (wie z.B. <code>surf</code> oder <code>mesh</code>) dargestellt werden sollen, müssen sie eine spezielle Form haben bzw. dürfen auch nicht als <expr>(x,y,z)</expr>-Werte vorliegen. 2D-Plots erwarten die Daten in Form eines <em>Datengitters</em>: <expr>x</expr>- und <expr>y</expr>-Werte als in den ersten zwei Spalten und die zugehörigen <expr>z</expr>-Werte als Matrix, die die Dimensionen der ersten beiden Spalten besitzt:
+		Wenn 2D-Daten verarbeitet werden sollen, müssen sie häufig als <em>Datengitter</em> vorliegen: <expr>x</expr>- und <expr>y</expr>-Werte als in den ersten zwei Spalten und die zugehörigen <expr>z</expr>-Werte als Matrix, die die Dimensionen der ersten beiden Spalten besitzt:
 		<verbatim>
 			\t\t\t- - - - - - - - y - - - - - - &gt;
 			/  x1  y1  z(x1,y1)  z(x1,y2)  ...  z(x1,ym)  \  |

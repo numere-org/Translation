@@ -27,10 +27,10 @@
 			{VAL} = eval f(x) -set [x1:x2] ...
 			{VAL} = eval f(x) -set [x1:x2] samples=SAMPLES ...
 		</syntax>
-		NumeRe may calculate a desired number of linear distributed samples of an expression using the command <code>eval</code> and save them directly to a table. The expression, which shall be evaluated, the variable for caclulating the samples, its left and right interval border and--if necessary--the numbers of samples have to be passed to the command in the following manner:<codeblock>eval EXPRESSION -set VAR=POS1:POS2 samples=SAMPLES</codeblock>If [POS1:POS2] is passed instead of VAR=POS1:POS2, then NumeRe will automatically use <expr>x</expr> as variable.
+		NumeRe may calculate a desired number of linear distributed samples of an expression using the command <code>eval</code> and save them directly to a table. The expression, which shall be evaluated, the variable for caclulating the samples, its left and right interval border and--if necessary--the numbers of samples have to be passed to the command in the following manner:<codeblock>eval EXPRESSION -set VAR=POS1:POS2 samples=SAMPLES</codeblock>If <code>[POS1:POS2]</code> is passed instead of <code>VAR=POS1:POS2</code>, then NumeRe will automatically use <code>x</code> as variable.
 		If no variable is passed, then NumeRe will interpret the expression as constant and will repeatedly return the expression corresponding to the number of samples.
 		If the number of samples is not passed, then NumeRe will automatically use 100 samples.
-		If the expression is not passed, then NumeRe will use the variable VAR as expression.
+		If the expression is not passed, then NumeRe will use the variable <code>VAR</code> as expression.
 		To obtain a logarithmic distribution of samples, you may use the parameter <code>-logscale</code>.
 		<example desc="Calculation of 200 samples out of <expr>sin(x)</expr> over the interval <expr>0</expr> to <expr>2PI</expr> and saving them to a table:">
 			table(:,1) = eval sin(x) -set x=0:_2pi samples=200

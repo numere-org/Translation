@@ -41,7 +41,7 @@
 		Die Syntax ist identisch zu <code>plot</code> und es gibt (außer des dritten Intervalls, also <code>[x1:x2,y1:y2,z1:z2]</code>, wobei auch hier nicht alle Intervalle angegeben werden müssen) nur die folgenden zusätzlichen Optionen:
 		<list>
 			<item node="t=t0:t1">Parameterintervall auf <expr>[t0,t1]</expr> setzen</item>
-			<item node="rotate=THETA,PHI">Die Ansicht des Graphen um die Winkel PHI und THETA drehen. PHI dreht den Graphen um die z-Achse und THETA kippt ihn</item>
+			<item node="rotate=THETA,PHI">Die Ansicht des Graphen um die Winkel <expr>phi</expr> und <expr>theta</expr> drehen. <expr>phi</expr> dreht den Graphen um die <expr>z</expr>-Achse und <expr>theta</expr> kippt ihn</item>
 			<item node="cut/nocut">Blendet die beiden nach vorne gewandten Oktanten aus/ein, so dass das Zentrum des dargestellten Plots betrachtet werden kann</item>
 			<item node="marks=WERT/nomarks">Zeichnet Kreise der Größe WERT an den <expr>(x,y,z)</expr>-Koordinaten, wobei die Kreise anhand des Farbschemas entsprechend ihres <expr>z</expr>-Werts gefüllt sind</item>
 			<item node="crust/nocrust">Rekonstruiert eine 2D-Oberfläche aus beliebig verteilten <expr>(x,y,z)</expr>-Punkten. Es wird das aktuelle Farbschema verwendet</item>
@@ -50,7 +50,7 @@
 			<item node="colormask/<br/>  nocolormask">Die Marker entsprechend eines zweiten Datensatzes/Funktion färben. Die Farbskala muss ggf. mittels <code>colorrange=c1:c2</code> angepasst werden. Nur in Verbindung mit <code>marks=WERT</code></item>
 			<item node="light[=TYP]/<br/>  nolight">plastischen 3D-Lichteffekt aus-/einschalten. TYP ist optional: TYP=smooth oder TYP=soft schalten auf weicheres Licht um</item>
 		</list>
-		Die Option <code>rotate</code> benötigt nicht zwingend zwei Winkel. Es kann auch nur der zu ändernde Winkel mittels <code>rotate=THETA,</code> bzw. <code>rotate=,PHI</code> angegeben werden. Das Komma ist dabei allerdings essentiell. Die Standardwinkel sind THETA=60 und PHI=115.
+		Die Option <code>rotate</code> benötigt nicht zwingend zwei Winkel. Es kann auch nur der zu ändernde Winkel mittels <code>rotate=THETA,</code> bzw. <code>rotate=,PHI</code> angegeben werden. Das Komma ist dabei allerdings essentiell. Die Standardwinkel sind <expr>theta = 60</expr> und <expr>phi = 115</expr>.
 		Zu beachten ist außerdem, dass mindestens 3 Spalten mit Daten gegeben werden: <expr>x, y, z</expr> (Werden mehr angegeben, so wählt NumeRe automatisch die ersten drei)
 		Ist der Parameter <code>errorbars</code> aktiv, so benötigt NumeRe 6 Spalten in der Reihenfolge: <expr>x, y, z, delta_x, delta_y, delta_z</expr>
 		<example desc="Plotten der Spalten 3-5 aus <code>data()</code> mit den Optionen <code>grid opng=data</code> und einer tornadoähnlichen Bahnkurve:" type="verbatim">

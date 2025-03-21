@@ -37,7 +37,7 @@
 			vect ... -set ...
 		</syntax>
 		The command <code>vect</code> allows the visualization of two dimensional vector fields<exprblock>A(x,y) := A_x(x,y) e_x + A_y(x,y) e_y</exprblock>in the two spatial directions <expr>x</expr> and <expr>y</expr> or a complex-valued vector field<exprblock>A(x,y) := A_(re)(x,y) + i A_(im)(x,y)</exprblock>
-		The vector field <expr>A(x,y)</expr> has to be passed in the form <code>{Ax(x,y), Ay(x,y)}</code> or <code>Ax(x,y)+I*Ay(x,y)</code> or as a complex-valued <a href="nhlp://datagrid?frame=new">data grid</a>. Here are <expr>A_x</expr> and <expr>A_y</expr> functions of the spatial directions <expr>x</expr> and <expr>y</expr>. A vector field can also be defined via an expression, e.g. <code>{x,y-2} - {x,y+2}</code> or <code>x+I*(y-2) - x+I*(y+2)</code>, respectively. It is possible, to pass multiple vector fields at once.
+		The vector field <expr>A(x,y)</expr> has to be passed in the form <code>{Ax(x,y), Ay(x,y)}</code> or <code>Ax(x,y)+I*Ay(x,y)</code> or as a complex-valued <a href="nhlp://datagrid?frame=new">data grid</a>. Here are <expr>A_x</expr> and <expr>A_y</expr> functions of the spatial directions <expr>x</expr> and <expr>y</expr>. A vector field can also be defined via an expression, e.g. <code>{x,y-2} - {x,y+2}</code> or <code>x+I*(y-2) - (x+I*(y+2))</code>, respectively. It is possible, to pass multiple vector fields at once.
 		<em>Important:</em> an expression like <code>vect x, y</code> will be interpreted as two vector fields with the representations <code>vect {x, 0}, {y, 0}</code>.
 		<code>vect</code> knows three additional options:
 		<list>

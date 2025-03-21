@@ -25,15 +25,15 @@
 	</keywords>
 	<contents>
 		<syntax>
-			compose -multiplot=LINES,COLS
+			compose -multiplot=ROWS,COLS
 			\tsubplot ... -set ...
 			\tPLOT1 ...
 			\t[...]
 			endcompose
 		</syntax>
-		Der <code>compose</code>-Modus kann verwendet werden, um mehrere untergeordnete oder logisch zusammenhängende Plots in einer gemeinsamen Datei anzuordnen und zusammenzufassen. Hierzu sind zwei weitere Syntaxelemente nötig: der Parameter <code>multiplot=LINES,COLS</code> generiert das Gitter in der Datei und das Kommando <code>subplot</code> generiert einen neuen untergeordneten Plot in dem erzeugten Gitter:
+		Der <code>compose</code>-Modus kann verwendet werden, um mehrere untergeordnete oder logisch zusammenhängende Plots in einem gemeinsamen Plot anzuordnen und zusammenzufassen. Hierzu sind zwei weitere Syntaxelemente nötig: der Parameter <code>multiplot=ROWS,COLS</code> generiert das Gitter im Plot und das Kommando <code>subplot</code> generiert einen neuen untergeordneten Plot in dem erzeugten Gitter:
 		<codeblock>
-			compose -multiplot=LINES,COLS
+			compose -multiplot=ROWS,COLS
 			\tsubplot
 			\tplot [...]
 			\tsubplot
@@ -41,7 +41,7 @@
 			\t[...]
 			endcompose
 		</codeblock>
-		Das Kommando <code>subplot</code> ist zu weiteren Besonderheiten in der Lage: für einen Unterplot können entweder die Gitterkoordinaten direkt (<code>subplot LINE,COL</code>) oder logisch (<code>subplot PLOTNo.</code>) vorgegeben werden. Die "PLOTNo." ist dabei zeilenweise durchnummeriert und beginnt bei 1 (Gitterkoordinaten in Klammern):
+		Das Kommando <code>subplot</code> ist zu weiteren Besonderheiten in der Lage: für einen Unterplot können entweder die Gitterkoordinaten direkt (<code>subplot ROW,COL</code>) oder logisch (<code>subplot PLOTNo.</code>) vorgegeben werden. Die "PLOTNo." ist dabei zeilenweise durchnummeriert und beginnt bei 1 (Gitterkoordinaten in Klammern):
 		<verbatim>
 			|-----------------------------------------------------|
 			|         1 (1,1) |         2 (1,2) | ... |   n (1,n) |
@@ -50,7 +50,7 @@
 			| n*(m-1)+1 (m,1) | n*(m-1)+2 (m,2) | ... | m*n (m,n) |
 			|-----------------------------------------------------|
 		</verbatim>
-		Unterplots können sich auch über mehrere Gitterzellen erstrecken, falls sie z.B. größer, höher oder breiter als die anderen Teilplots sein sollen. Für derartige Unterplots muss <code>subplot</code> der Parameter <code>set</code> gefolgt von den Optionen <code>lines=LINES</code> bzw. <code>cols=COLS</code> übergeben werden (es sind nur dann beide Optionen nötig, wenn der Plot sich über mehrere Spalten <em>und</em> Zeilen erstrecken soll):<codeblock>subplot -set cols=COLS lines=LINES</codeblock>Dabei ist u.A. darauf zu achten, dass der Plot ab der gewünschten Zelle auch Platz in dem erzeugten Gitter findet. Die gewünschte Position kann ebenso vorgegeben werden und wird durch die erste enthaltene Zelle links oben bestimmt.
+		Unterplots können sich auch über mehrere Gitterzellen erstrecken, falls sie z.B. größer, höher oder breiter als die anderen Teilplots sein sollen. Für derartige Unterplots muss <code>subplot</code> der Parameter <code>set</code> gefolgt von den Optionen <code>rows=ROWS</code> bzw. <code>cols=COLS</code> übergeben werden (es sind nur dann beide Optionen nötig, wenn der Plot sich über mehrere Spalten <em>und</em> Zeilen erstrecken soll):<codeblock>subplot -set cols=COLS rows=ROWS</codeblock>Dabei ist u.A. darauf zu achten, dass der Plot ab der gewünschten Zelle auch Platz in dem erzeugten Gitter findet. Die gewünschte Position kann ebenso vorgegeben werden und wird durch die erste enthaltene Zelle links oben bestimmt.
 		<em>Hinweis:</em> Soll der Rand um die jeweiligen Plots eines <code>multiplot</code>-Feldes mit <a href="nhlp://margin?frame=new"><code>margin=MARGIN</code></a> modifiziert werden, so <em>muss</em> diese Option direkt an das jeweils vorangehende Kommando <code>subplot ... -set margin=MARGIN ...</code> angehängt werden.
 		<example desc="Drei Plots in einem 2x2-Gitter, wobei der letzte sich über zwei Spalten erstrecken soll:" type="codeblock">
 			compose -multiplot=2,2

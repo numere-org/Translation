@@ -23,14 +23,17 @@
 		<keyword>input</keyword>
 	</keywords>
 	<contents>
-		NumeRe is designed to evaluate every entered expression ("inquiry") and print its result as "answer" in the next line, if the inquiry was not closed with a semicolon <code>;</code> (this suppresses the printing but not the evaluation). The result will be, if it has a numerical value, assigned automatically to the variable <code>ans</code>.
-		NumeRe expects either mathematical-numerical or logical evaluationable expressions or even strings (which shall be surrounded with qoutation marks) as input. If NumeRe cannot parse a given expression, it will return a corresponding error message.
+		NumeRe always evaluates individual expressions line by line. Several expressions can also be entered in a common line, separated by commas. The result(s) are output in the terminal unless the expression(s) is/are terminated by a semicolon <code>;</code> (this suppresses the output but not the evaluation). Several lines can also be separated by a semicolon. The result is automatically assigned to the variable <code>ans</code>. Valid combinations are thus (optional characters in square brackets; the individual characters <code>X, Y, ...</code> stand for complete expressions)
+		<codeblock>
+			X[, Y, Z, ...][;]
+			X[, Y, Z, ...]; A[, B, C, ...][;]
+		</codeblock>
+		If NumeRe cannot parse the given expression(s), it will return a corresponding error message.
 		The expression syntax orientates itself to the common programming languages (C/C++), as well as to the mathematics itself.
 		Definitions of variables and the assignment of their values will be done with the variables name followed by <code>=</code> and their desired value. Even the result of an expression may be assigned to a variable as a numerical value.
-		Numerical values may only be assigned to numerical, strings only to string variables. A conversion of the variables type is not possible (however, the conversion of their values is, if you use <code>#NUMVAR</code> and <code>to_value(STRINGVAR)</code>).
+		Numerical values may only be assigned to numerical, strings only to string variables. A conversion of the variables type is not possible (however, the conversion of their values is, if you use <code>#NUMVAR</code>, <code>to_value(STRINGVAR)</code>, and further functions). To manage lists of mixed or hierarchical values or tabular data, you can use <a href="nhlp://cluster?frame=new">clusters</a> or <a href="nhlp://table?frame=new">tables</a>.
 		You may use arbitrary combinations of upper- and lowercase letters and the underscore <code>_</code> to create the variables' names. You may use numbers as well, but the first character of a variable's name may not be a number.
-		NumeRe owns a large set of predefined constants, which may be listed with the command <code>list -const</code> (including their physical units, if applicable). All constants have in common that their first letter is an underscore.
-		The set of predefined functions is even larger and may be displayed by invoking <code>list -func</code>.
+		NumeRe owns a large set of predefined constants, which may be listed with the command <code>list const</code> (including their physical units, if applicable). Unit conversions are found at <code>list units</code> and the set of predefined functions may be displayed by invoking <code>list func</code>.
 		<example desc="Assignment of <expr>cos(PI)</expr> to the variable <expr>x</expr> and 'Hello World' to Sentence:">
 			x = cos(_pi)
 			ans = -1

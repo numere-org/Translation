@@ -27,9 +27,9 @@
 			{VAL} = eval f(x) -set [x1:x2] ...
 			{VAL} = eval f(x) -set [x1:x2] samples=SAMPLES ...
 		</syntax>
-		NumeRe kann eine gewünschte Zahl an linear verteilten Stützstellen eines Ausdrucks mithilfe des Kommandos <code>eval</code> berechnen und direkt in eine Tabelle speichern. Dazu muss diesem Kommando der auszuwertende Ausdruck, die Variable, bezüglich welcher die Stützstellen berechnet werden sollen, deren linke und rechte Intervallgrenzen und ggf. die Zahl der Stützstellen übergeben werden:<codeblock>eval AUSDRUCK -set VAR=POS1:POS2 samples=STÜTZSTELLEN</codeblock>Wenn statt VAR=POS1:POS2 nur [POS1:POS2] angegeben wird, verwendet NumeRe automatisch <expr>x</expr> als Variable.
+		NumeRe kann eine gewünschte Zahl an linear verteilten Stützstellen eines Ausdrucks mithilfe des Kommandos <code>eval</code> berechnen und direkt in eine Tabelle speichern. Dazu muss diesem Kommando der auszuwertende Ausdruck, die Variable, bezüglich welcher die Stützstellen berechnet werden sollen, deren linke und rechte Intervallgrenzen und ggf. die Zahl der Stützstellen übergeben werden:<codeblock>eval AUSDRUCK -set VAR=POS1:POS2 samples=STÜTZSTELLEN</codeblock>Wenn statt <code>VAR=POS1:POS2</code> nur <code>[POS1:POS2]</code> angegeben wird, verwendet NumeRe automatisch <code>x</code> als Variable.
 		Wird keine Variable angegeben, wird der Ausdruck als Konstant angenommen und entsprechend der Zahl der Samples wiederholt zurückgegeben.
-		Wenn die Zahl der Stützstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable VAR als Ausdruck.
+		Wenn die Zahl der Stützstellen nicht bestimmt wird, verwendet NumeRe automatisch 100 Samples. Wenn des Weiteren kein Ausdruck angegeben wird, verwendet NumeRe die Variable <code>VAR</code> als Ausdruck.
 		Um eine logarithmische Verteilung der Stützstellen zu bekommen, kann der Parameter <code>-logscale</code> verwendet werden.
 		<example desc="Berechnen von 200 Stützstellen eines <expr>sin(x)</expr> von <expr>0</expr> bis <expr>2PI</expr> und Speichern dieser Stützstellen in eine Tabelle:">
 			table(:,1) = eval sin(x) -set x=0:_2pi samples=200

@@ -27,7 +27,7 @@
 			vect3d {Ax(x,y,z), Ay(x,y,z), Az(x,y,z)}
 			vect3d {Ax(x,y,z), Ay(x,y,z), Az(x,y,z)} -set ...
 		</syntax>
-		Das Kommando <code>vect3d</code> erlaubt die Darstellung eines dreidimensionalen Vektorfeldes<exprblock>A(x,y,z) := A_x(x,y,z) e_x + A_y(x,y,z) e_y + A_z(x,y,z) e_z</exprblock>in allen drei Raumrichtungen. Wie bei der zweidimensionalen Variante <code>vect</code> kann dabei nur ein Vektorfeld je Plot angezeigt werden.
+		Das Kommando <code>vect3d</code> erlaubt die Darstellung eines dreidimensionalen Vektorfeldes<exprblock>A(x,y,z) := A_x(x,y,z) e_x + A_y(x,y,z) e_y + A_z(x,y,z) e_z</exprblock>in allen drei Raumrichtungen. Es kann dabei nur ein Vektorfeld je Plot angezeigt werden.
 		Das Vektorfeld <expr>A(x,y,z)</expr> muss dabei in der Form <code>{Ax(x,y,z), Ay(x,y,z), Az(x,y,z)}</code> eingegeben werden, wobei <expr>A_x, A_y</expr> und <expr>A_z</expr> Funktionen der drei Raumrichtungen sind. Ein Vektorfeld kann dabei auch in Form eines Ausdrucks angegeben werden, z.B. <code>{x,y-2,z} - {x,y+2,z}</code>. Es können mehrere Vektorfelder zugleich angegeben werden.
 		<em>Wichtig:</em> Ein Ausdruck der Form <code>vect3d x, y, z</code> wird als drei Vektorfelder mit den Darstellungen <code>vect3d {x, 0, 0}, {y, 0, 0}, {z, 0, 0}</code> interpretiert.
 		<code>vect3d</code> kennt drei zusätzliche Optionen: <code>flength</code>, <code>flow</code> und <code>pipe</code>. Ihre Auswirkungen entsprechen dem 2D-Fall und werden dort erläutert (siehe <a href="nhlp://vect?frame=new">help vect</a>). Zusätzlich werden bei <code>vect3d</code> die Anzahl der berechneten Stützstellen (samples) automatisch auf eine gerade Zahl reduziert.

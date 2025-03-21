@@ -401,7 +401,7 @@ PARSERFUNCS_LISTFUNC_FUNC_Y_[NUM_POLYNOMIAL]=				Y(l,m,fTheta,fPhi)             
 PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,fRho,fPhi)                                                      VAL      - Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der Stelle fRho im Intervall [0,1] unter dem Winkel fPhi im Intervall [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m=n)                                                           MAT      - Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist. Wenn nur ein Argument angegeben wird, wird eine symmetrische Matrix erzeugt.
 PARSERFUNCS_LISTFUNC_FUNC_ZETA_[NUM]=						zeta(x)                                                               VAL      - Berechnet den Wert der Riemann'schen Zetafunktion an der Stelle x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {1}
-PARSERFUNCS_LISTFUNC_TABLEHEAD=								Funktion:                                                             Typ:     Ausgabe:
+PARSERFUNCS_LISTFUNC_TABLEHEAD=								Funktion:                                                             Typ:     Beschreibung:
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=Der Schlüssel %%1%% konnte von der Funktion getkeyval() nicht in der angegeben Liste gefunden werden.
 PARSERFUNCS_LISTFUNC_FOOTNOTE1=Der Typ des Rückgabewertes wird schematisch durch VAL = numerischer Wert, TIM = Zeitwert, STR = Zeichenkette, LOG = Logikwert (true oder false), MAT = Matrix, VEC = Vektor und ARG = Typ der Argumente angegeben. Rückgabewerte in geschweiften Klammern indizieren, dass die Funktion mehrere Werte zurück gibt; leere Klammern indizieren, dass die Funktion keinen Wert zurückgibt.
@@ -1041,6 +1041,7 @@ GUI_EDITOR_CALLTIP_OPT_OTEX=otex=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%
 GUI_EDITOR_CALLTIP_OPT_OTIF=otif=FILENAME [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_OVERRIDE=mode=override [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
 GUI_EDITOR_CALLTIP_OPT_OVERWRITE=mode=overwrite [%%GUI_EDITOR_CALLTIP_COMMON_FILEWRITE%%]
+GUI_EDITOR_CALLTIP_OPT_PACKAGES=packages
 GUI_EDITOR_CALLTIP_OPT_PAGELLA=pagella [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMETRIC=coords=parametric [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_PARAMS=params=[PARAMS]
@@ -1095,6 +1096,7 @@ GUI_EDITOR_CALLTIP_OPT_RK8PD=method=rk8pd [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR
 GUI_EDITOR_CALLTIP_OPT_RKCK=method=rkck [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
 GUI_EDITOR_CALLTIP_OPT_RKF45=method=rkf45 [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% odesolve]
 GUI_EDITOR_CALLTIP_OPT_ROTATE=rotate=THETA,PHI [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
+GUI_EDITOR_CALLTIP_OPT_ROWS=rows[=VAL]
 GUI_EDITOR_CALLTIP_OPT_RYG=colorscheme=ryg [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SAMPLES=samples=VAL
 GUI_EDITOR_CALLTIP_OPT_SAVEPATH=savepath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
@@ -1107,7 +1109,6 @@ GUI_EDITOR_CALLTIP_OPT_SCOTT=method=scott [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR
 GUI_EDITOR_CALLTIP_OPT_SCRIPTPATH=scriptpath[=PATH] [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_SELECTION=selection[={POS}] [%%GUI_EDITOR_CALLTIP_COMMON_GUI%%]
 GUI_EDITOR_CALLTIP_OPT_SELECTIONDIALOG=type=selectiondialog [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
-GUI_EDITOR_CALLTIP_OPT_SETTINGS=settings
 GUI_EDITOR_CALLTIP_OPT_SHAPE=shape=VAL [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% random]
 GUI_EDITOR_CALLTIP_OPT_SILENT=silent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_SIMPSON=method=simpson [%%GUI_EDITOR_CALLTIP_COMMON_METHODFOR%% integrate]

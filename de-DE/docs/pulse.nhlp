@@ -35,8 +35,8 @@
 			<item node="Breite des Pulses">Die Breite des gesamten Pulses</item>
 			<item node="Energie im ersten Puls">Die bestimmte Energie, die in diesem Puls transportiert wird</item>
 		</list>
-		Das Kommando <code>pulse</code> gibt die bestimmten Werte direkt zurück. Sie können an Datenobjekte oder temporäre Spalten zugewiesen werden.
-		<example desc="Bestimmung der Puls-Eigenschaften der Daten in einer Tabelle und Zuweisen der Ergebnisse an eine temporäre Spalte:">
+		Das Kommando <code>pulse</code> gibt die bestimmten Werte direkt zurück. Sie können an Datenobjekte oder Variablen zugewiesen werden.
+		<example desc="Bestimmung der Puls-Eigenschaften der Daten in einer Tabelle und Zuweisen der Ergebnisse an einen Variablen-Vektor:">
 			{maxAmpl, x0, fwhm, width, energy} = pulse table(:,1:2)
 		</example>
 		<em>Tipp:</em> Die Puls-Analyse kann auch für die Analyse von statistischen Verteilungen verwendet werden.

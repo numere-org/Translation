@@ -38,7 +38,7 @@
 		</list>
 		Additionally, code metrics like the cyclomatic complexity will be applied. 
 		<list>
-			<item node="Cyclomatic complexity">This metric measures the number of independent paths, which the control flow in a module may take, what is identical to the number of <code>if</code>, <code>elseif</code>, <code>for</code> and <code>while</code> statements in addition to the number of the functions <code>and()</code>, <code>or()</code> and <code>xor()</code> as well as the number of the operators <code>&&</code>, <code>||</code> and <code>|||</code> + 1. A Note is displayed for a complexity higher 15 and a warning, if the complexity is higher than 20</item>
+			<item node="Cyclomatic complexity">This metric measures the number of independent paths, which the control flow in a module may take, what is identical to the number of <code>if</code>, <code>elseif</code>, <code>case</code>, <code>for</code> and <code>while</code> statements in addition to the number of the functions <code>and()</code>, <code>or()</code> and <code>xor()</code> as well as the number of the operators <code>&&</code>, <code>||</code> and <code>|||</code> + 1. A Note is displayed for a complexity higher 15 and a warning, if the complexity is higher than 20</item>
 			<item node="Lines of code">This is the number of lines, which are non-empty and which are not only containing comments, what is equal to the lines containing the actual commands and expressions</item>
 			<item node="Comment density">The comment density results out of the divison of the number of lines, which contain comments (multiple comments in a line will be considered), through the lines of code (see above). Good commented code has a comment density between 60 - 150 %</item>
 		</list>

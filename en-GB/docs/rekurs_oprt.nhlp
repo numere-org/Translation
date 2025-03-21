@@ -43,7 +43,7 @@
 				<td>Subtraction</td><td><code>A - B</code></td><td><code>A -= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Multiplication</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td></td>
+				<td>Multiplication</td><td><code>A * B</code></td><td><code>A *= B</code></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Division</td><td><code>A / B</code></td><td><code>A /= B</code></td><td>&#x2713;</td><td></td>
@@ -67,16 +67,16 @@
 				<td>Double factorial</td><td><code>A!!</code></td><td></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
-				<td>Logical NOT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logical NOT</td><td><code>!A</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logical AND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logical AND</td><td><code>A && B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Logical OR</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logical OR</td><td><code>A || B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>		
 			<tr>
-				<td>Logical XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td></td>
+				<td>Logical XOR</td><td><code>A ||| B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Binary AND</td><td><code>A & B</code></td><td></td><td>&#x2713;</td><td></td>

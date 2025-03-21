@@ -28,8 +28,8 @@
 		<keyword>pattern</keyword>
 	</keywords>
 	<contents>
-		Invoking the command <code>list -files</code> will tell NumeRe to start the integrated file explorer. If the command is passed without any parameters, then the file explorer will list all files in the default directories (see <code>list -settings</code> for the corresponding list).
-		This list may be restricted further: if the additional option <code>dir</code> is passed, then only the found subdirectories will be listed. In addition you may restrict the explorer to a specific directory, if the parameter <code>-files</code> gets the path as a value according to <code>-files=PATH</code>. It will only list files and folders found at the specified directory.
+		Invoking the command <code>list files</code> will tell NumeRe to start the integrated file explorer. If the command is passed without any parameters, then the file explorer will list all files in the default directories.
+		This list may be restricted further: if the additional option <code>dir</code> is passed, then only the found subdirectories will be listed. In addition you may restrict the explorer to a specific directory, if the parameter <code>files</code> gets the path as a value according to <code>files=PATH</code>. It will only list files and folders found at the specified directory.
 		You may pass the PATH as an absolute or a relative path (out of the default directories). It doesn't make any difference, if the directories in PATH are separated with <code>/</code> or <code>\</code>. If the PATH shall contain whitespaces, then the whole PATH has to be surrounded by quotation marks.
 		The NumeRe default folders are represented using the following path placeholders:
 		<list>
@@ -43,9 +43,9 @@
 		</list>
 		The file explorer is capable to filter files/directories according to a passed pattern. This can be achieved by using the corresponding option <code>pattern=PATTERN</code> (or <code>p=PATTERN</code>, respectively). The wildcards <code>*</code> and <code>?</code> may be used in this pattern. Note: <code>*</code> represents an arbitrary number of arbitrary characters, <code>?</code> represents exactly one arbitrary character. If the PATTERN shall contain whitespaces, then it has to be passed surrounded with quotation marks.
 		<example desc="Listing of all files in the default directories, which end with '.dat', and listing of all all directories in the NumeRe root directory:">
-			list -files pattern=*.dat
+			list files pattern=*.dat
 			[...]
-			list -files=&lt;&gt; dir
+			list files=&lt;&gt; dir
 		</example>
 	</contents>
 </article>

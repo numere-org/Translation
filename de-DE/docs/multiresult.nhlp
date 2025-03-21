@@ -26,16 +26,23 @@
 		<keyword>{</keyword>
 	</keywords>
 	<contents>
-		NumeRe kann <em>mehrere Werte zugleich</em> berechnen, indem die zu bestimmenden Ausdrücke durch Kommata getrennt eingegeben werden. Dies kann in vielen Fällen ausreichen, jedoch kann es mühsam sein, einen nahezu identischen Ausdruck, der sich nur an ein paar wenigen Stellen ändert, ein paar Mal fehlerfrei einzugeben.
-		Eine Verbesserung bietet die <em>NumeRe-Vektorsyntax</em>. Hierbei muss der für alle Rechnungen identische ("skalare") Ausdruck einfach eingegeben werden, wobei die sich ändernden Elemente in geschweiften Klammern stehen müssen:<codeblock>AUSDRUCK {ELEMENT_1, ELEMENT_2, ...} AUSDRUCK ...</codeblock>
-		Es besteht nahezu keine Limitierung im Typ der Elemente. Dies können sowohl Zahlen als auch ganze Ausdrücke sein, jedoch weder erneute geschweifte Klammern noch Datenobjekte.
-		Wenn in einem Ausdruck mehrere solcher Klammern verwendet werden, aber die Anzahl derer Elemente nicht übereinstimmt, werden die Anzahlen der "kürzeren" Klammern automatisch um die fehlenden Elemente ergänzt. Hierfür wird meist der Wert 0.0 gewählt, außer es befindet sich ein <code>/</code> unmittelbar links von der Klammer, was dann zu einer 1.0 ergänzt wird. Wenn stattdessen immer der Wert 1.0 gewünscht ist, müssen die kürzeren Klammern zusätzlich noch einmal mit gewöhnlichen Klammern umschlossen werden: <code>({ELEMENT_1, ELEMENT_2, ...})</code>. Es genügen auch die Klammern einer umschließenden Funktion.
-		Die Ergebnisse einer solchen Multiergebnisrechnung können natürlich auch direkt in eine Tabelle geschrieben werden:<codeblock>TABLE(I1:I2,J1:J2) = AUSDRUCK {ELEMENT_1, ELEMENT_2, ...} ...</codeblock>
-		Ebenso können durch die Spaltensyntax temporäre Spalten erzeugt werden, den ein oder mehrere Werte zugewiesen werden können:<codeblock>{ELEMENT_1, ELEMENT_2, ...} = AUSDRUCK {...}</codeblock>
-		<example desc="Mehrfachberechnung von den Werten <code>cos(n*PI) + n</code>, wobei <code>n = {1, 2, 3, 4, 5}</code> ist:">
-			cos({1,2,3,4,5}*_pi) + {1,2,3,4,5}
-			ans = [     0,     3,     2,     5,     4]
+		NumeRe kann <em>mehrere Ausdrücke zugleich</em> berechnen, indem diese durch Kommata getrennt eingegeben werden. Um dagegen einen <em>vektoriellen</em> Ausdruck zu berechnen müssen entweder die beteiligten Variablen oder Funktionen vektoriell sein (bzw. mehrere Elemente zurückgeben) oder skalare Werte müssen durch geschweifte Klammern in einen Vektor zusammengefasst werden, z.B. <code>{x, y, z, ...}</code>; die Werte <code>x, y, ...</code> können im letzteren Fall auch unterschiedliche Datentypen haben oder selbst Vektoren sein.
+		Die Operationen erfolgen dann komponentenweise. Werden in einem Ausdruck mehrere vektorielle Werte verwendet, deren Zahl der Elemente nicht identisch ist, so werden die fehlenden Elemente als "leere" Elemente ergänzt, d.h. im Allgemeinen werden sie virtuell durch <code>0</code> oder <code>""</code> ersetzt.
+		Das Ergebnis einer solchen vektoriellen Rechnung kann abhängig von den erhaltenen Ergebnisdatentypen der einzelnen Elemente unterschiedlichen Datenstrukturen zugewiesen werden:
+		<list>
+			<item node="*">Im Allgemeinen kann das Ergebnis entweder einem <a href="nhlp://cluster?frame=new">Cluster</a>, einer Zeile einer <a href="nhlp://table?frame=new">Tabelle</a> (sofern die Typen übereinstimmen) oder einem Vektor von Variablen mit den passenden Typen zugewiesen werden: <code>{v1,v2,...} = {...}</code></item>
+			<item node="*">Sind die Typen identisch, kann das Ergebnis <em>als weitere Option</em> einer Variable gleichen Typs zugewiesen werden, die dadurch vektoriell wird</item>
+		</list>
+		<example desc="Vektorielle Berechnung von den Werten <code>cos(n*PI) + n</code>, wobei <code>n = {1, 2, 3, 4, 5}</code> ist, sowie weitere einfache Beispiele von vektoriellen Zuweisungen:">
+			cos({1, 2, 3, 4, 5}*_pi) + {1, 2, 3, 4, 5}
+			ans = {      0,       3,       2,       5,       4}
+			fVect = {1:3}
+			ans = {      1,       2,       3}
+			sVect = {"Hello", "World"}
+			ans = {"Hello", "World"}
+			{f, s} = {42, "The answer"}
+			ans = {     42, "The...}
 		</example>
-		<em>Siehe auch:</em> <a href="nhlp://data?frame=self">help data</a> und <a href="nhlp://table?frame=self">help table</a>
+		<em>Siehe auch:</em> <a href="nhlp://operator?frame=self">help operator</a>, <a href="nhlp://cluster?frame=self">help cluster</a> und <a href="nhlp://table?frame=self">help table</a>
 	</contents>
 </article>
