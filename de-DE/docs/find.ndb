@@ -87,6 +87,7 @@ conj(z)~Gibt die komplex-konjugierte Zahl zur komplexen Zahl z zurück~conjugate
 cont3d~Erstellen eines 3D-Konturlinienplots~contour3d kontur niveau dreidimensional~help cont3d
 continue~Überspringt die restlichen Befehle einer FOR- oder WHILE-Schleife und setzt die Auswertung mit dem nächsten Durchlauf fort~ueberspringen überspringen for fortsetzen while~help continue
 cont~Erstellen eines Konturlinienplots~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
+convertunit(x,U,M)~Rechnet den Wert anhand der Einheit in das SI-Einheiten-System um~convertunit() SI measurement messung system convert konversion konvertieren units einheiten umrechnen~convertunit(
 coordstogrid(MAT,MAT)~Bildet die ein oder zwei Spalten der zweiten Matrix in den Gitterkoordinaten der ersten Matrix ab~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren coordstogrid()~coordstogrid(
 copy~Kopiert je nach Ausdruck Einträge/Spalten/Untertabellen zwischen Datenobjekten oder Dateien, siehe "help copy"~kopieren  tabellen dateien files~help copy
 correl(MAT,MAT)~Berechnet die Korrelationsmatrix aus den beiden Argumenten~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl() mustererkennung pattern recognition~correl(

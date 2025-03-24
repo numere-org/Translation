@@ -87,6 +87,7 @@ conj(z)~Returns the complex conjugated number of the passed complex number z~con
 cont3d~Generates a 3D contour line plot~contour3d kontur niveau dreidimensional~help cont3d
 continue~Jumps over the following commands of the current loop execution and starts the next execution~ueberspringen überspringen for fortsetzen while~help continue
 cont~Generates a contour line plot~contourlines kontur niveaulinien äquipotentiallinien aequipotentiallinien~help cont
+convertunit(x,U,M)~Converts the value using the unit into the SI units system~convertunit() SI measurement messung system convert konversion konvertieren units einheiten umrechnen~convertunit(
 coordstogrid(MAT,MAT)~Maps the one or two columns of the second matrix into the grid coordinates of the first matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren coordstogrid()~coordstogrid(
 copy~Copies (depending on the actual expression) entries/columns/subtables between data objects or complete files~kopieren  tabellen dateien files~help copy
 correl(MAT,MAT)~Calculates the correlation matrix of the both arguments~cross-correlation auto-correlation kreuzkorrelation autokorrelation correl() mustererkennung pattern recognition~correl(
