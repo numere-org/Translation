@@ -5,7 +5,13 @@
 				<keyword>%%KEYWORD%%</keyword>
 			</keywords>
 			<contents>
+				<!-- <syntax>
+					%%IDXKEY%%
+				</syntax> -->
 				(...)
+				<!-- <example desc="...">
+					(...)
+				</example> -->
 			</contents>
 		</article>
 	</helpfile>
