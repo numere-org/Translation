@@ -56,7 +56,6 @@
 	<contents>
 		Inside of the <code>matop</code> command, you may use the following additional functions:
 		<list>
-			<item node="and(MAT)">Applies the operator <code>&&</code> to the elements of the matrix MAT</item>
 			<item node="covar(MAT,MAT)">Calculates the covariance of the both arguments. The arguments must have equal dimensions</item>
 			<item node="correl(MAT,MAT)">Calculates the correlation matrix of the both arguments. If the arguments do not have equal dimensions, their rows and columns are padded with zeros. If both arguments are equal, the auto-correlation matrix is calculated. The resulting matrix does have the dimensions <expr>(2n-1, 2m-1)</expr>, whereas the element <code>MAT(n,m)</code> corresponds to the zero-shift correlation</item>
 			<item node="cross(MAT)">Calculates the <expr>n</expr> dimensional cross product (vector product) of the vectors, which form the <expr>n-1</expr> columns of the matrix MAT.</item>
@@ -75,7 +74,6 @@
 			<item node="matflf(X,Y,Z,...)">Creates a matrix out of the lines <code>X,Y,Z,...</code> If the number of elements is not sufficient for the maximal dimension, the missing ones will be <em>logically</em> generated out of the already present ones.</item>
 			<item node="normalize(MAT)">Normalizes the values in the matrix MAT to the range <expr>[-1,1]</expr> (the values in the matrix are divided through their absolute maximal value).</item>
 			<item node="one(n,m)">Creates a <expr>(n, m)</expr> matrix, which is filled with ones. If only one argument was passed, then a square matrix will be created.</item>
-			<item node="or(MAT)">Applies the operator <code>||</code> to the elements of the matrix MAT</item>
 			<item node="repmat(MAT,n,m)">Repeats the matrix MAT <expr>(n, m)</expr> times</item>
 			<item node="reshape(MAT,n,m)">Changes the shape of the matrix MAT to a <expr>(n, m)</expr> matrix. The number of elements in the old and the new matrix must match for this function. Reshaping is done linewise</item>
 			<item node="resize(MAT,n,m)">Changes the size of the matrix MAT to <expr>(n, m)</expr>. Missing lines and rows are appended using zeros</item>

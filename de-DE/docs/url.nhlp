@@ -41,10 +41,10 @@
 			nBYTES = url sURL -file=TARGETFILE
 			nBYTES = url sURL -file=SOURCEFILE up
 		</codeblock>
-		Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>ftp://ftp.server.url/filename.ext</code>
+		Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>"ftp://ftp.server.url/filename.ext"</code>
 		NumeRe verwendet TLS als Verschlüsselung, allerdings werden die übermittelten Zertifikate <em>nicht</em> validiert. Dieses Kommando eignet sich daher nicht zur Übermittlung sensibler Informationen.
 		Wenn auf der zugegriffenen Webseite JavaScript verwendet wird, so wird dieser Code <em>nicht</em> interpretiert. Hochdynamische Webseiten können demzufolge nur unvollständig heruntergeladen werden.
-		Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
+		Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>"ftp://USERNAME:PASSWORD@FTP.URL"</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
 		Für den Zugriff auf REST APIs ist es ggf. nötig, einen benutzerdefinierten HTTP-Header zu setzen. Mit <code>header={HTTP-HEADER}</code> können mehrere solcher Zeilen zugleich definiert werden. Falls etwas an die API übermittelt werden soll, kann dies an <code>payload=PAYLOAD</code> übergeben werden.
 		<example desc="Zugriff auf den 'macros'-Unterordner des CTAN FTPs und Anfrage an die GitHub-API zu den Meta-Daten der letzten NumeRe-Releases:">
 			url "ftp://ftp.fau.de/ctan/macros/"

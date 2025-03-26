@@ -27,8 +27,8 @@
 			VAL = ??
 			VAL = ??[DEFAULT]
 		</syntax>
-		Using the syntax <code>??</code> you mark a position inside of an expression, at which NumeRe will expect an input. With this possibility the input of a variable or a parameter may be shifted to a later time point. This is of special interest in the context of loops, forks and procedures.
-		If <code>[DEFAULT]</code> was appended to <code>??</code>, where DEFAULT may be a value or a whole expression, the input prompt gets an default value, which will be used, if the user doesn't pass an input.
+		Using the syntax <code>??</code> you mark a position inside of an expression, at which NumeRe will expect an input during execution. With this possibility the input of a variable or a parameter may be shifted to a later time point. This is of special interest in the context of loops, forks and procedures.
+		If <code>[DEFAULT]</code> was appended to <code>??</code>, where DEFAULT may be a value or a whole expression, the input prompt gets an default value, which will be used, if the user doesn't pass an input, i.e. the user presses the enter key without any further characters.
 		<example desc="Assignement of a variable value with the default value of 0.0:" type="verbatim">
 			|&lt;- x = ??[0.0]
 			|-??&gt; x = 

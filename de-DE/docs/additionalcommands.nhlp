@@ -45,10 +45,10 @@
 		Neben den eher Auswertungs-orientierten Kommandos beherrscht NumeRe	ein paar weitere Kommandos, die mehr der reinen Benutzerschnittstelle zugeordnet werden können. Das sind unter anderem die Kommandos <a href="nhlp://help?frame=new"><code>help</code></a> und <a href="nhlp://find?frame=new"><code>find</code></a>, sowie die folgenden Kommandos:
 		<list>
 			<item node="about">Dieses Kommando (und die Synonyme <code>credits</code> und <code>info</code>) zeigen rechtliche Informationen zu NumeRe und zur Version an.</item>
-			<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie in der Konsole. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
-			<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung in der Konsole an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
+			<item node="hline">Dieses Kommando zeichnet eine horizontale Doppellinie im Terminal. Wird der Parameter <code>-single</code> angehängt, wird eine einfache Linie gezeichnet.</item>
+			<item node="warn">Dieses Kommando zeigt die übergebene Zeichenkette als eine Warnung im Terminal an. Dies sollte nur für tatsächliche Warnungen verwendet werden, da die Warnungen sich auf die Laufzeit des Codes auswirken.</item>
 			<item node="close">Dieses Kommando schließt zuvor geöffnete Fenster, die durch Parameter mittels <code>close -PAR</code> ausgewählt werden: <code>-graphs</code> schließt alle Graphen, <code>-docs</code> alle Hilfe-Fenster, <code>-tables</code> alle Tabellen, <code>-images</code> alle ImageViewer und <code>-all</code> alle Fenster aus dieser Liste.</item>
-			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem Prozedur-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
+			<item node="assert">Das Kommando <code>assert EXPR</code> ist zur Verwendung in Software-Tests gedacht. Es prüft den Ausdruck <code>EXPR</code> auf logische Wahrheit und gibt ihn anschließend zurück. Ist der Ausdruck hingegen falsch, so wird ein Fehler geworfen. Damit kann eine Testbedingung komfortabel realisiert werden. In Kombination mit dem <a href="nhlp://procedure?frame=new">Prozedur</a>-Flag <code>test</code> können umfangreiche Software-Tests implementiert werden.</item>
 			<item node="clc">Dieses Kommando bereinigt das Terminal und setzt es auf den Anfangszustand zurück.</item>
 			<item node="qrcode">Erzeugt einen QR-Code mit dem Inhalt der übergebenen Zeichenkette. Der QR-Code wird als SVG unter <code>&lt;savepath&gt;/qrcode.svg</code> gespeichert, wenn kein dedizierter Dateiname mittels <code>file=FILENAME</code> angegeben wird. Mit der Option <code>color={R,G,B}</code> kann die Farbe des QR-Codes und mit <code>level=LEVEL</code> (0-3) das Level der Fehlerkorrektur definiert werden.</item>
 		</list>
@@ -69,7 +69,7 @@
 		</syntax>
 		Das Kommando <code>declare</code> deklariert eine oder mehrere Datei-spezifische Konstanten für das aktuelle Script oder die aktuelle Prozedurdatei. Die Syntax ist dabei wie folgt, wobei für die Werte sowohl numerische Werte als auch Zeichenketten oder ganze Ausdrücke verwendet werden können.
 		<codeblock>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</codeblock>
-		Zusätzlich können auch automatisch enumerierte Konstanten erzeugt werden. Dabei können zusätzlich zur automatischen Nummerierung auch ganzzahlige Konstanten oder vorherige Konstanten als Werte verwendet werden. Werte, die keine ganzzahlige Literalkonstanten sind, werden hierbei ignoriert. Entstehen dabei etwaige Offsets, so werden die übernommen und ab diesem Wert weitergezählt:
+		Zusätzlich können auch automatisch enumerierte Konstanten erzeugt werden. Dabei können zusätzlich zur automatischen Nummerierung, die mit dem Wert 1 startet, auch ganzzahlige Konstanten oder vorherige Konstanten als Werte verwendet werden. Werte, die keine ganzzahlige Literalkonstanten sind, werden hierbei ignoriert. Entstehen dabei etwaige Offsets, so werden die übernommen und ab diesem Wert weitergezählt:
 		<codeblock>
 			declare enum -&gt; {VAL1, VAL2, VAL3, ...}
 			declare enum -&gt; {VAL1 = 10, VAL2, VAL3 = VAL2, ...}

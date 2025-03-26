@@ -36,13 +36,13 @@
 			ifndefined f(x, ...) := EXPR(x, ...) -set ...\n
 			lclfunc f(x, ...) := EXPR(x, ...)
 		</syntax>
-		The command <code>define</code> allows you, to define your own, custom function for repeated calls in the current NumeRe session. However, the number of custom defined functions is limited to 100 definitions.
+		The command <code>define</code> allows you, to define your own, custom function for repeated calls in the current NumeRe session.
 		The definition has to begin with the function name, following the function arguments in parentheses. Currently, NumeRe supports up to ten arguments for each function or an arbitrary number of arguments with a special syntax, respectively. A function does not have to possess any arguments; empty argument parentheses are also possible. The function name must not contain any mathematical operators and its first character shall not be a number.
 		The syntax <code>:=</code> initiates the actual declaration of the expression of the function, in which you may pass additional options after the parameter <code>-set</code>:<codeblock>define FUNCTION(ARGUMENTS) := EXPRESSION(ARGUMENTS) [-set OPTIONS]</codeblock>
 		The following three options are available:
 		<list>
 			<item node="comment=COMMENT">Add a comment to your defined function. If your comment shall contain whitespaces, then surround it with quotation marks.</item>
-			<item node="asval=VARIABLES">Pass a set of variables, which shall be replaced by their values during function definition. Multiple variables have to be passed in braces</item>
+			<item node="asval={VARS}">Pass a set of variables, which shall be replaced by their values during function definition</item>
 			<item node="recursive">In combination with the command <code>redefine</code> a defined function may reference a to its previous version. The previous version will be replaced by this new version.</item>
 		</list>	
 		The defined function may be called after a successful definition with its name and (values for) its variables.
@@ -55,15 +55,15 @@
 		The command <code>lclfunc</code> defines the passed function for the current valid scopte. This may be either a <a href="nhlp://script?frame?new">script</a> or a <a href="nhlp://procedure?frame=new">procedure</a>. After NumeRe has left the current scope, the defined function is deleted automatically.
 		<code>define</code> understands three additional parameters:
 		<list>
-			<item node="-save">Saves the defined functions to the function definitions file (&lt;&gt;/functions.def). Updated definitions will be overwritten while saving. Definitions, which are not present in the file, will be appended.</item>
-			<item node="-load">Loads the functions from the function definitions file (&lt;&gt;/functions.def). The definitions in memory will be overwritten!</item>
+			<item node="-save">Saves the defined functions to the function definitions file (<code>&lt;&gt;/functions.def</code>). Updated definitions will be overwritten while saving. Definitions, which are not present in the file, will be appended.</item>
+			<item node="-load">Loads the functions from the function definitions file (<code>&lt;&gt;/functions.def</code>). The definitions in memory will be overwritten!</item>
 			<item node="-set">Initiates additional options (e.g. <code>comment=KOMMENTAR</code>)</item>
 		</list>
-		<example desc="Definition of the function <expr>func(x) = sqrt(exp(-x))</expr> with a comment and call of this function with the value <expr>x = 2.5</expr>:" type="verbatim">
-			|&lt;- define func(x) := sqrt(exp(-x)) -set comment="Model of the process"
-			|-&gt; Function "func" was defined successfully.
+		<example desc="Definition of the function <expr>fnc(x) = sqrt(exp(-x))</expr> with a comment and call of this function with the value <expr>x = 2.5</expr>:" type="verbatim">
+			|&lt;- define fnc(x) := sqrt(exp(-x)) -set comment="Model of the process"
+			|-&gt; Function "fnc" was defined successfully.
 			|
-			|&lt;- func(2.5)
+			|&lt;- fnc(2.5)
 			|-&gt; ans = 0.2865048
 		</example>
 		<em>See also:</em> <a href="nhlp://list?frame=self">help list</a>

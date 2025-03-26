@@ -29,11 +29,11 @@
 			{VAL} = diff f(x) set [x1:x2] ...
 			{VAL} = diff TABLE()
 		</syntax>
-		NumeRe can numerically differentiate one or more expressions up to the third order. This involves calculating the local slope of this expression with respect to a variable to be specified at a given point. Only the numerical value and no analytical result is determined.
+		NumeRe can numerically differentiate one or more expressions up to the <em>third order</em>. This involves calculating the local slope of this expression with respect to a variable to be specified at a given point. Only the numerical value and no analytical result is determined.
 		The command <code>diff</code> followed by the functions to be differentiated starts the numerical differentiation. The following options must be appended to the given function by <code>-set</code>:
 		<list>
-			<item node="VAR=POS">Specify the position POS at which the expression is to be differentiated with respect to the variable VAR. If POS is specified in the form of an interval, NumeRe determines the derivative in that interval for the number of interpolation points</item>
-			<item node="eps=PRECISION">Specify the precision with which the expression is to be differentiated. This specification is <em>optional</em></item>
+			<item node="VAR=POS">Specify the position <code>POS</code> at which the expression is to be differentiated with respect to the variable <code>VAR</code>. If <code>POS</code> is specified in the form of an interval, NumeRe determines the derivative in that interval for the number of interpolation points. <code>POS</code> may also be a vector of values</item>
+			<item node="eps=PRECISION">Specify the precision with which the expression is to be differentiated. This specification is <em>optional</em> and will be selected adaptively per default</item>
 			<item node="samples=SAMPLES">Specify the number of support points for interval differentiation, by default this is 100</item>
 			<item node="order=ORDER">Specify the order of derivation, by default this is 1. Has to be an <em>odd</em> number</item>
 			<item node="points=POINTS">Specify the number of points to be used by the method of Savitzky and Golay (see below). By default, this value is 5</item>
@@ -43,7 +43,7 @@
 		<example desc="Numerical differentiation of the function <expr>f(x) = x^2</expr> at the position <expr>x = 1</expr> with the precision <expr>epsilon = 10^(-6)</expr> and numerical differentiation of a data set:">
 			diff x^2 -set x=1 eps=1e-6
 			ans = 2
-			diff data(:,1:2)
+			diff data(:, 1:2)
 			ans = {0.99830036,  0.98812332,  0.96787298, ...}
 		</example>
 		<em>See also:</em> <a href="nhlp://taylor?frame=self">help taylor</a>

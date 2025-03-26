@@ -35,9 +35,9 @@
 		Die Funktionen <expr>f(x)</expr> bzw. <expr>f(x,y)</expr> sind direkt im Anschluss von <code>integrate</code> einzugeben. Dabei können auch mehrere Funktionen zugleich integriert werden, so lange ihre Integrationsgrenzen übereinstimmen. Verwendete Variablen (mit Ausnahme von <expr>x</expr> bzw. <expr>x</expr> und <expr>y</expr>) sind zuvor zu deklarieren.
 		Die Grenzen, die numerische Auflösung der Integration und das Integrationsverfahren müssen dem Kommando mittels dem Parameter <code>-set</code> als Option übergeben werden. Werden dabei nur Grenzen für <expr>x</expr> angegeben, wird eine 1D-Integration ausgeführt. Werden hingegen die Grenzen für <expr>x</expr> und <expr>y</expr> angegeben, wird eine 2D-Integration ausgeführt. Die Grenzen können dabei einzeln wie im Folgenden oder gemeinsam durch <code>[x0:x1,y0:y1]</code> übergeben werden.
 		<list>
-			<item node="x=WERT1:WERT2"><expr>x</expr>-Intervall auf [WERT1, WERT2] setzen</item>
-			<item node="y=WERT1:WERT2"><expr>y</expr>-Intervall auf [WERT1, WERT2] setzen</item>
-			<item node="precision=AUFLÖSUNG">Numerische Auflösung auf den Wert von AUFL setzen. Wird diese Option nicht angegeben, so wird der Standardwert von 1e-3 verwendet. <code>eps=AUFLÖSUNG</code> ist ein Alias zu dieser Option</item>
+			<item node="x=x0:x1"><expr>x</expr>-Intervall auf <expr>[x0, x1]</expr> setzen</item>
+			<item node="y=y0:y1"><expr>y</expr>-Intervall auf <expr>[y0, y1]</expr> setzen</item>
+			<item node="precision=AUFLÖSUNG">Numerische Auflösung auf den Wert von <code>AUFLÖSUNG</code> setzen. Wird diese Option nicht angegeben, so wird der Standardwert von 1e-3 verwendet. <code>eps=AUFLÖSUNG</code> ist ein Alias zu dieser Option</item>
 			<item node="method=METHODE">Numerisches Verfahren der Integration wählen. Zur Wahl stehen <code>trapezoidal</code> (Standard) für sehr glatte oder konstante und <code>simpson</code> für stark veränderliche Funktionen. <code>simpson</code> ist aufgrund der Tatsache, dass es sich um ein quadratisches Verfahren handelt, deutlich langsamer. Außerdem liefert es im Falle konstanter Funktionen eher schlechtere Ergebnisse als <code>trapezoidal</code></item>
 			<item node="steps=STEPS">Gibt statt der Präzision die Zahl der Unterteilungen des Integrationsintervalls an.</item>
 			<item node="points">Gibt die numerische Stammfunktion der ersten zu integrierenden Funktion als Datensatz zurück</item>

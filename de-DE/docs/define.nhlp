@@ -36,13 +36,13 @@
 			ifndefined f(x, ...) := EXPR(x, ...) -set ...\n
 			lclfunc f(x, ...) := EXPR(x, ...)
 		</syntax>
-		Das Kommando <code>define</code> erlaubt es, eigene Funktionen für den wiederholten Aufruf in einer laufenden NumeRe-Sitzung zu definieren. Dabei sind bis zu 100 Definitionen möglich.
+		Das Kommando <code>define</code> erlaubt es, eigene Funktionen für den wiederholten Aufruf in einer laufenden NumeRe-Sitzung zu definieren.
 		Die Definition muss mit dem Funktionsnamen, worauf die Funktionsargumente in Klammern direkt darauf angegeben werden müssen, begonnen werden. NumeRe unterstützt im Augenblick bis zu zehn Variablen je Funktion bzw. beliebig viele in Form einer speziellen Syntax. Eine Funktion muss jedoch nicht zwingend Argumente besitzen; auch leere Argumentklammern sind möglich. Der Funktionsname darf dabei keine mathematischen Operatoren enthalten und nicht mit einer Ziffer beginnen.
 		Die Syntax <code>:=</code> leitet dann die eigentliche Deklaration des Ausdrucks und der Funktion an sich ein, wobei mit dem Parameter <code>-set</code> zusätzliche Optionen angegeben werden können:<codeblock>define FUNKTION(ARGUMENTE) := AUSDRUCK(ARGUMENTE) [-set OPTIONEN]</codeblock>
 		Als Optionen stehen die folgenden drei zur Verfügung:
 		<list>
 			<item node="comment=KOMMENTAR">Einen zusätzlichen Kommentar zur Funktionsdefinition angeben. Ein Kommentar mit Leerzeichen muss von Anführungszeichen umschlossen sein.</item>
-			<item node="asval=VARIABLEN">Einen Satz an Variablen angeben, die während der Definition durch ihre Werte ersetzt werden sollen. Mehrere Variablen müssen in geschweiften Klammern angegeben werden</item>
+			<item node="asval={VARS}">Einen Satz an Variablen angeben, die während der Definition durch ihre Werte ersetzt werden sollen</item>
 			<item node="recursive">In Kombination mit dem Kommando <code>redefine</code> kann eine Funktion auf eine vorherige Version ihrer selbst verweisen. Die vorherige Version wird dabei durch die neue Definition ersetzt.</item>
 		</list>
 		Die definierte Funktion kann nach der erfolgreichen Definition durch Angabe des Variablennamens und (Werten für) die Variablen aufgerufen werden.
@@ -55,15 +55,15 @@
 		Das Kommando <code>lclfunc</code> definiert die anschließende Funktion für den aktuell gültigen Bereich. Das kann entweder ein <a href="nhlp://script?frame?new">Script</a> oder eine <a href="nhlp://procedure?frame=new">Prozedur</a> sein. Nach dem Verlassen dieses Bereiches wird die definierte Funktion automatisch gelöscht.
 		<code>define</code> versteht des Weiteren drei erweiterte Parameter:
 		<list>
-			<item node="-save">Definierte Funktionen in die Definitionsdatei (&lt;&gt;/functions.def) speichern. Während des Speichervorganges werden nur aktualisierte Definitionen überschrieben. Die noch nicht verhandenen Definitionen werden an die bestehenden angehängt.</item>
-			<item node="-load">Funktionen aus der Definitionsdatei (&lt;&gt;/functions.def) lesen. Definitionen im Speicher werden währenddessen überschrieben!</item>
+			<item node="-save">Definierte Funktionen in die Definitionsdatei (<code>&lt;&gt;/functions.def</code>) speichern. Während des Speichervorganges werden nur aktualisierte Definitionen überschrieben. Die noch nicht verhandenen Definitionen werden an die bestehenden angehängt.</item>
+			<item node="-load">Funktionen aus der Definitionsdatei (<code>&lt;&gt;/functions.def</code>) lesen. Definitionen im Speicher werden währenddessen überschrieben!</item>
 			<item node="-set">Leitet zusätzliche Optionen (wie z.B. <code>comment=KOMMENTAR</code>) ein</item>
 		</list>
-		<example desc="Definition der Funktion <expr>func(x) = sqrt(exp(-x))</expr> mit einem Kommentar und Aufruf mit dem Wert <expr>x = 2.5</expr>:" type="verbatim">
-			|&lt;- define func(x) := sqrt(exp(-x)) -set comment="Modell des Vorgangs"
-			|-&gt; Funktion "func" wurde erfolgreich definiert!
+		<example desc="Definition der Funktion <expr>fnc(x) = sqrt(exp(-x))</expr> mit einem Kommentar und Aufruf mit dem Wert <expr>x = 2.5</expr>:" type="verbatim">
+			|&lt;- define fnc(x) := sqrt(exp(-x)) -set comment="Modell des Vorgangs"
+			|-&gt; Funktion "fnc" wurde erfolgreich definiert!
 			|
-			|&lt;- func(2.5)
+			|&lt;- fnc(2.5)
 			|-&gt; ans = 0.2865048
 		</example>
 		<em>Siehe auch:</em> <a href="nhlp://list?frame=self">help list</a>

@@ -41,10 +41,10 @@
 			nBYTES = url sURL -file=TARGETFILE
 			nBYTES = url sURL -file=SOURCEFILE up
 		</codeblock>
-		The URL <code>sURL</code> must be specified as a string. The URL can be an ordinary web address; the protocol must be <code>http</code>, <code>https</code>, <code>ftp</code> or <code>sftp</code>. When uploading to an FTP server, the destination file must be included in the URL: <code>ftp://ftp.server.url/filename.ext</code>
+		The URL <code>sURL</code> must be specified as a string. The URL can be an ordinary web address; the protocol must be <code>http</code>, <code>https</code>, <code>ftp</code> or <code>sftp</code>. When uploading to an FTP server, the destination file must be included in the URL: <code>"ftp://ftp.server.url/filename.ext"</code>
 		NumeRe uses TLS as encryption, however the transmitted certificates are <em>not</em> validated. Therefore, this command is not suitable for transmitting sensitive information.
 		If JavaScript is used on the accessed web page, this code is <em>not</em> interpreted. As a result, highly dynamic web pages can only be downloaded incompletely.
-		A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>ftp://USERNAME:PASSWORD@FTP.URL</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
+		A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>"ftp://USERNAME:PASSWORD@FTP.URL"</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
 		To access REST APIs, it may be necessary to set a user-defined HTTP header. Several such lines can be defined simultaneously with <code>header={HTTP-HEADER}</code>. If something is to be transferred to the API, this can be passed to <code>payload=PAYLOAD</code>.
 		<example desc="Access the 'macros' subfolder of the CTAN FTP and requesting the GitHub API to return the metadata about the latest releases of NumeRe:">
 			url "ftp://ftp.fau.de/ctan/macros/"

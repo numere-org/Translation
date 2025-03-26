@@ -48,7 +48,7 @@
 			endswitch
 		</codeblock>
 		Wenn Kontrollfluss-Statements interaktiv in der NumeRe-Konsole verwendet werden, dann wechselt die Konsole in einen speziellen Modus, der durch ein Schlüsselwort am Anfang der Zeile verdeutlicht wird. Alle nun eingegebenen Ausdrücke werden als Teil des Kontrollfluss-Statements verwendet. Sobald das äußerste Kontrollfluss-Statement vollständig ist (also durch das Endkommando geschlossen wurde), wird die Auswertung automatisch gestartet. Um diesen Modus dagegen zu verlassen, ohne das Statement auszuführen, kann das Kommando <code>abort</code> verwendet werden.
-		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block. Das Kommando <code>leave</code> wird hingegen stets alle ineinander verschachtelten Kontrollflussblöcke verlassen, so dass die Ausführung des Codes nach dem Ender des äußersten Blocks fortgesetzt werden kann.
+		Die Kommandos <code>break</code> und <code>continue</code> sind spezielle Kommandos für Kontrollfluss-Statements. Sie haben je nach umgebendem Elternblock einen spezielle Bedeutung. Siehe hierzu den Artikel zum entsprechenden Block. Das Kommando <code>leave</code> wird hingegen stets alle ineinander verschachtelten Kontrollflussblöcke verlassen, so dass die Ausführung des Codes nach dem Ende des äußersten Blocks fortgesetzt werden kann.
 		Benötigt NumeRe zum Auswerten eines Kontrollfluss-Statements zu viel Zeit, kann die Ausführung mit der <code>ESC</code>-Taste oder der entsprechenden Funktion der Toolbar abgebrochen werden.
 	</contents>
 </article>
@@ -107,10 +107,11 @@
 			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die Zählschleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle über die Zählschleife geben die Kommandos <code>break</code>, <code>leave</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der Zählschleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
 		<list>
 			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste ist, wird die Auswertung nach dieser Schleife forgesetzt</item>
 			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
+			<item node="leave">Bricht die Auswertung aller Schleifendurchlaufes an dieser Stelle ab und springt direkt ans Ende aller verschachtelter Kontrollfluss-Statements</item>
 		</list>
 		<em>Siehe auch:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> und <a href="nhlp://try?frame=self">help try</a>
 	</contents>
@@ -143,7 +144,7 @@
 		Eine Verzweigung muss weder einen ELSE-Zweig noch einen ELSEIF-Zweig besitzen. Sollte die Bedingung für den IF-Zweig nicht erfüllt werden, wird in diesem Fall einfach kein Ausdruck in der Verzweigung ausgewertet.
 		Mit <code>if (TABLE())</code> kann geprüft werden, ob Daten in der Tabelle <code>TABLE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die möglicherweise eine leere Tabelle benötigen. <em>Vorsicht:</em> wenn <code>TABLE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
 		IF-Bedingungen innerhalb von Schleifen können durch die Kommandos <code>break</code> und <code>continue</code> Einfluss auf ihre aufrufende Schleife nehmen (Siehe <a href="nhlp://for?frame=new">help for</a> und <a href="nhlp://while?frame=new">help while</a> für Infos zu diesen Kommandos). Diese Kommandos haben innerhalb einer IF-Bedingung dieselbe Wirkung wie <code>endif</code> (brechen also die Auswertung der aktuellen Bedingung an dieser Stelle ab) und werden so lange an das umgegebende Kontrollfluss-Statement weitergereicht, bis dies entweder eine Schleife ist oder das letzte Statement verlassen wurde, so dass der gesamte Block abgebrochen wird.
-		<example desc="Eine einfache Verzweigung, welche die max()-Funktion simuliert:" type="verbatim">
+		<example desc="Eine einfache Verzweigung, welche die <code>max()</code>-Funktion simuliert:" type="verbatim">
 			|&lt;- if (a &gt; b)
 			|IF-&gt; ans = a
 			|IF-&gt; else
@@ -164,18 +165,18 @@
 	</keywords>
 	<contents>
 		Ähnlich wie eine <code>for</code>-Schleife ist eine <code>while</code>-Schleife auch ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und arbeitet dieselben <expr>N</expr> Ausdrücke wiederholt ab. Der zentrale Unterschied ist jedoch, dass eine <code>while</code>-Schleife keinen Zählindex benötigt und dementsprechend keine vorgegebene Anzahl an Durchläufen besitzt. Der Abbruch einer <code>while</code>-Schleife wird entweder direkt durch die bei der Deklaration angegebene Bedingung oder durch ein zusätzliches <code>break</code> in einem Teil der Schleife bestimmt.
-		Die Deklaration einer <code>while</code>-Schleife benötigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrücke\nendwhile</codeblock>Die BEDINGUNG wird zu Beginn eines jeden Schleifendurchlaufes überprüft und, falls die BEDINGUNG den logischen Wert WAHR hat, die Schleife fortgesetzt, oder, falls sie FALSCH ist, an dieser Stelle verlassen.
+		Die Deklaration einer <code>while</code>-Schleife benötigt eine logisch auswertbare Bedingung, die in Klammern angegeben werden muss:<codeblock>while (BEDINGUNG)\n\tAusdrücke\nendwhile</codeblock>Die <code>BEDINGUNG</code> wird zu Beginn eines jeden Schleifendurchlaufes überprüft und, falls die <code>BEDINGUNG</code> den logischen Wert <code>true</code> hat, die Schleife fortgesetzt, oder, falls sie <code>false</code> ist, an dieser Stelle verlassen.
 		Es können beim Schließen einer (egal, welcher) Schleife folgende Parameter mit übergeben werden:
 		<list>
-			<item node="sv">Zeigt alle Schritte der Auswertung an (<em>Dieser Parameter ist veraltet.</em>)</item>
 			<item node="mask">Unterdrückt die Fortschrittsanzeige. Dies kann auch standardmäßig in den Einstellungen aktiviert werden</item>
 			<item node="sp">Zeigt die Fortschrittsanzeige auch dann an, wenn <code>mask</code> standardmäßig verwendet wird</item>
 			<item node="lnumctrl[=WERT]">Bricht alle Schleifen nach maximal 1000 Iterationen ab. Die Zahl der Iterationen kann mittels <code>-lnumctrl=WERT</code> beeinflusst werden</item>
 		</list>
-		Erweiterte Kontrolle über die <code>while</code>-Schleife geben die beiden Kommandos <code>break</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der <code>while</code>-Schleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
+		Erweiterte Kontrolle über die <code>while</code>-Schleife geben die Kommandos <code>break</code>, <code>leave</code> und <code>continue</code>, die auch innerhalb einer <code>if</code>-Bedingung (die selbst Teil der <code>while</code>-Schleife ist) stehen können und von dort Einfluss auf die Auswertung nehmen:
 		<list>
 			<item node="break">Bricht die Auswertung der aktuellen Schleife an dieser Stelle ab und springt in das (evtl. vorhandene) äußere Kontrollfluss-Statement. Falls die aktuelle Schleife bereits das äußerste Statement ist, wird die Auswertung nach dieser Schleife fortgesetzt</item>
 			<item node="continue">Bricht die Auswertung des aktuellen Schleifendurchlaufes an dieser Stelle ab und fährt sofort mit dem nächsten Durchlauf fort</item>
+			<item node="leave">Bricht die Auswertung aller Schleifendurchlaufes an dieser Stelle ab und springt direkt ans Ende aller verschachtelter Kontrollfluss-Statements</item>
 		</list>
 		<example desc="Eine <code>while</code>-Schleife, die so lange ausgeführt wird, bis der Dateiname zu einem ladbaren Datensatz eingegeben wurde:" type="verbatim">
 			|&lt;- while (!data())
@@ -197,7 +198,7 @@
 	</keywords>
 	<contents>
 		Eine Auswahl-Verzweigung ist ein <a href="nhlp://flowctrl?frame=new">Kontrollfluss-Statement</a> und besteht aus mindestens drei Kommandos: <code>switch (EX)</code>, <code>case VAL:</code> und <code>endswitch</code>. Es können beliebig viele <code>case</code> Statements verwendet werden. Zusätzlich kann noch <code>default:</code> nach dem letzten <code>case</code> verwendet werden, um den "Sonst-Fall" abzudecken. <code>EX</code> ist ein auswertbarer Ausdruck, der entweder einen numerischen Wert oder eine Zeichenkette zurückgibt. <code>VAL</code> sind ebenfalls numerische Werte oder Zeichenketten.
-		NumeRe wird den Ausdruck <code>EX</code> auswerten und mit den <code>VAL</code> der <code>case</code> Statements vergleichen und in den ersten <code>case</code>, dessen Wert mit dem Ergebnis von <code>EX</code> übereinstimmt, springen. Stimmt keiner überein, wird der optionale <code>default</code> Block verwendet. Danach wird NumeRe alle folgenden Ausdrücke auswerten (auch die der folgenden <code>case</code> und <code>default</code> Statements), bis es entweder das Ende der Auswahl-Verzweigung erreicht oder auf das Kommando <code>break</code> trifft.
+		NumeRe wird den Ausdruck <code>EX</code> auswerten und mit den <code>VAL</code> der <code>case</code> Statements vergleichen und in den ersten <code>case</code>, dessen Wert mit dem Ergebnis von <code>EX</code> übereinstimmt, springen. Stimmt keiner überein, wird der optionale <code>default</code> Block verwendet. Danach wird NumeRe alle folgenden Ausdrücke auswerten (auch die der folgenden <code>case</code> und <code>default</code> Statements), bis es entweder das Ende der Auswahl-Verzweigung erreicht oder auf die Kommandos <code>break</code> oder <code>leave</code> trifft.
 		<codeblock>
 			switch (EX)
 			case VAL1:
@@ -212,8 +213,8 @@
 			endswitch
 		</codeblock>
 		Eine Auswahl-Verzweigung muss mindestens ein <code>case</code> Statement enthalten. Weitere <code>case</code> oder <code>default</code> Statements sind optional.
-		Es muss beachtet werden, dass das Kommando <code>break</code> <em>nicht</em> an umfassende Schleifen weitergereicht wird, da es in <code>switch</code> selbst ausgewertet wird. Das Kommando <code>continue</code> wird normal weitergereicht.
-		Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen ähnliche Funktionalitäten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung für die Auswahl des korrekten Falls konstant. Die Ordnung der Fälle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benötigt <code>if</code> für jeden <code>elseif</code>, der als FALSCH ausgewertet wird, linear mehr Zeit.
+		Es muss beachtet werden, dass das Kommando <code>break</code> <em>nicht</em> an umfassende Schleifen weitergereicht wird, da es in <code>switch</code> selbst ausgewertet wird. Die Kommandos <code>continue</code> und <code>leave</code> werden normal weitergereicht.
+		Im Gegensatz zum <code>if</code> Block, der durch multiple <code>elseif</code> Sektionen ähnliche Funktionalitäten bereitstellt, ist die Laufzeit einer Auswahl-Verzweigung für die Auswahl des korrekten Falls konstant. Die Ordnung der Fälle in der Auswahl-Verzweigung spielt demzufolge keine Rolle. Dagegen benötigt <code>if</code> für jeden <code>elseif</code>, der als <code>false</code> ausgewertet wird, linear mehr Zeit.
 		<example desc="Eine Auswahl-Verzweigung, die nach Arbeitstagen und Wochenende selektiert:" type="codeblock">
 			switch (x)
 			case 1:

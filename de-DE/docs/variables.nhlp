@@ -22,11 +22,68 @@
 		<keyword>ans</keyword>
 		<keyword>double</keyword>
 		<keyword>variab</keyword>
+		<keyword>types</keyword>
 	</keywords>
 	<contents>
 		Variablen sind das Herzstück von NumeRe. Sie können Werte speichern, die an späterer Stelle einfach wiederverwendet werden können. Ihre Namen können sich aus einer beliebigen Kombination aus Ziffern, Buchstaben und Unterstrichen zusammensetzen, so lange sie nicht mit einer Ziffer beginnen. Sie können sogar dieselben Bezeichnungen wie Funktionen haben, denn Funktionen kennzeichnen sich durch die zusätzlichen Klammern:<verbatim>Variable "func"  vs.  Funktion "func()"</verbatim>
-		Variablen können deklariert werden, indem einfach der gewünschte Name eingegeben wird. Optional kann ihnen auch gleich ein Wert oder ein Vektor von Werten in der Form<codeblock>VARIABLE = WERT</codeblock>zugewiesen werden. Anderenfalls werden sie mit dem Wert <code>void</code> initialisiert.
-		Falls innerhalb eines Ausdrucks eine neue Variable verwendet wird, wird diese ebenfalls mit dem Wert <code>void</code> initialisiert.
+		Variablen können deklariert werden, indem einfach der gewünschte Name eingegeben wird. Optional kann ihnen auch gleich ein Wert oder ein Vektor von Werten in der Form<codeblock>VARIABLE = WERT</codeblock>zugewiesen werden. Anderenfalls werden sie mit dem Wert <code>void</code> initialisiert (siehe unten). Falls innerhalb eines Ausdrucks eine neue Variable verwendet wird, wird diese ebenfalls mit dem Wert <code>void</code> initialisiert.
+		Variablen können verschiedene Typen besitzen, die nicht komplett austauschbar sind. Variablen der Typen <code>category</code> und <code>string</code> können nur ihre jeweiligen Werte zugewiesen werden. Variablen mit Wert <code>void</code> kann jeder Wert zugewiesen werden; <code>void</code> selbst kann degegen keiner Variable zugewiesen werden (außer Variablen, die bereits den Wert <code>void</code> haben). Variablen mit den Werten <code>datetime</code>, <code>logical</code> oder <code>value.*</code> können innerhalb dieses Bereichs beliebig Typen und Werte zugewiesen werden.
+		<table>
+			<tr>
+				<td><em>Typ</em></td><td><em>Bytes</em></td><td><em>Komplex</em></td><td><em>Vorzeichen</em></td><td><em>Gleitkomma</em></td><td><em>Umwandlung</em></td><td><em>Konstruktor</em></td><td><em>Datenbereich</em></td>
+			</tr>
+			<tr>
+				<td><code>"void"</code></td><td>0</td><td></td><td></td><td></td><td></td><td><code>void</code></td><td><code>void</code></td>
+			</tr>
+			<tr>
+				<td><code>"logical"</code></td><td>1</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>true</code>, <code>false</code></td><td><code>true</code>, <code>false</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i8"</code></td><td>1</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i8(x)</code></td><td><code>i8_min</code> - <code>i8_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui8"</code></td><td>1</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui8(x)</code></td><td><code>0</code> - <code>ui8_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i16"</code></td><td>2</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i16(x)</code></td><td><code>i16_min</code> - <code>i16_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui16"</code></td><td>2</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui16(x)</code></td><td><code>0</code> - <code>ui16_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i32"</code></td><td>4</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i32(x)</code></td><td><code>i32_min</code> - <code>i32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui32"</code></td><td>4</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui32(x)</code></td><td><code>0</code> - <code>ui32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i64"</code></td><td>8</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i64(x)</code></td><td><code>i64_min</code> - <code>i64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui64"</code></td><td>8</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui64(x)</code></td><td><code>0</code> - <code>ui64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.f32"</code></td><td>4</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>f32(x)</code></td><td><code>f32_min</code> - <code>f32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.f64"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>f64(x)</code></td><td><code>f64_min</code> - <code>f64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.cf32"</code></td><td>8</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>cf32(x)</code></td><td><code>cf32_min</code> - <code>cf32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.cf64"</code></td><td>16</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>cf64(x)</code></td><td><code>cf64_min</code> - <code>cf64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"datetime"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>datetime(x)</code></td><td><code>-16384-12-31, 23:59:59</code> - <code>16384-12-31, 23:59:59</code></td>
+			</tr>
+			<tr>
+				<td><code>"string"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>"..."</code></td><td><code>to_char({0:255})</code></td>
+			</tr>
+			<tr>
+				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>ui64_max</code></td>
+			</tr>
+		</table>
 		NumeRe kennt a priori die spezielle Variable <code>ans{}</code> (ein <a href="nhlp://cluster?frame=new">Cluster</a>), die stets das letzte Ergebnis speichert. Außerdem sind noch die vier Standardvariablen <code>x, y, z</code> und <code>t</code> definiert.
 		Neben Variablen sind auch noch <a href="nhlp://table?frame=new">Tabellen</a> ein weiterer Variablentyp. Diese haben eine ähnliche Signatur wie Funktionen, verstehen jedoch den Intervalloperator <code>A:B</code>. Geladene Daten finden sich stets in der Tabelle <code>data()</code>, sofern sie nicht gezielt einer anderen Tabelle zugewiesen werden. Standardmäßig ist auch noch <code>table()</code> als eine Tabelle deklariert. Neue Tabellen können mit dem Kommando <a href="nhlp://new?frame=new"><code>new</code></a> erzeugt werden, oder indem sie als Kopie einer vorhandenen Tabelle generiert werden:<codeblock>NEWTAB() = OLDTAB()</codeblock>
 		<example desc="Deklarieren der Variablen x mit Wert 1:">

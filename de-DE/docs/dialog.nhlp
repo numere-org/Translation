@@ -52,7 +52,7 @@
 		<em>Wichtig:</em> ein Dialog unterbricht die Auswertung von NumeRe. NumeRe wird erst fortfahren, wenn der Nutzer den Dialog geschlossen hat. Ein Dialog eignet sich daher nicht, um den Status einer Auswertung oder vergleichbares darzustellen.
 		Der Typ des Dialogs wird durch <code>type=TYPE</code> vorgegeben. Hier sind die folgenden Werte möglich:
 		<list>
-			<item node="messagebox">Zeigt eine Messagebox an (Standard). Diese kann verwendet werden, um den Nutzer über irgendetwas zu informieren oder eine ja/nein-Entscheidung einzufordern. Die Messagebox benötigt keinen Standardwert. Außerdem können hier angezeigtes Icon und die Schaltflächen modifiziert werden (siehe unten). Der Rückgabewert dieses Dialogtyps ist von diesen Schaltflächen abhängig.</item>
+			<item node="messagebox">Zeigt eine Messagebox an (Standard). Diese kann verwendet werden, um den Nutzer über irgendetwas zu informieren oder eine ja/nein-Entscheidung einzufordern. Die Messagebox verwendet den Standardwert als Nachricht. Außerdem können hier angezeigtes Icon und die Schaltflächen modifiziert werden (siehe unten). Der Rückgabewert dieses Dialogtyps ist von diesen Schaltflächen abhängig.</item>
 			<item node="textentry">Zeigt ein Fenster mit der Möglichkeit einer Texteingabe an. Der Standardwert wird dabei in der entsprechenden Zeile angezeigt.</item>
 			<item node="filedialog">Öffnet ein Dateiauswahlfenster an, in dem eine Datei ausgewählt werden kann, deren Dateipfad dann als Rückgabewert verfügbar ist. Für den Standardwert können bis zu drei Zeichenketten angeben werden, wobei die erste Zeichenkette das Startverzeichnis, die zweite den Standarddateinamen und die dritte eine Dateitypmaske definiert. Die Maske setzt sich dabei aus einer Beschreibung und dem entsprechenden Filter zusammen: <code>"DESCRIPTION|FILTER|DESCRIPTION|FILTER2|..."</code> Der Filter kann Wildcards und mehrere Filterausdrücke zugleich enthalten, z.B. <code>"Textdateien|*.txt|Projektdateien|*.xml;*.txt;*.ini"</code>. Bricht der Nutzer diesen Dialog ab, wird eine leere Zeichenkette zurückgegeben.</item>
 			<item node="dirdialog">Öffnet ein Verzeichnisauswahlfenster an, in dem ein Verzeichnis ausgewählt werden kann, dessen Dateipfad dann als Rückgabewert verfügbar ist. Der Standardwert gibt das Startverzeichnis an. Bricht der Nutzer ab, wird eine leere Zeichenkette zurückgegeben.</item>
@@ -74,7 +74,7 @@
 			<item node="okcancel">Zeigt eine "OK"- und eine "Abbruch"-Schaltfläche an. In einer Messagebox haben diese Schaltflächen die Werte <code>"ok"</code> und <code>"cancel"</code></item>
 			<item node="yesno">Zeigt eine "Ja"- und eine "Nein"-Schaltfläche an. Hier wird außerdem auch automatisch das Fragezeichen-Icon verwendet. In einer Messagebox haben diese Schaltflächen die Werte <code>"yes"</code> und <code>"no"</code></item>
 		</list>
-		<example desc="Anzeigen eines listdialogs mit auswählbaren Optionen:">
+		<example desc="Anzeigen eines <code>listdialog</code>s mit auswählbaren Optionen:">
 			sOption = dialog "Quadrat", "Ring", "Linie" -set type=listdialog title="Auswahl der Geometrie" msg="Bitte wähle die aktuelle Geometrie aus:"
 		</example>
 		<img src="<>/docs/dialog.png" />

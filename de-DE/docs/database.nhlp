@@ -56,7 +56,7 @@
 			nId = database "localhost" -set type=mysql usr="NumeRe" pwd="mysqlpwd" port=3307 usedb="MyDB"
 		</example>
 		<h>Datenbank-Interaktion</h>
-		Mithilfe der Verbindungs-ID kann mit der verbundenen Datenbank durch SQL-Statements interagiert werden. Wenn ein solches Statement eine Tabelle zurückgibt (z.B. <code>SELECT * FROM ...</code>), dann werden maximal die ersten zehn Zeilen der Tabelle im Terminal wiedergegeben. Um die gesamte Tabelle zu verwenden, muss eine Zieltabelle mittels <code>target=TABLE()</code> angegeben werden, die auch ggf. automatisch erzeugt wird:
+		Mithilfe der Verbindungs-ID kann mit der verbundenen Datenbank durch SQL-Statements interagiert werden. Wenn ein solches Statement eine Tabelle zurückgibt (z.B. <code>"SELECT * FROM ..."</code>), dann werden maximal die ersten zehn Zeilen der Tabelle im Terminal wiedergegeben. Um die gesamte Tabelle zu verwenden, muss eine Zieltabelle mittels <code>target=TABLE()</code> angegeben werden, die auch ggf. automatisch erzeugt wird:
 		<codeblock>
 			VAL = database ID -set sql=SQLSTATEMENT
 			VAL = database ID -set sql=SQLSTATEMENT target=TABLE()

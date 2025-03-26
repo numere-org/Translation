@@ -45,10 +45,10 @@
 		Beside of the more evaluation-oriented commands knows NumeRe some additional commands, which can be assigned to the pure user interface. These are for example the commands <a href="nhlp://help?frame=new"><code>help</code></a> and <a href="nhlp://find?frame=new"><code>find</code></a>, as well as the following ones:
 		<list>
 			<item node="about">This command (and its synonyms <code>credits</code> and <code>info</code>) display legal and versioning information about NumeRe.</item>
-			<item node="hline">This command draws a horizontal double line in the console. If the parameter <code>-single</code> is appended, this command will draw a single line.</item>
-			<item node="warn">This command will display the passed string as a warning in the console. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
+			<item node="hline">This command draws a horizontal double line in the terminal. If the parameter <code>-single</code> is appended, this command will draw a single line.</item>
+			<item node="warn">This command will display the passed string as a warning in the terminal. This should only be used for actual warnings, because warnings have an effect on the runtime of the code.</item>
 			<item node="close">This command closes previously opened windows, which are selected by parameters using <code>close -PAR</code>: <code>-graphs</code> closes all graphs, <code>-docs</code> all documentation windows, <code>-tables</code> all tables, <code>-images</code> all ImageViewers and <code>-all</code> all windows from this list.</item>
-			<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the procedure flag <code>test</code>, extensive software tests may be implemented.</item>
+			<item node="assert">The command <code>assert EXPR</code> is intended to be used in software tests. It checks the expression <code>EXPR</code> for trueness and returns it. If the expression evaluates to false, an error is thrown. This can be used to represent a test condition easily. In combination with the <a href="nhlp://procedure?frame=new">procedure</a> flag <code>test</code>, extensive software tests may be implemented.</item>
 			<item node="clc">This command clears the content of the terminal and resets its content to the startup state.</item>
 			<item node="qrcode">Creates a QR code with the content of the transferred string. The QR code is saved as an SVG under <code>&lt;savepath&gt;/qrcode.svg</code> if no dedicated file name is specified using <code>file=FILENAME</code>. The color of the QR code can be defined with the option <code>color={R,G,B}</code> and the level of error correction with <code>level=LEVEL</code> (0-3).</item>
 		</list>
@@ -69,7 +69,7 @@
 		</syntax>
 		The <code>declare</code> command declares one or more file-specific constants for the current script or procedure file. The syntax is as follows, where numeric values as well as strings or whole expressions can be used for the values.
 		<codeblock>declare CONST1 := VALUE1, CONST2 := VALUE2, ...</codeblock>.
-		In addition, automatically enumerated constants can also be created. In addition to the automatic numbering, integer constants or previous constants can also be used as values. Values that are not literal integer constants are ignored here. If any offsets occur in the process, they are taken over and counted on from this value:
+		In addition, automatically enumerated constants can also be created. In addition to the automatic numbering, which starts with the value 1, integer constants or previous constants can also be used as values. Values that are not literal integer constants are ignored here. If any offsets occur in the process, they are taken over and counted on from this value:
 		<codeblock>
 			declare enum -&gt; {VAL1, VAL2, VAL3, ...}
 			declare enum -&gt; {VAL1 = 10, VAL2, VAL3 = VAL2, ...}

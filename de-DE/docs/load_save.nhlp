@@ -73,7 +73,7 @@
 			<item node="JCAMP-DX-Dateien<br/>  *.jdx, *.dx, *.jcm">Dateiformat: <code>JDX</code><br/>Spektrographie-Datensätze, die nach dem JCAMP-DX-Standard erzeugt wurden</item>
 			<item node="MetroPro-Dateien<br/>  *.dat">Dateiformat: <code>ZYGO</code><br/>Datensätze, die von Zygo MetroPro(R) erzeugt werden und Interferogramme enthalten</item>
 		</list>
-		Manche Dateitypen definieren für einzelne Spalten dedizierte <code>"value"</code>-<a href="nhlp://table?frame=new">Subtypen</a>. Diese werden soweit möglich beibehalten.
+		Manche Dateitypen definieren für einzelne Spalten dedizierte <code>"value"</code>-<a href="nhlp://variables?frame=new">Subtypen</a>. Diese werden soweit möglich beibehalten.
 		NumeRe unterstützt das gleichzeitige Laden mehrerer Dateien. Dazu kann eine der folgenden Methoden verwendet werden:
 		<list>
 			<item node="-all">Durch Anhängen dieses Parameters und Verwendung eines Dateinamens, der <em>mindestens eine Wildcard</em> enthält, werden alle Dateien in den Speicher geladen, die durch diesen Dateinamen beschrieben werden</item>

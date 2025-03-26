@@ -56,7 +56,7 @@
 			nId = database "localhost" -set type=mysql usr="NumeRe" pwd="mysqlpwd" port=3307 usedb="MyDB"
 		</example>
 		<h>Database interaction</h>
-		The connection ID can be used to interact with the connected database using SQL statements. If such a statement returns a table (e.g. <code>SELECT * FROM ...</code>), then a maximum of the first ten rows of the table are displayed in the terminal. To use the entire table, a target table must be specified using <code>target=TABLE()</code>, which may also be generated automatically:
+		The connection ID can be used to interact with the connected database using SQL statements. If such a statement returns a table (e.g. <code>"SELECT * FROM ..."</code>), then a maximum of the first ten rows of the table are displayed in the terminal. To use the entire table, a target table must be specified using <code>target=TABLE()</code>, which may also be generated automatically:
 		<codeblock>
 			VAL = database ID -set sql=SQLSTATEMENT
 			VAL = database ID -set sql=SQLSTATEMENT target=TABLE()

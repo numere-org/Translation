@@ -22,11 +22,68 @@
 		<keyword>ans</keyword>
 		<keyword>double</keyword>
 		<keyword>variab</keyword>
+		<keyword>types</keyword>
 	</keywords>
 	<contents>
 		Variables are one of the core functionalities of NumeRe. They may store values, which may be easily used at a later point. Their names may be composed out of an arbitrary combination of numbers, letters and underscores, as long as they do not start with a number. They may even carry the same name as a function, because functions are identified by their parentheses:<verbatim>Variable "func"  vs.  function "func()"</verbatim>
-		Variables will be declared, if their desired name is entered directly. Optionally, values or whole vectors may be assigned to these variables during initialization in the form<codeblock>VARIABLE = VALUE</codeblock>Otherwise they will be initialized with the value of <code>void</code>.
-		In the case that an unknown variable is used in an expression, it will be initialized with the value of <code>void</code> as well.
+		Variables will be declared, if their desired name is entered directly. Optionally, values or whole vectors may be assigned to these variables during initialization in the form<codeblock>VARIABLE = VALUE</codeblock>Otherwise they will be initialized with the value of <code>void</code> (see below). In the case that an unknown variable is used in an expression, it will be initialized with the value of <code>void</code> as well.
+		Variables can have different types that are not completely interchangeable. Variables of the types <code>category</code> and <code>string</code> can only be assigned their respective values. Variables with the value <code>void</code> can be assigned any value; <code>void</code> itself, on the other hand, cannot be assigned to any variable (except variables that already have the value <code>void</code>). Variables with the values <code>datetime</code>, <code>logical</code> or <code>value.*</code> can be assigned any type and value within this area.
+		<table>
+			<tr>
+				<td><em>Type</em></td><td><em>Bits</em></td><td><em>Complex</em></td><td><em>Signed</em></td><td><em>Floating point</em></td><td><em>Promotion</em></td><td><em>Constructor</em></td><td><em>Data range</em></td>
+			</tr>
+			<tr>
+				<td><code>"void"</code></td><td>0</td><td></td><td></td><td></td><td></td><td><code>void</code></td><td><code>void</code></td>
+			</tr>
+			<tr>
+				<td><code>"logical"</code></td><td>1</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>true</code>, <code>false</code></td><td><code>true</code>, <code>false</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i8"</code></td><td>1</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i8(x)</code></td><td><code>i8_min</code> - <code>i8_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui8"</code></td><td>1</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui8(x)</code></td><td><code>0</code> - <code>ui8_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i16"</code></td><td>2</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i16(x)</code></td><td><code>i16_min</code> - <code>i16_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui16"</code></td><td>2</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui16(x)</code></td><td><code>0</code> - <code>ui16_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i32"</code></td><td>4</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i32(x)</code></td><td><code>i32_min</code> - <code>i32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui32"</code></td><td>4</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui32(x)</code></td><td><code>0</code> - <code>ui32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.i64"</code></td><td>8</td><td></td><td>&#x2713;</td><td></td><td>&#x2713;</td><td><code>i64(x)</code></td><td><code>i64_min</code> - <code>i64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.ui64"</code></td><td>8</td><td></td><td></td><td></td><td>&#x2713;</td><td><code>ui64(x)</code></td><td><code>0</code> - <code>ui64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.f32"</code></td><td>4</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>f32(x)</code></td><td><code>f32_min</code> - <code>f32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.f64"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>f64(x)</code></td><td><code>f64_min</code> - <code>f64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.cf32"</code></td><td>8</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>cf32(x)</code></td><td><code>cf32_min</code> - <code>cf32_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"value.cf64"</code></td><td>16</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>cf64(x)</code></td><td><code>cf64_min</code> - <code>cf64_max</code></td>
+			</tr>
+			<tr>
+				<td><code>"datetime"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>datetime(x)</code></td><td><code>-32767-12-31, 23:59:59</code> - <code>32767-12-31, 23:59:59</code></td>
+			</tr>
+			<tr>
+				<td><code>"string"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>"..."</code></td><td><code>to_char({0:255})</code></td>
+			</tr>
+			<tr>
+				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>ui64_max</code></td>
+			</tr>
+		</table>
 		There is a special variable called <code>ans{}</code> (a so-called <a href="nhlp://cluster?frame=new">cluster</a>), which automatically stores the last calculated result. In addition, the four standard variables <code>x, y, z</code> and <code>t</code> are predefined and known from start-up.
 		<a href="nhlp://table?frame=new">Tables</a> are another variable type in NumeRe. Those use a similar signature as functions, but they are capable of using the interval operator <code>A:B</code>. As default, loaded data is found inside of the table <code>data()</code>. Another table is <code>table()</code>, which is available per default. New tables may be created with the command <a href="nhlp://new?frame=new"><code>new</code></a>, or if they are generated as a copy of an already existing table:<codeblock>NEWTAB() = OLDTAB()</codeblock>
 		<example desc="Declaring of the variable x with value 1:">

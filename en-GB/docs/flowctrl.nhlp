@@ -107,10 +107,11 @@
 			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
 			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
 		</list>
-		Extended control over the counting loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the counting loop) and influence the evaluation from there:
+		Extended control over the counting loop is given by the commands <code>break</code>, <code>leave</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the counting loop) and influence the evaluation from there:
 		<list>
-			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost one, the evaluation continues after this loop</item>.
-			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
+			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost one, the evaluation continues after this loop</item>
+			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>
+			<item node="leave">Aborts the evaluation of all loop iterations at this point and immediately jumps to the end of all nested control flow statements</item>
 		</list>
 
 		<em>See also:</em> <a href="nhlp://flowctrl?frame=self">help flowctrl</a>, <a href="nhlp://if?frame=self">help if</a>, <a href="nhlp://while?frame=self">help while</a>, <a href="nhlp://switch?frame=self">help switch</a> and <a href="nhlp://try?frame=self">help try</a>
@@ -165,18 +166,18 @@
 	</keywords>
 	<contents>
 		Similar to a <code>for</code> loop, a <code>while</code> loop is also a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and repeatedly processes the same <expr>N</expr> expressions. The key difference, however, is that a <code>while</code> loop does not require a counting index and accordingly has no predetermined number of runs. The termination of a <code>while</code> loop is determined either directly by the condition specified in the declaration or by an additional <code>break</code> in a part of the loop.
-		The declaration of a <code>while</code> loop requires a logically evaluable condition, which must be specified in parentheses:<codeblock>while (CONDITION)\n\tExpressions\nendwhile</codeblock>The CONDITION is checked at the beginning of each loop pass and, if the CONDITION has the logical value TRUE, the loop is continued, or, if it is FALSE, exited at that point.
+		The declaration of a <code>while</code> loop requires a logically evaluable condition, which must be specified in parentheses:<codeblock>while (CONDITION)\n\tExpressions\nendwhile</codeblock>The <code>CONDITION</code> is checked at the beginning of each loop pass and, if the <code>CONDITION</code> has the logical value <code>true</code>, the loop is continued, or, if it is <code>false</code>, exited at that point.
 		The following parameters can be passed when closing a loop (regardless of which loop):
 		<list>
-			<item node="sv">Displays all steps of the evaluation (<em>This parameter is obsolete.</em>)</item>.
-			<item node="mask">Suppresses the progress indicator. This can also be activated by default in the settings</item>.
-			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>.
-			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>.
+			<item node="mask">Suppresses the progress indicator. This can also be activated by default in the settings</item>
+			<item node="sp">Displays the progress indicator even if <code>mask</code> is used by default</item>
+			<item node="lnumctrl[=VALUE]">Breaks all loops after a maximum of 1000 iterations. The number of iterations can be influenced using <code>-lnumctrl=VALUE</code></item>
 		</list>
-		Extended control over the <code>while</code> loop is given by the two commands <code>break</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the <code>while</code> loop) and influence the evaluation from there:
+		Extended control over the <code>while</code> loop is given by the commands <code>break</code>, <code>leave</code> and <code>continue</code>, which can also be within an <code>if</code> condition (which is itself part of the <code>while</code> loop) and influence the evaluation from there:
 		<list>
-			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost statement, evaluation continues after this loop</item>.
-			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>.
+			<item node="break">Breaks the evaluation of the current loop at this point and jumps to the (possibly existing) outer control flow statement. If the current loop is already the outermost statement, evaluation continues after this loop</item>
+			<item node="continue">Breaks the evaluation of the current loop pass at this point and immediately continues with the next pass</item>
+			<item node="leave">Aborts the evaluation of all loop iterations at this point and immediately jumps to the end of all nested control flow statements</item>
 		</list>
 		<example desc="A <code>while</code> loop, which is executed until a filename to a loadable dataset is entered:" type="verbatim">
 			|&lt;- while (!data())
@@ -198,7 +199,7 @@
 	</keywords>
 	<contents>
 		A selection branch is a <a href="nhlp://flowctrl?frame=new">control flow statement</a> and consists of at least three commands: <code>switch (EX)</code>, <code>case VAL:</code> and <code>endswitch</code>. Any number of <code>case</code> statements can be used. In addition, <code>default:</code> can be used after the last <code>case</code> to cover the "otherwise case". <code>EX</code> is an evaluable expression that returns either a numeric value or a string. <code>VAL</code> are also numeric values or strings.
-		NumeRe will evaluate the <code>EX</code> expression and compare it with the <code>VAL</code> of the <code>case</code> statements and jump to the first <code>case</code> whose value matches the result of <code>EX</code>. If none matches, the optional <code>default</code> block is used. After that, NumeRe will evaluate all subsequent expressions (including those of the following <code>case</code> and <code>default</code> statements) until it either reaches the end of the selection branch or encounters the <code>break</code> command.
+		NumeRe will evaluate the <code>EX</code> expression and compare it with the <code>VAL</code> of the <code>case</code> statements and jump to the first <code>case</code> whose value matches the result of <code>EX</code>. If none matches, the optional <code>default</code> block is used. After that, NumeRe will evaluate all subsequent expressions (including those of the following <code>case</code> and <code>default</code> statements) until it either reaches the end of the selection branch or encounters the <code>break</code> or <code>leave</code> commands.
 		<codeblock>
 			switch (EX).
 			case VAL1:
@@ -213,8 +214,8 @@
 			endswitch
 		</codeblock>
 		A selection branch must contain at least one <code>case</code> statement. Additional <code>case</code> or <code>default</code> statements are optional.
-		It must be noted that the <code>break</code> command is <em>not</em> passed on to surrounding loops, as it is evaluated in <code>switch</code> itself. The <code>continue</code> command is passed on normally.
-		Unlike the <code>if</code> block, which provides similar functionality through multiple <code>elseif</code> sections, the runtime of a selection branch is constant for selecting the correct case. The order of the cases in the selection branch is therefore irrelevant. In contrast, <code>if</code> requires linearly more time for each <code>elseif</code> that is evaluated as FALSE.
+		It must be noted that the <code>break</code> command is <em>not</em> passed on to surrounding loops, as it is evaluated in <code>switch</code> itself. The <code>continue</code> and <code>leave</code> commands are passed on normally.
+		Unlike the <code>if</code> block, which provides similar functionality through multiple <code>elseif</code> sections, the runtime of a selection branch is constant for selecting the correct case. The order of the cases in the selection branch is therefore irrelevant. In contrast, <code>if</code> requires linearly more time for each <code>elseif</code> that is evaluated as <code>false</code>.
 		<example desc="A selection branch selecting for working day and weekend:" type="codeblock">
 			switch (x)
 			case 1:
