@@ -33,8 +33,10 @@
 		</syntax>
 		NumeRe may apply operations to <em>whole matrices</em>, if the command <code>matop</code> is used:<codeblock>matop EXPRESSION(data(),TABLE())</codeblock>The command <code>mtrxop</code> is a synonym to this command.
 		All calculations will be applied elementwise, though. You may achieve matrix-matrix and matrix-vector multiplications with the special <code>**</code> operator:<codeblock>matop MATRIX1() ** MATRIX2()</codeblock>The <code>**</code> operator has the highest priority of all operators. Therefore, it is mandatory to use parentheses, if applicable. In addition, the <code>**</code> operator will check if the dimensions of the two matrices are matching in the means of matrix-matrix multiplication.
-		The target table of the matrix operation can be specified in the expression. If it was <em>not</em> specified, the table <code>matrix()</code> will be used as automatic target. If the target table doesn't exist, it will be created during the evaluation of this command. If the target table is passed with <em>empty</em> argument parentheses, it will be overwritten <em>completely</em>.
-		<em>Important:</em> <code>matop</code> knows a large set of additional and special matrix functions. These are listet at <a href="nhlp://matfunc?frame=new">help matfunc</a>.
+		Although matrices do make use of tables as their source and target structure, they do know nothing about column headings and units and do not preserve them during operations. Additionally, only numerical values are used from a table, other types will be ignored. Therefore, <code>matop</code> is not a good candidate to copy (parts of) a table.
+		The target table of the matrix operation can be specified in the expression. If it was <em>not</em> specified, the table <code>matrix()</code> will be used as automatic target. If the target table doesn't exist, it will be created during the evaluation of this command.
+		<em>Important:</em> If the target table is passed with <em>empty</em> argument parentheses (<code>MATRIX()</code>), it will be overwritten <em>completely</em>. The column headings and units are lost during this process. To keep this information, one can give an open target range: <code>MATRIX(:,:)</code>
+		<em>Note:</em> <code>matop</code> knows a large set of additional and special matrix functions. These are listet at <a href="nhlp://matfunc?frame=new">help matfunc</a>.
 		<example desc="Multiplying the elements in <code>data()</code> to the elements in <code>table()</code>:">
 			matop table() *= data()
 		</example>
