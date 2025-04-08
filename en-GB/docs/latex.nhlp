@@ -48,8 +48,8 @@
 		Enumerations like
 		<verbatim>
 			#*! Text
-			- Numbered item
-			- Numbered item
+			1. Numbered item
+			2. Numbered item
 			Text
 			*#
 		</verbatim>

@@ -81,7 +81,7 @@
 				<td><code>"string"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>"..."</code></td><td><code>to_char({0:255})</code></td>
 			</tr>
 			<tr>
-				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>ui64_max</code></td>
+				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>i64_max</code></td>
 			</tr>
 		</table>
 		There is a special variable called <code>ans{}</code> (a so-called <a href="nhlp://cluster?frame=new">cluster</a>), which automatically stores the last calculated result. In addition, the four standard variables <code>x, y, z</code> and <code>t</code> are predefined and known from start-up.

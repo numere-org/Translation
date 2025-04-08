@@ -81,7 +81,7 @@
 				<td><code>"string"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>"..."</code></td><td><code>to_char({0:255})</code></td>
 			</tr>
 			<tr>
-				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>ui64_max</code></td>
+				<td><code>"category"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>category(s,x)</code></td><td><code>to_char({0:255})</code>, <code>1</code> - <code>i64_max</code></td>
 			</tr>
 		</table>
 		NumeRe kennt a priori die spezielle Variable <code>ans{}</code> (ein <a href="nhlp://cluster?frame=new">Cluster</a>), die stets das letzte Ergebnis speichert. Außerdem sind noch die vier Standardvariablen <code>x, y, z</code> und <code>t</code> definiert.
