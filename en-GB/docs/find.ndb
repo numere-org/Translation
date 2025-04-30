@@ -201,6 +201,7 @@ getorder({x,y,z,...})~Returns the order of the sorted elements~sortieren getorde
 getoverlap({l},{r})~Returns the common overlap or the respective intersection of all intervals~getoverlap() intersection schnittmenge ueberlapp~getoverlap(
 gettypeof(x)~Returns the data type~gettypeof() typeof datentypen datatypes~gettypeof(
 getuilang()~Returns information about user's current language~language translation sprache deutsch german english english~getuilang()
+getuserinfo()~Returns information about the current user~user information benutzerinformation userprofile homedir username benutzername userid logonname benutzerverzeichnis~getuserinfo()
 getversioninfo()~Returns information about the current NumeRe version~version release candidate date datum build~getversioninfo()
 global~Declares the current expression as global~globaler ausdruck expression statement command kommando include einbinden~help global
 grad3d~Generates a 3D gradient plot~gradienten feldlinien dreidimensional field lines force three-dimensional~help grad3d

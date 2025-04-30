@@ -202,6 +202,7 @@ getorder({x,y,z,...})~Gibt die Reihenfolge der aufsteigend sortierten Elemente z
 getoverlap({l},{r})~Gibt den gemeinsamen Überlapp aller Intervalle zurück~getoverlap() intersection schnittmenge ueberlapp~getoverlap(
 gettypeof(x)~Gibt den Datentyp zurück~gettypeof() typeof datentypen datatypes~gettypeof(
 getuilang()~Gibt Informationen zur Benutzersprache~language translation sprache deutsch german english englisch~getuilang()
+getuserinfo()~Gibt Informationen zum Benutzer zurück~user information benutzerinformation userprofile homedir username benutzername userid logonname benutzerverzeichnis~getuserinfo()
 getversioninfo()~Gibt Informationen zur aktuellen NumeRe-Version zurück~version release candidate build datum date~getversioninfo()
 global~Deklarieren eines globalen Ausdrucks zum automatischen Einbinden in ein weiteres Script, siehe "help script"~globaler ausdruck expression statement command kommando include einbinden~help global
 grad3d~Erstellen eines 3D-Gradienten-Plots~gradienten feldlinien dreidimensional field lines force kraft three-dimensional~help grad3d
