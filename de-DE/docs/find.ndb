@@ -292,6 +292,7 @@ log2(x)~Logarithmus zur Basis 2 von x~logarithmus base 2 log2()~log2(
 log_b(b,x)~Logarithmus zur Basis b von x~logarithmus base beliebig log_b() logb()~log_b(
 logtoidx(MAT)~Wandelt Logikwerte in einer Matrix in Indexwerte um~logic index indices boolean position transformieren~logtoidx(
 Lösung~Was soll das denn? Ich kann numerisch rechnen - und nicht etwa hellsehen!~solution lösen solver~solution = nan
+mail~EMails über SMTP senden~send e-mails emailbox smtpserver notification message~help mail
 matfc(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., siehe "help matop"~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
 matfcf(X,Y,Z,...)~Generiert eine Matrix mit den Spalten X,Y,Z,..., wobei fehlende Elemente logisch ergänzt werden, siehe "help matop"~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
 matfl(X,Y,Z,...)~Generiert eine Matrix mit den Zeilen X,Y,Z,..., siehe "help matop"~matfl() create erzeugen erschaffen zusammensetzen combine~matfl(
@@ -543,8 +544,8 @@ undefine~Entfernt eine bestehende Funktionendefinition, siehe "help define"~funk
 union(A,B)~Bestimmt die Vereinungsmenge~union() set vereingungsmenge~union(
 unique(MAT,nDim)~Sortiert und gibt nur eindeutige Elemente zurück~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 unpack~Entpackt eine Archivdatei~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
-url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip download upload~help url
-uuid()~Erstellt eine neue UUID und gibt diese als String zurück~Universally Unique Identifier string~uuid()
+url~Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle~html https sftp ftps online website uri remote tcp ip download upload restapi~help url
+uuid()~Erstellt eine neue V4 UUID und gibt diese als String zurück~Universally Unique Identifier string guid globally~uuid()
 valtostr(x,C,n)~Wertet x aus und wandelt den Wert in eine Zeichenkette um~to_string() value wert zur zeichenkette formatieren num2str() umwandeln transformation conversion convert valtostr()~valtostr(
 var~Definiert den lokalen Variablensatz einer Prozedur~procedure local variables~help var
 vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von Spalten haben~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(

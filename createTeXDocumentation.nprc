@@ -130,6 +130,7 @@ procedure $createDocumentationFiles(_sLangId) :: explicit
 	help "ticks" -tex
 	help "unit" -tex
 	help "url" -tex
+	help "mail" -tex
 	help "variables" -tex
 	help "vect" -tex
 	help "vect3d" -tex

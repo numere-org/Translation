@@ -292,6 +292,7 @@ log10(x)~Logarithm with base 10 of x~logarithmus basis 10 log10() log()~log10(
 log2(x)~Logarithm with base 2 of x~logarithmus basis 2 log2()~log2(
 log_b(b,x)~Logarithm with base b of x~logarithmus basis arbitrary log_b() logb()~log_b(
 logtoidx(MAT)~Transforms logical values to indices~logic index indices boolean position transformieren~logtoidx(
+mail~Send emails via SMTP~send e-mails emailbox smtpserver notification message~help mail
 matfc(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,...~matfc() create erzeugen erschaffen zusammensetzen combine~matfc(
 matfcf(X,Y,Z,...)~Generates a matrix with the columns X,Y,Z,..., in which the missing elements are added logically~matfcf() create erzeugen erschaffen zusammensetzen combine füllen fill~matfcf(
 matfl(X,Y,Z,...)~Generates a matrix with the lines X,Y,Z,...~matfl() create erzeugen erschaffen zusammensetzen combine~matfl(
@@ -544,8 +545,8 @@ undefine~Removes a custom function definition~funktion entfernen loeschen delete
 union({setA},{setB})~Determines the set union~union() set vereingungsmenge~union(
 unique(MAT,nDim)~Sorts and returns only unique elements~unique() strunique() matrix matrices matrizen eindeutig einmalig single once~unique(
 unpack~Unpacks an archive file~zipfile tarfile gzip packen entpacken archivefile tarball unzip entzippen inflate deflate compress uncompress extract~help unpack
-url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip download upload~help url
-uuid()~Creates a new UUID and returns it as a string~Universally Unique Identifier string~uuid()
+url~Allows access to online resources via the HTTP(S) and (S)FTP protocols~html https sftp ftps online website uri remote tcp ip download upload restapi~help url
+uuid()~Creates a new V4 UUID and returns it as a string~Universally Unique Identifier string guid globally~uuid()
 valtostr(x,C,n)~Evaluates x and transforms it to a string~to_string() value wert num2str() umwandeln transformation conversion convert zur zeichenkette formatieren valtostr()~valtostr(
 var~Defines the local numerical variables in a procedure~procedure local variables~help var
 vcat(MAT,MAT)~Vertically concatenates tow matrices that have the same number of columns~vcat() concat concatenate vertically vertikal verketten verknüpfen anhängen~vcat(

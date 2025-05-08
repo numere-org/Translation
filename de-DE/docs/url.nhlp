@@ -41,10 +41,10 @@
 			nBYTES = url sURL -file=TARGETFILE
 			nBYTES = url sURL -file=SOURCEFILE up
 		</codeblock>
-		Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>"ftp://ftp.server.url/filename.ext"</code>
+		Die URL <code>sURL</code> ist dabei als Zeichenkette anzugeben. Die URL kann dabei eine gewöhnliche Webadresse sein; das Protokoll muss <code>http</code>, <code>https</code>, <code>ftp</code> oder <code>sftp</code> sein. Beim Hochladen auf einen FTP-Server muss die Zieldatei in der URL mit angegeben werden: <code>"ftp://ftp.server.tld/filename.ext"</code>
 		NumeRe verwendet TLS als Verschlüsselung, allerdings werden die übermittelten Zertifikate <em>nicht</em> validiert. Dieses Kommando eignet sich daher nicht zur Übermittlung sensibler Informationen.
 		Wenn auf der zugegriffenen Webseite JavaScript verwendet wird, so wird dieser Code <em>nicht</em> interpretiert. Hochdynamische Webseiten können demzufolge nur unvollständig heruntergeladen werden.
-		Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>"ftp://USERNAME:PASSWORD@FTP.URL"</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
+		Für die Verbindung auf einen FTP-Server kann ein Nutzername und ein Passwort erforderlich sein. Dieses kann entweder vor die URL gesetzt werden (<code>"ftp://USERNAME:PASSWORD@FTP.TLD"</code>, in diesem Fall wird beides im Klartext übermittelt), oder mit den Parametern <code>usr=USERNAME</code> und <code>pwd=PASSWORD</code> angegeben werden.
 		Für den Zugriff auf REST APIs ist es ggf. nötig, einen benutzerdefinierten HTTP-Header zu setzen. Mit <code>header={HTTP-HEADER}</code> können mehrere solcher Zeilen zugleich definiert werden. Falls etwas an die API übermittelt werden soll, kann dies an <code>payload=PAYLOAD</code> übergeben werden.
 		<example desc="Zugriff auf den 'macros'-Unterordner des CTAN FTPs und Anfrage an die GitHub-API zu den Meta-Daten der letzten NumeRe-Releases:">
 			url "ftp://ftp.fau.de/ctan/macros/"
@@ -52,6 +52,39 @@
 			url "https://api.github.com/repos/numere-org/NumeRe/releases" -set header={"Accept: application/vnd.github+json", "X-GitHub-Api-Version: 2022-11-28"}
 			[...]
 		</example>
-		<em>Siehe auch:</em> <a href="nhlp://database?frame=self">help database</a>
+		<em>Siehe auch:</em> <a href="nhlp://database?frame=self">help database</a> und <a href="nhlp://mail?frame=self">help mail</a>
+	</contents>
+</article>
+
+
+<article id="mail">
+	<title string="Senden von eMails" idxkey="mail" />
+	<keywords>
+		<keyword>mail</keyword>
+		<keyword>server</keyword>
+		<keyword>rcpt</keyword>
+		<keyword>from</keyword>
+		<keyword>cc</keyword>
+		<keyword>bcc</keyword>
+		<keyword>subject</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			VAL = mail MAILCONTENTS -set server=SMTPSERVER usr=USERNAME pwd=PASSWORD rcpt={RECIPIENTS}
+			VAL = mail MAILCONTENTS -set ... from=SENDERMAIL subject=SUBJECT cc={CC-RECIPIENTS} ...
+			VAL = mail MAILCONTENTS -set ... bcc={BCC-RECIPIENTS} ...
+		</syntax>
+		Mit dem Kommando <code>mail</code> kann eine Nur-Text-Nachricht an ein oder mehrere eMail-Empfänger über ein vorhandenes eMail-Konto verschickt werden. Dies kann beispielweise nützlich sein, wenn NumeRe automatisch Daten auswertet und dabei eine starke Abweichung feststellt, so dass ein Verantwortlicher der Messtechnik informiert werden muss.
+		Die Inhalt der eMail ist im Ausdruck <code>MAILCONTENTS</code> als Zeichenkette mitanzugeben. Es genügt der reine Inhalt. Es ist nicht nötig, einen Header oder eine trennende Leerzeile gemäß RFC 5322 vorzuhalten. NumeRe wird die Inhalte entsprechend RFC 5322 kombinieren und formatieren.
+		Um eine eMail zu schreiben, muss neben der Nachricht auch ein SMTP-Server (<code>server=SMTP</code>), sowie Zugangsdaten (<code>usr=USER</code> und <code>pwd=PASSWORD</code>) und ein oder mehrere Empfänger angegeben werden. Für letzteres spielt es keine Rolle, ob diese als normale Empfänger (<code>rcpt={...}</code>), als CC (<code>cc={...}</code>), als BCC (<code>bcc={...}</code>) oder in einer beliebigen Mischung angegeben werden.
+		Zusätzlich kann noch definiert werden, wer als Absender der Mail angegeben wird (<code>from=SENDER</code>) und was der Inhalt der Betreffzeile sein soll (<code>subject=SUBJECT</code>).
+		Insbesondere die Angabe des korrekten SMTP-Servers sowie des zugehörigen Ports kann herausfordernd sein. Für Gmail lautet hierfür die Adresse <code>server="smtps://smtp.gmail.com:465"</code>. Außerdem erfordern viele Mail-Anbieter inzwischen besondere Zwei- oder Multi-Faktor-Authentifizierungen, was in diesem Kontext nicht verwendet werden kann. Es besteht aber häufig noch die Möglichkeit, sogenannte App-Passwörter zu erstellen, die für dieses Kommando anstelle des Standard-Passworts verwendet werden.
+		NumeRe verwendet bei der Kommunikation TLS als Verschlüsselung, allerdings werden die übermittelten Zertifikate <em>nicht</em> validiert. Dieses Kommando eignet sich daher nicht zur Übermittlung sensibler Informationen. Die Verschlüsselungsmethode <code>STARTTLS</code> kann erreicht werden, indem der Server mit dem Protokoll <code>"smtp://"</code> (ohne das "s" am Ende) und einer der beiden Ports 465 oder 587 addressiert wird, z.B. <code>"smtp://smtp-mail.outlook.com:587"</code> (für Mails via Outlook).
+		Bei Erfolg gibt das Kommando die Zahl der übermittelten Zeichen zurück (diese setzen sich aus dem Inhalt der Nachricht und einem zusätzlichen Header zusammen und sind daher mehr als der reine Inhalt der Nachricht).
+		<example desc="Senden einer eMail via Gmail:">
+			mail "This is the content" -set server="smtps://smtp.gmail.com:465" usr="numere.developer@gmail.com" pwd="******" from="numere.developer@gmail.com" rcpt="mail.recipient@example.com" subject="A mail with content"
+			ans = 224
+		</example>
+		<em>Siehe auch:</em> <a href="nhlp://url?frame=self">help url</a>
 	</contents>
 </article>

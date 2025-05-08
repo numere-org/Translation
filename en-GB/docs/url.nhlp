@@ -41,10 +41,10 @@
 			nBYTES = url sURL -file=TARGETFILE
 			nBYTES = url sURL -file=SOURCEFILE up
 		</codeblock>
-		The URL <code>sURL</code> must be specified as a string. The URL can be an ordinary web address; the protocol must be <code>http</code>, <code>https</code>, <code>ftp</code> or <code>sftp</code>. When uploading to an FTP server, the destination file must be included in the URL: <code>"ftp://ftp.server.url/filename.ext"</code>
+		The URL <code>sURL</code> must be specified as a string. The URL can be an ordinary web address; the protocol must be <code>http</code>, <code>https</code>, <code>ftp</code> or <code>sftp</code>. When uploading to an FTP server, the destination file must be included in the URL: <code>"ftp://ftp.server.tld/filename.ext"</code>
 		NumeRe uses TLS as encryption, however the transmitted certificates are <em>not</em> validated. Therefore, this command is not suitable for transmitting sensitive information.
 		If JavaScript is used on the accessed web page, this code is <em>not</em> interpreted. As a result, highly dynamic web pages can only be downloaded incompletely.
-		A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>"ftp://USERNAME:PASSWORD@FTP.URL"</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
+		A username and password may be required to connect to an FTP server. This can either be placed in front of the URL (<code>"ftp://USERNAME:PASSWORD@FTP.TLD"</code>, in which case both are transmitted in plain text), or specified with the parameters <code>usr=USERNAME</code> and <code>pwd=PASSWORD</code>.
 		To access REST APIs, it may be necessary to set a user-defined HTTP header. Several such lines can be defined simultaneously with <code>header={HTTP-HEADER}</code>. If something is to be transferred to the API, this can be passed to <code>payload=PAYLOAD</code>.
 		<example desc="Access the 'macros' subfolder of the CTAN FTP and requesting the GitHub API to return the metadata about the latest releases of NumeRe:">
 			url "ftp://ftp.fau.de/ctan/macros/"
@@ -52,6 +52,39 @@
 			url "https://api.github.com/repos/numere-org/NumeRe/releases" -set header={"Accept: application/vnd.github+json", "X-GitHub-Api-Version: 2022-11-28"}
 			[...]
 		</example>
-		<em>See also:</em> <a href="nhlp://database?frame=self">help database</a>
+		<em>See also:</em> <a href="nhlp://database?frame=self">help database</a> and <a href="nhlp://mail?frame=self">help mail</a>
+	</contents>
+</article>
+
+
+<article id="mail">
+	<title string="Sending emails" idxkey="mail" />
+	<keywords>
+		<keyword>mail</keyword>
+		<keyword>server</keyword>
+		<keyword>rcpt</keyword>
+		<keyword>from</keyword>
+		<keyword>cc</keyword>
+		<keyword>bcc</keyword>
+		<keyword>subject</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			VAL = mail MAILCONTENTS -set server=SMTPSERVER usr=USERNAME pwd=PASSWORD rcpt={RECEPIENTS}
+			VAL = mail MAILCONTENTS -set ... from=SENDERMAIL subject=SUBJECT cc={CC-RECEPIENTS} ...
+			VAL = mail MAILCONTENTS -set ... bcc={BCC-RECEPIENTS} ...
+		</syntax>
+		The <code>mail</code> command can be used to send a plain text message to one or more email recipients via an existing email account. This can be useful, for example, if NumeRe automatically evaluates data and detects a significant deviation, so that a person responsible for the measurement technology must be informed.
+		The content of the e-mail must be entered as a character string in the <code>MAILCONTENTS</code> option. The content alone is sufficient. It is not necessary to provide a header or a separating blank line in accordance with RFC 5322. NumeRe will combine and format the content according to RFC 5322.
+		In order to write an e-mail, an SMTP server (<code>server=SMTP</code>), access data (<code>usr=USER</code> and <code>pwd=PASSWORD</code>) and one or more recipients must be specified in addition to the message. For the latter, it does not matter whether these are specified as normal recipients (<code>rcpt={...}</code>), as CC (<code>cc={...}</code>), as BCC (<code>bcc={...}</code>) or in an arbitrary combination thereof.
+		You can also define who is to be the sender of the mail (<code>from=SENDER</code>) and what the content of the subject line should be (<code>subject=SUBJECT</code>).
+		Specifying the correct SMTP server and the corresponding port can be particularly challenging. For Gmail, the address for this is <code>server="smtps://smtp.gmail.com:465"</code>. In addition, many mail providers now require special two-factor or multi-factor authentication, which cannot be used in this context. However, it is often still possible to create so-called app passwords, which are used for this command instead of the standard password.
+		NumeRe uses TLS encryption for communication, but the transmitted certificates are <em>not</em> validated. This command is therefore not suitable for transmitting sensitive information. The <code>STARTTLS</code> encryption method can be achieved by addressing the server with the protocol <code>"smtp://"</code> (without the "s" at the end) and one of the two ports 465 or 587, e.g. <code>"smtp://smtp-mail.outlook.com:587"</code> (for mails via Outlook).
+		If successful, the command returns the number of characters transmitted (these are made up of the content of the message and an additional header and are therefore more than the pure content of the message).
+		<example desc="Sending an email via Gmail:">
+			mail "This is the content" -set server="smtps://smtp.gmail.com:465" usr="numere.developer@gmail.com" pwd="******" from="numere.developer@gmail.com" rcpt="mail.recipient@example.com" subject="A mail with content"
+			ans = 224
+		</example>
+		<em>See also:</em> <a href="nhlp://url?frame=self">help url</a>
 	</contents>
 </article>
