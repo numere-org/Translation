@@ -108,13 +108,16 @@ ERR_MUP_32_LOCALE=Decimal separator character is identical to the argument separ
 ERR_MUP_33_UNEXPECTED_CONDITIONAL=The "$TOK$" operator has to succeed on a closing parenthesis or be enclosed in parentheses.
 ERR_MUP_34_MISSING_ELSE_CLAUSE=The "If-Then-Else" (A?x:y) operator has no "else" case.
 ERR_MUP_35_MISPLACED_COLON=Misplaced colon at position $POS$. Forgotten data object or invalid use of the "If-Then-Else" (A?x:y) operator?
-ERR_MUP_36_TYPE_NO_STR=A used value is not a string.
-ERR_MUP_37_TYPE_NO_VAL=A used value is not numerical.
-ERR_MUP_38_TYPE_MISMATCH=Value types do not match or operation is not supported for the used types.
-ERR_MUP_39_TYPE_MISMATCH_OOB=Value types do not match or index of underlying array is out of bounds.
-ERR_MUP_40_ASSIGNED_TYPE_MISMATCH=Cannot assign a value of a different type to an already initialized variable. Use clusters to enable mixed data types.
-ERR_MUP_41_METHOD_ERROR=The method "$TOK$" does not exist, is not defined for the used types or too few arguments have been supplied.
-ERR_MUP_42_INTERNAL_ERROR=Internal Error.
+ERR_MUP_36_TYPE_NO_STR=A value with the type "$TOK$" cannot be interpreted as string.
+ERR_MUP_37_TYPE_NO_VAL=A value with the type "$TOK$" cannot be interpreted as numerical value.
+ERR_MUP_38_TYPE_NO_CAT=A value with the type "$TOK$" cannot be interpreted as categorical value.
+ERR_MUP_39_TYPE_NO_ARR=A value with the type "$TOK$" cannot be interpreted as array.
+ERR_MUP_40_TYPE_MISMATCH=The operation "$TOK$" is not defined with the used data types.
+ERR_MUP_41_TYPE_MISMATCH_OOB=The operation "$TOK$" is not defined with the used data types or index of underlying array is out of bounds.
+ERR_MUP_42_ASSIGNED_TYPE_MISMATCH=Cannot assign a value of a different type to an already initialized variable. Use clusters to enable mixed data types.
+ERR_MUP_43_METHOD_ERROR=The method "$TOK$" does not exist, is not defined for the used types or too few arguments have been supplied.
+ERR_MUP_44_NOT_IMPLEMENTED=The operation "$TOK$" is not defined.
+ERR_MUP_45_INTERNAL_ERROR=Internal Error.
 # STD-Errors
 # ====================
 ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via thre reporting functionality in the "Help" menu or via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues> about this issue.

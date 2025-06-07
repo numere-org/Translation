@@ -108,13 +108,16 @@ ERR_MUP_32_LOCALE=Dezimaltrennzeichen ist identisch zum Argument-Trennzeichen.
 ERR_MUP_33_UNEXPECTED_CONDITIONAL=Der "$TOK$"-Operator muss auf eine schließende Klammer folgen, bzw. Teil einer Klammer sein.
 ERR_MUP_34_MISSING_ELSE_CLAUSE=Der "Wenn-Dann-Sonst"-(A?x:y)-Operator besitzt keinen "Sonst"-Fall.
 ERR_MUP_35_MISPLACED_COLON=Falsch gesetzter Doppelpunkt an der Stelle $POS$. Datenobjekt vergessen oder falsch verwendeter "Wenn-Dann-Sonst"-(A?x:y)-Operator?
-ERR_MUP_36_TYPE_NO_STR=Ein verwendeter Wert ist kein String.
-ERR_MUP_37_TYPE_NO_VAL=Ein verwendeter Wert ist nicht numerisch.
-ERR_MUP_38_TYPE_MISMATCH=Die Typen der verwendeten Werte passen nicht zusammen oder die Operation ist nicht für die verwendeten Typen definiert.
-ERR_MUP_39_TYPE_MISMATCH_OOB=Die Typen der verwendeten Werte passen nicht zusammen oder der Index des zugrundeliegenden Arrays ist außerhalb des gültigen Bereichs.
-ERR_MUP_40_ASSIGNED_TYPE_MISMATCH=Einer bereits initialisierten Variable kann kein Wert eines anderen Typs zugewiesen werden. Setze Cluster ein, um gemischte Datentypen zu verwenden.
-ERR_MUP_41_METHOD_ERROR=Die Methode "$TOK$" existiert nicht, ist für den verwendeten Typ nicht definiert oder es wurden zu wenig Argumente verwendet.
-ERR_MUP_42_INTERNAL_ERROR=Interner Fehler.
+ERR_MUP_36_TYPE_NO_STR=Ein Wert mit dem Typ "$TOK$" kann nicht als String interpretiert werden.
+ERR_MUP_37_TYPE_NO_VAL=Ein Wert mit dem Typ "$TOK$" kann nicht als numerischer Wert interpretiert werden.
+ERR_MUP_38_TYPE_NO_CAT=Ein Wert mit dem Typ "$TOK$" kann nicht als kategorialer Wert interpretiert werden.
+ERR_MUP_39_TYPE_NO_ARR=Ein Wert mit dem Typ "$TOK$" kann nicht als Array interpretiert werden.
+ERR_MUP_40_TYPE_MISMATCH=Die Operation "$TOK$" ist mit den verwendeten Datentypen nicht definiert.
+ERR_MUP_41_TYPE_MISMATCH_OOB=Die Operation "$TOK$" ist mit den verwendeten Datentypen nicht definiert oder der Index des zugrundeliegenden Arrays ist außerhalb des gültigen Bereichs.
+ERR_MUP_42_ASSIGNED_TYPE_MISMATCH=Einer bereits initialisierten Variable kann kein Wert eines anderen Typs zugewiesen werden. Setze Cluster ein, um gemischte Datentypen zu verwenden.
+ERR_MUP_43_METHOD_ERROR=Die Methode "$TOK$" existiert nicht, ist für den verwendeten Typ nicht definiert oder es wurden zu wenig Argumente verwendet.
+ERR_MUP_44_NOT_IMPLEMENTED=Die Operation "$TOK$" ist nicht definiert.
+ERR_MUP_45_INTERNAL_ERROR=Interner Fehler.
 # STD-Errors
 # ========================
 ERR_STD_BADALLOC=NumeRe konnte nicht ausreichend Speicher für die aktuelle Aufgabe reservieren. Versuche Speicher freizugeben, indem du überzählige Graphen schließt oder Tabellen entfernst, oder versuche, weniger Speicher zu verwenden. Du kannst fortfahren, es kann aber zu weiteren Problemen kommen. Ziehe in Erwägung, NumeRe neu zu starten. Bitte informiere uns über die Reporting-Funktion im "Hilfe"-Menü oder unter <dev@numere.org> oder <https://github.com/numere-org/NumeRe/issues> über dieses Problem.
