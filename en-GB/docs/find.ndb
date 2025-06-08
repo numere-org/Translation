@@ -111,6 +111,7 @@ datagrid~Generates a data grid~daten mesh surf dens grad cont~help datagrid
 date(TIME,TYPE)~Formats TIME corresponding to TYPE~date() datum zeit formatieren time~date(
 datetime(x)~Converts x into a date-time value~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 datetimepicker~Inserts a date-and-time picker field into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
+days(x)~Converts x into a duration~days() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~days(
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
 Debugger~Enables error detection via code inspection during runtime~fehlersuche debugging error bugs throw breakpoint conditional~help debugger
 declare~Declares a file-specific constant in EX for use in the current file~define macro makro filestatic constant konstante~help declare
@@ -216,6 +217,7 @@ hermite(n,x)~Numerical value of the Hermite polynomial with the order n >= 0 at 
 hist2d~Generates a 2D histogram of a (x,y,z) data set. Expects either a data grid or (x,y,z) tupels~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter~help hist2d
 hist~Generates a histogram~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
 hline~Draws a (single or double) horizontal line~formatierung ausgabe trenner abstand doppellinie separator~help hline
+hours(x)~Converts x into a duration~hours() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~hours(
 i16(x)~Converts the value x into the data type "value.i16"~i16() integer data type datentyp convert konvertieren~i16(
 i32(x)~Converts the value x into the data type "value.i32"~i32() integer data type datentyp convert konvertieren~i32(
 i64(x)~Converts the value x into the data type "value.i64"~i64() integer data type datentyp convert konvertieren~i64(
@@ -307,6 +309,7 @@ mesh3d~Generates a 3D meshgrid plot~meshgrid3d gitterplot dreidimensional~help m
 mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
 minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
+minutes(x)~Converts x into a duration~minutes() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~minutes(
 movavg(MAT,n,m)~Moves a window along the matrix and calculates the average~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Moves (depending on the actual expression) entries/columns/subtables in tables or complete files~verschieben tabellen dateien files~help move
 movmax(MAT,n,m)~Moves a window along the matrix and determines the maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(
@@ -393,6 +396,7 @@ save~Saves the passed object~saving daten datei file data functions settings opt
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 sec(x)~ Secant of x~sec() secant trigonometrische funktionen trigonometrie trigonometry trigonometric functions~sec(
 sech(x)~ Hyperbolic secant of x~sech() areasecant trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~sech(
+seconds(x)~Converts x into a duration~seconds() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~seconds(
 seek~Reads a section of a WAVE audio file~streamable streamen streaming seeking suchen audiodatei file~help seek
 select(MAT,MAT,MAT)~Extracts values from the first matrix MAT using the indices from the second and third matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Inserts a separator object into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -558,6 +562,7 @@ voronoinoise(x,y,z,seed,freq,displ,useDist)~Calculates the Voronoi noise at the 
 warn~Displays the passed string as a warning~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Returns the weekday number associated with the passed time value~weekday() day of week calendar date time datum kalendar~weekday(
 weeknum(VAL)~Returns the calendar week number associated with the passed time value~weeknum() calendarweek kalenderwoche date time datum~weeknum(
+weeks(x)~Converts x into a duration~weeks() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~weeks(
 weibull_cdf_p(x,a,b)~Returns the cumulative distribution function at x of the Weibull distribution with scale a and exponent b~weibull distribution function random~weibull_cdf_p(
 weibull_cdf_q(x,a,b)~Returns the complementary cumulative distribution function at x of the Weibull distribution with scale a and exponent b~weibull distribution function random~weibull_cdf_q(
 weibull_inv_p(p,a,b)~Returns the inverse of the cumulative distribution function at p of the Weibull distribution with scale a and exponent b~weibull distribution function random inverse~weibull_inv_p(
@@ -570,6 +575,7 @@ workpath~Changes the current working directory for this session~workpath working
 write~Writes the passed strings to a file~dateien files schreiben zeichenketten strings textdateien textual files strings zeichenketten txt import load open fopen fread fwrite read~help write
 xor(x,y,z,...)~Connects its arguments with "|||"~logik logic oder exclusives xor() exklusives ausschliessendes ausschließendes~xor(
 Y(l,m,theta,phi)~Real part of the spherical harmonics with the orders l >= 0 and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
+years(x)~Converts x into a duration~years() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~years(
 Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position rho at the angle phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix~zero(
 zeroes~Calls the function for numerical calculation of the intersection with zero of functions and data sets~schnittpunkt nullstellen roots~help zeroes

@@ -112,6 +112,7 @@ date(TIME,TYP)~Formatiert die Zeitangabe TIME gemäß TYP~date() datum zeit form
 Dateiexplorer~"list -files" listet Dateien (inkl. ihrer Größen), die in den NumeRe-Standardordnern vorliegen, siehe auch "help explorer"~files dateien dateiexplorer dateisystem ausgaben~help explorer
 datetime(x)~Konvertiert x in einen Zeitwert~datetime() datum date zeit time konvertieren umwandeln convert~datetime(
 datetimepicker~Fügt ein Feld zur Datums-und Zeitauswahl in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help datetimepicker
+days(x)~Konvertiert x in eine Dauer~days() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~days(
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Ermöglicht Fehlersuche durch Code-Inspektion zur Laufzeit~fehlersuche debugging bugs throw error breakpoint conditional~help debugger
 declare~Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei~define macro makro filestatic constant konstante~help declare
@@ -217,6 +218,7 @@ hermite(n,x)~Berechnet den numerischen Wert der Hermite-Polynome der Ordnung n a
 hist2d~Berechnet ein 2D-Histogramm aus einem gegebenen (x,y,z)-Datensatz. Erwartet entweder ein Datengitter oder (x,y,z)-Tupel~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken datengitter~help hist2d
 hist~Berechnet einen Histogramm-Datensatz aus einem gegebenen Datensatz~histogramm rubriken haeufigkeit häufigkeit spektrum stats statistiken~help hist
 hline~Zeichnet eine horizontale (einfache oder doppelte) Linie~formatierung ausgabe trenner abstand doppellinie separator~help hline
+hours(x)~Konvertiert x in eine Dauer~hours() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~hours(
 i16(x)~Konvertiert den Wert x in den Datentyp "value.i16"~i16() integer data type datentyp convert konvertieren~i16(
 i32(x)~Konvertiert den Wert x in den Datentyp "value.i32"~i32() integer data type datentyp convert konvertieren~i32(
 i64(x)~Konvertiert den Wert x in den Datentyp "value.i64"~i64() integer data type datentyp convert konvertieren~i64(
@@ -307,6 +309,7 @@ mesh3d~Erstellen eines 3D-Gitterplots~meshgrid3d gitterplot dreidimensional~help
 mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
 minpos(x,y,z,...)~Index des Minimums der Werte x,y,z,...~minimum position min() minpos() minimal value~minpos(
+minutes(x)~Konvertiert x in eine Dauer~minutes() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~minutes(
 movavg(MAT,n,m)~Schiebt ein Fenster über die Matrix und berechnet den Mittelwert~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Verschiebt je nach Ausdruck Einträge/Spalten/Untertabellen in Tabellen oder Dateien, siehe "help move"~verschieben tabellen dateien files~help move
 movmax(MAT,n,m)~Schiebt ein Fenster über die Matrix und bestimmt das Maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(
@@ -393,6 +396,7 @@ save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving 
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 sec(x)~ sekans von x~sec() sekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~sec(
 sech(x)~ areasekans von x~sech() areasekans trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic~sech(
+seconds(x)~Konvertiert x in eine Dauer~seconds() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~seconds(
 seek~Liest ein Abschnitt einer WAVE-Datei~streamable streamen streaming seeking suchen audiodatei file~help seek
 select(MAT,MAT,MAT)~Extrahiert Werte aus der ersten Matrix MAT mit Indices aus zweiter und dritter Matrix~extrahieren matrix extract selecting select() simultane extraction extraktion~select(
 separator~Fügt ein Separator-Objekt in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -557,6 +561,7 @@ voronoinoise(x,y,z,seed,freq,displ,useDist)~Berechnet Voronoi-Noise an der Stell
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
 weekday(VAL,LOG)~Gibt die Nummer des Wochentages des übergebenen Zeitwertes tTime zurück~weekday() day of week calendar date time datum kalendar~weekday(
 weeknum(VAL)~Gibt die Kalenderwochennummer des übergebenen Zeitwertes zurück~weeknum() calendarweek kalenderwoche date time datum~weeknum(
+weeks(x)~Konvertiert x in eine Dauer~weeks() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~weeks(
 weibull_cdf_p(x,a,b)~Liefert die kumulative Verteilungsfunktion bei x der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random~weibull_cdf_p(
 weibull_cdf_q(x,a,b)~Liefert die komplementäre kumulative Verteilungsfunktion bei x der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random inverse~weibull_cdf_q(
 weibull_inv_p(p,a,b)~Liefert die Umkehrung der kumulativen Verteilungsfunktion bei p der Weibull-Verteilung mit Skalierung a und Exponent b~weibull distribution function random inverse~weibull_inv_p(
@@ -570,6 +575,7 @@ workpath~Ändert das Arbeitsverzeichnis der aktuellen NumeRe-Sitzung~workpath wo
 write~Ermöglicht das Schreiben in eine Datei~dateien files schreiben zeichenketten strings textdateien textual files txt import load open fopen fread fwrite read~help write
 xor(x,y,z,...)~Verknüpft die Argumente mit "|||"~logik logic oder ausschließendes ausschliessendes xor() exclusives exklusives~xor(
 Y(l,m,theta,phi)~Realteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] der Winkel theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y()~Y(
+years(x)~Konvertiert x in eine Dauer~years() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~years(
 Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der Stelle rho unter dem Winkel phi~astigmatismus astigmatism aberration chromatic chromatische koma~Z(
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix~zero(
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen roots~help zeroes
