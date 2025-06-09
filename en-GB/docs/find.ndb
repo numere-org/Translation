@@ -115,6 +115,7 @@ days(x)~Converts x into a duration~days() minutes minuten sekunden stunden hours
 dblfact(n)~Calculates the double factorial of the integral number n [n!!]~doppelfakultaet doppelfakultät dblfacul() dblfact() factorial~dblfact(
 Debugger~Enables error detection via code inspection during runtime~fehlersuche debugging error bugs throw breakpoint conditional~help debugger
 declare~Declares a file-specific constant in EX for use in the current file~define macro makro filestatic constant konstante~help declare
+decode_base_n(STR,n)~Decodes the base-n encoded string~encode_base_n() decode_base_n() base64 encodes decodes enkodieren dekodieren mime~decode_base_n(
 dectobase(sBase,nDecVal)~Converts the number nDecVal from the decimal system to the base and returns the result as a string~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Defines custom functions~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Degree value of x [rad]~todegree gradwert umrechnen rad2deg() degree()~degree(
@@ -138,6 +139,7 @@ ellipticD(x,k)~Value of the elliptic integral D(x,k)~elliptisches integral~ellip
 ellipticE(x,k~Value of the elliptic integral E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~Value of the elliptic integral F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Value of the elliptic integral Pi(x,n,k)~elliptisches integral~ellipticPi(
+encode_base_n(STR,f,n)~Encodes the passed string into the base-n format~encode_base_n() decode_base_n() base64 encodes decodes enkodieren dekodieren mime~encode_base_n(
 endswith(STR,STR)~Returns true, if the second substring is found at the end of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~endswith(
 erf(x)~Value of the gaussian error function at the position x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Value of the complementary gaussian error function (erfc(x) := 1-erf(x)) at the position x~gausssche gaußsche komplementär fehlerfunktion errorfunction erfc()~erfc(

@@ -116,6 +116,7 @@ days(x)~Konvertiert x in eine Dauer~days() minutes minuten sekunden stunden hour
 dblfact(n)~Doppelfakultät der natürlichen Zahl n [n!!]~doppelfakultaet factorial doppelfakultät dblfacul() dblfact()~dblfact(
 Debugger~Ermöglicht Fehlersuche durch Code-Inspektion zur Laufzeit~fehlersuche debugging bugs throw error breakpoint conditional~help debugger
 declare~Deklariert eine Datei-spezifische Konstante in EX für die Verwendung in der aktuellen Datei~define macro makro filestatic constant konstante~help declare
+decode_base_n(STR,n)~Dekodiert die im Base-N-Format enkodierte Zeichenkette~encode_base_n() decode_base_n() base64 encodes decodes enkodieren dekodieren mime~decode_base_n(
 dectobase(sBase,nDecVal)~Konvertiert die Zahl nDecVal aus dem Dezimalsystem in die Basis und gibt das Ergebnis als Zeichenkette zurück~hexadezimal hexadecimal octal oktal binär binary dectobase()~dectobase(
 define~Definiert eine eigene Funktion, siehe "help define"~funktionen definieren neue definition undefine ifndefined redefine~help define
 degree(x)~Gradwert von x [Radiant]~todegree gradwert rad2deg() umrechnen degree()~degree(
@@ -139,6 +140,7 @@ ellipticD(x,k)~Wert des elliptischen Integrals D(x,k)~elliptisches integral~elli
 ellipticE(x,k)~Wert des elliptischen Integrals E(x,k)~elliptisches integral~ellipticE(
 ellipticF(x,k)~ Wert des elliptischen Integrals F(x,k)~elliptisches integral~ellipticF(
 ellipticPi(x,n,k)~Wert des elliptischen Integrals Pi(x,n,k)~elliptisches integral~ellipticPi(
+encode_base_n(STR,f,n)~Enkodiert die übergebene Zeichenkette im Base-N-Format~encode_base_n() decode_base_n() base64 encodes decodes enkodieren dekodieren mime~encode_base_n(
 endswith(STR,STR)~Gibt true zurück, wenn der zweite Substring am Ende des ersten Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~endswith(
 erf(x)~Wert der gauß'schen Fehlerfunktion an der Stelle x~gausssche gaußsche fehlerfunktion errorfunction erf()~erf(
 erfc(x)~Wert der komplementären gauß'schen Fehlerfunktion (erfc(x) := 1-erf(x)) an der Stelle x~gausssche complementary gaußsche fehlerfunktion errorfunction erfc()~erfc(
