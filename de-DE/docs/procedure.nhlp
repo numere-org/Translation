@@ -46,7 +46,7 @@
 		<em>Hinweis:</em> In älteren Versionen von NumeRe wurden Argumente direkt in den Code kopiert und waren damit automatisch Referenzen. Das galt allerdings auch für Literalkonstanten, was für Überraschungen sorgen konnte, da diese nicht direkt überschrieben werden können. Aus ebendiesem und Gründen der leichteren Les- und Wartbarkeit wurden die zu deklarierenden Referenzen (<code>&amp;</code>) eingefügt. Das alte Verhalten kann allerdings wiederhergestellt werden, wenn die Prozedur als <code>macro</code> geflagt wird. Das ist insbesondere im Kontext von <a href="nhlp://plugin?frame=new">Plugins</a> nötig.
 		<h>Lokale und globale Variablen</h>
 		Neue Variablen, die innerhalb von Prozeduren deklariert werden, sind <em>automatisch global</em> und können von allen Prozeduren verwendet werden. Wenngleich das bequem erscheint und manchmal unumgänglich ist, so sollte es doch wegen möglicher Nebeneffekte vermieden und stattdessen auf lokale Variablen zurückgegriffen werden.
-		Um lokale Variablen zu deklarieren, müssen die <a href="nhlp://proccmd?frame=new">Kommandos</a> <code>var</code> (numerische Variablen), <code>str</code> (Zeichenketten), <code>tab</code> (Tabellen) und <code>cst</code> (Cluster) verwendet werden. Es können durch eine Komma-separierte Liste auch gleich mehrere Variablen pro Kommando deklariert werden. Dabei können auch gleich Initialwerte für die neuen Variablen in der Form <code>VAR = VALUE, VAR = VALUE, ...</code> deklariert werden. Ebenso können diese Kommandos mehrmals pro Prozedur auftreten.
+		Um lokale Variablen zu deklarieren, müssen die <a href="nhlp://proccmd?frame=new">Kommandos</a> <code>var</code> (numerische Variablen), <code>str</code> (Zeichenketten), <code>tab</code> (Tabellen), <code>cst</code> (Cluster) und <code>obj</code> (Objekte) verwendet werden. Es können durch eine Komma-separierte Liste auch gleich mehrere Variablen pro Kommando deklariert werden. Dabei können auch gleich Initialwerte für die neuen Variablen in der Form <code>VAR = VALUE, VAR = VALUE, ...</code> deklariert werden. Ebenso können diese Kommandos mehrmals pro Prozedur auftreten.
 		<h>Dateistruktur</h>
 		Prozeduren müssen einzeln als "NumeRe-Prozedur" (*.nprc) im Prozedurenordner vorliegen, wobei der Dateiname mit dem Prozedurennamen übereinstimmen muss. Wer sicher gehen will, kann die Prozedur(en) auch in ein NumeRe-Script in einen <code>&lt;install&gt; ... &lt;endinstall&gt;</code>-Block schreiben und das Script mit dem zusätzlichen Parameter <code>install</code> oder durch <code>install SCRIPT</code> ausführen. NumeRe wird dann automatisch eine (oder mehrere) NumeRe-Prozedur(en) mit dem passenden Dateinamen und am richtigen Ort anlegen. (NumeRe kann auch Prozeduren aus anderen Ordnern laden, wenn der absolute oder relative Dateipfad in <em>einfachen</em> Anführungszeichen als Prozedurname angegeben wird: <code>$'PFAD_ZUR_PROZEDUR'(VARLIST)</code>. Wegen der Fehleranfälligkeit solch langer Dateinamen wird allerdings davon abgeraten.)
 		Es können auch mehrere Prozeduren in eine Datei gefasst werden, so lange eine davon den Namen der Datei trägt. Die weiteren Prozeduren können dann aus der namensgebenden Prozedur mit der speziellen Syntax <code>$thisfile~...</code> (s.u.) aufgerufen werden.
@@ -119,6 +119,7 @@
 		<keyword>str</keyword>
 		<keyword>tab</keyword>
 		<keyword>cst</keyword>
+		<keyword>obj</keyword>
 		<keyword>this</keyword>
 		<keyword>msg</keyword>
 		<keyword>main</keyword>
@@ -128,7 +129,8 @@
 			var VAR1 = VAL1, ...
 			str STR1 = SVAL1, ...
 			tab TABLE1() = {VAL}, ...
-			cst CLUSTER1{} = {VAL}, ...\n
+			cst CLUSTER1{} = {VAL}, ...
+			obj OBJ1 = DEF1, ...\n
 			return
 			return {VAL}
 			return TABLE()
@@ -150,6 +152,7 @@
 			<item node="str STRINGVARS">Dies deklariert prozedureninterne Zeichenkettenvariablen, die nur in der aktuellen Prozedur verwendet werden können. Auch hier können die Initialwerte der Variablen in der Form <code>str SVAR1 = ZEICHENKETTE, SVAR2 = ZEICHENKETTE</code> angegeben werden.</item>
 			<item node="tab TABLES">Dies deklariert prozedureninterne Tabellen, die nur in der aktuellen Prozedur verwendet werden können. Es können auch gleich die Initialwerte der Variablen in der Form <code>tab TAB1() = {WERTE}, TAB2() = OTHERTAB(), ...</code> angegeben werden.</item>
 			<item node="cst CLUSTER">Dies deklariert prozedureninterne Cluster, die nur in der aktuellen Prozedur verwendet werden können. Es können auch gleich die Initialwerte der Variablen in der Form <code>cst CST1{} = {WERTE}, CST2{} = {WERTE}, ...</code> angegeben werden.</item>
+			<item node="obj OBJECTS">Dies deklariert prozedureninterne Objekte, die nur in der aktuellen Prozedur verwendet werden können. Es können auch gleich die Initialwerte der Variablen in der Form <code>obj OBJ1 = OBJ-DEF, OBJ2 = OBJ-DEF, ...</code> angegeben werden, wobei <code>OBJ-DEF</code> eine Objektdefinition mittels einer Funktion wie <code>dictstruct()</code> oder eine Objekt-Kopie eines bereits existierenden Objekts bezeichnet.</item>
 			<item node="return WERT">Erreicht NumeRe während der Auswertung dieses Kommando, so verlässt NumeRe die Prozedur an dieser Stelle (egal, ob dieses Kommando inmitten oder am Ende einer Prozedur erscheint. Kommandos, die in den darauffolgenden Zeilen stehen, werden nicht mehr ausgeführt). <code>return</code> kann auch mehrfach in einer Prozedur verwendet werden, z.B. um den Rückgabewert von einer Bedingung abhängig zu machen. Ebenso ist dieses Kommando nicht zwingend erforderlich; Prozeduren geben standardmäßig den Wert <code>true</code> zurück, wenn kein <code>return</code> oder ein <code>return</code> ohne Wert gefunden wurde. WERT kann dabei alle Variablentypen umfassen, die NumeRe kennt. (<em>Hinweis:</em> <code>return TAB()</code> wird nur eine Tabelle zurückgeben, wenn der Rückgabewert auch von einer Tabelle aufgenommen wird. Sonst wird <code>TAB()</code> als <code>true</code> (nicht-leere Tabelle) oder <code>false</code> (leere Tabelle) interpretiert.) Ein spezieller Wert ist <code>void</code>. Dieser teilt NumeRe mit, dass die Prozedur definitiv keinen Rückgabewert besitzt.</item>
 			<item node="readline">Bietet die Möglichkeit, (im Gegensatz zu <code>??</code>) eine formatierte Eingabe abzufragen. Parameter sind <code>-asstr</code> (wandelt die Eingabe direkt in eine Zeichenkette um), <code>-msg=NACHRICHT</code> (Schreibt die NACHRICHT an den Anfang der Zeile, z.B. als Erläuterung) und <code>-dflt=STANDARD</code> (Definiert einen Defaultwert STANDARD). Die Eingabe kann durch <code>VAR = readline</code> direkt in eine Variable gespeichert werden.</item>
 			<item node="namespace NSP">Wechselt an dieser Stelle in den Namensraum NSP. Wenn für NSP <code>main</code> oder nichts angegeben wird, wechselt NumeRe in den globalen Namensraum; mit <code>this</code> in den Namensraum der aktuellen Prozedur. <code>thisfile</code> beschränkt den Namensraum auf die aktuelle Datei.</item>

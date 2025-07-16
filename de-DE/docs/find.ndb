@@ -128,6 +128,7 @@ detect~Erkennt Strukturen in einem 2D-Datengitter und speichert selbige in der F
 diag(x,y,z,...)~Erzeugt eine Diagonalmatrix mit x,y,z,... als Hauptdiagonale, siehe "help matop"~diag() matrix diagonal~diag(
 diagonalize(MAT)~Diagonalisiert die quadratische Matrix MAT, siehe "help matop"~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
 dialog~Erzeugt ein Dialogfenster zur Interaktion mit dem Benutzer~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog
+dictstruct(STR1,STR2)~Erzeugt eine DictStruct-Instanz~dictstruct() object dictionary structure struktur~dictstruct(
 diff~numerische Differentiation einer gegebenen Funktion, siehe "help diff"~ableiten differenzieren differentieren ableitung differentiation~help diff
 draw3d~3D-Zeichenmodus, der die Darstellung primitiver Objekte im dreidimensionalem Raum erlaubt~zeichnen drawings anmerkungen annotations zeichnungen~help draw3d
 draw~Zeichenmodus, der die Darstellung primitiver Objekte und das Anzeigen von Text erlaubt~zeichnen drawings anmerkungen annotations zeichnungen~help draw
@@ -161,6 +162,7 @@ f64(x)~Konvertiert den Wert x in den Datentyp "value.f64"~f64() floating point f
 factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()~factorial(
 fft2d~Schnelle 2D-Fourier-Transformation eines Datengitters~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
 fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
+file(STR1,STR2)~Erzeugt Objekt-Instanzen vom Typ file~file() object filestream fstream~file(
 filter(MAT,KERNEL,MODE)~Wendet einen frei definierbaren Filterkernel KERNEL auf die Matrix MAT an. Der Parameter MODE definiert dabei das Verhalten an den Matrixgrenzen. Mit MODE = 0 wird der Randwert der Matrix festgehalten (boundary clamp), mit MODE = 1 werden die Randwerte gespiegelt (boundary reflection).~filter kernel matrixfilter matrix boundary faltung convolution~filter(
 findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurück, deren Spaltenüberschrift mit STR2 übereinstimmen~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
@@ -333,6 +335,7 @@ normalize(MAT)~Normiert die Werte der Matrix MAT auf den Bereich [-1,1]~normiere
 nrows~Enthält die Zahl der Zeilen beim aktuellen Datenzugriff~rows dataaccess end number~nrows
 num(x,y,z,...)~Zahl der gültigen Argumente x,y,z,... Kann auch auf Zeichenketten angewendet werden~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()~num(
 NumeRe v $$$~Deine NumeRe-Distribution befindet sich hier: $$$~numere programm dateipfad filepath version~"NumeRe v"+#version()+" is located at "+#<>
+obj~Definiert den lokalen Objekt-Satz einer Prozedur~procedure local variables objects classes classdef~help obj
 odesolve~Löst die als Ausdruck übergebenen Differentialgleichungen erster Ordnung numerisch, siehe "help odesolve"~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
 one(n,m)~Erzeugt eine n x m-Matrix, die mit Einsen gefüllt ist, siehe "help matop"~one() matrix~one(
 or(x,y,z,...)~Verknüpft die Argumente mit "||"~logik logic oder~or(
@@ -357,6 +360,7 @@ psi_n(n,x)~Berechnet den Wert der Polygammafunktion der Ordnung n and der Stelle
 pso~Verwendet einen Partikelschwarm-Optimierer, um das globale Minimum im Ausdruck zu finden~particle swarm optimizer partikelschwarmoptimierer minimal extremal extremum optimum optimal optimieren~help pso
 pulse~Bestimmt die Pulseigenschaften des übergebenen Datensatzes~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 qrcode~Erzeugt einen QR-Code aus dem Inhalt der übergebenen Zeichenkette~barcode quick response code matrixcode~help qrcode
+queue(ARG)~Erzeugt eine Objekt-Instanz vom Typ queue~queue() deque object lifo warteliste~queue(
 quit~Beendet NumeRe~schliessen close exit beenden~quit
 radian(a)~Bogenmaßwert von Winkel a [Grad]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Fügt eine Radio-Group in ein Window-Layout ein~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -369,7 +373,9 @@ rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunkti
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Gibt den Wert der Dichte der Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_pdf(
 rayleigh_rd(sigma,n)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
+readjson(STR)~Liest den Inhalt der JSON-Datei in ein DictStruct~readjson() object dictionary structure struktur dom~readjson(
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
+readxml(STR)~Liest den Inhalt der XML-Datei in ein DictStruct~readxml() object dictionary structure struktur dom~readxml(
 read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
@@ -422,6 +428,7 @@ spinbut~Fügt ein Spin-Button-Objekt in ein Window-Layout ein~spinctrl windowsys
 spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion~help spline
 split(STR,CHAR,KEEP)~Teilt die Zeichenkette STR an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens~split(
 sqrt(x)~Wurzel von x~wurzel root sqrt()~sqrt(
+stack(ARG)~Erzeugt eine Objekt-Instanz vom Typ stack~stack() object fifo stapel~stack(
 startswith(STR,STR)~Gibt true zurück, wenn der zweite Substring am Anfang des ersten Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~startswith(
 start~Ein NumeRe-Script (*.nscr) ausführen, siehe "help script"~starten laden plugins installation installieren execute run~help start
 statictext~Fügt einen statischen Text in ein Window-Layout ein~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window

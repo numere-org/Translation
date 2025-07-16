@@ -127,6 +127,7 @@ detect~Detects structures in a 2D datagrid and stores them as (x,y) in the targe
 diag(x,y,z,...)~Generates a diagonal matrix with x,y,z,... on its main diagonal~diag() matrix diagonal~diag(
 diagonalize(MAT)~Diagonalizes the quadratic matrix MAT~diagonalisieren diagonalize() matrix eigenvalues eigenvectors eigenwerte eigenvektoren~diagonalize(
 dialog~Creates a dialog window to interact with the user~dialogfenster dialogwindow messagebox filepicker folderpicker auswahldialog selectiondialog choicedialog~help dialog
+dictstruct(STR1,STR2)~Creates a DictStruct instance~dictstruct() object dictionary structure struktur~dictstruct(
 diff~Calls the function for numerical differentation of a function or a data set~ableiten differenzieren differentieren ableitung differentiation~help diff
 draw3d~3D drawing mode~zeichnen drawings anmerkungen annotations zeichnungen~help draw3d
 draw~Drawing mode~zeichnen drawings anmerkungen annotations zeichnungen~help draw
@@ -161,6 +162,7 @@ factorial(n)~Calculates the factorial of the integral number n [n!]~fakultaet fa
 fft2d~2D Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
 fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben~help explorer
+file(STR1,STR2)~Creates file-type object instances~file() object filestream fstream~file(
 filter(MAT,KERNEL,MODE)~Applies the choosen filter kernel KERNEL to the matrix MAT. The parameter MODE defines the behavior at the matrix boundaries. With MODE = 0 the boundary value of the matrix is clamped (boundary clamp), with MODE = 1 the boundary values are mirrored (boundary reflection).~filter kernel matrixfilter matrix boundary convolution~filter(
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
@@ -333,6 +335,7 @@ normalize(MAT)~Normalizes the values in the matrix MAT to the range [-1,1]~norma
 nrows~Contains the number of rows for the current data access~rows dataaccess end number lines~nrows
 num(x,y,z,...)~returns the number of valid arguments x,y,z,... Can be applied to strings and counts every non-empty string~number anzahl zeichenketten strings nummer zahl zählen zaehlen enumerate num()~num(
 NumeRe v $$$~Your NumeRe distribution is located at: $$$~numere programm dateipfad filepath version~"NumeRe v"+#version()+" is located at "+#<>
+obj~Defines the local object set for a procedure~procedure local variables objects classes classdef~help obj
 odesolve~Solves the as expression passed differential equations numerical~odesolver differenzialgleichungen differential equations ordinary integrate integrator~help odesolve
 one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix~one(
 or(x,y,z,...)~Connects its arguments with "||"~logik logic oder~or(
@@ -357,6 +360,7 @@ pso~Uses a particle swarm optimizer to locate the global minimum in the expressi
 pulse~Determines the pulse properties of the passed data set~pulsanalyse pulseanalysis energie energy halbwertsbreite fwhm~help pulse
 qrcode~Creates a QR code from the contents of the passed string~barcode quick response code matrixcode~help qrcode
 Question~Is it me, who asks the questions, or is it you?~question~"Nice try, my friend ..."
+queue(ARG)~Creates an object instance of type queue~queue() deque object lifo warteliste~queue(
 quit~Exits NumeRe~schliessen close exit beenden~quit
 radian(a)~Calculates the radians of the angle alpha [Degree]~toradian bogenmasswert umrechnen deg2rad() radian()~radian(
 radio~Inserts a radio group into a window layout~radiobox windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -369,7 +373,9 @@ rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution
 rayleigh_inv_q(q,sigma)~returns the inverse of the complementary cumulative distribution function at q for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Returns the value of the probability density function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_pdf(
 rayleigh_rd(sigma,n)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
+readjson(STR)~Reads the content of the JSON file into a DictStruct~readjson() object dictionary structure struktur dom~readjson(
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
+readxml(STR)~Reads the content of the XML file into a DictStruct~readxml() object dictionary structure struktur dom~readxml(
 read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(
@@ -423,6 +429,7 @@ spinbut~Inserts a spin button object into a window layout~spinctrl windowsystem 
 spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion~help spline
 split(STR,CHAR,KEEP)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
+stack(ARG)~Creates an object instance of type stack~stack() object fifo stapel~stack(
 startswith(STR,STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~startswith(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
 statictext~Inserts a static text into a window layout~windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window

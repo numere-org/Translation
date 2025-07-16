@@ -119,23 +119,7 @@ TYPE_VALUE=Numerical
 TYPE_STRING=String
 # MAIN:
 # =================================
-MAIN_LOADING_CMDLINE=Processing command line parameters
-MAIN_LOADING_PARSER_SELFTEST=Initializing parser selftest
-MAIN_LOADING_IOSTREAM=Starting I/O stream
-MAIN_LOADING_PLUGINS=Loading plugin information
-MAIN_LOADING_FONT=Loading font face "%%1%%" for graph
-MAIN_LOADING_AUTOSAVE_SEARCH=Searching for automatic backups
-MAIN_LOADING_AUTOSAVE_FOUND=Backup found.
-MAIN_LOADING_AUTOSAVE_NOT_FOUND=No backup found.
-MAIN_LOADING_AUTOSAVE=Loading automatic backup
-MAIN_LOADING_AUTOSAVE_ERROR_LOADING=ERROR: Could not load the automatic backup.
-MAIN_LOADING_AUTOSAVE_ERROR_SAVING=ERROR: Could not save the automatic backup.
-MAIN_LOADING_AUTOSAVE_TRANSLATING=Parsing to new file format
-MAIN_LOADING_USER_INTERFACE=Starting NumeRe user interface
-MAIN_LOADING_COLORTHEME=Activating color theme
-MAIN_LOADING_COLORTHEME_ERROR=ERROR: Could not load the color theme.
 MAIN_ABOUT_NBR=About: see "about"
-MAIN_BYE_NBR=See you later!
 MAIN_UNSAVED_CACHE=There are unsaved elements in memory. Shall they be saved? (%%COMMON_YES_NO%%)
 MAIN_CACHE_SAVED=Memory was saved successfully.
 MAIN_QUIT=NumeRe v %%1%% was terminated successfully.
@@ -161,8 +145,6 @@ BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: a Release Candidate doesn't carry
 BUILTIN_CREDITS_LICENCE_1=This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
 BUILTIN_CREDITS_LICENCE_2=This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 BUILTIN_CREDITS_LICENCE_3=You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
-BUILTIN_CREDITS_MEMBERS=Concept/UI: Erik HÄNEL; Mathematical parser: Ingo BERG; Plotting: Alexey BALAKIN; numerical algorithms: GNU Scientific Library; Tokenizer: Boost-Library; Matrix-Algorithmen: Eigen Library; BasicExcel: YAP Chun Wei; TinyXML-2: Lee THOMASON; Splines: Tino KLUGE; Testing: D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER, J. ZINßER
-BUILTIN_CREDITS_BUGS_REQUESTS=Bugs and feature requests are welcome at
 BUILTIN_CHECKKEYWORD_FIND_CANNOT_READ=Cannot identify the search term.
 BUILTIN_CHECKKEYWORD_PLOTPARAMS=Plotting parameters updated.
 BUILTIN_CHECKKEYWORD_UNDEF_FAIL=The function "%%1%%" does not exist or was not named correctly. See "help define" for further information.
@@ -239,40 +221,6 @@ BUILTIN_CHECKKEYWORD_ROTATETABLE_WARN_AXES_NOT_PRESERVED=The ratio of the axes t
 BUILTIN_CHECKKEYWORD_ROTATETABLE_SUCCESS=The rotated data was stored in "%%1%%()".
 BUILTIN_AUTOSAVE=Automatic backup
 BUILTIN_REMOVEFILE_CONFIRM=The file path "%%1%%" will be deleted irreversibly - this cannot be undone.$Are you sure? (%%COMMON_YES_NO%%)
-# Layout des Settings-Dialoges
-BUILTIN_LISTOPT_SETTINGS=Settings
-BUILTIN_LISTOPT_1=NumeRe was configured with the following parameters:
-# Dateipfade
-BUILTIN_LISTOPT_2=File paths:
-BUILTIN_LISTOPT_3=Save path:           "%%1%%"
-BUILTIN_LISTOPT_4=Load path:           "%%1%%"
-BUILTIN_LISTOPT_5=Script path:         "%%1%%"
-BUILTIN_LISTOPT_6=Procedure path:      "%%1%%"
-BUILTIN_LISTOPT_7=Plot path:           "%%1%%"
-BUILTIN_LISTOPT_8=Image viewer:        %%1%%
-BUILTIN_LISTOPT_9=Text editor:         %%1%%
-# Eigentliche Konfiguration
-BUILTIN_LISTOPT_10=Program configuration:
-BUILTIN_LISTOPT_11=Autosave-Interval:         %%1%% [sec]
-BUILTIN_LISTOPT_12=Greeting:                  %%1%%
-BUILTIN_LISTOPT_13=Buffersize:                %%1%% %%COMMON_LINES%%
-BUILTIN_LISTOPT_14=Color theme:               %%1%%
-BUILTIN_LISTOPT_15=Draft mode:                %%1%%
-BUILTIN_LISTOPT_16=Extended file information: %%1%%
-BUILTIN_LISTOPT_17=ESC in scripts:            %%1%%
-BUILTIN_LISTOPT_18=Windowsize:                x=%%1%%, y=%%2%%
-BUILTIN_LISTOPT_19=Definition control:        %%1%%
-BUILTIN_LISTOPT_20=Compact table view:        %%1%%
-BUILTIN_LISTOPT_21=Loading of empty columns:  %%1%%
-BUILTIN_LISTOPT_22=Precision:                 %%1%% numbers
-BUILTIN_LISTOPT_23=Logging:                   %%1%%
-BUILTIN_LISTOPT_24=Fast start:                %%1%%
-BUILTIN_LISTOPT_25=Default plot font:         "%%1%%"
-BUILTIN_LISTOPT_26=Tips and tricks:           %%1%%
-BUILTIN_LISTOPT_27=Custom language:           %%1%%
-BUILTIN_LISTOPT_28=External windows:          %%1%%
-BUILTIN_LISTOPT_FOOTNOTE=All settings can be changed with the use of "set -OPTION". You may find further information at "help set".
-BUILTIN_LISTOPT_NOVIEWER=No viewer declared
 # ===================================
 BUILTIN_LISTFILES_EXPLORER=File explorer
 BUILTIN_LISTFILES_FILTEREDFOR=[filtered for: %%1%%]
@@ -299,26 +247,12 @@ BUILTIN_NEW_FREE_CACHES=%%1%% was/were successfully created as free table(s).
 BUILTIN_WAITINGFOREDIT=Waiting for edit
 # PARSER:
 #=====================================
-PARSER_FIRSTSTART_INTRO=This is enough information, which you'll need for the first time. Now it's your turn, to get a look into everything. Don't hesitate and try a commando or an expression for yourself!$If there's something going wrong: you'll find help at "help TOPIC" or "find TERMS". And if I don't understand at all, what you want me to do, then I will try to find the matching article in the documentation by myself ...$(Type "quit" to close me)
 PARSER_INTRO=Hello %%1%%! Enter an expression or a command ...$(See "help" or "help expression" for further information)
-PARSER_STARTINGSCRIPT=Starting script "%%1%%" ...
 PARSER_SCRIPT_FINISHED=The execution of the script "%%1%%" was finished successfully.
 PARSER_ABORTED=Declaration aborted.
 PARSER_PLUGINDELETED=The package was removed successfully.
 PARSER_PLUGINNOTFOUND=The package was not found.
 PARSER_CANNOTCREATEPROC=ERROR: Could not write the procedure to a file.
-PARSER_RESULTSLOCATEDAT=Results are written in column %%1%% starting with element %%2%%.
-# Willkommensdialog:
-PARSER_HELP_HEAD=Welcome
-PARSER_HELP_INTRO=To operate with NumeRe, you'll have to use textual commands. The most use- and helpful commands are the following:
-PARSER_HELP_ITEM_1=find TERMS      - Search for TERMS
-PARSER_HELP_ITEM_2=help            - Shows the documentation overview
-PARSER_HELP_ITEM_3=help TOPIC      - Shows the documentation for the TOPIC. The documentation doesn't care about lower- and uppercase letters
-PARSER_HELP_ITEM_4=list -OBJECT    - Lists OBJECT. OBJECT may be written with lower- or uppercase letters
-PARSER_HELP_ITEM_5=quit            - Exits NumeRe
-PARSER_ADD_VAR_1=New variable "%%1%%" [double]
-PARSER_ADD_VAR_2=(Free memory: %%1%% variables)
-PARSER_ADD_VAR_ERROR=There is no more free space for variables available.
 # PARSERFUNCS:
 #======================================
 PARSERFUNCS_INTEGRATE_BOUNDARYDEPENDENCE=ERROR: The boundaries must not depend on %%1%%.
@@ -371,11 +305,6 @@ PARSERFUNCS_LISTCONST_TYPE_THERMO=Thermodynamics
 PARSERFUNCS_LISTCONST_TYPE_ASTRO=Astro physics
 PARSERFUNCS_LISTCONST_TYPE_INTERNAL=Application specific
 PARSERFUNCS_LISTCONST_TYPE_TIME=Time
-PARSERFUNCS_LISTEXPRVAR_HEADLINE=Variables in expression
-PARSERFUNCS_LISTEXPRVAR_EMPTY=No expression passed.
-PARSERFUNCS_LISTEXPRVAR_EXPR=Expression: %%1%%
-PARSERFUNCS_LISTEXPRVAR_NOVARS=Expression doesn't contain any variables.
-PARSERFUNCS_LISTEXPRVAR_FOOTNOTE=%%1%% variable(s)
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installed Packages
 PARSERFUNCS_LISTPLUGINS_EMPTY=No packages were installed.
 PARSERFUNCS_LISTPLUGINS_PACKAGENAME=Package Name:
@@ -459,10 +388,6 @@ LANGUAGE=en-GB
 # LOOP
 # =============================
 LOOP_SETCOMMAND_ABORT=Declaration aborted.
-LOOP_SUPPLY_BORDERS_AND_VAR=Please supply borders and the corresponding counting variable
-LOOP_SUPPLY_FULFILLABLE_CONDITION=Please enter a realizable condition
-LOOP_MISSING_COMMAND=No new command was entered.
-LOOP_LINE_NOT_EXISTENT=This line does not exist.
 # SCRIPT
 # =============================
 SCRIPT_START_INSTALL=Starting installation
@@ -480,11 +405,8 @@ SCRIPT_INSTALL_LICENSE_AGREEMENT=The content of the package or plugin "%%1%%" to
 # =============================
 DEFINE_SUCCESS=The function definitions were updated successfully.
 DEFINE_FAILURE=The function definitions could not be updated.
-DEFINE_NO_SPACE=No more free space for function definitions available. Remove definitions, you're not needing any more, to gain free space.
 DEFINE_SAVING_FUNCTIONS=Saving function definitions
-DEFINE_ASK_OVERRIDE=All defined functions currently present in memory will be overwritten.$Are you sure? (%%COMMON_YES_NO%%)
 DEFINE_LOADING_FUNCTIONS=Loading function definitions
-DEFINE_DONE_AUTOLOADING=%%COMMON_DONE%% [%%1%% functions].
 DEFINE_DONE_LOADING=The definitions for %%1%% function(s) were loaded successfully.
 # DOC
 # ============================
@@ -495,12 +417,6 @@ DOC_HELP_EXAMPLE=EXAMPLE: %%1%%
 DOC_HELP_EXAMPLE_HEADLINE=Example
 DOC_HELP_DESC_HEADLINE=Description
 DOC_HELP_OPTIONS_HEADLINE=Options
-DOC_HELP_NAVIGATION=Navigation
-DOC_HELP_START=Start
-DOC_HELP_BACK=Back
-DOC_HELP_FORWARD=Forward
-DOC_HELP_INDEX=Index
-DOC_SEARCHFCT_DB_ERROR=The keyword search database is damaged. Reinstall NumeRe, to solve this problem. If this doesn't help, address your issue to the developer.
 DOC_SEARCHFCT_TABLEHEAD=Relevance:  Search result:
 DOC_SEARCHFCT_RESULT=The NumeRe keyword search returned %%1%% hits.
 DOC_SEARCHFCT_NO_RESULTS=There was no result for your query "%%1%%". Maybe a synonym can help you out, or it is simply a typographic error, which distorted the search algorithm.
@@ -537,11 +453,6 @@ OUTPUT_PRINTLEGAL_STD=(Commenting style and formatting are optimized for Gnuplot
 # HIST
 # ================================
 HIST_HEADLINE=Histogram
-HIST_ONLY_CACHE=Only the cache contains data points. These will be used.
-HIST_ASK_DATASET=There is data in the cache as well as in the data object. Which data shall be used? (c/d)$(0 to abort)
-HIST_CONFIRM_DATASET=The loaded data out of %%COMMON_FILETYPE_DAT%% "%%1%%" will be used.
-HIST_GENERATING_DATASETS=%%1%% histogram data sets will be created.
-HIST_ASK_BINWIDTH=The bins shall be how wide?
 HIST_OUT_COMMENTLINE=The bins name always the lower boundary of their interval. The allover minimum value is %%1%%, the maximum is %%2%%. The width of each interval is %%3%%.
 HIST_OUT_COMMENTLINE2D=The bins name always the lower boundary of their interval. The allover minimum x value is %%1%%, the maximum is %%2%%. The width of each x interval is %%3%%. The minimum y value is %%4%%, the maximum is %%5%%. The width of each y interval is %%6%%.
 HIST_OUT_PLGNINFO=Histogram (v %%1%%) using the data rows %%2%%-%%3%% out of %%4%%
@@ -578,7 +489,6 @@ SETTINGS_SAVE_SUCCESS=Configuration was saved successfully.
 TOOLS_TIMESTAMP_AT=at
 # PROC
 # ===============================
-PROC_NAMESPACE_THISFILE_MESSAGE=Following procedures are implicit 'private'.
 PROC_ADDED_DATE=Added
 PROC_END_OF_PROCEDURE=End of file
 PROC_FOOTER=%%COMMON_APPNAME%% | Free numerical software licenced under GNU GPL v3
@@ -586,24 +496,6 @@ PROC_FOOTER=%%COMMON_APPNAME%% | Free numerical software licenced under GNU GPL 
 # ===============================
 CACHE_WARNING_CMD_OVERLAP=WARNING: "%%1%%" matches with a built-in command. "%%1%%" may be used in numerical expressions, but not as a command expression.$(Many commands on data sets exist in a inverted writing)
 CACHE_WARNING_PLUGIN_OVERLAP=WARNING: "%%1%%" matches with a plugin command. "%%1%%" may be used in numerical expressions, but not as a command expression.$(Many commands on data sets exist in a inverted writing)
-# DATA
-# ===============================
-DATA_PASTE_HEADLINE=Paste data
-DATA_PASTE_DESCRIPTION=Paste you data here (Either directly with the "paste" option of the context menue, or by entering of the values linewise. This mode will be closed, if you enter "endpaste".):
-DATA_COULD_NOT_IDENTIFY_PASTED_CONTENT=The pasted content could not be identified as a table containing numerical values.
-DATA_OPENCSV_COLUMNSEPARATOR_NOTFOUND=The column separator of this CSV file could not be identified. Please choose and enter the separator from the following exemplary lines:
-DATA_OPENCSV_SEPARATOR=Separator: "%%1%%"
-DATA_OPENCSV_SEPARATOR_WHITESPACE=Separator: Whitespace
-DATA_OPENFILE_TABLEHEADINGS=NOTE: There were comment lines found. Do they contain table headings? (%%COMMON_YES_NO%%)
-DATA_OPENFILE_LISTING_COMMENTS=Listing the found comment lines
-DATA_OPENFILE_ENTERNUMBER=Please enter the number of the line with the desired headings or enter 0 to abort:
-DATA_OPENFILE_LINEDOESNTEXIST=NOTE: This line doesn't exist. Please make a new choice:$(There were %%1%% comment lines found)
-DATA_OPENFILE_REPLACING_HEADS=NOTE: The headings could not be identified correctly. Automatic headings will be created.
-DATA_OPENFILE_AUTOMATIC_HEADS=Automatic headings will be created. They may be modified afterwards.
-DATA_OPENFILE_ENTER_HEADINGS=Do you want to enter table headings? (%%COMMON_YES_NO%%)
-DATA_OPENFILE_ENTERYOURHEADS=Please enter the headings. Whitespaces will be automatically replaced with "_".
-DATA_OPENFILE_HEADFORCOLUMN=Table heading for column %%1%%:
-DATA_OPENFILE_OVERWRITE_DATA=The memory is already blocked with the data of the file "%%1%%". Shall the exisiting data be overwritten? (%%COMMON_YES_NO%%)
 # PROCEDURE
 PROCEDURE_WARN_TABLE_REFERENCE=Tables are always passed by reference, even without the corresponding syntax (TAB()&). This behaviour is deprecated since v1.1.5 and will be removed in the future. To copy them instead, disable the corresponding setting in the options. This warning will be suppressed.
 # GUI STRINGS: All strings for the new GUI
@@ -908,7 +800,7 @@ GUI_TREE_METHODS=Methods
 GUI_TREE_FUNC_KEYLIST=syntax num cmplx mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro internal time
-GUI_TREE_METHOD_KEYLIST=vect data string
+GUI_TREE_METHOD_KEYLIST=vect data string dict cat file stack queue
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
 GUI_TREE_PUP_LOADTOTABLE=Load file to new table
@@ -1379,6 +1271,7 @@ GUI_VARVIEWER_VARS=Numerical variables
 GUI_VARVIEWER_STRINGS=String variables
 GUI_VARVIEWER_TABLES=Tables
 GUI_VARVIEWER_CLUSTERS=Clusters
+GUI_VARVIEWER_CLASSES=Objects
 GUI_VARVIEWER_ARGUMENTS=Procedure arguments
 GUI_VARVIEWER_GLOBALS=Global variables
 GUI_VARVIEWER_MENU_NEWTABLE=New table ...

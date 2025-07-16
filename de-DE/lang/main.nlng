@@ -119,23 +119,7 @@ TYPE_VALUE=Numerisch
 TYPE_STRING=Zeichenkette
 # MAIN:
 # =================================
-MAIN_LOADING_CMDLINE=Verarbeite Kommandozeilenparameter
-MAIN_LOADING_PARSER_SELFTEST=Initialisiere Parser-Selbsttest
-MAIN_LOADING_IOSTREAM=Starte I/O-Stream
-MAIN_LOADING_PLUGINS=Lade Plugin-Informationen
-MAIN_LOADING_FONT=Lade Schriftart "%%1%%" für Graph
-MAIN_LOADING_AUTOSAVE_SEARCH=Suche nach automatischen Sicherungen
-MAIN_LOADING_AUTOSAVE_FOUND=Sicherung gefunden.
-MAIN_LOADING_AUTOSAVE_NOT_FOUND=Keine Sicherung gefunden.
-MAIN_LOADING_AUTOSAVE=Lade automatische Sicherung
-MAIN_LOADING_AUTOSAVE_ERROR_LOADING=FEHLER: Konnte die Sicherung nicht laden.
-MAIN_LOADING_AUTOSAVE_ERROR_SAVING=FEHLER: Konnte die Sicherung nicht speichern.
-MAIN_LOADING_AUTOSAVE_TRANSLATING=Übertrage in neues Format
-MAIN_LOADING_USER_INTERFACE=Starte NumeRe-Benutzeroberfläche
-MAIN_LOADING_COLORTHEME=Aktiviere Color-Theme
-MAIN_LOADING_COLORTHEME_ERROR=FEHLER: Konnte Color-Theme nicht laden.
 MAIN_ABOUT_NBR=Über: siehe "about"
-MAIN_BYE_NBR=Bis zum nächsten Mal!
 MAIN_UNSAVED_CACHE=Es sind ungesicherte Daten im Speicher vorhanden. Sollen sie gespeichert werden? (%%COMMON_YES_NO%%)
 MAIN_CACHE_SAVED=Inhalt des Speichers wurde erfolgreich gesichert.
 MAIN_QUIT=NumeRe v %%1%% wurde erfolgreich beendet.
@@ -161,8 +145,6 @@ BUILTIN_CREDITS_VERSIONINFO=RELEASE CANDIDATE: ein Release Candidate trägt kein
 BUILTIN_CREDITS_LICENCE_1=Dieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public Licence, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, Version 3 der Lizenz.
 BUILTIN_CREDITS_LICENCE_2=Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details stehen in der GNU General Public Licence.
 BUILTIN_CREDITS_LICENCE_3=Sie sollten ein Exemplar der GNU GPL zusammen mit diesem Programm erhalten haben. Falls nicht, siehe http://www.gnu.org/licenses/
-BUILTIN_CREDITS_MEMBERS=Konzept/UI: Erik HÄNEL; Mathe-Parser: Ingo BERG; Plotting: Alexey BALAKIN; numerische Algorithmen: GNU Scientific Library; Tokenizer: Boost-Library; Matrix-Algorithmen: Eigen Library; BasicExcel: YAP Chun Wei; TinyXML-2: Lee THOMASON; Splines: Tino KLUGE; Testing: D. BAMMERT, J. HÄNEL, R. HUTT, K. KILGUS, E. KLOSTER, K. KURZ, M. LÖCHNER, A. RAVEENDRAN, L. SAHINOVIC, D. SCHMID, V. SEHRA, G. STADELMANN, R. WANNER, F. WUNDER, J. ZINßER
-BUILTIN_CREDITS_BUGS_REQUESTS=Bugs und Feature-Requests gerne an
 BUILTIN_CHECKKEYWORD_FIND_CANNOT_READ=Kann den Begriff nicht identifizieren.
 BUILTIN_CHECKKEYWORD_PLOTPARAMS=Plotparameter aktualisiert.
 BUILTIN_CHECKKEYWORD_UNDEF_FAIL=Die Funktion "%%1%%" existiert nicht, oder sie wurde nicht korrekt bezeichnet. Siehe "help -define" für weitere Informationen.
@@ -239,40 +221,6 @@ BUILTIN_CHECKKEYWORD_ROTATETABLE_WARN_AXES_NOT_PRESERVED=Das Verhältnis der Ach
 BUILTIN_CHECKKEYWORD_ROTATETABLE_SUCCESS=Die rotierten Daten wurden in "%%1%%()" gespeichert.
 BUILTIN_AUTOSAVE=Automatische Speicherung
 BUILTIN_REMOVEFILE_CONFIRM=Der Dateipfad "%%1%%" wird unwiderbringlich gelöscht - dies kann nicht rückgängig gemacht werden.$Sicher? (%%COMMON_YES_NO%%)
-# Layout des Settings-Dialoges
-BUILTIN_LISTOPT_SETTINGS=Einstellungen
-BUILTIN_LISTOPT_1=NumeRe wurde mit den folgenden Parametern konfiguriert:
-# Dateipfade
-BUILTIN_LISTOPT_2=Dateipfade:
-BUILTIN_LISTOPT_3=Speicherpfad:        "%%1%%"
-BUILTIN_LISTOPT_4=Importpfad:          "%%1%%"
-BUILTIN_LISTOPT_5=Scriptpfad:          "%%1%%"
-BUILTIN_LISTOPT_6=Prozedurpfad:        "%%1%%"
-BUILTIN_LISTOPT_7=Plotspeicherpfad:    "%%1%%"
-BUILTIN_LISTOPT_8=Imageviewer:         %%1%%
-BUILTIN_LISTOPT_9=Texteditor:          %%1%%
-# Eigentliche Konfiguration
-BUILTIN_LISTOPT_10=Programmkonfiguration:
-BUILTIN_LISTOPT_11=Autosave-Intervall:        %%1%% [sec]
-BUILTIN_LISTOPT_12=Begrüßung:                 %%1%%
-BUILTIN_LISTOPT_13=Puffergröße:               %%1%% %%COMMON_LINES%%
-BUILTIN_LISTOPT_14=Color-Theme:               %%1%%
-BUILTIN_LISTOPT_15=Entwurfsmodus:             %%1%%
-BUILTIN_LISTOPT_16=Erweiterte Dateiinfo:      %%1%%
-BUILTIN_LISTOPT_17=ESC in Scripts:            %%1%%
-BUILTIN_LISTOPT_18=Fenstergröße:              x=%%1%%, y=%%2%%
-BUILTIN_LISTOPT_19=Definitionsverwaltung:     %%1%%
-BUILTIN_LISTOPT_20=Kompakte Tabellen:         %%1%%
-BUILTIN_LISTOPT_21=Laden leerer Spalten:      %%1%%
-BUILTIN_LISTOPT_22=Präzision:                 %%1%% Ziffern
-BUILTIN_LISTOPT_23=Protokollierung:           %%1%%
-BUILTIN_LISTOPT_24=Schneller Start:           %%1%%
-BUILTIN_LISTOPT_25=Standardschriftart:        "%%1%%"
-BUILTIN_LISTOPT_26=Tipps und Tricks:          %%1%%
-BUILTIN_LISTOPT_27=Zusätzliche Sprache:       %%1%%
-BUILTIN_LISTOPT_28=Externe Fenster:           %%1%%
-BUILTIN_LISTOPT_FOOTNOTE=Alle Einstellungen können mit "set -OPTION" geändert werden. Weitere Informationen hierzu findest du unter "help set".
-BUILTIN_LISTOPT_NOVIEWER=Kein Viewer festgelegt
 # ===================================
 BUILTIN_LISTFILES_EXPLORER=Dateiexplorer
 BUILTIN_LISTFILES_FILTEREDFOR=[gefiltert nach: %%1%%]
@@ -299,26 +247,12 @@ BUILTIN_NEW_FREE_CACHES=%%1%% wurde(n) erfolgreich als freie Tabelle(n) erzeugt.
 BUILTIN_WAITINGFOREDIT=Warte auf Bearbeitung
 # PARSER:
 #=====================================
-PARSER_FIRSTSTART_INTRO=Das war erst einmal das Wichtigste. Nun ist es an dir, dich hier einfach mal in aller Ruhe umzusehen. Versuch einfach mal, einen Ausdruck oder ein Kommando einzugeben!$Und falls mal was schief geht: Hilfe findest du unter "help THEMA" oder "find BEGRIFFE". Und wenn ich gar nicht verstehe, was du willst, werde ich auch selbst versuchen, den passenden Artikel in der Hilfe zu finden ...$(Mit "quit" beendest du mich)
 PARSER_INTRO=Hallo %%1%%! Gebe einen Ausdruck oder ein Kommando ein ...$(Siehe "help" oder "help expression" für weitere Informationen)
-PARSER_STARTINGSCRIPT=Starte Script "%%1%%" ...
 PARSER_SCRIPT_FINISHED=Die Ausführung des Scripts "%%1%%" wurde erfolgreich abgeschlossen.
 PARSER_ABORTED=Deklaration abgebrochen.
 PARSER_PLUGINDELETED=Package wurde erfolgreich entfernt.
 PARSER_PLUGINNOTFOUND=Das Package konnte nicht gefunden werden.
 PARSER_CANNOTCREATEPROC=FEHLER: Konnte die Prozedur nicht in eine Datei schreiben.
-PARSER_RESULTSLOCATEDAT=Ergebnisse werden in Spalte %%1%% ab Element %%2%% geschrieben.
-# Willkommensdialog:
-PARSER_HELP_HEAD=Willkommen
-PARSER_HELP_INTRO=NumeRe ist mittels Kommandos zu bedienen. Die zentralen und wichtigsten Kommandos sind die folgenden:
-PARSER_HELP_ITEM_1=find BEGRIFFE   - Nach BEGRIFFE suchen
-PARSER_HELP_ITEM_2=help            - Zeigt die Hilfe-Übersicht an
-PARSER_HELP_ITEM_3=help THEMA      - Zeigt eine Hilfe zum THEMA an. Die Hilfe achtet nicht auf Groß- und Kleinschreibung
-PARSER_HELP_ITEM_4=list -OBJEKT    - Listet OBJEKT. OBJEKT kann groß oder klein geschrieben werden
-PARSER_HELP_ITEM_5=quit            - Beendet NumeRe
-PARSER_ADD_VAR_1=Neue Variable "%%1%%" [double]
-PARSER_ADD_VAR_2=(Freier Speicher: %%1%% Variablen)
-PARSER_ADD_VAR_ERROR=Kein freier Speicherplatz für Variablen mehr zur Verfügung.
 # PARSERFUNCS:
 #======================================
 PARSERFUNCS_INTEGRATE_BOUNDARYDEPENDENCE=FEHLER: Die Grenzen dürfen nicht von %%1%% abhängen.
@@ -371,11 +305,6 @@ PARSERFUNCS_LISTCONST_TYPE_THERMO=Thermodynamik
 PARSERFUNCS_LISTCONST_TYPE_ASTRO=Astrophysik
 PARSERFUNCS_LISTCONST_TYPE_INTERNAL=Anwendungsspezifisch
 PARSERFUNCS_LISTCONST_TYPE_TIME=Zeit
-PARSERFUNCS_LISTEXPRVAR_HEADLINE=Variablen im Ausdruck
-PARSERFUNCS_LISTEXPRVAR_EMPTY=Kein Ausdruck eingegeben.
-PARSERFUNCS_LISTEXPRVAR_EXPR=Ausdruck: %%1%%
-PARSERFUNCS_LISTEXPRVAR_NOVARS=Ausdruck enthält keine Variablen.
-PARSERFUNCS_LISTEXPRVAR_FOOTNOTE=%%1%% Variable(n)
 PARSERFUNCS_LISTPLUGINS_HEADLINE=Installierte Packages
 PARSERFUNCS_LISTPLUGINS_EMPTY=Keine Packages installiert.
 PARSERFUNCS_LISTPLUGINS_PACKAGENAME=Package Name:
@@ -459,10 +388,6 @@ LANGUAGE=de-DE
 # LOOP
 # =============================
 LOOP_SETCOMMAND_ABORT=Deklaration abgebrochen.
-LOOP_SUPPLY_BORDERS_AND_VAR=Bitte Grenzen und Zählvariable angeben
-LOOP_SUPPLY_FULFILLABLE_CONDITION=Bitte eine erfüllbare Bedingung eingeben
-LOOP_MISSING_COMMAND=Es wurde kein neues Kommando angegeben.
-LOOP_LINE_NOT_EXISTENT=Diese Zeile existiert nicht.
 # SCRIPT
 # =============================
 SCRIPT_START_INSTALL=Starte Installation
@@ -480,11 +405,8 @@ SCRIPT_INSTALL_LICENSE_AGREEMENT=Der Inhalt des zu installierenden Packages oder
 # =============================
 DEFINE_SUCCESS=Die Funktionsdefinitionen wurden erfolgreich aktualisiert.
 DEFINE_FAILURE=Die Funktionsdefinitionen konnten nicht aktualisiert werden.
-DEFINE_NO_SPACE=Kein freier Funktionsspeicher mehr vorhanden. Entferne Definitionen, die du nicht mehr benötigst, um Platz zu schaffen.
 DEFINE_SAVING_FUNCTIONS=Speichere Funktionsdefinitionen
-DEFINE_ASK_OVERRIDE=Alle definierten Funktionen im Speicher werden überschrieben.$Sicher? (%%COMMON_YES_NO%%)
 DEFINE_LOADING_FUNCTIONS=Lade Funktionsdefinitionen
-DEFINE_DONE_AUTOLOADING=%%COMMON_DONE%% [%%1%% Funktionen].
 DEFINE_DONE_LOADING=Die Definitionen für %%1%% Funktion(en) wurden erfolgreich geladen.
 # DOC
 # ============================
@@ -495,12 +417,6 @@ DOC_HELP_EXAMPLE=BEISPIEL: %%1%%
 DOC_HELP_EXAMPLE_HEADLINE=Beispiel
 DOC_HELP_DESC_HEADLINE=Beschreibung
 DOC_HELP_OPTIONS_HEADLINE=Optionen
-DOC_HELP_NAVIGATION=Navigation
-DOC_HELP_START=Start
-DOC_HELP_BACK=Zurück
-DOC_HELP_FORWARD=Vorwärts
-DOC_HELP_INDEX=Index
-DOC_SEARCHFCT_DB_ERROR=Die Datenbank der Stichwortsuche ist beschädigt. Installiere NumeRe erneut, um dieses Problem zu beheben. Falls dieses Problem damit nicht behoben werden konnte, wende dich an die Entwicklung.
 DOC_SEARCHFCT_TABLEHEAD=Relevanz:   Suchergebnis:
 DOC_SEARCHFCT_RESULT=Die NumeRe-Suche ergab %%1%% Treffer.
 DOC_SEARCHFCT_NO_RESULTS=Leider kein Ergebnis für "%%1%%" gefunden. Womöglich führt eine andere Schreibweise oder ein Synonym des Begriffs zum Erfolg. Möglicherweise hat sich aber auch ein Tippfehler eingeschlichen.
@@ -537,11 +453,6 @@ OUTPUT_PRINTLEGAL_STD=(Kommentar-Standard und Formatierung sind für Gnuplot opt
 # HIST
 # ================================
 HIST_HEADLINE=Histogramm
-HIST_ONLY_CACHE=Es sind nur Daten im Cache vorhanden. Es werden automatisch diese Punkte verwendet.
-HIST_ASK_DATASET=Es sind sowohl Daten im Cache als auch die Daten eines Datenfiles vorhanden. Welche sollen verwendet werden? (c/d)$(0 zum Abbrechen)
-HIST_CONFIRM_DATASET=Es werden die geladenen Daten des %%COMMON_FILETYPE_DAT%% "%%1%%" verwendet.
-HIST_GENERATING_DATASETS=Es werden %%1%% Histogramm-Datensätze erzeugt.
-HIST_ASK_BINWIDTH=Wie breit sollen die Bins sein?
 HIST_OUT_COMMENTLINE=Die Bins bezeichnen immer die untere Kante einer Kategorie. Der minimale Wert ist %%1%%, der maximale %%2%%. Die Breite einer Kategorie ist %%3%%.
 HIST_OUT_COMMENTLINE2D=Die Bins bezeichnen immer die untere Kante einer Kategorie. Der minimale x-Wert ist %%1%%, der maximale %%2%%. Die Breite einer x-Kategorie ist %%3%%. Der minimale y-Wert ist %%4%%, der maximale %%5%%. Die Breite einer y-Kategorie ist %%6%%.
 HIST_OUT_PLGNINFO=Histogramm (v %%1%%) unter Verwendung der Datenreihe(n) %%2%%-%%3%% aus %%4%%
@@ -578,7 +489,6 @@ SETTINGS_SAVE_SUCCESS=Konfiguration wurde erfolgreich gespeichert.
 TOOLS_TIMESTAMP_AT=um
 # PROC
 # ===============================
-PROC_NAMESPACE_THISFILE_MESSAGE=Folgende Prozeduren sind implizit 'private'.
 PROC_ADDED_DATE=Hinzugefügt
 PROC_END_OF_PROCEDURE=Ende der Datei
 PROC_FOOTER=%%COMMON_APPNAME%% | Freie numerische Software unter der GNU GPL v3
@@ -586,24 +496,6 @@ PROC_FOOTER=%%COMMON_APPNAME%% | Freie numerische Software unter der GNU GPL v3
 # ===============================
 CACHE_WARNING_CMD_OVERLAP=WARNUNG: "%%1%%" stimmt mit einem NumeRe-Kommando überein. "%%1%%" kann in numerischen Ausdrücken verwendet werden, jedoch nicht als Kommandoausdruck.$(Viele Kommandos auf Datensätzen existieren auch in der inversen Schreibweise)
 CACHE_WARNING_PLUGIN_OVERLAP=WARNUNG: "%%1%%" stimmt mit einem Plugin-Kommando überein. "%%1%%" kann in numerischen Ausdrücken verwendet werden, jedoch nicht als Kommandoausdruck.$(Viele Kommandos auf Datensätzen existieren auch in der inversen Schreibweise)
-# DATA
-# ===============================
-DATA_PASTE_HEADLINE=Daten einfügen
-DATA_PASTE_DESCRIPTION=Daten hier einfügen (Entweder direkt mittels der "Einfügen"-Option des Kontextmenüs, oder aber durch zeilenweises Eintippen der Daten. Mit "endpaste" wird das Einfügen abgeschlossen):
-DATA_COULD_NOT_IDENTIFY_PASTED_CONTENT=Der eingefügte Inhalt konnte nicht als Tabelle mit numerischen Werten identifiziert werden.
-DATA_OPENCSV_COLUMNSEPARATOR_NOTFOUND=Der Spaltentrenner dieser CSV-Datei konnte nicht automatisch identifiziert werden. Bitte das Trennerzeichen aus den folgenden Zeilenbeispielen auswählen und angeben:
-DATA_OPENCSV_SEPARATOR=Trennerzeichen: "%%1%%"
-DATA_OPENCSV_SEPARATOR_WHITESPACE=Trennzeichen: Leerzeichen
-DATA_OPENFILE_TABLEHEADINGS=HINWEIS: Es wurden Kommentarzeilen gefunden. Enthalten sie Tabellenköpfe? (%%COMMON_YES_NO%%)
-DATA_OPENFILE_LISTING_COMMENTS=Die gefundenen Kommentarzeilen werden gelistet
-DATA_OPENFILE_ENTERNUMBER=Bitte die Nummer der Zeile mit den gewünschten Köpfen oder 0 zum Abbrechen eingeben:
-DATA_OPENFILE_LINEDOESNTEXIST=HINWEIS: Diese Zeile existiert nicht. Bitte neu wählen:$(Es wurden %%1%% Kommentarzeilen gefunden)
-DATA_OPENFILE_REPLACING_HEADS=HINWEIS: Die Köpfe konnten nicht korrekt identifiziert werden. Es werden automatische Köpfe verwendet.
-DATA_OPENFILE_AUTOMATIC_HEADS=Es werden automatische Köpfe generiert. Sie können später noch bearbeitet werden.
-DATA_OPENFILE_ENTER_HEADINGS=Möchten Sie Tabellenköpfe eingeben? (%%COMMON_YES_NO%%)
-DATA_OPENFILE_ENTERYOURHEADS=Bitte die Köpfe eingeben. Leerzeichen werden automatisch durch "_" ersetzt.
-DATA_OPENFILE_HEADFORCOLUMN=Kopf zur Spalte %%1%%:
-DATA_OPENFILE_OVERWRITE_DATA=Die Speichergruppe ist bereits mit den Daten des Files "%%1%%" besetzt. Sollen die Daten überschrieben werden? (%%COMMON_YES_NO%%)
 # PROCEDURE
 PROCEDURE_WARN_TABLE_REFERENCE=Tabellen werden immer als Referenz übergeben, auch ohne die entsprechende Syntax (TAB()&). Seit v1.1.5 ist dieses Verhalten veraltet und wird in Zukunft entfernt. Um sie stattdessen zu kopieren, deaktiviere die entsprechende Einstellung in den Optionen. Diese Warnung wird dabei unterdrückt.
 # GUI STRINGS: All strings for the new GUI
@@ -908,7 +800,7 @@ GUI_TREE_METHODS=Methoden
 GUI_TREE_FUNC_KEYLIST=syntax num cmplx mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro internal time
-GUI_TREE_METHOD_KEYLIST=vect data string
+GUI_TREE_METHOD_KEYLIST=vect data string dict cat file stack queue
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Datei laden
 GUI_TREE_PUP_LOADTOTABLE=Datei in eine neue Tabelle laden
@@ -1379,6 +1271,7 @@ GUI_VARVIEWER_VARS=Numerische Variablen
 GUI_VARVIEWER_STRINGS=Zeichenketten
 GUI_VARVIEWER_TABLES=Tabellen
 GUI_VARVIEWER_CLUSTERS=Cluster
+GUI_VARVIEWER_CLASSES=Objekte
 GUI_VARVIEWER_ARGUMENTS=Prozedurargumente
 GUI_VARVIEWER_GLOBALS=Globale Variablen
 GUI_VARVIEWER_MENU_NEWTABLE=Neue Tabelle ...
