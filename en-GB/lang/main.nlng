@@ -800,7 +800,7 @@ GUI_TREE_METHODS=Methods
 GUI_TREE_FUNC_KEYLIST=syntax num cmplx mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro internal time
-GUI_TREE_METHOD_KEYLIST=vect data string dict cat file stack queue
+GUI_TREE_METHOD_KEYLIST=vect data string dict cat file path stack queue
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
 GUI_TREE_PUP_LOADTOTABLE=Load file to new table
