@@ -340,6 +340,7 @@ odesolve~Solves the as expression passed differential equations numerical~odesol
 one(n,m)~Generates a (n x m) matrix, which is filled with ones~one() matrix~one(
 or(x,y,z,...)~Connects its arguments with "||"~logik logic oder~or(
 pack~Packs the referenced files into a common archive file~zipfile tarfile gzip packen archivefile tarball zippen inflate deflate compress uncompress extract~help pack
+path(STR1,STR2)~Creates object instances of type path~path() object pfad dateisystem filesystem~path(
 pct(x,y,z,...,p)~p-th percentile of x,y,z,...~percentiles pct() quantiles quartiles perzentile terzile tertiless terciles quintiles dezile deciles fraktil fractile~pct(
 perlin(x,y,z,seed,freq,oct,pers)~Calculates the Perlin noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~perlin(
 phi(x,y)~Calculates the angle between the x axis and the vector (x,y)~azimuthwinkel kugelkoordinaten zylinderkoordinaten sphaerische sphärische phi()~phi(
