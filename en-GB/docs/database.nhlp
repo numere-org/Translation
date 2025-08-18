@@ -29,12 +29,16 @@
 		<keyword>usedb</keyword>
 		<keyword>port</keyword>
 		<keyword>driver</keyword>
+		<keyword>connstr</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			ID = database FILENAME -set type=sqlite
-			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD usedb=DBNAME ...
+			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD ...
+			ID = database HOST -set type=odbc driver=ODBCDRIVERNAME ...
+			ID = database HOST -set type=odbc driver=ODBCDRIVERNAME connstr=CONNECTIONSTRING ...
 			VAL = database ID -set sql=SQLSTATEMENT
+			VAL = database ID -set sql=SQLSTATEMENT params=[PARAMETERLIST] ...
 			VAL = database ID -set sql={SQLSTATEMENTS} ...
 			VAL = database ID -close
 		</syntax>
@@ -47,22 +51,31 @@
 			ID = database HOST -set type=TYPE
 			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD port=PORT usedb=DBNAME
 		</codeblock>
-		<em>Hinweis:</em> ODBC connections are dependent on additional drivers for the individual database types, one of which must be specified for a connection using <code>driver=ODBCDRIVERNAME</code>. The <code>getodbcdrivers()</code> function returns a list of the ODBC drivers installed on the current system. On Windows systems, this contains at least the <code>"SQL Server"</code> driver by default. The driver names returned can be passed directly to <code>driver</code>:
+		<em>Note:</em> ODBC connections are dependent on additional drivers for the individual database types, one of which must be specified for a connection using <code>driver=ODBCDRIVERNAME</code>. The <code>getodbcdrivers()</code> function returns a list of the ODBC drivers installed on the current system. On Windows systems, this contains at least the <code>"SQL Server"</code> driver by default. The driver names returned can be passed directly to the <code>driver</code> option:
 		<codeblock>
-			drivers{} = getodbcdrivers();
-			ID = database HOST -set type=odbc driver=drivers{1} usr=USERNAME pwd=PASSWORD ...
+			odbcDrivers = getodbcdrivers();
+			ID = database HOST -set type=odbc driver=odbcDrivers[1] usr=USERNAME pwd=PASSWORD ...
 		</codeblock>
+		<em>Note:</em> The connection to ODBC data sources is only partially standardized, so it is possible that the basic <em>connection string</em> (<code>DRIVER={ODBCDRIVERNAME}; SERVER=HOST; TRUSTED_CONNECTION=no</code> followed by the optional values) may not be usable for the desired driver and data source pair. A user-defined <em>connection string</em> can therefore be specified using the option <code>connstr=CONNECTIONSTRING</code>. A driver name in the form <code>DRIVER={ODBCDRIVERNAME}</code> must not be part of this connection string. It is prepended automatically. Valid connection strings for the different data sources can be found here: https://www.connectionstrings.com/
 		<example desc="Establishing a connection to the MySQL database 'MyDB' on 'localhost' with additional parameters:">
 			nId = database "localhost" -set type=mysql usr="NumeRe" pwd="mysqlpwd" port=3307 usedb="MyDB"
 		</example>
 		<h>Database interaction</h>
-		The connection ID can be used to interact with the connected database using SQL statements. If such a statement returns a table (e.g. <code>"SELECT * FROM ..."</code>), then a maximum of the first ten rows of the table are displayed in the terminal. To use the entire table, a target table must be specified using <code>target=TABLE()</code>, which may also be generated automatically:
+		The connection ID can be used to interact with the connected database using SQL statements. If such a statement returns a table (e.g. <code>"SELECT * FROM ..."</code>), then a maximum of the first five and the last five rows of the table are displayed in the terminal. To use the entire table, a target table must be specified using <code>target=TABLE()</code>, which may also be generated automatically:
 		<codeblock>
 			VAL = database ID -set sql=SQLSTATEMENT
 			VAL = database ID -set sql=SQLSTATEMENT target=TABLE()
 		</codeblock>
 		Here, <code>sql=SQLSTATEMENT</code> can also contain a vector with several statements that are executed directly one after the other.
-		The database connection can be closed again using <code>database ID -close</code>.
+		Instead of vector syntax within the SQL statement <code>INSERT INTO</code>, multiple value tuples can also be transferred together. This can be more efficient than other methods, especially for up to around 100 value tuples:
+		<codeblock>
+			database nId -set sql="INSERT INTO mytable(id,name) VALUES (1, 'John Doe'), (2, 'Jane Doe'), (3, 'Edgar A. Poe');"
+		</codeblock>
+		SQL also supports placeholders through the use of <code>?</code>, <code>?NNN</code>, <code>:AAA</code>, <code>@AAA</code>, and <code>$AAA</code> in SQL statements. Here, <code>NNN</code> stands for a purely numeric ID and <code>AAA</code> for an alphanumeric identifier. The values for these placeholders can be passed using the <code>params=[PARAMLIST]</code> option. The parameters are numbered from left to right, unless numeric IDs are used. It is possible to specify vector values here, so that the SQL statement is executed individually for each vector component. Especially with floating point values, this method is preferrable to <em>avoid rounding error</em>, because no from and to text conversions are necessary.
+		<codeblock>
+			database nId -set sql="INSERT INTO mytable(id,name) VALUES (?,?)" params=[{1,2,3}, {"John Doe", "Jane Doe", "Edgar A. Poe"}]
+		</codeblock>
+		The database connection can be closed again using <code>database ID -close</code>. However, as mentioned at the beginning, it will also close automatically if it has not been used for a long time or if NumeRe itself is closed.
 		<example desc="Create a new table 'Employee' in the MySQL database and fill it with several values:">
 			database nId -set sql="CREATE TABLE Employee (`ID` INT NOT NULL AUTO_INCREMENT, `Name` TEXT, `Created` DATE, PRIMARY KEY(`ID`))"
 			true

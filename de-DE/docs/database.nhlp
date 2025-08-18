@@ -29,12 +29,16 @@
 		<keyword>usedb</keyword>
 		<keyword>port</keyword>
 		<keyword>driver</keyword>
+		<keyword>connstr</keyword>
 	</keywords>
 	<contents>
 		<syntax>
 			ID = database FILENAME -set type=sqlite
 			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD ...
+			ID = database HOST -set type=odbc driver=ODBCDRIVERNAME ...
+			ID = database HOST -set type=odbc driver=ODBCDRIVERNAME connstr=CONNECTIONSTRING ...
 			VAL = database ID -set sql=SQLSTATEMENT
+			VAL = database ID -set sql=SQLSTATEMENT params=[PARAMETERLIST] ...
 			VAL = database ID -set sql={SQLSTATEMENTS} ...
 			VAL = database ID -close
 		</syntax>
@@ -47,22 +51,31 @@
 			ID = database HOST -set type=TYPE
 			ID = database HOST -set type=TYPE usr=USERNAME pwd=PASSWORD port=PORT usedb=DBNAME
 		</codeblock>
-		<em>Hinweis:</em> ODBC-Verbindungen sind von zusätzlichen Treibern für die jeweiligen Datenbanktypen abhängig, von denen einer bei einer Verbindung mittels <code>driver=ODBCDRIVERNAME</code> angegeben werden muss. Die Funktion <code>getodbcdrivers()</code> gibt eine Liste der auf dem aktuellen System installierten ODBC-Treibern zurück. Diese enthält auf Windows-Systemen standardmäßig mindestens den <code>"SQL Server"</code>-Treiber. Die zurückgegebenen Treiberbezeichnungen können direkt an <code>driver</code> übergeben werden:
+		<em>Hinweis:</em> ODBC-Verbindungen sind von zusätzlichen Treibern für die jeweiligen Datenbanktypen abhängig, von denen einer bei einer Verbindung mittels <code>driver=ODBCDRIVERNAME</code> angegeben werden muss. Die Funktion <code>getodbcdrivers()</code> gibt eine Liste der auf dem aktuellen System installierten ODBC-Treibern zurück. Diese enthält auf Windows-Systemen standardmäßig mindestens den <code>"SQL Server"</code>-Treiber. Die zurückgegebenen Treiberbezeichnungen können direkt an die <code>driver</code>-Option übergeben werden:
 		<codeblock>
-			drivers{} = getodbcdrivers();
-			ID = database HOST -set type=odbc driver=drivers{1} usr=USERNAME pwd=PASSWORD ...
+			odbcDrivers = getodbcdrivers();
+			ID = database HOST -set type=odbc driver=odbcDrivers[1] usr=USERNAME pwd=PASSWORD ...
 		</codeblock>
+		<em>Hinweis:</em> Der Verbindungsaufbau zu ODBC-Datenquellen ist nur teilweise genormt, so kann es sein, dass der von NumeRe standardmäßig verwendete Basis-<em>Connection String</em> (<code>DRIVER={ODBCDRIVERNAME}; SERVER=HOST; TRUSTED_CONNECTION=no</code> gefolgt von den optionalen Werten) für das gewünschte Treiber-Datenquellen-Paar nicht verwendbar ist. Es kann daher mittels der Option <code>connstr=CONNECTIONSTRING</code> ein benutzerdefinierter <em>Connection String</em> angegeben werden. Eine Treiberbezeichnung in Form von <code>DRIVER={ODBCDRIVERNAME}</code> darf nicht Teil dieses Connection Strings sein. Der Treiber wird automatisch angefügt. Valide Connection Strings für die unterschiedlichen Datenquellen können hier nachgelesen werden: https://www.connectionstrings.com/
 		<example desc="Aufbau einer Verbindung zu der MySQL-Datenbank 'MyDB' auf 'localhost' mit zusätzlichen Parametern:">
 			nId = database "localhost" -set type=mysql usr="NumeRe" pwd="mysqlpwd" port=3307 usedb="MyDB"
 		</example>
 		<h>Datenbank-Interaktion</h>
-		Mithilfe der Verbindungs-ID kann mit der verbundenen Datenbank durch SQL-Statements interagiert werden. Wenn ein solches Statement eine Tabelle zurückgibt (z.B. <code>"SELECT * FROM ..."</code>), dann werden maximal die ersten zehn Zeilen der Tabelle im Terminal wiedergegeben. Um die gesamte Tabelle zu verwenden, muss eine Zieltabelle mittels <code>target=TABLE()</code> angegeben werden, die auch ggf. automatisch erzeugt wird:
+		Mithilfe der Verbindungs-ID kann mit der verbundenen Datenbank durch SQL-Statements interagiert werden. Wenn ein solches Statement eine Tabelle zurückgibt (z.B. <code>"SELECT * FROM ..."</code>), dann werden maximal die ersten fünf und die letzten fünf Zeilen der Tabelle im Terminal wiedergegeben. Um die gesamte Tabelle zu verwenden, muss eine Zieltabelle mittels <code>target=TABLE()</code> angegeben werden, die auch ggf. automatisch erzeugt wird:
 		<codeblock>
 			VAL = database ID -set sql=SQLSTATEMENT
 			VAL = database ID -set sql=SQLSTATEMENT target=TABLE()
 		</codeblock>
 		Dabei kann <code>sql=SQLSTATEMENT</code> auch einen Vektor mit mehreren Statements enthalten, die direkt nacheinander ausgeführt werden.
-		Die Datenbankverbindung kann mittels <code>database ID -close</code> wieder geschlossen werden.
+		Anstatt vektorieller Syntax im Rahmen des SQL-Statements <code>INSERT INTO</code> können auch mehrere Werte-Tupel gemeinsam übergeben werden. Dies kann speziell bei bis zu ungefähr 100 Werte-Tupeln performanter als die anderen Methoden sein:
+		<codeblock>
+			database nId -set sql="INSERT INTO mytable(id,name) VALUES (1, 'John Doe'), (2, 'Jane Doe'), (3, 'Edgar A. Poe');"
+		</codeblock>
+		SQL unterstützt auch Platzhalter durch die Verwendung von <code>?</code>, <code>?NNN</code>, <code>:AAA</code>, <code>@AAA</code> und <code>$AAA</code> in SQL-Statements. Hierbei steht <code>NNN</code> für eine rein numerische ID und <code>AAA</code> für einen alphanumerischen Identifizierer. Die Werte für diese Platzhalter können mithilfe der Option <code>params=[PARAMLIST]</code> übergeben werden. Dabei sind die Parameter von links nach rechts nummeriert, sofern keine numerischen IDs verwendet werden. Es ist möglich, hier vektorielle Werte anzugeben, so dass das SQL-Statement für jede Vektorkomponente einzeln ausgeführt wird. Diese Method ist bei besonders Gleitkommazahlen zum <em>Vermeiden von Rundungsfehlern</code> zu bevorzugen, da keine von und zu Textkonversionen durchgeführt werden müssen.
+		<codeblock>
+			database nId -set sql="INSERT INTO mytable(id,name) VALUES (?,?)" params=[{1,2,3}, {"John Doe", "Jane Doe", "Edgar A. Poe"}]
+		</codeblock>
+		Die Datenbankverbindung kann mittels <code>database ID -close</code> wieder geschlossen werden. Sie wird aber auch, wie eingangs erwähnt, automatisch geschlossen, wenn sie über längere Zeit nicht genutzt wurde oder wenn NumeRe selbst geschlossen wird.
 		<example desc="Erzeugen einer neuen Tabelle 'Employee' in der MySQL-Datenbank und befüllen mit mehreren Werten:">
 			database nId -set sql="CREATE TABLE Employee (`ID` INT NOT NULL AUTO_INCREMENT, `Name` TEXT, `Created` DATE, PRIMARY KEY(`ID`))"
 			true
