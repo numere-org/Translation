@@ -590,3 +590,4 @@ Z(n,m,rho,phi)~Wert des Zernikepolynoms der Ordnung n >= 0 mit m = [-n,n] an der
 zero(n,m)~Erzeugt eine n x m-Matrix, die mit Nullen gefüllt ist, siehe "help matop"~zero() matrix~zero(
 zeroes~Bestimmt alle Nullstellen eines Ausdrucks in einem gegebenen Intervall. Siehe "help zeroes"~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Berechnet den Wert der Riemann'schen Zetafunktion an der Stelle x~zeta() zetafunction riemannian riemannsche~zeta(
+zip(A1,A2,...)~Entnimmt elementweise je ein Element aus den Arrays, kombiniert sie in ein gemeinsames Cluster und bettet dieses in das zurückgegebene Cluster ein~zip() tuple zipped combine kombinieren pair elementwise elementweise tupel~zip(

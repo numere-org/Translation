@@ -590,3 +590,4 @@ Z(n,m,rho,phi)~Value of the Zernike polynomial of the order n >= 0 with m = [-n,
 zero(n,m)~Generates a (n x m) matrix, wich is filled with zeroes~zero() matrix~zero(
 zeroes~Calls the function for numerical calculation of the intersection with zero of functions and data sets~schnittpunkt nullstellen roots~help zeroes
 zeta(x)~Calculates the value of the Riemann zeta function at the location x~zeta() zetafunction riemannian riemannsche~zeta(
+zip(A1,A2,...)~Takes one element at a time from the arrays, combines them into a common cluster, and embeds this cluster in the returned cluster~zip() tuple zipped combine kombinieren pair elementwise elementweise tupel~zip(

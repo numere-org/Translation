@@ -418,6 +418,7 @@ PARSERFUNCS_LISTFUNC_FUNC_YEARS_[SYNTAX_TIME]=				years(x)                      
 PARSERFUNCS_LISTFUNC_FUNC_Z_[NUM_POLYNOMIAL]=				Z(n,m,fRho,fPhi)                                                      VAL      - Value of the Zernike polynomial of the order n >= 0 with m = [-n,n] at the position fRho in the interval [0,1] at the angle fPhi in the interval [0,2*PI)
 PARSERFUNCS_LISTFUNC_FUNC_ZERO_[MAT]=						zero(n,m=n)                                                           MAT      - Creates a n x m matrix, which is filled with zeroes. If only one argument was passend, then a square matrix will be created.
 PARSERFUNCS_LISTFUNC_FUNC_ZETA_[NUM]=					    zeta(x)                                                               VAL      - Calculates the value of the Riemann zeta function at the location x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {1}
+PARSERFUNCS_LISTFUNC_FUNC_ZIP_[SYNTAX]=						zip({arr1},{arr2},...)                                                CST      - Takes one element at a time from the arrays arr1, arr2, ..., combines them into a common cluster, and embeds this cluster in the returned cluster: {{arr1[1], arr2[1], ...}, {arr1[2], arr2[2], ...}, ...} The returned cluster has the length of the longest array of arr1, arr2, ...
 PARSERFUNCS_LISTFUNC_TABLEHEAD=								Function:                                                             Type:    Description:
 # Ende Funktionentabelle
 PARSERFUNCS_LISTFUNC_GETKEYVAL_WARNING=The key %%1%% could not be found in the passed list by the function getkeyval().
