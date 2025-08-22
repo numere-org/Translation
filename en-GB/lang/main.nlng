@@ -294,7 +294,7 @@ PARSERFUNCS_LISTVAR_VARS_AND=Variable(s) and
 PARSERFUNCS_LISTVAR_DATATABLES=Data table(s)
 PARSERFUNCS_LISTCONST_HEADLINE=Defined constants
 PARSERFUNCS_LISTCONST_EMPTY=No constants defined.
-PARSERFUNCS_LISTCONST_FOOTNOTE1=The constants are---if applicable---stored in SI units:$[kg, J, K, m, s, A, mol, T]
+PARSERFUNCS_LISTCONST_FOOTNOTE1=The constants are---if applicable---stored in SI units: [kg, J, K, m, s, A, mol, T]
 PARSERFUNCS_LISTCONST_FOOTNOTE2=Special constants/values are "nan" (no real value), "inf" (infinity), "true" (TRUE), "false" (FALSE) and "void" (empty/no value).
 PARSERFUNCS_LISTCONST_TYPE_ATOMIC=Nuclear physics
 PARSERFUNCS_LISTCONST_TYPE_FIELDTHEORY=Fieldtheory
@@ -313,7 +313,7 @@ PARSERFUNCS_LISTPLUGINS_COMMAND=Command:
 PARSERFUNCS_LISTPLUGINS_DESCRIPTION=Description:
 PARSERFUNCS_LISTPLUGINS_AUTHOR=Author:
 PARSERFUNCS_LISTPLUGINS_LICENSE=License:
-PARSERFUNCS_TAYLOR_MISSINGPARAMS=ERROR: Not all necessary parameters were passed.$See "help taylor" for further information.
+PARSERFUNCS_TAYLOR_MISSINGPARAMS=ERROR: Not all necessary parameters were passed. See "help taylor" for further information.
 PARSERFUNCS_TAYLOR_CONSTEXPR=ERROR: The expression is constant in terms of the variable "%%1%%". It cannot be expanded into a Taylor polynomial.
 PARSERFUNCS_TAYLOR_DEFINESTRING=-set comment="Taylor expansion of the expression '%%1%%' at the position %%2%%=%%3%% with the order %%4%%"
 PARSERFUNCS_FIT_FITTING=Fitting "%%1%%" ...

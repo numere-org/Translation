@@ -294,7 +294,7 @@ PARSERFUNCS_LISTVAR_VARS_AND=Variable(n) und
 PARSERFUNCS_LISTVAR_DATATABLES=Datentabelle(n)
 PARSERFUNCS_LISTCONST_HEADLINE=Definierte Konstanten
 PARSERFUNCS_LISTCONST_EMPTY=Keine Konstanten definiert.
-PARSERFUNCS_LISTCONST_FOOTNOTE1=Die Konstanten sind - falls zutreffend - in SI-Einheiten angegeben:$[kg, J, K, m, s, A, mol, T]
+PARSERFUNCS_LISTCONST_FOOTNOTE1=Die Konstanten sind - falls zutreffend - in SI-Einheiten angegeben: [kg, J, K, m, s, A, mol, T]
 PARSERFUNCS_LISTCONST_FOOTNOTE2=Spezielle Konstanten/Werte sind "nan" (Kein Wert), "inf" (Unendlich), "true" (WAHR), "false" (FALSCH) und "void" (Leerer/kein Wert).
 PARSERFUNCS_LISTCONST_TYPE_ATOMIC=Atomphysik
 PARSERFUNCS_LISTCONST_TYPE_FIELDTHEORY=Feldtheorie
@@ -313,7 +313,7 @@ PARSERFUNCS_LISTPLUGINS_COMMAND=Befehl:
 PARSERFUNCS_LISTPLUGINS_DESCRIPTION=Beschreibung:
 PARSERFUNCS_LISTPLUGINS_AUTHOR=Autor:
 PARSERFUNCS_LISTPLUGINS_LICENSE=Lizenz:
-PARSERFUNCS_TAYLOR_MISSINGPARAMS=FEHLER: Es wurden nicht die nötigen Parameter übergeben.$Siehe "help taylor" für weitere Details.
+PARSERFUNCS_TAYLOR_MISSINGPARAMS=FEHLER: Es wurden nicht die nötigen Parameter übergeben. Siehe "help taylor" für weitere Details.
 PARSERFUNCS_TAYLOR_CONSTEXPR=FEHLER: Bezüglich der Variablen "%%1%%" ist der Ausdruck konstant und kann nicht in ein Taylorpolynom entwickelt werden.
 PARSERFUNCS_TAYLOR_DEFINESTRING=-set comment="Taylorentwicklung des Ausdrucks '%%1%%' an der Stelle %%2%%=%%3%% bis zur Ordnung %%4%%"
 PARSERFUNCS_FIT_FITTING=Fitte "%%1%%" ...
