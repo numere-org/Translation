@@ -1,0 +1,98 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2025  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="object">
+	<title string="Built-in objects and structures" idxkey="object" />
+	<keywords>
+		<keyword>object</keyword>
+		<keyword>struct</keyword>
+		<keyword>dict</keyword>
+		<keyword>path</keyword>
+		<keyword>queue</keyword>
+		<keyword>stack</keyword>
+		<keyword>file</keyword>
+		<keyword>class</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			oDictStruct = dictstruct()
+			oDictStruct = dictstruct({sFields})
+			oDictStruct = dictstruct({sFields}, {vals})\n
+			oPath = path()
+			oPath = path({sPaths})
+			oPath = path({sPaths}, {sSeparators})
+			oPath = "SOME" / "PATH" / "SEGMENTS"\n
+			oFile = file()
+			oFile = file({sFiles})
+			oFile = file({sFiles}, {sModes})\n
+			oStack = stack()
+			oStack = stack({vals})\n
+			oQueue = queue()
+			oQueue = queue({vals})
+		</syntax>
+		In addition to <a href="nhlp://table?frame=new">tables</a>, NumeRe provides several predefined objects that can be used to create more complex data structures through composition. The respective methods of the data structures are listed in the symbol tree.
+		<h>DictStructs</h>
+		DictStructs are hybrids of dictionaries (also called maps) and structures. They offer functionalities from both worlds and are most similar to a <code>struct</code> in other languages. DictStructs pair fields (or keys) with values, whereby a value can be another DictStruct, allowing deep structures to be constructed. Due to their implementation based on a dictionary, DictStructs are dynamic and can change their fields in terms of content and type at any time.
+		A DictStruct instance is created with the function <code>dictstruct({sFields}={}, {vals}="")</code>. The fields <code>sFields</code> and the values <code>vals</code> are optional. If <code>sFields</code> is empty, a DictStruct instance without fields is created. In addition to additional methods, the DictStruct instance can also be interacted with using the field names, provided that they comply with the rules for variable names (only alphanumeric, no digit as the first character):
+		<list>
+			<item node="*">To read the values in the form of a method without arguments (e.g., <code>VALUE = oDictStruct.FIELD.SUBFIELD</code>)</item>
+			<item node="*">To modify the values when they are used as arguments for the field names (e.g. <code>oDictStruct.FIELD.SUBFIELD(NEWVALUE)</code>)</item>
+		</list>
+		Field names that do not comply with the rules for variable names can be read using the methods <code>oDictStruct.at(sKey)</code> and overwritten using <code>oDictStruct.write(sKey,val)</code>.
+		New fields can only be created using <code>oDictStruct.insertkey(sKey, val={})</code>; any other attempt will throw an error.
+		Instead of specifying the fields (or keys) using character strings, path objects (see below) can also be used, which can then map a complete hierarchy and thus allow completely dynamic interactions. The syntax is based on the xPath syntax, i.e., square brackets can be used to extract elements from vector fields, with the value <code>"last()"</code> referencing the last element:
+		<codeblock>
+			val = oDictStruct.at("FIELD" / "SUBFIELD")
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[2]" / ...)
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()]" / ...)
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()-4]" / ...)
+		</codeblock>
+		<h>Path-Objekte</h>
+		A path is any separator-delimited string, such as a file path, URL, or namespace. Separators are used to break down paths into individual building blocks, starting with the root element <code>path.root</code>, through the trunk and the respective branch, to the leaf element <code>path.leaf</code>. The trunk and branch are only significant in relation to other path instances in that they describe the common (<code>path.trunk(oPath)</code>) and different (<code>path.branch(oPath)</code>) parts of the path.
+		The function <code>path({sPaths}={},{sSeparators}="\\/")</code> can be used to create instances of type <code>object.path</code> for each path in <code>sPaths</code> and each separator in <code>sSeparators</code>. If no paths are passed, an empty path instance is created. Path objects support the operators <code>+</code> (add more characters to the leaf element) and <code>/</code> (append a new leaf element to the path).
+		A path object is also created automatically when at least two arbitrary strings are linked with the <code>/</code> operator. A string can also be assigned to a path object (<code>oPath = sPath</code>), which is then implicitly converted to an <code>object.path</code> using <code>path(sPath, "\\/")</code>.
+		<h>File-Objekte</h>
+		File objects can be used to directly access any files and allow arbitrary operations on these files, both in text and binary mode. Instances of this object each enclose an instance of the C++ class <code>std::fstream</code>.
+		Object instances of type <code>object.file</code> can be created with the function <code>file({sFiles}={},{sModes}="r")</code> for each file name in <code>sFiles</code> (<code>sFiles</code> can be a vector of character strings or path object instances) and each mode in <code>sModes</code>. If no file names are passed, an empty file instance is created. The mode determines how the file is opened:
+		<list>
+			<item node="&quot;w&quot;">Open for writing and delete any previous content</item>
+			<item node="&quot;w+&quot;">Open for reading and writing and delete any previous content</item>
+			<item node="&quot;r&quot;">Open for reading, file must exist</item>
+			<item node="&quot;r+&quot;">Open for reading and writing</item>
+			<item node="&quot;a&quot;">Open for writing and jump to the end of the file</item>
+			<item node="&quot;a+&quot;">Open for reading and writing and jump to the end of the file</item>
+		</list>
+		An additional <code>"b"</code> (for example, as <code>"r+b"</code>) activates binary file mode. In this mode, the <code>object.file</code> instance does not preprocess line endings. Instead, each byte can be addressed and modified individually.
+		Write operations are buffered by <code>std::fstream</code>, i.e., written content is not immediately reflected in the file. To force this, the <code>file.flush</code> method can be used. Alternatively, the buffer is also mirrored when the file is closed with <code>file.close</code> (this also happens automatically when all contents of the current file have been read, a new file is opened, or the current instance is overwritten or deleted).
+		<code>object.file</code> is implicitly convertible to a logical value. If a file is open, the instance has the value <code>true</code>, otherwise <code>false</code>. This can be used, for example, to read an entire file line by line:
+		<codeblock>
+			oFile = file("C:/my/text/file.txt");
+			while (oFile)
+			\tsLine = oFile.readline;
+			\t## Do something with the line
+			endwhile
+		</codeblock>
+		<h>Stack-Objekte</h>
+		A stack is a last-in, first-out (<em>LIFO</em>) memory. This means that the element that was last placed on the stack (<code>stack.push(val)</code>) must also be removed from the stack first (<code>stack.pop</code>).
+		To create an instance of type <code>object.stack</code>, the function <code>stack({vals}={})</code> can be used. If <code>vals</code> is empty, an empty stack is created; otherwise, the stack is initialized with the values, whereby the order in which the values are passed corresponds to the reading order, i.e., the first element in <code>vals</code> is also at the top of the stack (<code>stack.top</code>).
+		<h>Queue-Objekte</h>
+		A queue is a first-in, first-out (<em>FIFO</em>) memory. This means that the element that was created first in the queue (<code>queue.push(val)</code>) must also be removed from it first (<code>queue.pop</code>). Queues implement queues of objects, whereby the implementation of <code>object.queue</code> is based on a <code>std::deque</code> (double-ended queue) and thus elements can also be placed at the beginning of the queue (<code>queue.pushfront(val)</code>) and removed from the end (<code>queue.popback</code>).
+		The function <code>queue({vals}={})</code> can be used to create an instance of type <code>object.queue</code> with the values from <code>vals</code>. If <code>vals</code> is empty, an empty queue is created; otherwise, the queue is filled with the values, maintaining the order, i.e., the first element in <code>vals</code> is also the first element in the queue (<code>queue.front</code>).
+		<em>See also:</em> <a href="nhlp://variable?frame=self">help variable</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://procedure?frame=self">help procedure</a> and <a href="nhlp://proccmd?frame=self">help proccmd</a>
+	</contents>
+</article>

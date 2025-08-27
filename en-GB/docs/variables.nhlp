@@ -27,7 +27,7 @@
 	<contents>
 		Variables are one of the core functionalities of NumeRe. They may store values, which may be easily used at a later point. Their names may be composed out of an arbitrary combination of numbers, letters and underscores, as long as they do not start with a number. They may even carry the same name as a function, because functions are identified by their parentheses:<verbatim>Variable "func"  vs.  function "func()"</verbatim>
 		Variables will be declared, if their desired name is entered directly. Optionally, values or whole vectors may be assigned to these variables during initialization in the form<codeblock>VARIABLE = VALUE</codeblock>Otherwise they will be initialized with the value of <code>void</code> (see below). In the case that an unknown variable is used in an expression, it will be initialized with the value of <code>void</code> as well.
-		Variables can have different types that are not completely interchangeable. Variables of the types <code>category</code> and <code>string</code> can only be assigned their respective values. Variables with the value <code>void</code> can be assigned any value; <code>void</code> itself, on the other hand, cannot be assigned to any variable (except variables that already have the value <code>void</code>). Variables with the values <code>datetime</code>, <code>logical</code> or <code>value.*</code> can be assigned any type and value within this area.
+		Variables can have different types that are not completely interchangeable. Variables of the types <code>category</code> and <code>string</code> can only be assigned their respective values. Variables with the value <code>void</code> can be assigned any value; <code>void</code> itself, on the other hand, cannot be assigned to any variable (except variables that already have the value <code>void</code>). Variables with the values <code>datetime</code>, <code>duration</code>, <code>logical</code> or <code>value.*</code> can be assigned any type and value within this area.
 		<table>
 			<tr>
 				<td><em>Type</em></td><td><em>Bits</em></td><td><em>Complex</em></td><td><em>Signed</em></td><td><em>Floating point</em></td><td><em>Promotion</em></td><td><em>Constructor</em></td><td><em>Data range</em></td>
@@ -78,6 +78,9 @@
 				<td><code>"datetime"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>datetime(x)</code></td><td><code>-32767-12-31, 23:59:59</code> - <code>32767-12-31, 23:59:59</code></td>
 			</tr>
 			<tr>
+				<td><code>"duration"</code></td><td>8</td><td></td><td>&#x2713;</td><td>&#x2713;</td><td>&#x2713;</td><td><code>years(x)</code>, ..., <code>seconds(x)</code></td><td><code>-2000000000y 0:00:00</code> - <code>2000000000y 0:00:00</code></td>
+			</tr>
+			<tr>
 				<td><code>"string"</code></td><td>*</td><td></td><td></td><td></td><td></td><td><code>"..."</code></td><td><code>to_char({0:255})</code></td>
 			</tr>
 			<tr>
@@ -86,10 +89,11 @@
 		</table>
 		There is a special variable called <code>ans{}</code> (a so-called <a href="nhlp://cluster?frame=new">cluster</a>), which automatically stores the last calculated result. In addition, the four standard variables <code>x, y, z</code> and <code>t</code> are predefined and known from start-up.
 		<a href="nhlp://table?frame=new">Tables</a> are another variable type in NumeRe. Those use a similar signature as functions, but they are capable of using the interval operator <code>A:B</code>. As default, loaded data is found inside of the table <code>data()</code>. Another table is <code>table()</code>, which is available per default. New tables may be created with the command <a href="nhlp://new?frame=new"><code>new</code></a>, or if they are generated as a copy of an already existing table:<codeblock>NEWTAB() = OLDTAB()</codeblock>
+		For more complex cases, NumeRe also provides predefined <a href="nhlp://object?frame=new">objects</a>, which can also be used to map hierarchical structures.
 		<example desc="Declaring of the variable x with value 1:">
 			x = 1
 			ans = 1
 		</example>
-		<em>See also:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://table?frame=self">help table</a> and <a href="nhlp://cluster=frame=self">help cluster</a>
+		<em>See also:</em> <a href="nhlp://data?frame=self">help data</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster=frame=self">help cluster</a> and <a href="nhlp://object?frame=self">help object</a>
 	</contents>
 </article>

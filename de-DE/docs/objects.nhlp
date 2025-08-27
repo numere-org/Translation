@@ -1,0 +1,98 @@
+<!--
+	NumeRe: Framework fuer Numerische Rechnungen
+	Copyright (C) 2025  Erik Haenel et al.
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<article id="object">
+	<title string="Vordefinierte Objekte und Strukturen" idxkey="object" />
+	<keywords>
+		<keyword>object</keyword>
+		<keyword>struct</keyword>
+		<keyword>dict</keyword>
+		<keyword>path</keyword>
+		<keyword>queue</keyword>
+		<keyword>stack</keyword>
+		<keyword>file</keyword>
+		<keyword>class</keyword>
+	</keywords>
+	<contents>
+		<syntax>
+			oDictStruct = dictstruct()
+			oDictStruct = dictstruct({sFields})
+			oDictStruct = dictstruct({sFields}, {vals})\n
+			oPath = path()
+			oPath = path({sPaths})
+			oPath = path({sPaths}, {sSeparators})
+			oPath = "SOME" / "PATH" / "SEGMENTS"\n
+			oFile = file()
+			oFile = file({sFiles})
+			oFile = file({sFiles}, {sModes})\n
+			oStack = stack()
+			oStack = stack({vals})\n
+			oQueue = queue()
+			oQueue = queue({vals})
+		</syntax>
+		Zusätzlich zu den <a href="nhlp://table?frame=new">Tabellen</a> stellt NumeRe einige vordefinierte Objekte bereit, mit denen durch Komposition komplexere Datenstrukturen erzeugt werden können. Die jeweiligen Methoden der Datenstrukturen sind im Symbolbaum gelistet.
+		<h>DictStructs</h>
+		DictStructs sind Hybride aus Dictionaries (auch Maps genannt) und Strukturen. Sie bieten Funktionalitäten aus beiden Welten und entsprechen wohl am ehesten einem <code>struct</code> anderer Sprachen. DictStructs paaren Felder (bzw. Schlüssel) mit Werten, wobei ein Wert wieder ein DictStruct sein kann und so tiefe Strukturen konstruierbar sind. Aufgrund der Implementierung auf Basis eines Dictionaries sind DictStructs dynamisch und können ihre Felder jederzeit in Inhalt und Typ ändern.
+		Eine DictStruct-Instanz wird mit der Funktion <code>dictstruct({sFields}={}, {vals}="")</code> erzeugt. Dabei sind die Felder <code>sFields</code> und die Werte <code>vals</code> optional. Falls <code>sFields</code> leer ist, wird eine DictStruct-Instanz ohne Felder erzeugt. Neben zusätzlichen Methoden kann auch mit Hilfe der Feldnamen mit der DictStruct-Instanz interagiert werden, sofern diese den Regeln für Variablenbezeichnungen (nur alphanumerisch, keine Ziffer als erstes Zeichen) entsprechen:
+		<list>
+			<item node="*">Zum Lesen der Werte in Form einer Methode ohne Argumente (z.B. <code>VALUE = oDictStruct.FIELD.SUBFIELD</code>)</item>
+			<item node="*">Zum Modifizieren der Werte, wenn diese als Argumente für die Feldnamen verwendet werden (z.B. <code>oDictStruct.FIELD.SUBFIELD(NEWVALUE)</code>)</item>
+		</list>
+		Feldnamen, die nicht den Regeln für Variablenbezeichnungen entsprechen, können mittels der Methoden <code>oDictStruct.at(sKey)</code> gelesen und <code>oDictStruct.write(sKey,val)</code> überschrieben werden.
+		Neue Felder können nur mittels <code>oDictStruct.insertkey(sKey, val={})</code> erzeugt werden, jeder andere Versuch wird einen Fehler werfen.
+		Statt die Felder (bzw. Schlüssel) mittels Zeichenketten anzugeben, können auch Path-Objekte (siehe unten) verwendet werden, die dann eine komplette Hierarchie abbilden können und damit komplett dynamische Interaktionen erlauben. Die Syntax orientiert sich an der xPath-Syntax, d.h. mittels eckigen Klammern können Elemente aus vektoriellen Feldern entnommen werden, der Wert <code>"last()"</code> referenziert dabei das letzte Element:
+		<codeblock>
+			val = oDictStruct.at("FIELD" / "SUBFIELD")
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[2]" / ...)
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()]" / ...)
+			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()-4]" / ...)
+		</codeblock>
+		<h>Path-Objekte</h>
+		Ein Pfad ist ein jegliche Separator-getrennte Zeichenkette, wie z.B. ein Dateipfad, eine URL oder ein Namespace. Separatoren werden verwendet, um die Pfade in einzelne Bausteine zu zerlegen, beginnend mit dem Wurzelelement <code>path.root</code> über den Stamm und den jeweiligen Ast bis hin zum Blattelement <code>path.leaf</code>. Stamm und Ast haben nur in Bezug auf weitere Path-Instanzen eine Bedeutung insofern sie den jeweils gemeinsamen (<code>path.trunk(oPath)</code>) und den jeweils unterschiedlichen Pfadteil beschreiben (<code>path.branch(oPath)</code>).
+		Mit der Funktion <code>path({sPaths}={},{sSeparators}="\\/")</code> können Instanzen vom Typ <code>object.path</code> für jeden Pfad in <code>sPaths</code> und jeden Separator in <code>sSeparators</code> erzeugt werden. Falls keine Pfade übergeben werden, wird eine leere Path-Instanz erzeugt. Path-Objekte unterstützen die Operatoren <code>+</code> (Blattelement um weitere Zeichen erweitern) und <code>/</code> (ein neues Blattelement an den Pfad anhängen).
+		Ein Path-Objekt wird auch automatisch erzeugt, wenn mindestens zwei beliebige Zeichenketten mit dem <code>/</code>-Operator verknüpft werden. Einem Path-Objekt kann auch eine Zeichenkette zugewiesen werden (<code>oPath = sPath</code>), die dann implizit mittels <code>path(sPath, "\\/")</code> in ein <code>object.path</code> umgewandelt wird.
+		<h>File-Objekte</h>
+		Mit File-Objekten kann direkt auf beliebige Dateien zugegriffen werden und erlaubt arbiträre Operationen auf diesen Dateien, sowohl im Text- als auch im binären Modus. Instanzen dieses Objekts umschließen dazu je eine Instanz der C++-Klasse <code>std::fstream</code>.
+		Objekt-Instanzen vom Typ <code>object.file</code> können mit der Funktion <code>file({sFiles}={},{sModes}="r")</code> für jeden Dateinamen in <code>sFiles</code> (<code>sFiles</code> kann dabei ein Vektor aus Zeichenketten oder Path-Objekt-Instanzen sein) und jeden Modus in <code>sModes</code> erzeugt werden. Falls keine Dateinamen übergeben werden, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:
+		<list>
+			<item node="&quot;w&quot;">Öffne zum Schreiben und lösche zuvor eventuellen Inhalt</item>
+			<item node="&quot;w+&quot;">Öffne zum Lesen und Schreiben und lösche zuvor eventuellen Inhalt</item>
+			<item node="&quot;r&quot;">Öffne zum Lesen, Datei muss existieren</item>
+			<item node="&quot;r+&quot;">Öffne zum Lesen und Schreiben</item>
+			<item node="&quot;a&quot;">Öffne zum Schreiben und springe zuvor ans Ende der Datei</item>
+			<item node="&quot;a+&quot;">Öffne zum Lesen und Schreiben und springe zuvor ans Ende der Datei</item>
+		</list>
+		Ein zusätzliches <code>"b"</code> (zum Beispiel als <code>"r+b"</code>) aktiviert noch den binären Dateimodus. In diesem Modus übernimmt die <code>object.file</code>-Instanz keine Vorverarbeitung von Zeilenenden. Stattdessen kann jedes Byte einzeln addressiert und modifiziert werden.
+		Schreiboperationen werden dabei von <code>std::fstream</code> gepuffert, d.h. geschriebene Inhalte werden nicht direkt in die Datei gespiegelt. Um dies zu erzwingen, kann die Method <code>file.flush</code> verwendet werden. Alternativ wird der Puffer auch gespiegelt, wenn die Datei mit <code>file.close</code> geschlossen wird (dies passiert auch automatisch, wenn alle Inhalte der aktuellen Datei gelesen wurden, eine neue Datei geöffnet oder die aktuelle Instanz überschrieben oder gelöscht wird).
+		<code>object.file</code> ist implizit auf einen logischen Wert konvertierbar. Wenn eine Datei geöffnet ist, hat die Instanz den Wert <code>true</code>, sonst <code>false</code>. Dies kann zum Beispiel genutzt werden, um eine ganze Datei zeilenweise einzulesen:
+		<codeblock>
+			oFile = file("C:/my/text/file.txt");
+			while (oFile)
+			\tsLine = oFile.readline;
+			\t## Do something with the line
+			endwhile
+		</codeblock>
+		<h>Stack-Objekte</h>
+		Ein Stack ist ein Last-In-First-Out (<em>LIFO</em>) Speicher. Das bedeutet, dass das Element, das als letztes auf den Stack gelegt wurde (<code>stack.push(val)</code>), auch als erstes wieder vom Stack entfernt werden muss (<code>stack.pop</code>).
+		Um eine Instanz vom Typ <code>object.stack</code> zu erzeugen, kann die Funktion <code>stack({vals}={})</code> verwendet werden. Falls <code>vals</code> leer ist, wird ein leerer Stack erstellt, anderenfalls wird der Stack mit den Werten initialisiert, wobei die übergebene Reihenfolge der Werte der Lesereihenfolge entspricht, d.h. das erste Element in <code>vals</code> liegt auch oben auf dem Stack (<code>stack.top</code>).
+		<h>Queue-Objekte</h>
+		Eine Queue ist ein First-In-First-Out (<em>FIFO</em>) Speicher. Das bedeutet, dass das Element, das als erstes in der Queue erzeugt wurde (<code>queue.push(val)</code>), auch als erstes aus ihr entnommen werden muss (<code>queue.pop</code>). Queues implementieren Warteschlangen von Objekten, wobei die Implementierung der <code>object.queue</code> auf einem <code>std::deque</code> (double-ended-queue) aufbaut und damit auch Elemente an den Anfang der Queue gestellt (<code>queue.pushfront(val)</code>) und welche vom Ende entfernt werden können (<code>queue.popback</code>).
+		Mit der Funktion <code>queue({vals}={})</code> kann man eine Instanz vom Typ <code>object.queue</code> mit den Werten aus <code>vals</code> erzeugen. Falls <code>vals</code> leer ist, wird eine leere Queue erstellt, anderenfalls wird die Queue mit den Werten befüllt, wobei die Reihenfolge beibehalten wird, d.h. das erste Element in <code>vals</code> ist auch das erste Element in der Queue (<code>queue.front</code>).
+		<em>Siehe auch:</em> <a href="nhlp://variable?frame=self">help variable</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://procedure?frame=self">help procedure</a> und <a href="nhlp://proccmd?frame=self">help proccmd</a>
+	</contents>
+</article>
