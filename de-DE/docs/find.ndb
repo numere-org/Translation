@@ -479,6 +479,7 @@ sum(x,y,z,...)~Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden~
 surf3d~Erstellen eines 3D-Oberflächenplots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
 surf~Erstellen eines Oberflächenplots~oberflaechenplot oberflächenplot surface()~help surf
 swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austauschen exchange content table()~help swap
+swapbytes(x)~Konvertiert von Big Endian zu Little Endian oder umgekehrt~swapbytes() endianness byteswap bswap ntohl htonl ntohs htons~swapbytes(
 switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TAB().aliasof(STR)~Wandelt die aktuelle Tabelle in einen Alias der übergebenen Tabelle um~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Führt eine Varianzanalyse für die Kategorien der selektierten Spalten durch~anovaof() analysis of variance~.anovaof(

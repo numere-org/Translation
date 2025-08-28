@@ -480,6 +480,7 @@ sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings as well~summe summieren 
 surf3d~Generates 3D surface plots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
 surf~Generates surface plots~oberflaechenplot oberflächenplot surface()~help surf
 swap~Swaps the contents of two tables~austauschen exchange content table()~help swap
+swapbytes(x)~Converts from big endian to little endian or vice versa~swapbytes() endianness byteswap bswap ntohl htonl ntohs htons~swapbytes(
 switch (EX)~Starts the definition of a switch condition, see "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TAB().aliasof(STR)~Converts the current table into an alias of the passed table~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
