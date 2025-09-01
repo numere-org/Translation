@@ -804,6 +804,7 @@ GUI_TREE_METHOD_KEYLIST=vect data string dict cat file path stack queue
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Datei laden
 GUI_TREE_PUP_LOADTOTABLE=Datei in eine neue Tabelle laden
+GUI_TREE_PUP_PREVIEW=Inhalt als Tabelle betrachten
 GUI_TREE_PUP_START=Script starten
 GUI_TREE_PUP_RUN=Prozedur ausführen
 GUI_TREE_PUP_EDIT=Bearbeiten
