@@ -62,11 +62,11 @@
 			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()]" / ...)
 			val = oDictStruct.at("FIELD" / ... / "VEKTOR[last()-4]" / ...)
 		</codeblock>
-		<h>Path-Objekte</h>
+		<h>Path objects</h>
 		A path is any separator-delimited string, such as a file path, URL, or namespace. Separators are used to break down paths into individual building blocks, starting with the root element <code>path.root</code>, through the trunk and the respective branch, to the leaf element <code>path.leaf</code>. The trunk and branch are only significant in relation to other path instances in that they describe the common (<code>path.trunk(oPath)</code>) and different (<code>path.branch(oPath)</code>) parts of the path.
 		The function <code>path({sPaths}={},{sSeparators}="\\/")</code> can be used to create instances of type <code>object.path</code> for each path in <code>sPaths</code> and each separator in <code>sSeparators</code>. If no paths are passed, an empty path instance is created. Path objects support the operators <code>+</code> (add more characters to the leaf element) and <code>/</code> (append a new leaf element to the path).
 		A path object is also created automatically when at least two arbitrary strings are linked with the <code>/</code> operator. A string can also be assigned to a path object (<code>oPath = sPath</code>), which is then implicitly converted to an <code>object.path</code> using <code>path(sPath, "\\/")</code>.
-		<h>File-Objekte</h>
+		<h>File objects</h>
 		File objects can be used to directly access any files and allow arbitrary operations on these files, both in text and binary mode. Instances of this object each enclose an instance of the C++ class <code>std::fstream</code>.
 		Object instances of type <code>object.file</code> can be created with the function <code>file({sFiles}={},{sModes}="r")</code> for each file name in <code>sFiles</code> (<code>sFiles</code> can be a vector of character strings or path object instances) and each mode in <code>sModes</code>. If no file names are passed, an empty file instance is created. The mode determines how the file is opened:
 		<list>
@@ -87,10 +87,10 @@
 			\t## Do something with the line
 			endwhile
 		</codeblock>
-		<h>Stack-Objekte</h>
+		<h>Stack objects</h>
 		A stack is a last-in, first-out (<em>LIFO</em>) memory. This means that the element that was last placed on the stack (<code>stack.push(val)</code>) must also be removed from the stack first (<code>stack.pop</code>).
 		To create an instance of type <code>object.stack</code>, the function <code>stack({vals}={})</code> can be used. If <code>vals</code> is empty, an empty stack is created; otherwise, the stack is initialized with the values, whereby the order in which the values are passed corresponds to the reading order, i.e., the first element in <code>vals</code> is also at the top of the stack (<code>stack.top</code>).
-		<h>Queue-Objekte</h>
+		<h>Queue objects</h>
 		A queue is a first-in, first-out (<em>FIFO</em>) memory. This means that the element that was created first in the queue (<code>queue.push(val)</code>) must also be removed from it first (<code>queue.pop</code>). Queues implement queues of objects, whereby the implementation of <code>object.queue</code> is based on a <code>std::deque</code> (double-ended queue) and thus elements can also be placed at the beginning of the queue (<code>queue.pushfront(val)</code>) and removed from the end (<code>queue.popback</code>).
 		The function <code>queue({vals}={})</code> can be used to create an instance of type <code>object.queue</code> with the values from <code>vals</code>. If <code>vals</code> is empty, an empty queue is created; otherwise, the queue is filled with the values, maintaining the order, i.e., the first element in <code>vals</code> is also the first element in the queue (<code>queue.front</code>).
 		<em>See also:</em> <a href="nhlp://variable?frame=self">help variable</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://procedure?frame=self">help procedure</a> and <a href="nhlp://proccmd?frame=self">help proccmd</a>
