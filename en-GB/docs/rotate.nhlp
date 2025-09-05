@@ -28,10 +28,13 @@
 		<syntax>
 			tabrot TABLE() -set alpha=ANGLE ...
 			imrot IMAGE() -set alpha=ANGLE ...
+			imrot IMAGE() -set alpha=ANGLE keepdim
+			imrot IMAGE() -set alpha=ANGLE size={X,Y}
 			gridrot GRID() -set alpha=ANGLE ...
 		</syntax>
 		NumeRe can rotate tables, image data and data grids by an angle <expr>alpha</expr> (in degrees) using one of the three commands <code>tabrot</code>, <code>imrot</code> or <code>gridrot</code>. In doing so, <code>tabrot</code> rotates an entire table without regard to the axes. <code>imrot</code> and <code>gridrot</code> rotate the dataset and on the other hand transform the associated axes automatically (or create new ones).
 		The result of the rotation is created in the <code>rotdata()</code> table. This target can be customized with the <code>target=TARGET()</code> option.
 		<em>Note:</em> All datasets are internally rotated based on their row and column dimensions. Any axis scaling is not taken into account here. For example, a square dataset whose axes are scaled differently will not preserve this very scaling.
+		To change the dimensions of the resulting dataset, the options <code>keepdim</code> (to keep the original dimensions) and <code>size={X,Y}</code> for explicit dimensions may be used. Note that missing values will be initialized with <code>nan</code>.
 	</contents>
 </article>
