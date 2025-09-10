@@ -479,8 +479,8 @@ substr(STR,n,l)~Returns l characters starting with the n-th letter from STR as a
 sum(x,y,z,...)~Sums x,y,z,... Can be applied to strings as well~summe summieren zeichenketten strings sum()~sum(
 surf3d~Generates 3D surface plots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
 surf~Generates surface plots~oberflaechenplot oberflächenplot surface()~help surf
-swap~Swaps the contents of two tables~austauschen exchange content table()~help swap
 swapbytes(x)~Converts from big endian to little endian or vice versa~swapbytes() endianness byteswap bswap ntohl htonl ntohs htons~swapbytes(
+swap~Swaps the contents of two tables~austauschen exchange content table()~help swap
 switch (EX)~Starts the definition of a switch condition, see "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TAB().aliasof(STR)~Converts the current table into an alias of the passed table~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Runs an analysis of variance on the selected columns~anovaof() analysis of variance~.anovaof(
@@ -568,6 +568,9 @@ vcat(MAT,MAT)~Vertically concatenates tow matrices that have the same number of 
 vect3d~Generates a 3D vector plot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vectshift(MAT,n,dim)~Shifts all rows/columns of a matrix by n positions in the direction of the matrix dimension dim (choose 0 for row and 1 for column)~vectshift colshift rowshift columnshift shift col row colwise rowwise schieben~vectshift(
 vect~Generates a vector plot~vectorfield vektorfeld quiver~help vect
+verifyneq(R,N,T)~Checks, whether the results do not match the expected values~verifyneq() notmatch notequal ungleich swtests verifizieren assertions~verifyneq(
+verifyrange(R,L,U,I)~Checks, whether the results are located within a defined range~verifyrange() grenzen limits boundaries intervall range swtests verifizieren assertions~verifyrange(
+verifyval(R,E,T)~Checks, whether the results match the expected values~verifyval() match equal gleich swtests verifizieren assertions~verifyval(
 version()~Returns the version number of NumeRe as an integral number~numere versionsnummer numereversion~version()
 voronoinoise(x,y,z,seed,freq,displ,useDist)~Calculates the Voronoi noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~voronoinoise(
 warn~Displays the passed string as a warning~warning highlight hervorheben print information~help warn

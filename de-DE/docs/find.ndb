@@ -478,8 +478,8 @@ substr(STR,n,l)~Gibt l Zeichen ab dem Zeichen n aus der Zeichenkette STR als neu
 sum(x,y,z,...)~Summiert x,y,z,... Kann auch auf Zeichenketten angewendet werden~summe summieren zeichenketten strings sum()~sum(
 surf3d~Erstellen eines 3D-Oberflächenplots~oberflaechenplot oberflächenplot surface3d dreidimensional surface()~help surf3d
 surf~Erstellen eines Oberflächenplots~oberflaechenplot oberflächenplot surface()~help surf
-swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austauschen exchange content table()~help swap
 swapbytes(x)~Konvertiert von Big Endian zu Little Endian oder umgekehrt~swapbytes() endianness byteswap bswap ntohl htonl ntohs htons~swapbytes(
+swap~Tauscht den Inhalt einer Tabelle mit dem Inhalt einer anderen aus~austauschen exchange content table()~help swap
 switch (EX)~Startet die Definition einer Auswahl-Verzweigung, siehe "help switch"~cases default endswitch switch() verzweigung falls fälle loop command sequence flow control~help switch () ... case CASE: ... endswitch
 TAB().aliasof(STR)~Wandelt die aktuelle Tabelle in einen Alias der übergebenen Tabelle um~aliasof() reference referenz pointer~.aliasof(
 TAB().anovaof({n},m,f,{r})~Führt eine Varianzanalyse für die Kategorien der selektierten Spalten durch~anovaof() analysis of variance~.anovaof(
@@ -567,6 +567,9 @@ vcat(MAT,MAT)~Vertikale Verkettung von zwei Matrizen, die die gleiche Anzahl von
 vect3d~Erzeugt einen 3D-Vektorfeldplot~vectorfield vektorfeld dreidimensional quiver3d~help vect3d
 vectshift(MAT,n,dim)~Verschiebt alle Zeilen/Spalten einer Matrix um n Positionen in Richtung der Matrixdimension dim (wählen Sie 0 für Zeile und 1 für Spalte)~vectshift colshift rowshift columnshift shift col row colwise rowwise schieben~vectshift(
 vect~Erzeugt einen 2D-Vektorfeldplot~vectorfield vektorfeld quiver~help vect
+verifyneq(R,N,T)~Überprüft, ob die Ergebnisse nicht mit den erwarteten Werten übereinstimmen~verifyneq() notmatch notequal ungleich swtests verifizieren assertions~verifyneq(
+verifyrange(R,L,U,I)~Überprüft, ob die Ergebnisse in einem definierten Bereich sind~verifyrange() grenzen limits boundaries intervall range swtests verifizieren assertions~verifyrange(
+verifyval(R,E,T)~Überprüft, ob die Ergebnisse mit den erwarteten Werten übereinstimmen~verifyval() match equal gleich swtests verifizieren assertions~verifyval(
 version()~Gibt die Programmversion von NumeRe als natürliche Zahl zurück~numere versionsnummer numereversion~version()
 voronoinoise(x,y,z,seed,freq,displ,useDist)~Berechnet Voronoi-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~voronoinoise(
 warn~Zeigt die übergebene Zeichenkette als Warnung an~warning highlight hervorheben print information~help warn
