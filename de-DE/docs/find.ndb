@@ -537,6 +537,7 @@ timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit umwandel
 to_ansi(sUtf8Enc)~Konvertiert die UTF-8 encodierte Zeichenkette sUtf8Enc in eine ANSI encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string character ascii to_char()~to_char(
 to_cmd(STR)~Wandelt die enthaltene Zeichenkette STR in ein Kommandoausdruck um~zeichenkette command kommando to_cmd()~to_cmd(
+to_html(val)~Konvertiert den Wert in eine HTML-Repräsentation~markuptohtml() to_html() markdown markup conversion website~to_html(
 to_lowercase(STR)~Wandelt die Großbuchstaben in STR in Kleinbuchstaben um~zeichenkette command kommando to_lowercase() kleinbuchstaben kleinschreiben~to_lowercase(
 to_polar(z)~Wandelt eine kartesische Darstellung in die Polardarstellung um~rect2polar representation polar complex numbers komplexe zahlen~to_polar(
 to_rect(z)~Wandelt eine Polardarstellung der komplexen Zahl z in die kartesische Darstellung um~polar2rect representation cartesian complex numbers komplexe zahlen~to_rect(
