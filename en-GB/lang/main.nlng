@@ -1174,7 +1174,8 @@ GUI_ANALYZER_THROW_ADDMESSAGE=A message, which is appended to "throw" may provid
 GUI_ANALYZER_NAMESPACE_ALWAYSMAIN=This statement changes always in the namespace "main~".
 GUI_ANALYZER_PROGRESS_RUNTIME=The progress display needs additional runtime.
 GUI_ANALYZER_MISSINGPARENTHESIS=Missing parenthesis.
-GUI_ANALYZER_MISSINGARGUMENT=Missing argument.
+GUI_ANALYZER_MISSINGARGUMENT=Missing or too few arguments.
+GUI_ANALYZER_TOOMANYARGS=Too many arguments.
 GUI_ANALYZER_ASSIGNMENTINARGUMENT=The argument contains an assignment operator "=", which doesn't check equality ("==").
 GUI_ANALYZER_IF_ALWAYSTRUE=The argument is always true.
 GUI_ANALYZER_IF_ALWAYSFALSE=The argument is always false.

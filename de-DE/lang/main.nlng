@@ -1174,7 +1174,8 @@ GUI_ANALYZER_THROW_ADDMESSAGE=Eine an "throw" übergebene Nachricht kann zusätz
 GUI_ANALYZER_NAMESPACE_ALWAYSMAIN=Diese Anweisung wechselt immer in den Namensraum "main~".
 GUI_ANALYZER_PROGRESS_RUNTIME=Die Fortschrittsanzeige benötigt zusätzlich Laufzeit.
 GUI_ANALYZER_MISSINGPARENTHESIS=Fehlende Klammer.
-GUI_ANALYZER_MISSINGARGUMENT=Fehlendes Argument.
+GUI_ANALYZER_MISSINGARGUMENT=Fehlende oder zu wenig Argumente.
+GUI_ANALYZER_TOOMANYARGS=Zu viele Argumente.
 GUI_ANALYZER_ASSIGNMENTINARGUMENT=Das Argument enthält einen Zuweisungsoperator "=", der nicht auf Gleichheit prüft ("==").
 GUI_ANALYZER_IF_ALWAYSTRUE=Das Argument ist immer true.
 GUI_ANALYZER_IF_ALWAYSFALSE=Das Argument ist immer false.
