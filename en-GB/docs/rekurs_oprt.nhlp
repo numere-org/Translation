@@ -58,7 +58,19 @@
 				<td>Matrix multiplication</td><td><code>A ** B</code></td><td><code>A **= B</code></td><td>&#x2713;</td><td></td>
 			</tr>
 			<tr>
+				<td>Transposition</td><td><code>A'</code></td><td></td><td>&#x2713;</td><td></td>
+			</tr>
+			<tr>
 				<td>Assignment</td><td><code>A = B</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td>Linear indexing*</td><td><code>A[n]</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td>Multidimensional indexing*</td><td><code>A(r,c,...)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr>
+			<tr>
+				<td>Cluster indexing*</td><td><code>A{n,...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Factorial</td><td><code>A!</code></td><td></td><td>&#x2713;</td><td></td>
@@ -132,6 +144,7 @@
 			<tr>
 				<td>Linebreak</td><td><code>\\</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
-		</table>	
+		</table>
+		<em>* Note:</em> The linear index and multidimensional index are only available for "single-type" variable arrays (arrays that contain only one variable type), while the cluster index is only available for clusters.
 	</contents>
 </article>

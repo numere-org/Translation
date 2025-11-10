@@ -17,7 +17,7 @@
 -->
 
 <article id="matop">
-	<title string="Matrix-Operationen" idxkey="matop" />
+	<title string="Matrix-Operationen [VERALTET]" idxkey="matop" />
 	<keywords>
 		<keyword>matop</keyword>
 		<keyword>mtrxop</keyword>
@@ -31,6 +31,22 @@
 			matop TABLE() = EXPR(TABLE(), CLUSTER{})
 			matop CLUSTER{} = EXPR(TABLE(), CLUSTER{})
 		</syntax>
+		<hr />
+		<em>Warnung: Dieses Kommando ist veraltet und wird in zukünftigen Versionen von NumeRe entfernt.</em> Die Funktionalitäten des <code>matop</code>-Kommandos werden nun außerhalb dieses Modus bereitgestellt. In vielen Fällen wird es genügen, dieses Kommando einfach aus dem Ausdruck zu entfernen. Es gab allerdings einige Änderungen, die nicht portabel sind:
+		<list>
+			<item node="*">Matrizen sind nun "gewöhnliche" numerische Variablen und werden in <a href="nhlp://procedure?frame=new">Prozeduren</a> durch <code>var MAT</code> (ohne Klammern) erzeugt. Die Adressierung ihrer Elemente mit dem linearen Indexoperator <code>MAT[...]</code> gibt die Elemente als Array zurück. Mit dem Indexoperator <code>MAT(...)</code> kann eine Submatrix mit entsprechenden Dimensionen extrahiert werden. Eine Matrix ist <em>keine</em> <a href="nhlp://table?frame=new">Tabelle</a> und eine Tabelle ist <em>keine</em> Matrix. Die Verwendung von <em>Tabelleninhalten als Matrix</em> ist aber immer noch möglich. Matrizen sind per Definition immer rechteckig (oder entsprechend in höherer Ordnung), während Tabellen Spalten unterschiedlicher Länge haben können.</item>
+			<item node="*">Matrizen sind nun spaltenweise orientiert. Dies ist insbesondere bei der Funktion <code>reshape()</code> relevant, die früher zeilenweise vorgangen ist. In der Dokumentation gilt das auch für weitere Funktionen, diese waren aber zuvor schon spaltenweise vorgegangen, hier war lediglich die Dokumentation veraltet</item>
+			<item node="*">Die Kurzschreibweise <code>{{COL1},{COL2},...}</code> zur Erzeugung einer Matrix entfällt, da diese in Konflikt mit eingebetteten Clustern steht. Die Funktion <code>matfc({COL1},{COL2},...)</code> kann als Alternative verwendet werden</item>
+			<item node="*">Es gibt nun einen Unterschied zwischen Vektoren und Arrays. Letztere werden in einem Matrixausdruck auch als Spaltenvektoren interpretiert, sind selbst aber keine Vektoren</item>
+			<item node="*">Matrizen können nun auch Tensoren höherer Ordnung sein, der Indexoperator <code>MAT(row,col,layer,...)</code> wurde für derartige Fälle erweitert. Als Indexvariablen stehen neben <code>nrows</code> und <code>ncols</code> auch <code>nlayers</code> für die dritte Ordnung und <code>ndim</code> für alle weiteren zur Verfügung. Nicht alle Funktionen unterstützen Tensoren höherer Ordnung</item>
+			<item node="*">Mit dem Transpositionsoperator <code>MAT'</code> kann eine Zeilen-Spalten-Transposition durchgeführt werden, <code>transpose()</code> kann nun beliebige Dimensionen vertauschen</item>
+			<item node="*">Die Funktion <code>solve()</code> verwendet nun QR-Zerlegung und benötigt zwei Argumente (<code>solve(mMat,mVec)</code>) und gibt bei Über- oder Unterbestimmung den "best fit" zurück</item>
+			<item node="*">Die Funktion <code>unique()</code> sortiert ihr Ergebnis nicht mehr automatisch</item>
+			<item node="*">Ergebnisse eines Matrixausdrucks werden nun auch in <code>ans</code> abgelegt und nicht mehr in <code>matrix()</code></item>
+			<item node="*">Die jeweils zweiten Parameter der Funktionen <code>vectshift()</code> und <code>circshift()</code> wurden auf das Standardschema, dass die Zeilendimensionen mit 1 und die Spaltendimensionen mit 2 bezeichnet werden, angepasst</item>
+		</list>
+		Diese Änderungen betreffen <code>matop</code>-Modus selbst <em>nicht</em>, sondern gelten nur außerhalb dieses Kommandos.
+		<hr />
 		NumeRe kann auch Operationen mit <em>ganzen Matrizen</em> durchführen, wenn das Kommando <code>matop</code> verwendet wird:<codeblock>matop AUSDRUCK(data(),TABLE())</codeblock>Das Kommando <code>mtrxop</code> ist ein Synonym zu diesem Kommando.
 		Alle Berechnungen finden hier immer noch elementweise statt. Matrix-Matrix- und Matrix-Vektor-Multiplikationen erreicht man mittels des <code>**</code>-Operators:<codeblock>matop MATRIX1() ** MATRIX2()</codeblock>Der <code>**</code>-Operator hat die höchste Priorität aller Operatoren. Ggf. ist es also nötig, entsprechend zu klammern. Außerdem achtet <code>**</code> auf die korrekte Dimensionen der entsprechenden Matrizen.
 		Matrizen verwenden zwar Tabellen als Quell- und Zielstruktur, können selbst aber nicht mit Spaltenüberschriften und Einheiten umgehen und behalten sie daher nicht während der Kalkulation bei. Dazu werden nur numerische Werte aus einer Tabelle verwendet, andere Typen werden ignoriert. Daher eignet <code>matop</code> sich nicht, um Tabellen oder Teile von Tabellen zu kopieren.
@@ -44,7 +60,7 @@
 </article>
 
 <article id="matop_functions">
-	<title string="Matrix-Funktionen" idxkey="matfunc" />
+	<title string="Matrix-Funktionen [VERALTET]" idxkey="matfunc" />
 	<keywords>
 		<keyword>determ</keyword>
 		<keyword>invert</keyword>
@@ -56,6 +72,7 @@
 		<keyword>matfunk</keyword>
 	</keywords>
 	<contents>
+		<em>Warnung:</em> Diese Dokumentation ist veraltet und sol nur zum Abgleichen mit den neuen Definitionen verwendet werden.
 		Innerhalb des <code>matop</code>-Kommandos können noch folgende zusätzliche Funktionen verwendet werden:
 		<list>
 			<item node="covar(MAT,MAT)">Berechnet die Kovarianz der beiden Argumente. Die Argumente müssen dieselben Dimensionen haben</item>

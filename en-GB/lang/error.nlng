@@ -122,7 +122,13 @@ ERR_MUP_46_ASSIGNED_TYPE_MISMATCH=Cannot assign a value of a different type to a
 ERR_MUP_47_METHOD_ERROR=The method "$TOK$" does not exist, is not defined for the used types or too few arguments have been supplied.
 ERR_MUP_48_NOT_IMPLEMENTED=The operation "$TOK$" is not defined.
 ERR_MUP_49_DEREFERENCE_VOID=The value "void" cannot be dereferenced.
-ERR_MUP_50_INTERNAL_ERROR=Internal Error.
+ERR_MUP_50_MATRIX_DIMS_INVALID=The dimensions of the matrix/matrices do not fulfill the requirements of the current operation: $TOK$
+ERR_MUP_51_MATRIX_EMPTY=The matrix does not contain any elements.
+ERR_MUP_52_MATRIX_INVALID_VALS=The matrix contains invalid elements.
+ERR_MUP_53_MATRIX_NOT_INVERTIBLE=The matrix cannot be inverted.
+ERR_MUP_54_INVALID_WINDOW_SIZE=The window size is invalid: $TOK$
+ERR_MUP_55_INVALID_FILTER_SIZE=The kernel size does not fit the data matrix size: $TOK$
+ERR_MUP_56_INTERNAL_ERROR=Internal Error.
 # STD-Errors
 # ====================
 ERR_STD_BADALLOC=NumeRe could not reserve enough memory for the current task. Try to free some memory, by closing obsolete graphs or remove tables, or try to use less memory at all. You may try to continue, but further problems may occur. Consider restarting NumeRe instead. Please inform us via thre reporting functionality in the "Help" menu or via <dev@numere.org> or <https://github.com/numere-org/NumeRe/issues> about this issue.
