@@ -77,10 +77,14 @@
 		<keyword>statustext</keyword>
 		<keyword>datetimepicker</keyword>
 		<keyword>timepicker</keyword>
-		<keyword>datepicker</keyword>		
-		<keyword>relscl</keyword>		
-		<keyword>dialogresult</keyword>		
-		<keyword>options</keyword>		
+		<keyword>datepicker</keyword>
+		<keyword>relscl</keyword>
+		<keyword>dialogresult</keyword>
+		<keyword>options</keyword>
+		<keyword>flexgrid</keyword>
+		<keyword>fgcell</keyword>
+		<keyword>rowscl</keyword>
+		<keyword>colscl</keyword>
 	</keywords>
 	<contents>
 		<syntax>
@@ -103,10 +107,37 @@
 		A central element in the creation of a graphical user interface are layout scripts. These are files which use the <em>*.nlyt</em> file extension. They are expected by default in the <code>&lt;scriptpath&gt;</code>, but can also be loaded from another folder by explicitly specifying the path.
 		Layout scripts can also be encoded into a long string so that no additional file is needed. This can be used to create a very responsive design or to create a layout based on multiple pre-built blocks. However, it should be noted that errors can easily creep in with this method.
 		In a layout script, a <em>very restricted</em> NumeRe syntax can be used: Comments by <code>##</code> and <code>#* ... *#</code> are fully supported. Control flow elements such as <code>for ... endfor</code> and <code>if ... else ... endif</code> on the other hand are not supported. In addition, only code that is located in the first <code>layout ... endlayout</code> block of the file and only command expressions of the following list can be used. Expressions separate from this are not possible.
+		<em>Note on the structure of a layout script:</em> The following list is quite long and is intended more as a reference. The key point is that in order to arrange GUI elements (buttons, tables, lists, etc.) in a meaningful way, they must be embedded in so-called groups <code>group ... endgroup</code>. These come in different orientations: horizontal or vertical and as <code>flexgrid</code> (flexible grid). Each <code>layout</code> is automatically also a vertically oriented group. Groups are roughly equivalent to the <code>&lt;div&gt;</code> containers in an HTML file. Thus, a layout script has the following generic shape:
+		<codeblock>
+			layout [-PAR]
+			\tGUI-ELEMENTS OR group ... endgroup
+			\t...
+			endlayout
+		</codeblock>
+		To arrange elements side by side, for example, you need a horizontal group:
+		<codeblock>
+			...
+			group -type=horizontal
+			\tELEMENT1
+			\tELEMENT2
+			\t...
+			endgroup
+			...
+		</codeblock>
+		To arrange elements in a grid, you can use a <code>flexgrid</code> group:
+		<codeblock>
+			...
+			group -type=flexgrid
+			\tELEMENT1 -set fgcell={ROW,COL,...} ...
+			\tELEMENT2 -set fgcell={ROW,COL,...} ...
+			\t...
+			endgroup
+			...
+		</codeblock>
 		A layout script is composed of the following command expressions:
 		<list>
-			<item node="layout [-PAR]<br/> ...<br/>endlayout">This block encloses all other GUI elements and defines the window itself. Parameters can be used to modify the background color (<code>color={R,G,B}</code>), window title (<code>title=TITLE</code>), window icon (<code>icon=PATH/TO/ICON</code>), status bar text (<code>statustext=TEXT</code>) and window size (<code>size={x,y}</code>, use <code>size={-1,-1}</code> to maximize the window automatically).</item>
-			<item node="group [-PAR]<br/> ...<br/>endgroup">These blocks can be used to group additional GUI elements (including additional <code>group ... endgroup</code> blocks) and to adjust the orientation of the element arrangement (<code>type=ORIENT</code>).<br/>If an additional <code>label=NAME</code> is used, the group is embedded in an additional box, labeled accordingly.<br/>If <code>style=tabs</code> is used together with <code>label=NAME</code>, the embedded GUI elements are displayed as part of a tab. All subsequent groups with <code>style=tabs label=TABLABEL</code> are automatically integrated as additional tabs. Tabs separate from this must be embedded in additional groups. It is possible to assign an ID and an <code>onchange</code> event handler to this group if this is done for the first group using <code>group -style=tabs label=LABEL id=ID onchange=EVENT</code> in the current context. Other accesses to the group are also possible via the ID (e.g. <code>-get selection</code>, see below).<br/>If <code>style=menu</code> is used together with <code>label=NAME</code>, the following GUI elements (a menu supports only <code>menuitem</code>, <code>separator</code> and <code>checkbox</code>) will be displayed as part of a menu. Embedded menu groups are realized as submenus and all following groups with <code>style=menu label=MENULABEL</code> are automatically realized as additional menus. However, there can be only one menu bar per window.<br/>Groups also affect the scaling behavior of the individual GUI elements for this purpose and restrict this to their alignment. The <code>expand</code> option can be used to disable this behavior, so that scaling is done in <expr>x</expr> and <expr>y</expr> direction.</item>
+			<item node="layout [-PAR]<br/>    ...<br/>endlayout">This block encloses all other GUI elements and defines the window itself. Parameters can be used to modify the background color (<code>color={R,G,B}</code>), window title (<code>title=TITLE</code>), window icon (<code>icon=PATH/TO/ICON</code>), status bar text (<code>statustext=TEXT</code>) and window size (<code>size={x,y}</code>, use <code>size={-1,-1}</code> to maximize the window automatically).</item>
+			<item node="group [-PAR]<br/>    ...<br/>endgroup">These blocks can be used to group additional GUI elements (including additional <code>group ... endgroup</code> blocks) and to adjust the orientation of the element arrangement (<code>type=ORIENT</code> with the orientations <code>horizontal</code>, <code>vertical</code> and <code>flexgrid</code>). The <code>flexgrid</code> orientation creates a two-dimensional grid of any size in which GUI elements can be arranged using the option <code>fgcell={ROW,COL,ROWS=1,COLS=1}</code>.<br/>If an additional <code>label=NAME</code> is used, the group is embedded in an additional box, labeled accordingly.<br/>If <code>style=tabs</code> is used together with <code>label=NAME</code>, the embedded GUI elements are displayed as part of a tab. All subsequent groups with <code>style=tabs label=TABLABEL</code> are automatically integrated as additional tabs. Tabs separate from this must be embedded in additional groups. It is possible to assign an ID and an <code>onchange</code> event handler to this group if this is done for the first group using <code>group -style=tabs label=LABEL id=ID onchange=EVENT</code> in the current context. Other accesses to the group are also possible via the ID (e.g. <code>-get selection</code>, see below).<br/>If <code>style=menu</code> is used together with <code>label=NAME</code>, the following GUI elements (a menu supports only <code>menuitem</code>, <code>separator</code> and <code>checkbox</code>) will be displayed as part of a menu. Embedded menu groups are realized as submenus and all following groups with <code>style=menu label=MENULABEL</code> are automatically realized as additional menus. However, there can be only one menu bar per window.<br/>Groups also affect the scaling behavior of the individual GUI elements for this purpose and restrict this to their alignment. The <code>expand</code> option can be used to disable this behavior, so that scaling is done in <expr>x</expr> and <expr>y</expr> direction.</item>
 			<item node="button STR [-set PAR]">Creates a clickable button labeled with the string <code>STR</code>. Scales by default with <code>relscl=1</code>.</item>
 			<item node="radio {STR} [-set PAR]">Creates a radio group whose values are taken from <code>{STR}</code> in the form of a list of strings.</item>
 			<item node="statictext STR [-set PAR]">Represents the text from <code>STR</code> without any other GUI elements.</item>.
@@ -127,12 +158,6 @@
 			<item node="separator EX [-set PAR]">Inserts a separator object. This can be either a horizontal or vertical line (<code>type=horizontal</code> or <code>type=vertical</code> respectively) or a space of height and width EX (<code>type=space</code>).</item>
 			<item node="prop P1, P2, ...">Generates one or more new internal variables <code>P1, P2, ...</code> for the current window layout, which can be filled with information. These variables correspond to <a href="nhlp://cluster?frame=new">clusters</a>, although they do not need curly braces, and can therefore contain the same value types, which clusters may manage as well. Default values can be assigned directly: <code>P1 = V1, P2 = V2, ...</code>. To read or modify these variables, <code>window ID -get value prop=sPROPNAME</code> or <code>window ID -set value=VALUE prop=sPROPNAME</code> (<code>sPROPNAME</code> is a string) must be used.</item>
 		</list>
-		Thus, a layout script has the following generic shape:
-		<codeblock>
-			layout [-PAR]
-			\tGUI-ELEMENTS OR group ... endgroup
-			endlayout
-		</codeblock>
 		<em>Note:</em> In case of embedding a window layout into a <a href="nhlp://package?frame=new">package</a> the target filename and path must be additionally specified between <code>layout</code> and its parameters, e.g. <code>layout "&lt;procpath&gt;/myapp/appmain.nlyt" -title="My App" ...</code> When using the package creator in the tools menu this will be inserted automatically.
 		<em>Note:</em> If a layout script shall be encoded into a string, then all commands have to be separated using line break characters <code>"\n"</code> just like within the file itself, that is for example <code>window "layout -title=\"String window\"\n button \"Close this\" -set onclick=evt_close()\n endlayout"</code>
 		<em>Note:</em> For documentation purposes, the <code>\layout LAYOUTNAME</code> keyword can be used in documentation comments to create a corresponding heading in the <a href="nhlp://latex?frame=new">PDF</a>.
@@ -144,9 +169,11 @@
 			<item node="id=ITEMID">Set a self-defined <code>ITEMID</code> of a GUI element. The <code>ITEMID</code> range [0,999] is reserved for the user. GUI elements without this option have an <code>ITEMID</code> greater than or equal to 1000, and these <code>ITEMID</code>s do not have to be consecutive.</item>
 			<item node="value=VAL">Defines the default value (when used in the layout script) or can be used to read or modify the current value of a GUI element. GUI elements requiring strings for <code>EX</code> generally require their values as strings.<br/><em>Notes:</em> the value of the window itself is its size (when used in e.g. <code>window ID -get value</code> without <code>item=ITEMID</code>). There are various possibilities especially for <code>treelist</code> with details following in the next section</item>
 			<item node="statustext=TEXT">Defines the default value (when used in the layout script) or can be used to read or modify the current value of the window status bar. <code>TEXT</code> may contain multiple values; those will be distributed along individual cells in the status bar. <em>Note:</em> this option may only be applied to the window as a whole, e.g. <code>window ID -get statustext</code> without <code>item=ITEMID</code>.</item>
-			<item node="type=TYPE">Defines the orientation of the GUI element (<code>type=vertical</code> and <code>type=horizontal</code>) at <code>group ... endgroup</code>, <code>radio</code>, <code>separator</code> and <code>gauge</code>.<br/>Can also be used to make a <code>textfield</code> multiline via <code>type=multiline</code> or support simplified markdown via <code>type=markup</code>, or to enable additional checkboxes via <code>type=checkmark</code> at <code>treelist</code> and <code>menuitem</code>.<br/><code>type=space</code> defines that <code>separator</code> shall be realized as empty space.</item>
+			<item node="type=TYPE">Defines the orientation of the GUI element (<code>type=vertical</code> and <code>type=horizontal</code>) at <code>group ... endgroup</code> (supports additionally <code>type=flexgrid</code>), <code>radio</code>, <code>separator</code> and <code>gauge</code>.<br/>Can also be used to make a <code>textfield</code> multiline via <code>type=multiline</code> or support simplified markdown via <code>type=markup</code>, or to enable additional checkboxes via <code>type=checkmark</code> at <code>treelist</code> and <code>menuitem</code>.<br/><code>type=space</code> defines that <code>separator</code> shall be realized as empty space.</item>
 			<item node="align=ALIGNMENTSTRING">This option defines the alignment of a GUI element in the space specified by its surrounding group. <em>Example:</em> for <expr>n</expr> elements in a group, each element has a defined portion (for <expr>n</expr> equal elements, this is <expr>1/n</expr>) of the available space. In this space, the <code>align=ALIGNMENTSTRING</code> option can be used to determine the positioning of the element in question.<br/>The alignment string may be composed of up to two of the following five characters: <code>"LRTBC"</code> (Left, Right, Top, Bottom, Center). Default is <code>"LC"</code>.</item>
 			<item node="relscl=FACTOR">This option can be used to modify the default relative scaling of GUI elements in the direction of the orientation of the current group. Only positive, integer factors can be used. If <code>FACTOR</code> is set to 0, the GUI element does not change its size when the window is resized. With a 1, the element scales the same as all other elements, with 2 it scales twice as much, and so on. Here, the actual possible scaling is calculated as <expr>relscl/sum(relscl)</expr> with the sum of all relative scalings. Many elements scale only if they are part of a group and some only in a particular orientation.</item>
+			<item node="rowscl={FACTORS}<br/>    colscl={FACTORS}">Similar to <code>relscl</code>, this option can be used to define the relative scaling of entire rows or columns in a <code>flexgrid</code> group. The <expr>n</expr>th factor in <code>{FACTORS}</code> determines the factor of the <expr>n</expr>th row or column. The scaling factors are 1 by default, i.e., if no factor is specified for a row or column, it scales with a factor of 1. Many elements scale only if they are part of a group and some only in a particular orientation.</item>
+			<item node="fgcell={ROW,COL,ROWS=1,COLS=1}">Defines the position (<code>ROW,COL</code>) and optional span (<code>ROWS,COLS</code>) of a GUI element in a <code>flexgrid</code> group. Elements are only positioned if the target cells are not already occupied. It is not necessary to occupy cells in a specific order. The <code>flexgrid</code> group automatically adjusts the number of rows and columns to fit its contents.</item>
 			<item node="label=NAME">Many GUI elements can be additionally labeled with this option. For <code>button</code>, <code>value</code> and <code>label</code> are identical. For the <code>treelist</code> command, this option defines the names of the columns, for <code>dropdown</code> and <code>combobox</code>, it defines the possible selection values, for <code>group -style=tabs</code> it can be used to read and change the tab labels interactively, and can be passed multiple values in the form of a vector.</item>
 			<item node="state=STATE">This option can be used to programmatically enable (<code>state=enabled</code>), disable (<code>state=disabled</code>), and hide (<code>state=hidden</code>) GUI elements; additionally, <code>tablegrid</code> and <code>textfield</code> may be set to read-only using <code>state=readonly</code>. Elements are enabled by default. Hidden elements will still need their space in the window.</item>
 			<item node="options={KEY-VALUE-LIST}">Further properties can be assigned to GUI elements using this option, which is for now only supported by <code>tablegrid</code>. The key-valie-list can be constructed hierarchically and follows the general scheme <code>{KEY1, VALUE1, KEY2, VALUE2, ...}</code> Details are mentionen below in the directly following section. <em>This option can only be used interactively and only with <code>-set</code> and cannot be used in a layout script.</em></item>
@@ -160,7 +187,7 @@
 			<item node="onopen=EVENT">Defines the event handler to use when opening the window (see below for details). This event handler <em>must</em> be appended to <code>layout</code>, must be a NumeRe procedure, and must <em>only</em> have <code>void</code> as a return value.</item>
 		</list>
 		<h>Setting values in treelist with value=VALUE</h>
-		The <code>treelist</code> command can get with <code>value=VALUE</code> a list of values in the form of a vector. <code>value={VAL1, ...}</code> specifies the elements row by row, where the columns must be separated by tabs (<code>\t</code>) (e.g.: <code>value={"COL1\tCOL2\tCOL3\t...", "..."}</code>). If additional checkboxes are used, the first value (<code>1</code> or <code>0</code>) defines the status of these checkboxes (e.g.: <code>value={"1\tCOL1\t...", "0\t..."}</code>). 
+		The <code>treelist</code> command can get with <code>value=VALUE</code> a list of values in the form of a vector. <code>value={VAL1, ...}</code> specifies the elements row by row, where the columns must be separated by tabs (<code>\t</code>) (e.g.: <code>value={"COL1\tCOL2\tCOL3\t...", "..."}</code>). If additional checkboxes are used, the first value (<code>1</code> or <code>0</code>) defines the status of these checkboxes (e.g.: <code>value={"1\tCOL1\t...", "0\t..."}</code>).
 		A tree-like structure may be created using additional line breaks and curly braces (<code>...\n{...}...</code>) like so: <code>{"FIRST LEVEL\n{SECOND LEVEL, ...}", ...}</code>. Quotation marks are only necessary in the lower levels, if their text contains commas (masked in this case: <code>\"</code>).
 		During runtime, a tree may also be created using embedded <a href="nhlp://cluster?frame=new">clusters</a>, where child nodes together with their parent node form together suche an embedded cluster. The structure is as follows: <code>{{LVL1,LVL2},LVL1,{LVL1,{LVL2,...,{LVL2,{LVL3,...}},...},...},...}</code>
 		In this case, <a href="nhlp://object?frame=new">DictStruct</a> instances can also be passed to <code>value=VALUE</code>. The hierarchy of the instance is then automatically replicated. There are two special cases here:
