@@ -61,6 +61,7 @@ break~Bricht eine Schleife an der aktuellen Stelle ab oder beendet ein CASE-Stat
 button~Fügt eine beschriftbare Schaltfläche in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
 carttopol(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu polaren Koordinaten (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
+cat(MAT,MAT,n)~Verkettet die zwei Matrizen~cat() concat concatenate vertically vertikal verketten verknüpfen anhängen~cat(
 category(sName,nId)~Erzeugt eine Kategorie mit dem Namen und einer zugehörigen ID~category() kategorial categoryies categorize kategorisieren numerieren enumerate~category(
 cauchy_cdf_p(x,a)~Liefert den Wert der kumulativen Verteilungsfunktion bei x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_cdf_p(
 cauchy_cdf_q(x,a)~Liefert den Wert der komplementären kumulativen Verteilungsfunktion an x für die Cauchy-Verteilung mit dem Skalenparameter a~cauchy verteilungsfunktion verteilung kummulativ zufall zufallszahl distribution distributionfunction random~cauchy_cdf_q(
@@ -185,6 +186,7 @@ fwt~Schnelle Wavelet-Transformation eines Datensatzes~fast schnelle wavelettrans
 gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Fügt einen Fortschrittsbalken in ein Window-Layout ein~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 gauss(x0,x1,n)~Generiert eine (reelle und normalverteilte) Zufallszahl, wobei x0 der Mittelwert und x1 die Halbwertsbreite der Verteilung sind~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
+gaussjordan(MAT,t)~Führt eine Gauss-Jordan-Elimination der Matrix durch~rref() gaussjordan() reduzierte stufenform reduced row echelon form~gaussjordan(
 gcd(n,k)~berechnet den größten gemeinsamen Teiler der Ganzzahlen n und k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Die Option OPTION abfragen, siehe "help get"~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 get_utc_offset()~Gibt die Differenz zu UTC+00 in Sekunden zurück. Dies entspricht der Zeitzonendifferenz einschließlich einer möglichen Sommerzeit~get_utc_offset() time zone utc~get_utc_offset(
@@ -237,6 +239,7 @@ imread~Liest eine Bildatei als Datengitter in eine Tabelle~imageread images load
 imrot~Rotiert den angegebenen Bilddatensatz um einen definierten Winkel und speichert das Ergebnis in der gewünschten Zieltabelle~rotieren rotate flip~help imrot
 imY(l,m,theta,phi)~Imaginärteil der Kugelflächenfunktionen der Ordnung l mit m = [-l,l] unter den Winkeln theta und phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
 include~Bindet Informationen aus einer Datei in die aktuelle ausführbare Datei ein~including embedding importing einbinden einbetten file~help include
+insertscalardim(MAT,n)~Fügt skalare Dimensionen in die Matrix ein~insertscalardim() scalar dimension singletons squeeze~insertscalardim(
 install~Installiert ein Plugin oder ein Package~procedure installieren aktualisieren update~help install
 integrate~Integriert eine Funktion f(x) bzw. f(x,y) numerisch, siehe "help integrate"~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpoliert Werte aus der ersten Matrix bilinear unter Verwendung der Zeilen- und Spaltenwerte der zweiten Matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
@@ -288,6 +291,7 @@ lcm(n,k)~Berechnet das kleinste gemeinsame Vielfache der Ganzzahlen n und k~lcm(
 leave~Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke~leave break continue~help leave
 legendre(n,x)~Berechnet den numerischen Wert der Legendre-Polynome der Ordnung n an der Stelle x~legendrepolynome polynomial legendre()~legendre(
 legendre_a(l,m,x)~Berechnet den numerischen Wert der assoziierten Legendre-Polynome der Ordnung l mit m = [-l,l] an der Stelle x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
+levicivita(i,j,k,...)~Berechnet Komponenten des n-Dimensionalen Levi-Civita-(Epsilon-)Tensors~epsilon levicivita() permutation~levicivita(
 Li2(x)~Berechnet den Dilogarithmus von x~Li2() dilogarithm~Li2(
 list -OBJEKT~Listet alle Objekte zu OBJEKT, siehe "help list"~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins~help list
 ln(x)~natürlicher Logarithmus von x~logarithmus naturalis ln()~ln(
@@ -368,6 +372,7 @@ radio~Fügt eine Radio-Group in ein Window-Layout ein~radiobox windowsystem layo
 rand(x0,x1,n)~Generiert eine (reelle, gleichverteilte) Zufallszahl im Intervall [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
 random~Zufallszahlengenerator, der Zufallszahlen entsprechend der gewählten Verteilung erzeugt~zufallszahlen generator gaussverteilung gaussian gaußverteilung gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
 range(VAR,LFT,RGHT)~Schränkt VAR auf das Intervall [LFT,RGHT] ein~intervall bereich range()~range(
+rank(MAT)~Berechnet den Rang der Matrix~rank()~rank(
 rayleigh_cdf_p(x,sigma)~Gibt den Wert der kumulativen Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_cdf_p(
 rayleigh_cdf_q(x,sigma)~Gibt den komplementären Wert der kumulativen Verteilungsfunktion an x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_cdf_q(
 rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunktion an p für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_p(
@@ -400,7 +405,9 @@ ridgedmulti(x,y,z,seed,freq,oct)~Berechnet Ridged-Multifractal-Noise an der Stel
 rint(x)~x auf eine Ganzzahl runden~round ganzzahl integer rint()~rint(
 rms(x,y,z,...)~Berechnet das quadratische Mittel (Root Mean Square)~rms() fehler error varianz variance stats statistiken noise rauschen~rms(
 roof(x)~rundet x auf die nächstgrößere Ganzzahl auf~roof() aufrunden ganzzahlen ceil() integral number~roof(
+rotmat(a,d,p)~Erzeugt eine Rotationsmatrix~rotmat() rotationmatrix~rotmat(
 round(x,n)~x auf n Nachkommastellen runden~runden round round()~round(
+rref(MAT,t)~Führt eine Gauss-Jordan-Elimination der Matrix durch~rref() gaussjordan() reduzierte stufenform reduced row echelon form~rref(
 save~Speichern von Datensätzen, Einstellungen und Funktionsdefinitionen~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Sphärische Besselfunktion der Ordnung n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 sec(x)~ sekans von x~sec() sekans trigonometrische funktionen trigonometrie trigonometry trigonometric functions~sec(
@@ -429,6 +436,7 @@ spinbut~Fügt ein Spin-Button-Objekt in ein Window-Layout ein~spinctrl windowsys
 spline~Berechnet kubische Splines für die gegebenen Datenpunkte~csplines ausgleichsfunktion~help spline
 split(STR,CHAR,KEEP)~Teilt die Zeichenkette STR an den Zeichen CHAR in einzelne Zeichenketten auf~unterteilen zeichenkette tokenizer zerlegen split() tokens~split(
 sqrt(x)~Wurzel von x~wurzel root sqrt()~sqrt(
+squeeze(MAT)~Eliminiert alle singulären Dimensionen~squeeze() scalar dimensions singletons insertscalardim~squeeze(
 stack(ARG)~Erzeugt eine Objekt-Instanz vom Typ stack~stack() object fifo stapel~stack(
 startswith(STR,STR)~Gibt true zurück, wenn der zweite Substring am Anfang des ersten Strings gefunden wurde, sonst false~begin end last erstes letztes wort word front back~startswith(
 start~Ein NumeRe-Script (*.nscr) ausführen, siehe "help script"~starten laden plugins installation installieren execute run~help start
@@ -551,6 +559,8 @@ today()~Gibt das aktuelle Datum zurück~zeit sekunden dauer date() to_time() tim
 trace(MAT)~Berechnet die Spur der quadratischen Matrix MAT, siehe "help matop"~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~Transponiert die Matrix MAT, siehe "help matop"~transpose() matrix transponieren~transpose(
 treelist~Fügt eine Treelist in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+trilow(MAT,n)~Gibt die untere Dreiecksmatrix der Matrix zurück~trilow() lower triangular matrix~trilow(
+triup(MAT,n)~Gibt die obere Dreiecksmatrix der Matrix zurück~triup() upper triangular matrix~triup(
 try~Beginnt einen Try-Catch-Block, in dem Fehler abgefangen und behandelt werden können~try catch endtry error exception handling throw~help try
 ui16(x)~Konvertiert den Wert x in den Datentyp "value.ui16"~ui16() unsigned integer data type datentyp convert konvertieren~ui16(
 ui32(x)~Konvertiert den Wert x in den Datentyp "value.ui32"~ui32() unsigned integer data type datentyp convert konvertieren~ui32(

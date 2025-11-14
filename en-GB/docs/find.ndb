@@ -61,6 +61,7 @@ break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbre
 button~Inserts a labelable button into a window layout~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
 carttopol(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to polar coordinates (rho,phi,theta)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttopol(
+cat(MAT,MAT,n)~Concatenates two matrices~cat() concat concatenate vertically vertikal verketten verknüpfen anhängen~cat(
 category(sName,nId)~Creates a category with the name and an associated ID~category() kategorial categoryies categorize kategorisieren numerieren enumerate~category(
 cauchy_cdf_p(x,a)~Get the value of the cumulative distribution function at x for the Cauchy distribution with scale parameter a~cauchy distribution function cumulative random number distributionfunction~cauchy_cdf_p(
 cauchy_cdf_q(x,a)~Get the value of the complementary cumulative distribution function at x for the Cauchy distribution with scale parameter a~cauchy distribution function cumulative random number distributionfunction~cauchy_cdf_q(
@@ -184,6 +185,7 @@ fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettran
 gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Inserts a progress bar (a gauge) into a window layout~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 gauss(x0,x1,n)~Generates a (real and normal distributed) random number, with the distribution parameters average x0 and FWHM x1~gaussverteilung normalverteilung random gauss() gaußverteilung distribution~gauss(
+gaussjordan(MAT,t)~Performs Gauss-Jordan elimination of the matrix~rref() gaussjordan() reduzierte stufenform reduced row echelon form~gaussjordan(
 gcd(n,k)~Calculates the greatest common divisor of the integral numbers n and k~greatest common divisior gcd() ggt() größter groesster gemeinsamer~gcd(
 get -OPTION~Returns the current settings of NumeRe~einstellungen optionen settings konfiguration konfigurieren einstellen~help get
 get_utc_offset()~Returns the offset to UTC+00 in seconds. This corresponds to the timezone difference including an optional daylight saving time~get_utc_offset() time zone~get_utc_offset(
@@ -236,6 +238,7 @@ imread~Reads an image file as data grid into a table~imageread images load bilde
 imrot~Rotates the passed image data set around the defined angle and saves the result in the chosen target table~rotieren rotate flip~help imrot
 imY(l,m,theta,phi)~Imaginary part of the spherical harmonics with the orders l and m = [-l,l] at the angles theta and phi~kugelflaechenfunktionen kugelflächenfunktion kugelfunktionen spherical harmonics ylm y_lm y() imy() imaginary complex~imY(
 include~Includes information from another file into the current executable file~including embedding importing einbinden einbetten file~help include
+insertscalardim(MAT,n)~Inserts scalar dimensions into the matrix~insertscalardim() scalar dimension singletons squeeze~insertscalardim(
 install~Installs a plugin or a package~procedure installieren aktualisieren update~help install
 integrate~Integrates a function f(x) or f(x,y) numerically~integral integrieren simpson trapezoidal cumulative sum kumulieren cumsum~help integrate
 interpolate(MAT,MAT)~Interpolates values from the first matrix bilinearly using the row and column values of the second matrix~interpolieren interpolate koordinaten zu gitter datagrid datengitter matop coordinates transformieren bilinearly interpolate()~interpolate(
@@ -288,6 +291,7 @@ lcm(n,k)~Calculates the least common multiple of the integral numbers n and k~lc
 leave~Leaves all nested control flow blocks at this point~leave break continue~help leave
 legendre(n,x)~Numerical value of the Legendre polynomial with the order n >= 0 at the position x~legendrepolynome polynomial legendre()~legendre(
 legendre_a(l,m,x)~Numerical value of the associated Legendre polynomial with the orders l >= 0 and m = [-l,l] at the position x~legendrepolynome associated polynomial zugeordnete legendre_a()~legendre_a(
+levicivita(i,j,k,...)~Calculates components of the Levi-Civita tensor~epsilon levicivita() permutation~levicivita(
 Li2(x)~Calculates the dilogarithm of x~Li2() dilogarithm~Li2(
 list -OBJECT~Lists objects~all functions funktionen commands kommandos befehle cmd constant konstanten variables variablen logic logik liste objekte plugins~help list
 ln(x)~Natural logarithm of x~logarithmus naturalis ln()~ln(
@@ -368,6 +372,7 @@ radio~Inserts a radio group into a window layout~radiobox windowsystem layout gr
 rand(x0,x1,n)~Generates a (real and uniform distributed) random number in the interval [x0,x1)~zufallszahlen gleichverteilung uniform distribution generator rand()~rand(
 random~Random number generator with freely choosable distributions~zufallszahlen generator gaussverteilung gaußverteilung gaussian gleichverteilung studentverteilung uniform distribution binomialverteilung poissonverteilung normalverteilung~help random
 range(VAR,LFT,RGHT)~Restricts VAR to the interval [LFT,RGHT]~intervall bereich range()~range(
+rank(MAT)~Calculates the rank of the matrix~rank()~rank(
 rayleigh_cdf_p(x,sigma)~Returns the value of the cumulative distribution function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_cdf_p(
 rayleigh_cdf_q(x,sigma)~returns the complementary value of the cumulative distribution function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction cumulative~rayleigh_cdf_q(
 rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution function on p for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random cumulative distributionfunction inverse~rayleigh_inv_p(
@@ -400,7 +405,9 @@ ridgedmulti(x,y,z,seed,freq,oct)~Calculates the ridged multi-fractal noise at th
 rint(x)~Rounds x to the nearest integral value~round ganzzahl integer rint()~rint(
 rms(x,y,z,...)~Calculates the root mean square~rms() fehler error varianz variance stats statistiken noise rauschen~rms(
 roof(x)~Rounds x to the nearest and larger integral number~roof() aufrunden ganzzahlen ceil()~roof(
+rotmat(fAlpha,d,nPlane={1,2})~Creates a rotation matrix~rotmat() rotationmatrix~rotmat(
 round(x,n)~Rounds x to n decimals~runden round round()~round(
+rref(MAT,t)~Performs Gauss-Jordan elimination on the matrix~rref() gaussjordan() reduzierte stufenform reduced row echelon form~rref(
 save~Saves the passed object~saving daten datei file data functions settings options~help save
 sbessel(n,x)~Spherical Bessel function of the order n~besselfunktionen erster art sphaerische sphärische sbessel()~sbessel(
 sec(x)~ Secant of x~sec() secant trigonometrische funktionen trigonometrie trigonometry trigonometric functions~sec(
@@ -430,6 +437,7 @@ spinbut~Inserts a spin button object into a window layout~spinctrl windowsystem 
 spline~Calculates cubic splines for the passed datapoints~csplines ausgleichsfunktion~help spline
 split(STR,CHAR,KEEP)~Splits the string STR at the characters CHAR in separate strings~unterteilen zeichenkette tokenizer zerlegen split()~split(
 sqrt(x)~Square root of x~wurzel root sqrt()~sqrt(
+squeeze(MAT)~Eliminates all singular dimensions of the matrix~squeeze() scalar dimensions singletons insertscalardim~squeeze(
 stack(ARG)~Creates an object instance of type stack~stack() object fifo stapel~stack(
 startswith(STR,STR)~Returns true, if the second substring is found at the start of the first string. Otherwise, false.~begin end last erstes letztes wort word front back~startswith(
 start~Executes NumeRe scripts (*.nscr), see also "help script"~starten laden plugins installation installieren execute run~help start
@@ -552,6 +560,8 @@ today()~Returns the current date~zeit sekunden dauer date() to_time() timeformat
 trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
 transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 treelist~Inserts a tree list into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+trilow(MAT,n)~Returns the lower triangular matrix~trilow() lower triangular matrix~trilow(
+triup(MAT,n)~Returns the upper triangular matrix~triup() upper triangular matrix~triup(
 try~Starts a try-catch block in which errors can be caught and handled~try catch endtry exception handling error throw~help try
 ui16(x)~Converts the value x into the data type "value.ui16"~ui16() unsigned integer data type datentyp convert konvertieren~ui16(
 ui32(x)~Converts the value x into the data type "value.ui32"~ui32() unsigned integer data type datentyp convert konvertieren~ui32(
