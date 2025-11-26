@@ -25,6 +25,7 @@
 	<contents>
 		<syntax>
 			grad3d f(x,y,z)
+			grad3d MATRIX
 			grad3d f(x,y,z) -set ...
 		</syntax>
 		Using the command <code>grad3d</code> you may calculate a three dimensional gradient plot out of a function of the form <expr>phi = f(x,y,z)</expr>, which is a function, where every coordinate tuple <expr>x,y,z</expr> has exactly one value. NumeRe detects some (of course not all) paths, along the function <expr>f(x,y,z)</expr> derivates very strong.

@@ -25,6 +25,7 @@
 		<syntax>
 			grad f(x,y)
 			grad TABLE()
+			grad MATRIX
 			grad ... -set ...
 		</syntax>
 		Mit dem Kommando <code>grad</code> kann von einer Funktion der Form <expr>z = f(x,y)</expr>, also eine Funktion, die der <expr>z</expr>-Koordinate einen Wert in Abhängigkeit von <expr>x</expr> und <expr>y</expr> zuweist, ein Gradientenplot erzeugt werden. Dabei detektiert NumeRe einige Pfade (lange nicht alle), entlang denen die Funktion <expr>f(x,y)</expr> sich besonders stark ändert.
