@@ -27,16 +27,16 @@
 		<syntax>
 			sort TABLE()
 			sort TABLE() -set cols=INDEX[COLGROUP] ...
-			sort CLUSTER{}
 			sort ... -set desc ...\n
+			{VAL} = sort {VAL}
 			{VAL} = sort ... -set index ...
 		</syntax>
-		NumeRe may sort data in a table or in a cluster using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
+		NumeRe may sort data in a table or in an array using the command <code>sort</code>. One can also restrict the sorting algorithm to only a part of the data object:
 		<codeblock>
 			sort TABLE(I1:I2,J1:J2)
-			sort CLUSTER{I1:I2}
+			{VAL} = sort VAL[I1:I2]
 		</codeblock>
-		The default call of the command sorts the complete data ascending along the columns. If one likes to restrict the columns, one can use the option <code>cols</code>: <code>cols=COLUMNS</code>. You may also use index columns, which may be used for sorting the whole data:
+		The default call of the command sorts the complete data ascending along the columns. Tables are sorted in-place, all other objects are returned in their sorted order. If one likes to restrict the columns, one can use the option <code>cols</code>: <code>cols=COLUMNS</code>. You may also use index columns, which may be used for sorting the whole data:
 		<codeblock>
 			sort TABLE(I1:I2,J1:J2) -set cols=INDEX[COLUMNS]
 		</codeblock>

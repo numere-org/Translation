@@ -75,6 +75,7 @@
 		<codeblock>
 			database nId -set sql="INSERT INTO mytable(id,name) VALUES (?,?)" params=[{1,2,3}, {"John Doe", "Jane Doe", "Edgar A. Poe"}]
 		</codeblock>
+		<em>Note:</em> If <code>params=[PARAMLIST]</code> only contains a single matrix with columns corresponding to the SQL placeholders, then those will be filled using the matrix columns.
 		The database connection can be closed again using <code>database ID -close</code>. However, as mentioned at the beginning, it will also close automatically if it has not been used for a long time or if NumeRe itself is closed.
 		<example desc="Create a new table 'Employee' in the MySQL database and fill it with several values:">
 			database nId -set sql="CREATE TABLE Employee (`ID` INT NOT NULL AUTO_INCREMENT, `Name` TEXT, `Created` DATE, PRIMARY KEY(`ID`))"

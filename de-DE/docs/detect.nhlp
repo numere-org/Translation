@@ -27,12 +27,13 @@
 	<contents>
 		<syntax>
 			detect TABLE()
-			detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TARGET()
+			detect MATRIX
+			detect ... -set minval=VAL minlen=LENGTH attract={x,y} target=TARGET()
 		</syntax>
-		Mit dem Kommando <code>detect</code> können Strukturen in einem 2D-Datengitter erkannt werden. Die Strukturen werden in einer Tabelle in Spalten für <expr>x</expr> und <expr>y</expr> angelegt, dabei sind verschiedene Strukturen durch Leerzeilen getrennt (alle Strukturen liegen untereinander in denselben beiden Spalten ab). Das Kommando hat die folgende Syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>wobei <code>TABLE()</code> ein <a href="nhlp://datagrid?frame=new">2D-Datengitter</a> enthalten muss.
+		Mit dem Kommando <code>detect</code> können Strukturen in einem 2D-Datengitter oder einer Matrix erkannt werden. Die Strukturen werden in einer Tabelle in Spalten für <expr>x</expr> und <expr>y</expr> angelegt, dabei sind verschiedene Strukturen durch Leerzeilen getrennt (alle Strukturen liegen untereinander in denselben beiden Spalten ab). Das Kommando hat die folgende Syntax:<codeblock>detect TABLE() -set minval=VAL minlen=LENGTH attract={x,y} target=TRGT()</codeblock>wobei <code>TABLE()</code> ein <a href="nhlp://datagrid?frame=new">2D-Datengitter</a> oder einer Matrix (ohne die entsprechenden Spalten für die Achsenwerte) enthalten muss.
 		Die Optionen haben die folgende Bedeutung:
 		<list>
-			<item node="minval=VAL">Definiert die untere Schwelle <expr>VAL</expr>, ab der Strukturen erkannt werden. Strukturen unter diesem Wert werden ignoriert. Ist standardmäßig identisch zum Minimum des Datengitters</item>
+			<item node="minval=VAL">Definiert die untere Schwelle <expr>VAL</expr>, ab der Strukturen erkannt werden. Strukturen unter diesem Wert werden ignoriert. Ist standardmäßig identisch zum Median des Datengitters</item>
 			<item node="minlen=LENGTH">Definiert die minimale Länge an Punkten, die eine Struktur haben muss. Kürzere Strukturen werden ignoriert. Ist standardmäßig identisch 0</item>
 			<item node="attract={x,y}">Definiert die Anzahl an Datenpunkten in <expr>x</expr> und <expr>y</expr>, die Strukturen überspringen können und trotzdem noch als eine einzige Struktur gelten. Ist standardmäßig identisch zu <expr>(x,y) = (0,1)</expr>. <em>Hinweis:</em> Wenn nur ein Wert übergeben wird, wird dieser für <expr>y</expr> verwendet</item>
 			<item node="target=TRGT()">Definiert die Zieltabelle, in der die Strukturen abgelegt werden. Ist standardmäßig identisch zu <code>detectdat()</code></item>
