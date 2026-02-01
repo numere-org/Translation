@@ -147,6 +147,9 @@
 		<keyword>zlog</keyword>
 		<keyword>zscale</keyword>
 		<keyword>ztick</keyword>
+		<keyword>stix</keyword>
+		<keyword>noto</keyword>
+		<keyword>notosf</keyword>
 	</keywords>
 	<contents>
 		Durch Anhängen des Parameters <code>-set</code> und darauffolgende Optionen kann die Darstellung des Plots entscheidend angepasst werden. Die Optionen sind dabei die folgenden:
@@ -169,7 +172,7 @@
 			<item node="coords=KOORDINATEN">Den Koordinatensatz KOORDINATEN auswählen. Je nach gewähltem Plotstil sind die Koordinatenzuordnungen unterschiedlich. Siehe <a href="nhlp://coords?frame=new">help coords</a> für eine Liste und weitere Details.</item>
 			<item node="crust/nocrust">Rekonstruiert eine 2D-Oberfläche aus beliebig verteilten <expr>(x,y,z)</expr>-Punkten. Es wird das aktuelle Farbschema verwendet</item>
 			<item node="errorbars/<br/>  noerrorbars">Fehlerbalken in <expr>x</expr>- und <expr>y</expr>-Richtung anzeigen/deaktivieren. Benötigt 4 Spalten: <expr>x, y, delta_x, delta_y</expr></item>
-			<item node="font=SCHRIFTART">Verwendet die Schriftart SCHRIFTART für die Beschriftungen der folgenden Plots. Standardmäßig wird <code>pagella</code> geladen; zur Wahl stehen außerdem <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code> &amp; <code>schola</code></item>
+			<item node="font=SCHRIFTART">Verwendet die Schriftart SCHRIFTART für die Beschriftungen der folgenden Plots. Standardmäßig wird <code>pagella</code> geladen; zur Wahl stehen außerdem <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code>, <code>schola</code>, <code>stix</code> und <code>stix2</code>. Für Koreanisch, Japanisch und Chinesisch kann entweder <code>noto</code> oder <code>notosf</code> verwendet werden</item>
 			<item node="grid[=TYPE]/nogrid">Gitter des Typs TYP ein-/ausschalten. Es steht entweder <code>coarse</code> für ein grobes und <code>fine</code> für ein feines Gitter zur Verfügung</item>
 			<item node="gridstyle=STYLE">Den Stil des Gitters ändern: die ersten drei Zeichen beeinflussen Stil, Farbe und Dicke des Standardgitters, die zweiten drei Zeichen stehen für die durchgezogenen Linien des feinen Gitters sowie das Gitter der Vektorplots</item>
 			<item node="hbars/nohbars">Horizontale Balken statt Punkte bei Datenplots anzeigen. Erfordert äquidistant verteilte <expr>y</expr>-Werte zur korrekten Darstellung. Mit <code>hbars=BREITE</code> kann die prozentuale Breite der Balken bestimmt werden; standardmäßig werden 90% verwendet. Werden mehr als zwei Spalten verwendet, so werden diese als weitere Balken angezeigt. Um Legenden für mehrere Datensätze anzugeben, sind diese durch einen Zeilenumbruchzeichen zu trennen. Mit <code>stacked</code> werden die Balken aufeinandergestapelt dargestellt</item>

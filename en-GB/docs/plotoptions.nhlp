@@ -147,6 +147,9 @@
 		<keyword>zlog</keyword>
 		<keyword>zscale</keyword>
 		<keyword>ztick</keyword>
+		<keyword>stix</keyword>
+		<keyword>noto</keyword>
+		<keyword>notosf</keyword>
 	</keywords>
 	<contents>
 		By appending the parameter <code>-set</code> and the following options, the appearance of a plot may be modified to customize nearly everything. The options are as follows:
@@ -169,7 +172,7 @@
 			<item node="coords=COORDS">Choose the coordinates COORDS. Depending on the chosen plotting style the coordinate assignements are different. See <a href="nhlp://coords?frame=new">help coords</a> for a list and further details.</item>
 			<item node="crust/nocrust">Reconstructs a 2D surface out of arbitrary distributed <expr>(x,y,z)</expr> points. The current colorscheme will be used</item>
 			<item node="errorbars/<br/>  noerrorbars">(De-)activates errorbars in <expr>x</expr> and <expr>y</expr> direction. Needs 4 columns: <expr>x, y, delta_x, delta_y</expr></item>
-			<item node="font=FONT">Uses the chosen font for the following plots. The default font is <code>pagella</code>; you may choose out of <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code> &amp; <code>schola</code></item>
+			<item node="font=FONT">Uses the chosen font for the following plots. The default font is <code>pagella</code>; you may choose out of <code>termes</code>, <code>cursor</code>, <code>adventor</code>, <code>bonum</code>, <code>heros</code>, <code>heroscn</code>, <code>chorus</code>, <code>schola</code>, <code>stix</code> and <code>stix2</code>. For Korean, Japanese and Chinese one can use either <code>noto</code> or <code>notosf</code></item>
 			<item node="grid[=TYPE]/nogrid">(De-)activates a grid of the type TYPE. You may choose out of <code>coarse</code> for a coarse grid and <code>fine</code> for a grid with subintervals</item>
 			<item node="gridstyle=STYLE">Modify the style of the grid: the first three characters modify style, color and thickness of the standard grid, the second three characters represent the solid (coarse) lines of the fine grid as well as the grid of the vector plots</item>
 			<item node="hbars/nohbars">Show horizontal bars instead of points for data plots. Requires equidistant distributed <expr>y</expr> values for correct display. Using <code>hbars=WIDTH</code> you may modify the percentage of the bar width; the default value is 90%. If more than two columns are selected, then they will be visualized using further bars. To specify legends for multiple data sets, one has to separate them using linebreaks characters. Bars are shown stacked on each other by using the option <code>stacked</code></item>
