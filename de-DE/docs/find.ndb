@@ -158,6 +158,7 @@ exp(x)~Exponentialfunktion von x~exponentialfunktion eulersche zahl exp()~exp(
 explicit~Deaktivert alle Plugins für das folgende Kommando~plugins deaktivieren überschreiben ueberschreiben~help explicit
 export~Export eines Datensatzes als ANSI-Text-, CSV- oder TeX-Datei~exportieren textdatei data csvdatei texdatei texttabelle textabelle~help export
 extrema~Bestimmt alle Extrema eines Ausdrucks in einem gegebenen Intervall. Siehe "help extrema"~minima maxima minimum maximum extremum extremieren minimieren maximieren minimal maximal value~help extrema
+f(x,v)~Erzeugt eine virtuelle Funktion, die für x v zurückgibt~plotting constant konstante function flat f()~f(
 f32(x)~Konvertiert den Wert x in den Datentyp "value.f32"~f32() floating point fließkommazahl data type datentyp convert konvertieren~f32(
 f64(x)~Konvertiert den Wert x in den Datentyp "value.f64"~f64() floating point fließkommazahl data type datentyp convert konvertieren~f64(
 factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty() factorial()~factorial(
