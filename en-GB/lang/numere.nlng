@@ -154,7 +154,7 @@ PARSERFUNCS_LISTFUNC_FUNC_F64_[SYNTAX]=						f64(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_FACE_[DRAW]=						face(P,P,P,P,sStyle="")                                               {}       - Draws a quadrangle. You may pass from two to four edges. If you pass two, NumeRe will draw an square, passing three edges will result in a parallelogram and all four edges will draw a custom quadrangle. The edges are numbered going from lower left in counter-clockwise order. The filling of the quadrangle may be modified using sStyle.
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,sStyle="")                                              {}       - Draws a quadrangle. You may pass from two to four edges. If you pass two, NumeRe will draw an square, passing three edges will result in a parallelogram and all four edges will draw a custom quadrangle. The first two vectors are the lower and the left border and the last is the diagonal opposite one. The filling of the quadrangle may be modified using sStyle.
 PARSERFUNCS_LISTFUNC_FUNC_FACTORIAL_[NUM]=					factorial(n)                                                          VAL      - Calculates the factorial of the integral number n [n! = n*(n-1)*(n-2)*...*1]. %%DEFINED_NATURAL%% >= 0
-PARSERFUNCS_LISTFUNC_FUNC_FILE_[SYNTAX]=					file({sFiles}={},{sModes}="r")                                        OBJ      - Creates file-type object instances for each filename in sFiles (as string or object.path) and each mode in sModes. If no file names are passed, an empty file instance is created. The mode determines how the file is opened:%%ITEMIZE%%"w": Open to write and delete previously any content%%ITEMIZE%%"w+": Open to read and write and delete previously any content%%ITEMIZE%%"r": Open to read, file must exist%%ITEMIZE%%"r+": Open to read and write%%ITEMIZE%%"a": Open to write and jump previously to the end of the file%%ITEMIZE%%"a": Open to read and write and jump previously to the end of the file%%ITEMIZE_END%%An additional "b" still activates binary file mode. File objects are among the objects. Local instances are declared with the command obj
+PARSERFUNCS_LISTFUNC_FUNC_FILE_[SYNTAX]=					file(sFile={},sMode="r")                                             OBJ      - Creates a file-type object instance for the filename in sFile (as string or object.path) and the mode in sMode. If no file name is passed, an empty file instance is created. The mode determines how the file is opened:%%ITEMIZE%%"w": Open to write and delete previously any content%%ITEMIZE%%"w+": Open to read and write and delete previously any content%%ITEMIZE%%"r": Open to read, file must exist%%ITEMIZE%%"r+": Open to read and write%%ITEMIZE%%"a": Open to write and jump previously to the end of the file%%ITEMIZE%%"a": Open to read and write and jump previously to the end of the file%%ITEMIZE_END%%An additional "b" still activates binary file mode. File objects are among the objects. Local instances are declared with the command obj
 PARSERFUNCS_LISTFUNC_FUNC_FILTER_[MAT]=						filter(mMat,mKernel,nMode)                                            MAT      - Applies filter kernel mKernel to the matrix mMat. nMode defines the behavior at the matrix boundaries.%%ITEMIZE%%nMode = 0: boundary clamp%%ITEMIZE%%nMode = 1: boundary reflection.
 PARSERFUNCS_LISTFUNC_FUNC_FINDCOLUMN_[STRING]=				findcolumn(sTable,sHeadline)                                         {VAL}     - Returns all indices of the columns of the table in sTable (as string, e.g. via TABLE().name), whose column headings are matching to sHeadline
 PARSERFUNCS_LISTFUNC_FUNC_FINDFILE_[STRING_LOGIC]=			findfile(sFile,sPath="<>")                                            LOG      - Returns true, if the file sFile (as string or object.path) exists, false otherwise. The file must be passed as a string. sPath (as string or object.path) is an optional standard search path, which defaults to the NumeRe root path
@@ -850,17 +850,17 @@ GUI_EDITOR_CALLTIP_ASSERTION=	assertion      - Error types for failed assertions
 GUI_EDITOR_CALLTIP_EXPRESSION=	expression     - Error type for errors in mathematical expressions
 GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Combined with "declare", it declares an enumeration of the passed symbols in the braces for the current file. It is possible to set values as integral constants or one can refer to previous values, i.e. "enum -> {VAL1 = 1, VAL2 = VAL1, ...}"
 # Argument types
-GUI_EDITOR_ARGCALLTIP_STR=%%1%%: String
-GUI_EDITOR_ARGCALLTIP_CHR=%%1%%: Char
-GUI_EDITOR_ARGCALLTIP_MAT=%%1%%: Matrix
-GUI_EDITOR_ARGCALLTIP_INTEGER=%%1%%: Integer
-GUI_EDITOR_ARGCALLTIP_FLOAT=%%1%%: Value
-GUI_EDITOR_ARGCALLTIP_OBJECT=%%1%%: Object
-GUI_EDITOR_ARGCALLTIP_TIME=%%1%%: Date-Time
-GUI_EDITOR_ARGCALLTIP_BOOL=%%1%%: Logical
-GUI_EDITOR_ARGCALLTIP_TABLE=%%1%%: Table
-GUI_EDITOR_ARGCALLTIP_CLUSTER=%%1%%: Cluster
-GUI_EDITOR_ARGCALLTIP_ANY=%%1%%: Any
+GUI_EDITOR_ARGCALLTIP_STR=%%1%%: string
+GUI_EDITOR_ARGCALLTIP_CHR=%%1%%: char
+GUI_EDITOR_ARGCALLTIP_MAT=%%1%%: matrix
+GUI_EDITOR_ARGCALLTIP_INTEGER=%%1%%: integer
+GUI_EDITOR_ARGCALLTIP_FLOAT=%%1%%: value
+GUI_EDITOR_ARGCALLTIP_OBJECT=%%1%%: object
+GUI_EDITOR_ARGCALLTIP_TIME=%%1%%: datetime
+GUI_EDITOR_ARGCALLTIP_BOOL=%%1%%: logical
+GUI_EDITOR_ARGCALLTIP_TABLE=%%1%%: table
+GUI_EDITOR_ARGCALLTIP_CLUSTER=%%1%%: cluster
+GUI_EDITOR_ARGCALLTIP_ANY=%%1%%: any
 GUI_EDITOR_ARGCALLTIP_REPEATTYPE=Continued with same type
 GUI_EDITOR_ARGCALLTIP_REFERENCE=as reference
 GUI_EDITOR_ARGCALLTIP_VECTOR=as vector

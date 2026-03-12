@@ -154,7 +154,7 @@ PARSERFUNCS_LISTFUNC_FUNC_F64_[SYNTAX]=						f64(x)                             
 PARSERFUNCS_LISTFUNC_FUNC_FACE_[DRAW]=						face(P,P,P,P,sStyle="")                                               {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die Ecken sind dabei von unten links an entgegen des Uhrzeigersinns numeriert. Die Füllung des Vierecks kann mit sStyle beeinflusst werden.
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev(P,D,D,D,sStyle="")                                              {}       - Zeichnet ein Viereck. Dabei können zwei bis vier Ecken angegeben werden. Bei zwei Ecken zeichnet NumeRe ein Quadrat, bei drei Ecken ein Parallelogramm und bei allen vier Ecken ein allgemeines Viereck. Die ersten beiden Richtungsvektoren sind die untere und linke Kante und der letzte die Diagonale. Die Füllung des Vierecks kann mit sStyle beeinflusst werden.
 PARSERFUNCS_LISTFUNC_FUNC_FACTORIAL_[NUM]=					factorial(n)                                                          VAL      - Fakultät der natürlichen Zahl n [n! = n*(n-1)*(n-2)*...*1]. %%DEFINED_NATURAL%% >= 0
-PARSERFUNCS_LISTFUNC_FUNC_FILE_[SYNTAX]=					file({sFiles}={},{sModes}="r")                                        OBJ      - Erzeugt Objekt-Instanzen vom Typ file für jeden Dateinamen in sFiles (als Zeichenkette oder object.path) und jeden Modus in sModes. Falls keine Dateinamen übergeben werden, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:%%ITEMIZE%%"w": Öffne zum Schreiben und lösche zuvor eventuellen Inhalt%%ITEMIZE%%"w+": Öffne zum Lesen und Schreiben und lösche zuvor eventuellen Inhalt%%ITEMIZE%%"r": Öffne zum Lesen, Datei muss existieren%%ITEMIZE%%"r+": Öffne zum Lesen und Schreiben%%ITEMIZE%%"a": Öffne zum Schreiben und springe zuvor ans Ende der Datei%%ITEMIZE%%"a+": Öffne zum Lesen und Schreiben und springe zuvor ans Ende der Datei%%ITEMIZE_END%%Ein zusätzliches "b" aktiviert noch den binären Dateimodus. File-Objekte gehören zu den Objekten. Lokale Instanzen werden mit dem Kommando obj deklariert
+PARSERFUNCS_LISTFUNC_FUNC_FILE_[SYNTAX]=					file(sFile={},sMode="r")                                              OBJ      - Erzeugt eine Objekt-Instanz vom Typ file für den Dateinamen in sFile (als Zeichenkette oder object.path) und den Modus in sMode. Falls kein Dateiname übergeben wird, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:%%ITEMIZE%%"w": Öffne zum Schreiben und lösche zuvor eventuellen Inhalt%%ITEMIZE%%"w+": Öffne zum Lesen und Schreiben und lösche zuvor eventuellen Inhalt%%ITEMIZE%%"r": Öffne zum Lesen, Datei muss existieren%%ITEMIZE%%"r+": Öffne zum Lesen und Schreiben%%ITEMIZE%%"a": Öffne zum Schreiben und springe zuvor ans Ende der Datei%%ITEMIZE%%"a+": Öffne zum Lesen und Schreiben und springe zuvor ans Ende der Datei%%ITEMIZE_END%%Ein zusätzliches "b" aktiviert noch den binären Dateimodus. File-Objekte gehören zu den Objekten. Lokale Instanzen werden mit dem Kommando obj deklariert
 PARSERFUNCS_LISTFUNC_FUNC_FILTER_[MAT]=						filter(mMat,mKernel,nMode)                                            MAT      - Wendet den Filter-Kernel mKernel auf die Matrix mMat an. nMode legt das Verhalten am Rand der Matrix fest.%%ITEMIZE%%nMode = 0: Werte werden konstant fortgesetzt (boundary clamp)%%ITEMIZE%%nMode = 1: Werte werden am Rand reflektiert fortgesetzt (boundary reflection)
 PARSERFUNCS_LISTFUNC_FUNC_FINDCOLUMN_[STRING]=				findcolumn(sTable,sHeadline)                                         {VAL}     - Gibt die Indices aller Spalten in der Tabelle in sTable (als Zeichenkette, z.B. durch TABLE().name) zurück, deren Spaltenüberschriften mit sHeadline übereinstimmen
 PARSERFUNCS_LISTFUNC_FUNC_FINDFILE_[STRING_LOGIC]=			findfile(sFile,sPath="<>")                                            LOG      - Gibt true zurück, wenn die Datei sFile (als Zeichenkette oder object.path) existiert, sonst false. Die Datei muss in Form einer Zeichenkette angegeben werden. sPath (als Zeichenkette oder object.path) ist ein optionaler Standardsuchpfad, der standardmäßig auf den NumeRe-Stammordner weist
@@ -850,17 +850,17 @@ GUI_EDITOR_CALLTIP_ASSERTION=	assertion      - Fehlertyp für fehlgeschlagene Ü
 GUI_EDITOR_CALLTIP_EXPRESSION=	expression     - Fehlertyp für Fehler in mathematischen Ausdrücken
 GUI_EDITOR_CALLTIP_ENUM=		enum -> {...}  - Deklariert in Kombination mit "declare" für die aktuelle Datei eine Enumeration der in geschweiften Klammern angegebenen Symbole. Es können ganzzahlige Konstanten als Werte vorgegeben oder es kann sich auf vorherige Werte bezogen werden, d.h. "enum -> {VAL1 = 1, VAL2 = VAL1, ...}"
 # Argument types
-GUI_EDITOR_ARGCALLTIP_STR=%%1%%: String
-GUI_EDITOR_ARGCALLTIP_CHR=%%1%%: Char
-GUI_EDITOR_ARGCALLTIP_MAT=%%1%%: Matrix
-GUI_EDITOR_ARGCALLTIP_INTEGER=%%1%%: Integer
-GUI_EDITOR_ARGCALLTIP_FLOAT=%%1%%: Value
-GUI_EDITOR_ARGCALLTIP_OBJECT=%%1%%: Object
-GUI_EDITOR_ARGCALLTIP_TIME=%%1%%: Date-Time
-GUI_EDITOR_ARGCALLTIP_BOOL=%%1%%: Logical
-GUI_EDITOR_ARGCALLTIP_TABLE=%%1%%: Tabelle
-GUI_EDITOR_ARGCALLTIP_CLUSTER=%%1%%: Cluster
-GUI_EDITOR_ARGCALLTIP_ANY=%%1%%: Any
+GUI_EDITOR_ARGCALLTIP_STR=%%1%%: string
+GUI_EDITOR_ARGCALLTIP_CHR=%%1%%: char
+GUI_EDITOR_ARGCALLTIP_MAT=%%1%%: matrix
+GUI_EDITOR_ARGCALLTIP_INTEGER=%%1%%: integer
+GUI_EDITOR_ARGCALLTIP_FLOAT=%%1%%: value
+GUI_EDITOR_ARGCALLTIP_OBJECT=%%1%%: object
+GUI_EDITOR_ARGCALLTIP_TIME=%%1%%: datetime
+GUI_EDITOR_ARGCALLTIP_BOOL=%%1%%: logical
+GUI_EDITOR_ARGCALLTIP_TABLE=%%1%%: table
+GUI_EDITOR_ARGCALLTIP_CLUSTER=%%1%%: cluster
+GUI_EDITOR_ARGCALLTIP_ANY=%%1%%: any
 GUI_EDITOR_ARGCALLTIP_REPEATTYPE=Weitere mit gleichem Typ
 GUI_EDITOR_ARGCALLTIP_REFERENCE=als Referenz
 GUI_EDITOR_ARGCALLTIP_VECTOR=als Vektor

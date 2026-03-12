@@ -30,7 +30,7 @@
 	</keywords>
 	<contents>
 		<syntax>
-			VAL = url ADDRESS
+			STR = url ADDRESS
 			VAL = url ADDRESS -file=FILENAME ...
 			VAL = url ADDRESS -header={HTTP-HEADER} ...
 		</syntax>
