@@ -1,0 +1,54 @@
+#
+# NumeRe: Framework für Numerische Rechnungen
+# Copyright (C) 2026  Erik Haenel et al.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# ========================================================================
+# LANGUAGE FILE: menukeybinds.nlng
+#
+KEY_NEWFILE=Ctrl-N
+KEY_NEW_EMPTYFILE=Ctrl-Shift-N
+KEY_NEW_NSCR=Ctrl-Shift-S
+KEY_NEW_NPRC=Ctrl-Shift-P
+KEY_NEW_LAYOUT=Ctrl-Shift-L
+KEY_SAVEFILE=Ctrl-S
+KEY_PRINT=Ctrl-P
+KEY_EXIT=Alt-F4
+KEY_SELECT_UP=Alt-Up
+KEY_SELECT_DOWN=Alt-Down
+KEY_FIND=Ctrl-F
+KEY_REPLACE=Ctrl-H
+KEY_FIND_PROCEDURE=Ctrl-.
+KEY_FIND_INCLUDE=Ctrl-,
+KEY_GOTOLINE=Ctrl-G
+KEY_BOOKMARK_TOGGLE=Ctrl-B
+KEY_BOOKMARK_PREVIOUS=Ctrl-Shift-M
+KEY_BOOKMARK_NEXT=Ctrl-M
+KEY_LINEWRAP=Ctrl-Alt-W
+KEY_TOGGLE_CONSOLE=F2
+KEY_TOGGLE_FILETREE=F3
+KEY_TOGGLE_HISTORY=F4
+KEY_FOLDALL=Ctrl-Alt-F
+KEY_UNFOLDALL=Ctrl-Alt-U
+KEY_DEBUGGER=Ctrl-Shift-D
+KEY_AUTOINDENT=Ctrl-Shift-I
+KEY_AUTOFORMAT=Ctrl-Shift-F
+KEY_EXECUTE=F5
+KEY_EXECUTE_FROM_LINE=F6
+KEY_COMMENTLINE=Ctrl-Q
+KEY_COMMENTSELECTION=Ctrl-Shift-Q
+KEY_CREATE_DOCUMENTATION=Ctrl-Alt-B
+KEY_ANALYZER=Ctrl-Shift-A
+KEY_RENAME_SYMBOL=Ctrl-Alt-R
+KEY_ABSTRAHIZE_SECTION=Ctrl-Alt-E
