@@ -193,7 +193,7 @@
 		In this case, <a href="nhlp://object?frame=new">DictStruct</a> instances can also be passed to <code>value=VALUE</code>. The hierarchy of the instance is then automatically replicated. There are two special cases here:
 		<list>
             <item node="*">Checkboxes cannot be filled automatically and are always set to <code>false</code>. All values in the DictStruct instance are used as specified. Parsing, as described in the previous lines, does not take place</item>
-			<item node="*">DictStruct instances that are in XML format (containing only the following fields: <code>.name</code>, <code>.attrs</code>, <code>.text</code>, and <code>.nodes</code>), are shortened for better readability and displayed according to an XML tree, i.e., <code>.name</code> fields become node names, <code>.nodes</code> fields are replaced directly by the child nodes, and <code>.text</code> is appended directly to the node name if possible.
+			<item node="*">DictStruct instances that are in XML format (containing only the following fields: <code>.name</code>, <code>.attrs</code>, <code>.text</code>, and <code>.nodes</code>), are shortened for better readability and displayed according to an XML tree, i.e., <code>.name</code> fields become node names, <code>.nodes</code> fields are replaced directly by the child nodes, and <code>.text</code> is appended directly to the node name if possible.</item>
 		</list>
 		<h>Modification of GUI element properties with options={KEY-VALUE}</h>
 		The keys supported by <code>tablegrid</code> are:
