@@ -41,7 +41,7 @@
 			<item node="*">Matrizen können nun auch Tensoren höherer Ordnung sein, der Indexoperator <code>MAT(row,col,layer,...)</code> wurde für derartige Fälle erweitert. Als Indexvariablen stehen neben <code>nrows</code> und <code>ncols</code> auch <code>nlayers</code> für die dritte Ordnung und <code>ndim</code> für alle weiteren zur Verfügung. Nicht alle Funktionen unterstützen Tensoren höherer Ordnung</item>
 			<item node="*">Mit dem Transpositionsoperator <code>MAT'</code> kann eine Zeilen-Spalten-Transposition durchgeführt werden, <code>transpose()</code> kann nun beliebige Dimensionen vertauschen</item>
 			<item node="*">Die Funktion <code>solve()</code> verwendet nun QR-Zerlegung und benötigt zwei Argumente (<code>solve(mMat,mVec)</code>) und gibt bei Über- oder Unterbestimmung den "best fit" zurück</item>
-			<item node="*">Die Funktion <code>unique()</code> sortiert ihr Ergebnis nicht mehr automatisch</item>
+			<item node="*">Die Funktion <code>unique()</code> sortiert ihr Ergebnis nicht mehr automatisch. Außerdem wurde das Verhalten auf die komplette jeweilige Dimension geändert, d.h. <code>unique(MAT, 1)</code> gibt nun eine Matrix mit eindeutigen Zeilen und nicht mehr mit nur eindeutigen Elementen entlang der Zeilen zurück (die Matrix bleibt damit stets rechteckig)</item>
 			<item node="*">Ergebnisse eines Matrixausdrucks werden nun auch in <code>ans</code> abgelegt und nicht mehr in <code>matrix()</code></item>
 			<item node="*">Die jeweils zweiten Parameter der Funktionen <code>vectshift()</code> und <code>circshift()</code> wurden auf das Standardschema, dass die Zeilendimensionen mit 1 und die Spaltendimensionen mit 2 bezeichnet werden, angepasst</item>
 		</list>

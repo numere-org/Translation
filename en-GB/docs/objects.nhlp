@@ -34,12 +34,12 @@
 			oDictStruct = dictstruct({sFields})
 			oDictStruct = dictstruct({sFields}, {vals})\n
 			oPath = path()
-			oPath = path({sPaths})
-			oPath = path({sPaths}, {sSeparators})
+			oPath = path(sPath)
+			oPath = path(sPath, sSeparator)
 			oPath = "SOME" / "PATH" / "SEGMENTS"\n
 			oFile = file()
-			oFile = file({sFiles})
-			oFile = file({sFiles}, {sModes})\n
+			oFile = file(sFile)
+			oFile = file(sFile, sMode)\n
 			oStack = stack()
 			oStack = stack({vals})\n
 			oQueue = queue()
@@ -64,11 +64,11 @@
 		</codeblock>
 		<h>Path objects</h>
 		A path is any separator-delimited string, such as a file path, URL, or namespace. Separators are used to break down paths into individual building blocks, starting with the root element <code>path.root</code>, through the trunk and the respective branch, to the leaf element <code>path.leaf</code>. The trunk and branch are only significant in relation to other path instances in that they describe the common (<code>path.trunk(oPath)</code>) and different (<code>path.branch(oPath)</code>) parts of the path.
-		The function <code>path({sPaths}={},{sSeparators}="\\/")</code> can be used to create instances of type <code>object.path</code> for each path in <code>sPaths</code> and each separator in <code>sSeparators</code>. If no paths are passed, an empty path instance is created. Path objects support the operators <code>+</code> (add more characters to the leaf element) and <code>/</code> (append a new leaf element to the path).
+		The function <code>path(sPath={},sSeparator="\\/")</code> can be used to create an instance of type <code>object.path</code> for the path in <code>sPath</code> and the separator in <code>sSeparator</code>. If no path is passed, an empty path instance is created. Path objects support the operators <code>+</code> (add more characters to the leaf element) and <code>/</code> (append a new leaf element to the path).
 		A path object is also created automatically when at least two arbitrary strings are linked with the <code>/</code> operator. A string can also be assigned to a path object (<code>oPath = sPath</code>), which is then implicitly converted to an <code>object.path</code> using <code>path(sPath, "\\/")</code>.
 		<h>File objects</h>
 		File objects can be used to directly access any files and allow arbitrary operations on these files, both in text and binary mode. Instances of this object each enclose an instance of the C++ class <code>std::fstream</code>.
-		Object instances of type <code>object.file</code> can be created with the function <code>file({sFiles}={},{sModes}="r")</code> for each file name in <code>sFiles</code> (<code>sFiles</code> can be a vector of character strings or path object instances) and each mode in <code>sModes</code>. If no file names are passed, an empty file instance is created. The mode determines how the file is opened:
+		Object instances of type <code>object.file</code> can be created with the function <code>file(sFile={},sMode="r")</code> for the file name in <code>sFile</code> (<code>sFile</code> can be a character string or a path object instance) and the mode in <code>sMode</code>. If no file name is passed, an empty file instance is created. The mode determines how the file is opened:
 		<list>
 			<item node="&quot;w&quot;">Open for writing and delete any previous content</item>
 			<item node="&quot;w+&quot;">Open for reading and writing and delete any previous content</item>

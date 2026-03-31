@@ -34,12 +34,12 @@
 			oDictStruct = dictstruct({sFields})
 			oDictStruct = dictstruct({sFields}, {vals})\n
 			oPath = path()
-			oPath = path({sPaths})
-			oPath = path({sPaths}, {sSeparators})
+			oPath = path(sPath)
+			oPath = path(sPath, sSeparator)
 			oPath = "SOME" / "PATH" / "SEGMENTS"\n
 			oFile = file()
-			oFile = file({sFiles})
-			oFile = file({sFiles}, {sModes})\n
+			oFile = file(sFile)
+			oFile = file(sFile, sMode)\n
 			oStack = stack()
 			oStack = stack({vals})\n
 			oQueue = queue()
@@ -64,11 +64,11 @@
 		</codeblock>
 		<h>Path-Objekte</h>
 		Ein Pfad ist ein jegliche Separator-getrennte Zeichenkette, wie z.B. ein Dateipfad, eine URL oder ein Namespace. Separatoren werden verwendet, um die Pfade in einzelne Bausteine zu zerlegen, beginnend mit dem Wurzelelement <code>path.root</code> über den Stamm und den jeweiligen Ast bis hin zum Blattelement <code>path.leaf</code>. Stamm und Ast haben nur in Bezug auf weitere Path-Instanzen eine Bedeutung insofern sie den jeweils gemeinsamen (<code>path.trunk(oPath)</code>) und den jeweils unterschiedlichen Pfadteil beschreiben (<code>path.branch(oPath)</code>).
-		Mit der Funktion <code>path({sPaths}={},{sSeparators}="\\/")</code> können Instanzen vom Typ <code>object.path</code> für jeden Pfad in <code>sPaths</code> und jeden Separator in <code>sSeparators</code> erzeugt werden. Falls keine Pfade übergeben werden, wird eine leere Path-Instanz erzeugt. Path-Objekte unterstützen die Operatoren <code>+</code> (Blattelement um weitere Zeichen erweitern) und <code>/</code> (ein neues Blattelement an den Pfad anhängen).
+		Mit der Funktion <code>path(sPath={},sSeparator="\\/")</code> kann eine Instanz vom Typ <code>object.path</code> für den Pfad in <code>sPath</code> und den Separator in <code>sSeparator</code> erzeugt werden. Falls kein Pfad übergeben wird, wird eine leere Path-Instanz erzeugt. Path-Objekte unterstützen die Operatoren <code>+</code> (Blattelement um weitere Zeichen erweitern) und <code>/</code> (ein neues Blattelement an den Pfad anhängen).
 		Ein Path-Objekt wird auch automatisch erzeugt, wenn mindestens zwei beliebige Zeichenketten mit dem <code>/</code>-Operator verknüpft werden. Einem Path-Objekt kann auch eine Zeichenkette zugewiesen werden (<code>oPath = sPath</code>), die dann implizit mittels <code>path(sPath, "\\/")</code> in ein <code>object.path</code> umgewandelt wird.
 		<h>File-Objekte</h>
 		Mit File-Objekten kann direkt auf beliebige Dateien zugegriffen werden und erlaubt arbiträre Operationen auf diesen Dateien, sowohl im Text- als auch im binären Modus. Instanzen dieses Objekts umschließen dazu je eine Instanz der C++-Klasse <code>std::fstream</code>.
-		Objekt-Instanzen vom Typ <code>object.file</code> können mit der Funktion <code>file({sFiles}={},{sModes}="r")</code> für jeden Dateinamen in <code>sFiles</code> (<code>sFiles</code> kann dabei ein Vektor aus Zeichenketten oder Path-Objekt-Instanzen sein) und jeden Modus in <code>sModes</code> erzeugt werden. Falls keine Dateinamen übergeben werden, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:
+		Objekt-Instanzen vom Typ <code>object.file</code> können mit der Funktion <code>file(sFile={},sMode="r")</code> für den Dateinamen in <code>sFile</code> (<code>sFile</code> kann dabei eine Zeichenkette oder ein Path-Objekt-Instanz sein) und den Modus in <code>sMode</code> erzeugt werden. Falls kein Dateiname übergeben wird, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:
 		<list>
 			<item node="&quot;w&quot;">Öffne zum Schreiben und lösche zuvor eventuellen Inhalt</item>
 			<item node="&quot;w+&quot;">Öffne zum Lesen und Schreiben und lösche zuvor eventuellen Inhalt</item>

@@ -17,7 +17,7 @@
 -->
 
 <article id="documentation">
-	<title string="Writing documantation articles" /><title string="Documentation" idxkey="documentation" />
+	<title string="Writing documantation articles" idxkey="documentation" />
 	<keywords>
 		<keyword>docum</keyword>
 		<keyword>dokum</keyword>

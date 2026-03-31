@@ -41,7 +41,7 @@
 			<item node="*">Matrices can now also be higher-order tensors; the index operator <code>MAT(row,col,layer,...)</code> has been extended for such cases. In addition to <code>nrows</code> and <code>ncols</code>, the index variables <code>nlayers</code> for the third order and <code>ndim</code> for all others are also available. Not all functions support higher-order tensors, though</item>
 			<item node="*">The transposition operator <code>MAT'</code> can be used to perform row-column transposition, and <code>transpose()</code> can now swap any dimensions.</item>
 			<item node="*">The function <code>solve()</code> now uses QR decomposition and requires two arguments (<code>solve(mMat,mVec)</code>) and returns the "best fit" in case of over- or under-determination.</item>
-			<item node="*">The <code>unique()</code> function no longer sorts its result automatically.</item>
+			<item node="*">The <code>unique()</code> function no longer sorts its result automatically. Furthermore, its mode of application was changed to the complete respective dimension, i.e., <code>unique(MAT,1)</code> will now return a matrix with only unique rows and no with only unique elements along the rows (keeping the matrix rectangular)</item>
 			<item node="*">Results of a matrix expression are now also stored in <code>ans</code> and no longer in <code>matrix()</code>.</item>
 			<item node="*">The second parameters of the functions <code>vectshift()</code> and <code>circshift()</code> have been adjusted to the standard scheme, where row dimensions are designated with 1 and column dimensions with 2</item>
 		</list>
