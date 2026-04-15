@@ -956,11 +956,11 @@ GUI_MENU_GOTOLINE=&Goto line%%TAB%%%%KEY_GOTOLINE%%
 GUI_MENU_GOTOLINE_TTP=Goto a line in the active file
 GUI_MENU_BOOKMARK_TOGGLE=Add/remove bookmark%%TAB%%%%KEY_BOOKMARK_TOGGLE%%
 GUI_MENU_BOOKMARK_CLEAR=Remove all bookmarks
-GUI_MENU_BOOKMARK_PREVIOUS=&Previous bookmark%%TAB%%%%%%
+GUI_MENU_BOOKMARK_PREVIOUS=&Previous bookmark%%TAB%%%%KEY_BOOKMARK_PREVIOUS%%
 GUI_MENU_BOOKMARK_NEXT=&Next bookmark%%TAB%%%%KEY_BOOKMARK_NEXT%%
 GUI_MENU_SEARCH=&Search
 # View menu
-GUI_MENU_LINEWRAP=Automatic line &wrap%%TAB%%%%KEY_LINEWRAP%%
+GUI_MENU_LINEWRAP=Automatic line &wrap%%TAB%%%%KEY_LINEWRAP%%
 GUI_MENU_LINEWRAP_TTP=Wraps long lines at the screen border
 GUI_MENU_DISPCTRLCHARS=&Show control characters
 GUI_MENU_DISPCTRLCHARS_TTP=Shows control characters such as tabulator and whitespaces
