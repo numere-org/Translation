@@ -49,7 +49,9 @@
 			<item node="&quot;\t&quot;">creates a horizontal tabulator at its position</item>
 			<item node="&quot;\&quot;&quot;">creates a (non-suppressable) quotation mark at its position</item>
 			<item node="&quot;\\&quot;">escapes the backslash itself</item>
-			<item node="&quot;\xHH&quot;">a hexadecimal encoded byte, e.g. <code>"\xAC"</code></item>
+			<item node="&quot;\xHH&quot;">a hexadecimally encoded byte, e.g. <code>"\xAC"</code></item>
+			<item node="&quot;\uHHHH&quot;">a hexadecimally encoded Unicode code point within the Basic Multilingual Plane (BMP) from U+0000 to U+FFFF, e.g., <code>"\u03A3"</code></item>
+			<item node="&quot;\UHHHHHHHH&quot;">a hexadecimally encoded Unicode codepoint using the full 32 bits, ranging from U+00000000 to U+0010FFFF, e.g., <code>"\U0001F609"</code></item>
 		</list>
 		NumeRe may convert the value of a numerical value to a string, if the variable was called with a prefixed <code>#</code>. If one or more <code>~</code> are inserted between the variable's name and <code>#</code>, then NumeRe will prefix as many <code>0</code> as needed to get a string of the length of the number of <code>~</code>+1. If the value of the string already has enough characters, then NumeRe will ignore the <code>~</code>. Additionally, the results of whole expressions may be parsed through <code>#(EXPRESSION)</code>, as well as from functions through <code>#FUNCTION(ARGS)</code> and from <a href="nhlp://explorer?frame=new">path placeholders</a> with <code>#&lt;PATH&gt;</code>.
 		The table heads of the data objects may be read and modified with the syntax <code>TABLE(#,COLUMN)</code>. The filename of the loaded data file may be read with <code>data(#,#)</code>.

@@ -50,6 +50,8 @@
 			<item node="&quot;\&quot;&quot;">erzeugt ein (nicht unterdrückbares) Anführungszeichen an seiner Position</item>
 			<item node="&quot;\\&quot;">maskiert den Backslash selbst</item>
 			<item node="&quot;\xHH&quot;">ein Hexadezimal enkodiertes Byte, z.B. <code>"\xAC"</code></item>
+			<item node="&quot;\uHHHH&quot;">ein Hexadezimal enkodierter Unicode Codepoint innerhalb der Basic Multilingual Plane (BMP) von U+0000 bis U+FFFF, z.B. <code>"\u03A3"</code></item>
+			<item node="&quot;\UHHHHHHHH&quot;">ein Hexadezimal enkodierter Unicode Codepoint unter Verwendung der vollen 32 Bit von U+00000000 bis U+0010FFFF, z.B. <code>"\U0001F609"</code></item>
 		</list>
 		NumeRe kann den Wert von Variablen in eine Zeichenkette umwandeln, wenn die Variable mit einem vorangestellten <code>#</code> aufgerufen wird. Werden zwischen den Variablennamen und <code>#</code> ein oder mehrere <code>~</code> eingefügt, so ergänzt NumeRe in der Ausgabe ggf. so viele <code>0</code> vor dem eigentlichen Wert, dass die Zahl der ausgegeben Zeichen mindestens gleich der Zahl der <code>~</code>+1 ist. Besitzt der Wert der Variablen bereits ausreichend oder mehr Stellen, wird NumeRe nichts ergänzen. Außerdem können die Ergebnisse von ganzen Ausdrücken durch <code>#(AUSDRUCK)</code>, von Funktionen mittels <code>#FUNKTION(ARGS)</code> und die Werte von <a href="nhlp://explorer?frame=new">Pfad-Platzhaltern</a> durch <code>#&lt;PFAD&gt;</code> umgewandelt werden.
 		Die Tabellenköpfe der Datenobjekte können mit der Syntax <code>TABLE(#,Spalte)</code> ausgelesen und bearbeitet werden. Der Dateinamen des geladenen Datenfiles kann mit <code>data(#,#)</code> gelesen werden.
