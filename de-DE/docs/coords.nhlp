@@ -43,7 +43,7 @@
 		</example>
 		<img src="<>/docs/parametricsphere.png" />
 		<h>Standard-Koordinatentransformationen</h>
-		Die Art der standardmäßig definierten Koordinaten wird durch die folgenden Optionen bestimmt. Für Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>) sind <code>polar</code> (entspricht <code>polar_rp</code>) und <code>spherical</code> (entspricht <code>spherical_rp</code>) die einzigen Optionen.
+		Die Art der standardmäßig definierten Koordinaten wird durch die folgenden Optionen bestimmt. Für Plotstile mit einem "3d" im Namen (z.B. <code>plot3d</code> oder <code>mesh3d</code>), für <code>dens</code>, sowie jegliche Form von Vektorplots sind <code>polar</code> (entspricht <code>polar_rp</code>) und <code>spherical</code> (entspricht <code>spherical_rp</code>) die <em>einzigen Optionen</em>.
 		<list>
 			<item node="cartesian">kartesische <expr>(x,y,z)</expr>-Koordinaten</item>
 			<item node="polar">Polare/zylindrische <expr>(rho,phi,z)</expr>-Koordinaten. Wird als <code>polar_pz</code> interpretiert oder als <code>polar_rp</code>, wenn der Plotstil ein "3d" im Namen enthält oder ein Vektorplot ist</item>

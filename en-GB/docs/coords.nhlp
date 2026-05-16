@@ -43,7 +43,7 @@
 		</example>
 		<img src="<>/docs/parametricsphere.png" />
 		<h>Standard coodinate transforms</h>
-		The type of the standard coordinate sets is determined by the following options. Please note that for plotting styles with a "3d" in their name (e.g. <code>plot3d</code> or <code>mesh3d</code>) <code>polar</code> (corresponds to <code>polar_rp</code>) and <code>spherical</code> (corresponds to <code>spherical_rp</code>) are the only possibilities.
+		The type of the standard coordinate sets is determined by the following options. Please note that for plotting styles with a "3d" in their name (e.g. <code>plot3d</code> or <code>mesh3d</code>), for <code>dens</code>, and for any type of vector plot <code>polar</code> (corresponds to <code>polar_rp</code>) and <code>spherical</code> (corresponds to <code>spherical_rp</code>) are the <em>only possibilities</em>.
 		<list>
 			<item node="cartesian">Cartesian <expr>(x,y,z)</expr> coordinates</item>
 			<item node="polar">Polar/cylindrical <expr>(rho,phi,z)</expr> coordinates. Will be interpreted as <code>polar_pz</code> or as <code>polar_rp</code>, if the plotting style has a "3d" in its name or is a vector plotting style</item>
