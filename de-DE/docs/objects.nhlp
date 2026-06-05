@@ -22,6 +22,7 @@
 		<keyword>object</keyword>
 		<keyword>struct</keyword>
 		<keyword>dict</keyword>
+		<keyword>logger</keyword>
 		<keyword>path</keyword>
 		<keyword>queue</keyword>
 		<keyword>stack</keyword>
@@ -30,6 +31,9 @@
 	</keywords>
 	<contents>
 		<syntax>
+			oDict = dict()
+			oDict = dict({keys})
+			oDict = dict({keys}, {vals})\n
 			oDictStruct = dictstruct()
 			oDictStruct = dictstruct({sFields})
 			oDictStruct = dictstruct({sFields}, {vals})\n
@@ -40,21 +44,27 @@
 			oFile = file()
 			oFile = file(sFile)
 			oFile = file(sFile, sMode)\n
+			oLogger = logger()
+			oLogger = logger(sFile)
+			oLogger = logger(sFile, sLevel)\n
 			oStack = stack()
 			oStack = stack({vals})\n
 			oQueue = queue()
 			oQueue = queue({vals})
 		</syntax>
 		Zusätzlich zu den <a href="nhlp://table?frame=new">Tabellen</a> stellt NumeRe einige vordefinierte Objekte bereit, mit denen durch Komposition komplexere Datenstrukturen erzeugt werden können. Die jeweiligen Methoden der Datenstrukturen sind im Symbolbaum gelistet.
+		<h>Dicts</h>
+		Dictionaries (auch Maps genannt) sind sortierte Listen aus Schlüssel-Wert-Paaren, deren Schlüssel eindeutig sind. Die Schlüssel und Werte sind dynamisch angelegt und können stets geändert werden. Für die Typen der Schlüssel gilt dabei die Anforderung, dass diese eine "kleiner-als"-Relation (<code>k1 &lt; k2</code>) bereitstellen müssen.
+		Um eine Dict-Instanz zu erstellen, wird die Funktion <code>dict({keys}={},{vals}="")</code> verwendet. Schlüssel <code>keys</code> und Werte <code>vals</code> sind optional. Die Verwendung der Funktion ohne Argumente erstellt eine leere Dict-Instanz. Werte können später mittels <code>oDict.at(key)</code> gelesen und mittels <code>oDict.write(key,val)</code> geschrieben werden. Nicht existente Schlüssel werden beim Schreiben automatisch eingefügt.
 		<h>DictStructs</h>
-		DictStructs sind Hybride aus Dictionaries (auch Maps genannt) und Strukturen. Sie bieten Funktionalitäten aus beiden Welten und entsprechen wohl am ehesten einem <code>struct</code> anderer Sprachen. DictStructs paaren Felder (bzw. Schlüssel) mit Werten, wobei ein Wert wieder ein DictStruct sein kann und so tiefe Strukturen konstruierbar sind. Aufgrund der Implementierung auf Basis eines Dictionaries sind DictStructs dynamisch und können ihre Felder jederzeit in Inhalt und Typ ändern.
+		DictStructs sind Hybride aus Dictionaries und Strukturen. Sie bieten Funktionalitäten aus beiden Welten und entsprechen wohl am ehesten einem <code>struct</code> anderer Sprachen. DictStructs paaren String-Felder (bzw. Schlüssel) mit Werten, wobei ein Wert wieder ein DictStruct sein kann und so tiefe Strukturen konstruierbar sind. Aufgrund der Implementierung auf Basis eines Dictionaries sind DictStructs dynamisch und können ihre Felder jederzeit in Inhalt und Typ ändern.
 		Eine DictStruct-Instanz wird mit der Funktion <code>dictstruct({sFields}={}, {vals}="")</code> erzeugt. Dabei sind die Felder <code>sFields</code> und die Werte <code>vals</code> optional. Falls <code>sFields</code> leer ist, wird eine DictStruct-Instanz ohne Felder erzeugt. Neben zusätzlichen Methoden kann auch mit Hilfe der Feldnamen mit der DictStruct-Instanz interagiert werden, sofern diese den Regeln für Variablenbezeichnungen (nur alphanumerisch, keine Ziffer als erstes Zeichen) entsprechen:
 		<list>
 			<item node="*">Zum Lesen der Werte in Form einer Methode ohne Argumente (z.B. <code>VALUE = oDictStruct.FIELD.SUBFIELD</code>)</item>
 			<item node="*">Zum Modifizieren der Werte, wenn diese als Argumente für die Feldnamen verwendet werden (z.B. <code>oDictStruct.FIELD.SUBFIELD(NEWVALUE)</code>)</item>
 		</list>
 		Feldnamen, die nicht den Regeln für Variablenbezeichnungen entsprechen, können mittels der Methoden <code>oDictStruct.at(sKey)</code> gelesen und <code>oDictStruct.write(sKey,val)</code> überschrieben werden.
-		Neue Felder können nur mittels <code>oDictStruct.insertkey(sKey, val={})</code> erzeugt werden, jeder andere Versuch wird einen Fehler werfen.
+		Neue Felder können im Gegensatz zu einem Dict nur mittels <code>oDictStruct.insertkey(sKey, val={})</code> erzeugt werden, jeder andere Versuch wird einen Fehler werfen.
 		Statt die Felder (bzw. Schlüssel) mittels Zeichenketten anzugeben, können auch Path-Objekte (siehe unten) verwendet werden, die dann eine komplette Hierarchie abbilden können und damit komplett dynamische Interaktionen erlauben. Die Syntax orientiert sich an der xPath-Syntax, d.h. mittels eckigen Klammern können Elemente aus vektoriellen Feldern entnommen werden, der Wert <code>"last()"</code> referenziert dabei das letzte Element:
 		<codeblock>
 			val = oDictStruct.at("FIELD" / "SUBFIELD")
@@ -64,11 +74,11 @@
 		</codeblock>
 		<h>Path-Objekte</h>
 		Ein Pfad ist ein jegliche Separator-getrennte Zeichenkette, wie z.B. ein Dateipfad, eine URL oder ein Namespace. Separatoren werden verwendet, um die Pfade in einzelne Bausteine zu zerlegen, beginnend mit dem Wurzelelement <code>path.root</code> über den Stamm und den jeweiligen Ast bis hin zum Blattelement <code>path.leaf</code>. Stamm und Ast haben nur in Bezug auf weitere Path-Instanzen eine Bedeutung insofern sie den jeweils gemeinsamen (<code>path.trunk(oPath)</code>) und den jeweils unterschiedlichen Pfadteil beschreiben (<code>path.branch(oPath)</code>).
-		Mit der Funktion <code>path(sPath={},sSeparator="\\/")</code> kann eine Instanz vom Typ <code>object.path</code> für den Pfad in <code>sPath</code> und den Separator in <code>sSeparator</code> erzeugt werden. Falls kein Pfad übergeben wird, wird eine leere Path-Instanz erzeugt. Path-Objekte unterstützen die Operatoren <code>+</code> (Blattelement um weitere Zeichen erweitern) und <code>/</code> (ein neues Blattelement an den Pfad anhängen).
+		Mit der Funktion <code>path(sPath="",sSeparator="\\/")</code> kann eine Instanz vom Typ <code>object.path</code> für den Pfad in <code>sPath</code> und den Separator in <code>sSeparator</code> erzeugt werden. Falls kein Pfad übergeben wird, wird eine leere Path-Instanz erzeugt. Path-Objekte unterstützen die Operatoren <code>+</code> (Blattelement um weitere Zeichen erweitern) und <code>/</code> (ein neues Blattelement an den Pfad anhängen).
 		Ein Path-Objekt wird auch automatisch erzeugt, wenn mindestens zwei beliebige Zeichenketten mit dem <code>/</code>-Operator verknüpft werden. Einem Path-Objekt kann auch eine Zeichenkette zugewiesen werden (<code>oPath = sPath</code>), die dann implizit mittels <code>path(sPath, "\\/")</code> in ein <code>object.path</code> umgewandelt wird.
 		<h>File-Objekte</h>
 		Mit File-Objekten kann direkt auf beliebige Dateien zugegriffen werden und erlaubt arbiträre Operationen auf diesen Dateien, sowohl im Text- als auch im binären Modus. Instanzen dieses Objekts umschließen dazu je eine Instanz der C++-Klasse <code>std::fstream</code>.
-		Objekt-Instanzen vom Typ <code>object.file</code> können mit der Funktion <code>file(sFile={},sMode="r")</code> für den Dateinamen in <code>sFile</code> (<code>sFile</code> kann dabei eine Zeichenkette oder ein Path-Objekt-Instanz sein) und den Modus in <code>sMode</code> erzeugt werden. Falls kein Dateiname übergeben wird, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:
+		Objekt-Instanzen vom Typ <code>object.file</code> können mit der Funktion <code>file(sFile="",sMode="r")</code> für den Dateinamen in <code>sFile</code> (<code>sFile</code> kann dabei eine Zeichenkette oder ein Path-Objekt-Instanz sein) und den Modus in <code>sMode</code> erzeugt werden. Falls kein Dateiname übergeben wird, wird eine leere File-Instanz erzeugt. Der Modus bestimmt, wie die Datei geöffnet wird:
 		<list>
 			<item node="&quot;w&quot;">Öffne zum Schreiben und lösche zuvor eventuellen Inhalt</item>
 			<item node="&quot;w+&quot;">Öffne zum Lesen und Schreiben und lösche zuvor eventuellen Inhalt</item>
@@ -87,6 +97,10 @@
 			\t## Do something with the line
 			endwhile
 		</codeblock>
+		<h>Logger-Objekte</h>
+		Logger-Objekte können genutzt werden, um während der Laufzeit komfortabel Informationen in eine Datei zu protokollieren. Dazu stellt ein Logger-Objekt Logging-Levels (<code>"debug"</code>, <code>"info"</code>, <code>"warning"</code> und <code>"error"</code>) bereit, die auch genutzt werden können, um erst Informationen ab einem bestimmten Level zu protokollieren. Beim Protokollieren einer Nachricht wird automatisch der aktuelle Zeitstempel als auch ihr Logging-Level der eigentlichen Nachricht im Logfile vorneangestellt.
+		Zum Protokollieren stellen Logger-Objekte hauptsächlich die Methoden <code>oLogger.debug(sMessage)</code>, <code>oLogger.info(sMessage)</code>, <code>oLogger.warning(sMessage)</code>, <code>oLogger.error(sMessage)</code>, sowie die allgemeine Form <code>oLogger.push(sMessage, sLevel="info")</code> zur Verfügung.
+		Um Objekt-Instanzen vom Typ <code>objekt.logger</code> zu erzeugen, wird die Funktion <code>logger(sFile="",sLevel="info")</code> verwendet. Sowohl der Dateiname <code>sFile</code> als auch das Level <code>sLevel</code> sind dabei optional. Werden beide Argumente weggelassen, wird eine leere Logger-Instanz erzeugt, die keine Nachrichten protokolliert. Mit <code>oLogger.open(sFile)</code> kann nachträglich noch eine Datei geöffnet werden.
 		<h>Stack-Objekte</h>
 		Ein Stack ist ein Last-In-First-Out (<em>LIFO</em>) Speicher. Das bedeutet, dass das Element, das als letztes auf den Stack gelegt wurde (<code>stack.push(val)</code>), auch als erstes wieder vom Stack entfernt werden muss (<code>stack.pop</code>).
 		Um eine Instanz vom Typ <code>object.stack</code> zu erzeugen, kann die Funktion <code>stack({vals}={})</code> verwendet werden. Falls <code>vals</code> leer ist, wird ein leerer Stack erstellt, anderenfalls wird der Stack mit den Werten initialisiert, wobei die übergebene Reihenfolge der Werte der Lesereihenfolge entspricht, d.h. das erste Element in <code>vals</code> liegt auch oben auf dem Stack (<code>stack.top</code>).
