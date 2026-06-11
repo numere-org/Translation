@@ -1207,6 +1207,7 @@ GUI_ANALYZER_CANNOTREMOVEPREDEFS="data()", "table()" und "string()" können nich
 GUI_ANALYZER_EMPTYEXPRESSION=Ein Ausdruck oder Parameter fehlt.
 GUI_ANALYZER_USEINLINEIF=Die einzeilige if-Bedingung (WENN ? DANN : SONST) kann signifikante Geschwindigkeitsvorteile bringen.
 GUI_ANALYZER_CONSTEXPR=Diese Zeile ist konstant und benötigt unnötig Laufzeit.
+GUI_ANALYZER_UNBALANCED_EXPR=Dieser Ausdruck ist unvollständig oder verwendet Operatoren an den falschen Stellen.
 GUI_ANALYZER_INLINING=Der Aufruf dieser Prozedur geht im Vergleich zum Nutzen überproportional auf die Performance.
 GUI_ANALYZER_PROCEDUREINVALIDCHARS=Der Name der Prozedur "%%1%%" enthält ungültige Zeichen (Nur alphanumerische Zeichen und Unterstriche sind erlaubt).
 GUI_ANALYZER_PROCEDURENOTFOUND=Die Prozedur "%%1%%" konnte nicht gefunden werden.
