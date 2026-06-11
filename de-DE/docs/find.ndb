@@ -56,7 +56,14 @@ betheweizsaecker(N,Z)~Berechnet die Kernbindungsenergie eines Nuklids (N,Z) in M
 Bi(x)~Airy-Funktion Bi(x)~optik potentialtopf Bi() optics airyfunction~Bi(
 billownoise(x,y,z,seed,freq,oct,pers)~Berechnet Billow-Noise an der Stelle {x,y=0,z=0}~terrain rauschen kohärent coherent~billownoise(
 binom(n,k)~Berechnet Binomialkoeffizient der natürlichen Zahlen n und k~binomialcoefficient binom()~binom(
+bitand(n,k)~Berechnet das bitweise UND der natürlichen Zahlen n und k~bitand() binary binär bitwise logic integer mask shift~bitand(
+bitcast(v,t)~Reinterpretiert das Bitmuster des Wertes in einem anderen Typ~bitcast() reinterpret_cast bitpattern typecast~bitcast(
 bitmap~Fügt ein Bild in ein Window-Layout ein~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+bitmask(n,m)~Wendet die Maske mask auf die natürliche Zahl n an~bitmask() binary binär bitwise logic integer mask shift~bitmask(
+bitnot(n)~Berechnet das bitweise NICHT der natürlichen Zahl n~bitnot() binary binär bitwise logic integer mask shift~bitnot(
+bitor(n,k)~Berechnet das bitweise ODER der natürlichen Zahlen n und k~bitor() binary binär bitwise logic integer mask shift~bitor(
+bitshift(n,l)~Verschiebt die Bits der natürlichen Zahl n um l~bitshift() binary binär bitwise logic integer mask shift~bitshift(
+bitxor(n,k)~Berechnet das bitweise EXKLUSIVE ODER der natürlichen Zahlen n und k~bitxor() binary binär bitwise logic integer mask shift~bitxor(
 break~Bricht eine Schleife an der aktuellen Stelle ab oder beendet ein CASE-Statement~abbruch abbrechen abort cancel for while switch~help break
 button~Fügt eine beschriftbare Schaltfläche in ein Window-Layout ein~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Konvertiert die Spalten der Matrix MAT von kartesischen (x,y,z) zu zylindrischen Koordinaten (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(

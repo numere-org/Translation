@@ -56,7 +56,14 @@ betheweizsaecker(N,Z)~Nuclear binding energy of the nuclid (N,Z) in MeV calculat
 Bi(x)~Airy function Bi(x)~optik potentialtopf Bi() optics airyfunction~Bi(
 billownoise(x,y,z,seed,freq,oct,pers)~Calculates the billow noise at the position {x,y=0,z=0}~terrain rauschen kohärent coherent~billownoise(
 binom(n,k)~Binomial coefficient of n and k~binomialkoeffizient binom()~binom(
+bitand(n,k)~Calculates the bitwise AND of the integers n and k~bitand() binary binär bitwise logic integer mask shift~bitand(
+bitcast(v,t)~Reinterprets the bit pattern of the value within a new type~bitcast() reinterpret_cast bitpattern typecast~bitcast(
 bitmap~Inserts an image into a window layout~image windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
+bitmask(n,m)~Applies the mask mask to the integer n~bitmask() binary binär bitwise logic integer mask shift~bitmask(
+bitnot(n)~Computes the bitwise NOT of the integer n~bitnot() binary binär bitwise logic integer mask shift~bitnot(
+bitor(n,k)~Computes the bitwise OR of the integers n and k~bitor() binary binär bitwise logic integer mask shift~bitor(
+bitshift(n,l)~Shifts the bits of the integer n by l~bitshift() binary binär bitwise logic integer mask shift~bitshift(
+bitxor(n,k)~Calculates the bitwise EXCLUSIVE OR of the integers n and k~bitxor() binary binär bitwise logic integer mask shift~bitxor(
 break~Aborts the execution of a loop or finalizes a CASE statement~abbruch abbrechen cancel for while switch~help break
 button~Inserts a labelable button into a window layout~pushbutton windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 carttocyl(MAT)~Converts the columns of the matrix MAT from cartesian (x,y,z) to cylindrical coordinates (rho,phi,z)~coords coordinate conversion umrechnung polar spherical cartesian sphärische kugelkoordinaten zylinderkoordinaten cylindrical~carttocyl(
