@@ -4,7 +4,7 @@
  * ERZEUGT:     %%2%%
  * ===========================================================
  *
- * Dieses Script enthält die Installationsroutine für das %%1%%-Plugin als Template,
+ * Dieses Script enthÃ¤lt die Installationsroutine fÃ¼r das %%1%%-Plugin als Template,
  * das mittels des Kommandos "install plgn_%%1%%" installiert werden kann.
  *#
 
@@ -22,18 +22,18 @@
 	<endinfo>
 
 	procedure $plugins~%%1%%~main(cmdstring) :: explicit
-		#**Dies ist die Hauptprozedur für dein neues Plugin. 
-		 * Ergänze hier die Kommandos und Auswertungen, die dein Plugin ausführen soll.
+		#**Dies ist die Hauptprozedur fÃ¼r dein neues Plugin. 
+		 * ErgÃ¤nze hier die Kommandos und Auswertungen, die dein Plugin ausfÃ¼hren soll.
 		 * Falls dein Plugin Prozeduren aufrufen soll, kopiere diese mit Namensraum in diese Installationsroutine. *#
-		namespace plugins~%%1%% ## Standard-Namensraum. Du könntest auch "this" verwenden.
+		namespace plugins~%%1%% ## Standard-Namensraum. Du kÃ¶nntest auch "this" verwenden.
 		|
-		##~ Wenn du einen Wert zurückgeben willst, solltest du den Typ zu "TYPE_PLUGIN_WITH_RETURN_VALUE" ändern.
+		##~ Wenn du einen Wert zurÃ¼ckgeben willst, solltest du den Typ zu "TYPE_PLUGIN_WITH_RETURN_VALUE" Ã¤ndern.
 		return void
 	endprocedure
 
-	##~ Hier können auch noch weitere Prozeduren eingebunden werden.
+	##~ Hier kÃ¶nnen auch noch weitere Prozeduren eingebunden werden.
 
-	##~ Die folgenden Zeilen bieten die Möglichkeit, einen eigenen Eintrag zur NumeRe-Hilfe hinzu zu fügen.
+	##~ Die folgenden Zeilen bieten die MÃ¶glichkeit, einen eigenen Eintrag zur NumeRe-Hilfe hinzu zu fÃ¼gen.
 	<helpindex>
 		<article id="plgn_%%1%%">
 			<title string="%%1%%" idxkey="%%1%%" />
@@ -48,7 +48,7 @@
 			<title string="%%1%%" />
 			BESCHREIBE DIE FUNKTIONEN DEINES PLUGINS
 			JEDE ZEILE IST EIN NEUER ABSCHNITT
-			<example desc="Ausführung von %%1%%">
+			<example desc="AusfÃ¼hrung von %%1%%">
 				%%1%%
 			</example>
 		</article>
@@ -56,6 +56,6 @@
 <endinstall>
 
 #**Ende des Plugin-Templates
- * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * NumeRe: Framework fÃ¼r Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://www.numere.org/
  *#

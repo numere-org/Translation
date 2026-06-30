@@ -1,18 +1,18 @@
 #***************************************************************************************************
  * NUMERE-PROZEDUR: $%%1%%()
  * =================================================================================================
- * Hinzugefügt: %%2%% *#
+ * HinzugefÃ¼gt: %%2%% *#
 
 procedure $%%1%%()
-	##~ Füge hier deine Kommandos und Ausdrücke ein.
+	##~ FÃ¼ge hier deine Kommandos und AusdrÃ¼cke ein.
 	|
 	return true;
 endprocedure
 
-##~ Ergänze hier weitere lokale Prozeduren
+##~ ErgÃ¤nze hier weitere lokale Prozeduren
 
 
 #**Ende der Datei
- * NumeRe: Framework für Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
+ * NumeRe: Framework fÃ¼r Numerische Rechnungen | Freie numerische Software unter der GNU GPL v3
  * https://www.numere.org/
  **************************************************************************************************#
