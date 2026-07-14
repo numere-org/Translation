@@ -547,6 +547,7 @@ tab~Defines the local tables in a procedure~procedure local tables~help str
 tan(x)~Tangent of x~tangens trigonometrische funktionen trigonometrie trigonometry trigonometric functions tan()~tan(
 tanh(x)~Hyperbolic Tangent of x~tangens hyperbolicus trigonometrische funktionen hyperbolische trigonometrie trigonometry trigonometric functions hyperbolic tanh()~tanh(
 taylor~Expands the passed expression in a taylor polynomial of the order n~reihenentwicklung entwickeln series expansion approximation approximieren~help taylor
+tensorprod(M1,M2,d)~Calculates the tensor product of the matrices~tensorprod() product multiplication inner outer contraction kontraktion tensors~tensorprod(
 textfield~Inserts a text field into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 textparse(sToParse,sPattern,nPos1,nPos2)~Splits sToParse up into single tokens of different variable types using the scheme sPattern~split parsing tokens tokenizer textparse() zerlegen unterteilen~textparse(
 theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~polarwinkel kugelkoordinaten sphaerische sphärische theta()~theta(
@@ -567,8 +568,8 @@ to_uppercase(STR)~Transforms the lowercase letters in STR to uppercase~string ze
 to_utf8(sAnsiEnc)~Converts the ANSI encoded string sAnsiEnc into an UTF-8 encoded string~utf8 ansi ascii to_utf8() to_ansi() conversion wide char~to_utf8(
 to_value(STR)~Evaluates the string STR and transforms it to a numerical value afterwards~string zeichenkette wert str2num() str2double() umwandeln transformation conversion convert to_value()~to_value(
 today()~Returns the current date~zeit sekunden dauer date() to_time() timeformat() today()~today()
-trace(MAT)~Calculates the trace of the quadratic matrix MAT~trace() matrix hauptdiagonalelemente~trace(
-transpose(MAT)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
+trace(MAT,d)~Calculates the contraction of the matrix MAT~trace() matrix hauptdiagonalelemente spur kontraktion~trace(
+transpose(MAT,d)~transposes the matrix MAT~transpose() matrix transponieren~transpose(
 treelist~Inserts a tree list into a window layout~textctrl windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
 trilow(MAT,n)~Returns the lower triangular matrix~trilow() lower triangular matrix~trilow(
 triup(MAT,n)~Returns the upper triangular matrix~triup() upper triangular matrix~triup(
