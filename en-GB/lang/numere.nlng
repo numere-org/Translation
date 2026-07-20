@@ -744,7 +744,7 @@ PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc       EX [-set PAR]          
 PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Leaves all nested control flow blocks at this point and code continues after the end of the outermost block
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Creates a list of the values, which are available for the passed argument NM. The possible arguments are available at "help list"
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Loads the data of the file NM into the data() object. Through parameters one can load multiple files at once or write the loaded data directly into a target table. Returns the indices of the data in the target table
-PARSERFUNCS_LISTCMD_CMD_MAIL_[MISC]=					mail         STR [-set PAR]  -> VAL     - Enables sending of emails via a required SMTP server and an existing mailbox. Note: Certificates are not validated, so this command is not suitable for exchanging sensible information
+PARSERFUNCS_LISTCMD_CMD_MAIL_[MISC]=					mail         STR [-set PAR]  -> VAL     - Enables sending of emails via a required SMTP server and an existing mailbox
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - [DEPRECATED] Evaluates the expression EX using the matrix mode. ("mtrxop" is a synonym). This command is no longer necessary to evaluate matrix expressions. Note that there are some breaking changes, if you remove this command from your code. You'll find some further information about this at "help matop"
 PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     STR [-set PAR]             - Defines an entry in a menu for a window layout. The event handling and the presence of a checkbox are configurable
 PARSERFUNCS_LISTCMD_CMD_MESH3D_[PLOTTING]=				mesh3d       EX [-set PAR]              - Creates a 3D meshgrid plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
@@ -810,7 +810,7 @@ PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                 
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Removes the custom function definition, which corresponds to the expression EX
 PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                         - Removes the plugin NM. May only be used directly in the console
 PARSERFUNCS_LISTCMD_CMD_UNPACK_[MAINCTRL]=				unpack       STR [-set PAR]  -> {STR}   - Unpacks an archive file (ZIP, TAR, GZIP), creates the contained file structure at the target location and returns a list of the created files. If no target location was specified, only a list of the contained files is returned
-PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> STR         - Allows access to online resources via the HTTP(S) and (S)FTP protocols. JavaScript is not interpreted in this case. Files can also be downloaded if a target file is specified via the "file" parameter. Note: Certificates are not validated, so this command is not suitable for exchanging sensible information
+PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> STR         - Allows access to online resources via the HTTP(S) and (S)FTP protocols. JavaScript is not interpreted in this case. Files can also be downloaded if a target file is specified via the "file" parameter
 PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                         - Defines the local numerical variables in the current procedure using the expression EX
 PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]              - Creates a 3D vector plot from the expression EX. The plot may be modified in multiple ways. See "help plotoptions" for details
 PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]              - Creates a vector plot from the expression EX or from complex-valued data in a table. The plot may be modified in multiple ways. See "help plotoptions" for details
@@ -955,6 +955,7 @@ GUI_EDITOR_CALLTIP_OPT_BOXPLOT=boxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_BSPLINE=method=bspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt/resample]
 GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_BUTTONS=buttons=BUTTONS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_CACERT=cacert=PEM-FILE [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/mail]
 GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
 GUI_EDITOR_CALLTIP_OPT_CANDLESTICK=candlestick [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1183,6 +1184,7 @@ GUI_EDITOR_CALLTIP_OPT_NOSILENT=nosilent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%
 GUI_EDITOR_CALLTIP_OPT_NOSTEPS=nosteps [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOTO=noto [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%% (CJK Ideographs)]
 GUI_EDITOR_CALLTIP_OPT_NOTOSF=notosf [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%% (CJK Ideographs)]
+GUI_EDITOR_CALLTIP_OPT_NOVERIFY=noverify [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/mail]
 GUI_EDITOR_CALLTIP_OPT_NOXLOG=noxlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOYERRORBARS=noyerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]

@@ -744,7 +744,7 @@ PARSERFUNCS_LISTCMD_CMD_LCLFUNC_[DEF]=					lclfunc      EX [-set PAR]           
 PARSERFUNCS_LISTCMD_CMD_LEAVE_[FLOWCTRL]=				leave                                   - Verlässt sämtliche ineinander verschachtelte Kontrollflussblöcke an dieser Stelle und der Code wird nach dem Ende des äußersten Blocks fortgesetzt
 PARSERFUNCS_LISTCMD_CMD_LIST_[MAINCTRL]=				list         NM                         - Erzeugt eine Auflistung der Werte, die zum gewählten Argument NM vorhanden sind. Die möglichen Argumente sind unter "help list" aufgelistet
 PARSERFUNCS_LISTCMD_CMD_LOAD_[LOADSAVE]=				load         NM [-PAR]  -> {VAL}        - Lädt die Daten aus der Datei NM in das data()-Objekt. Durch Parameter können mehrere Dateien zugleich geladen werden bzw. direkt in eine Zieltabelle geschrieben werden. Gibt die Indices der Daten in der Zieltabelle zurück
-PARSERFUNCS_LISTCMD_CMD_MAIL_[MISC]=					mail         STR [-set PAR]  -> VAL     - Erlaubt das Senden von eMails über einen anzugebenden SMTP-Server und ein vorhandenes Mail-Postfach. Hinweis: Zertifikate werden nicht validiert, daher eignet sich dieses Kommando nicht zum Austausch sensibler Informationen
+PARSERFUNCS_LISTCMD_CMD_MAIL_[MISC]=					mail         STR [-set PAR]  -> VAL     - Erlaubt das Senden von eMails über einen anzugebenden SMTP-Server und ein vorhandenes Mail-Postfach
 PARSERFUNCS_LISTCMD_CMD_MATOP_[EVAL]=					matop        EX                         - [VERALTET] Wertet den Ausdruck EX mit dem Matrixmodus aus. ("mtrxop" ist ein Synonym). Dieses Kommando ist nicht länger nötig, um Ausdrücke mit Matrizen auszuwerten. Zu Beachten wenn das Kommando aus dem Ausdruck entfernt wird: einige Änderungen sind nicht direkt portabel. Hinweise hierzu unter "help matop"
 PARSERFUNCS_LISTCMD_CMD_MENUITEM_[GUI]=					menuitem     STR [-set PAR]             - Definiert ein Eintrag in einem Menü für ein Window-Layout. Das Eventhandling und das Vorhandensein einer Checkbox sind konfigurierbar
 PARSERFUNCS_LISTCMD_CMD_MESH3D_[PLOTTING]=				mesh3d       EX [-set PAR]              - Erzeugt ein 3D-Gitterplot aus dem Ausdruck EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
@@ -810,7 +810,7 @@ PARSERFUNCS_LISTCMD_CMD_TRY_[FLOWCTRL]=					try                                 
 PARSERFUNCS_LISTCMD_CMD_UNDEFINE_[DEF]=					undefine     EX                         - Entfernt die Funktionsdefinition die dem Ausdruck EX entspricht
 PARSERFUNCS_LISTCMD_CMD_UNINSTALL_[MAINCTRL]=			uninstall    NM                         - Entfernt das Plugin NM. Kann nur von der Konsole aus verwendet werden
 PARSERFUNCS_LISTCMD_CMD_UNPACK_[MAINCTRL]=				unpack       STR [-set PAR]  -> {STR}   - Entpackt eine Archivdatei (ZIP, TAR, GZIP), erstellt die enthaltene Dateistruktur am Zielort und gibt die Liste der erzeugten Dateien zurück. Wenn kein Zielort vorgegeben wird, wird nur eine Liste der enthaltenen Dateien zurückgegeben
-PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> STR         - Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle. JavaScript wird dabei nicht interpretiert. Es können auch Dateien heruntergeladen werden, wenn über den Parameter "file" eine Zieldatei vorgegeben wird. Hinweis: Zertifikate werden nicht validiert, daher eignet sich dieses Kommando nicht zum Austausch sensibler Informationen
+PARSERFUNCS_LISTCMD_CMD_URL_[MISC_LOADSAVE_MAINCTRL]=	url          STR [-PAR]  -> STR         - Erlaubt Zugriff auf Online-Ressourcen über die HTTP(S)- und (S)FTP-Protokolle. JavaScript wird dabei nicht interpretiert. Es können auch Dateien heruntergeladen werden, wenn über den Parameter "file" eine Zieldatei vorgegeben wird
 PARSERFUNCS_LISTCMD_CMD_VAR_[PROC]=						var          EX                         - Definiert den lokalen Variablensatz in der Prozedur durch den Ausdruck EX
 PARSERFUNCS_LISTCMD_CMD_VECT3D_[PLOTTING]=				vect3d       EX [-set PAR]              - Erzeugt einen 3D-Vektorfeldplot aus dem Ausdruckl EX. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
 PARSERFUNCS_LISTCMD_CMD_VECT_[PLOTTING]=				vect         EX [-set PAR]              - Erzeugt einen (2D-)Vektorfeldplot aus dem Ausdruck EX oder aus komplexwertigen Daten einer Tabelle. Der Plot kann auf viele Arten modifiziert werden. Siehe hierzu "help plotoptions"
@@ -955,6 +955,7 @@ GUI_EDITOR_CALLTIP_OPT_BOXPLOT=boxplot [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_BSPLINE=method=bspline [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% fwt/resample]
 GUI_EDITOR_CALLTIP_OPT_BUFFERSIZE=buffersize=VAL [%%GUI_EDITOR_CALLTIP_COMMON_SETTING%%]
 GUI_EDITOR_CALLTIP_OPT_BUTTONS=buttons=BUTTONS [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% dialog]
+GUI_EDITOR_CALLTIP_OPT_CACERT=cacert=PEM-FILE [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/mail]
 GUI_EDITOR_CALLTIP_OPT_CANCEL=type=cancel [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% progress]
 GUI_EDITOR_CALLTIP_OPT_CANDLESTICK=candlestick [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_CARTESIAN=coords=cartesian [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
@@ -1183,6 +1184,7 @@ GUI_EDITOR_CALLTIP_OPT_NOSILENT=nosilent [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%
 GUI_EDITOR_CALLTIP_OPT_NOSTEPS=nosteps [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOTO=noto [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%% (CJK Ideographs)]
 GUI_EDITOR_CALLTIP_OPT_NOTOSF=notosf [%%GUI_EDITOR_CALLTIP_COMMON_FONTTYPE%% (CJK Ideographs)]
+GUI_EDITOR_CALLTIP_OPT_NOVERIFY=noverify [%%GUI_EDITOR_CALLTIP_COMMON_OPTIONFOR%% url/mail]
 GUI_EDITOR_CALLTIP_OPT_NOXLOG=noxlog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOYERRORBARS=noyerrorbars [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
 GUI_EDITOR_CALLTIP_OPT_NOYLOG=noylog [%%GUI_EDITOR_CALLTIP_COMMON_PLOTTING%%]
