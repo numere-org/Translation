@@ -14,9 +14,8 @@ include "appmain.nlyt" :: declarations
 ##! \param _event{}  The event key-value list filled with information about the current event
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 	tab loadedData()
-	str sValue
-	cst values{}, dim{}, types{}, errorInfo{}
-	var fAspect
+	str sValue, sColumns, sErrorInfo, sColumnTypes
+	var fAspect, nDimensions
 	
 	##~ Insert your commands and expressions here
 	|
@@ -42,21 +41,20 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 				
 				## Loading has succeded, update the GUI correspondingly
 				## Get the table headlines first
-				values{} = loadedData(#,:);
+				sColumns = loadedData(#,:);
 				
 				window _nWinId -set value=loadedData() -item=nGRID;
-				window _nWinId -set state=enabled item=nCLEARTABLE;
-				window _nWinId -set state=enabled item=nPLOT;
 				
 				## Update the x axis selector
-				window _nWinId -set label=values{} item=nXCOL;
-				window _nWinId -set value=values{1} item=nXCOL;
-				window _nWinId -set state=enabled item=nXCOL;
+				window _nWinId -set label=sColumns item=nXCOL;
+				window _nWinId -set value=sColumns[1] item=nXCOL;
 				
 				## Update the y axis selector
-				window _nWinId -set label=values{} item=nYCOL;
-				window _nWinId -set value=values{2} item=nYCOL;
-				window _nWinId -set state=enabled item=nYCOL;
+				window _nWinId -set label=sColumns item=nYCOL;
+				window _nWinId -set value=sColumns[2] item=nYCOL;
+				
+				## Enable the controls
+				window _nWinId -set state=enabled item={nCLEARTABLE, nPLOT, nXCOL, nYCOL};
 			endif
 			
 			break
@@ -64,57 +62,52 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 			## Clear the table by setting an empty table and 
 			## disabling the corresponding controls
 			window _nWinId -set value=loadedData() -item=nGRID;
-			window _nWinId -set state=disabled item=nCLEARTABLE;
-			window _nWinId -set state=disabled item=nPLOT;
 			
-			window _nWinId -set label=sNOFILE item=nXCOL;
-			window _nWinId -set value=1 item=nXCOL;
-			window _nWinId -set state=disabled item=nXCOL;
+			window _nWinId -set label=sNOFILE item={nXCOL, nYCOL};
+			window _nWinId -set value=sNOFILE item={nXCOL, nYCOL};
 			
-			window _nWinId -set label=sNOFILE item=nYCOL;
-			window _nWinId -set value=1 item=nYCOL;
-			window _nWinId -set state=disabled item=nYCOL; 
+			## Disable the controls
+			window _nWinId -set state=disabled item={nCLEARTABLE, nPLOT, nXCOL, nYCOL};
 			break
 		case nPLOT:
 			## Plot the data from the two selected axes. Get the data
 			## and the selected axes first
 			window _nWinId -get value item=nGRID target=loadedData();
-			values{1} = window _nWinId -get value item=nXCOL;
-			values{2} = window _nWinId -get value item=nYCOL;
+			sColumns = window _nWinId -get value item={nXCOL, nYCOL};
 			plot -set reset
 			
 			## Get the window dimensions for estimating the aspect ratio
-			dim{} = window _nWinId -get value;
-			fAspect = 2*dim{1}/dim{2}; ## Grapher gets about half of the height of the screen
+			nDimensions = window _nWinId -get value;
+			fAspect = 2*nDimensions[1]/nDimensions[2]; ## Grapher gets about half of the height of the screen
 			
 			## Find the columns in the table and their types
-			dim{} = loadedData().fndcols(values{});
-			types{} = loadedData().typeof(dim{});
+			nDimensions = loadedData().fndcols(sColumns);
+			sColumnTypes = loadedData().typeof(nDimensions);
 			
 			## Switch to time axes if necessary
-			if (types{1} == "datetime")
-				sValue = $thisfile~selectTimeFormat(max(loadedData(:, dim{1})) - min(loadedData(:, dim{1})));
+			if (sColumnTypes[1] == "datetime")
+				sValue = $thisfile~selectTimeFormat(max(loadedData(:, nDimensions[1])) - min(loadedData(:, nDimensions[1])));
 				plot -set timeaxes=("x", sValue)
 			endif
 			
-			if (types{2} == "datetime")
-				sValue = $thisfile~selectTimeFormat(max(loadedData(:, dim{2})) - min(loadedData(:, dim{2})));
+			if (sColumnTypes[2] == "datetime")
+				sValue = $thisfile~selectTimeFormat(max(loadedData(:, nDimensions[2])) - min(loadedData(:, nDimensions[2])));
 				plot -set timeaxes=("y", sValue)
 			endif
 			
 			## Try to plot the data in the columns
 			try
-				plot loadedData(:, dim{}) -set box streamto={_nWinId, nGRAPHER} aspect=fAspect xlabel=values{1} ylabel=values{2}
+				plot loadedData(:, nDimensions) -set box streamto={_nWinId, nGRAPHER} aspect=fAspect xlabel=sColumns[1] ylabel=sColumns[2] interpolate
 			catch:
-				values{} = getlasterror();
-				dialog values{2} -set type=messagebox title="Error during plotting" icon=erroricon;
+				sErrorInfo = getlasterror();
+				dialog sErrorInfo[2] -set type=messagebox title="Error during plotting" icon=erroricon;
 			endtry
 			
 			break
 		endswitch
 	catch:
-		errorInfo{} = getlasterror();
-		dialog errorInfo{2} -set type=messagebox title="An error occured" icon=erroricon;
+		sErrorInfo = getlasterror();
+		dialog sErrorInfo[2] -set type=messagebox title="An error occured" icon=erroricon;
 	endtry
 	
 	## Event handler typically return nothing

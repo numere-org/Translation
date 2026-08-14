@@ -13,9 +13,9 @@ include "appmain.nlyt" :: declarations
 ##! \param _nItemId  The ID of the firing item
 ##! \param _event{}  The event key-value list filled with information about the current event
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
-	var fValue, nValue
-	str sValue
-	cst values{}, idx{}, errorInfo{}
+	var nValue, nIndex
+	str sCoords, sErrorInfo
+	cst coordsInList{}
 	##~ Insert your commands and expressions here
 	|
 	try
@@ -27,34 +27,33 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 			##~ These are event handlers for the exemplary elements. Feel free to delete or replace them
 		case nADD:
 			## Add a coordinate
-			sValue = window _nWinId -get value item=nXVALS;
-			sValue = sValue + "\t" + window _nWinId -get value item=nYVALS;
+			sCoords = window _nWinId -get value item={nXVALS, nYVALS};
 			
 			## Ensure that we have at least some reasonable values
-			if (sValue != "\t")
-				values{} = window _nWinId -get value item=nTREELIST;
+			if (sCoords.num == 2)
+				coordsInList{} = window _nWinId -get value item=nTREELIST;
 				
 				## Append the coordinates
-				if (!num(values{}))
-					values{} = sValue;
+				if (!coordsInList{}.num)
+					coordsInList{} = strjoin(sCoords, "\t");
 				else
-					values{nlen+1} = sValue;
+					coordsInList{nlen+1} = strjoin(sCoords, "\t");
 				endif
 				
 				## Update the controls and the grapher
-				window _nWinId -set value=values{} item=nTREELIST;
-				$thisfile~plotArray(_nWinId, values{});
+				window _nWinId -set value=coordsInList{} item=nTREELIST;
+				$thisfile~plotArray(_nWinId, coordsInList{});
 			endif
 			
 			break
 		case nDELETE:
 			## Delete the currently selected point
-			fValue = window _nWinId -get selection item=nTREELIST;
+			nIndex = window _nWinId -get selection item=nTREELIST;
 			
 			## Ensure that we have a selection
-			if (fValue)
-				values{} = window _nWinId -get value item=nTREELIST;
-				nValue = num(values{});
+			if (nIndex)
+				coordsInList{} = window _nWinId -get value item=nTREELIST;
+				nValue = num(coordsInList{});
 				
 				## Remove the point from the list
 				if (!nValue)
@@ -63,13 +62,12 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 					window _nWinId -set value="" item=nTREELIST;
 					return void;
 				else
-					idx{} = logtoidx({1:nValue} != fValue);
-					values{} = values{idx{}};
+					coordsInList{}.rem(nIndex);
 				endif
 				
 				## Update controls and the grapher
-				window _nWinId -set value=values{} item=nTREELIST;
-				$thisfile~plotArray(_nWinId, values{});
+				window _nWinId -set value=coordsInList{} item=nTREELIST;
+				$thisfile~plotArray(_nWinId, coordsInList{});
 			endif
 			
 			break
@@ -79,8 +77,8 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 			break
 		endswitch
 	catch:
-		errorInfo{} = getlasterror();
-		dialog errorInfo{2} -set type=messagebox title="An error occured" icon=erroricon;
+		sErrorInfo = getlasterror();
+		dialog sErrorInfo[2] -set type=messagebox title="An error occured" icon=erroricon;
 	endtry
 	
 	## Event handler typically return nothing
@@ -92,14 +90,14 @@ endprocedure
 ##! Plot the list of points in the grapher
 ##!
 ##! \param _nWinId  The window ID
-##! \param _array{}  The points to be plotted
-procedure $plotArray(_nWinId, _array{}) :: explicit mask
+##! \param _coords{}  The points to be plotted
+procedure $plotArray(_nWinId, _coords{}) :: explicit mask
 	tab tArray()
 	
 	## Split the points at the tab char and assign them to different columns
-	_array{} = split(_array{}, "\t");
-	tArray(:, 1) = _array{{1:2:nlen}};
-	tArray(:, 2) = _array{{2:2:nlen}};
+	_coords{} = zip(split(_coords{}, "\t"));
+	tArray(:, 1) = _coords{1};
+	tArray(:, 2) = _coords{2};
 	
 	## Ensure that we can convert the columns to numerical values
 	if (tArray().convert({1,2}, "value") != "value")

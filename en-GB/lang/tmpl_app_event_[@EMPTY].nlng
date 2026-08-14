@@ -13,7 +13,7 @@ include "appmain.nlyt" :: declarations
 ##! \param _nItemId  The ID of the firing item
 ##! \param _event{}  The event key-value list filled with information about the current event
 procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
-	cst errorInfo{}
+	str sErorInfo
 	##~ Insert your commands and expressions here
 	|
 	try
@@ -24,8 +24,8 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 			break
 		endswitch
 	catch:
-		errorInfo{} = getlasterror();
-		dialog errorInfo{2} -set type=messagebox title="An error occured" icon=erroricon;
+		sErrorInfo = getlasterror();
+		dialog sErrorInfo[2] -set type=messagebox title="An error occured" icon=erroricon;
 	endtry
 	
 	## Event handler typically return nothing
