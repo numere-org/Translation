@@ -27,6 +27,7 @@
 		<keyword>queue</keyword>
 		<keyword>stack</keyword>
 		<keyword>file</keyword>
+		<keyword>timer</keyword>
 		<keyword>class</keyword>
 	</keywords>
 	<contents>
@@ -50,7 +51,9 @@
 			oStack = stack()
 			oStack = stack({vals})\n
 			oQueue = queue()
-			oQueue = queue({vals})
+			oQueue = queue({vals})\n
+			oTimer = timer()
+			oTimer = timer(sName)
 		</syntax>
 		Zusätzlich zu den <a href="nhlp://table?frame=new">Tabellen</a> stellt NumeRe einige vordefinierte Objekte bereit, mit denen durch Komposition komplexere Datenstrukturen erzeugt werden können. Die jeweiligen Methoden der Datenstrukturen sind im Symbolbaum gelistet.
 		<h>Dicts</h>
@@ -107,6 +110,8 @@
 		<h>Queue-Objekte</h>
 		Eine Queue ist ein First-In-First-Out (<em>FIFO</em>) Speicher. Das bedeutet, dass das Element, das als erstes in der Queue erzeugt wurde (<code>queue.push(val)</code>), auch als erstes aus ihr entnommen werden muss (<code>queue.pop</code>). Queues implementieren Warteschlangen von Objekten, wobei die Implementierung der <code>object.queue</code> auf einem <code>std::deque</code> (double-ended-queue) aufbaut und damit auch Elemente an den Anfang der Queue gestellt (<code>queue.pushfront(val)</code>) und welche vom Ende entfernt werden können (<code>queue.popback</code>).
 		Mit der Funktion <code>queue({vals}={})</code> kann man eine Instanz vom Typ <code>object.queue</code> mit den Werten aus <code>vals</code> erzeugen. Falls <code>vals</code> leer ist, wird eine leere Queue erstellt, anderenfalls wird die Queue mit den Werten befüllt, wobei die Reihenfolge beibehalten wird, d.h. das erste Element in <code>vals</code> ist auch das erste Element in der Queue (<code>queue.front</code>).
+		<h>Timer-Objekte</h>
+		Ein Timer wird mit einem Namen durch die Funktion <code>timer("NAME")</code> erzeugt und kann verwendet werden, um im Sinne einer Stoppuhr Zeitdauern sehr genau zu messen. Ein Timer wird automatisch zur Erzeugung gestartet. Er kann gestoppt (<code>timer.stop</code>) und wieder neu gestartet (<code>timer.start</code>) werden. Während der Timer läuft (<code>timer.running</code>), kann die bisher gemessene Dauer auch ausgelesen werden, ohne den Timer dazu zu stoppen (<code>timer.elapsed</code>), die Umwandlung in einer Zeichenkette via <code>#timer</code> wird die Dauer zugleich mit seinem Namen formatieren: <code>"[NAME] 0:00:42.123456"</code>
 		<em>Siehe auch:</em> <a href="nhlp://variable?frame=self">help variable</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://procedure?frame=self">help procedure</a> und <a href="nhlp://proccmd?frame=self">help proccmd</a>
 	</contents>
 </article>

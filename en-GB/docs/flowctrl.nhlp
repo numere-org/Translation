@@ -143,7 +143,6 @@
 		</codeblock>
 		A similar functionality is provided by the <a href="nhlp://switch?frame=self">selection branch</a>.
 		A branch does not have to have an ELSE branch or an ELSEIF branch. In this case, if the condition for the IF branch is not met, simply no expression is evaluated in the branch.
-		With <code>if (TABLE())</code> it can be checked whether data is present in the <code>TABLE</code> table. This can be used, for example, in scripts that may need an empty table. <em>Caution:</em> if <code>TABLE()</code> does not exist, this is evaluated as a global error and the evaluation is aborted.
 		IF conditions within loops can influence their calling loop through the <code>break</code> and <code>continue</code> commands (See <a href="nhlp://for?frame=new">help for</a> and <a href="nhlp://while?frame=new">help while</a> for info on these commands). These commands have the same effect within an IF condition as <code>endif</code> (i.e. they abort the evaluation of the current condition at this point) and are passed on to the surrounding control flow statement until this is either a loop or the last statement has been exited, so that the entire block is aborted.
 		<example desc="A simple branch simulating the max() function:" type="verbatim">
 			|&lt;- if (a &gt; b)

@@ -40,7 +40,7 @@
 		<list>
 			<item node="Zyklomatische Komplexität">Diese Metrik misst die Zahl der unabhängigen Pfade, die der Kontrollfluss in einem Modul nehmen kann, ergo die Zahl der <code>if</code>, <code>elseif</code>, <code>case</code>, <code>for</code> und <code>while</code> Anweisungen zzgl. der Zahl der Funktionen <code>and()</code>, <code>or()</code> und <code>xor()</code> sowie der Zahl der Operatoren <code>&&</code>, <code>||</code> und <code>|||</code> + 1. Es wird ein Hinweis für eine Komplexität höher 15 und eine Warnung für eine Komplexität höher als 20 angezeigt</item>
 			<item node="Codezeilen">Dies ist die Zahl der Zeilen, die nicht leer sind und die nicht nur aus Kommentaren bestehen, also die eigentlichen Zeilen mit Anweisungen und Ausdrücken</item>
-			<item node="Kommentardichte">Die Kommentardichte ergibt sich aus der Zahl der Zeilen, die Kommentare enthalten (mehrere Kommentare in einer Zeile werden berücksichtigt), durch die Zahl der Codezeilen (s.o.). Gut kommentierter Code hat eine Kommentardichte von 60 - 150 %</item>
+			<item node="Kommentardichte">Die Kommentardichte ergibt sich aus der Zahl der Zeilen, die Kommentare enthalten (mehrere Kommentare in einer Zeile werden berücksichtigt), durch die Zahl der Codezeilen (s.o.). Gut kommentierter Code hat eine Kommentardichte von 40 - 150 %</item>
 		</list>
 		Die Ergebnisse der Metriken werden mit vorgegebenen Grenzen verglichen und ggf. wird eine Warnung oder ein Hinweis angezeigt:
 		<table>
@@ -54,7 +54,7 @@
 				<td>Codezeilen</td><td>---</td><td>100</td><td>Das Modul durch Einführen von Prozeduren unterteilen, da es durch die vielen Zeilen schwer zu überblicken ist.</td>
 			</tr>
 			<tr>
-				<td>Kommentardichte</td><td>50 %</td><td>150 %</td><td>Das Modul weiter kommentieren bzw. auf auskommentierten Code prüfen, der eine häufige Ursache für eine hohe Kommentardichte ist.</td>
+				<td>Kommentardichte</td><td>40 %</td><td>150 %</td><td>Das Modul weiter kommentieren bzw. auf auskommentierten Code prüfen, der eine häufige Ursache für eine hohe Kommentardichte ist.</td>
 			</tr>
 		</table>
 		Der Code-Analyzer kann über die Programmeinstellungen auch konfiguriert werden.

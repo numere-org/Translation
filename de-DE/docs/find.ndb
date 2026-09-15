@@ -553,6 +553,7 @@ theta(x,y,z)~Berechnet den Polarwinkel theta~polarwinkel kugelkoordinaten sphaer
 throw~Bricht die Auswertung einer Prozedur ab und gibt eine Fehlermeldung aus~procedure throw try catch error exception~help throw
 time()~Gibt die aktuelle Zeit zurück~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formatiert die Zeit VAL gemäß dem Schema STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+timer(ARG)~Erzeugt eine Objekt-Instanz vom Typ timer~timer() object duration stopwatch timespan zeitspanne dauer stopuhr~timer(
 to_ansi(sUtf8Enc)~Konvertiert die UTF-8 encodierte Zeichenkette sUtf8Enc in eine ANSI encodierte Zeichenkette~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interpretiert x,y,z,... als ASCII-Zeichenwerte und gibt sie als gemeinsame Zeichenkette zurück~zeichenkette umwandeln transformation conversion convert charactercodes zeichencodes string character ascii to_char()~to_char(
 to_cmd(STR)~Wandelt die enthaltene Zeichenkette STR in ein Kommandoausdruck um~zeichenkette command kommando to_cmd()~to_cmd(

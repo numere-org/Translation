@@ -21,51 +21,56 @@
 # This database contains the "Tips-of-the-day".
 #
 # Basics
-Plots and graphs may be modified in mulitple ways. The command "help plotoptions" shows a multitude of optional parameters, which may be passed on to "plot" and similar commands.
-Complex or often recurring inputs may be outsourced to scripts or to procedures as a more abstract variant. The commands "help script" and "help procedure" provide additional information to this topic. You can also find several examples in the script folder.
-The settings are located within the "Options" entry under the "Tools" menu.
-NumeRe can be configured via "set" command. Typing "help set" into the command line shows a list of all possible settings, while the command "list -settings" shows the current configuration.
-You may use your data rows just like the columns of a table calculation. But keep in mind that you cannot overwrite the contents of "data()".
-The command "new TABLE()" generates a new table with the name TABLE. You can remove it completely via "remove TABLE()" and delte its content with "delete TABLE()". With "clear -memory" you can remove all tables and reset the memory.
-Functions can be fitted to data rows using the commands "fit" and "fitw". The documentation within "help fit" provides some hints. The results of the final fit will be saved to "<savepath>/numerefit.log" and the resulting fit-function will be defined as "Fit(x)" or "Fitw(x)", respectively.
-Numerical and string variables will be recognized automatically depending on their assigned value. If the case the value is ambiguous, the variables will be identified as numericals.
-For viewing special image formats, NumeRe can be linked to an image viewer. You'll find additional information in "help viewer".
-Data loaded to NumeRe's memory is always write-protected to leave the raw data untouched.
-Column headings of data sets can be modified by addressing them with "DATA(#,J1:J2) = HEADJ1, ..., HEADJ2" and read-out in a similar way. See also "help string".
+We recommend that you use **type-prefixed notation** (*Hungarian notation*) when naming your variables: `fValue`, `sString`, `tTimeVal`, `oDict`, ...\n\n*Why?* The editor can convert this information into helpful tooltips that explain the variable's type.
+You can easily **plot** data and functions using the `plot` command:\n- `plot sin(x)` plots `sin(x)` from -10 to 10\n - `plot table()` plots the data in the table `table()` (or the first two columns)\nYou can also combine multiple functions and data sets into a single plot by passing them separated by commas:\n\n    `plot func(x), table(), ...`
+You can visualise **data grids and 2D functions** of the form *z = f(x,y)* using the following commands, whereby the *z* values are colour-coded:\n- `dens`: Displays the function as a projection onto the *x-y* plane\n- `surf`: Plots the function as a three-dimensional surface\n- `mesh`: similar to `surf`, but a mesh is generated\n- `cont`: Contour lines are displayed, similar to the height lines on a topographic map.
+You can modify the **appearance of plots and graphs** in a number of ways. `help plotoptions` displays a large number of the options that can be passed to `plot` and related commands.\n\n    `plot ... -set box grid title="Title" ...`
+To adapt the **control flow** of your code, several structures are available:\n- `if ... elseif ... else ... endif`\n- `for ... endfor`\n- `while ... endwhile`\n- `switch ... case ... default ... endswitch`\n- `try ... catch ... endtry`
+You can offload complex or frequently recurring tasks into **scripts** or, in a more abstract form, into **procedures**.\n\nThe script folder also contains many more examples that focus specifically on individual topics.
+Data from files is read into the **table** data type. In a table, each column can have its own data type. Tables also support interactions similar to a spreadsheet.
+**Creating and removing** tables:\n- Use `new TABLE()` to create a new table named *TABLE*.\n- `remove TABLE()` removes it.\n- `delete TABLE()` deletes only its contents.
+With `fit` and `fitw`, you can fit functions to data series. The results of a fit are logged in `<savepath>/numerefit.log` and the fitted function is defined as `Fit(x)` or `Fitw(x)` respectively:\n\n    `fit TABLE() -with=func(x) params=[...]`
+The **data types** of all variables are automatically determined based on their assigned values. There are five categories:\n- *numeric values*\n- *strings*\n- *objects*\n- *clusters*\n- *tables*\n\nOnce assigned to a category, it **cannot** be changed.
+If you use a hash (`#`) as a row index, you can read and edit **column headers from tables**:\n\n    `{HEAD_1, ..., HEAD_N} = TABLE(#,j1:j2)`\n    `TABLE(#,j1:j2) = {HEAD_1, ..., HEAD_N}`
+Instead of using indices, you can also address columns in tables by their **column names**:\n\n    `values = TABLE(:, "ColumnName")`\n    `TABLE(:, "ColumnName") = values`\n\nIf the target column does not exist, it is automatically created when writing.
+If you multiply two matrices using the standard `A * B` operation, only the individual components are multiplied elementwise together.\n\nA **Matrix multiplication**, on the other hand, provides the `A ** B` operation.
+In addition to the basic and familiar arithmetic operators\n\n    `+ - * / ^ **`\n\nyou can also use their recursive forms (`x += a`) as a more compact way of writing expressions of the form `x = x+a`:\n\n    `+= -= *= /= ^= **=`
+You can use curly brackets to create various constructs:\n- `{}` creates the empty value `void`\n- `{a1, a2, ...}` creates a linear array or (depending on the values) clusters; the individual components can also be entire ranges: `{a, B:C, d, ...}`\n - `{a1, {b1, b2, ...}, ...}` creates a cluster containing further nested clusters
+You can document your code with comments:\n- `## ...` is a line comment, i.e. everything after `##` is ignored during evaluation.\n- `#* ...*# ` is a block comment, i.e. everything between `#*` and `*#` is ignored during evaluation.
+Strings are encoded in UTF-8 and can therefore represent any **Unicode** code point.\n\nThis does not automatically mean that every code point can be displayed. This depends on the font used.
+You can define longer expressions that you use frequently as global functions with `define` or as local functions with `lclfunc`: \n\n    `define func(x) := sin(x)`\n    `lclfunc func(x,y) := cos(x)+sin(y)`
 # Documentation
-There is an documentation entry for all commands in the NumeRe documentation. Simply enter "help COMMAND" to read it or nativate through the context menu entry in the symbols tree.
-A list of all functions is displayed by entering "list -func", all commands by "list -cmd", all constants by "list -const", all variables by "list -var" and a list of all unit conversions by entering "list -units". Commands and functions are also listed in the symbols tree.
-The NumeRe keyword search tool is a quite powerful if you're searching for a function or a command. The command "find TERMS" displays a list sorted by relevance of all entries associated to TERMS.
-The commands "help idx" or "help index" show a list of all entries within the NumeRe documentation.
-Additional information about commands and functions can be found in the NumeRe online reference: <https://sites.google.com/site/numereframework/onlinereferenz/>
-Trivia: "NumeRe" stands for "Numerische Rechnungen" (meaning "numerical calculations"). "Numere" is also the vocative singular of the latin word "numerus", which refers to number or quantity.
-Tables have an automatic backup function, which will load the last backup automatically at startup.
-All entries to the NumeRe console and all errors will be protocolled in the file "<>/numere.log". A simplified version of the entry history is located at the bottom right of the screen.
-Have you seen the NumeRe documentation in PDF format? You'll find it within the subdirectory "docs" in the root path or via the link in the start menu.
+There is an article in the NumeRe documentation for every command. Simply type `help COMMAND` or select the relevant context menu item in the symbol tree.
+The **keyword search** is a powerful tool when you're looking for a particular feature. `find TERMS` displays a list of entries associated with *TERMS*, sorted by relevance.
+Tables have an **autosave** function: once all evaluations have been completed, the current tables are automatically saved.\n\nThe automatic backup is automatically reloaded on startup.
+All entries made in the NumeRe terminal and all errors are logged in the file `<>/numere.log`. A simplified version of the entry history can be found at the bottom right.
+Have you seen the **NumeRe documentation** as a PDF yet?\n\nYou can find it in the NumeRe directory in the "docs" folder or via a link in the Start menu.
 # Advanced
-You can add your custom commands to NumeRe or overwrite (nearly all) predefined commands with your custom behaviour. The command "help plugins" contains information to write the necessary plugin.
-The command "eval" can fill in funciton values to a column or line automatically. See "help eval" for further information.
-Data rows can be Fourier-transformed by typing "fft". The command "help fft" contains all necessary information to use this command.
-Using the command "datagrid" allows you to create data grids (2D data sets) out of data sets or calculate them from function values. See "help datagrid" for further information.
-You can install plugins and procedures with the command "install" directly from scripts. Typing "help install" provides further information. Some corresponding scripts should be located in the subdirectory "scripts".
-You can prompt for an input during the execution of a script or a procedure by using the expression "??". See "help ??" for further details.
-By entering "edit TABLE()" a table may be edited in the table editor. Here data copied from other sources may be inserted.
-Results of functions and commands, which simultaneously return multiple values or strings, can either be assigned to data objects or to "temporary columns" ("{x,y,z,...}" or "{str1,str2,str3,...}", respectively).
-The command "matop" allows for advanced matrix operations (see "help matop" for further information). Determinants, Invertion and special matrices are also possible.
-Intersection with the x-axis and extremal positions can be determined via the commands "zeroes" and "extrema" respectively. See "help zeroes" and "help extrema" for additional information.
-Data sets can be used as an index set for other data sets, if they are passed for the corresponding dimension (line or column).
-The command "taylor" calculates a numerical Taylor expansion of a function and stores it in the function "Taylor(x)". See "help taylor" for further information.
-First order ordinary differential equations can be solved with "odesolve". See "help odesolve" for further information.
-Errors or trouble writing procedures? The NumeRe debugger in the "Tools" menu provides additional information to help you out searching for your error.
-The "compose" mode gives the possibility to gather mulitple subplots in one file and to arrange them to a virtual grid. See "help subplot" or "help compose" for additional information.
+Using **plugins**, you can add your own commands to NumeRe or override (almost all) existing ones with your own behaviour.
+The `eval` command can automatically generate an array of function values for you:\n\n    `fSineVals = eval sin(x) -set [0:4*_pi]`
+You can perform **transformations** on your data:\n- Using `fft`, you can apply a Fourier transform.\n- `stfa` calculates a short-time Fourier analysis of the data.\n- `fwt` allows you to perform a wavelet transform.
+With `datagrid`, you can create data grids (2D data sets) from other data sets or using function values:\n\n    `datagrid sin(x)+cos(y) -set ...`
+With `install`, you can install plugins and procedures from **packages** (specially structured scripts).\n\nIt's even easier with the **Package Manager**, which allows you to conveniently download and install packages and their dependencies from the repository.
+Using the expression `??`, you can prompt for user input in a script or procedure during execution:\n\n    `value = ?? + 42.0`
+With `edit TABLE()`, you can edit a table in the table editor. Here, you can also easily paste tabular data copied from other sources.
+Results from functions and commands that return **multiple values** at once can be assigned either to data objects, to ordinary variables, or to *"temporary arrays"* (`{a1,a2,a3,...}`)\n\n    `{fVal, sUnit} = convertunit(42, ‘keV’)`\n\nThe variables in the *"temporary arrays"* are each assigned only the corresponding component of the result.
+`zeroes` and `extrema` can also determine zeros or extrema of data sets.
+You can also use arrays and data sets as **index sets**. This allows you to implement significantly more complex data access than is possible with linear indices:\n\n    `fibIndexedVals = TABLE({1,1,2,3,5,8}, :)`
+You can solve **first-order differential equations** numerically using `odesolve`.\n\n    `odesolve f(x,y1,...) ...`
+Are you struggling with a complicated error, or are you having other difficulties when programming procedures?\n\nThe **NumeRe debugger** in the "Tools" menu can display more information whilst the programme is running.
+You can avoid many problems by running your code through the **static code analyser**. It will highlight potential errors, unexpected behaviour and possible improvements directly in the code.
+The `compose` mode also allows you to group several subplots into a single file and arrange them on a grid within it:\n\n    `compose ...`\n        `plot ...`\n        `subplot ...`\n        `...`\n    `endcompose`
+There are various **index notations** for extracting (or manipulating) elements from arrays, clusters and matrices:\n- `ARR[i]` is the linear index operator. It can be applied to arrays and matrices and extracts the elements as a linear array\n- `MAT(i,j,...)` is the matrix index operator. It extracts submatrices whilst retaining the dimensional information\n- `CST{i,j,...}` is the cluster index operator. It is only available for clusters and extracts parts of clusters whilst retaining the dimensional information
+Using the `declare` command, you can define constants for the current file, thereby making your code more readable and maintainable.\n\n    `declare CONST1 := VAL1, CONST2 := VAL2, ...`\n\nEnumerations are also possible:\n\n    `declare enum -> {VAL1, VAL2, ...}`
+You can access resources via **HTTP(S)** and **FTP(S)** by using `url`. This command also supports interactions with a REST API.
+You can access data in a **database** using the `database` command. Supported databases include *SQLite*, *MySQL*/*MariaDB*, *PostgreSQL* and *ODBC* connectors.
+Are you looking for something like a `struct`? Then **DictStruct** might be the right object for you. You can create it using the function `dictstruct({fields},{vals})`. You can then read and edit the fields created in this way just as you would with a `struct`.\n\nDictStructs can also import and export XML and JSON.
+You can create simple **dialogues**, such as a MessageBox or a text prompt, using `dialog`. This command will pause execution until the user closes the dialogue:\n\n    `sResp = dialog "The text" -set title=...`
+You can create complex and event-driven **graphical interfaces** in NumeRe. To do this, you need a window layout (`layout ... endlayout`), which defines the appearance of the interface. You can then use `window` to interact dynamically with this layout.
 # Tweaks
-Plot intervals with inverted borders (e.g. "[10:-10]") will be plotted inverted.
-The parameter "-set" can be replaced nearly everytime with "--"; if both syntax elements appear in one command expression, the variant "-set" has priority. 
-The default colouring of syntax elememts may be tweaked in "Options" to suit your personal needs.
-The interval of the color scale can additionally be modified with the fourth plotting interval: [x1:x2,y1:y2,z1:z2,c1:c2]
-With one of the commands "edit", "view" or "open" you can open the desired folder in Windows Explorer.
-Lengthy evaluations can be canceled using the "ESC" key. This is valid for scripts, procedures and plugins too.
-# Call to Action
-Have you found an error? Or do you think that an important feature is missing? Then please adress this directly to the developer: <numere.developer@gmail.com>
-If you find NumeRe helpful, it would be appreciated if you support the development by publishing a review at SourceForge.
-Found a language or description error? Or you want to translate NumeRe to your own language? This is very welcome. Consider talking the the developer directly: <numere.developer@gmail.com>
+If you specify plot intervals with inverted interval limits (e.g. `[10:-10]`), these will also be plotted in reverse order.
+The `-set` parameter can almost always be abbreviated to `--`; if both appear in a command, `-set` takes precedence.
+You can also customise the default **syntax highlighting** to your own preferences under "Options".
+Instead of using `colorrange=cmin:cmax`, you can specify the colour scale interval using the fourth plot interval:\n\n    `[x1:x2,y1:y2,z1:z2,c1:c2]`
+You can also use `edit`, `view` or `open` to open Windows Explorer for the relevant folder.
+You can cancel time-consuming calculations by pressing the [ESC] key.\n\nThis also applies to scripts, procedures and plugins.

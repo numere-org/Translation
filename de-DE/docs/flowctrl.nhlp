@@ -142,7 +142,6 @@
 		</codeblock>
 		Eine ähnliche Funktionalität stellt die <a href="nhlp://switch?frame=self">Auswahl-Verzweigung</a> dar.
 		Eine Verzweigung muss weder einen ELSE-Zweig noch einen ELSEIF-Zweig besitzen. Sollte die Bedingung für den IF-Zweig nicht erfüllt werden, wird in diesem Fall einfach kein Ausdruck in der Verzweigung ausgewertet.
-		Mit <code>if (TABLE())</code> kann geprüft werden, ob Daten in der Tabelle <code>TABLE</code> vorhanden sind. Dies kann z.B. in Scripten verwendet werden, die möglicherweise eine leere Tabelle benötigen. <em>Vorsicht:</em> wenn <code>TABLE()</code> nicht existiert, wird dies als globaler Fehler evaluiert und die Auswertung abgebrochen.
 		IF-Bedingungen innerhalb von Schleifen können durch die Kommandos <code>break</code> und <code>continue</code> Einfluss auf ihre aufrufende Schleife nehmen (Siehe <a href="nhlp://for?frame=new">help for</a> und <a href="nhlp://while?frame=new">help while</a> für Infos zu diesen Kommandos). Diese Kommandos haben innerhalb einer IF-Bedingung dieselbe Wirkung wie <code>endif</code> (brechen also die Auswertung der aktuellen Bedingung an dieser Stelle ab) und werden so lange an das umgegebende Kontrollfluss-Statement weitergereicht, bis dies entweder eine Schleife ist oder das letzte Statement verlassen wurde, so dass der gesamte Block abgebrochen wird.
 		<example desc="Eine einfache Verzweigung, welche die <code>max()</code>-Funktion simuliert:" type="verbatim">
 			|&lt;- if (a &gt; b)

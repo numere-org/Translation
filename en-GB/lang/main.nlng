@@ -631,7 +631,7 @@ GUI_DLG_CLOSE_DEBUGGING=The debugger currently is in control.%%LINEBREAK%%Do you
 GUI_DLG_CLOSE_DEBUGGING_TITLE=NumeRe: Debugger running
 # Tips & Tricks dialog
 GUI_TIPOTD_HEAD=NumeRe: Tips and Tricks
-GUI_TIPOTD_DYK=Did you know ...?
+GUI_TIPOTD_DYK=NumeRe lifehack No.
 GUI_TIPOTD_NEXT=&Next tip
 GUI_TIPOTD_STAS=&Show tips at start up
 GUI_TIPOTD_CLOSE=&Close
@@ -806,7 +806,7 @@ GUI_TREE_METHODS=Methods
 GUI_TREE_FUNC_KEYLIST=syntax num cmplx mat string trigonometric hyperbolic time stats random physics angular distrib logarithmic logic coords polynomial draw gui test define
 GUI_TREE_CMD_KEYLIST=flowctrl datactrl datacreation loadsave eval plotting proc def mainctrl gui misc plugins
 GUI_TREE_CONST_KEYLIST=atomic fieldtheory mathematical chemical particle thermo astro internal time
-GUI_TREE_METHOD_KEYLIST=vect data string dict struct cat file logger path stack queue
+GUI_TREE_METHOD_KEYLIST=vect data string dict struct cat file logger path stack queue timer
 # tree pop-up menu
 GUI_TREE_PUP_LOAD=Load file
 GUI_TREE_PUP_LOADTOTABLE=Load file to new table

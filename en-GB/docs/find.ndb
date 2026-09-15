@@ -554,6 +554,7 @@ theta(x,y,z)~Calculates the angle between the z axis and the vector (x,y,z)~pola
 throw~Aborts the procedure execution and displays an error message~procedure throw try catch error exception~help throw
 time()~Returns the current time~zeit sekunden dauer date() to_time() timeformat()~time()
 timeformat(STR,VAL)~Formats the time VAL according to the pattern STR~zeit umwandeln transformation conversion convert string sekunden dauer formatieren formatting date() to_time() timeformat() time()~timeformat(
+timer(ARG)~Creates an object instance of type timer~timer() object duration stopwatch timespan zeitspanne dauer stopuhr~timer(
 to_ansi(sUtf8Enc)~Converts the UTF-8 encoded string sUtf8Enc into an ANSI encoded string~utf8 ansi ascii to_ansi() to_utf8() conversion wide char~to_ansi(
 to_char(x,y,z,...)~Interprets x,y,z,... as ASCII values and returns their corresponding characters as one string~zeichenkette charactercodes zeichencodes umwandeln transformation conversion convert string character ascii to_char()~to_char(
 to_cmd(STR)~Transforms the passed string STR to a command expression~zeichenkette command kommando to_cmd()~to_cmd(

@@ -27,6 +27,7 @@
 		<keyword>queue</keyword>
 		<keyword>stack</keyword>
 		<keyword>file</keyword>
+		<keyword>timer</keyword>
 		<keyword>class</keyword>
 	</keywords>
 	<contents>
@@ -50,7 +51,9 @@
 			oStack = stack()
 			oStack = stack({vals})\n
 			oQueue = queue()
-			oQueue = queue({vals})
+			oQueue = queue({vals})\n
+			oTimer = timer()
+			oTimer = timer(sName)
 		</syntax>
 		In addition to <a href="nhlp://table?frame=new">tables</a>, NumeRe provides several predefined objects that can be used to create more complex data structures through composition. The respective methods of the data structures are listed in the symbol tree.
 		<h>Dicts</h>
@@ -107,6 +110,8 @@
 		<h>Queue objects</h>
 		A queue is a first-in, first-out (<em>FIFO</em>) memory. This means that the element that was created first in the queue (<code>queue.push(val)</code>) must also be removed from it first (<code>queue.pop</code>). Queues implement queues of objects, whereby the implementation of <code>object.queue</code> is based on a <code>std::deque</code> (double-ended queue) and thus elements can also be placed at the beginning of the queue (<code>queue.pushfront(val)</code>) and removed from the end (<code>queue.popback</code>).
 		The function <code>queue({vals}={})</code> can be used to create an instance of type <code>object.queue</code> with the values from <code>vals</code>. If <code>vals</code> is empty, an empty queue is created; otherwise, the queue is filled with the values, maintaining the order, i.e., the first element in <code>vals</code> is also the first element in the queue (<code>queue.front</code>).
+		<h>Timer objects</h>
+		A timer is created with a name using the function <code>timer("NAME")</code> and can be used to measure durations very accurately, much like a stopwatch. A timer starts automatically upon creation. It can be stopped (<code>timer.stop</code>) and restarted (<code>timer.start</code>). Whilst the timer is running (<code>timer.running</code>), the elapsed time can also be read without stopping the timer (<code>timer.elapsed</code>); converting it to a string via <code>#timer</code> will format the duration alongside its name: <code>"[NAME] 0:00:42.123456"</code>
 		<em>See also:</em> <a href="nhlp://variable?frame=self">help variable</a>, <a href="nhlp://table?frame=self">help table</a>, <a href="nhlp://cluster?frame=self">help cluster</a>, <a href="nhlp://procedure?frame=self">help procedure</a> and <a href="nhlp://proccmd?frame=self">help proccmd</a>
 	</contents>
 </article>
