@@ -389,9 +389,9 @@ rayleigh_inv_p(p,sigma)~Gibt den Wert der inversen kumulativen Verteilungsfunkti
 rayleigh_inv_q(q,sigma)~Gibt den Kehrwert der komplementären kumulativen Verteilungsfunktion bei q für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Gibt den Wert der Dichte der Verteilungsfunktion bei x für die Rayleigh-Verteilung mit dem Skalenparameter sigma zurück~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random kummulativ~rayleigh_pdf(
 rayleigh_rd(sigma,n)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
-readjson(STR)~Liest den Inhalt der JSON-Datei in ein DictStruct~readjson() object dictionary structure struktur dom~readjson(
+readjson(STR,l)~Liest den Inhalt der JSON-Datei in ein DictStruct~readjson() object dictionary structure struktur dom~readjson(
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
-readxml(STR)~Liest den Inhalt der XML-Datei in ein DictStruct~readxml() object dictionary structure struktur dom~readxml(
+readxml(STR,l)~Liest den Inhalt der XML-Datei in ein DictStruct~readxml() object dictionary structure struktur dom~readxml(
 read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(

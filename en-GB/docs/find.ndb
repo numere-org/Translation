@@ -389,9 +389,9 @@ rayleigh_inv_p(p,sigma)~returns the value of the inverse cumulative distribution
 rayleigh_inv_q(q,sigma)~returns the inverse of the complementary cumulative distribution function at q for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random number distributionfunction inverse~rayleigh_inv_q(
 rayleigh_pdf(x,sigma)~Returns the value of the probability density function at x for the Rayleigh distribution with scale parameter sigma~rayleigh distribution function random distributionfunction cumulative~rayleigh_pdf(
 rayleigh_rd(sigma,n)~Returns a random number from the Rayleigh distribution with the scale parameter sigma~rayleigh distribution function random~rayleigh_rd(
-readjson(STR)~Reads the content of the JSON file into a DictStruct~readjson() object dictionary structure struktur dom~readjson(
+readjson(STR,l)~Reads the content of the JSON file into a DictStruct~readjson() object dictionary structure struktur dom~readjson(
 readline~Formatted prompt~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
-readxml(STR)~Reads the content of the XML file into a DictStruct~readxml() object dictionary structure struktur dom~readxml(
+readxml(STR,l)~Reads the content of the XML file into a DictStruct~readxml() object dictionary structure struktur dom~readxml(
 read~Reads the content of a file and returns it through strings~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Returns the real part of the passed complex number z~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rectangular function: 1 for x in [x0,x1]; 0 otherwise~rect() function~rect(

@@ -20,7 +20,7 @@ procedure $handleEvent(_nWinId, _nItemId, _event{}) :: event
 		## Handle the events by their IDs
 		switch (_nItemId)
 		case nABOUT:
-			dialog "%%1%% is a NumeRe App" -set type=messagebox title="About %%1%%" icon=infoicon buttons=ok;
+			dialog sAPPNAME + " v" + sAPPVERSION + " is a NumeRe App" -set type=messagebox title="About " + sAPPNAME icon=infoicon buttons=ok;
 			break
 		endswitch
 	catch:

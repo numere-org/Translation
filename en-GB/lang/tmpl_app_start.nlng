@@ -3,6 +3,9 @@
  * =================================================================================================
  * Generated: %%2%% *#
 
+## Get the item IDs from the window layout
+include "view/appmain.nlyt" :: declarations
+
 ##! \procedure start
 ##! Starts the "%%1%%" app.
 ##!
@@ -16,7 +19,7 @@ procedure $start(_sArgs = "") :: mask explicit
 	## Try to initialize the app
 	if (!$this~controller~initialize(nWinId, _sArgs))
 		window nWinId -close;
-		throw "The \"%%1%%\" app could not be initialized.";
+		throw "The app \"" + sAPPNAME + "\" could not be initialized.";
 	endif
 	
 	return void;
