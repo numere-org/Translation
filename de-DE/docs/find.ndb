@@ -278,6 +278,7 @@ is_string(EXPR)~Gibt true zurück, wenn EXPR Zeichenketten enthält, sonst false
 is_table(STR)~Gibt true zurück, wenn STR eine Tabelle ist, sonst false~is_table() data cache table variablen type detection erkennung~is_table(
 is_unique(x,y,z,...)~Gibt true zurück, wenn jeder Wert in x,y,z,... nur einmal vorkommt, sonst false~is_unique() einzigartig eindeutig solely~is_unique(
 is_upper(STR)~Prüft für jedes Zeichen in STR, ob es ein Großbuchstabe ist~is_upper() character type representation zeichen~is_upper(
+is_valid(x)~Gibt true zurück, wenn x den Wert einen validen Wert hat, sonst false~is_valid() void nan not a number invalid empty leer undefiniert undefined~is_valid(
 is_void(x)~Gibt true zurück, wenn x den Wert void hat, sonst false~is_void() not a number invalid empty leer undefiniert undefined~is_void(
 is_xdigit(STR)~Prüft für jedes Zeichen in STR, ob es Teil eines Hexadezimalwertes sein kann~is_xdigit() character type representation zeichen~is_xdigit(
 ivl(x,x0,x1,l,r)~Intervall-Funktion: definiert ein Interval von x0 bis x1 mit wählbaren Grenztypen~intervalfunction stepwise abschnittsweise ivl()~ivl(
