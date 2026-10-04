@@ -156,9 +156,9 @@ PARSERFUNCS_LISTFUNC_FUNC_EVT_ENDDIALOG_[GUI]=				evt_enddialog(sReturnValue)   
 PARSERFUNCS_LISTFUNC_FUNC_EVT_SENDVALTOITEM_[GUI]=			evt_sendvaltoitem(nToId1,...)                                         {}       - GUI event handler: copies the values from the event-firing element into the elements with the IDs nToId1, ... . GUI-Event-Handler may only be used directly in a Layout-Script and their arguments have to be literals (i.e. no variables)
 PARSERFUNCS_LISTFUNC_FUNC_EXC_[STATS]=						exc(x,y,z,...)                                                        VAL      - Calculates the excess (kurtosis-3) of the distribution of the values x,y,z,... %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_EXP_[NUM_LOGARITHMIC]=			exp(x)                                                                VAL      - Exponential function of x. %%DEFINED_FOR_ALL%%
-PARSERFUNCS_LISTFUNC_FUNC_F_[SYNTAX]=						f(x,fVal)                                                             VAL      - Creates a virtual function, which returns fVal for each x. Can be used to plot constant values or random functions as continous curve
 PARSERFUNCS_LISTFUNC_FUNC_F32_[SYNTAX]=						f32(x)                                                                VAL      - Converts the value x into the data type "value.f32"
 PARSERFUNCS_LISTFUNC_FUNC_F64_[SYNTAX]=						f64(x)                                                                VAL      - Converts the value x into the data type "value.f64"
+PARSERFUNCS_LISTFUNC_FUNC_F_[SYNTAX]=						f(x,fVal)                                                             VAL      - Creates a virtual function, which returns fVal for each x. Can be used to plot constant values or random functions as continous curve
 PARSERFUNCS_LISTFUNC_FUNC_FACE_[DRAW]=						face({x0},{x1},{x2},{x3},sStyle="")                                   {}       - Draws a quadrangle. You may pass from two to four corners. If you pass two, NumeRe will draw an square, passing three corners will result in a parallelogram and all four corners will draw a custom quadrangle. The corners {x0}, {x1}, {x2} and {x3} are numbered going from lower left in counter-clockwise order. The filling of the quadrangle may be modified using sStyle.
 PARSERFUNCS_LISTFUNC_FUNC_FACEV_[DRAW]=						facev({x},{fDir1},{fDir2},{fDir3},sStyle="")                          {}       - Draws a quadrangle. You may pass from two to four corners. If you pass two, NumeRe will draw an square, passing three corners will result in a parallelogram and all four corners will draw a custom quadrangle. The first two vectors are the lower {x}+{fDir1} and the left corner {x}+{fDir2} and the last {x}+{fDir3} is the diagonal opposite one. The filling of the quadrangle may be modified using sStyle.
 PARSERFUNCS_LISTFUNC_FUNC_FACTORIAL_[NUM]=					factorial(n)                                                          VAL      - Calculates the factorial of the integral number n [n! = n*(n-1)*(n-2)*...*1]. %%DEFINED_NATURAL%% >= 0
@@ -177,6 +177,7 @@ PARSERFUNCS_LISTFUNC_FUNC_FISHER_F_PDF_[DISTRIB]= 			fisher_f_pdf(x,nNu1,nNu2)  
 PARSERFUNCS_LISTFUNC_FUNC_FISHER_F_RD_[RANDOM_DISTRIB]= 	fisher_f_rd(nNu1,nNu2,n=1)                                           {VAL}     - Returns n random variates from the Fisher's F distribution with nNu1 and nNu2 degrees of freedom
 PARSERFUNCS_LISTFUNC_FUNC_FLOOR_[NUM]=						floor(x)                                                              VAL      - Rounds x to the nearest lower integral value. %%DEFINED_FOR_ALL%%
 PARSERFUNCS_LISTFUNC_FUNC_FROM_CODEPOINTS_[STRING]=			from_codepoints({nCodePoints})                                        STR      - Converts the Unicode code points {nCodePoints} (as value.ui32) into a UTF-8-encoded string
+PARSERFUNCS_LISTFUNC_FUNC_FROM_WEEKDAY_[TIME]=				from_weekday(nYear,nMonth,nWeekday,nIndex)                            TIM      - Calculates the date associated with the nIndex-th (1-5) day of the week nWeekday (1-7) in the month nMonth in the year nYear. If nIndex is less than or equal to 0, the date of the respective last weekday of the month is returned
 PARSERFUNCS_LISTFUNC_FUNC_GAMMA_[NUM_DISTRIB]=				gamma(x)                                                              VAL      - Value of the gamma function at the position x. %%DEFINED_FOR_ALL_C_RANGE_R%% R \ {-n, 0}, where n is an integral number > 0.
 PARSERFUNCS_LISTFUNC_FUNC_GAUSS_[NUM_RANDOM_DISTRIB]=		gauss(x0,fSigma,n=1)                                                 {VAL}     - Creates n (real and normal distributed) random numbers, with the distribution parameters average x0 and FWHM fSigma
 PARSERFUNCS_LISTFUNC_FUNC_GAUSSJORDAN_[MAT]=				gaussjordan(mMat,fTol=0)                                              MAT      - Performs Gauss-Jordan elimination of the matrix mMat (reduced row echelon form, rref). The tolerance fTol, below which values are considered equal to 0 during elimination, is calculated automatically based on the size and norm of the matrix mMat if fTol is equal to 0. However, the value can also be set to a custom tolerance.
@@ -286,6 +287,8 @@ PARSERFUNCS_LISTFUNC_FUNC_MED_[STATS]=						med(x,y,z,...)                      
 PARSERFUNCS_LISTFUNC_FUNC_MIN_[STATS]=						min(x,y,z,...)                                                        ARG      - Returns the minimal value of x,y,z,... %%DEFINED_REAL%%. Can be applied to strings, where it will use string logic
 PARSERFUNCS_LISTFUNC_FUNC_MINPOS_[STATS]=					minpos(x,y,z,...)                                                     VAL      - Index of the minimal value of x,y,z,... %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_MINUTES_[SYNTAX_TIME]=			minutes(x)                                                            TIM      - Converts x into a duration of x minutes (60 seconds each)
+PARSERFUNCS_LISTFUNC_FUNC_MONTHDAYS_[TIME]=					monthdays(tTime)                                                      VAL      - Determines the number of days in the month corresponding to the passed time value tTime
+PARSERFUNCS_LISTFUNC_FUNC_MONTHNAME_[TIME]=					monthname(tTime)                                                      STR      - Returns the name of the month corresponding to the passed time value tTime in the currently selected language
 PARSERFUNCS_LISTFUNC_FUNC_MOVAVG_[MAT]= 					movavg(mMat,n,m=n)                                                    MAT      - Moves a sliding rectangular window of size (2*n+1)*(2*m+1) over each entry in the matrix mMat. The matrix is averaged within the window so that for each entry in mMat, one entry is available in the result matrix. The parameter m is optional and by default is equal to n. %%DEFINED_FOR_ALL%%.
 PARSERFUNCS_LISTFUNC_FUNC_MOVMAX_[MAT]= 					movmax(mMat,n,m=n)                                                    MAT      - Moves a sliding rectangular window of size (2*n+1)*(2*m+1) over each entry in the matrix mMat. Within the window, the maximum is determined so that for each entry in mMat, an entry is available in the result matrix. The parameter m is optional and is by default equal to n. %%DEFINED_REAL%%
 PARSERFUNCS_LISTFUNC_FUNC_MOVMED_[MAT]= 					movmed(mMat,n,m=n)                                                    MAT      - Moves a sliding rectangular window of size (2*n+1)*(2*m+1) over each entry in the matrix mMat. Within the window, the median is determined so that for each entry in mMat, an entry is available in the result matrix. The parameter m is optional and is by default equal to n. %%DEFINED_REAL%%.
@@ -1461,6 +1464,13 @@ GUI_EDITOR_CALLTIP_CONST_DAY_SECS_[TIME]=_day_secs = 86400
 GUI_EDITOR_CALLTIP_CONST_HOUR_SECS_[TIME]=_hour_secs = 3600
 GUI_EDITOR_CALLTIP_CONST_WEEK_SECS_[TIME]=_week_secs = 604800
 GUI_EDITOR_CALLTIP_CONST_YEAR_SECS_[TIME]=_year_secs = 31557600
+GUI_EDITOR_CALLTIP_CONST_MONDAY_[TIME]=_monday = 1
+GUI_EDITOR_CALLTIP_CONST_TUESDAY_[TIME]=_tuesday = 2
+GUI_EDITOR_CALLTIP_CONST_WEDNESDAY_[TIME]=_wednesday = 3
+GUI_EDITOR_CALLTIP_CONST_THURSDAY_[TIME]=_thursday = 4
+GUI_EDITOR_CALLTIP_CONST_FRIDAY_[TIME]=_friday = 5
+GUI_EDITOR_CALLTIP_CONST_SATURDAY_[TIME]=_saturday = 6
+GUI_EDITOR_CALLTIP_CONST_SUNDAY_[TIME]=_sunday = 7
 GUI_EDITOR_CALLTIP_CONST_UI8_MAX_[INTERNAL]=ui8_max = 255
 GUI_EDITOR_CALLTIP_CONST_I8_MAX_[INTERNAL]=i8_max = 127
 GUI_EDITOR_CALLTIP_CONST_I8_MIN_[INTERNAL]=i8_min = -128

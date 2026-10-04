@@ -191,6 +191,7 @@ fit~Passt eine Funktion mittels Parameter an eine Datenreihe an, siehe "help fit
 floor(x)~rundet x auf die nächsttiefere Ganzzahl ab~floor() abrunden ganzzahlen integral number~floor(
 for (VAR = INI:FIN)~Zählschleife, siehe "help for"~zaehlschleife zählschleife endfor for() loop command sequence flow control~help for () ... endfor
 Frage~Stell' ich hier die Fragen oder du?~question~"Das hättest du dir so gedacht..."
+from_weekday(Y,M,W,n)~Berechnet das Datum des n-ten Wochentags~from_weekday() calendar kalendar~from_weekday(
 fwt~Schnelle Wavelet-Transformation eines Datensatzes~fast schnelle wavelettransformation transformieren invers daubechies haar bspline~help fwt
 gamma(x)~Wert der Gamma-Funktion an der Stelle x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Fügt einen Fortschrittsbalken in ein Window-Layout ein~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -329,6 +330,8 @@ mesh~Erstellen eines Gitterplots~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Minimum der Werte x,y,z,... Kann auch auf Zeichenketten angewendet werden~minimum zeichenketten strings min() minimal value~min(
 minpos(x,y,z,...)~Index des Minimums der Werte x,y,z,...~minimum position min() minpos() minimal value~minpos(
 minutes(x)~Konvertiert x in eine Dauer~minutes() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~minutes(
+monthdays(T)~Bestimmt die Zahl der Tage des Monats~monthdays() monatslänge monthlength days_of_month calendar kalendar~monthdays(
+monthname(T)~Gibt den Namen des Monats zurück~monthname() monatsname calendar kalendar~monthname(
 movavg(MAT,n,m)~Schiebt ein Fenster über die Matrix und berechnet den Mittelwert~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Verschiebt je nach Ausdruck Einträge/Spalten/Untertabellen in Tabellen oder Dateien, siehe "help move"~verschieben tabellen dateien files~help move
 movmax(MAT,n,m)~Schiebt ein Fenster über die Matrix und bestimmt das Maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(

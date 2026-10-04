@@ -190,6 +190,7 @@ fitw~Fit functions to data sets via parameters and concern the additional error 
 fit~Fit functions to data sets via parameters~fitten fitting anpassen daten trendlinie ausgleichsfunktion einschraenkungen einschränkungen restrictions constraints~help fit
 floor(x)~Rounds x to the nearest lower integral value~floor() abrunden ganzzahlen integral number~floor(
 for (VAR = INI:FIN)~Starts the definition of a FOR loop~zaehlschleife zählschleife endfor for() loop command sequence flow control~help for () ... endfor
+from_weekday(Y,M,W,n)~Calculates the date of the n-th weekday~from_weekday() calendar kalendar~from_weekday(
 fwt~Fast wavelet transformation of the passed data set~fast schnelle wavelettransformation transformieren invers daubechies haar bspline~help fwt
 gamma(x)~Value of the gamma function at the position x~gammafunktion fakultaetsfunktion fakultätsfunktion kontinuierlich continous factorial function gamma()~gamma(
 gauge~Inserts a progress bar (a gauge) into a window layout~progressbar windowsystem layout group interaction gui graphical user interface graphisch fenster dialog~help window
@@ -329,6 +330,8 @@ mesh~Generates a meshgrid plot~meshgrid gitterplot~help mesh
 min(x,y,z,...)~Returns the minimal value of x,y,z,... Can be applied to strings and uses then string logic~minimum zeichenketten strings min()~min(
 minpos(x,y,z,...)~Index of the minimal value of x,y,z,...~minimum position min() minpos()~minpos(
 minutes(x)~Converts x into a duration~minutes() minutes minuten sekunden stunden hours days tage wochen weeks monate months years jahre duration time dauer zeit~minutes(
+monthdays(T)~Determines the number of days in the month~monthdays() monatslänge monthlength days_of_month calendar kalendar~monthdays(
+monthname(T)~Returns the name of the month~monthname() monatsname calendar kalendar~monthname(
 movavg(MAT,n,m)~Moves a window along the matrix and calculates the average~movavg() moving gleitender sliding mittelwert mean average window~movavg(
 move~Moves (depending on the actual expression) entries/columns/subtables in tables or complete files~verschieben tabellen dateien files~help move
 movmax(MAT,n,m)~Moves a window along the matrix and determines the maximum~movmax() moving gleitendes sliding maximum maximal window~movmax(
