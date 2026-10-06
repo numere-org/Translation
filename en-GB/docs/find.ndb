@@ -173,6 +173,7 @@ fft2d~2D Fast Fourier transformation of the passed data set~fast schnelle fourie
 fft~Fast Fourier transformation of the passed data set~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 File explorer~"list -files" lists files (incl. their sizes), which are found in the default file paths~files dateien dateiexplorer dateisystem ausgaben~help explorer
 file(STR1,STR2)~Creates file-type object instances~file() object filestream fstream~file(
+fillinvalid(v,r)~Fills all invalid values with another value~fillinvalid() fillnan fillnull fillvoid~fillinvalid(
 filter(MAT,KERNEL,MODE)~Applies the choosen filter kernel KERNEL to the matrix MAT. The parameter MODE defines the behavior at the matrix boundaries. With MODE = 0 the boundary value of the matrix is clamped (boundary clamp), with MODE = 1 the boundary values are mirrored (boundary reflection).~filter kernel matrixfilter matrix boundary convolution~filter(
 findcolumn(STR1,STR2)~Returns all indices of the columns of the table in STR1, whose column headings are matching to STR2~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Returns true, if the file STR1 exists, false otherwise. STR2 names the search path~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(

@@ -173,6 +173,7 @@ factorial(n)~Fakultät der natürlichen Zahl n [n!]~fakultaet fakultät faculty(
 fft2d~Schnelle 2D-Fourier-Transformation eines Datengitters~fast schnelle fouriertransformation transformieren invers complex komplex datengitter datagrid~help fft
 fft~Schnelle Fourier-Transformation eines Datensatzes~fast schnelle fouriertransformation transformieren invers complex komplex~help fft
 file(STR1,STR2)~Erzeugt Objekt-Instanzen vom Typ file~file() object filestream fstream~file(
+fillinvalid(v,r)~Füllt alle ungültigen Werte mit einem anderen Wert~fillinvalid() fillnan fillnull fillvoid~fillinvalid(
 filter(MAT,KERNEL,MODE)~Wendet einen frei definierbaren Filterkernel KERNEL auf die Matrix MAT an. Der Parameter MODE definiert dabei das Verhalten an den Matrixgrenzen. Mit MODE = 0 wird der Randwert der Matrix festgehalten (boundary clamp), mit MODE = 1 werden die Randwerte gespiegelt (boundary reflection).~filter kernel matrixfilter matrix boundary faltung convolution~filter(
 findcolumn(STR1,STR2)~Gibt die Indices aller Spalten in der Tabelle in STR1 zurück, deren Spaltenüberschrift mit STR2 übereinstimmen~column find search überschrift headline findcolumn()~findcolumn(
 findfile(STR1,STR2)~Gibt true zurück, wenn die Datei STR1 existiert, sonst false. STR2 gibt den Suchpfad an~dateien suchen finden search existieren files existing present valid gueltig gültig findfile()~findfile(
