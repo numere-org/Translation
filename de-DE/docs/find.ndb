@@ -511,14 +511,14 @@ TAB().categorize({n},{STR})~Aktualisiert die Kategorien einer kategorialen Spalt
 TAB().cells(f,i)~Modifizierer, um Selektionen parallel zur Auswertung durchzuführen~cells() selections selektionen auswahl modifier modifizierer~.cells(
 TAB().cols~Modifizierer für spaltenweises Vorgehen oder gibt die Zahl der Spalten der Tabelle zurück~columncount spaltenzahl größe groesse size dimension modifier modifizierer~.cols
 TAB().convert({n},STR)~Konvertiert die ausgewählten Spalten zum neuen Typ~typeof() convert() konvertieren category string datetime logical value data type~.convert(
-TAB().countif({n},v{})~Zählt die Elemente in den Spalten, die mit den Werten übereinstimmen~countif() enumerate nummerieren zählen elements~.countif(
+TAB().countif({n},v{},l)~Zählt die Elemente in den Spalten, die mit den Werten übereinstimmen~countif() enumerate nummerieren zählen elements~.countif(
 TAB().covarof(n,m,{r1},{r2})~Berechnet die Kovarianz der Spalten~covarof() covariance elements columns~.covarof(
 TAB().describe(STR)~Aktualisiert die Beschreibung der aktuellen Tabelle~describe() description beschreiben dokumentieren documentation comment kommentieren annotation annotate~.describe(
 TAB().description~Gibt die Beschreibung der aktuellen Tabelle zurück~description describe beschreiben dokumentieren documentation comment kommentieren annotation annotate~.description
 TAB().every(f,i)~Modifizierer, um Selektionen orthogonal zur Auswertung durchzuführen~every() selections selektionen auswahl modifier modifizierer~.every(
 TAB().fndcols({STR},l)~Gibt die Indices aller Spalten zurück, deren Überschriften übereinstimmen~fndcols findcolumn spalten suchen finden headlines~.fndcols(
 TAB().getunit({c})~Gibt die Einheiten der Werte in den Spalten zurück~getunit() SI measurement messung system units einheiten~.getunit(
-TAB().indexof(n,v{})~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
+TAB().indexof(n,v{},l)~Gibt die Indices der Elemente in der Spalte zurück, die mit den Werten übereinstimmen~logtoidx() indexof() idxtolog() enumerate nummerieren~.indexof(
 TAB().insertcells(r,c,r1,c1)~Fügt einen Block an Zellen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcells(
 TAB().insertcols(c,n)~Fügt Spalten in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertcols(
 TAB().insertrows(r,n)~Fügt Reihen in die Tabelle ein~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.insertrows(
@@ -532,7 +532,7 @@ TAB().removecols({c})~Entfernt Spalten aus der Tabelle~insert remove cells rows 
 TAB().removerows({r})~Entfernt Reihen aus der Tabelle~insert remove cells rows cols einfügen entfernen reihen zellen zeilen spalten append anfügen~.removerows(
 TAB().reordercols({c},{n})~Sortiert die Spalten gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reordercols(
 TAB().reorderrows({r},{n})~Sortiert die Zeilen gemäß der neuen Ordnung~reordercols reorderrows zeilen spalten rearrange columns umsortieren umordnen~.reorderrows(
-TAB().replacevals({c},{o},{n})~Ersetzt in den Spalten jedes Auftreten eines Wertes in {o} mit dem korrespondierenden Wert in {n}~replacevals() werte ersetzen values spalten columns umbenennen rename~.replacevals(
+TAB().replacevals({c},{o},{n},l)~Ersetzt in den Spalten jedes Auftreten eines Wertes in {o} mit dem korrespondierenden Wert in {n}~replacevals() werte ersetzen values spalten columns umbenennen rename~.replacevals(
 TAB().rows~Modifizierer für zeilenweises Vorgehen oder gibt die Zahl der Zeilen der Tabelle zurück~rowcount zeilenzahl reihenzahl größe groesse size dimension modifier modifizierer~.rows
 TAB().scorrof(n,m,{r1},{r2})~Berechnet die Spearman-Korrelation der Spalten~scorrof() pearson spearman correlation coefficient korrelationskoeffizient~.scorrof(
 TAB().scwin(c,w,s)~Modifizierer für ein gleitendes Fenster entlang einer Spalte~scwin() modifier modifizierer moving window rolling sliding fenster gleitendes~.scwin(
