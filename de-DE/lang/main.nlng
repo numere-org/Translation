@@ -1365,6 +1365,7 @@ GUI_DEPDLG_UNFOLDALL=Alles ausfalten
 GUI_DEPDLG_FOLDITEM=Zweig einfalten
 GUI_DEPDLG_UNFOLDITEM=Zweig ausfalten
 GUI_DEPDLG_EXPORTDOT=In eine %%COMMON_FILETYPE_DOT%% exportieren
+GUI_DEPDLG_SEARCH=Abhängigkeiten durchsuchen ...
 # New file dialog strings
 GUI_NEWDLG_DEFAULT=Eine neue Datei erzeugen%%LINEBREAK%%%%LINEBREAK%%[Wähle einen Dateiyp, um die Beschreibung zu sehen.]
 GUI_NEWDLG_EMPTYFILE=Leere Datei%%LINEBREAK%%**Leere Datei**%%LINEBREAK%%[TYP: DATEI]%%LINEBREAK%%%%LINEBREAK%%Erzeugt eine einfache, leere Textdatei ohne jegliche Syntaxhervorhebung. Verwende dies, wenn du Notizen machen möchtest, Daten in einem speziellen Format anlegen oder einfach nur schnell Text zwischenspeichern willst. Du kannst den finalen Dateityp beim Speichern festlegen.

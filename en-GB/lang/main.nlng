@@ -1365,6 +1365,7 @@ GUI_DEPDLG_UNFOLDALL=Unfold all
 GUI_DEPDLG_FOLDITEM=Fold branch
 GUI_DEPDLG_UNFOLDITEM=Unfold branch
 GUI_DEPDLG_EXPORTDOT=Export to %%COMMON_FILETYPE_DOT%%
+GUI_DEPDLG_SEARCH=Search dependencies ...
 # New file dialog strings
 GUI_NEWDLG_DEFAULT=Create a new file%%LINEBREAK%%%%LINEBREAK%%[Choose a file type to see its description.]
 GUI_NEWDLG_EMPTYFILE=Empty file%%LINEBREAK%%**Empty file**%%LINEBREAK%%[TYPE: FILE]%%LINEBREAK%%%%LINEBREAK%%Creates a simple, empty text file without any syntax highlighting. Use this when you want to make notes, create data in a special format, or just quickly cache text. You can specify the final file type when saving.
