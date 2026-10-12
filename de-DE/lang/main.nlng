@@ -996,6 +996,7 @@ GUI_MENU_USESECTIONS_TTP=Verwende "##! ..." und "#*! ..." als den Beginn neuer A
 GUI_MENU_VIEW=&Ansicht
 # Tools menu
 GUI_MENU_OPTIONS=&Optionen
+GUI_MENU_ENVIRONMENT=Umgebung verwalten
 GUI_MENU_DEBUGGER=NumeRe-&Debugger%%TAB%%%%KEY_DEBUGGER%%
 GUI_MENU_DEBUGGER_TTP=Aktiviert oder deaktiviert den Debugger
 GUI_MENU_FORMAT=Formatierung anpassen ...
@@ -1357,6 +1358,17 @@ GUI_PKGDLG_CHANGESDETECTED=Im Vergleich zum Package wurden Änderungen bei einer
 GUI_PKGDLG_CHANGESDETECTED_HEAD=NumeRe: Änderungen detektiert
 GUI_PKGDLG_UPDATEINSTALLED=Soll das erzeugte Package "%%1%%" jetzt als installiert registriert und die Einstellungen übernommen werden?%%LINEBREAK%%(Das Script wird dazu nicht ausgeführt.)
 GUI_PKGDLG_UPDATEINSTALLED_HEAD=NumeRe: Erzeugtes Package installieren
+# Environment dialog strings
+GUI_ENV_HEAD=NumeRe: Umgebung verwalten
+GUI_ENV_NAME=Variablenname
+GUI_ENV_VALUE=Variablenwert
+GUI_ENV_REMOVE_ALL=Alle entfernen
+GUI_ENV_REMOVE=Entfernen
+GUI_ENV_ADD_UPDATE=Hinzufügen/Aktualisieren
+GUI_ENV_CREATION_ERROR_HEAD=Umgebungsvariablen-Fehler
+GUI_ENV_CREATION_ERROR=Der Variablenname ist ungültig oder Variablenwert ist leer.
+GUI_ENV_BUSY_ERROR_HEAD=Rechenkern arbeitet
+GUI_ENV_BUSY_ERROR=Die Umgebung kann nicht verwaltet werden, während der Rechenkern arbeitet.
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Prozedur-Abhängigkeiten [%%1%%]
 GUI_DEPDLG_TREE=Abhängigkeitsbaum der Hauptprozedur in der aktuellen Datei

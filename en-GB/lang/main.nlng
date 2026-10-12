@@ -996,6 +996,7 @@ GUI_MENU_USESECTIONS_TTP=Use "##! ..." and "#*! ..." as the beginning of new sec
 GUI_MENU_VIEW=&View
 # Tools menu
 GUI_MENU_OPTIONS=&Options
+GUI_MENU_ENVIRONMENT=Manage environment
 GUI_MENU_DEBUGGER=NumeRe &debugger%%TAB%%%%KEY_DEBUGGER%%
 GUI_MENU_DEBUGGER_TTP=Activates or deactivates the debugger
 GUI_MENU_FORMAT=Adjust format ...
@@ -1357,6 +1358,17 @@ GUI_PKGDLG_CHANGESDETECTED=Compared to the package, changes in one or more file 
 GUI_PKGDLG_CHANGESDETECTED_HEAD=NumeRe: Changes detected
 GUI_PKGDLG_UPDATEINSTALLED=Shall the created package "%%1%%" be registered as installed and the settings be applied right now?%%LINEBREAK%%(The script won't executed for this purpose.)
 GUI_PKGDLG_UPDATEINSTALLED_HEAD=NumeRe: Install created package
+# Environment dialog strings
+GUI_ENV_HEAD=NumeRe: Manage environment
+GUI_ENV_NAME=Variable name
+GUI_ENV_VALUE=Variable value
+GUI_ENV_REMOVE_ALL=Remove all
+GUI_ENV_REMOVE=Remove
+GUI_ENV_ADD_UPDATE=Add/Update
+GUI_ENV_CREATION_ERROR_HEAD=Environment variable error
+GUI_ENV_CREATION_ERROR=The variable's name is invalid or its value is empty.
+GUI_ENV_BUSY_ERROR_HEAD=Kernel busy
+GUI_ENV_BUSY_ERROR=The environment cannot be modified while the kernel is busy.
 # Dependency dialog strings
 GUI_DEPDLG_HEAD=NumeRe: Procedure dependencies [%%1%%]
 GUI_DEPDLG_TREE=Dependency tree of the main procedure of the current file
