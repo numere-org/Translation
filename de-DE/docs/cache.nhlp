@@ -36,11 +36,16 @@
 	</keywords>
 	<contents>
 		<syntax>
-			{VAL} = TABLE(i1:i2,j1:j2)
-			{VAL} = TABLE({START:SCHRITTWEITE:ENDE},:)
-			TABLE(i1:i2,j1:j2) = {VAL}\n
-			{STR} = TABLE(#,j1:j2)
-			TABLE(#,j1:j2) = {STR}\n
+			{ANY} = TABLE(nRowIdx, colIdx=1, sheetIdx=1)
+			{ANY} = TABLE(..., {"columnname"}, ...)
+			{ANY} = TABLE(..., ..., {"sheetname"})
+			TABLE(..., ..., ...) = {ANY}\n
+			{STR} = TABLE(#, colIdx, sheetIdx=1)
+			{STR} = TABLE(#, #, sheetIdx)
+			TABLE(#, ..., ...) = {STR}
+			TABLE(#, #, sheetIdx) = {STR}\n
+			OTHERTAB() = TABLE()
+			OTHERTAB(..., ..., ...) = TABLE(..., ..., ...)\n
 			new TABLE(), ...
 			remove TABLE(), ...\n
 			clear TABLE()
@@ -53,7 +58,14 @@
 			rename TABLE(), NEWNAME()\n
 			swap TABLE1(), TABLE2()
 		</syntax>
-		Tabellen sind spezielle zweidimensionale Variablen in NumeRe, die tabellare Daten verwalten, damit selbige weiterverarbeitet werden können. Tabellarische Daten zeichnen sich dadurch aus, dass die Daten spaltenweise organisiert sind. Dabei ist zu beachten, dass Tabellen <em>keine</em> Matrizen sind. Sie können auch nicht komplett in Arrays und andere Objekte eingebettet werden, ihre Tabelleninhalte extrahiert als Arrays oder Submatrizen jedoch sehr wohl.
+		Tabellen sind Variablen, die für große und insbesondere spaltenweise orientierte Datenmengen optimiert sind. Sie verwalten einzelnene Tabellenblätter ("Sheets"), die jeweils aus ein oder mehreren Spalten zusammengesetzt sind. Jedes Sheet kann dabei eine andere Zahl an Spalten mit jeweils eigenen Typen haben und jede Spalte kann eine andere Zahl an Zellen besitzen (ohne, dass das einen Einfluss auf den Datenzugriff hat, siehe unten). NumeRe versucht dadurch den Speicherverbrauch für die Daten so gering wie möglich zu halten.
+		Durch diese Struktur können Tabellen Daten mit bis zu drei assoziativen Dimensionen abbilden, ohne dass Dimensionen über zusätzliche Spalten ausgerollt werden müssen. Dabei ist zu beachten, dass Tabellen <em>keine</em> Matrizen sind. Sie können auch nicht komplett in Arrays und andere Objekte eingebettet werden, ihre Tabelleninhalte, als Arrays oder Submatrizen extrahiert, jedoch sehr wohl.
+		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> (siehe unten für weitere Details) können aber weitere Tabellen mit anderen Namen erzeugt und mit <code>remove</code> wieder entfernt werden:
+		<codeblock>
+			new TABLE1(), TABLE2(), ...
+			remove TABLE1(), TABLE2(), ...
+		</codeblock>
+		<h>Datentypen in Tabellenspalten</h>
 		Spalten in NumeRe-Tabellen können entweder numerische Werte, Zeit-Datumswerte, Dauern, logische Werte, Kategorien oder <a href="nhlp://string?frame=new">Zeichenketten</a> enthalten. Werden numerische Werte in Zeichenketten-Spalten geschrieben, werden sie automatisch in Zeichenketten konvertiert. Schreiben von Zeichenketten in numerische Spalten ist dagegen <em>nur</em> möglich, wenn die Zeichenketten entsprechend des numerischen Typs interpretiert werden können.
 		Zeit-Datumswerte werden in Sekunden seit dem 01.01.1970 (UTC) mit Mikrosekunden-Präzision gespeichert. Derartige Werte werden von speziellen Funktionen (wie z.B. <code>time()</code> oder <code>timeformat()</code>) generiert und verarbeitet. Zeit-Datumswerte können auch als Zeichenketten in die entsprechenden Spalten geschrieben werden, wenn sie einem der folgenden Schemata oder einer Datums-Zeitkombination davon entsprechen (aufgrund der nicht vorhandenen Eindeutigkeit wird das amerikanische Format <code>MM/DD/YYYY</code> nicht unterstützt):
 		<verbatim>
@@ -70,13 +82,32 @@
 			(-)(YYy )(WWwk )(Dd )(h)h:mm:ss(.uuuuuu)
 			1y 2wk 6d 5:07:49.149080
 		</verbatim>
-		Standardmäßig existiert die Tabelle <code>table()</code>. Mit dem Kommando <code>new</code> können aber weitere Tabellen mit anderen Namen erzeugt werden:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>
-		Einzelne Elemente einer Tabelle können mit der Syntax <code>TABLE(ZEILE, SPALTE)</code> ausgelesen werden. Ebenso können damit auch Werte in die Tabelle geschrieben werden. Dabei sind Tabellen wie gewöhnliche Variablen zu behandeln. Die Indizierung erfolgt dabei durch natürliche Zahlen <em>größer</em> Null: 1,2,3,...
-		Bereiche von Elementen können dabei mit der Syntax <code>ERSTER INDEX:ZWEITER INDEX</code> erhalten werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den minimalen bzw. maximalen Index ergänzt. Fehlen beide Indices, wird folglich der gesamte, mögliche Bereich ausgewählt. Es können auch Zeilen/Spalten aus anderen Tabellen als Indexmenge verwendet werden. Neben numerischen Indices besteht eine Unterstützung für die Auswahl von Spalten anhand ihrer Spaltenüberschriften als Zeichenkette, d.h. <code>TABLE(:,"NAME")</code>
-		Zusätzlich kann mittels <a href="nhlp://operator?frame=new"><code>{START:SCHRITTWEITE:ENDE}</code></a> die Schrittweite der Indizes vorgegeben werden.
-		Wird eine gesamte Spalte in der Form <code>TABLE(:,j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt. Eine Konvertierung kann aber auch durch die Tabellenmethode <code>TABLE().convert(...)</code> (siehe unten) erreicht werden.
-		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nrows</code> die Zahl der Zeilen und <code>ncols</code> die Zahl der Spalten der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden (<code>nlines</code> ist ein Alias). Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
-		Die Spaltenüberschriften können ähnlich gelesen und bearbeitet werden: <code>TABLE(#,SPALTE)</code> bzw. <code>TABLE(#,SPALTE) = KOPF</code>
+		<h>Zugriff auf Daten in Tabellen</h>
+		Elemente einer Tabelle können mit der folgenden Syntax gelesen und geschrieben werden:
+		<codeblock>
+			{ANY} = TABLE(nRowIdx, colIdx=1, sheetIdx=1)
+			TABLE(nRowIdx, colIdx=1, sheetIdx=1) = {ANY}
+		</codeblock>
+		Sheets, Spalten und Zellen, die zuvor nicht existiert haben, geben beim lesenden Zugriff <code>void</code> zurück. Beim schreibenden Zugriff werden die nötigen Elemente automatisch erzeugt und ggf. neuer Speicher allokiert.
+		Für die einzelnen Indices gilt die folgenden Übersicht, wobei die numerische Indizierung durch natürliche Zahlen <em>größer</em> Null (<expr>n = 1, 2, 3, ...</expr>) erfolgt:
+		<list>
+			<item node="nRowIdx">Muss ein Bereich, ein numerischer Wert oder ein Array aus numerischen Werten sein.</item>
+			<item node="colIdx">Kann neben Bereichen, numerischen Werten oder Arrays daraus auch die Spaltennamen (oder Arrays daraus) <code>{"columnname", ...}</code> als Indices verwenden. Erzeugt automatisch neue Spalten mit den verwendeted Spaltennamen beim schreibenden Zugriff, wenn die Spalten nicht bereits vorhanden sind.</item>
+			<item node="sheetIdx">Kann neben Bereichen, numerischen Werten oder Arrays daraus auch die Sheetnamen (oder Arrays daraus) <code>{"sheetname", ...}</code> als Indices verwenden. Erzeugt automatisch neue Sheets mit den verwendeted Sheetnamen beim schreibenden Zugriff, wenn die Sheets nicht bereits vorhanden sind.</item>
+		</list>
+		Bereiche von Elementen können dabei mit der Syntax <code>FIRST:LAST</code> (ähnlich zum <a href="nhlp://operator?frame=new">Vektorinitialisierer</a> <code>{A : B}</code>) definiert werden. Wird dabei einer der beiden Indices weggelassen, wird er automatisch durch den jeweils minimalen bzw. maximalen Index dieser Dimension ergänzt. Fehlen beide Indices (<code>:</code>), wird folglich der gesamte, mögliche Bereich ausgewählt.
+		Wird eine gesamte Spalte in der Form <code>TABLE(:, j) = VALUES</code> überschrieben, so kann dabei auch der Typ der Spalte <code>j</code> von numerisch zu Zeichenkette oder umgekehrt geändert werden. Die Spaltenüberschrift bleibt dabei erhalten; eventuell vorher in der Spalten <code>j</code> enthaltene Daten werden <em>komplett</em> entfernt. Eine Konvertierung kann aber auch durch die Tabellenmethode <code>TABLE().convert(...)</code> erreicht werden.
+		Beim Zugriff auf eine Tabelle enthalten die speziellen Variablen <code>nrows</code> die Zahl der Zeilen, <code>ncols</code> die Zahl der Spalten und <code>nsheets</code> die Zahl der Sheets der aktuellen Tabelle, wenn sie in dessen Argumentklammern verwendet werden (<code>nlines</code> ist ein Alias). Das gilt auch, wenn weitere Datenobjekte im Ausdruck oder als Indexmenge verwendet werden:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
+		Die Spaltenüberschriften können gelesen und bearbeitet werden, wenn <code>#</code> als Index für die Zeile verwendet wird:
+		<codeblock>
+			{STR} = TABLE(#, colIdx, sheetIdx=1)
+			TABLE(#, colIdx, sheetIdx=1) = {STR}
+		</codeblock>
+		Wird außerdem auch für die Spalten <code>#</code> als Index verwendet, so kann auf die Sheetnamen der Tabelle zugegriffen werden:
+		<codeblock>
+			{STR} = TABLE(#, #, sheetIdx=1)
+			TABLE(#, #, sheetIdx=1) = {STR}
+		</codeblock>
 		<h>Kommandos in Zusammenhang mit Tabellen</h>
 		In Zusammenhang mit Tabellen sind spezielle Kommandos verfügbar:
 		<list>
@@ -89,12 +120,12 @@
 			<item node="swap TABLE1(), TABLE2()">Den Inhalt der Tabelle <code>TABLE1</code> mit dem Inhalt von <code>TABLE2</code> vertauschen</item>
 			<item node="save TABLE()">Daten aus der gewählten Tabelle in eine Datei mit automatisch generiertem Namen speichern. Mit <code>save TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen von Anführungszeichen umschlossen sein</item>
 			<item node="export TABLE()">Daten aus der gewählten Tabelle in eine Textdatei mit automatisch generiertem Dateinamen exportieren. Mit <code>export TABLE() -set filename=NAME</code> kann der Dateiname angegeben werden. Dateinamen mit Leerzeichen müssen ebenfalls von Anführungszeichen umschlossen sein. Siehe auch <a href="nhlp://export?frame=new"><code>export</code></a> für weitere Details</item>
-			<item node="delete TABLE(i1:i2,j1:j2)">Alle Einträge von Zeile <expr>i1</expr> bis <expr>i2</expr> und von Spalte <expr>j1</expr> bis <expr>j2</expr> werden unwiderruflich gelöscht. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden</item>
+			<item node="delete TABLE(..., ..., ...)">Alle Einträge im ausgewählten Bereich werden unwiderruflich gelöscht. Dabei kann natürlich auch nur ein einziges Element ausgewählt werden</item>
 			<item node="remove TABLE1(), TABLE2(), ...">Entfernt die Tabellen <code>TABLE1(), TABLE2(), ...</code> komplett</item>
 		</list>
 		An <code>clear</code> und <code>delete</code> kann <code>-ignore</code> angehängt werden, um die erforderliche Bestätigung zu unterdrücken.
 		<h>Methoden für die Arbeit mit Tabellen</h>
-		Tabellen bieten dem Benutzer einige Methoden, die die Arbeit erleichtern und den Code lesbarer machen sollen. Methoden werden mit der Syntax <codeblock>TABLE().METHOD</codeblock> aufgerufen. Die meisten Methoden können dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Standard-Statistikmethoden sind die folgenden:
+		Neben einem großen Satz an dedizierten Tabellen-Methoden (wie z.B. <code>TABLE().convert(...)</code> oder <code>TABLE().anovaof(...)</code>; Details sind im Symbolbaum zu finden) können Tabellen auch mit den Standard-Statistikmethoden aus dem Bereich der vektoriellen Methoden umgehen. Für eine gezielte Anwendung können diese dabei noch durch ein oder mehrere Modifizierer verfeinert werden:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Standard-Statistikmethoden sind die folgenden:
 		<codeblock>
 			TABLE().avg
 			TABLE().std
@@ -111,54 +142,15 @@
 			TABLE().stderr
 			TABLE().rms
 		</codeblock>
-		Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt. Sie können auch mit den Modifizieren auf Gruppen von Zeilen und Spalten eingeschränkt werden.
-		Die folgenden Methoden sind zusätzlich definiert:
-		<list>
-			<item node="TABLE().aliasof(sTable)">Wandelt die aktuelle Tabelle in einen Alias der Tabelle um, deren Name als Zeichenkette <code>sTable</code> übergeben wurde. Die aktuelle Tabelle wird dabei maskiert, so dass währenddessen nicht mehr auf sie zugegriffen werden kann. Wird eine leere Zeichenkette übergeben, wird die Dereferenzierung aufgehoben und der Bezug auf die aktuelle Tabelle wiederhergestellt. Der Name der referenzierten Tabelle wird als Zeichenkette zurückgegeben</item>
-			<item node="TABLE().anovaof({nCategy},nCol,fSignif,nRows)">Führt eine Varianzanalyse (ANOVA) für die Kategorien der Spalten <code>nCategs</code> und die Werte der Spalte <code>nCol</code> unter Verwendung des Signifikanzwertes <code>fSignif</code> für die Zeilen <code>nRows</code> durch. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Es wird eine Schlüssel-Wert-Liste mit den berechneten relevanten Werten zurückgegeben</item>
-			<item node="TABLE().binsof(nCol,nBins)">Berechnet ein einfaches Histogramm der Daten in der Spalte <code>nCol</code>. Wenn die Zahl der Bins <code>nBins</code> nicht vorgegeben wird, wird diese mithilfe der Sturges-Regel bestimmt. Ist die Spalte kategorial, dann werden die Kategorien als Bins verwendet. Bei logischen Spalten werden die logischen Werte als Bins verwendet</item>
-			<item node="TABLE().categoriesof({nCols})">Gibt die Kategorien der ausgewählten kategorialen Spalte(n) als Schlüssel-Wert-Liste zurück. Sind die ausgewählten Spalten nicht kategorial, wird eine leere Zeichenkette zurückgegeben</item>
-			<item node="TABLE().categorize({nCols},{sCategories})">Aktualisiert die Kategorien einer kategorialen Spalte (konvertiert sie sofern nötig). Die Zahl der neuen Kategorien muss dabei nicht mit den bisherigen Kategorien übereinstimmen. Bei Erfolg werden die neuen Kategorien der ausgewählten kategorialen Spalte(n) als Schlüssel-Wert-Liste zurückgegeben</item>
-			<item node="TABLE().cols">Gibt die Zahl der Spalten der Tabelle zurück</item>
-			<item node="TABLE().convert({nCols},sType)">Wandelt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten in den Typ <code>sType</code> um. Der neue Typ kann dabei entweder als <code>"value"</code> (bzw. ein Subtyp davon, siehe <a href="nhlp://variables?frame=new">Variablen</a>), <code>"string"</code>, <code>"datetime"</code>, <code>"duration"</code>, <code>"logical"</code> oder <code>"category"</code> angegeben werden. <code>"auto"</code> führt eine automatische Detektion der besten Konvertierung je Spalte aus. Ist die Konvertierung erfolgreich, wird der neue Typ als Zeichenkette zurückgegeben, anderenfalls ist die Zeichenkette leer. <code>"auto"</code> ist immer erfolgreich, auch wenn keine Spalte konvertiert wurde. Eine Konvertierung ist nur möglich, wenn die in der jeweiligen Spalte verwendeten Daten auch in dem neuen Typ interpretierbar sind</item>
-			<item node="TABLE().countif({nCols},vals{})">Zählt die Elemente in den Spalten <code>nCols</code>, die mit den Werten im Cluster <code>vals{}</code> übereinstimmen. Für jede Spalte und jeden Wert in <code>vals{}</code> wird eine Summe geordnet nach den Spalten zurück gegeben</item>
-			<item node="TABLE().covarof(nCol1,nCol2,nRows1,nRows2)">Berechnet die Kovarianz der Spalten <code>nCol1</code> und <code>nCol2</code>. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension</item>
-			<item node="TABLE().describe(sDesc)">Aktualisiert die Beschreibung der Tabelle oder des Datensatzes zu dem Inhalt von <code>sDesc</code>. Die Beschreibung kann genutzt werden, den Inhalt des Datensatzes in Worten zu beschreiben, indem die Quelle und die Erhebungsmethode dokumentiert wird</item>
-			<item node="TABLE().description">Gibt die Beschreibung der Tabelle bzw. des Datensatzes als String zurück</item>
-			<item node="TABLE().fndcols({sNames},enableRegEx)">Gibt die Indices aller Spalten zurück, deren Überschriften mit <code>sNames</code> übereinstimmen. <code>sNames</code> können reguläre Ausdrücke sein, wenn <code>enableRegEx</code> <code>true</code> ist. Wird nichts gefunden, wird NaN zurückgegeben</item>
-			<item node="TABLE().getunit({nCols})">Gibt die Einheiten der Werte in den Spalten <code>nCols</code> zurück</item>
-			<item node="TABLE().indexof(nCol,vals{})">Gibt die Indices der Elemente in der Spalte <code>nCol</code> zurück, die mit den Werte im Cluster <code>vals{}</code> übereinstimmen. Jeder Satz von Indices ist durch ein NaN von den anderen Sätzen getrennt</item>
-			<item node="TABLE().insertcells(nRow,nCol,nRows,nCols)">Fügt einen Block an <code>nRows x nCols</code> Zellen an der Position <code>{nRow, nCol}</code> in die Tabelle ein. Bereits vorhandene Zellen werden nach unten verschoben bzw. nach rechts, falls <code>[nRow, nRow+nRows]</code> eine gesamte Spalte abdeckt</item>
-			<item node="TABLE().insertcols(nCol,nCols)">Fügt <code>nCols</code> Spalten vor der Spalte <code>nCol</code> in die Tabelle ein</item>
-			<item node="TABLE().insertrows(nRow,nRows)">Fügt <code>nRows</code> Reihen vor der Reihe <code>nRow</code> in die Tabelle ein</item>
-			<item node="TABLE().inSIunits(nCol)">Gibt die Werte der Spalte <code>nCol</code> im SI-Einheiten-System (unter Verwendung kompatibler Einheiten) zurück, sofern eine entsprechende Konversion bekannt ist. Falls keine Konversion bekannt ist, werden die Werte in ihren bisherigen Einheiten zurückgegeben</item>
-			<item node="TABLE().kmeansof({nCols},nClusters,nMaxIter,sMethod,nReInits)">Clustert Daten der Tabelle anhand der Spalten <code>nCols</code>, erzeugt <code>nClusters</code> Cluster und mit <code>nMaxIter</code> Iterationen. Als Initialisierungsmethode <code>sMethod</code> steht <code>"random"</code> oder <code>"kmeans++"</code> zur Verfügung und <code>nReInits</code> gibt an, wie oft kmeans mit verschiedenen random init Werten aufgerufen wird.</item>
-			<item node="TABLE().maxpos">Bestimmt die Position des Maximums der Tabelle und gibt diese in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
-			<item node="TABLE().minpos">Bestimmt die Position des Minimums der Tabelle und gibt diese in Zeilen und Spalten zurück. Im Fall eines mehrfachen Auftretens desselben Wertes, wird nur die zuerst gefundene Position zurückgegeben</item>
-			<item node="TABLE().name">Gibt die Bezeichnung der Tabelle als String zurück, was Konstrukte wie <code>to_string(TABLE())</code> verkürzt</item>
-			<item node="TABLE().pcorrof(nCol1,nCol2,nRows1,nRows2)">Berechnet die <em>Pearson</em>-Korrelation der Spalten <code>nCol1</code> und <code>nCol2</code>. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Die Pearson-Korrelation kann nur aus numerischen Werten berechnet werden</item>
-			<item node="TABLE().rankof(nCol,cType,nRows)">Berechnet die Ränge der Werte in der Spalte <code>nCol</code> for die Zeilen <code>nRows</code> gemäß des Typs <code>cType</code>. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Der Typ <code>cType</code> gibt vor, wie die Ränge vergeben werden. <code>cType = "c"</code>: kompetetiv, d.h. nach dem <em>1-2-2-4-Schema</em>, <code>cType = "f"</code>: fraktioniert, d.h. nach dem <em>1-2.5-2.5-4-Schema</em>, <code>cType = "d"</code>: konsekutiv-dicht, d.h. nach dem <em>1-2-2-3-Schema</em></item>
-			<item node="TABLE().removecells(nRow,nCol,nRows,nCols)">Entfernt einen Block an <code>nRows x nCols</code> Zellen ab der Position <code>{nRow, nCol}</code> aus der Tabelle. Unten nachfolgende Zellen werden dabei nach oben verschoben bzw. nach links, falls <code>[nRow, nRow+nRows]</code> eine gesamte Spalte abdeckt</item>
-			<item node="TABLE().removecols({nCols})">Entfernt die Spalten <code>{nCols}</code> aus der Tabelle. Nachfolgende Spalten werden nach links verschoben</item>
-			<item node="TABLE().removerows({nRows})">Entfernt die Reihen <code>{nRows}</code> aus der Tabelle. Nachfolgende Reihen werden nach oben verschoben</item>
-			<item node="TABLE().reordercols({nCols},{nNewOrder})">Sortiert die Spalten <code>{nCols}</code> gemäß der neuen Ordnung <code>{nNewOrder}</code> um. Die Indices <code>{nNewOrder}</code> müssen dabei eine Permutation von <code>{1:num({nCols})}</code> sein. Liefert <code>true</code>, wenn eine Umsortierung möglich war</item>
-			<item node="TABLE().reorderrows({nRows},{nNewOrder})">Sortiert die Zeilen <code>{nRows}</code> gemäß der neuen Ordnung <code>{nNewOrder}</code> um. Die Indices <code>{nNewOrder}</code> müssen dabei eine Permutation von <code>{1:num({nRows})}</code> sein. Liefert <code>true</code>, wenn eine Umsortierung möglich war</item>
-			<item node="TABLE().rows">Gibt die Zahl der Zeilen der Tabelle zurück</item>
-			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Berechnet die <em>Spearman</em>-Korrelation der Spalten <code>nCol1</code> und <code>nCol2</code>. Die jeweiligen Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Die Spearman-Korrelation kann von allen Variablentypen berechnet werden. Bei der Berechnung der zugehörigen Ränge wird Groß- und Kleinschreibung berücksichtigt</item>
-			<item node="TABLE().setunit({nCols},{sUnits})">Weist den Spalten <code>nCols</code> die Einheit(en) <code>sUnits</code> zu. Enthält <code>sUnits</code> nur einen Wert, wird dieser für alle Spalten verwendet, anderenfalls werden die Einheiten auf die jeweiligen Spalten verteilt. Bei Erfolg wird <code>sUnits</code> zurückgegeben, sonst ist die Zeichenkette leer</item>
-			<item node="TABLE().shrink">Entfernt leere, anhängende Zellen und Spalten aus der Tabelle, um Speicherplatz zu sparen. Leere Zellen und Spalten, die von validen Daten umschlossen sind, werden beibehalten</item>
-			<item node="TABLE().size">Gibt die Größe der Tabelle in Zeilen und Spalten zurück</item>
-			<item node="TABLE().toSIunits({nCols},sMode,showOnly)">Wandelt die Werte der Spalten <code>nCols</code> in SI-(bzw. SI-kompatible) Einheiten um, sofern eine Konversion bekannt ist. Gibt die neuen (oder bisherigen) Einheiten als Zeichenketten zurück. <code>sMode</code> kann verwendet werden, um die Form der Konversion zu beeinflussen:<br/>- <code>sMode = ""</code>: Direkte Konversion ohne Anpassungen<br/>- <code>sMode = "base"</code>: Konversion mit Überführung in SI-Basis-Einheiten<br/>- <code>sMode = "simplify"</code>: Vereinheitlichung in vereinfachte, SI-kompatible Einheiten<br/>Mit <code>showOnly = true</code> werden nur die Konversionfaktoren und die neuen Einheiten angezeigt und keine Konversion durchgeführt</item>
-			<item node="TABLE().typeof({nCols})">Gibt den Spaltentyp der mit <code>{nCols}</code> indizierten Spalten als Zeichenketten zurück. Der Typ kann dabei entweder als <code>"value"</code> (bzw. ein Subtyp davon, siehe <a href="nhlp://variables?frame=new">Variablen</a>), <code>"string"</code>, <code>"datetime"</code>, <code>"duration"</code>, <code>"logical"</code> oder <code>"category"</code> angegeben werden. Leere oder nicht vorhandene Spalten haben den Typ <code>"none"</code></item>
-			<item node="TABLE().zscoreof(nCol,nRows)">Berechnet die Standardisierung der Werte bezogen auf ihre Abweichung vom Mittelwert (auch z-Score genannt) in der Spalte <code>nCol</code> für die Zeilen <code>nRows</code>. Die Zeilen können vorgegeben werden und entsprechen standardmäßig der vollen Dimension. Mittelwert und Standardabweichung werden stets bezogen auf die ausgewählten Zeilen berechnet</item>
-		</list>
+		Sie entsprechen den gleichnamigen Standardfunktionen und werden auf alle Elemente der gewählten Tabelle ausgeführt.
 		Als Modifizierer sind die folgenden definiert:
 		<list>
 			<item node=".rows">Wendet in Kombination mit einer weiteren Methode diese zeilenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück (<code>.lines</code> ist ein Alias)</item>
 			<item node=".cols">Wendet in Kombination mit einer weiteren Methode diese spaltenweise an und gibt eine entsprechende Anzahl an Ergebnissen zurück</item>
 			<item node=".grid">Deklariert die aktuelle Tabelle als Datengitter, so dass die ersten beiden Spalten für die Berechnung ignoriert werden</item>
-			<item node=".cells(nFirst,nIncr=nFirst)">Wählt in Kombination mit <code>.cols</code> oder <code>.rows</code> die erste (<code>nFirst</code>) Zeile/Spalte aus, ab der die Multi-Argumentfunktion angewendet wird und erlaubt damit die Auswahl von Tabellenzellen entlang der Auswertungsrichtung (wählt z.B. bei <code>.rows</code> die Zellen entlang der Zeilen aus). Mittels <code>nIncr</code> kann nur jede <code>nIncr</code>-te Spalte/Zeile ausgewählt werden. Wird nur <code>nFirst</code> vorgegeben, so ist <code>nIncr == nFirst</code>. Zeilen/Spalten können auch gezielt ausgewählt werden, wenn ein Vektor für <code>nFirst</code> übergeben wird: <code>cells({VEC})</code></item>
-			<item node=".every(nFirst,nIncr=nFirst)">Ermöglicht es mit <code>rows</code> oder <code>cols</code>, die erste Spalte/Zeile (<code>nFirst</code>) und das Inkrement (jede => <code>nIncr=1</code>, jede zweite => <code>nIncr=2</code>, etc.) vorzugeben. Wird nur ein Wert vorgegeben, so wird dieser für beide Werte verwendet. Spalten/Zeilen können auch gezielt ausgewählt werden, wenn ein Vektor für <code>nFirst</code> (<code>.every({1:10})</code>) übergeben wird</item>
+			<item node=".cells(nFirst,nIncr=0)">Wählt in Kombination mit <code>.cols</code> oder <code>.rows</code> die erste (<code>nFirst</code>) Zeile/Spalte aus, ab der die Multi-Argumentfunktion angewendet wird und erlaubt damit die Auswahl von Tabellenzellen entlang der Auswertungsrichtung (wählt z.B. bei <code>.rows</code> die Zellen entlang der Zeilen aus). Mittels <code>nIncr</code> kann nur jede <code>nIncr</code>-te Spalte/Zeile ausgewählt werden</item>
+			<item node=".every(nFirst,nIncr=0)">Ermöglicht es mit <code>rows</code> oder <code>cols</code>, die erste Spalte/Zeile (<code>nFirst</code>) und das Inkrement mit <code>nIncr</code> vorzugeben.</item>
+			<item node=".slices(nFirst,nIncr=0)">Wählt das Sheet <code>nFirst</code> aus, auf dem die Methode angewendet werden soll. Mittels <code>nIncr</code> kann nur jedes <code>nIncr</code>-te Sheet ausgewählt werden</item>
 			<item node=".scwin(nCol,nWidth,nStep=1)">Definiert für die Spalte <code>nCol</code> ein gleitendes Fenster der Breite <code>nWidth</code> und der Schrittweite <code>nStep</code>, innerhalb dessen eine Multi-Argumentfunktion auf die Daten in <code>nCol</code> angewendet wird. Für jeden Schritt wird die Multi-Argumentfunktion einmal angewendet und das Ergebnis zurückgegeben. Das Fenster ist dabei an der linken Intervallgrenze verankert, wobei nur solche ausgewertet werden, die komplett im Datenbereich liegen. Der Datenbereich kann dabei auch durch den <code>.cells()</code>-Modifizierer bestimmt werden.</item>
 			<item node=".srwin(nRow,nWidth,nStep=1)">Definiert für die Zeile <code>nRow</code> ein gleitendes Fenster der Breite <code>nWidth</code> und der Schrittweite <code>nStep</code>, innerhalb dessen eine Multi-Argumentfunktion auf die Daten in <code>nRow</code> angewendet wird. Für jeden Schritt wird die Multi-Argumentfunktion einmal angewendet und das Ergebnis zurückgegeben. Das Fenster ist dabei an der linken Intervallgrenze verankert, wobei nur solche ausgewertet werden, die komplett im Datenbereich liegen. Der Datenbereich kann dabei auch durch den <code>.cells()</code>-Modifizierer bestimmt werden.</item>
 		</list>

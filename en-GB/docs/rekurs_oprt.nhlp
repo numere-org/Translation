@@ -67,10 +67,10 @@
 				<td>Linear indexing*</td><td><code>A[n]</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Multidimensional indexing*</td><td><code>A(r,c,...)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
-			</tr>
+				<td>Multidimensional indexing*</td><td><code>A(r, c,...)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+			</tr> 
 			<tr>
-				<td>Cluster indexing*</td><td><code>A{n,...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+				<td>Cluster indexing*</td><td><code>A{n, ...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Factorial</td><td><code>A!</code></td><td></td><td>&#x2713;</td><td></td>
@@ -145,6 +145,6 @@
 				<td>Linebreak</td><td><code>\\</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 		</table>
-		<em>* Note:</em> The linear index and multidimensional index are only available for "single-type" variable arrays (arrays that contain only one variable type), while the cluster index is only available for clusters.
+		<em>* Note:</em> The linear index and multidimensional index are only available for "single-type" variable arrays (arrays that contain only one variable type), while the cluster index is only available for clusters. Tables use the multidimensional index as well, up to the third dimension.
 	</contents>
 </article>

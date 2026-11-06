@@ -36,11 +36,16 @@
 	</keywords>
 	<contents>
 		<syntax>
-			{VAL} = TABLE(i1:i2,j1:j2)
-			{VAL} = TABLE({START:STEPWIDTH:END},:)
-			TABLE(i1:i2,j1:j2) = {VAL}\n
-			{STR} = TABLE(#,j1:j2)
-			TABLE(#,j1:j2) = {STR}\n
+			{ANY} = TABLE(nRowIdx, colIdx=1, sheetIdx=1)
+			{ANY} = TABLE(..., {"columnname"}, ...)
+			{ANY} = TABLE(..., ..., {"sheetname"})
+			TABLE(..., ..., ...) = {ANY}\n
+			{STR} = TABLE(#, colIdx, sheetIdx=1)
+			{STR} = TABLE(#, #, sheetIdx)
+			TABLE(#, ..., ...) = {STR}
+			TABLE(#, #, sheetIdx) = {STR}\n
+			OTHERTAB() = TABLE()
+			OTHERTAB(..., ..., ...) = TABLE(..., ..., ...)\n
 			new TABLE(), ...
 			remove TABLE(), ...\n
 			clear TABLE()
@@ -53,7 +58,14 @@
 			rename TABLE(), NEWNAME()\n
 			swap TABLE1(), TABLE2()
 		</syntax>
-		Tables are special two-dimensional variables in NumeRe that manage tabular data so that it can be further processed. Tabular data is characterised by the fact that the data is organised in columns. Please note that tables are <em>not</em> matrices. They cannot be embedded into arrays and other objects completely, however, their table contents extracted as arrays or submatrices can.
+		Tables are variables optimised for large datasets, particularly those organised in columns. They manage individual table sheets, each of which consists of one or more columns. Each sheet can have a different number of columns, each with its own data type, and each column can contain a different number of cells (without this affecting data access; see below). NumeRe thereby attempts to keep the memory usage for the data as low as possible.
+		Thanks to this structure, tables can represent data with up to three associative dimensions without the need to expand dimensions across additional columns. It should be noted that tables <em>are not</em> matrices. Nor can they be fully embedded in arrays or other objects; however, their table contents, when extracted as arrays or sub-matrices, can be.
+		By default, the table <code>table()</code> exists. However, using the command <code>new</code> (see below for further details), additional tables with different names can be created and removed again using <code>remove</code>:
+		<codeblock>
+            new TABLE1(), TABLE2(), ...
+            remove TABLE1(), TABLE2(), ...
+        </codeblock>
+        <h>Data types in table columns</h>
 		Columns in NumeRe tables can contain either numeric values, date-time values, durations, logical values, categories or <a href="nhlp://string?frame=new">strings</a>. If numeric values are written to string columns, they are automatically converted to strings. Writing strings to numeric columns, on the other hand, is <em>only</em> possible, if the strings can be interpreted as numerical values of said type.
 		Time-date values are stored in seconds since Jan 1st, 1970 (UTC) with microsecond precision. Such values are generated and processed by special functions (such as <code>time()</code> or <code>timeformat()</code>). Time-date values can also be written as strings into the corresponding columns if they correspond to one of the following schemes or a date-time combination thereof (due to the lack of unambiguousness, the American format <code>MM/DD/YYYY</code> is not supported):
 		<verbatim>
@@ -70,13 +82,32 @@
             (-)(YYy )(WWwk )(Dd )(h)h:mm:ss(.uuuuuu)
             1y 2wk 6d 5:07:49.149080
         </verbatim>
-		By default, the table <code>table()</code> exists. With the command <code>new</code>, however, further tables with other names can be created:<codeblock>new TABLE1(), TABLE2(), ...</codeblock>.
-		Individual elements of a table can be read out with the syntax <code>TABLE(ROW, COLUMN)</code>. Likewise, values can also be written into the table with it. Tables are to be treated like ordinary variables. The indexing is done by natural numbers <em>greater than</em> zero: 1,2,3,...
-		Ranges of elements can be obtained with the syntax <code>FIRST INDEX:SECOND INDEX</code>. If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index. If both indices are missing, the entire possible range is selected. Rows/columns from other tables can also be used as index sets. Besides numerical indices, there is support for selecting the columns according their column headings as strings, i.e. <code>TABLE(:,"NAME")</code>
-		Additionally, the step size of the indices can be specified using <a href="nhlp://operator?frame=new"><code>{START:STEPWIDTH:END}</code></a>.
-		If an entire column is overwritten in the form <code>TABLE(:,j) = VALUES</code>, the type of the column <code>j</code> can also be changed from numeric to string or vice versa. The column heading is retained; any data previously contained in the <code>j</code> column is <em>completely</em> removed. A conversion can also be achieved using the table method <code>TABLE().convert(...)</code> (see below).
-		When accessing a table, the special variables <code>nrows</code> contain the number of rows and <code>ncols</code> the number of columns of the current table when used in its argument brackets (<code>nlines</code> is an alias). This is also true if other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>.
-		The column headings can be read and edited similarly: <code>TABLE(#,COLUMN)</code> bzw. <code>TABLE(#,COLUMN) = HEAD</code>
+		<h>Accessing data in tables</h>
+        Elements of a table can be read and written using the following syntax:
+        <codeblock>
+            {ANY} = TABLE(nRowIdx, colIdx=1, sheetIdx=1)
+			TABLE(nRowIdx, colIdx=1, sheetIdx=1) = {ANY}
+        </codeblock>
+        Sheets, columns and cells that did not previously exist return <code>void</code> when read. When written to, the necessary elements are automatically created and, where necessary, new memory is allocated.
+		The following overview applies to the individual indices, whereby numerical indexing is carried out using natural numbers <em>greater</em> than zero (<expr>n = 1, 2, 3, ...</expr>):
+        <list>
+            <item node="nRowIdx">Must be a range, a numerical value or an array of numerical values. </item>
+            <item node="colIdx">In addition to ranges, numeric values or arrays of such values, it can also use column names (or arrays of such names) <code>{"columnname", ...}</code> as indices. Automatically creates new columns with the column names used during write access if the columns do not already exist.</item>
+			<item node="sheetIdx">In addition to ranges, numeric values or arrays of these, you can also use sheet names (or arrays of these) <code>{"sheetname", ...}</code> as indices. Automatically creates new sheets with the specified sheet names during write access if the sheets do not already exist.</item>
+        </list>
+		Ranges of elements can be defined using the syntax <code>FIRST:LAST</code> (similar to the <a href="nhlp://operator?frame=new">vector initialiser</a> <code>{A : B}</code>). If one of the two indices is omitted, it is automatically supplemented by the minimum or maximum index of that dimension, respectively. If both indices are omitted (<code>:</code>), the entire possible range is consequently selected.
+        If an entire column is overwritten in the form <code>TABLE(:, j) = VALUES</code>, the type of column <code>j</code> can also be changed from numeric to string or vice versa. The column header is retained; any data previously contained in the column <code>j</code> is <em>completely</em> removed. However, a conversion can also be achieved using the table method <code>TABLE().convert(...)</code>.
+		When accessing a table, the special variables <code>nrows</code> contain the number of rows, <code>ncols</code> the number of columns and <code>nsheets</code> the number of sheets in the current table, when used within its argument brackets (<code>nlines</code> is an alias). This also applies when other data objects are used in the expression or as an index set:<codeblock>TABLE1(:, ncols+1) = TABLE2(TABLE3(:nrows-10, 1), ncols-4)</codeblock>
+		The column headings can be read and edited if <code>#</code> is used as an index for the row:
+        <codeblock>
+            {STR} = TABLE(#, colIdx, sheetIdx=1)
+            TABLE(#, colIdx, sheetIdx=1) = {STR}
+        </codeblock>
+		If <code>#</code> is also used as an index for the columns, the sheet names of the table can be accessed:
+        <codeblock>
+            {STR} = TABLE(#, #, sheetIdx=1)
+            TABLE(#, #, sheetIdx=1) = {STR}
+        </codeblock>
 		<h>Commands in combination with tables</h>
 		Special commands are available in connection with tables:
 		<list>
@@ -89,12 +120,12 @@
 			<item node="swap TABLE1(), TABLE2()">Swap the contents of the table <code>TABLE1</code> with the contents of <code>TABLE2</code></item>
 			<item node="save TABLE()">Save data from the selected table to a file with an automatically generated name. With <code>save TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must be enclosed by quotation marks</item>
 			<item node="export TABLE()">Export data from the selected table to a text file with automatically generated file name. With <code>export TABLE() -set filename=NAME</code> the file name can be specified. File names with spaces must also be enclosed in quotation marks. See also <a href="nhlp://export?frame=new"><code>export</code></a> for further details</item>
-			<item node="delete TABLE(i1:i2,j1:j2)">All entries from line <expr>i1</expr> to <expr>i2</expr> and from column <expr>j1</expr> to <expr>j2</expr> are irreversibly deleted. Of course, you can also select only a single element</item>
+			<item node="delete TABLE(..., ..., ...)">All entries in the selected range will be permanently deleted. Of course, it is also possible to select just a single element</item>
 			<item node="remove TABLE1(), TABLE2(), ...">Removes the tables <code>TABLE1(), TABLE2(), ...</code> completely</item>
 		</list>
 		It is possible to append <code>-ignore</code> to <code>clear</code> and <code>delete</code> to suppress the required confirmation.
 		<h>Methods for working with tables</h>
-		Tables provide the user with some methods to make the work easier and the code more readable. Methods are called with the syntax <codeblock>TABLE().METHOD</codeblock>. Most methods can be refined by one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>Standard statistic methods are the following:
+		In addition to a large set of dedicated table methods (such as <code>TABLE().convert(...)</code> or <code>TABLE().anovaof(...)</code>; details can be found in the symbol tree), tables can also be handled using the standard statistical methods from the vector methods section. For a specific application, these can be further refined using one or more modifiers:<codeblock>TABLE().METHOD.MODIFIER1.MODIFIER2</codeblock>The standard statistical methods are as follows:
 		<codeblock>
 			TABLE().avg
 			TABLE().std
@@ -111,57 +142,18 @@
 			TABLE().stderr
 			TABLE().rms
 		</codeblock>
-		They correspond to the standard functions of the same name and are executed on all elements of the selected table. They may also be restricted to a group of rows and columns using the mentioned modifiers.
-		The following methods are additionally defined:
-		<list>
-			<item node="TABLE().aliasof(sTable)">Converts the current table into an alias of the table whose name was passed as the <code>sTable</code> string. The current table is masked so that it cannot be accessed during this process. If an empty string is passed, the dereferencing is reversed and the reference to the current table is restored. The name of the dereferenced table is returned</item>
-			<item node="TABLE().anovaof({nCategy},nCol,fSignif,nRows)">Performs an analysis of variance (ANOVA) for the categories of columns <code>nCategs</code> and the values of column <code>nCol</code> using the significance value <code>fSignif</code> for rows <code>nRows</code>. The rows can be specified and by default correspond to the full dimension. A key-value list with the calculated relevant values is returned</item>
-			<item node="TABLE().binsof(nCol,nBins)">Calculates a simple histogram of the data in the column <code>nCol</code>. If the number of bins <code>nBins</code> is not specified, it is determined using the Sturges rule. If the column is categorical, then the categories are used as bins. For logical columns, the logical values are used as bins</item>
-			<item node="TABLE().categoriesof({nCols})">Returns the categories of the selected categorial column(s) as a key-value list. The return value is an empty string, if the selected columns are not categorial</item>
-			<item node="TABLE().categorize({nCols},{sCategories})">Updates the categories in a categorial column (converts the column, if necessary). The number of new categories does not have to match the old number. Returns the categories of the selected categorial column(s) as a key-value list in case of success</item>
-			<item node="TABLE().cols">Returns the number of columns of the table</item>
-			<item node="TABLE().convert({nCols},sType)">Converts the column type of the columns indexed with <code>{nCols}</code> into the type <code>sType</code>. The new type can be specified either as <code>"value"</code> (or a subtype thereof, see <a href="nhlp://variables?frame=new">variables</a>), <code>"string"</code>, <code>"datetime"</code>, <code>"duration"</code>, <code>"logical"</code> or <code>"category"</code>. <code>"auto"</code> performs an auto-detect of the best fitting column type per column. If the conversion is successful, the new type is returned as a string, otherwise the string is empty. <code>"auto"</code> returns success always even if no column was actually converted. Conversion is only possible if the data used in the respective column can also be interpreted in the new type</item>
-			<item node="TABLE().countif({nCols},vals{})">Counts the elements in columns <code>nCols</code> that match the values in cluster <code>vals{}</code>. For each column and value in <code>vals{}</code>, a sum is returned ordered by the columns</item>
-			<item node="TABLE().covarof(nCol1,nCol2,nRows1,nRows2)">Calculates the covariance of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default</item>
-			<item node="TABLE().describe(sDesc)">Updates the description of the table or dataset to the contents of <code>sDesc</code>. The description can be used to describe the content of the dataset in words by documenting the source and the collection method</item>
-			<item node="TABLE().description">Returns the description of the table or dataset as a string</item>
-			<item node="TABLE().fndcols({sNames},enableRegEx)">Returns the indices of all columns whose headings match <code>sNames</code>. <code>sNames</code> can be regular expressions if <code>enableRegEx</code> is <code>true</code>. If nothing is found, NaN is returned</item>
-			<item node="TABLE().getunit({nCols})">Returns the units of the values in the columns <code>nCols</code></item>
-			<item node="TABLE().indexof(nCol,vals{})">Returns the indices of the elements in column <code>nCol</code> that match the values in cluster <code>vals{}</code>. Each set of indices is separated from the other sets by a NaN</item>
-			<item node="TABLE().insertcells(nRow,nCol,nRows,nCols)">Inserts a block of <code>nRows x nCols</code> cells at position <code>{nRow, nCol}</code> into the table. Already existing cells will be moved down or to the right if <code>[nRow, nRow+nRows]</code> covers an entire column</item>
-			<item node="TABLE().insertcols(nCol,nCols)">Inserts <code>nCols</code> columns before column <code>nCol</code> into the table</item>
-			<item node="TABLE().insertrows(nRow,nRows)">Inserts <code>nRows</code> rows before the row <code>nRow</code> into the table</item>
-			<item node="TABLE().inSIunits(nCol)">Returns the values of the column <code>nCol</code> in the SI units system using also compatible units, if a corresponding conversion is known. Otherwise, the values are returned in their previous units</item>
-			<item node="TABLE().kmeansof({nCols},nClusters,nMaxIter,sMethod,nReInits)">Clusters data of the table based on the columns <code>nCols</code>, creates <code>nClusters</code> clusters, with <code>nMaxIter</code> iterations. As initialisation method <code>sMethod</code> <code>"random"</code> or <code>"kmeans++"</code> are available and <code>nReInits</code> specifies how many times kmeans is called with different random init values.</item>
-			<item node="TABLE().maxpos">Determines the position of the maximum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
-			<item node="TABLE().minpos">Determines the position of the minimum of the table and returns the values in rows and columns. In case of multiple occurences of the same value, only the first found occurence is returned</item>
-			<item node="TABLE().name">Returns the name of the table as string, which shortens constructs like <code>to_string(TABLE())</code></item>
-			<item node="TABLE().pcorrof(nCol1,nCol2,nRows1,nRows2)">Calculates the <em>Pearson</em> correlation of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default. The Pearson correlation can only be calculated from numerical values</item>
-			<item node="TABLE().rankof(nCol,cType,nRows)">Calculates the ranks of the values in the column <code>nCol</code> for the rows <code>nRows</code> according the type <code>cType</code>. The rows can be specified and correspond to the full dimension by default. The type <code>cType</code> determines how ranks are assigned. <code>cType = "c"</code>: competetively, i.e. according to the <em>1-2-2-4 scheme</em>, <code>cType = "f"</code>: fractionally, i.e. according to the <em>1-2.5-2.5-4 scheme</em>, <code>cType = "d"</code>: consecutive-dense, i.e. according to the <em>1-2-2-3 scheme</em></item>
-			<item node="TABLE().removecells(nRow,nCol,nRows,nCols)">Removes a block of <code>nRows x nCols</code> cells from the table starting at position <code>{nRow, nCol}</code>. Cells following below will be moved up or to the left if <code>[nRow, nRow+nRows]</code> covers an entire column</item>
-			<item node="TABLE().removecols({nCols})">Removes the columns <code>{nCols}</code> from the table. Subsequent columns are moved to the left</item>
-			<item node="TABLE().removerows({nRows})">Removes the rows <code>{nRows}</code> from the table. Subsequent rows are moved up</item>
-			<item node="TABLE().reordercols({nCols},{nNewOrder})">Sorts the columns <code>{nCols}</code> according the new order <code>{nNewOrder}</code>. The indices <code>{nNewOrder}</code> have to be a permutation of <code>{1:num({nCols})}</code>. Returns <code>true</code>, if the reordering was successful</item>
-			<item node="TABLE().reorderrows({nRows},{nNewOrder})">Sorts the rows <code>{nRows}</code> according the new order <code>{nNewOrder}</code>. The indices <code>{nNewOrder}</code> have to be a permutation of <code>{1:num({nRows})}</code>. Returns <code>true</code>, if the reordering was successful</item>
-			<item node="TABLE().rows">Returns the number of rows of the table</item>
-			<item node="TABLE().scorrof(nCol1,nCol2,nRows1,nRows2)">Calculates the <code>Spearman</code> correlation of the columns <code>nCol1</code> and <code>nCol2</code>. The respective rows can be specified and correspond to the full dimension by default. The Spearman correlation can be calculated from all variable types. The calculation of the corresponding ranks is case sensitive</item>
-			<item node="TABLE().setunit({nCols},{sUnits})">Assigns the unit(s) <code></code>sUnits to the columns <code>nCols</code>. If <code>sUnit</code> contains only one unit, then this is used for all columns. Otherwise, the units are distributed over the respective columns. Returns <code>sUnits</code> if successful, otherwise the returned string is empty</item>
-			<item node="TABLE().shrink">Removes empty trailing cells and columns from the table to save memory. Empty cells and columns surrounded by valid data won't be removed</item>
-			<item node="TABLE().size">Returns the size of the table in rows and columns</item>
-			<item node="TABLE().toSIunits({nCols},sMode,showOnly)">Converts the values in the columns <code>nCols</code> to SI (or compatible) units, if a corresponding conversion is known. Returns the new (or previous) units as strings. <code>sMode</code> can be used to influence the form of the conversion:<br/>- <code>sMode = ""</code>: Direct conversion without adjustments<br/>- <code>sMode = "base"</code>: Conversion with conversion to SI base units<br/>- <code>sMode = "simplify"</code>: Combination into SI compatible, simplified units<br/>With <code>showOnly = true</code>, only the conversion factors and the new units are displayed and no conversion is performed</item>
-			<item node="TABLE().typeof({nCols})">Returns the column type of the columns indexed with <code>{nCols}</code> as strings. The new type can be specified either as <code>"value"</code> (or a subtype thereof, see <a href="nhlp://variables?frame=new">variables</a>), <code>"string"</code>, <code>"datetime"</code>, <code>"duration"</code>, <code>"logical"</code> or <code>"category"</code>. Empty or non-existent columns have the type <code>"none"</code></item>
-			<item node="TABLE().zscoreof(nCol,nRows)">Calculates the standardization of the values related to their deviation from the mean (also called z-score) in the column <code>nCol</code> for the rows <code>nRows</code>. The rows can be specified and correspond to the full dimension by default. Mean and standard deviation are always calculated related to the selected rows</item>
-		</list>
-		The following are defined as modifiers:
-		<list>
-			<item node=".rows">Applies, in combination with another method, this method line by line and returns a corresponding number of results (<code>.lines</code> is an alias)</item>
-			<item node=".cols">Applies, in combination with another method, this method column by column and returns a corresponding number of results</item>
-			<item node=".grid">Declares the current table as a data grid so that the first two columns are ignored for the calculation</item>
-			<item node=".cells(nFirst,nIncr=nFirst)">This method chooses in combination with <code>.cols</code> or <code>.rows</code> the first (<code>nFirst</code>) row/column, on which the multi-argument function will be applied enabling the selection of table cells along the direction of evaluation (e.g. it selects the cells along the rows together with <code>.rows</code>). With the argument <code>nIncr</code> one may choose whether only each <code>nIncr</code>-th column/row shall be selected. If only <code>nFirst</code> is passed, then <code>nIncr</code> will be identical to <code>nFirst</code>. Columns/rows may also be selected directly, if a vector is passed for <code>nFirst</code>: <code>cells({VEC})</code></item>
-			<item node=".every(nFirst,nIncr=nFirst)">Use with <code>rows</code> or <code>cols</code> to specify the first column/row (<code>nFirst</code>) and the increment (each => <code>nIncr=1</code>, each second => <code>nIncr=2</code>, etc.). If only one value is specified, it is used for both values. Columns/rows can also be specifically selected if a vector for <code>nFirst</code> (<code>.every({1:10})</code>) is passed</item>
-			<item node=".scwin(nCol,nWidth,nStep=1)">Defines a sliding window of width <code>nWidth</code> and step width <code><code></code></code> for the column <code>nCol</code>, within which a multi-argument function is applied to the data in <code>nCol</code>. The multi-argument function is applied once for each step and the result is returned. The window is anchored to the left interval boundary, whereby only those intervals are evaluated that lie completely within the data range. The data range can also be determined by the <code>.cells()</code> modifier.</item>
-			<item node=".srwin(nRow,nWidth,nStep=1)">Defines a sliding window of width <code>nWidth</code> and step width <code>nStep</code> for the row <code>nRow</code>, within which a multi-argument function is applied to the data in <code>nRow</code>. The multi-argument function is applied once for each step and the result is returned. The window is anchored to the left interval boundary, whereby only those steps are evaluated that lie completely within the data range. The data range can also be determined by the <code>.cells()</code> modifier.</item>
-		</list>
+		They correspond to the standard functions of the same name and are executed on all elements of the selected table.
+		The following modifiers are defined:
+        <list>
+            <item node=".rows">When used in combination with another method, this applies the method row by row and returns a corresponding number of results (<code>.lines</code> is an alias)</item>
+			<item node=".cols">When used in combination with another method, applies it column by column and returns a corresponding number of results</item>
+            <item node=".grid">Declares the current table as a data grid, so that the first two columns are ignored for the calculation</item>
+            <item node=".cells(nFirst,nIncr=0)" >When used in combination with <code>.cols</code> or <code>.rows</code>, this selects the first (<code>nFirst</code>) row/column from which the multi-argument function is applied, thereby allowing the selection of table cells along the evaluation direction (e.g. with <code>.rows</code>, it selects the cells along the rows). Using <code>nIncr</code>, only every <code>nIncr</code>th column or row can be selected</item>
+			<item node=".every(nFirst,nIncr=0)">Enables you to specify the first column/row (<code>nFirst</code>) and the increment <code>nIncr</code> using <code>rows</code> or <code>cols</code>.</item>
+			<item node=".slices(nFirst,nIncr=0)">Selects the sheet <code>nFirst</code> to which the method is to be applied. Using <code>nIncr</code>, only every <code>nIncr</code>th sheet can be selected</item>
+			<item node=".scwin(nCol,nWidth,nStep=1)">Defines a sliding window for the column <code>nCol</code> with a width of <code>nWidth</code> and a step size of <code>nStep</code>, within which a multi-argument function is applied to the data in <code>nCol</code>. For each step, the multi-argument function is applied once and the result is returned. The window is anchored to the left boundary of the interval, with only those steps being evaluated that lie entirely within the data range. The data range can also be specified using the <code>.cells()</code> modifier.</item>
+			<item node=".srwin(nRow,nWidth,nStep=1)">Defines a sliding window for row <code>nRow</code> with a width of <code>nWidth</code> and a step size of <code>nStep</code>, within which a multi-argument function is applied to the data in <code>nRow</code>. For each step, the multi-argument function is applied once and the result is returned. The window is anchored to the left boundary of the interval, with only those values being evaluated that lie entirely within the data range. The data range can also be specified using the <code>.cells()</code> modifier.</item>
+        </list>
 		<example desc="Display data in the table <code>table()</code>, then sort columns 3-6 in ascending order by column 1 and calculate the sum of every second column:">
 			show table()
 			[...]

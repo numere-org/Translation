@@ -67,10 +67,10 @@
 				<td>Linearer Index*</td><td><code>A[n]</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Multidimensionaler Index*</td><td><code>A(r,c,...)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+				<td>Multidimensionaler Index*</td><td><code>A(r, c, ...)</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
-				<td>Cluster-Index*</td><td><code>A{n,...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
+				<td>Cluster-Index*</td><td><code>A{n, ...}</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 			<tr>
 				<td>Fakultät</td><td><code>A!</code></td><td></td><td>&#x2713;</td><td></td>
@@ -145,6 +145,6 @@
 				<td>Zeilenumbruch</td><td><code>\\</code></td><td></td><td>&#x2713;</td><td>&#x2713;</td>
 			</tr>
 		</table>
-		<em>* Hinweis:</em> Der lineare Index und der Multidimensionale Index sind nur für "sortenreine" Variablenarrays (Arrays, die nur einen Variablentyp enthalten) verfügbar, während der Cluster-Index nur für Cluster verfügbar ist.
+		<em>* Hinweis:</em> Der lineare Index und der multidimensionale Index sind nur für "sortenreine" Variablenarrays (Arrays, die nur einen Variablentyp enthalten) verfügbar, während der Cluster-Index nur für Cluster verfügbar ist. Tabellen verwenden ebenfalls den multidimensionalen Index bis zur dritten Dimension.
 	</contents>
 </article>

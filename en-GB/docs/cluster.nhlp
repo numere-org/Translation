@@ -23,10 +23,10 @@
 	</keywords>
 	<contents>
 		<syntax>
-			{VAL} = CLUSTER{i1:i2}
-			{VAL} = CLUSTER{{START:STEPWIDTH:END}}
-			CLUSTER{i1:i2} = {VAL}
-			CLUSTER{i} = {VAL, ..., {...}, ...}
+			{ANY} = CLUSTER{i1:i2}
+			{ANY} = CLUSTER{{START:STEPWIDTH:END}}
+			CLUSTER{i1:i2} = {ANY}
+			CLUSTER{i} = {ANY, ..., {...}, ...}
 		</syntax>
 		Clusters are special variable types, which may store multiple values just like a table. These objects are referenced using their name and the following curly braces and unlike normal tables, they will be created automatically, if one or more values are assigned to them:<codeblock>CLUSTER{} = {VALUE1, VALUE2, VALUE3, ...}</codeblock>
 		Clusters always have a single dimension. In exchange they may store numerical values and strings <em>mixed</em> and in an arbitrary order as well as vectors and clusters in their fields. Accessing the contained values is done using an index, which will be passed in the curly braces:<codeblock>VALUE = CLUSTER{INDEX}\nCLUSTER{INDEX} = "NEW_VALUE"</codeblock>The index may contain a whole range (<code>INDEX1:INDEX2</code> or <a href="nhlp://operator?frame=new"><code>{START:STEPWIDTH:END}</code></a>, respectively), of course. If no index was passed, it will be interpreted as <em>all</em> elements in the current cluster. This means that either all values will be read from the cluster or the cluster will be overwritten completely.
