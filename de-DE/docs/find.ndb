@@ -396,7 +396,9 @@ rayleigh_pdf(x,sigma)~Gibt den Wert der Dichte der Verteilungsfunktion bei x fü
 rayleigh_rd(sigma,n)~Liefert eine Zufallszahl aus der Rayleigh-Verteilung mit dem Skalenparameter sigma~rayleigh verteilungsfunktion verteilung zufall zufallszahl distribution distributionfunction random~rayleigh_rd(
 readjson(STR,l)~Liest den Inhalt der JSON-Datei in ein DictStruct~readjson() object dictionary structure struktur dom~readjson(
 readline~Bietet eine formatierte Eingabeabfrage~einlesen zeile eingabe strings zeichenketten input prompt stdin cin getline()~help readline
+readtoml(STR,l)~Liest den Inhalt der TOML-Datei in ein DictStruct~readtoml() object dictionary structure struktur dom~readtoml(
 readxml(STR,l)~Liest den Inhalt der XML-Datei in ein DictStruct~readxml() object dictionary structure struktur dom~readxml(
+readyaml(STR,l)~Liest den Inhalt der YAML-Datei in ein DictStruct~readyaml() object dictionary structure struktur dom~readyaml(
 read~Ermöglicht das Lesen aus einer Datei~einlesen textdateien textual files strings zeichenketten txt import load open fopen fread fwrite write~help read
 real(z)~Gibt den Realteil der übergebenen komplexen Zahl z zurück~real part realteil complex numbers komplexe zahlen~real(
 rect(x,x0,x1)~Rechteckfunktion: 1 für x in [x1,x0]; 0 sonst~rect() function~rect(
